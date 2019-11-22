@@ -1,5 +1,4 @@
 import { Box, Button, Heading, Text, useColorMode } from '@chakra-ui/core'
-import { Link } from 'gatsby'
 import * as React from 'react'
 import Container from '../components/Container'
 import Page from '../components/Page'
@@ -20,7 +19,6 @@ const IndexPage = () => {
           <Button variantColor="teal" onClick={toggleColorMode}>
             Toggle color mode
           </Button>
-          <Link to="/page-2/">Go to page 2</Link>
         </Container>
       </Page>
     </IndexLayout>
