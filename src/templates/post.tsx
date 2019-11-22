@@ -1,10 +1,11 @@
+import { Heading } from '@chakra-ui/core'
 import { graphql } from 'gatsby'
 import * as React from 'react'
 import Container from '../components/Container'
-import Page from '../components/Page'
+import Post from '../components/Post'
 import IndexLayout from '../layouts'
 
-interface PageTemplateProps {
+interface PostTemplateProps {
   data: {
     site: {
       siteMetadata: {
@@ -26,22 +27,22 @@ interface PageTemplateProps {
   }
 }
 
-const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => (
+const PostTemplate: React.SFC<PostTemplateProps> = ({ data }) => (
   <IndexLayout>
-    <Page>
+    <Post>
       <Container>
-        <h1>{data.markdownRemark.frontmatter.title}</h1>
+        <Heading as="h1">{data.markdownRemark.frontmatter.title}</Heading>
         {/* eslint-disable-next-line react/no-danger */}
         <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
       </Container>
-    </Page>
+    </Post>
   </IndexLayout>
 )
 
-export default PageTemplate
+export default PostTemplate
 
 export const query = graphql`
-  query PageTemplateQuery($slug: String!) {
+  query PostTemplateQuery($slug: String!) {
     site {
       siteMetadata {
         title
