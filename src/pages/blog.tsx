@@ -1,5 +1,5 @@
 import { Box, Heading, Text } from '@chakra-ui/core'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import * as React from 'react'
 import Container from '../components/Container'
 import Page from '../components/Page'
@@ -15,13 +15,14 @@ interface BlogPostsProps {
         frontmatter: {
           title: string
           lead: string
+          date: string
         }
       }[]
     }
   }
 }
 
-const Blog: React.SFC<BlogPostsProps> = ({ data }) => (
+const Blog: React.FC<BlogPostsProps> = ({ data }) => (
   <IndexLayout>
     <Page>
       <Container>
@@ -31,7 +32,10 @@ const Blog: React.SFC<BlogPostsProps> = ({ data }) => (
         <Box p={5}>
           {data.allMarkdownRemark.nodes.map(post => (
             <Box key={post.fields.slug}>
-              <Heading as="h2">{post.frontmatter.title}</Heading>
+              <Link to={post.fields.slug}>
+                <Heading as="h2">{post.frontmatter.title}</Heading>
+              </Link>
+              <Text>{post.frontmatter.date}</Text>
               <Text>{post.frontmatter.lead}</Text>
             </Box>
           ))}
@@ -45,7 +49,7 @@ export default Blog
 
 export const query = graphql`
   query BlogPosts {
-    allMarkdownRemark(filter: { fields: { layout: { eq: "post" } } }) {
+    allMarkdownRemark(filter: { fields: { layout: { eq: "post" } } }, sort: { fields: [frontmatter___date], order: DESC }) {
       nodes {
         fields {
           slug
@@ -53,6 +57,7 @@ export const query = graphql`
         frontmatter {
           title
           lead
+          date(formatString: "YYYY.MM.DD.")
         }
       }
     }
