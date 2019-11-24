@@ -1,8 +1,9 @@
-import { Box } from '@chakra-ui/core'
+import { Box, Flex } from '@chakra-ui/core'
 import { graphql, StaticQuery } from 'gatsby'
 import 'modern-normalize'
 import * as React from 'react'
 import Helmet from 'react-helmet'
+import Footer from '../components/Footer'
 import Header from '../components/Header'
 
 interface StaticQueryProps {
@@ -28,7 +29,7 @@ const IndexLayout: React.FC = ({ children }) => (
       }
     `}
     render={(data: StaticQueryProps) => (
-      <Box>
+      <>
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
@@ -36,9 +37,12 @@ const IndexLayout: React.FC = ({ children }) => (
             { name: 'keywords', content: data.site.siteMetadata.keywords }
           ]}
         />
-        <Header title={data.site.siteMetadata.title} />
-        {children}
-      </Box>
+        <Flex direction="column" minHeight="100vh">
+          <Header title={data.site.siteMetadata.title} />
+          <Box flex="1">{children}</Box>
+          <Footer />
+        </Flex>
+      </>
     )}
   />
 )
