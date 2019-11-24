@@ -11,10 +11,6 @@ interface PostTemplateProps {
       siteMetadata: {
         title: string
         description: string
-        author: {
-          name: string
-          url: string
-        }
       }
     }
     markdownRemark: {
@@ -47,10 +43,6 @@ export const query = graphql`
       siteMetadata {
         title
         description
-        author {
-          name
-          url
-        }
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

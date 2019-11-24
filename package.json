@@ -1,11 +1,17 @@
 {
-  "name": "gatsby-starter-typescript-plus",
-  "description": "A starter kit for TypeScript-based Gatsby projects with sensible defaults.",
+  "name": "kir-dev-blog",
+  "description": "A Kir-Dev kör blogja.",
   "version": "1.0.0",
   "private": true,
-  "author": "Resi Respati <resir014@gmail.com>",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "javascript",
+    "typescript",
+    "nodejs",
+    "ruby",
+    "rails",
+    "community",
+    "simonyi"
   ],
   "license": "MIT",
   "main": "n/a",
