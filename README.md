@@ -1,94 +1,33 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  gatsby-starter-typescript-plus
-</h1>
+# blog-next
 
-> A starter kit for TypeScript-based Gatsby projects with sensible defaults.
+A [kir-dev.sch.bme.hu](http://kir-dev.sch.bme.hu) következő generációs blogja.
 
-This is a starter kit for [Gatsby.js](https://www.gatsbyjs.org/) websites written in TypeScript. It includes the bare essentials for you to get started (styling, Markdown parsing, minimal toolset).
+A projekt jelenleg fejlesztési szakaszban van, az aktuális állapot [Netlify-on](https://quizzical-mestorf-416189.netlify.com/) tekinthető meg.
 
-## 🗒️ Features
+## Telepítés
 
-- TypeScript
-- ESLint (with custom ESLint rules)
-- Markdown rendering with Remark
-- Basic component structure
-- Styling with [emotion](https://emotion.sh/)
+---
 
-## 🚀 Quick start
+Legyen telepítve [node.js](https://nodejs.org/en/) és [yarn](https://yarnpkg.com/lang/en/docs/install) a gépeden. A gatsby-t szükséges globálisan feltelepíteni, ez a `yarn global add gatsby-cli` paranccsal tehető meg.
 
-> A nodejs >= 6.0.0 setup with [yarn](https://yarnpkg.com/) is recommended.
+Ha az előkövetlemények megvannak, akkor
 
-1.  **Create a Gatsby site.**
-
-    Install `gatsby-cli` package globally on your machine.
-
-    ```bash
-    # using NPM
-    npm install -g gatsby-cli
-
-    # using YARN
-    yarn global add gatsby-cli
-    ```
-
-    Use the `gatsby-cli` to create a new site and install its dependencies.
-
-    ```bash
-    gatsby new project-name https://github.com/resir014/gatsby-starter-typescript-plus
-    ```
-
-2.  **Start developing.**
-
-    Move to project's directory.
-
-    ```bash
-    cd project-name/
-    ```
-
-    Start your site.
-
-    ```bash
-    # using npm
-    npm start
-
-    # using yarn
+    git clone https://github.com/kir-dev/blog-next.git kirdev-blog
+    cd kirdev-blog
+    yarn
     yarn start
-    ```
 
-    Open source code using your favorite IDE/Text editor and navigate to `src/` directory, this is where your application live.
+A böngésződben pedig a `localhost:8000`-en tudod megnézni a blogot. A GraphiQL oldal a `localhost:8000/___graphql` címen lesz elérhető.
 
-3.  **Build your application for production.**
+## License
 
-    Once you're finished, you can make production build of your app using:
+---
 
-    ```bash
-    # using npm
-    npm run build
+The following directories and their contents are Copyright Kir-Dev.
+You may not reuse anything therein without Kir-Dev's permission:
 
-    # using yarn
-    yarn build
-    ```
+- posts/
 
-4.  **Deploy your app to Github pages!**
+All other directories and files are MIT Licensed.
 
-    After building your application in step 3, you're ready to publish your app and go online!
-
-    ```bash
-    # using npm
-    npm run deploy
-
-    # using yarn
-    yarn deploy
-    ```
-
-## ❤️ Credits
-
-Built with [Gatsby](https://www.gatsbyjs.org/) - the blazing-fast static site generator for [React](https://facebook.github.io/react/).
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/resir014/gatsby-starter-typescript-plus)
+[1]: https://github.com/kir-dev/kir-dev.sch.bme.hu/pulls
