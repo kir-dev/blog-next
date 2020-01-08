@@ -5,7 +5,7 @@ import Container from '../components/Container'
 import Page from '../components/Page'
 import IndexLayout from '../layouts'
 
-interface BlogPostsProps {
+export interface BlogPostsProps {
   data: {
     allMarkdownRemark: {
       nodes: {
