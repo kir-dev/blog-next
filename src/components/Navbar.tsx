@@ -18,8 +18,7 @@ const Navbar: React.FC = () => {
       <Link to="/archive">
         <Box px={4}>Archívum</Box>
       </Link>
-      {colorMode === 'dark' && <Icon mx={4} size="24px" cursor="pointer" name="sun" onClick={toggleColorMode} />}
-      {colorMode === 'light' && <Icon mx={4} size="24px" cursor="pointer" name="moon" onClick={toggleColorMode} />}
+      <Icon mx={4} size="24px" cursor="pointer" name={colorMode === 'dark' ? 'sun' : 'moon'} onClick={toggleColorMode} />
     </Flex>
   )
 }
