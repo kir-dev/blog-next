@@ -1,4 +1,4 @@
-import { Box, Button, Heading, Text, useColorMode } from '@chakra-ui/core'
+import { Button, Heading, Text, useColorMode } from '@chakra-ui/core'
 import * as React from 'react'
 import Container from '../components/Container'
 import Page from '../components/Page'
@@ -10,11 +10,10 @@ const IndexPage = () => {
     <IndexLayout>
       <Page>
         <Container>
-          <Box p={5}>
-            <Heading size="md" mb={5}>
-              Hello World
-            </Heading>
-          </Box>
+          <Heading as="h1" py={5}>
+            Hello World
+          </Heading>
+
           <Text mb={3}>Color mode: {colorMode}</Text>
           <Button variantColor="teal" onClick={toggleColorMode}>
             Toggle color mode
