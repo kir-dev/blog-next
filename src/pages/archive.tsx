@@ -25,17 +25,16 @@ export const query = graphql`
 const Archive: React.FC<BlogPostsProps> = ({ data }) => (
   <IndexLayout>
     <Container>
-      <Box p={5}>
-        <Heading as="h1">Archívum</Heading>
-      </Box>
-      <Box p={5}>
-        {data.allMarkdownRemark.nodes.map(post => (
-          <Box key={post.fields.slug}>
-            <span>{post.frontmatter.date} » </span>
-            <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
-          </Box>
-        ))}
-      </Box>
+      <Heading as="h1" py={5}>
+        Archívum
+      </Heading>
+
+      {data.allMarkdownRemark.nodes.map(post => (
+        <Box key={post.fields.slug}>
+          <span>{post.frontmatter.date} » </span>
+          <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
+        </Box>
+      ))}
     </Container>
   </IndexLayout>
 )

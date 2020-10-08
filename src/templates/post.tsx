@@ -27,7 +27,9 @@ const PostTemplate: React.SFC<PostTemplateProps> = ({ data }) => (
   <IndexLayout>
     <Post>
       <Container>
-        <Heading as="h1">{data.markdownRemark.frontmatter.title}</Heading>
+        <Heading as="h1" py={5}>
+          {data.markdownRemark.frontmatter.title}
+        </Heading>
         {/* eslint-disable-next-line react/no-danger */}
         <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
       </Container>

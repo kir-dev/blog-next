@@ -8,7 +8,9 @@ const PageTwo = () => (
   <IndexLayout>
     <Page>
       <Container>
-        <Heading as="h1">About</Heading>
+        <Heading as="h1" py={5}>
+          About
+        </Heading>
       </Container>
     </Page>
   </IndexLayout>

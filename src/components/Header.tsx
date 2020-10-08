@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/core'
+import { Box, Flex } from '@chakra-ui/core'
 import * as React from 'react'
 import Navbar from './Navbar'
 
@@ -7,10 +7,10 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ title }) => (
-  <Box bg="tomato" w="100%" p={4} color="white">
-    {title}
+  <Flex bg="tomato" w="100%" p={4} color="white" justifyContent="space-between">
+    <Box p={4}>{title}</Box>
     <Navbar />
-  </Box>
+  </Flex>
 )
 
 export default Header
