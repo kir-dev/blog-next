@@ -1,8 +1,8 @@
 ---
 layout: post
 author: kresshy
-date: 2014-07-18 11:08:00 CEST
-title: "WIP PéK Front-end"
+date: 2014-07-18 11:08:00
+title: 'WIP PéK Front-end'
 comment: true
 ---
 
@@ -24,13 +24,13 @@ A designon hamarabb kezdtünk el dolgozni, de mikor úgy éreztük, hogy megtal�
 
 ![landing](http://warp.sch.bme.hu/0c06143f10dc155436a8c39d38998ec703ab6b84/800)
 
-A kezdőoldalt ennek megfelelően egy nagy kereső felületté alakítottuk át, ahol a keresési találatok kis kártyákként fognak megjelenni. Az oldal tetején állandó jelleggel találhattok majd egy navbart, aminek a jobb oldalán elérhetitek a profilotokat, illetve egy menüt, ahonnan elnavigálhattok az alkalmazás további oldalaihoz. Természetesen a keresési találatokra kattintáskor is megtörténik  a navigáció a profilra vagy a kör profiljára. A menüben egy új feature lesz, az értesítések megjelenítése. Ez főleg a fontos időszakokat fogja mutatni a körvezetők számára, de később egyre több eseményre fogja majd a figyelmeteket felhívni.
+A kezdőoldalt ennek megfelelően egy nagy kereső felületté alakítottuk át, ahol a keresési találatok kis kártyákként fognak megjelenni. Az oldal tetején állandó jelleggel találhattok majd egy navbart, aminek a jobb oldalán elérhetitek a profilotokat, illetve egy menüt, ahonnan elnavigálhattok az alkalmazás további oldalaihoz. Természetesen a keresési találatokra kattintáskor is megtörténik a navigáció a profilra vagy a kör profiljára. A menüben egy új feature lesz, az értesítések megjelenítése. Ez főleg a fontos időszakokat fogja mutatni a körvezetők számára, de később egyre több eseményre fogja majd a figyelmeteket felhívni.
 
 ## A profil
 
 ![profile](http://warp.sch.bme.hu/dfbda73d50cce96e19119536d938603a062e514e/800)
 
-A profil is átalakul, sokkal modernebb lesz a megjelenése a felületnek. Ezen a képen a lenyíló menüt is láthatjátok. A profilon tabok lesznek, amin az információkat csoportokba szervezve megjelenítjük. Az alkalmazás többi oldala is ilyen stílusban lesz elkészítve, és amikor kész vagyunk vele, akkor reményeink szerint lesz mobilra optimalizált verzió is, de ez még nagyon a jövő zenéje. 
+A profil is átalakul, sokkal modernebb lesz a megjelenése a felületnek. Ezen a képen a lenyíló menüt is láthatjátok. A profilon tabok lesznek, amin az információkat csoportokba szervezve megjelenítjük. Az alkalmazás többi oldala is ilyen stílusban lesz elkészítve, és amikor kész vagyunk vele, akkor reményeink szerint lesz mobilra optimalizált verzió is, de ez még nagyon a jövő zenéje.
 
 ## Stuffs 4 geeks
 

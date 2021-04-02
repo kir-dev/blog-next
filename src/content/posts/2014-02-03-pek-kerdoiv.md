@@ -1,10 +1,10 @@
 ---
 layout: post
 author: tmichel
-date: 2014-02-03 14:50:00 CET
+date: 2014-02-03 14:50:00
 category: pek
 comment: true
-title: "PÉK kérdőív"
+title: 'PÉK kérdőív'
 ---
 
 Múltkor [említettem]({% post_url 2014-01-29-pek-jelen-es-jovo-iv %}), hogy a kíváncsiak vagyunk a véleményetekre a PÉK jelenlegi állapotát illetően. Elsősorban azt szeretnénk tudni ti hogyan használjátok a PÉK-et, milyen nehézségekbe ütköztök és mi hiányzik a legjobban. Ennek a felmérésére készítettünk egy rövid kérdőívet.

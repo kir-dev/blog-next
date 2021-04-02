@@ -1,8 +1,8 @@
 ---
 layout: post
 author: tmichel
-date: 2014-03-28 10:25:00 CET
-title: "JavaScript new operátor"
+date: 2014-03-28 10:25:00
+title: 'JavaScript new operátor'
 comment: true
 category: javascript
 ---
@@ -13,20 +13,20 @@ Múltkor elkezdtem egy mini-sorozatot azokról a témákról, amik nem fértek b
 
 A `new` operátor egy előre definiált típust példányosít. Ez persze így nem igaz, mert JavaScriptben nem lehet új típust létrehozni. Valójában a `new` operátor által létrehozott új objektum `Object` típusú lesz, de egy `constructor function` hozza létre, így lényegében egy olyan objektumot kapunk, amit előre felparamétereztünk.
 
-~~~js
-var Person = function (name) {
-    this.name = name;
-};
+```js
+var Person = function(name) {
+  this.name = name
+}
 
-Person.prototype.greet = function () {
-    return "Hi, my name is " + this.name + "!";
-};
+Person.prototype.greet = function() {
+  return 'Hi, my name is ' + this.name + '!'
+}
 
-var p = new Person("tmichel");
+var p = new Person('tmichel')
 
-console.log(p.name); // => tmichel
-console.log(p.greet()); // => Hi, my name is tmichel!
-~~~
+console.log(p.name) // => tmichel
+console.log(p.greet()) // => Hi, my name is tmichel!
+```
 
 Láthatjuk, hogy a létrehozott objektum úgy viselkedik, mintha `Person` típusú lenne, miközben tudjuk, hogy a valós típusa `Object`. Ez annak köszönhető, hogy az újonnan létrehozott objektum megörökölte a `Person` prototípusát.
 
@@ -43,26 +43,26 @@ A 2. pont az igazán kritikus. JavaScriptben prototípusokkal lehet imitálni a 
 
 Nem kell más tennünk, mint a fenti 4 pontot végrehajtani.
 
-~~~js
+```js
 function mynew(ctor) {
-    // létrehozunk egy új objektumot és beállítjuk a prototípusát (1. és 2. pont)
-    var $this = Object.create(ctor.prototype),
-        args = Array.prototype.slice.call(arguments, 1);
+  // létrehozunk egy új objektumot és beállítjuk a prototípusát (1. és 2. pont)
+  var $this = Object.create(ctor.prototype),
+    args = Array.prototype.slice.call(arguments, 1)
 
-    // meghívjuk a konstruktor függvényt és visszatérünk a függvény visszatérési
-    // értékével, vagy ha undefined, akkor magával az új objektummal.
-    return ctor.apply($this, args) || $this;
+  // meghívjuk a konstruktor függvényt és visszatérünk a függvény visszatérési
+  // értékével, vagy ha undefined, akkor magával az új objektummal.
+  return ctor.apply($this, args) || $this
 }
-~~~
+```
 
 A fentebb definiált `Person`-t a következő kódrészlettel lehet példányosítani az új `new` operátorunkkal:
 
-~~~js
-var me = mynew(Person, "tmichel");
+```js
+var me = mynew(Person, 'tmichel')
 
-console.log(p.name); // => tmichel
-console.log(me.greet()); // => Hi, my name is tmichel!
-~~~
+console.log(p.name) // => tmichel
+console.log(me.greet()) // => Hi, my name is tmichel!
+```
 
 Látható, hogy ugyanazt az eredményt kaptuk, mintha a beépített nyelvi elemet használtuk volna.
 

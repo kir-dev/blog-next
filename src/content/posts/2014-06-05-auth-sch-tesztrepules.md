@@ -1,8 +1,8 @@
 ---
 layout: post
 author: tmichel
-date: 2014-06-05 00:56:00 CEST
-title: "auth.sch tesztrepülés"
+date: 2014-06-05 00:56:00
+title: 'auth.sch tesztrepülés'
 comment: true
 ---
 
@@ -26,8 +26,8 @@ Tehát röviden összefoglalva, mostantól lehetőség van a VIR-be bejelentkezn
 hogy az auth.sch-n keresztül jelentkezel be, vagy maradsz a régi jól bevált
 formnál.
 
-Bátorítanék mindenkit, hogy próbálja ki az új bejelentkezési módszert. Ezzel 
-nagyban segíted a munkánkat. Az a jó, ha minél előbb kijönnek a bajok és 
+Bátorítanék mindenkit, hogy próbálja ki az új bejelentkezési módszert. Ezzel
+nagyban segíted a munkánkat. Az a jó, ha minél előbb kijönnek a bajok és
 mindenféle bugok a rendszerből, és ősszel már egy stabil és jól használható
 szoftvert tudnánk átadni.
 
@@ -46,6 +46,7 @@ git.sch.bme.hu-n: [itt][6] és [itt][7]. Ha bármilyen kérdés van, akkor újfe
 [#kir-dev][4] irc csatornán tudtok kérdezni.
 
 [^1]: Ez nem teljesen igaz, mert a következő félév folyamán, míg a teljes átállás
+
 meg nem történik, a régi VIR is használható lesz, de csak korlátozottan.
 
 [1]: {% post_url 2014-03-16-auth-sch %}

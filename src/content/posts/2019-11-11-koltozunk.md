@@ -1,8 +1,8 @@
 ---
 layout: post
 author: johnny
-date: 2019-11-11 21:41:05 CET
-title: "Költözünk"
+date: 2019-11-11 21:41:05
+title: 'Költözünk'
 comment: true
 ---
 

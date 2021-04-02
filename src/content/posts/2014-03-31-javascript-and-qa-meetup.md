@@ -1,8 +1,8 @@
 ---
 layout: post
 author: kresshy
-date: 2014-03-31 22:22:00 CEST
-title: "JavaScript & QA Meetup a Prezinél"
+date: 2014-03-31 22:22:00
+title: 'JavaScript & QA Meetup a Prezinél'
 comment: true
 ---
 

@@ -1,8 +1,8 @@
 ---
 layout: post
 author: kresshy
-date: 2014-02-14 21:45:00 CET
-title: "mloc.js konferencia I. nap"
+date: 2014-02-14 21:45:00
+title: 'mloc.js konferencia I. nap'
 comment: true
 excerpt: <p>Ha követitek a magyarországi konferenciákat, akkor láthattátok, hogy február 13-14-én a Prezi a "House of Ideas"-ban rendezi az <a href="http://mloc-js.com/2014/">mloc.js</a> JavaScript konferenciát. Ebben a cikkben az első nap eseményeiről szeretnénk megosztani az élményeinket.</p>
 ---
@@ -33,7 +33,7 @@ Ehhez sok kommentet nem fűznénk. A kaja nagyon finom volt és közben lehetett
 
 ## JavaScript as an Intermediate Language
 
-[Shriram Krishnamurthi](https://twitter.com/ShriramKMurthi) a Brown University-ről érkezett. Egy remek témát hozott arról, hogy hogyan lehetne a JavaScriptet köztes nyelvként használni. Akadémiai vonalról jött, de számomra ez az előadás volt a nap legjobbja. Magával ragadott a felvezetés, ahogy elmondta, hogy a JavaScriptet funkcionális nyelvként próbálták használni a  matematika oktatására. A tanulókat nem érdekli a stack és az alacsony szintű dolgok, ők egyszerűen csak programozni akarnak és alkotni úgy, hogy a részletekről nem akarnak tudni.
+[Shriram Krishnamurthi](https://twitter.com/ShriramKMurthi) a Brown University-ről érkezett. Egy remek témát hozott arról, hogy hogyan lehetne a JavaScriptet köztes nyelvként használni. Akadémiai vonalról jött, de számomra ez az előadás volt a nap legjobbja. Magával ragadott a felvezetés, ahogy elmondta, hogy a JavaScriptet funkcionális nyelvként próbálták használni a matematika oktatására. A tanulókat nem érdekli a stack és az alacsony szintű dolgok, ők egyszerűen csak programozni akarnak és alkotni úgy, hogy a részletekről nem akarnak tudni.
 
 Természetesen az oktatás problémáiról is beszélt, de mikor már a közepénél jártunk azért párszor kifagyasztotta a Chrome-ot `while(true){print "loop";}` illetve néha stackoverflow-t is tudott produkálni. A többi böngészővel meg sem próbálkozott.
 

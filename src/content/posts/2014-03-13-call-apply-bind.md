@@ -1,8 +1,8 @@
 ---
 layout: post
 author: tmichel
-date: 2014-03-13 21:30:00 CET
-title: "Function.prototype.call, apply és bind"
+date: 2014-03-13 21:30:00
+title: 'Function.prototype.call, apply és bind'
 comment: true
 ---
 
@@ -24,27 +24,27 @@ Az már egy sokkal érdekesebb kérdés, hogy egy adott pillanatban a `this` mir
 
 A klasszikus esetben tényleg a fogadó objektumra mutat.
 
-~~~javascript
+```javascript
 var obj = {
-    myMethod: function () {
-        console.log(this);
-    }
-};
+  myMethod: function() {
+    console.log(this)
+  }
+}
 
-obj.myMethod(); // => Object {myMethod: function}
-~~~
+obj.myMethod() // => Object {myMethod: function}
+```
 
 Itt egyértelmű, hogy az `obj` változóban tárolt objektumra mutat a `this`, végülis a `myMethod` az `obj` metódusa.
 
 A másik sokat használt eset, amikor a nagyvilágban van egy függvényem és azt hívom meg.
 
-~~~javascript
-var f = function () {
-    console.log(this);
-};
+```javascript
+var f = function() {
+  console.log(this)
+}
 
 f() // => Window {...}
-~~~
+```
 
 Ebben az esetben nincs explicit fogadó objektum. Viszont a `window` ott ül mindennek a tetején és a legvégén nála futnak össze a dolgok.
 
@@ -54,53 +54,55 @@ Ebből látszik, hogy amennyiben van explicit fogadó objektum, akkor a `this` a
 
 Az alap koncepciót lehet kicsit bonyolítani. Gondoljunk csak a következő esetre:
 
-~~~javascript
+```javascript
 var obj = {
-    method: function (f) {
-        f();
-    },
-    otherMethod: function () {
-        var f = function () {
-            console.log(this);
-        };
-
-        f();
+  method: function(f) {
+    f()
+  },
+  otherMethod: function() {
+    var f = function() {
+      console.log(this)
     }
-};
 
-obj.method(function () { console.log(this); }); // => Window {...}
-obj.otherMethod(); // => Window {...}
+    f()
+  }
+}
+
+obj.method(function() {
+  console.log(this)
+}) // => Window {...}
+obj.otherMethod() // => Window {...}
 
 var otherObj = {
-    f: function () {
-        console.log(this);
-    }
-};
+  f: function() {
+    console.log(this)
+  }
+}
 
-obj.method(otherObj.f); // => Window {...}
-~~~
+obj.method(otherObj.f) // => Window {...}
+```
 
 A fenti példa nagyon sarkított, és itt valójában mindegy, hogy mi a `this` értéke. Viszont ha már egy callbackről beszélünk, akkor jó lenne, ha a `this` értéke a helyén lenne.
 
 Erre nyújt megoldást a `call` és az `apply`. Ugyanaz a feladatuk, csak a szignatúrájuk más. Mindkét metódussal a `this` értékét lehet beállítani egy-egy függvényhívás esetén.
 
-~~~javascript
-var f = function (a, b) {
-    console.log(this, a, b);
-};
+```javascript
+var f = function(a, b) {
+  console.log(this, a, b)
+}
 
-f.call({ theAnswer: 42 }, "hello", "world");
+f.call({ theAnswer: 42 }, 'hello', 'world')
 // => Object {theAnswer: 42} "hello" "world"
 
-f.call(null, "hello", "world");
+f.call(null, 'hello', 'world')
 // => Window {...} "hello" "world"
 
-f.call(undefined, "hello", "world");
+f.call(undefined, 'hello', 'world')
 // => Window {...} "hello" "world"
 
-f.apply({ theAswer: 42 }, ["hello", "world"]);
+f.apply({ theAswer: 42 }, ['hello', 'world'])
 // => Object {theAnswer: 42} "hello" "world"
-~~~
+```
 
 A különbség csak annyi, hogy a `call`-nak felsorolásszerűen kell átadni a paramétereket, míg az `apply`-nak tömbként.
 
@@ -108,23 +110,23 @@ A különbség csak annyi, hogy a `call`-nak felsorolásszerűen kell átadni a 
 
 A `bind` is ugyanazt a célt szolgálja, mint az előző két metódus: előre meghatározhatjuk a `this` értékét. Az előnye, hogy nem csak egyetlen függvényhívásra szól. A használata egészen egyszerű:
 
-~~~javascript
-var boundF = f.bind("foo");
-boundF("hello", "world");
+```javascript
+var boundF = f.bind('foo')
+boundF('hello', 'world')
 // => String {0: "f", 1: "o", 2: "o", length: 3} "hello" "world"
-~~~
+```
 
 ## A bind szimulálása
 
 A `bind` nem alkalmaz fekete mágiát a háttérben. Nagyjából a következő kódrészlettel lehetne is szimulálni:
 
-~~~javascript
-var bind2 = function (f, context) {
-    return function () {
-        f.apply(context, arguments);
-    }
-};
-~~~
+```javascript
+var bind2 = function(f, context) {
+  return function() {
+    f.apply(context, arguments)
+  }
+}
+```
 
 (Az `arguments` nem a semmiből terem elő: [minden függvényben elérhető.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#Using_the_arguments_object))
 

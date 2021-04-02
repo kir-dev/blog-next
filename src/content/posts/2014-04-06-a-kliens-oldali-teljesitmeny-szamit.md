@@ -1,8 +1,8 @@
 ---
 layout: post
 author: snapdragon
-date: 2014-04-06 20:18:40 CEST
-title: "A kliens oldali teljesítmény számít"
+date: 2014-04-06 20:18:40
+title: 'A kliens oldali teljesítmény számít'
 comment: true
 ---
 
@@ -12,8 +12,8 @@ A felhasználók számára elsőrendű kérdés, hogy mennyit kell várniuk egy 
 
 Két számot érdemes megjegyezni a front-end optimalizációval kapcsolatban:
 
-* **1000 ms**: ennyi idő alatt feltétlen valamilyen használható tartalmat kell mutatni a felhasználónak
-* **16,6 ms**: ennyi időnként elő kell állítani egy frame-et a jó minőségű, 60 FPS sebesség eléréséhez
+- **1000 ms**: ennyi idő alatt feltétlen valamilyen használható tartalmat kell mutatni a felhasználónak
+- **16,6 ms**: ennyi időnként elő kell állítani egy frame-et a jó minőségű, 60 FPS sebesség eléréséhez
 
 A bevezetőben sugalltuk, hogy a kliens oldali teljesítménynél nem csak a felhasználóhoz megérkezett adatoktól számított feldolgozási és renderelési időt vesszük figyelembe, hanem azt is, hogy a bitek milyen formában közlekednek a böngésző és a szerver(ek) között. Mielőtt elkezdenénk megvizsgálni a különböző optimalizálási lehetőségeket, nagy vonalakban áttekintjük a HTTP lekérdezések felépítését.
 
@@ -30,15 +30,15 @@ A bevezetőben sugalltuk, hogy a kliens oldali teljesítménynél nem csak a fel
 
 A DNS lekérdezés folyamatának ideje elég széles skálán mozog. DNS cache találatkor 1 ms-től kezdődően, a teljes lekérdezés esetén akár több másodperces idejéig változhat a művelet ideje. Az egyik lehetőség DNS lekérdezés gyorsítására a [DNS prefetch](http://www.chromium.org/developers/design-documents/dns-prefetching), ahol az oldalon található linkek domainjei már betöltődés közben párhuzamosan fel lesznek oldva. Ezt a böngésző egy külön szálon végzi el. Hasznos lehet ez a funkció, ha gyakran hivatkozott más domainekre vannak linkjeink, ilyen például egy hírportál, vagy egy keresőprogram. A domain nevek előzetes feloldását manuálisan elősegíthetjük a következőképpen:
 
-~~~html
-<link rel="dns-prefetch" href="//<prefetch-elni kívánt oldal címe>">
-~~~
+```html
+<link rel="dns-prefetch" href="//<prefetch-elni kívánt oldal címe>" />
+```
 
-A prefetchelést ki és bekapcsolhatjuk a következő meta tag *content* attribútumának *off* vagy *on* értékével:
+A prefetchelést ki és bekapcsolhatjuk a következő meta tag _content_ attribútumának _off_ vagy _on_ értékével:
 
-~~~html
-<meta http-equiv="x-dns-prefetch-control" content="off">
-~~~
+```html
+<meta http-equiv="x-dns-prefetch-control" content="off" />
+```
 
 ## 2. - 3. fázis: Kapcsolódás és küldés
 
@@ -52,48 +52,48 @@ Ez a lépés főleg a szerver oldali alkalmazás gyorsítását jelenti: a miné
 
 A kliens oldali teljesítményt legnagyobb részben ez a tényező határozza meg. Itt dolgozza fel a kliens a szerver válaszát, betölti az oldalhoz szükséges erőforrásokat, előállítja a megjelenítendő oldalt, másnéven rendereli azt. Két művelet van a megjelenítés során, amelyeket meg kell érteni:
 
-* repaint: Egy elem kinézete megváltozott, de az oldal elrendezése nem változott. Például ilyen, ha *outline*, background-color CSS osztályok lettek hozzáadva egy elemhez.
-* reflow: Az elem megváltozása miatt újra kell számolni az oldal elrendezését. Ez a művelet mindig egy repaint-et is vonz maga után, így különösen drága művelet, ezért spórolni kell a használatával.
+- repaint: Egy elem kinézete megváltozott, de az oldal elrendezése nem változott. Például ilyen, ha _outline_, background-color CSS osztályok lettek hozzáadva egy elemhez.
+- reflow: Az elem megváltozása miatt újra kell számolni az oldal elrendezését. Ez a művelet mindig egy repaint-et is vonz maga után, így különösen drága művelet, ezért spórolni kell a használatával.
 
 Ezek után az a kérdés, hogy mi okoz reflow-t? A rossz hír az, hogy szinte minden: például DOM műveletek, lekérdezések; stílusok hozzáadása, elvétele; görgetés, átméretezés. A rengeteg DOM műveletet végző alkalmazásoknál spórolni kell a nagy számításigényű műveletekkel, mert csak így lehet nagyobb teljesítményt elérni.
 
-A következőkben bemutatok pár jól használható technikát, amelyekkel csökkenthetjük a fenti erőforrásigényes műveletek számát. A legfontosabb, hogy a DOM-fa minél kisebb részfáját módosítsuk. Az egyik leghasznosabb trükk, ha semmiképpen sem tudjuk elkerülni a nagyszámú DOM műveletet, ha azokat a fáról leválasztva végezzük el. CSS segítségével *display:none;* stílust adhatunk egy részfának, így a különböző műveletek esetén nem okoznak reflow-t a módosítások. Javascript esetén a részfákat kell előállítanunk memóriában, majd később hozzá lehet adni a DOM fához. A részfa lemásolásához használható a *cloneNode()* metódus. Hasznos lehet tudni, hogy a DOM műveleteket a böngészőmotor csoportosítva, kötegelten végzi el, így az olvasás illetve írás jellegű műveleteket minél inkább egyszerre érdemes végrehajtani. Erre példa lehet, amikor CSS osztályokkal alkalmazunk egy stílust egyszerre több elemre, vagy Javascriptnél próbáljuk a lekérdezés, módosítás jellegű műveleteket csoportosítani.
+A következőkben bemutatok pár jól használható technikát, amelyekkel csökkenthetjük a fenti erőforrásigényes műveletek számát. A legfontosabb, hogy a DOM-fa minél kisebb részfáját módosítsuk. Az egyik leghasznosabb trükk, ha semmiképpen sem tudjuk elkerülni a nagyszámú DOM műveletet, ha azokat a fáról leválasztva végezzük el. CSS segítségével _display:none;_ stílust adhatunk egy részfának, így a különböző műveletek esetén nem okoznak reflow-t a módosítások. Javascript esetén a részfákat kell előállítanunk memóriában, majd később hozzá lehet adni a DOM fához. A részfa lemásolásához használható a _cloneNode()_ metódus. Hasznos lehet tudni, hogy a DOM műveleteket a böngészőmotor csoportosítva, kötegelten végzi el, így az olvasás illetve írás jellegű műveleteket minél inkább egyszerre érdemes végrehajtani. Erre példa lehet, amikor CSS osztályokkal alkalmazunk egy stílust egyszerre több elemre, vagy Javascriptnél próbáljuk a lekérdezés, módosítás jellegű műveleteket csoportosítani.
 
 ### Erőforrások betöltése
 
 Az egyik első dolog, amit optimalizálni érdemes az az oldal betöltődéséhez szükséges kapcsolatok számának minimalizálása. Alapesetben minden erőforrást egy külön kapcsolaton keresztül kell megszerezni, így ez rengeteg overhead-et jelent. Ennek megoldásában segíthetnek a HTTP2 / SPDY protokollok használata. A [HTTP2](http://http2.github.io/) a [SPDY](http://hu.wikipedia.org/wiki/SPDY) protokollon alapszik, mely képes multiplexelni a kapcsolatokat, illetve tömöríti a fejléceket. [Apache HTTPD modulként](https://developers.google.com/speed/spdy/mod_spdy/) és [NGINX modulként](http://nginx.org/en/docs/http/ngx_http_spdy_module.html) is szerezhető támogatás hozzá. A kapcsolatok multiplexelésével az oldalhoz szükséges erőforrások egyszerre letöltődnek, így azok nem jelentenek külön overhead-et. Azonban, ha nem a saját webszerünkön futtatjuk az alkalmazást és nem tudjuk kihasználni a fenti protokollok előnyeit, akkor más módszerek használatára is szükség van.
 
-Egyrészt a SPDY protokoll nyújtotta előnyök egy részét mi is előállíthatjuk magunknak, ha tömörítjük és összefűzzük az erőforrásokat. CSS és JS fájloknál a tömörítés a whitespace-ek eltávolítását jelenti, illetve JS esetén az obfuszkálással (kódösszezavarással) is kisebb lesz a fájl mérete. Ezen feladatokat a [múltkori cikkben](http://kir-dev.sch.bme.hu/2014/02/22/yeoman/) is bemutatott [Grunt](http://gruntjs.com/sample-gruntfile) segítségével könnyen végrehajthatjuk a *concat* és *uglify* taskok segítségével.
+Egyrészt a SPDY protokoll nyújtotta előnyök egy részét mi is előállíthatjuk magunknak, ha tömörítjük és összefűzzük az erőforrásokat. CSS és JS fájloknál a tömörítés a whitespace-ek eltávolítását jelenti, illetve JS esetén az obfuszkálással (kódösszezavarással) is kisebb lesz a fájl mérete. Ezen feladatokat a [múltkori cikkben](http://kir-dev.sch.bme.hu/2014/02/22/yeoman/) is bemutatott [Grunt](http://gruntjs.com/sample-gruntfile) segítségével könnyen végrehajthatjuk a _concat_ és _uglify_ taskok segítségével.
 
-A nélkülözhetetlen funkciókat tartalmazó kritikus JS és CSS fájlok kiválasztása rendkívül fontos: a *critical rendering path* minimalizálásával a legnagyobb, sok erőforrást használó oldalt is gyorsabbá tehetjük, mint akár egy egyszerűbb weboldalt. Milyen funkciókat tartunk kritikusnak? Azokat amelyek az oldal kezdeti betöltődésekor görgetés nélkül látszódnak és alapvető funkciókat nyújtanak az oldal használatában. A görgetés nélkül látszódó tartalmat okosan kell megválasztani, ehhez úgy kell átstruktúrálni az oldal HTML kódját, hogy a fő tartalom ott helyezkedjen el és a másodlagos dolgok csak később kerüljenek betöltésre. Például egy navigációs sávot hiába feljebb helyezkedik el az oldalon a tartalom után kell elhelyezni a HTML-ben és csak ezután CSS segítségével pozícionálni. Ezzel a trükkel a felhasználóknak gyorsan tudunk tartalmat kiszolgálni.
+A nélkülözhetetlen funkciókat tartalmazó kritikus JS és CSS fájlok kiválasztása rendkívül fontos: a _critical rendering path_ minimalizálásával a legnagyobb, sok erőforrást használó oldalt is gyorsabbá tehetjük, mint akár egy egyszerűbb weboldalt. Milyen funkciókat tartunk kritikusnak? Azokat amelyek az oldal kezdeti betöltődésekor görgetés nélkül látszódnak és alapvető funkciókat nyújtanak az oldal használatában. A görgetés nélkül látszódó tartalmat okosan kell megválasztani, ehhez úgy kell átstruktúrálni az oldal HTML kódját, hogy a fő tartalom ott helyezkedjen el és a másodlagos dolgok csak később kerüljenek betöltésre. Például egy navigációs sávot hiába feljebb helyezkedik el az oldalon a tartalom után kell elhelyezni a HTML-ben és csak ezután CSS segítségével pozícionálni. Ezzel a trükkel a felhasználóknak gyorsan tudunk tartalmat kiszolgálni.
 
-A lehető leggyorsabb alkalmazás betöltődéshez és a minél hamarabbi használhatósághoz a kritikus funkciókat tartalmazó rövidebb JS és CSS részeket tehát érdemes inline az oldal *head* részében megírni, mivel azon kódrészletek futnak le a leghamarabb a HTML fájl letöltődése után. A hosszabb kritikus JS és CSS fájlokat azonban érdemesebb már külső erőforrásként betölteni, mivel azokat a böngésző cacheli. A többi fájl betöltése történhet *lazy loading* segítségével (azaz JavaScript-ből adjuk hozzá a script tag-et a HTML-hez), vagy használhatjuk a késleltetett betöltés technikáját.
+A lehető leggyorsabb alkalmazás betöltődéshez és a minél hamarabbi használhatósághoz a kritikus funkciókat tartalmazó rövidebb JS és CSS részeket tehát érdemes inline az oldal _head_ részében megírni, mivel azon kódrészletek futnak le a leghamarabb a HTML fájl letöltődése után. A hosszabb kritikus JS és CSS fájlokat azonban érdemesebb már külső erőforrásként betölteni, mivel azokat a böngésző cacheli. A többi fájl betöltése történhet _lazy loading_ segítségével (azaz JavaScript-ből adjuk hozzá a script tag-et a HTML-hez), vagy használhatjuk a késleltetett betöltés technikáját.
 
 ![scriptexecution](/img/2014-03-06-scriptexecution.jpg)
 
 Alapvetően háromféle módon tölthetünk be külső JavaScript-et:
 
-* alapértelmezett: Ebben az esetben, ha a HTML fájl parse-olása a script tag-hez ér, akkor megszakad a parse-olás, betölti a JS fájlt, lefuttatja, majd folytatja a script tag utáni HTML beolvasását.
+- alapértelmezett: Ebben az esetben, ha a HTML fájl parse-olása a script tag-hez ér, akkor megszakad a parse-olás, betölti a JS fájlt, lefuttatja, majd folytatja a script tag utáni HTML beolvasását.
 
-~~~html
+```html
 <script type="text/javascript" src="<JS fájl elérési útvonala>"></script>
-~~~
+```
 
-* késleltetett: Amikor a HTML fájl parse-olása a script tag-hez ér, párhuzamosan letöltődik a JS fájl, majd csak a HTML fájl parse-olásának végén kerül futtatásra.
+- késleltetett: Amikor a HTML fájl parse-olása a script tag-hez ér, párhuzamosan letöltődik a JS fájl, majd csak a HTML fájl parse-olásának végén kerül futtatásra.
 
-~~~html
+```html
 <script defer type="text/javascript" src="<JS fájl elérési útvonala>"></script>
-~~~
+```
 
-* aszinkron: Amikor a HTML fájl parse-olása a script tag-hez ér, párhuzamosan letöltődik a JS fájl, majd a parse-olás megszakad és csak akkor folytatódik, ha lefutott a JavaScript kód.
+- aszinkron: Amikor a HTML fájl parse-olása a script tag-hez ér, párhuzamosan letöltődik a JS fájl, majd a parse-olás megszakad és csak akkor folytatódik, ha lefutott a JavaScript kód.
 
-~~~html
+```html
 <script async type="text/javascript" src="<JS fájl elérési útvonala>"></script>
-~~~
+```
 
 A tapasztalatok alapján azonban nem minden böngészőben működik jól az erőforrás betöltődés késleltetése (defer) így, ha a critical rendering path-ról teljesen el akarjuk tüntetni a betöltődést, használhatjuk a Google által is [javasolt megoldást](http://www.feedthebot.com/pagespeed/defer-loading-javascript.html):
 
-~~~js
+```js
 <script type="text/javascript">
   function downloadJSAtOnload() {
     var element = document.createElement("script");
@@ -106,9 +106,9 @@ A tapasztalatok alapján azonban nem minden böngészőben működik jól az er�
     window.attachEvent("onload", downloadJSAtOnload);
   else window.onload = downloadJSAtOnload;
 </script>
-~~~
+```
 
-Ha külső domainről töltünk be erőforrást, akkor pedig mindenképp érdemes valamilyen CDN-t ( *content delivery network* ) használni, mely egy olyan szolgáltatás, amivel a felhasználóhoz földrajzilag legközelebb eső szerverről szerezheti meg a kívánt erőforrást. Ilyen CDN-t a [Google is üzemeltet](https://developers.google.com/speed/libraries/devguide?csw=1), de itt inkább csak a legismertebb library-ket találhatjuk meg, így célravezető [máshol is körbenézni](http://cdnjs.com/).
+Ha külső domainről töltünk be erőforrást, akkor pedig mindenképp érdemes valamilyen CDN-t ( _content delivery network_ ) használni, mely egy olyan szolgáltatás, amivel a felhasználóhoz földrajzilag legközelebb eső szerverről szerezheti meg a kívánt erőforrást. Ilyen CDN-t a [Google is üzemeltet](https://developers.google.com/speed/libraries/devguide?csw=1), de itt inkább csak a legismertebb library-ket találhatjuk meg, így célravezető [máshol is körbenézni](http://cdnjs.com/).
 
 ### Képek
 
@@ -122,13 +122,13 @@ Spórolhatunk a különböző képek betöltéséhez szükséges kapcsolatokon i
 
 Először is gratulálok mindenkinek, aki eljutott az olvasással idáig. Hosszú út volt, amely során láthattuk, hogy a HTTP lekérdezések egyes fázisait milyen módszerekkel lehet optimalizálni. A rengeteg lehetőség közül, amiket a leginkább kiemelnék és a Google ajánlások közül is a legfontosabbak:
 
-* oldal tartalmának priorizálása (critical rendering path)
-* erőforrások okos betöltése
-* képek optimalizálása
+- oldal tartalmának priorizálása (critical rendering path)
+- erőforrások okos betöltése
+- képek optimalizálása
 
 ![pagespeedinsights](/img/2014-03-06-pagespeedinsights.png)
 
 Természetesen a fenti műveletek végrehajtása után is érdemes méréseket végezni, ehhez ajánlom a [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) és [Webpagetest](http://www.webpagetest.org/) elemzőprogramokat, melyek értékelési szempontjai alapján ezen cikk is készült. További olvasnivalónak pedig ajánlom az alábbi linkeket:
 
-* [Google PageSpeed Insights optimalizáció](http://www.feedthebot.com/pagespeed/)
-* [Teljesítményoptimalizálás mobilon](http://www.slideshare.net/matenadasdi1/optimizing-browser-experience-hwsw-app-conf)
+- [Google PageSpeed Insights optimalizáció](http://www.feedthebot.com/pagespeed/)
+- [Teljesítményoptimalizálás mobilon](http://www.slideshare.net/matenadasdi1/optimizing-browser-experience-hwsw-app-conf)

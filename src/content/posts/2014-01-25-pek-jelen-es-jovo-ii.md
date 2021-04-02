@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "PÉK jelene és jövője, II. rész"
+title: 'PÉK jelene és jövője, II. rész'
 author: tmichel
-date: 2014-01-25 12:20:00 CET
+date: 2014-01-25 12:20:00
 category: pek
 comment: true
 ---
@@ -31,7 +31,7 @@ nyűgével - ebbe beleértve a népszerűségét, vagyis inkább annak hiányát
 Az újraírás egyik velejárója, hogy az adatbázist örökölte a rendszer az
 elődjétől. A konvenciók változtak az idők során, így fordulhatott elő, hogy a
 tábla és mezőnevek elég kaotikus képet festenek ma. Egy-egy régebbi táblában
-magyar és angol mezőnevek váltakoznak, néhol még egy mezőn  belül is keverednek
+magyar és angol mezőnevek váltakoznak, néhol még egy mezőn belül is keverednek
 a nyelvek.
 
 Idővel a két alkalmazás egy kódbázissá olvadt össze, de ebből kifele nem sok

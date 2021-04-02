@@ -1,11 +1,11 @@
 ---
 layout: post
 author: tmichel
-date: 2014-01-29 22:45:00 CET
+date: 2014-01-29 22:45:00
 category: pek
 comment: true
-title: "PÉK jelene és jövője, IV. rész"
-excerpt: "<p>A negyedik résszel elérkeztünk a sorozat végére. Ebben a részben áttekintjük, hogy mire jutottunk az utóbbi 1-2 hónapban. Rengeteget beszéltünk arról, hogy merre vigyük a PÉK-et, mert több ötlet is felmerült. Megrágtunk jó néhány variációt, de végül győzött a józan ész.</p>"
+title: 'PÉK jelene és jövője, IV. rész'
+excerpt: '<p>A negyedik résszel elérkeztünk a sorozat végére. Ebben a részben áttekintjük, hogy mire jutottunk az utóbbi 1-2 hónapban. Rengeteget beszéltünk arról, hogy merre vigyük a PÉK-et, mert több ötlet is felmerült. Megrágtunk jó néhány variációt, de végül győzött a józan ész.</p>'
 ---
 
 Előzmények:
@@ -20,7 +20,7 @@ A PÉK technológiai hiányosságai mellett sokkal nagyobb problémát jelent a 
 
 Egy esetleges PÉK vérfrissítésről (felhasználói felület és dizájn vonalon) már évek óta beszélgetünk. Most, hogy összeértek a problémák, gyorsan össze is vontuk őket, annak a reményében, hogy egy csapásra kettőt is meg tudunk oldani.
 
-A PÉK felületét és annak hiányosságait nem kell bemutatni: azok, akik  sűrűbben (de legalábbis minden félév végén) találkoznak vele, nyilván érzékelték már, hogy az amúgy is ad-hoc felület több helyen is _döcög_. Az alkalmazás eddigi fejlesztőinek mentségére legyen szólva, hogy többnyire backend oldalon szeretnek dolgozni.
+A PÉK felületét és annak hiányosságait nem kell bemutatni: azok, akik sűrűbben (de legalábbis minden félév végén) találkoznak vele, nyilván érzékelték már, hogy az amúgy is ad-hoc felület több helyen is _döcög_. Az alkalmazás eddigi fejlesztőinek mentségére legyen szólva, hogy többnyire backend oldalon szeretnek dolgozni.
 
 A fentiek fényében az elkövetkezendő pár hónapban lecseréljük és modernizáljuk a PÉK frontendjét. A jelenlegi felület hiányosságairól és legnagyobb problémáiról a ti véleményeteket is szeretnénk majd kikérni, ennek az első lépcsője a következő napokban fog hozzátok eljutni. Figyeljétek a blogot és az email fiókotokat!
 
@@ -34,7 +34,7 @@ A nyílt API-tól azt reméljük, hogy a karon más (nem Kir-Devhez tartozó) ha
 
 ## Node all the way
 
-A frontenddel az a nagy szerencsénk, hogy lényegében bármilyen technológiát választhatunk, mert a feladat mérete megengedi ezt. A backendtől elválasztva, külön alkalmazásként futhat majd a frontend, saját életciklussal és akár azonnali új verzióval ([continuous delivery](http://en.wikipedia.org/wiki/Continuous_delivery)). Ezzel szeretnénk felgyorsítani a fejlesztést, az ötlettől a release-ig tartó utat lerövidíteni. Ez mindenkinek jó: a fejlesztőnek azért, mert szinte azonnal látja a munkája eredményét, a terméknek pedig azért, mert  az új ötleteket gyorsan lehet kipróbálni.
+A frontenddel az a nagy szerencsénk, hogy lényegében bármilyen technológiát választhatunk, mert a feladat mérete megengedi ezt. A backendtől elválasztva, külön alkalmazásként futhat majd a frontend, saját életciklussal és akár azonnali új verzióval ([continuous delivery](http://en.wikipedia.org/wiki/Continuous_delivery)). Ezzel szeretnénk felgyorsítani a fejlesztést, az ötlettől a release-ig tartó utat lerövidíteni. Ez mindenkinek jó: a fejlesztőnek azért, mert szinte azonnal látja a munkája eredményét, a terméknek pedig azért, mert az új ötleteket gyorsan lehet kipróbálni.
 
 A technológia választása esetünkben nem azért volt fontos, hogy megtaláljuk a problémához legjobban illőt, hanem inkább egy olyat kerestünk, amit majd az utánunk jövők is szívesen használnak majd. A választásunk végül a [Node.js](http://nodejs.org/)-re esett.
 

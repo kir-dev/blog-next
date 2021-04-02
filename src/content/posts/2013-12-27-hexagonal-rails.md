@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Hexagonal Rails"
+title: 'Hexagonal Rails'
 author: tmichel
-date: 2013-12-27 13:15:00 CET
+date: 2013-12-27 13:15:00
 ---
 
 A bejgli mámor lassan múlik és kísérőnek mi lehetne jobb, mint egy előadás némi

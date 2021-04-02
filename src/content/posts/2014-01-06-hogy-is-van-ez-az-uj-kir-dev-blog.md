@@ -1,12 +1,12 @@
 ---
-title: "Hogy is van ez az új Kir-Dev blog?"
+title: 'Hogy is van ez az új Kir-Dev blog?'
 author: tmichel
 layout: post
-date: 2014-01-06 22:45:00 CET
+date: 2014-01-06 22:45:00
 comment: true
 ---
 
-Már az [első bejegyzésben]({% post_url 2013-12-23-megujulunk %}) is említettem, hogy az új blogunkat a [Jekyll](http://jekyllrb.com/) blog "motor" hatja. 
+Már az [első bejegyzésben]({% post_url 2013-12-23-megujulunk %}) is említettem, hogy az új blogunkat a [Jekyll](http://jekyllrb.com/) blog "motor" hatja.
 
 A statikus oldalakat generáló eszközök a [fénykorukat élik](http://staticsitegenerators.net/) manapság. Ahogy nevük is utal rá, ezek az eszközök egy statikus HTML-ekből álló oldalt generálnak. Képesek sablonokat és bejegyzéseket is kezelni (ha nem tudnának, akkor nem sok értelmük lenne...). Elég ha a mi [blogunk repoját](https://github.com/kir-dev/kir-dev.sch.bme.hu) nézzük. Pár HTML fájl és egy kitüntettet `_posts` mappa. Ennyi az egész, a dolgok nehezét pedig rábízzuk pár automatizált eszközre.
 

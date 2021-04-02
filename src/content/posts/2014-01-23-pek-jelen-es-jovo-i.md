@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "PÉK jelene és jövője, I. rész"
+title: 'PÉK jelene és jövője, I. rész'
 author: tmichel
-date:   2014-01-23 22:35:00 CET
+date: 2014-01-23 22:35:00
 category: pek
 comment: true
 ---

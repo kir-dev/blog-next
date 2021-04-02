@@ -35,7 +35,16 @@ const Blog: React.FC<BlogPostsProps> = ({ data }) => (
             <Link to={post.fields.slug}>
               <Heading as="h2">{post.frontmatter.title}</Heading>
             </Link>
-            <Text>{post.frontmatter.date}</Text>
+            <Text>
+              {new Date(post.frontmatter.date).toLocaleTimeString('hu-HU', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+              })}
+            </Text>
             <Text>{post.frontmatter.lead}</Text>
           </Box>
         ))}
@@ -56,7 +65,7 @@ export const query = graphql`
         frontmatter {
           title
           lead
-          date(formatString: "YYYY.MM.DD.")
+          date
         }
       }
     }

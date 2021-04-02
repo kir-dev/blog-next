@@ -1,8 +1,8 @@
 ---
 layout: post
 author: balo
-date: 2014-02-16 22:15:00 CET
-title: "Jelszavak kezelése szkriptekben"
+date: 2014-02-16 22:15:00
+title: 'Jelszavak kezelése szkriptekben'
 comment: true
 ---
 
@@ -12,9 +12,9 @@ Ha az alkalmazás vagy erőforrás nem támogatja a jelszófájlokat (pl. jarsig
 
 Példa egy konkrét utasításra, amikor a jelszó parancssori paraméterben szerepel:
 
-~~~sh
+```sh
 $ jarsigner -keystore mystore.ks -storepass MySecretPass awesome.jar mycert
-~~~
+```
 
 A fenti példa azért is nagyon rossz gyakorlat, mert a jelszó könnyen kiszivároghat a bash history-n vagy processzlistázó eszközökön (ps, top) keresztül.
 
@@ -24,36 +24,36 @@ A kulcsot érdemes úgy bekérni, hogy az ne írodjon ki a standard outputra gé
 
 Használjuk a bash [read](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_08_02.html) parancsát a `silent mode` és `prompt` kapcsolókkal.
 
-~~~sh
+```sh
 #!/bin/bash
 read -s -p "Store Password: " storepw
 jarsigner -keystore mystore.ks -storepass "$storepw" awesome.jar mycert
-~~~
+```
 
 **Python**
 
-~~~python
+```python
 from getpass import getpass
 pw = getpass("Password: ")
 print "Your password is", len(pw), "characters long"
-~~~
+```
 
 **Ruby**
 
-~~~ruby
+```ruby
 require "io/console"
 print "Password: "
 pw = STDIN.noecho(&:gets).chomp
 print "Your password is #{pw.length} characters long"
-~~~
+```
 
 Kicsit mágikusnak tűnhet, de a 3. sor nem csinál mást, mint [kikapcsolja](http://www.ruby-doc.org/stdlib-2.1.0/libdoc/io/console/rdoc/IO.html#method-i-noecho) az _echo_ funkciót és [beolvas egy sort](http://www.ruby-doc.org/core-2.1.0/IO.html#method-i-gets), aminek a végéről [levágja](http://ruby-doc.org/core-2.1.0/String.html#method-i-chomp) a sorvége karaktert. Csak ezért a funkcióért nem biztos, hogy megéri behúzni, de a _highline gem_ is tudja ezt kicsit [olvashatóbban](https://github.com/JEG2/highline/blob/master/examples/password.rb).
 
-Ha a szkriptünk egy integrált rendszer részeként fut (pl. cron), a linux terminál eszközeivel a fenti megközelítést bash-ban továbbra is használhatjuk. Egyszerűen mentsük el a jelszót egy védett fájlba és irányítsuk a  szkriptünkbe.
+Ha a szkriptünk egy integrált rendszer részeként fut (pl. cron), a linux terminál eszközeivel a fenti megközelítést bash-ban továbbra is használhatjuk. Egyszerűen mentsük el a jelszót egy védett fájlba és irányítsuk a szkriptünkbe.
 
-~~~sh
+```sh
 $ myscript.sh < mypassw.txt
-~~~
+```
 
 Ez a trükk az előzőekben ismertetett Python és Ruby kódokkal nem működik, de ilyen követelmény esetén találhatunk mindkét környezethez többféle megoldást (Tipp: [Ruby ARGF](http://ruby-doc.org/core-2.1.0/ARGF.html))
 
@@ -61,42 +61,42 @@ Ez a trükk az előzőekben ismertetett Python és Ruby kódokkal nem működik,
 
 Egy másik lehetőség a jelszavak kezelésére a környezeti változók használata, ezt a megközelítést használják az elterjedt [PaaS](http://en.wikipedia.org/wiki/Platform_as_a_service) felhőkben is ([Heroku](https://devcenter.heroku.com/articles/config-vars), [OpenShift](http://blog.vbalazs.me/2013/12/how-not-to-commit-passwords-to-openshift.html)). A rendszer a jelszavakat és az olyan erőforrásokat, mint az adatbázis connection string, ebben a formában teszi elérhetővé, a kódban elég a változót megadni, így nem szükséges azt külön módosítani a fejlesztői és éles környezetben.
 
-~~~sh
+```sh
 $ export MY_SECRET=myPassWord
-~~~
+```
 
 **Bash**
 
-~~~sh
+```sh
 #!/bin/bash
 jarsigner -keystore mystore.ks -storepass $MY_SECRET awesome.jar mycert
-~~~
+```
 
 **Python**
 
-~~~python
+```python
 import os
 pw = os.environ['MY_SECRET']
 print "Your password is", len(pw), "characters long"
-~~~
+```
 
 **Ruby**
 
-~~~ruby
+```ruby
 pw = ENV['MY_SECRET']
 print "Your password is #{pw.length} characters long"
-~~~
+```
 
-A bash history miatt az `export` még mindig aggályos, ezt áthidalhatjuk úgy,  hogy a jelenlegi munkafolyamatban deaktiváljuk a történet mentését az `unset HISTFILE` utasítással vagy egyszerűen elmentjük a változókat egy fájlba és futtatjuk.
+A bash history miatt az `export` még mindig aggályos, ezt áthidalhatjuk úgy, hogy a jelenlegi munkafolyamatban deaktiváljuk a történet mentését az `unset HISTFILE` utasítással vagy egyszerűen elmentjük a változókat egy fájlba és futtatjuk.
 
-~~~sh
+```sh
 $ cat myvars.sh
 #!/bin/bash
 export MY_KEY1=mysecret1
 export MY_KEY2=mysecret2
 
 $ source myvars.sh
-~~~
+```
 
 _A cikk szakmai felülvizsgálatáért és a javaslatokért köszönet [night[w]](https://korok.sch.bme.hu/profile/show/uid/nightw)-nak!_
 

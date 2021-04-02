@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Egy kicsit a biztonságról"
+title: 'Egy kicsit a biztonságról'
 author: kresshy
-date: 2014-01-22 20:30:00 CET
+date: 2014-01-22 20:30:00
 comment: true
 ---
 
@@ -12,21 +12,21 @@ Egy weboldal nagyon hasznos annak a közösségnek, akik mindennap használják 
 
 Az SQL Injection egy kód futtatási technika adatbázist használó alkalmazások támadására. Rosszindulatú SQL kódot írnak be egy beviteli mezőbe, ami majd később végrehajtódik a szerver oldalon. Ez akkor fordulhat elő, hogyha a beviteli mezőben nem szűrjük a megfelelő karaktereket és ezek belekerülnek az SQL kifejezésbe. A megoldás az, hogyha az ilyen karaktereket kiszűrjük a bevitt adatokból, tehát a beviteli mezők validációjával illetve prepared statementek használatával ez a sebezhetőség elkerülhető. Nézzünk egy nagyon egyszerű példát:
 
-~~~mysql
+```mysql
 sql_statement = "SELECT * FROM users WHERE name='" + user_name + "';"
-~~~
+```
 
 Ez az SQL kifejezés a `users` táblából kikeresi azt a felhasználót amelyiknek a felhasználó neve megegyezik a `user_name` változó tartalmával. Ha viszont egy rosszindulatú felhasználó SQL kódot ír a beviteli mezőbe akkor ez a lekérdezés másképpen fog kiértékelődni.
 
-~~~mysql
+```mysql
 ' or '1'='1
-~~~
+```
 
 Amennyiben ez a kódrészlet kerül a `user_name` változóba, akkor a kifejezésünk igazként fog kiértékelődni mivel az 1=1 mindig teljesülni fog. A végén pedig így néz majd ki a végrehajtott lekérdezésünk:
 
-~~~mysql
+```mysql
 SELECT * FROM users WHERE name = '' OR '1'='1';
-~~~
+```
 
 ## XSS - Cross-site scripting
 
@@ -38,15 +38,17 @@ Az XSS lehetőséget nyújt kliens oldali szkriptek beszúrására a weboldalba,
 
 Amikor egy felhasználó meglátogatja a weboldalt akkor a böngészőjében ez a szkript letöltődik és végrehajtódik (gyakorlatilag itt történik meg ténylegesen a beszúrás) és ezek után már a támadó által elhelyezett szkript fog futni a felhasználó böngészőjében. Legtöbbször a `<script>` az `<img>` és az `<iframe>` elemeket támadják. Például a beviteli mezőbe ezt írják be:
 
-~~~html
-<script> alert("XSS"); </script>
-~~~
+```html
+<script>
+  alert('XSS')
+</script>
+```
 
 Ezek a szkriptek akár egy egyszerű form elküldésével is felkerülhetnek az oldalra, de komplexebb útvonalon is eljuthatnak a célhoz JSON, vagy XML Web Service-en keresztül. Kétféle megoldás is létezik. Az egyik az, hogy itt is a beviteli mezőkben található adatokat megfelelően ellenőrizzük, amelyben például figyelünk a `<script>` tagekre, JavaScript parancsokra, CSS stílusokra és egyéb veszélyes HTML elemekre. A másik pedig az, hogy az outputot kódoljuk. Ilyenkor ha az injektált kódunk a következő: `<script>alert(\"abc\")</script>` akkor a kimeneten megfelelően kell kódolni:
 
-~~~html
+```html
 &lt;script&gt;alert(&quot;abc&quot;)&lt;/script&gt;
-~~~
+```
 
 ## CSRF vagy XSRF - Cross-Site Request Forgery
 
@@ -58,9 +60,9 @@ Ahhoz, hogy végre lehessen hajtani a CSRF támadást a felhasználónak már el
 
 Van egy chat alkalmazás, ahol a támadó egy üzenetet küld egy `<img>` taggel. Viszont a forrás attribútumban nem a kép forrása található, hanem egy link ami egy átutalási műveletet hajt végre az áldozat banki felhasználói fiókjával.
 
-~~~html
-<img src="http://bank.example.com/withdraw?account=bob&amount=1000000&for=Fred">
-~~~
+```html
+<img src="http://bank.example.com/withdraw?account=bob&amount=1000000&for=Fred" />
+```
 
 Ez a CSRF támadás a HTTP GET kérést használja ki ugyanakkor lehetőség van a HTTP POST kérések támadására is. Ennek a támadásnak a megelőzésére kitalálták a tokenek használatát. A tokenek hosszú kriptográfiai értéket tartalmaz amelyeket nehéz kitalálni. Ezt akkor generálják, amikor a felhasználói session kezdődik és ehhez a sessionhöz lesz hozzárendelve ez a token. Ez a challange (kihívás) token minden kéréshez hozzá lesz csatolva, amit a szerver használ arra, hogy ellenőrizze a legitimitását a végfelhasználói kéréseknek.
 

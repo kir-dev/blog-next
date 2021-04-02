@@ -1,8 +1,8 @@
 ---
 layout: post
 author: tmichel
-date: 2014-03-06 17:20:00 CET
-title: "Boundaries"
+date: 2014-03-06 17:20:00
+title: 'Boundaries'
 comment: true
 ---
 

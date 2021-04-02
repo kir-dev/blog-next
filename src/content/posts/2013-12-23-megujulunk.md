@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Megújulunk"
+title: 'Megújulunk'
 author: tmichel
-date: 2013-12-23 00:04:00 CET
+date: 2013-12-23 00:04:00
 ---
 
 Már régóta esedékes, hogy a blogunkon némi ráncfelvarrást eszközöljünk. Ennek
@@ -18,9 +18,9 @@ Nem csak külsőleg újulunk meg. Terveink szerint a jelenleg
 [facebookon](https://www.facebook.com/kirdevteam) futó rovatok átkerülnek ide.
 Sőt remélhetőleg a számuk is rohamosan bővül majd. Egyelőre három rovat fut:
 
-* Dráma kedd
-* Security szombat
-* Frontend vasárnap
+- Dráma kedd
+- Security szombat
+- Frontend vasárnap
 
 A rovatok mellett természetesen megmarad a blog eddigi tájékoztató funkciója is.
 Az általunk üzemeltetett szolgáltatásokkal kapcsolatos hírek továbbra is

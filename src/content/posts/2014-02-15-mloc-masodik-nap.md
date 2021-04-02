@@ -1,8 +1,8 @@
 ---
 layout: post
 author: kresshy
-date: 2014-02-15 22:33:00 CET
-title: "mloc.js konferencia II. nap"
+date: 2014-02-15 22:33:00
+title: 'mloc.js konferencia II. nap'
 comment: true
 ---
 
@@ -20,7 +20,7 @@ A fantasztikus első nap után örömmel keltem fel reggel fél hétkor, hogy be
 
 A Facebook előadója [Stoyan Stefanov](https://twitter.com/stoyanstefanov) volt, aki a [Reactról ](http://facebook.github.io/react/) beszélt. A Facebooknál a social pluginok teljesítményével foglalkozik (például mikor egy másik weboldalon lájkolsz valamit). A React a Facebook és az Instagram közös library-je, amivel dinamikus web interfészeket tudunk építeni úgy, hogy azok gyorsak legyenek. Egyszerűen kifejezve a Facebook ettől tűnik gyorsabbnak az utóbbi időben.
 
-## Szünetekben 
+## Szünetekben
 
 Két előadásos blokkok voltak. Ilyenkor alkalmunk nyílt kicsit beszélgetni az emberekkel és körbenézni, hogy miket lehet elfogyasztani.
 
@@ -28,11 +28,11 @@ Két előadásos blokkok voltak. Ilyenkor alkalmunk nyílt kicsit beszélgetni a
 
 ## Enterpise JavaScript Architectures - With some vanilla topping
 
-A konferencia utolsó előadását [Rocska Ádám](https://twitter.com/adam_rocska) tartotta aki az EPAM-nál senior front-end fejlesztő. Az előadás nagyon izgalmas volt, mert arról beszélt, hogy hogyan érdemes JavaScriptben front-end architektúrákat fejleszteni. 
+A konferencia utolsó előadását [Rocska Ádám](https://twitter.com/adam_rocska) tartotta aki az EPAM-nál senior front-end fejlesztő. Az előadás nagyon izgalmas volt, mert arról beszélt, hogy hogyan érdemes JavaScriptben front-end architektúrákat fejleszteni.
 
 ![speaker](https://dl.dropboxusercontent.com/u/31443466/2014-02-14%2016.16.36.jpg)
 
-Beszélt a projektek életciklusa során felmerülő döntésekről és azok meghozásáról. Szó volt arról is, hogy nem feltétlenül jó dolog már a projekt kezdetén egy keretrendszer mellett elköteleződni. Használjunk [_vanilla_](http://en.wikipedia.org/wiki/Vanilla_software) JavaScriptet addig amíg tudunk, mert az előnyére válik a kód minőségének. 
+Beszélt a projektek életciklusa során felmerülő döntésekről és azok meghozásáról. Szó volt arról is, hogy nem feltétlenül jó dolog már a projekt kezdetén egy keretrendszer mellett elköteleződni. Használjunk [_vanilla_](http://en.wikipedia.org/wiki/Vanilla_software) JavaScriptet addig amíg tudunk, mert az előnyére válik a kód minőségének.
 
 ![blueprint](https://dl.dropboxusercontent.com/u/31443466/2014-02-14%2016.33.07.jpg)
 

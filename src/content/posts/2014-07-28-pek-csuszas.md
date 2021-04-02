@@ -1,8 +1,8 @@
 ---
 layout: post
 author: tmichel
-date: 2014-07-28 14:30:00 CEST
-title: "PÉK fejlesztés várhatóan csúszik némileg"
+date: 2014-07-28 14:30:00
+title: 'PÉK fejlesztés várhatóan csúszik némileg'
 comment: true
 ---
 
@@ -33,8 +33,7 @@ tisztázott.
 
 A PÉKben az a szép, hogy open source. A kód kint van [githubon][5], és pull-
 requesteket szívesen fogadunk. Aki kedvet kapott hozzá, hogy alakítsa a
-Schönherz közéletének egyik fontos pillérét, az ne habozzon. Csak egy `git
-clone`-nyi távolságra vagyunk.
+Schönherz közéletének egyik fontos pillérét, az ne habozzon. Csak egy `git clone`-nyi távolságra vagyunk.
 
 [1]: {% post_url 2014-07-18-pek-front-end %}
 [2]: https://lists.sch.bme.hu/wws

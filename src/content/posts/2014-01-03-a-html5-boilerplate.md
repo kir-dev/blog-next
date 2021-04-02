@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "A HTML5 Boilerplate"
+title: 'A HTML5 Boilerplate'
 author: kresshy
-date: 2014-01-03 22:00:00 CET
+date: 2014-01-03 22:00:00
 comment: true
 ---
 
@@ -14,12 +14,12 @@ alkalmazkodó weboldalakat tudj készíteni az új HTML5 funkcionalitásokkal. E
 Megtalálható minden olyan elem amelyre szükséged lehet a fejlesztés során beleértve a
 dokumentációkat is az egyes részekhez.
 
-* HTML
-* CSS
-* JavaScript
-* .htaccess (Apache web szerver konfiguráció)
-* crossdomain.xml
-* Egyéb (gitignore és hasonló fájlok)
+- HTML
+- CSS
+- JavaScript
+- .htaccess (Apache web szerver konfiguráció)
+- crossdomain.xml
+- Egyéb (gitignore és hasonló fájlok)
 
 A [Modernizr](http://modernizr.com/) (erről részletesebben egy másik bejegyzésben írunk majd) is megtalálható a csomagban ami képes detektálni a böngészők által támogatott HTML5 és CSS3 funkciókat. Segít abban is, hogy az oldal dizájnja alkalmazkodjon a böngésző képességeihez.
 
@@ -58,7 +58,7 @@ Az <strong>img</strong> könyvtárba helyezd az összes képet amelyet a webolda
 
 A <strong>js</strong> mappában tárold az oldalon futó scripteket. A gyökerébe a saját scriptjeidet helyezd el míg a vendor könyvtárba azokat tedd amelyek egyéb forrásból származnak. Így könnyebb rendszerezni a fájlokat és nem lesz egy nagy ömlesztett átláthatatlan rengeteg.
 
-A `*.html` fájlokat az egész struktúrának a gyökerében tárold, ezek lesznek azok az oldalak amelyeket majd a tartalom megjelenítésére fogsz használni. Ugyanitt található a `favicon.ico` (az a kis icon amit a böngésződ megjelenít pl.: a tabokon az oldal neve mellett) a `robots.txt` illetve a `humans.txt` is, amelyekből az előbbi a keresőrobotok számára szolgáltat információkat az oldalról, a második pedig információt tartalmaz azokról az emberekről akik a weboldal létrehozásában segítettek. 
+A `*.html` fájlokat az egész struktúrának a gyökerében tárold, ezek lesznek azok az oldalak amelyeket majd a tartalom megjelenítésére fogsz használni. Ugyanitt található a `favicon.ico` (az a kis icon amit a böngésződ megjelenít pl.: a tabokon az oldal neve mellett) a `robots.txt` illetve a `humans.txt` is, amelyekből az előbbi a keresőrobotok számára szolgáltat információkat az oldalról, a második pedig információt tartalmaz azokról az emberekről akik a weboldal létrehozásában segítettek.
 
 A számodra ismeretlen vagy nem használatos kódrészleteket nyugodtan kommentezd ki vagy töröld ha a továbbiakban már nem lesz szükéged rá. Amennyiben szükségesnek érzed nyugodtan módosíthatod ezeket a fájlokat (pl.: az eddig megszokott módszereiddel teljesen ellentétesen használ dolgokat) hiszen ez az egész inkább tekinthető egy ajánlásnak mint kőbe vésett betartandó szabályoknak amiken nem lehet módosítani.
 
@@ -66,21 +66,21 @@ A számodra ismeretlen vagy nem használatos kódrészleteket nyugodtan kommente
 
 Nézzük az `.ir` CSS osztályt (image replacement). Ezt az összes olyan elemnek a stílusához hozzáadhatod melyeket képekkel akarsz helyettesíteni. A szélességet és a magasságát kötelező megadni annak érdekében, hogy a kép látszódjon.
 
-~~~css
+```css
 .ir {
-	background-image: url(http://yoursite.com/images/logo.jpg);
-	background-size: 100% auto;
-	width:450px;
-	height:450px
+  background-image: url(http://yoursite.com/images/logo.jpg);
+  background-size: 100% auto;
+  width: 450px;
+  height: 450px;
 }
-~~~
+```
 
 A következő segéd CSS osztályokat foglalja magába a sablon:
 
-* `.hidden` (add hozzá azokhoz az elemekhez amelyeket el akarsz rejteni)
-* `.visuallyhidden` (elrejti a szöveget a böngészőben de a képernyő olvasók még látják)
-* `.invisible` (úgy rejti el az elemet, hogy közben nem befolyásolja az oldal felépítését)
-* `.clearfix` (biztosítja, hogy a lebegtetett (`float`) gyereket az adott elem tartalmazza)
+- `.hidden` (add hozzá azokhoz az elemekhez amelyeket el akarsz rejteni)
+- `.visuallyhidden` (elrejti a szöveget a böngészőben de a képernyő olvasók még látják)
+- `.invisible` (úgy rejti el az elemet, hogy közben nem befolyásolja az oldal felépítését)
+- `.clearfix` (biztosítja, hogy a lebegtetett (`float`) gyereket az adott elem tartalmazza)
 
 ## Hova írjam a kódomat?
 
@@ -100,6 +100,6 @@ Mielőtt nekilátsz egy új projektnek mindenképp érdemes teljesen átnézned 
 
 ## Media query
 
-A `main.css`-ben megtalálhatóak azok a placeholderek  amelyek ahhoz kellenek, hogy különböző méretű képernyőket támogassunk (Reszponzív Web Design). A dokumentáció azt ajánlja, hogy az oldalad tartalmához igazodjanak ezek a media query-k és ne a képernyő méretének tükrében hozzuk őket létre. A "mobile first" megközelítés nagyon fontos viszont nem mindenki szeretné támogatni a különböző eszközöket. Ilyenkor csak egyszerűen vedd ki a placeholdert a CSS-ből.
+A `main.css`-ben megtalálhatóak azok a placeholderek amelyek ahhoz kellenek, hogy különböző méretű képernyőket támogassunk (Reszponzív Web Design). A dokumentáció azt ajánlja, hogy az oldalad tartalmához igazodjanak ezek a media query-k és ne a képernyő méretének tükrében hozzuk őket létre. A "mobile first" megközelítés nagyon fontos viszont nem mindenki szeretné támogatni a különböző eszközöket. Ilyenkor csak egyszerűen vedd ki a placeholdert a CSS-ből.
 
 A HTML5 Boilerplate egy remek template arra, hogy bármilyen új projektet elkezdj. Rengeteg böngésző létezik amelyekhez támogatást nyújt és egy vázat ahhoz, hogy weboldalakat hozz létre mobilra, tabletre és desktopra.

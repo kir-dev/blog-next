@@ -1,15 +1,15 @@
 ---
 layout: post
 author: laci
-date: 2020-06-09 15:33:54 CET
-title: "Fejlesztés Docker konténerekben"
+date: 2020-06-09 15:33:54
+title: 'Fejlesztés Docker konténerekben'
 comment: true
 ---
 
-## Bevezetés 
+## Bevezetés
 
 A Docker és egyéb virtualizációs technológiák az üzemeltetésben már jelentősen elterjedtek, viszont a fejlesztésnél még csak szűkebb körben használtak. Egy egyszerű [Ruby on Rails][9] framework alapú projekten keresztül vizsgáljuk meg, hogy milyen szinten lehet hasznosítani a konténereket már a fejlesztés folyamatában is. Az alkalmazásnak szüksége van egy Ruby nyelvet támogató környezetre és egy PostgreSQL adatbázisra. Ezek a gazdagépre nem lesznek telepítve, kizárólag konténereken keresztül lesznek használva. A [RubyMine][3] és [Visual Studio Code][4] IDE-ket fogjuk beállítani és használni. Ez a két eszköz eltérő módon közelíti meg a konténerek használatát, ezért érdemes mindkettőt megismerni.
- 
+
 ## Miért érdemes ezzel foglalkozni?
 
 - Gyorsan és egyszerűen el lehet kezdeni egy adott alkalmazáson dolgozni, ha van hozzá Docker konfiguráció. Nincs szükség a függőségek letöltésére, konfigurálására.
@@ -45,7 +45,6 @@ A fenti image a Ruby 2.6.3-as verzióját tartalmazza, egy Debian rendszeren. Te
 
 A Dockerfile elkészítése után elkészíthetjük a **docker-compose.yml** fájl-t, ami a több konténerből álló alkalmazásunkat írja le.
 
-
 ```docker
 version: '3'
 services:
@@ -71,17 +70,17 @@ services:
       - "26166:26168"
     depends_on:
       - db
-  ```
+```
 
 A fájl első részében létrehozzuk a **db** szolgáltást, ami a postgres image alapú konténer lesz. Az adatbázisban tárolt adatok mappáját összekötjük a host egyik mappájával, ezzel perzisztensé téve az adatbázis adatait. Az egyszerűség kedvéért jelszót nem állítunk be. Majd a host 5432-es portját és a konténer 5432-es portját összekötjük.
 
 A második szolgáltatásban fog futni a rails web szerver, ezért ezt **web** néven fogjuk létrehozni. Két lehetséges parancsot is felvettem. Az első elindítja a szervert. A második csak futó állapotban tartja a konténert, hogy fejlesztés közben csatlakozni lehessen hozzá.
 
-Az alap Rails projekt elkészítéséhez kommentezzük ki a `---`-t tartalmazó sorok közötti részeket a Dockerfile-ban. Ezek a sorok majd az elkészült alkalmazás függőségeinek telepítéséért lesznek felelősek. Ezután létre kell hoznunk a konténereket és a web szolgáltatásban telepítenünk kell a rails könyvtárat, valamint létrehozni egy új alkalmazást, ami a PostgreSQL adatbázist fogja használni. Ha létrejött az alkalamazás, akkor a hozzá tartozó adatbázist is létre kell hozni. Az alábbi parancsok kiadásával tehetjük ezt meg. 
+Az alap Rails projekt elkészítéséhez kommentezzük ki a `---`-t tartalmazó sorok közötti részeket a Dockerfile-ban. Ezek a sorok majd az elkészült alkalmazás függőségeinek telepítéséért lesznek felelősek. Ezután létre kell hoznunk a konténereket és a web szolgáltatásban telepítenünk kell a rails könyvtárat, valamint létrehozni egy új alkalmazást, ami a PostgreSQL adatbázist fogja használni. Ha létrejött az alkalamazás, akkor a hozzá tartozó adatbázist is létre kell hozni. Az alábbi parancsok kiadásával tehetjük ezt meg.
 
 ```sh
 docker-compose run web bash
-gem install rails 
+gem install rails
 rails new test_app --database=postgresql
 rails db:create
 ```
@@ -108,7 +107,9 @@ Végezzük el a fenti műveletet a GID-kre. Annyi különbséggel, hogy itt a sa
 #/etc/subgid
 user:127:1
 ```
+
 A fenti beállítások elvégzése után, userns-remap tulajdonságot kell beállítani a felhasználónevünkre. Ez megtehetjük kapcsolóként.
+
 ```cmd
 dockerd --userns-remap=user
 ```
@@ -134,9 +135,9 @@ A [localhost:3000](http://localhost:3000/) megtekinthetjük a Rails szerver kezd
 
 ## RubyMine konfigurálása
 
-Először gyorsan áttekintjük, miként állithatjuk be, hogy a RubyMine a konténerünet használja fejlesztés során. Megnyitjuk az IDE-t a projektünk mappájában. A **Settings/Preferences/Languages & Frameworks/Ruby SDK and Gems** oldalra navigálunk. Itt a **New remote** gombra kattintva felugrik egy dialógus ablak. Ezen beállítjuk a **Docker Compose** használatát. A lehetséges szolgáltatások közül kiválasztjuk a **web**-et. Az oké gombra kattintás után kiválasztjuk a most létrehozott remote-ot. 
+Először gyorsan áttekintjük, miként állithatjuk be, hogy a RubyMine a konténerünet használja fejlesztés során. Megnyitjuk az IDE-t a projektünk mappájában. A **Settings/Preferences/Languages & Frameworks/Ruby SDK and Gems** oldalra navigálunk. Itt a **New remote** gombra kattintva felugrik egy dialógus ablak. Ezen beállítjuk a **Docker Compose** használatát. A lehetséges szolgáltatások közül kiválasztjuk a **web**-et. Az oké gombra kattintás után kiválasztjuk a most létrehozott remote-ot.
 
-Ahhoz, hogy el tudjuk indítani  az IDE-ből a webszervert, létre kell hoznunk a megfelelő konfigurációs fájlt. Ezt a **Edit configurations**  menüpont használatával tehetjük meg. Ezene belül a **template**-ek közül válasszuk ki a **Rails** konfigurációt. Állitsuk át a használt docker-compose parancsot **docker-compose exec**-re. Ezután már elindítható lesz a webszerver.
+Ahhoz, hogy el tudjuk indítani az IDE-ből a webszervert, létre kell hoznunk a megfelelő konfigurációs fájlt. Ezt a **Edit configurations** menüpont használatával tehetjük meg. Ezene belül a **template**-ek közül válasszuk ki a **Rails** konfigurációt. Állitsuk át a használt docker-compose parancsot **docker-compose exec**-re. Ezután már elindítható lesz a webszerver.
 
 A debugolás használatához még szükségünk lesz 2 gem-re. Ezek felvételéhez először írjuk be az alábbi sorokat a Gemfile-ba.
 
@@ -145,7 +146,7 @@ A debugolás használatához még szükségünk lesz 2 gem-re. Ezek felvételéh
 
 gem 'debase'
 gem 'ruby-debug-ide'
-```  
+```
 
 Az IDE Alt+Enter lenyomása után felkínálja, hogy újra build-eli az image-et. Használjuk ezt a lehetősége, hogy a gem-ek belekerüljenek az image-be. Ha később további gem-ek telepítésére lenne szükségünk, a fentihez hasonló módon tehetjük meg.
 
@@ -157,7 +158,7 @@ A Rails keretrendszer lehetőséget biztosít generátorok használatára, amik 
 docker-compose exec web bash
 ```
 
-Alapvetően a RubyMine terminálja nem kapcsolódik a konténerekhez. Több mód is van, hogy a fejlesztőkörnyezet integrált terminálját automatikusan hozzákapcsoljuk az általunk választott konténerhez. Például a Services oldalon az attach menüpont használatával vagy a Shell Path átállításával. Az egyszerűség kedvéért most manuálisan, a fenti paranccsal csatlakozunk a konténerhez, mivel nem lesz erre gyakran szükség. 
+Alapvetően a RubyMine terminálja nem kapcsolódik a konténerekhez. Több mód is van, hogy a fejlesztőkörnyezet integrált terminálját automatikusan hozzákapcsoljuk az általunk választott konténerhez. Például a Services oldalon az attach menüpont használatával vagy a Shell Path átállításával. Az egyszerűség kedvéért most manuálisan, a fenti paranccsal csatlakozunk a konténerhez, mivel nem lesz erre gyakran szükség.
 
 Ezután a konténerben navigáljunk el a projektünk mappájába (/test_app) és már, ki is adhatjuk a parancsot, amivel hozzáadunk alapvető funkcionalitásokat az alkalmazásunkhoz.
 
@@ -186,6 +187,7 @@ A code-completion és az intelligens navigáció is működik, bár ezekhez nem 
 ## Visual Studio Code konfigurálása
 
 Nyissuk meg a projektet VSCode-ban. Első lépésként a **telepítsük a szükséges bővítményeket-öket**. Ezek az alábbiak:
+
 - [Remote - Containers][6]
 - [Ruby][7]
 - [Ruby Solargraph][8]
@@ -224,7 +226,7 @@ Amikor mérlegeljük, hogy megéri-e konténeres környezetben fejleszteni, töb
 
 Az befejezett projekt elérhető GitHub-on, az alábbi linken:
 https://github.com/SepsiLaszlo/rails_development_in_containers
- 
+
 ## Források
 
 - rubymine setup: https://www.jetbrains.com/help/ruby/using-docker-compose-as-a-remote-interpreter.html
@@ -238,7 +240,7 @@ https://github.com/SepsiLaszlo/rails_development_in_containers
 - Ruby Mine: https://www.jetbrains.com/ruby
 - Visual Studio Code: https://code.visualstudio.com/
 - alap projekt: https://github.com/JetBrains/sample_rails_app
- 
+
 [1]: https://youtrack.jetbrains.com/issue/RUBY-12337
 [2]: https://solargraph.org/guides/rails
 [3]: https://www.jetbrains.com/ruby/

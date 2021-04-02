@@ -1,8 +1,8 @@
 ---
 layout: post
 author: kresshy
-date: 2014-03-25 11:20:00 CET
-title: "Node.js is a badass rock star tech! - I.rész"
+date: 2014-03-25 11:20:00
+title: 'Node.js is a badass rock star tech! - I.rész'
 comment: true
 ---
 
@@ -10,7 +10,7 @@ Elérkezett az ideje annak, hogy írjak egy kicsit a [Node.js](http://nodejs.org
 
 [![Node.js is a badass rock star tech](http://img.youtube.com/vi/bzkRVzciAZg/0.jpg)](http://www.youtube.com/watch?v=bzkRVzciAZg)
 
-Sok ismeretlen fogalom elhangzik a videóban, amelyek egy részére megpróbálok magyarázatot adni. A videó egyik tanulsága, hogy a régi jól bevált dolgoktól nem feltétlenül kell megszabadulni az új technológiák miatt - mindennek megvan a maga helye. Egy Apache webszerver már kiforrott, jól működik és rengeteg fejlesztő megtanulta használni. Jól bevált technológia, folyamatos patchekkel a bugok és biztonsági hibák ellen. Egy olyan szoftver, amely rengeteg igényt kielégít és tökéletes lenne a számunkra is, sőt jelenleg is fut nálunk. Akkor mégis miért szeretnénk mindezt a biztonságot feláldozni és új vizekre evezni? Egy szó a válasz rá: kíváncsiságból. 
+Sok ismeretlen fogalom elhangzik a videóban, amelyek egy részére megpróbálok magyarázatot adni. A videó egyik tanulsága, hogy a régi jól bevált dolgoktól nem feltétlenül kell megszabadulni az új technológiák miatt - mindennek megvan a maga helye. Egy Apache webszerver már kiforrott, jól működik és rengeteg fejlesztő megtanulta használni. Jól bevált technológia, folyamatos patchekkel a bugok és biztonsági hibák ellen. Egy olyan szoftver, amely rengeteg igényt kielégít és tökéletes lenne a számunkra is, sőt jelenleg is fut nálunk. Akkor mégis miért szeretnénk mindezt a biztonságot feláldozni és új vizekre evezni? Egy szó a válasz rá: kíváncsiságból.
 
 ## A motorháztető alatt
 
@@ -24,18 +24,20 @@ A legtöbb ember könnyedén megérti azt, hogy milyen az esemény vezérelt pro
 
 Az event loop megértésének egy módja a postás analógiája. Az event-loop a postás, és az event maga a levél. A postás fogja a megkapott levelet és a megfelelő _route_-hoz viszi, ami maga lesz a callback, ez lefut, aztán pedig mindez újra és újra megtörténik.
 
-~~~js
-var http = require('http');
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello World\n');
-}).listen(1337, '127.0.0.1');
-console.log('Server running at http://127.0.0.1:1337/');
-~~~
+```js
+var http = require('http')
+http
+  .createServer(function(req, res) {
+    res.writeHead(200, { 'Content-Type': 'text/plain' })
+    res.end('Hello World\n')
+  })
+  .listen(1337, '127.0.0.1')
+console.log('Server running at http://127.0.0.1:1337/')
+```
 
 A fenti kódrészlet a Node.js hivatalos weboldaláról van. Ez egy rendkívül egyszerű HTTP szerver kódja, ami nem csinál mást, mint a böngésző kérésére elküldi válaszként a "Hello World"-öt. De mi is történik, itt valójában. Beesik egy HTTP kérés hozzánk, ekkor a Node.js a _request_ eventet bocsájtja ki. Ennek hatására meghívódik a callback-ünk ami jelen esetben egy anonim függvény a `createServer`-ben argumentumként átadva. Ez egy nagyon egyszerű callback, ami rendkívül gyorsan fut.
 
-Most tegyük fel, hogy az oldalunk nagyon népszerű lesz és rengeteg kérést kapunk. Tételezzük fel azt is, hogy a callback függvényük egy másodpercig fut és egyszerre két kérés jön be. Mind a két kérést nem tudjuk kiszolgálni és a második további egy másodpercig fog várakozni. Ez egy veszélyes jelenség, mivel blokkoljuk az event-loopot, és a felhasználók látják a kárát. 
+Most tegyük fel, hogy az oldalunk nagyon népszerű lesz és rengeteg kérést kapunk. Tételezzük fel azt is, hogy a callback függvényük egy másodpercig fut és egyszerre két kérés jön be. Mind a két kérést nem tudjuk kiszolgálni és a második további egy másodpercig fog várakozni. Ez egy veszélyes jelenség, mivel blokkoljuk az event-loopot, és a felhasználók látják a kárát.
 
 E miatt próbáljuk a Node.js-t, amennyire csak lehet esemény vezéreltnek és blokkolás mentesnek meghagyni. Nagyon érdekes technológiáról van szó, amivel érdemes foglalkozni. Azonban megkérdőjelezhető a kód karbantarthatósága. Ha nem vigyázunk olyan szörnyeteget tudunk létrehozni, amit senki nem szeretne piszkálni. Muszáj lesz olyan metodológiákat alkalmazni, amikkel elérhetjük, hogy minőségi kód kerüljön ki a kezünk közül.
 

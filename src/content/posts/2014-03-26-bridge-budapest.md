@@ -2,12 +2,12 @@
 layout: post
 author: abel
 idp: zoww
-date: 2014-03-26 14:10:00 CET
-title: "BridgeBudapest konferencia a Prezinél"
+date: 2014-03-26 14:10:00
+title: 'BridgeBudapest konferencia a Prezinél'
 comment: true
 ---
 
-Mostanában sok érdekes konferencia volt a Prezinél. A legutóbbi ilyet közösen szervezték a BridgeBudapest csapatával. A [BridgeBudapest](http://bridgebudapest.hu) egy speciális ösztöndíj, amit három sikeres magyar startup cég alapított, a Prezi, a Ustream és a LogMeIn. Az a 6-8 szerencsés, aki megnyeri az ösztöndíjat, elmehet ezekhez a cégekhez dolgozni egy hónapra és belepillanthat az életükbe. Kaliforniában a Prezihez és a Ustreamhez, Bostonban a LogMeInhez lehet eljutni. Idén csatlakozott a hármashoz az NNG, akikhez Japánba, vagy Izraelbe lehet kiutazni. 
+Mostanában sok érdekes konferencia volt a Prezinél. A legutóbbi ilyet közösen szervezték a BridgeBudapest csapatával. A [BridgeBudapest](http://bridgebudapest.hu) egy speciális ösztöndíj, amit három sikeres magyar startup cég alapított, a Prezi, a Ustream és a LogMeIn. Az a 6-8 szerencsés, aki megnyeri az ösztöndíjat, elmehet ezekhez a cégekhez dolgozni egy hónapra és belepillanthat az életükbe. Kaliforniában a Prezihez és a Ustreamhez, Bostonban a LogMeInhez lehet eljutni. Idén csatlakozott a hármashoz az NNG, akikhez Japánba, vagy Izraelbe lehet kiutazni.
 
 ![BridgeBudapest](http://distilleryimage2.ak.instagram.com/4b8c9378a60e11e380f00afa321cabe2_8.jpg)
 

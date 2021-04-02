@@ -1,8 +1,8 @@
 ---
 layout: post
 author: tmichel
-date: 2014-02-18 19:00:00 CET
-title: "Tanfolyam plakát"
+date: 2014-02-18 19:00:00
+title: 'Tanfolyam plakát'
 comment: true
 ---
 

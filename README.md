@@ -19,6 +19,20 @@ Ha az előkövetlemények megvannak, akkor
 
 A böngésződben pedig a `localhost:8000`-en tudod megnézni a blogot. A GraphiQL oldal a `localhost:8000/___graphql` címen lesz elérhető.
 
+## Készítenél posztot?
+
+---
+
+Használd a `create-post.sh` shell scriptet:
+
+```bash
+./create-post.sh '<title>' '<author>'
+```
+
+Ezután keresd meg a posztod markdown fájlját. Adj egy maximum 2 mondatos ízelítőt a posztról a `lead` field alatt. Írd meg a posztot markdownban, majd kérj review-t körtársaidtól egy pull requesten keresztül.
+
+Nézz meg néhány korábbi blogposztot, hogy is tudod kihasználni a markdown adta lehetőségeket: code részletek beszúrása, képek beszúrása.
+
 ## License
 
 ---

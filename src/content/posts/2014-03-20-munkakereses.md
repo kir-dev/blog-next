@@ -1,8 +1,8 @@
 ---
 layout: post
 author: tmichel
-date: 2014-03-20 22:00:00 CET
-title: "Munkakeresés külföldön"
+date: 2014-03-20 22:00:00
+title: 'Munkakeresés külföldön'
 comment: true
 ---
 
@@ -14,9 +14,9 @@ Ez a téma nem igazán vág a Kir-Dev profiljába, de kifejezetten hasznos olvas
 
 Informatikusként a sok lehetőség már-már ijesztő és munkakeresés közben a cikkben is megfogalmazott két állapot között könnyű ingadozni:
 
-> * There are trillions of people who know hundreds of times more stuff about everything than me, and anything I can do could and should be done infinitely quicker and more effectively by these savvy supermen
+> - There are trillions of people who know hundreds of times more stuff about everything than me, and anything I can do could and should be done infinitely quicker and more effectively by these savvy supermen
 >
->* I AM PROGRAMMER, KNEEL BEFORE ME AND BEG ME TO WORK WITH YOU
+> - I AM PROGRAMMER, KNEEL BEFORE ME AND BEG ME TO WORK WITH YOU
 
 Mindenképpen érdemes elolvasni a fentebb linkelt cikket.
 
