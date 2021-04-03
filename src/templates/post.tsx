@@ -23,7 +23,7 @@ interface PostTemplateProps {
   }
 }
 
-const PostTemplate: React.SFC<PostTemplateProps> = ({ data }) => (
+const PostTemplate: React.FC<PostTemplateProps> = ({ data }) => (
   <IndexLayout>
     <Post>
       <Container>
