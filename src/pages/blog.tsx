@@ -1,4 +1,4 @@
-import { Box, Heading, Text } from '@chakra-ui/core'
+import { Box, Heading, Text } from '@chakra-ui/react'
 import { graphql, Link } from 'gatsby'
 import * as React from 'react'
 import Container from '../components/Container'

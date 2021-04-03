@@ -1,4 +1,4 @@
-import { Box, Flex } from '@chakra-ui/core'
+import { Box, Flex } from '@chakra-ui/react'
 import { graphql, StaticQuery } from 'gatsby'
 import 'modern-normalize'
 import * as React from 'react'

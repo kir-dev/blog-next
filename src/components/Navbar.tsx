@@ -1,4 +1,5 @@
-import { Box, Flex, Icon, useColorMode } from '@chakra-ui/core'
+import { MoonIcon, SunIcon } from '@chakra-ui/icons'
+import { Box, Flex, IconButton, useColorMode } from '@chakra-ui/react'
 import { Link } from 'gatsby'
 import * as React from 'react'
 
@@ -18,7 +19,14 @@ const Navbar: React.FC = () => {
       <Link to="/archive">
         <Box px={4}>Archívum</Box>
       </Link>
-      <Icon mx={4} size="24px" cursor="pointer" name={colorMode === 'dark' ? 'sun' : 'moon'} onClick={toggleColorMode} />
+      <IconButton
+        aria-label="Switch color mode"
+        px={4}
+        h="min"
+        icon={colorMode === 'dark' ? <SunIcon /> : <MoonIcon />}
+        onClick={toggleColorMode}
+        variant="unstyled"
+      />
     </Flex>
   )
 }

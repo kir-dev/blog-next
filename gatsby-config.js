@@ -7,7 +7,7 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-plugin-chakra-ui',
+      resolve: '@chakra-ui/gatsby-plugin',
       options: {
         isResettingCSS: true, // optional, default to true
         isUsingColorMode: true // optional, default to true
@@ -37,9 +37,10 @@ module.exports = {
               wrapperStyle: 'margin-bottom: 1rem'
             }
           },
-          'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
+          'gatsby-remark-autolink-headers',
+          'gatsby-remark-external-links',
           {
             resolve: 'gatsby-remark-images',
             options: {
@@ -47,7 +48,8 @@ module.exports = {
               quality: 90,
               linkImagesToOriginal: false
             }
-          }
+          },
+          'gatsby-remark-prismjs',
         ]
       }
     },
