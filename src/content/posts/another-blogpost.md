@@ -5,13 +5,13 @@ lead: 'This is a lead, also known as excerpt'
 date: '2019-11-30'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate urna in est convallis, in viverra elit accumsan. Donec ac.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate urna in est convallis, in viverra elit accumsan. Donec ac. :rocket:
 
-_Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate urna in est convallis, in viverra elit accumsan. Donec ac._
+_Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate urna in est convallis, in viverra elit accumsan. Donec ac._ :rotating_light:
 
-**Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate urna in est convallis, in viverra elit accumsan. Donec ac.**
+**Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate urna in est convallis, in viverra elit accumsan. Donec ac.** :train:
 
-## Quote examples
+## Quote examples :heart: :ok_hand: :metal: 🚨
 
 > My Best Friend is a person who will give me a book I have not read.
 >
@@ -86,7 +86,7 @@ public Message() {
 > Quotes. Yes.
 ```
 
-## Images & Links
+## Images & Links :smiley_cat:
 
 - An image from the internet
   ![cat.jpeg](https://i.imgur.com/RtC6c01.jpeg)

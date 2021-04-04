@@ -40,6 +40,8 @@ module.exports = {
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
           'gatsby-remark-autolink-headers',
+          'gatsby-remark-gemoji-to-emoji',
+          'gatsby-remark-prismjs',
           'gatsby-remark-external-links',
           {
             resolve: 'gatsby-remark-images',
@@ -49,7 +51,6 @@ module.exports = {
               linkImagesToOriginal: false
             }
           },
-          'gatsby-remark-prismjs',
         ]
       }
     },
