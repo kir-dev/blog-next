@@ -8,7 +8,7 @@ comment: true
 
 Elérkezett az ideje annak, hogy írjak egy kicsit a [Node.js](http://nodejs.org/)-ről. A szándékainkról már tudtok. Szeretnénk újra írni a PÉK-et és ehhez a Node.js-t használnánk a front-end elkészítéséhez. Ahhoz, hogy tisztán lássunk jó pár dolgot meg kell érteni, és jelen cikk ezeket célozza meg, majd egy következő cikkben pedig bevezetést fogok adni, a Node.js alapjairól. De még mielőtt elkezdenénk belemenni a részletekbe, nézzétek meg ezt a videót, amely a már jól bevált webszervereket állítja szembe az új, még kiforróban lévő Node.js-szel.
 
-[![Node.js is a badass rock star tech](http://img.youtube.com/vi/bzkRVzciAZg/0.jpg)](http://www.youtube.com/watch?v=bzkRVzciAZg)
+[![Node.js is a badass rock star tech](https://img.youtube.com/vi/bzkRVzciAZg/0.jpg)](https://www.youtube.com/watch?v=bzkRVzciAZg)
 
 Sok ismeretlen fogalom elhangzik a videóban, amelyek egy részére megpróbálok magyarázatot adni. A videó egyik tanulsága, hogy a régi jól bevált dolgoktól nem feltétlenül kell megszabadulni az új technológiák miatt - mindennek megvan a maga helye. Egy Apache webszerver már kiforrott, jól működik és rengeteg fejlesztő megtanulta használni. Jól bevált technológia, folyamatos patchekkel a bugok és biztonsági hibák ellen. Egy olyan szoftver, amely rengeteg igényt kielégít és tökéletes lenne a számunkra is, sőt jelenleg is fut nálunk. Akkor mégis miért szeretnénk mindezt a biztonságot feláldozni és új vizekre evezni? Egy szó a válasz rá: kíváncsiságból.
 

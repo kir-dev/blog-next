@@ -100,7 +100,5 @@ $ source myvars.sh
 
 _A cikk szakmai felülvizsgálatáért és a javaslatokért köszönet [night[w]](https://korok.sch.bme.hu/profile/show/uid/nightw)-nak!_
 
-<div style="text-align: center;">
 Happy scripting!
-    <a href="http://xkcd.com/1319/"><img title="'Automating' comes from the roots 'auto-' meaning 'self-', and 'mating', meaning 'screwing'." src="http://imgs.xkcd.com/comics/automation.png"></a>
-</div>
+![](https://imgs.xkcd.com/comics/automation.png)

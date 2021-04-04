@@ -1,6 +1,6 @@
 # blog-next
 
-A [kir-dev.sch.bme.hu](http://kir-dev.sch.bme.hu) következő generációs blogja.
+A [kir-dev.sch.bme.hu](https://kir-dev.sch.bme.hu) következő generációs blogja.
 
 A projekt jelenleg fejlesztési szakaszban van, az aktuális állapot [Netlify-on](https://quizzical-mestorf-416189.netlify.com/) tekinthető meg.
 

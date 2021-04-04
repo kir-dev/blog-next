@@ -9,7 +9,7 @@ comment: true
 
 Mostanában sok érdekes konferencia volt a Prezinél. A legutóbbi ilyet közösen szervezték a BridgeBudapest csapatával. A [BridgeBudapest](http://bridgebudapest.hu) egy speciális ösztöndíj, amit három sikeres magyar startup cég alapított, a Prezi, a Ustream és a LogMeIn. Az a 6-8 szerencsés, aki megnyeri az ösztöndíjat, elmehet ezekhez a cégekhez dolgozni egy hónapra és belepillanthat az életükbe. Kaliforniában a Prezihez és a Ustreamhez, Bostonban a LogMeInhez lehet eljutni. Idén csatlakozott a hármashoz az NNG, akikhez Japánba, vagy Izraelbe lehet kiutazni.
 
-![BridgeBudapest](http://distilleryimage2.ak.instagram.com/4b8c9378a60e11e380f00afa321cabe2_8.jpg)
+![BridgeBudapest](https://distilleryimage2.ak.instagram.com/4b8c9378a60e11e380f00afa321cabe2_8.jpg)
 
 Március 7-én volt a konferencia a Prezi székházban. Rengetegen voltunk, ahogy az a képen is látszik. A magyar Forbes Magazin főszerkesztője volt a beszélgetés moderátora. Ő kérdezte a négy vezetőt: Árvai Pétert és Somlai-Fischer Ádámot a Prezitől, Fehér Gyulát a Ustreamtől és Balogh Pétert az NNG-től. A találkozó eleje a három cég történetéről szólt: melyikük hogyan lett sikeres. Tulajdonképpen egy vállveregetés volt, hogy nyugodtan lehet itthon is csinálni céget, lehet az sikeres is, csak ne a hazai piacra tervezz.
 

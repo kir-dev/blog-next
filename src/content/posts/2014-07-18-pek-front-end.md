@@ -16,19 +16,19 @@ Az alkalmazást logikailag két külön részre különítjük el. Van egy publi
 
 ## The UI flow
 
-![ui-flow](http://warp.sch.bme.hu/ad342c8a557d49268e40fd229540b11fbfd5618f/800)
+![ui-flow](https://warp.sch.bme.hu/ad342c8a557d49268e40fd229540b11fbfd5618f/800)
 
 A designon hamarabb kezdtünk el dolgozni, de mikor úgy éreztük, hogy megtaláltuk a megfelelő utat el kellett gondolkozni arról, hogy ez az egész miként fog összeállni egy nagy webalkalmazássá. Egy délután összeültünk közösen és átbeszéltük, hogy milyen elemek kellenek még a front-endre, és milyen legyen a navigáció az oldalon. A korábbi felmérésünkből, amit szép számmal kitöltöttetek kiderült, hogy a legtöbben keresésre használjátok az alkalmazást ezért úgy döntöttünk, hogy az oldal fő funkcionalitása a keresés lesz. Mindenhol tudtok majd keresni, a főoldaltól kezdve, a profilon át, a körös oldalakon keresztül mindenhol lesz egy kereső mező, ahonnan bármit könnyedén el tudtok érni.
 
 ## A kezdőoldal
 
-![landing](http://warp.sch.bme.hu/0c06143f10dc155436a8c39d38998ec703ab6b84/800)
+![landing](https://warp.sch.bme.hu/0c06143f10dc155436a8c39d38998ec703ab6b84/800)
 
 A kezdőoldalt ennek megfelelően egy nagy kereső felületté alakítottuk át, ahol a keresési találatok kis kártyákként fognak megjelenni. Az oldal tetején állandó jelleggel találhattok majd egy navbart, aminek a jobb oldalán elérhetitek a profilotokat, illetve egy menüt, ahonnan elnavigálhattok az alkalmazás további oldalaihoz. Természetesen a keresési találatokra kattintáskor is megtörténik a navigáció a profilra vagy a kör profiljára. A menüben egy új feature lesz, az értesítések megjelenítése. Ez főleg a fontos időszakokat fogja mutatni a körvezetők számára, de később egyre több eseményre fogja majd a figyelmeteket felhívni.
 
 ## A profil
 
-![profile](http://warp.sch.bme.hu/dfbda73d50cce96e19119536d938603a062e514e/800)
+![profile](https://warp.sch.bme.hu/dfbda73d50cce96e19119536d938603a062e514e/800)
 
 A profil is átalakul, sokkal modernebb lesz a megjelenése a felületnek. Ezen a képen a lenyíló menüt is láthatjátok. A profilon tabok lesznek, amin az információkat csoportokba szervezve megjelenítjük. Az alkalmazás többi oldala is ilyen stílusban lesz elkészítve, és amikor kész vagyunk vele, akkor reményeink szerint lesz mobilra optimalizált verzió is, de ez még nagyon a jövő zenéje.
 
