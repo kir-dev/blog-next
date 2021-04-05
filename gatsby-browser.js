@@ -6,5 +6,5 @@
 
 // You can delete this file if you're not using it
 
-// import 'prismjs/themes/prism-okaidia.css';
-import 'prismjs/themes/prism.css';
+import "./src/assets/stylesheets/markdown.css";
+

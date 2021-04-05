@@ -5,21 +5,61 @@ lead: 'This is a lead, also known as excerpt'
 date: '2019-11-30'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate urna in est convallis, in viverra elit accumsan. Donec ac. :rocket:
+# Table test
 
-_Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate urna in est convallis, in viverra elit accumsan. Donec ac._ :rotating_light:
+| Tables   |      Are      |   Cool |
+| -------- | :-----------: | -----: |
+| col 1 is | left-aligned  | \$1600 |
+| col 2 is |   centered    |   \$12 |
+| col 3 is | right-aligned |    \$1 |
 
-**Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate urna in est convallis, in viverra elit accumsan. Donec ac.** :train:
+---
 
-## Quote examples :heart: :ok_hand: :metal: 🚨
+# List test
+
+- List1
+  - A
+    - a
+    - b
+    - c
+  - B
+  - C
+- List2
+
+1. List3
+2. List4
+
+# Quote test
 
 > My Best Friend is a person who will give me a book I have not read.
 >
-> Abraham Lincoln
+> -- Abraham Lincoln
 
-## Code examples using `gatsby-remark-vscode` plugin
+# Header test
 
-- Javascript
+## Header2
+
+### Header3
+
+#### Header4
+
+##### Header5
+
+###### Header6 - next up: paragraph tests
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate urna in est convallis, in viverra elit accumsan. Donec ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate urna in est convallis, in viverra elit accumsan. Donec ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate urna in est convallis, in viverra elit accumsan. Donec ac.
+
+_Lorem ipsum dolor sit amet._
+
+**Lorem ipsum dolor sit amet**
+
+# Emoji test
+
+:heart: :ok_hand: :metal: 🚨
+
+# Code test
+
+- Javascript and `inline();` code
 
 ```js
 // Nice little javascript code
@@ -53,7 +93,7 @@ for count, value in enumerate(values):
 
 - Bash
 
-```shell
+```bash
 yarn add gatsby-remark-vscode plugin
 ```
 
@@ -86,8 +126,10 @@ public Message() {
 > Quotes. Yes.
 ```
 
-## Images & Links :smiley_cat:
+# Image test
 
-- An image from the internet
-  ![cat.jpeg](https://i.imgur.com/RtC6c01.jpeg)
-- Link: [GitHub](http://github.com)
+![cat.jpeg](https://i.imgur.com/RtC6c01.jpeg)
+
+# Link test
+
+[GitHub](http://github.com)
