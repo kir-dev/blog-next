@@ -1,47 +1,74 @@
-// eslint-disable-next-line import/extensions
-import { Box } from '@chakra-ui/core'
+import { Box, Flex, Link, useColorModeValue } from '@chakra-ui/react'
 import React, { useState } from 'react'
-import { Frame, KeyFrames } from './react-keyframes'
-import styles from './terminal.module.css'
+import { Frame, Keyframes } from './react-keyframes'
 
 const sleepDuration = 500
 const getTypingDuration = () => 80 + 80 * (Math.random() - 0.5)
 
 interface LineProps {
   text?: string
+  name?: string
   noPrompt?: boolean
   noCaret?: boolean
 }
 
-const Line: React.FC<LineProps> = ({ text, noPrompt = false, noCaret = false }) => (
-  <>
-    {!noPrompt && (
-      <Box color="cyan.300" as="span" className={styles.root}>
-        kirdev@sch:
-        <Box color="teal.600" as="span" className={styles.root}>
-          ~${' '}
-        </Box>
-      </Box>
-    )}
-    {text}
-    {!noCaret && <span className={styles.caret} />}
-  </>
-)
+const Line: React.FC<LineProps> = ({ text, name, noPrompt = false, noCaret = false }) => {
+  const usernameColor = useColorModeValue('cyan.900', 'cyan.300')
 
-const Terminal = () => {
+  return (
+    <>
+      {!noPrompt && (
+        <Box color={usernameColor} as="span">
+          kirdev@sch:
+          <Box color="cyan.600" as="span">
+            ~${' '}
+          </Box>
+        </Box>
+      )}
+      <Box color="cyan.600" as="span">
+        {name ?? ''}
+      </Box>
+      {text}
+      {!noCaret && (
+        <Box as="span" display="inline-block" w="8px" marginBottom="-3px" borderBottom="3px" borderStyle="solid" borderColor="tomato" />
+      )}
+    </>
+  )
+}
+
+const Terminal: React.FC = () => {
   const [lineCount, setLineCount] = useState(0)
 
-  const showLine = (text: string) => {
+  const showLine = (text: string, name?: string) => {
     const frames = [
       <Frame key={`${text}-last`}>
-        <Line text={text} noCaret noPrompt />
+        <Line name={name} text={text} noCaret noPrompt />
       </Frame>
     ]
 
     return (
-      <KeyFrames component="p" onEnd={() => setLineCount(c => c + 1)}>
+      <Keyframes component="p" onEnd={() => setLineCount((c) => c + 1)}>
         {frames}
-      </KeyFrames>
+      </Keyframes>
+    )
+  }
+
+  const emptyLine = () => {
+    const frames = []
+
+    // cursor animation 10 times
+    for (let i = 0; i < 10; i += 1) {
+      frames.push(
+        <Frame duration={sleepDuration} key={`${i}`}>
+          <Line noCaret={i % 2 === 0} />
+        </Frame>
+      )
+    }
+
+    return (
+      <Keyframes component="p" onEnd={() => setLineCount((c) => c)}>
+        {frames}
+      </Keyframes>
     )
   }
 
@@ -74,33 +101,76 @@ const Terminal = () => {
     )
 
     return (
-      <KeyFrames component="p" onEnd={() => setLineCount(c => c + 1)}>
+      <Keyframes component="p" onEnd={() => setLineCount((c) => c + 1)}>
         {frames}
-      </KeyFrames>
+      </Keyframes>
     )
   }
 
+  const borderColor = useColorModeValue('gray.200', 'gray.800')
+  const bgColor = useColorModeValue('gray.50', 'gray.900')
+
   return (
-    <div className={styles.root}>
-      <div className={styles.inner}>
-        <div className={styles.header}>
-          <span className={styles.icon} />
-          <span className={styles.icon} />
-          <span className={styles.icon} />
-        </div>
-        <div className={styles.body}>
+    <Box
+      fontSize={['0.65rem', 'xs', 'sm', 'md']}
+      h={['2xs', '2xs', 'xs', 'sm']}
+      w={['full', 'md', 'lg', 'xl']}
+      boxShadow={{ base: 'md', lg: 'xl' }}
+    >
+      <Flex
+        rounded="lg"
+        border="1px"
+        backgroundColor={bgColor}
+        borderColor={borderColor}
+        direction="column"
+        position="relative"
+        height="full"
+      >
+        <Flex alignItems="center" borderBottom="1px" borderBottomColor={borderColor} h={['1rem', '1.5rem', '1.5rem', '2rem']}>
+          <Box marginLeft="1" marginTop="auto" w={['3rem', '4rem', '4rem', '6rem']}>
+            <Link
+              href="https://bit.ly/3uOVmYt"
+              target="_blank"
+              w={['0.5rem', '0.75rem', '0.75rem', '1rem']}
+              h={['0.5rem', '0.75rem', '0.75rem', '1rem']}
+              marginLeft={['0.25rem', '0.375rem', '0.375rem', '0.5rem']}
+              borderRadius="50%"
+              display="inline-block"
+              bg="red.400"
+            />
+            <Box
+              w={['0.5rem', '0.75rem', '0.75rem', '1rem']}
+              h={['0.5rem', '0.75rem', '0.75rem', '1rem']}
+              marginLeft={['0.25rem', '0.375rem', '0.375rem', '0.5rem']}
+              borderRadius="50%"
+              display="inline-block"
+              bg="yellow.400"
+            />
+            <Box
+              w={['0.5rem', '0.75rem', '0.75rem', '1rem']}
+              h={['0.5rem', '0.75rem', '0.75rem', '1rem']}
+              marginLeft={['0.25rem', '0.375rem', '0.375rem', '0.5rem']}
+              borderRadius="50%"
+              display="inline-block"
+              bg="green.400"
+            />
+          </Box>
+          <Box flex="1" textAlign="center">
+            Kir-Dev
+          </Box>
+          <Box w={['3rem', '4rem', '4rem', '6rem']} />
+        </Flex>
+        <Box flex="1" fontFamily="mono" p="3">
           {renderLine('yarn run load:kirdev-blog')}
-          {lineCount >= 1 && showLine('Kollégiumi Információs Rendszer Fejlesztők')}
+          {lineCount >= 1 && showLine('Kir-Dev is running in development mode', '[yarn] ')}
           {lineCount >= 2 && renderLine('cat feladatunk.md')}
-          {lineCount >= 3 && showLine('Feladatunk a Villanykar hallgatói számára hasznos webes')}
-          {lineCount >= 4 && showLine('alkalmazások fejlesztése és üzemeltetése.')}
-          {lineCount >= 5 && renderLine('cat technologiaink.md')}
-          {lineCount >= 6 && showLine('Leggyakrabban használt technológiáink közé tartozik a')}
-          {lineCount >= 7 && showLine('Node.js, a Ruby on Rails és a Spring + Kotlin.')}
-          {lineCount >= 8 && renderLine('')}
-        </div>
-      </div>
-    </div>
+          {lineCount >= 3 && showLine('Feladatunk a Villanykar hallgatói számára webalkalmazások fejlesztése és üzemeltetése.')}
+          {lineCount >= 4 && renderLine('cat technologiaink.md')}
+          {lineCount >= 5 && showLine('Technológiáink közé tartozik a Node.js, a Ruby on Rails és a Spring + Kotlin.')}
+          {lineCount >= 6 && emptyLine()}
+        </Box>
+      </Flex>
+    </Box>
   )
 }
 

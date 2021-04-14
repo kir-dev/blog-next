@@ -1,6 +1,6 @@
-/* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/no-access-state-in-setstate */
-/* eslint-disable react/require-default-props */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable react/destructuring-assignment */
 // basically react-keyframes v1.0.0-canary.3
 // with an added onEnd prop for the Keyframes component
 import React from 'react'
@@ -22,11 +22,11 @@ interface FrameInput {
   [prop: string]: any
 }
 
-export function Frame({ component, ...rest }: FrameInput) {
+export const Frame: React.FC<FrameInput> = ({ component, ...rest }) => {
   return React.createElement(component, rest)
 }
 
-export class KeyFrames extends React.Component<Props, State> {
+export class Keyframes extends React.Component<Props, State> {
   timer: any
 
   constructor(props: Props) {
@@ -36,11 +36,11 @@ export class KeyFrames extends React.Component<Props, State> {
     }
   }
 
-  componentDidMount() {
+  componentDidMount(): void {
     this.requestNextFrame()
   }
 
-  shouldComponentUpdate(_nextProps: Props, nextState: State) {
+  shouldComponentUpdate(_nextProps: Props, nextState: State): boolean {
     const { frameNum } = nextState
     if (this.state.frameNum === frameNum) {
       return false
@@ -48,19 +48,19 @@ export class KeyFrames extends React.Component<Props, State> {
     return frameNum >= 0 && frameNum < this.props.children.length
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(): void {
     this.requestNextFrame()
   }
 
-  componentWillUnmount() {
+  componentWillUnmount(): void {
     clearTimeout(this.timer)
   }
 
-  getFrame() {
+  getFrame(): any {
     return this.props.children[this.state.frameNum]
   }
 
-  waitForDelay(fn: () => void) {
+  waitForDelay(fn: () => void): void {
     const currentFrame = this.getFrame()
     // Defaults duration to 0
     const delay = currentFrame.props.duration ?? 0
@@ -68,7 +68,7 @@ export class KeyFrames extends React.Component<Props, State> {
     this.timer = setTimeout(fn, delay)
   }
 
-  requestNextFrame() {
+  requestNextFrame(): void {
     this.waitForDelay(() => {
       const frameNum = this.state.frameNum + 1
       if (this.props.children.length <= frameNum) {
@@ -82,7 +82,7 @@ export class KeyFrames extends React.Component<Props, State> {
     })
   }
 
-  render() {
+  render(): any {
     const frame = this.getFrame()
     if (!frame) {
       return null
