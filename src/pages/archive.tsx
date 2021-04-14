@@ -29,7 +29,7 @@ const Archive: React.FC<BlogPostsProps> = ({ data }) => (
         Archívum
       </Heading>
 
-      {data.allMarkdownRemark.nodes.map(post => (
+      {data.allMarkdownRemark.nodes.map((post) => (
         <Box key={post.fields.slug}>
           <span>{post.frontmatter.date} » </span>
           <Link to={post.fields.slug}>{post.frontmatter.title}</Link>

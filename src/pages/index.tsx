@@ -4,7 +4,7 @@ import Container from '../components/Container'
 import Page from '../components/Page'
 import IndexLayout from '../layouts'
 
-const IndexPage = () => (
+const IndexPage: React.FC = () => (
   <IndexLayout>
     <Page>
       <Container>

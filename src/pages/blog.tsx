@@ -30,7 +30,7 @@ const Blog: React.FC<BlogPostsProps> = ({ data }) => (
           Blog posts
         </Heading>
 
-        {data.allMarkdownRemark.nodes.map(post => (
+        {data.allMarkdownRemark.nodes.map((post) => (
           <Box key={post.fields.slug}>
             <Link to={post.fields.slug}>
               <Heading as="h2">{post.frontmatter.title}</Heading>

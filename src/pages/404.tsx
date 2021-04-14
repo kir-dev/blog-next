@@ -1,11 +1,10 @@
-import * as React from 'react'
 import { Link } from 'gatsby'
-
-import Page from '../components/Page'
+import * as React from 'react'
 import Container from '../components/Container'
+import Page from '../components/Page'
 import IndexLayout from '../layouts'
 
-const NotFoundPage = () => (
+const NotFoundPage: React.FC = () => (
   <IndexLayout>
     <Page>
       <Container>
