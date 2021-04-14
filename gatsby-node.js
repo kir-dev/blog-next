@@ -23,7 +23,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       createNodeField({
         node,
         name: 'slug',
-        value: slug || ''
+        value: `/${layout}${slug}` || ''
       })
 
       // Used to determine a page layout.
