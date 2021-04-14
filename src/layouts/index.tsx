@@ -38,7 +38,7 @@ const IndexLayout: React.FC = ({ children }) => (
           ]}
         />
         <Flex direction="column" minHeight="100vh">
-          <Header title={data.site.siteMetadata.title} />
+          <Header />
           <Box flex="1">{children}</Box>
           <Footer />
         </Flex>
