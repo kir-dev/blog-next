@@ -5,4 +5,4 @@ lead: 'Example markdown post short summary'
 date: '2019-11-24'
 ---
 
-Lorem ipsum dolor set amet
+Lorem **ipsum** dolor set amet

@@ -7,7 +7,7 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-plugin-chakra-ui',
+      resolve: '@chakra-ui/gatsby-plugin',
       options: {
         isResettingCSS: true, // optional, default to true
         isUsingColorMode: true // optional, default to true
@@ -37,9 +37,18 @@ module.exports = {
               wrapperStyle: 'margin-bottom: 1rem'
             }
           },
-          'gatsby-remark-prismjs',
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              className: `md-headinglink`,
+              isIconAfterHeader: true,
+              elements: [`h1`, `h2`, `h3`, `h4`],
+            },
+          },
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
+          'gatsby-remark-gemoji-to-emoji',
+          'gatsby-remark-external-links',
           {
             resolve: 'gatsby-remark-images',
             options: {
@@ -47,7 +56,41 @@ module.exports = {
               quality: 90,
               linkImagesToOriginal: false
             }
-          }
+          },
+          {
+            resolve: 'gatsby-remark-vscode',
+            options: {
+              theme: {
+                default: 'Quiet Light',
+                parentSelector: {
+                  'body[class=chakra-ui-dark]': 'Default Dark+',
+                }
+              }
+            }
+          },
+          {
+            resolve: `gatsby-remark-classes`,
+            options: {
+              classMap: {
+                "heading[depth=1]": "md-h1",
+                "heading[depth=2]": "md-h2",
+                "heading[depth=3]": "md-h3",
+                "heading[depth=4]": "md-h4",
+                "heading[depth=5]": "md-h5",
+                "heading[depth=6]": "md-h6",
+                paragraph: "md-p",
+                "list[ordered=false]": "md-ul",
+                "list[ordered=true]": "md-ol",
+                blockquote: "md-blockquote",
+                listItem: "md-li",
+                link: "md-a",
+                tableCell: "md-td",
+                thematicBreak: "md-hr",
+                table: "md-table",
+                inlineCode: "md-code"
+              }
+            }
+          },
         ]
       }
     },

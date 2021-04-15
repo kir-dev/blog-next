@@ -1,10 +1,10 @@
-import { Heading } from '@chakra-ui/core'
+import { Heading } from '@chakra-ui/react'
 import * as React from 'react'
 import Container from '../components/Container'
 import Page from '../components/Page'
 import IndexLayout from '../layouts'
 
-const PageTwo = () => (
+const PageTwo: React.FC = () => (
   <IndexLayout>
     <Page>
       <Container>

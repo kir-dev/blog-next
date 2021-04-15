@@ -1,4 +1,4 @@
-import { Heading } from '@chakra-ui/core'
+import { Heading } from '@chakra-ui/react'
 import { graphql } from 'gatsby'
 import * as React from 'react'
 import Container from '../components/Container'
@@ -23,7 +23,7 @@ interface PostTemplateProps {
   }
 }
 
-const PostTemplate: React.SFC<PostTemplateProps> = ({ data }) => (
+const PostTemplate: React.FC<PostTemplateProps> = ({ data }) => (
   <IndexLayout>
     <Post>
       <Container>

@@ -1,4 +1,4 @@
-import { Box, Heading } from '@chakra-ui/core'
+import { Box, Heading } from '@chakra-ui/react'
 import { graphql, Link } from 'gatsby'
 import * as React from 'react'
 import Container from '../components/Container'
@@ -29,7 +29,7 @@ const Archive: React.FC<BlogPostsProps> = ({ data }) => (
         Archívum
       </Heading>
 
-      {data.allMarkdownRemark.nodes.map(post => (
+      {data.allMarkdownRemark.nodes.map((post) => (
         <Box key={post.fields.slug}>
           <span>{post.frontmatter.date} » </span>
           <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
