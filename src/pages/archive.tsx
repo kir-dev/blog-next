@@ -15,7 +15,7 @@ export const query = graphql`
         frontmatter {
           title
           lead
-          date(formatString: "YYYY.MM.DD.")
+          date
         }
       }
     }
@@ -31,7 +31,7 @@ const Archive: React.FC<BlogPostsProps> = ({ data }) => (
 
       {data.allMarkdownRemark.nodes.map((post) => (
         <Box key={post.fields.slug}>
-          <span>{post.frontmatter.date} » </span>
+          <span>{post.frontmatter.date.split('T')[0]} » </span>
           <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
         </Box>
       ))}
