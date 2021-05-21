@@ -4,7 +4,7 @@ import 'modern-normalize'
 import * as React from 'react'
 import Helmet from 'react-helmet'
 import Footer from '../components/Footer'
-import Header from '../components/Header'
+import Navbar from '../components/navbar/Navbar'
 
 interface StaticQueryProps {
   site: {
@@ -38,7 +38,7 @@ const IndexLayout: React.FC = ({ children }) => (
           ]}
         />
         <Flex direction="column" minHeight="100vh">
-          <Header />
+          <Navbar />
           <Box flex="1">{children}</Box>
           <Footer />
         </Flex>

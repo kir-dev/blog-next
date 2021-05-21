@@ -1,5 +1,4 @@
 /* eslint-disable react/no-access-state-in-setstate */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react/destructuring-assignment */
 // basically react-keyframes v1.0.0-canary.3
 // with an added onEnd prop for the Keyframes component

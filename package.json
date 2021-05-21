@@ -44,6 +44,7 @@
     "gatsby-plugin-canonical-urls": "^3.3.0",
     "gatsby-plugin-emotion": "^6.3.0",
     "gatsby-plugin-react-helmet": "^4.3.0",
+    "gatsby-plugin-react-svg": "^3.0.1",
     "gatsby-plugin-sharp": "^3.3.0",
     "gatsby-plugin-typescript": "^3.3.0",
     "gatsby-remark-autolink-headers": "^4.0.0",

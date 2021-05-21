@@ -166,7 +166,7 @@ const Terminal: React.FC = () => {
           {lineCount >= 2 && renderLine('cat feladatunk.md')}
           {lineCount >= 3 && showLine('Feladatunk a Villanykar hallgatói számára webalkalmazások fejlesztése és üzemeltetése.')}
           {lineCount >= 4 && renderLine('cat technologiaink.md')}
-          {lineCount >= 5 && showLine('Technológiáink közé tartozik a Node.js, a Ruby on Rails és a Spring + Kotlin.')}
+          {lineCount >= 5 && showLine('Technológiáink közé tartozik a Node.js, a Ruby on Rails és a SpringBoot + Kotlin.')}
           {lineCount >= 6 && emptyLine()}
         </Box>
       </Flex>
