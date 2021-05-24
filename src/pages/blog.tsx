@@ -1,7 +1,9 @@
-import { Box, Heading, Text } from '@chakra-ui/react'
-import { graphql, Link } from 'gatsby'
+import { Heading } from '@chakra-ui/react'
+import { graphql } from 'gatsby'
 import * as React from 'react'
+import BlogPreview from '../components/blog-components/BlogPreview'
 import Container from '../components/Container'
+import Header from '../components/Header'
 import Page from '../components/Page'
 import IndexLayout from '../layouts'
 
@@ -16,6 +18,8 @@ export interface BlogPostsProps {
           title: string
           lead: string
           date: string
+          author: string
+          previewImg: string
         }
       }[]
     }
@@ -25,28 +29,14 @@ export interface BlogPostsProps {
 const Blog: React.FC<BlogPostsProps> = ({ data }) => (
   <IndexLayout>
     <Page>
+      <Header>
+        <Container>
+          <Heading as="h1">Legújabb posztjaink</Heading>
+        </Container>
+      </Header>
       <Container>
-        <Heading py={5} as="h1">
-          Blog posts
-        </Heading>
-
         {data.allMarkdownRemark.nodes.map((post) => (
-          <Box key={post.fields.slug}>
-            <Link to={post.fields.slug}>
-              <Heading as="h2">{post.frontmatter.title}</Heading>
-            </Link>
-            <Text>
-              {new Date(post.frontmatter.date).toLocaleTimeString('hu-HU', {
-                weekday: 'long',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit'
-              })}
-            </Text>
-            <Text>{post.frontmatter.lead}</Text>
-          </Box>
+          <BlogPreview post={post} />
         ))}
       </Container>
     </Page>
@@ -57,7 +47,7 @@ export default Blog
 
 export const query = graphql`
   query BlogPosts {
-    allMarkdownRemark(filter: { fields: { layout: { eq: "post" } } }, sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(filter: { fields: { layout: { eq: "post" } } }, sort: { fields: [frontmatter___date], order: DESC }, limit: 6) {
       nodes {
         fields {
           slug
@@ -66,6 +56,7 @@ export const query = graphql`
           title
           lead
           date
+          author
         }
       }
     }

@@ -1,17 +1,19 @@
 import { Heading } from '@chakra-ui/react'
 import * as React from 'react'
 import Container from '../components/Container'
+import Header from '../components/Header'
 import Page from '../components/Page'
 import IndexLayout from '../layouts'
 
 const PageTwo: React.FC = () => (
   <IndexLayout>
     <Page>
-      <Container>
-        <Heading as="h1" py={5}>
-          About
-        </Heading>
-      </Container>
+      <Header>
+        <Container>
+          <Heading as="h1">Csapatunk</Heading>
+        </Container>
+      </Header>
+      <Container>{' Content here '}</Container>
     </Page>
   </IndexLayout>
 )

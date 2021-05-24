@@ -9,27 +9,9 @@ import InfoBox from '../components/indexpage-components/InfoBox'
 import Page from '../components/Page'
 import Terminal from '../components/terminal/Terminal'
 import IndexLayout from '../layouts'
+import { BlogPostsProps } from './blog'
 
-export interface LatestBlogPostsProps {
-  data: {
-    allMarkdownRemark: {
-      nodes: {
-        fields: {
-          slug: string
-        }
-        frontmatter: {
-          title: string
-          lead: string
-          date: string
-          author: string
-          previewImgSrc: string
-        }
-      }[]
-    }
-  }
-}
-
-const IndexPage: React.FC<LatestBlogPostsProps> = ({ data }) => {
+const IndexPage: React.FC<BlogPostsProps> = ({ data }) => {
   const socialSize = useBreakpointValue({ base: '2rem', lg: '3rem' })
   const [post] = data.allMarkdownRemark.nodes
 

@@ -4,6 +4,7 @@ author: sepsilaci
 date: 2020-06-09 15:33:54
 title: 'Fejlesztés Docker konténerekben'
 comment: true
+previewImg: 'images/docker.jpg'
 ---
 
 ## Bevezetés

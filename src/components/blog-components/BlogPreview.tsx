@@ -14,7 +14,7 @@ interface BlogPreviewProps {
       lead: string
       date: string
       author: string
-      previewImgSrc: string
+      previewImg: string
     }
   }
 }
@@ -26,7 +26,7 @@ const BlogPreview: React.FC<BlogPreviewProps> = ({ post }) => (
         <Link to={post.fields.slug}>
           <Image
             borderRadius="lg"
-            src={post.frontmatter.previewImgSrc ?? '../../blog-noimg.png'}
+            src={post.frontmatter.previewImg ?? '../../blog-noimg.png'}
             fallbackSrc="../../blog-noimg.png"
             alt="Blog preview"
             objectFit="contain"
