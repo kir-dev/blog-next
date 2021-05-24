@@ -1,5 +1,6 @@
 import { Heading } from '@chakra-ui/react'
 import { graphql } from 'gatsby'
+import { ImageDataLike } from 'gatsby-plugin-image'
 import * as React from 'react'
 import BlogPreview from '../components/blog-components/BlogPreview'
 import Container from '../components/Container'
@@ -19,7 +20,7 @@ export interface BlogPostsProps {
           lead: string
           date: string
           author: string
-          previewImg: string
+          featuredImage: ImageDataLike
         }
       }[]
     }
@@ -36,7 +37,7 @@ const Blog: React.FC<BlogPostsProps> = ({ data }) => (
       </Header>
       <Container>
         {data.allMarkdownRemark.nodes.map((post) => (
-          <BlogPreview post={post} />
+          <BlogPreview key={post.fields.slug} post={post} />
         ))}
       </Container>
     </Page>
@@ -57,6 +58,11 @@ export const query = graphql`
           lead
           date
           author
+          featuredImage {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+            }
+          }
         }
       }
     }

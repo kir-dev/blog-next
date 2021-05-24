@@ -23,15 +23,20 @@ A böngésződben pedig a `localhost:8000`-en tudod megnézni a blogot. A Graphi
 
 ---
 
-Használd a `create-post.sh` shell scriptet:
+1. Használd a `create-post.sh` shell scriptet (az `author` fieldnél érdemes a PéK-en is használt felhasználóneved megadni):
 
 ```bash
 ./create-post.sh '<title>' '<author>'
 ```
 
-Ezután keresd meg a posztod markdown fájlját. Adj egy maximum 2 mondatos ízelítőt a posztról a `lead` field alatt. Írd meg a posztot markdownban, majd kérj review-t körtársaidtól egy pull requesten keresztül.
+Példa: `./create-post.sh 'Heroku és társai' 'mypekusername'`
 
-Nézz meg néhány korábbi blogposztot, hogy is tudod kihasználni a markdown adta lehetőségeket: code részletek beszúrása, képek beszúrása.
+2. Ezután keresd meg a posztod markdown fájlját. Adj egy maximum 2 mondatos ízelítőt a posztról a `lead` field alatt.
+3. A `featuredImage` fieldben megadhatsz egy képet, amelyet használnál a blogbejegyzésed previewjában, ezt a képed be is kell illesszed a `content/images` mappába, és a `default.jpg`-t erre tudod lecserélni. Ha nincs szükséged ilyenre, hagyd benn a defaultot.
+4. Írd meg a posztot markdownban, jelenleg képeket csak külső forrásból tudsz berakni a posztjaidba (használd pl.: az Imgur-t).
+5. érj review-t körtársaidtól egy pull requesten keresztül.
+
+Nézz meg néhány korábbi blogposztot, hogy is tudod kihasználni a markdown adta lehetőségeket: code részletek beszúrása, képek beszúrása. Windows-on a create-post.sh shell scriptet tudod futtatni a Git bash-ben, ha már fel van telepítve a Git kliens.
 
 ## License
 

@@ -28,5 +28,5 @@ echo 'date: '$postdate >> $filepath
 echo 'title: "'$title'"' >> $filepath
 echo 'lead: ""' >> $filepath
 echo 'comment: true' >> $filepath
-echo 'previewImg: null' >> $filepath
+echo 'featuredImage: "../images/default.jpg"' >> $filepath
 echo '---' >> $filepath

@@ -120,6 +120,11 @@ export const query = graphql`
           lead
           date
           author
+          featuredImage {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+            }
+          }
         }
       }
     }
