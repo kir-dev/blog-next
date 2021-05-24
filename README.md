@@ -38,6 +38,21 @@ Példa: `./create-post.sh 'Heroku és társai' 'mypekusername'`
 
 Nézz meg néhány korábbi blogposztot, hogy is tudod kihasználni a markdown adta lehetőségeket: code részletek beszúrása, képek beszúrása. Windows-on a create-post.sh shell scriptet tudod futtatni a Git bash-ben, ha már fel van telepítve a Git kliens.
 
+## Készítenél oldalt egy projektnek?
+
+---
+
+Igazából kövesd a fentieket, amit a posztkészítésnél kell, annyi, hogy a `create-project.sh` szkriptet használd.
+
+```bash
+./create-project.sh '<urlpath>' '<title>'
+```
+
+- `<urlpath>`: ahol elérhetővé tennéd a projektedet, pl.: `'schpincer'` beírásával `kir-dev.sch.bme.hu/projects/schpincer/` elérési útvonalat kapod. Használd csak a kisbetűs angol karaktereket, esetleg kötő- és underscore jeleket.
+- `<title>`: a projekted hivatalos neve, így fog a weboldalon megjelenni, itt már használhatsz szóközt és egyéb karaktereket is. (Később magában a markdown fájlban ezek változtathatóak.)
+
+_Opcionális:_ A markdown fájlban a `github` fieldben megadhatod a projekt GitHub-os repóját a Kir-Dev organisation-ből.
+
 ## License
 
 ---

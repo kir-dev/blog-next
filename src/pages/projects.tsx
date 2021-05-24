@@ -1,8 +1,11 @@
-import { Heading } from '@chakra-ui/react'
+import { Grid, Heading, Text, useBreakpointValue } from '@chakra-ui/react'
+import { graphql } from 'gatsby'
+import { ImageDataLike } from 'gatsby-plugin-image'
 import * as React from 'react'
 import Container from '../components/Container'
 import Header from '../components/Header'
 import Page from '../components/Page'
+import ProjectPreview from '../components/project-components/ProjectPreview'
 import IndexLayout from '../layouts'
 
 export interface ProjectsProps {
@@ -14,8 +17,9 @@ export interface ProjectsProps {
         }
         frontmatter: {
           title: string
+          lead: string
           github: string
-          previewImg: string
+          featuredImage: ImageDataLike
         }
       }[]
     }
@@ -28,18 +32,25 @@ const Projects: React.FC<ProjectsProps> = ({ data }) => (
       <Header>
         <Container>
           <Heading as="h1">Projektjeink</Heading>
+          <Text as="kbd" pt={4} fontSize="xl">
+            A kör által készített minden alkalmazás nyílt forráskódú, ez a fejlesztőeszközeink kiválasztásánál is fő szempont.
+          </Text>
         </Container>
       </Header>
-      <Container>{/* data.allMarkdownRemark.nodes.map((project) => (
-          <BlogPreview post={project} />
-        )) */}</Container>
+      <Container>
+        <Grid templateColumns={`repeat(${useBreakpointValue({ base: 1, sm: 2, md: 3 })}, 1fr)`} gap={{ base: 4, md: 10 }}>
+          {data.allMarkdownRemark.nodes.map((project) => (
+            <ProjectPreview project={project} />
+          ))}
+        </Grid>
+      </Container>
     </Page>
   </IndexLayout>
 )
 
 export default Projects
 
-/* export const query = graphql`
+export const query = graphql`
   query Projects {
     allMarkdownRemark(filter: { fields: { layout: { eq: "project" } } }) {
       nodes {
@@ -48,10 +59,15 @@ export default Projects
         }
         frontmatter {
           title
+          lead
           github
-          previewImg
+          featuredImage {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+            }
+          }
         }
       }
     }
   }
-` */
+`
