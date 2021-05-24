@@ -120,13 +120,31 @@ const Terminal: React.FC = () => {
       <Flex
         rounded="lg"
         border="1px"
-        backgroundColor={bgColor}
         borderColor={borderColor}
         direction="column"
         position="relative"
         height="full"
+        _before={{
+          rounded: 'lg',
+          zIndex: 0,
+          display: 'block',
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          content: '""',
+          bgColor,
+          opacity: useColorModeValue(0.8, 0.95)
+        }}
       >
-        <Flex alignItems="center" borderBottom="1px" borderBottomColor={borderColor} h={['1rem', '1.5rem', '1.5rem', '2rem']}>
+        <Flex
+          roundedTop="lg"
+          bgColor={bgColor}
+          zIndex={1}
+          alignItems="center"
+          borderBottom="1px"
+          borderBottomColor={borderColor}
+          h={['1rem', '1.5rem', '1.5rem', '2rem']}
+        >
           <Box marginLeft="1" marginTop="auto" w={['3rem', '4rem', '4rem', '6rem']}>
             <Link
               href="https://bit.ly/3uOVmYt"
@@ -160,7 +178,7 @@ const Terminal: React.FC = () => {
           </Box>
           <Box w={['3rem', '4rem', '4rem', '6rem']} />
         </Flex>
-        <Box flex="1" fontFamily="mono" p="3">
+        <Box zIndex={1} flex="1" fontFamily="mono" p="3">
           {renderLine('yarn run load:kirdev-blog')}
           {lineCount >= 1 && showLine('Kir-Dev is running in development mode', '[yarn] ')}
           {lineCount >= 2 && renderLine('cat feladatunk.md')}

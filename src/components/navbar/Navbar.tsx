@@ -15,7 +15,7 @@ const WithSubnavigation: React.FC = () => {
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.800', 'white')}
         minH={{ base: '3rem', md: '4.5rem' }}
-        maxW={['100%', '100%', '720px', '1280px']}
+        maxW={['100%', '100%', '56rem', '72rem']}
         py={{ base: 2 }}
         px={{ base: 4 }}
         align="center"
