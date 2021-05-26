@@ -1,12 +1,13 @@
 import { ChevronRightIcon, Icon } from '@chakra-ui/icons'
-import { Box, Flex, Link, Popover, PopoverContent, PopoverTrigger, Stack, Text } from '@chakra-ui/react'
+import { Box, Flex, Popover, PopoverContent, PopoverTrigger, Stack, Text } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
+import { Link } from 'gatsby'
 import React from 'react'
 import { NavItem, NAV_ITEMS } from './NavItem'
 
 const DesktopSubNav: React.FC<NavItem> = ({ label, href }) => {
   return (
-    <Link href={href} role="group" display="block" p={2} rounded="md" _hover={{ bg: useColorModeValue('orange.50', 'gray.900') }}>
+    <Box as={Link} to={href} role="group" display="block" p={2} rounded="md" _hover={{ bg: useColorModeValue('orange.50', 'gray.900') }}>
       <Stack direction="row" align="center">
         <Box>
           <Text transition="all .3s ease" _groupHover={{ color: 'orange.500' }} fontWeight={500}>
@@ -25,7 +26,7 @@ const DesktopSubNav: React.FC<NavItem> = ({ label, href }) => {
           <Icon color="orange.500" w={5} h={5} as={ChevronRightIcon} />
         </Flex>
       </Stack>
-    </Link>
+    </Box>
   )
 }
 
@@ -36,9 +37,10 @@ const DesktopNav: React.FC = () => {
         <Box key={navItem.label}>
           <Popover trigger="hover" placement="bottom-start">
             <PopoverTrigger>
-              <Link
+              <Text
                 p={2}
-                href={navItem.href ?? '#'}
+                as={Link}
+                to={navItem.href ?? '#'}
                 fontSize="sm"
                 fontWeight={500}
                 _hover={{
@@ -47,7 +49,7 @@ const DesktopNav: React.FC = () => {
                 }}
               >
                 {navItem.label}
-              </Link>
+              </Text>
             </PopoverTrigger>
 
             {navItem.children && (

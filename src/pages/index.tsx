@@ -1,5 +1,5 @@
-import { Box, Button, Flex, Grid, Heading, HStack, Link, Spacer, Text, useBreakpointValue, useColorModeValue } from '@chakra-ui/react'
-import { graphql } from 'gatsby'
+import { Box, Button, Flex, Grid, Heading, HStack, Spacer, Text, useBreakpointValue, useColorModeValue } from '@chakra-ui/react'
+import { graphql, Link } from 'gatsby'
 import * as React from 'react'
 import { FaFacebook, FaGithub, FaYoutube } from 'react-icons/fa'
 import Logo from '../assets/images/kirdev-simplified.svg'
@@ -31,7 +31,7 @@ export interface LatestBlogPostsProps {
 
 const IndexPage: React.FC<LatestBlogPostsProps> = ({ data }) => {
   const socialSize = useBreakpointValue({ base: '2rem', lg: '3rem' })
-  const post = data.allMarkdownRemark.nodes[0]
+  const [post] = data.allMarkdownRemark.nodes
 
   return (
     <IndexLayout>
@@ -66,13 +66,13 @@ const IndexPage: React.FC<LatestBlogPostsProps> = ({ data }) => {
                     </Button>
                     <HStack direction="row" alignItems={{ base: 'baseline', md: 'end' }} mb={6} spacing={6}>
                       {useBreakpointValue({ lg: <Spacer /> })}
-                      <Box as={Link} _hover={{ color: 'orange.500' }} href="https://github.com/kir-dev">
+                      <Box as={Link} _hover={{ color: 'orange.500' }} to="https://github.com/kir-dev">
                         <FaGithub size={socialSize} />
                       </Box>
-                      <Box as={Link} _hover={{ color: 'orange.500' }} href="https://youtube.com/channel/UCkpMTj9qST_7RDt2YL4RUEw">
+                      <Box as={Link} _hover={{ color: 'orange.500' }} to="https://youtube.com/channel/UCkpMTj9qST_7RDt2YL4RUEw">
                         <FaYoutube size={socialSize} />
                       </Box>
-                      <Box as={Link} _hover={{ color: 'orange.500' }} href="https://facebook.com/kirdevteam">
+                      <Box as={Link} _hover={{ color: 'orange.500' }} to="https://facebook.com/kirdevteam">
                         <FaFacebook size={socialSize} />
                       </Box>
                     </HStack>

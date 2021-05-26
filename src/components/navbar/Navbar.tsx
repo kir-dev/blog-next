@@ -1,5 +1,6 @@
 import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons'
-import { Box, Collapse, Flex, IconButton, Link, useColorMode, useColorModeValue, useDisclosure } from '@chakra-ui/react'
+import { Box, Collapse, Flex, IconButton, useColorMode, useColorModeValue, useDisclosure } from '@chakra-ui/react'
+import { Link } from 'gatsby'
 import * as React from 'react'
 import Logo from '../../assets/images/kirdev-named.svg'
 import DesktopNav from './DesktopNav'
@@ -29,8 +30,9 @@ const WithSubnavigation: React.FC = () => {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <Link
-            href="/"
+          <Box
+            as={Link}
+            to="/"
             display="block"
             rounded="md"
             _hover={{
@@ -41,7 +43,7 @@ const WithSubnavigation: React.FC = () => {
             <Box textAlign={{ base: 'center', md: 'left' }} mx="2">
               <Logo style={{ fill: useColorModeValue('#000', '#fff') }} />
             </Box>
-          </Link>
+          </Box>
         </Flex>
         <Flex display={{ base: 'none', md: 'flex' }} flex={{ base: 1 }} justify={{ base: 'center', md: 'flex-end' }}>
           <Flex display={{ base: 'none', md: 'flex' }} mx={4}>

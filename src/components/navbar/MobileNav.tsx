@@ -1,7 +1,8 @@
 /* eslint-disable react/no-children-prop */
 import { ChevronDownIcon } from '@chakra-ui/icons'
-import { Collapse, Flex, Icon, Link, Stack, Text, useDisclosure } from '@chakra-ui/react'
+import { Collapse, Flex, Icon, Stack, Text, useDisclosure } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
+import { Link } from 'gatsby'
 import React from 'react'
 import { NavItem, NAV_ITEMS } from './NavItem'
 
@@ -13,7 +14,7 @@ const MobileNavItem: React.FC<NavItem> = ({ label, children, href }) => {
       <Flex
         py={2}
         as={Link}
-        href={children ? '#' : href}
+        to={children ? '#' : href}
         justify="space-between"
         align="center"
         _hover={{
@@ -28,9 +29,9 @@ const MobileNavItem: React.FC<NavItem> = ({ label, children, href }) => {
         <Stack pl={4} borderLeft={1} borderStyle="solid" borderColor={useColorModeValue('gray.200', 'gray.800')} align="start">
           {children &&
             children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
+              <Text key={child.label} py={2} as={Link} to={child.href}>
                 {child.label}
-              </Link>
+              </Text>
             ))}
         </Stack>
       </Collapse>
