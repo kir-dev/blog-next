@@ -73,7 +73,7 @@ const IndexPage: React.FC<BlogPostsProps> = ({ data }) => {
           </Container>
         </Box>
         <Container>
-          <Box pt="16" zIndex={1}>
+          <Box pt={16} zIndex={1}>
             <Heading pb={10}>Amivel foglalkozunk</Heading>
             <Grid templateColumns={`repeat(${useBreakpointValue({ base: 1, md: 3 })}, 1fr)`} gap={{ base: 4, md: 10 }}>
               <InfoBox imgSrc="../../laptop.png" title="Webfejlesztés">
@@ -96,7 +96,7 @@ const IndexPage: React.FC<BlogPostsProps> = ({ data }) => {
             </Grid>
           </Box>
 
-          <Box pt="16" zIndex={1}>
+          <Box py={16} zIndex={1}>
             <Heading pb={10}>Legutóbbi bejegyzés blogunkból</Heading>
             <BlogPreview post={post} />
           </Box>
@@ -114,6 +114,9 @@ export const query = graphql`
       nodes {
         fields {
           slug
+          readingTime {
+            minutes
+          }
         }
         frontmatter {
           title

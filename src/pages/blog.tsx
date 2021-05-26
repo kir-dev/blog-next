@@ -1,4 +1,4 @@
-import { Heading } from '@chakra-ui/react'
+import { Box, Grid, Heading, Link, useBreakpointValue } from '@chakra-ui/react'
 import { graphql } from 'gatsby'
 import { ImageDataLike } from 'gatsby-plugin-image'
 import * as React from 'react'
@@ -14,6 +14,9 @@ export interface BlogPostsProps {
       nodes: {
         fields: {
           slug: string
+          readingTime: {
+            minutes: number
+          }
         }
         frontmatter: {
           title: string
@@ -36,9 +39,16 @@ const Blog: React.FC<BlogPostsProps> = ({ data }) => (
         </Container>
       </Header>
       <Container>
-        {data.allMarkdownRemark.nodes.map((post) => (
-          <BlogPreview key={post.fields.slug} post={post} />
-        ))}
+        <Grid templateColumns={`repeat(${useBreakpointValue({ base: 1, sm: 2 })}, 1fr)`} gap={{ base: 24, sm: 8 }}>
+          {data.allMarkdownRemark.nodes.map((post) => (
+            <BlogPreview key={post.fields.slug} post={post} />
+          ))}
+        </Grid>
+        <Box textAlign="right" mt={8}>
+          <Link fontSize="lg" href="/archive">
+            Még több...
+          </Link>
+        </Box>
       </Container>
     </Page>
   </IndexLayout>
@@ -52,6 +62,9 @@ export const query = graphql`
       nodes {
         fields {
           slug
+          readingTime {
+            minutes
+          }
         }
         frontmatter {
           title

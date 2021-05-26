@@ -5,7 +5,7 @@ import Logo from '../../assets/images/kirdev.svg'
 import SocialButton from './SocialButton'
 
 const Footer: React.FC = () => (
-  <Box textAlign="center" zIndex={1} mt={32}>
+  <Box textAlign="center" zIndex={1} mt={12}>
     <Box borderTopWidth={1} borderStyle="solid" borderColor={useColorModeValue('gray.200', 'gray.700')}>
       <Container
         as={Stack}

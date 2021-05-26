@@ -25,6 +25,11 @@ interface PostTemplateProps {
         date: string
         featuredImage: ImageDataLike
       }
+      fields: {
+        readingTime: {
+          minutes: number
+        }
+      }
     }
   }
 }
@@ -41,7 +46,7 @@ const PostTemplate: React.FC<PostTemplateProps> = ({ data }) => {
             <Heading as="h1" py={5}>
               {data.markdownRemark.frontmatter.title}
             </Heading>
-            <BlogAuthor name={data.markdownRemark.frontmatter.author} date={new Date(data.markdownRemark.frontmatter.date)} />
+            <BlogAuthor longDate name={data.markdownRemark.frontmatter.author} date={new Date(data.markdownRemark.frontmatter.date)} />
           </Container>
         </Header>
         <Container>
@@ -74,6 +79,11 @@ export const query = graphql`
           childImageSharp {
             gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
           }
+        }
+      }
+      fields {
+        readingTime {
+          minutes
         }
       }
     }

@@ -1,5 +1,5 @@
-import { Box, Heading } from '@chakra-ui/react'
-import { graphql, Link } from 'gatsby'
+import { Box, Heading, Link } from '@chakra-ui/react'
+import { graphql } from 'gatsby'
 import * as React from 'react'
 import Container from '../components/Container'
 import Header from '../components/Header'
@@ -34,9 +34,11 @@ const Archive: React.FC<BlogPostsProps> = ({ data }) => (
       </Header>
       <Container>
         {data.allMarkdownRemark.nodes.map((post) => (
-          <Box key={post.fields.slug}>
+          <Box key={post.fields.slug} fontSize={{ base: 'md', md: 'lg' }} py={1}>
             <span>{post.frontmatter.date.split('T')[0]} » </span>
-            <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
+            <Link fontWeight="bold" href={post.fields.slug}>
+              {post.frontmatter.title}
+            </Link>
           </Box>
         ))}
       </Container>
