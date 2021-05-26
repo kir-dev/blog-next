@@ -1,6 +1,7 @@
-import { Box, Container, HStack, Img, Stack, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, Container, HStack, Stack, Text, useColorModeValue } from '@chakra-ui/react'
 import React from 'react'
 import { FaAt, FaFacebook, FaGithub, FaYoutube } from 'react-icons/fa'
+import Logo from '../../assets/images/kirdev.svg'
 import SocialButton from './SocialButton'
 
 const Footer: React.FC = () => (
@@ -16,7 +17,7 @@ const Footer: React.FC = () => (
         align={{ base: 'center', md: 'center' }}
       >
         <HStack>
-          <Img src="../../kirdev.png" h="12" />
+          <Logo height="3rem" style={{ fill: useColorModeValue('black', 'white') }} />
           <Text>&copy; 2021 Kir-Dev</Text>
         </HStack>
         <Box>

@@ -7,11 +7,12 @@ interface BlogAuthorProps {
 }
 
 const BlogAuthor: React.FC<BlogAuthorProps> = ({ date, name }) => {
+  const pekUrl = 'https://pek.k8s.sch.bme.hu'
+
   return (
-    <HStack marginTop="2" spacing="2" display="flex" alignItems="center">
-      <Image borderRadius="full" boxSize="40px" src={`https://pek.sch.bme.hu/photos/${name}/`} fallbackSrc="../../kirdev-simplified.png" />
-      <Link fontWeight="medium" href={`https://pek.sch.bme.hu/profiles/${name}/`}>
-        {name}
+    <HStack marginTop={2} spacing={2} display="flex" alignItems="center">
+      <Link href={`${pekUrl}/profiles/${name}/`}>
+        <Image borderRadius="full" boxSize="2.25rem" src={`${pekUrl}/photos/${name}/`} fallbackSrc="../../favicon.png" />
       </Link>
       <Text>—</Text>
       <Text>

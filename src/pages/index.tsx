@@ -1,20 +1,8 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Grid,
-  Heading,
-  HStack,
-  Image,
-  Link,
-  Spacer,
-  Text,
-  useBreakpointValue,
-  useColorModeValue
-} from '@chakra-ui/react'
+import { Box, Button, Flex, Grid, Heading, HStack, Link, Spacer, Text, useBreakpointValue, useColorModeValue } from '@chakra-ui/react'
 import { graphql } from 'gatsby'
 import * as React from 'react'
 import { FaFacebook, FaGithub, FaYoutube } from 'react-icons/fa'
+import Logo from '../assets/images/kirdev-simplified.svg'
 import BlogPreview from '../components/blog-components/BlogPreview'
 import Container from '../components/Container'
 import InfoBox from '../components/indexpage-components/InfoBox'
@@ -91,11 +79,13 @@ const IndexPage: React.FC<LatestBlogPostsProps> = ({ data }) => {
                   </Box>
                 </Flex>
               </Flex>
-              <Image
-                src="../../kirdev-simplified.png"
-                h={[0, '14rem', '18rem', '20rem']}
-                mt={[0, '-14rem', '-18rem', '-10rem']}
-                float="right"
+              <Logo
+                style={{
+                  marginTop: useBreakpointValue([0, '-14rem', '-18rem', '-10rem']),
+                  height: useBreakpointValue([0, '14rem', '18rem', '20rem']),
+                  fill: useColorModeValue('black', '#EBECEC'),
+                  marginLeft: 'auto'
+                }}
               />
             </Box>
           </Container>
