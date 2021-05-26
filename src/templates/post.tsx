@@ -56,7 +56,7 @@ const PostTemplate: React.FC<PostTemplateProps> = ({ data }) => {
                 <Heading as="h1">{data.markdownRemark.frontmatter.title}</Heading>
                 <Flex justifyContent="space-between" wrap="wrap-reverse">
                   <BlogAuthor
-                    longDate
+                    hasLongDate
                     name={data.markdownRemark.frontmatter.author}
                     date={new Date(data.markdownRemark.frontmatter.date)}
                   />

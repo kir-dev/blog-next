@@ -6,7 +6,7 @@ import { PEK_URL } from '../../utils/constants'
 interface BlogAuthorProps {
   date: Date
   name: string
-  longDate?: boolean
+  hasLongDate?: boolean
 }
 
 const BlogAuthor: React.FC<BlogAuthorProps> = ({ date, name }) => {
@@ -18,7 +18,7 @@ const BlogAuthor: React.FC<BlogAuthorProps> = ({ date, name }) => {
         <Image borderRadius="full" boxSize="2.25rem" src={`${pekUrl}/photos/${name}/`} fallbackSrc="../../favicon.png" />
       </Link>
 
-      {longDate ? (
+      {hasLongDate ? (
         <HStack>
           <Link fontWeight="medium" fontSize="md" href={`${pekUrl}/profiles/${name}/`}>
             {name}

@@ -98,7 +98,7 @@ const IndexPage: React.FC<BlogPostsProps> = ({ data }) => {
 
           <Box py={16} zIndex={1}>
             <Heading pb={10}>Legutóbbi bejegyzés blogunkból</Heading>
-            <BlogPreview post={post} />
+            <BlogPreview isBig post={post} />
           </Box>
         </Container>
       </Page>
