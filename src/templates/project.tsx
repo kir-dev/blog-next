@@ -22,6 +22,7 @@ interface ProjectTemplateProps {
       frontmatter: {
         title: string
         github: string
+        website: string
         featuredImage: ImageDataLike
         status: string
         techs: string
@@ -100,6 +101,7 @@ export const query = graphql`
       frontmatter {
         title
         github
+        website
         status
         techs
         featuredImage {

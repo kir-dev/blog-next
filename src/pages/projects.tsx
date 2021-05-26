@@ -34,7 +34,7 @@ const Projects: React.FC<ProjectsProps> = ({ data }) => (
       <Header>
         <Container>
           <Heading as="h1">Projektjeink</Heading>
-          <Text as="kbd" pt={4} fontSize="xl">
+          <Text fontFamily="mono" pt={4} fontSize="xl">
             A kör által készített minden alkalmazás nyílt forráskódú, ez a fejlesztőeszközeink kiválasztásánál is fő szempont.
           </Text>
         </Container>

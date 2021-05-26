@@ -21,7 +21,7 @@ interface ProjectForPreview {
   }
 }
 
-function getIcon(status: string) {
+export function getIcon(status: string): JSX.Element {
   const words: string[] = status.split(' ')
   let color: string = words.pop() ?? 'orange'
   color = color.trim()

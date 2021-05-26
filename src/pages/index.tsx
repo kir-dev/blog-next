@@ -6,12 +6,46 @@ import Logo from '../assets/images/kirdev-simplified.svg'
 import BlogPreview from '../components/blog-components/BlogPreview'
 import Container from '../components/Container'
 import InfoBox from '../components/indexpage-components/InfoBox'
+import PekPreview from '../components/indexpage-components/PekPreview'
 import Page from '../components/Page'
 import Terminal from '../components/terminal/Terminal'
 import IndexLayout from '../layouts'
-import { BlogPostsProps } from './blog'
 
-const IndexPage: React.FC<BlogPostsProps> = ({ data }) => {
+interface IndexPageProps {
+  data: {
+    post: {
+      nodes: [
+        {
+          fields: {
+            slug: string
+            readingTime: {
+              minutes: number
+            }
+          }
+          frontmatter: {
+            title: string
+            lead: string
+            date: string
+            author: string
+            featuredImage: ImageDataLike
+          }
+        }
+      ]
+    }
+    pek: {
+      frontmatter: {
+        title: string
+        lead: string
+        github: string
+        featuredImage: ImageDataLike
+        status: string
+        techs: string
+      }
+    }
+  }
+}
+
+const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
   const socialSize = useBreakpointValue({ base: '2rem', lg: '3rem' })
   const [post] = data.allMarkdownRemark.nodes
 
@@ -74,7 +108,7 @@ const IndexPage: React.FC<BlogPostsProps> = ({ data }) => {
         </Box>
         <Container>
           <Box pt={16} zIndex={1}>
-            <Heading pb={10}>Amivel foglalkozunk</Heading>
+            <Heading pb={4}>Amivel foglalkozunk</Heading>
             <Grid templateColumns={`repeat(${useBreakpointValue({ base: 1, md: 3 })}, 1fr)`} gap={{ base: 4, md: 10 }}>
               <InfoBox imgSrc="../../laptop.png" title="Webfejlesztés">
                 <Text textAlign="justify">
@@ -96,9 +130,33 @@ const IndexPage: React.FC<BlogPostsProps> = ({ data }) => {
             </Grid>
           </Box>
 
+          <Box pt={16} zIndex={1}>
+            <Heading pb={4}>Projektünk: PéK</Heading>
+            <Text fontFamily="mono" mb={4} textAlign="justify">
+              Fő feladatunk a{' '}
+              <Link textColor="orange.500" href="https://pek.sch.bme.hu/">
+                Profilok és Körök
+              </Link>{' '}
+              folyamatos fejlesztése és karbantartása. Ez a rendszer már több generációt is megélt az aktív körtagoknak köszönhetően.
+              Jelenleg ezen az alkalmazáson keresztül folyik a kar közösségi pontozása. A felhasználók száma eléri a 7000-et és több mint 10
+              évre visszamenőleg tartalmaz információkat a kar közösségi életéről.
+            </Text>
+            <PekPreview project={pek} />
+            <Box textAlign="right" mt={8}>
+              <Link textColor="orange.500" fontSize="lg" href="/projects">
+                További projektjeink...
+              </Link>
+            </Box>
+          </Box>
+
           <Box py={16} zIndex={1}>
-            <Heading pb={10}>Legutóbbi bejegyzés blogunkból</Heading>
+            <Heading pb={4}>Legutóbbi bejegyzés blogunkból</Heading>
             <BlogPreview isBig post={post} />
+            <Box textAlign="right" mt={8}>
+              <Link textColor="orange.500" fontSize="lg" href="/blog">
+                További posztjaink...
+              </Link>
+            </Box>
           </Box>
         </Container>
       </Page>
@@ -109,8 +167,8 @@ const IndexPage: React.FC<BlogPostsProps> = ({ data }) => {
 export default IndexPage
 
 export const query = graphql`
-  query {
-    allMarkdownRemark(filter: { fields: { layout: { eq: "post" } } }, sort: { fields: [frontmatter___date], order: DESC }, limit: 1) {
+  query IndexPageQueries {
+    post: allMarkdownRemark(filter: { fields: { layout: { eq: "post" } } }, sort: { fields: [frontmatter___date], order: DESC }, limit: 1) {
       nodes {
         fields {
           slug
@@ -127,6 +185,20 @@ export const query = graphql`
             childImageSharp {
               gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
             }
+          }
+        }
+      }
+    }
+    pek: markdownRemark(fields: { slug: { eq: "/project/pek-next/" } }) {
+      frontmatter {
+        title
+        lead
+        github
+        status
+        techs
+        featuredImage {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
           }
         }
       }

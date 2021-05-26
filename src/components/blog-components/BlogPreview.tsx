@@ -5,7 +5,7 @@ import React from 'react'
 import { FaClock } from 'react-icons/fa'
 import BlogAuthor from './BlogAuthor'
 
-interface BlogPreviewProps {
+export interface BlogPreviewProps {
   post: {
     fields: {
       slug: string
