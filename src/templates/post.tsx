@@ -1,7 +1,8 @@
-import { Heading } from '@chakra-ui/react'
+import { Flex, Heading, HStack, Text, useColorModeValue } from '@chakra-ui/react'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image'
 import * as React from 'react'
+import { FaClock } from 'react-icons/fa'
 import BlogAuthor from '../components/blog-components/BlogAuthor'
 import Container from '../components/Container'
 import Header from '../components/Header'
@@ -46,7 +47,13 @@ const PostTemplate: React.FC<PostTemplateProps> = ({ data }) => {
             <Heading as="h1" py={5}>
               {data.markdownRemark.frontmatter.title}
             </Heading>
-            <BlogAuthor longDate name={data.markdownRemark.frontmatter.author} date={new Date(data.markdownRemark.frontmatter.date)} />
+            <Flex direction={{ base: 'column-reverse', sm: 'row' }} justifyContent="space-between">
+              <BlogAuthor longDate name={data.markdownRemark.frontmatter.author} date={new Date(data.markdownRemark.frontmatter.date)} />
+              <HStack fontWeight="light" fontSize="md" px={1} ml="auto" textColor={useColorModeValue('gray.600', 'gray.400')}>
+                <FaClock />
+                <Text>{Math.ceil(data.markdownRemark.fields.readingTime.minutes)} perc</Text>
+              </HStack>
+            </Flex>
           </Container>
         </Header>
         <Container>

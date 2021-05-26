@@ -3,8 +3,8 @@ layout: project
 title: 'Kir-Dev Blog'
 lead: 'A Kir-Dev következő generációs blogja.'
 github: https://github.com/kir-dev/blog-next
-status: 'Üzemeltetés alatt green'
-techs: 'React, Gatsby'
+status: 'Áll red'
+techs: 'This, That'
 featuredImage: null
 ---
 

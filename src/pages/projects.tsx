@@ -19,6 +19,8 @@ export interface ProjectsProps {
           title: string
           lead: string
           github: string
+          status: string
+          techs: string
           featuredImage: ImageDataLike
         }
       }[]
@@ -38,9 +40,9 @@ const Projects: React.FC<ProjectsProps> = ({ data }) => (
         </Container>
       </Header>
       <Container>
-        <Grid templateColumns={`repeat(${useBreakpointValue({ base: 1, sm: 2, md: 3 })}, 1fr)`} gap={{ base: 4, md: 10 }}>
+        <Grid templateColumns={`repeat(${useBreakpointValue({ base: 1, sm: 2 })}, 1fr)`} gap={8}>
           {data.allMarkdownRemark.nodes.map((project) => (
-            <ProjectPreview project={project} />
+            <ProjectPreview key={project.fields.slug} project={project} />
           ))}
         </Grid>
       </Container>
@@ -61,6 +63,8 @@ export const query = graphql`
           title
           lead
           github
+          status
+          techs
           featuredImage {
             childImageSharp {
               gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])

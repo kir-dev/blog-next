@@ -22,6 +22,8 @@ echo '---' >> $filepath
 echo 'layout: project' >> $filepath
 echo 'title: "'$title'"' >> $filepath
 echo 'lead: ""' >> $filepath
-echo 'github: null' >> $filepath
+echo 'github: https://github.com/kir-dev/'$urlpath >> $filepath
+echo 'status: "Aktív green"' >> $filepath
+echo 'techs: ""' >> $filepath
 echo 'featuredImage: null' >> $filepath
 echo '---' >> $filepath

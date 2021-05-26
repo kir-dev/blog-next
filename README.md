@@ -51,7 +51,13 @@ Igazából kövesd a fentieket, amit a posztkészítésnél kell, annyi, hogy a 
 - `<urlpath>`: ahol elérhetővé tennéd a projektedet, pl.: `'schpincer'` beírásával `kir-dev.sch.bme.hu/projects/schpincer/` elérési útvonalat kapod. Használd csak a kisbetűs angol karaktereket, esetleg kötő- és underscore jeleket.
 - `<title>`: a projekted hivatalos neve, így fog a weboldalon megjelenni, itt már használhatsz szóközt és egyéb karaktereket is. (Később magában a markdown fájlban ezek változtathatóak.)
 
-_Opcionális:_ A markdown fájlban a `github` fieldben megadhatod a projekt GitHub-os repóját a Kir-Dev organisation-ből.
+Szerkesztéskor a projekt markdown fájljában:
+
+- A `github` fieldben megadhatod a projekt GitHub-os repóját a Kir-Dev organisation-ből.
+- A `status` fieldben megadhatod a projekt jelenlegi állását, illetve hogy milyen színű pötty jelenjen meg a felirat mellett a project previewban. Pl.: `status: 'Aktív green'` esetén az Aktív felirat mellett zöld pötty fog megjelenni, mindig az utolsó szó adja meg a színt.
+  - Használhatóak ilyen feliratok, mint `Tervezés green`, `Fejlesztés alatt green`, `Üzemeltetve green`, `Megszakadt red`, `Áll orange` de lehetőleg maradjunk értelmes feliratoknál és színeknél a konzisztencia érdekében (aktív fázisokban inkább a zöld színt használjuk, a szöveg lehet akármi, inaktívaknál a vörös és narancssárga ajánlott).
+  - Extra: `Archivált <color>` megadása esetén hold ikon jelenik meg a státusz feliratban, `Kész <color>` esetén egy pipa, `Áll <color>` esetén pedig egy felkiáltójeles kör alakú ikon.
+- A `techs` fieldben megadhatod vesszővel elválasztva a projekt főbb techjeit (lehetőleg maradj max 3-nál). Pl.: `techs: TypeScript, Node.js`
 
 ## License
 

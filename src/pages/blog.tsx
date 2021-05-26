@@ -39,7 +39,7 @@ const Blog: React.FC<BlogPostsProps> = ({ data }) => (
         </Container>
       </Header>
       <Container>
-        <Grid templateColumns={`repeat(${useBreakpointValue({ base: 1, sm: 2 })}, 1fr)`} gap={{ base: 24, sm: 8 }}>
+        <Grid templateColumns={`repeat(${useBreakpointValue({ base: 1, sm: 2 })}, 1fr)`} gap={{ base: 24, sm: 12 }}>
           {data.allMarkdownRemark.nodes.map((post) => (
             <BlogPreview key={post.fields.slug} post={post} />
           ))}

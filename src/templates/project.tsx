@@ -23,6 +23,8 @@ interface ProjectTemplateProps {
         title: string
         github: string
         featuredImage: ImageDataLike
+        status: string
+        techs: string
       }
     }
   }
@@ -98,6 +100,8 @@ export const query = graphql`
       frontmatter {
         title
         github
+        status
+        techs
         featuredImage {
           childImageSharp {
             gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
