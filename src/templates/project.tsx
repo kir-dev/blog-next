@@ -1,11 +1,12 @@
-import { Box, Flex, Heading, HStack, Link, useColorModeValue } from '@chakra-ui/react'
+import { Box, Flex, Heading, HStack, Link, Tag, Text, useColorModeValue } from '@chakra-ui/react'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image'
 import * as React from 'react'
-import { FaGithub } from 'react-icons/fa'
+import { FaGithub, FaHome } from 'react-icons/fa'
 import SvgPattern from '../assets/images/circuit-board.svg'
 import Container from '../components/Container'
 import Page from '../components/Page'
+import { getIcon } from '../components/project-components/ProjectPreview'
 import IndexLayout from '../layouts'
 
 interface ProjectTemplateProps {
@@ -33,6 +34,9 @@ interface ProjectTemplateProps {
 
 const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ data }) => {
   const result = getImage(data.markdownRemark.frontmatter.featuredImage)
+  const statusIcon = getIcon(data.markdownRemark.frontmatter.status)
+  const statusText = data.markdownRemark.frontmatter.status.substring(0, data.markdownRemark.frontmatter.status.lastIndexOf(' '))
+  const { hostname } = new URL(data.markdownRemark.frontmatter.website)
 
   return (
     <IndexLayout>
@@ -53,25 +57,48 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ data }) => {
                 }}
               />
             )}
-            <Flex
-              justifyContent="space-between"
-              direction={{ base: 'column', lg: 'row' }}
+            <Box
               shadow="xl"
               bgGradient={`linear(to-b, ${useColorModeValue('white', 'gray.800')}, 70%, ${useColorModeValue('gray.200', 'blue.900')})`}
               zIndex={1}
-              py={result ? 2 : 12}
+              py={result ? 4 : 12}
               px={6}
             >
-              <Heading>{data.markdownRemark.frontmatter.title}</Heading>
-              <HStack>
-                <FaGithub />
-                <Link fontSize="md" href={data.markdownRemark.frontmatter.github}>
-                  {`kir-dev/${data.markdownRemark.frontmatter.github.substring(
-                    data.markdownRemark.frontmatter.github.lastIndexOf('/') + 1
-                  )}`}
-                </Link>
-              </HStack>
-            </Flex>
+              <Flex justifyContent="space-between" wrap="wrap">
+                <Heading>{data.markdownRemark.frontmatter.title}</Heading>
+                <HStack pl={6} flex={1} justifyContent="flex-end" fontSize="md">
+                  <Text>{statusText}</Text>
+                  <Box>{statusIcon}</Box>
+                </HStack>
+              </Flex>
+              <Flex justifyContent="space-between" alignItems="flex-end" placeContent="flex-end" wrap="wrap" mt={4}>
+                <Box pr={6} mb={4} flex={1}>
+                  <HStack>
+                    <FaGithub />
+                    <Link fontSize="md" href={data.markdownRemark.frontmatter.github}>
+                      {`kir-dev/${data.markdownRemark.frontmatter.github.substring(
+                        data.markdownRemark.frontmatter.github.lastIndexOf('/') + 1
+                      )}`}
+                    </Link>
+                  </HStack>
+                  <HStack>
+                    <FaHome />
+                    <Link fontSize="md" href={data.markdownRemark.frontmatter.website}>
+                      {hostname}
+                    </Link>
+                  </HStack>
+                </Box>
+                <Box>
+                  <HStack wrap="wrap" justifyContent="flex-end">
+                    {data.markdownRemark.frontmatter.techs.split(',').map((tech) => (
+                      <Tag colorScheme="blue" key={tech}>
+                        {tech.trim()}
+                      </Tag>
+                    ))}
+                  </HStack>
+                </Box>
+              </Flex>
+            </Box>
           </Container>
         </Box>
         <Container>
