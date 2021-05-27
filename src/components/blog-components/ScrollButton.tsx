@@ -24,7 +24,7 @@ const ScrollButton: React.FC = () => {
     })
   }
 
-  if (typeof window !== undefined) {
+  if (typeof window !== 'undefined') {
     window.addEventListener('scroll', toggleVisible)
   }
 
