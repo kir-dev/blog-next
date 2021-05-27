@@ -1,1 +1,1 @@
-export const PEK_URL = 'https://pek.k8s.sch.bme.hu/'
+export const PEK_URL = 'https://pek.staging.kir-dev.sch.bme.hu/'
