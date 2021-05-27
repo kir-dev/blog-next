@@ -82,12 +82,16 @@ const PostTemplate: React.FC<PostTemplateProps> = ({ data }) => {
         <Container>
           {/* eslint-disable-next-line react/no-danger */}
           <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-          <Box textAlign="right" mt={10} onClick={() => {
-            window.scrollTo({
-              top: 0,
-              behavior: 'smooth'
-            })
-          }}>
+          <Box
+            textAlign="right"
+            mt={10}
+            onClick={() => {
+              window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+              })
+            }}
+          >
             <Button colorScheme="orange">Vissza a tetejére</Button>
           </Box>
         </Container>

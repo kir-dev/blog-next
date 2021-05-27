@@ -52,7 +52,7 @@ interface IndexPageProps {
 const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
   const socialSize = useBreakpointValue({ base: '2rem', lg: '3rem' })
   const [post] = data.post.nodes
-  const pek = data.pek
+  const { pek } = data
 
   return (
     <IndexLayout>
