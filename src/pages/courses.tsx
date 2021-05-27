@@ -5,12 +5,12 @@ import Header from '../components/Header'
 import Page from '../components/Page'
 import IndexLayout from '../layouts'
 
-const AboutPage: React.FC = () => (
+const CoursesPage: React.FC = () => (
   <IndexLayout>
     <Page>
       <Header>
         <Container>
-          <Heading as="h1">Csapatunk</Heading>
+          <Heading as="h1">Tanfolyamaink</Heading>
         </Container>
       </Header>
       <Container>{' Content here '}</Container>
@@ -18,4 +18,4 @@ const AboutPage: React.FC = () => (
   </IndexLayout>
 )
 
-export default AboutPage
+export default CoursesPage

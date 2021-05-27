@@ -1,37 +1,58 @@
 import { Box, Button, Flex, Grid, Heading, HStack, Spacer, Text, useBreakpointValue, useColorModeValue } from '@chakra-ui/react'
 import { graphql, Link } from 'gatsby'
+import { ImageDataLike } from 'gatsby-plugin-image'
 import * as React from 'react'
 import { FaFacebook, FaGithub, FaYoutube } from 'react-icons/fa'
 import Logo from '../assets/images/kirdev-simplified.svg'
 import BlogPreview from '../components/blog-components/BlogPreview'
 import Container from '../components/Container'
 import InfoBox from '../components/indexpage-components/InfoBox'
+import PekPreview from '../components/indexpage-components/PekPreview'
 import Page from '../components/Page'
 import Terminal from '../components/terminal/Terminal'
 import IndexLayout from '../layouts'
 
-export interface LatestBlogPostsProps {
+interface IndexPageProps {
   data: {
-    allMarkdownRemark: {
-      nodes: {
-        fields: {
-          slug: string
+    post: {
+      nodes: [
+        {
+          fields: {
+            slug: string
+            readingTime: {
+              minutes: number
+            }
+          }
+          frontmatter: {
+            title: string
+            lead: string
+            date: string
+            author: string
+            featuredImage: ImageDataLike
+          }
         }
-        frontmatter: {
-          title: string
-          lead: string
-          date: string
-          author: string
-          previewImgSrc: string
-        }
-      }[]
+      ]
+    }
+    pek: {
+      fields: {
+        slug: string
+      }
+      frontmatter: {
+        title: string
+        lead: string
+        github: string
+        featuredImage: ImageDataLike
+        status: string
+        techs: string
+      }
     }
   }
 }
 
-const IndexPage: React.FC<LatestBlogPostsProps> = ({ data }) => {
+const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
   const socialSize = useBreakpointValue({ base: '2rem', lg: '3rem' })
-  const [post] = data.allMarkdownRemark.nodes
+  const [post] = data.post.nodes
+  const { pek } = data
 
   return (
     <IndexLayout>
@@ -91,8 +112,8 @@ const IndexPage: React.FC<LatestBlogPostsProps> = ({ data }) => {
           </Container>
         </Box>
         <Container>
-          <Box pt="16" zIndex={1}>
-            <Heading pb={10}>Amivel foglalkozunk</Heading>
+          <Box pt={16} zIndex={1}>
+            <Heading pb={4}>Amivel foglalkozunk</Heading>
             <Grid templateColumns={`repeat(${useBreakpointValue({ base: 1, md: 3 })}, 1fr)`} gap={{ base: 4, md: 10 }}>
               <InfoBox imgSrc="../../laptop.png" title="Webfejlesztés">
                 <Text textAlign="justify">
@@ -114,9 +135,33 @@ const IndexPage: React.FC<LatestBlogPostsProps> = ({ data }) => {
             </Grid>
           </Box>
 
-          <Box pt="16" zIndex={1}>
-            <Heading pb={10}>Legutóbbi bejegyzés blogunkból</Heading>
-            <BlogPreview post={post} />
+          <Box pt={16} zIndex={1}>
+            <Heading pb={4}>Projektünk: PéK</Heading>
+            <Text fontFamily="mono" mb={4} textAlign="justify">
+              Fő feladatunk a{' '}
+              <Text as={Link} textColor="orange.500" to="https://pek.sch.bme.hu/">
+                Profilok és Körök
+              </Text>{' '}
+              folyamatos fejlesztése és karbantartása. Ez a rendszer már több generációt is megélt az aktív körtagoknak köszönhetően.
+              Jelenleg ezen az alkalmazáson keresztül folyik a kar közösségi pontozása. A felhasználók száma eléri a 7000-et és több mint 10
+              évre visszamenőleg tartalmaz információkat a kar közösségi életéről.
+            </Text>
+            <PekPreview project={pek} />
+            <Box textAlign="right" mt={8}>
+              <Text as={Link} textColor="orange.500" fontSize="lg" to="/projects">
+                További projektjeink...
+              </Text>
+            </Box>
+          </Box>
+
+          <Box py={16} zIndex={1}>
+            <Heading pb={4}>Legutóbbi bejegyzés blogunkból</Heading>
+            <BlogPreview isBig post={post} />
+            <Box textAlign="right" mt={8}>
+              <Text as={Link} textColor="orange.500" fontSize="lg" to="/blog">
+                További posztjaink...
+              </Text>
+            </Box>
           </Box>
         </Container>
       </Page>
@@ -127,17 +172,42 @@ const IndexPage: React.FC<LatestBlogPostsProps> = ({ data }) => {
 export default IndexPage
 
 export const query = graphql`
-  query {
-    allMarkdownRemark(filter: { fields: { layout: { eq: "post" } } }, sort: { fields: [frontmatter___date], order: DESC }, limit: 1) {
+  query IndexPageQueries {
+    post: allMarkdownRemark(filter: { fields: { layout: { eq: "post" } } }, sort: { fields: [frontmatter___date], order: DESC }, limit: 1) {
       nodes {
         fields {
           slug
+          readingTime {
+            minutes
+          }
         }
         frontmatter {
           title
           lead
           date
           author
+          featuredImage {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+            }
+          }
+        }
+      }
+    }
+    pek: markdownRemark(fields: { slug: { eq: "/project/pek-next/" } }) {
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+        lead
+        github
+        status
+        techs
+        featuredImage {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+          }
         }
       }
     }

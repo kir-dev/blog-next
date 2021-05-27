@@ -1,5 +1,6 @@
 import { Button, VisuallyHidden } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
+import { Link } from 'gatsby'
 import React from 'react'
 
 interface SocialButtonProps {
@@ -16,8 +17,8 @@ const SocialButton: React.FC<SocialButtonProps> = ({ children, label, href, size
       w={size}
       h={size}
       cursor="pointer"
-      as="a"
-      href={href}
+      as={Link}
+      to={href}
       display="inline-flex"
       alignItems="center"
       justifyContent="center"
