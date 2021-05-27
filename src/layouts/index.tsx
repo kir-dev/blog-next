@@ -3,8 +3,8 @@ import { graphql, StaticQuery } from 'gatsby'
 import 'modern-normalize'
 import * as React from 'react'
 import Helmet from 'react-helmet'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
+import Footer from '../components/footer/Footer'
+import Navbar from '../components/navbar/Navbar'
 
 interface StaticQueryProps {
   site: {
@@ -36,9 +36,10 @@ const IndexLayout: React.FC = ({ children }) => (
             { name: 'description', content: data.site.siteMetadata.description },
             { name: 'keywords', content: data.site.siteMetadata.keywords }
           ]}
+          link={[{ rel: 'icon', href: '../favicon.png' }]}
         />
         <Flex direction="column" minHeight="100vh">
-          <Header title={data.site.siteMetadata.title} />
+          <Navbar />
           <Box flex="1">{children}</Box>
           <Footer />
         </Flex>

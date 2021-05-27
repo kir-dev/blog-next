@@ -1,17 +1,26 @@
+import { Button, Flex, Heading } from '@chakra-ui/react'
 import { Link } from 'gatsby'
 import * as React from 'react'
 import Container from '../components/Container'
+import Header from '../components/Header'
 import Page from '../components/Page'
 import IndexLayout from '../layouts'
 
 const NotFoundPage: React.FC = () => (
   <IndexLayout>
     <Page>
+      <Header>
+        <Container>
+          <Heading as="h1">Page not found (404)</Heading>
+        </Container>
+      </Header>
       <Container>
-        <h1>404: Page not found.</h1>
-        <p>
-          You've hit the void. <Link to="/">Go back.</Link>
-        </p>
+        <Flex justifyContent="space-between">
+          You've hit the void.{' '}
+          <Button as={Link} colorScheme="orange" to="/">
+            Go back
+          </Button>
+        </Flex>
       </Container>
     </Page>
   </IndexLayout>
