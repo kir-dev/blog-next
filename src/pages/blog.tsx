@@ -1,5 +1,5 @@
-import { Box, Grid, Heading, Link, useBreakpointValue } from '@chakra-ui/react'
-import { graphql } from 'gatsby'
+import { Box, Grid, Heading, Text, useBreakpointValue } from '@chakra-ui/react'
+import { graphql, Link } from 'gatsby'
 import { ImageDataLike } from 'gatsby-plugin-image'
 import * as React from 'react'
 import BlogPreview from '../components/blog-components/BlogPreview'
@@ -45,9 +45,9 @@ const Blog: React.FC<BlogPostsProps> = ({ data }) => (
           ))}
         </Grid>
         <Box textAlign="right" mt={8}>
-          <Link fontSize="lg" href="/archive">
+          <Text as={Link} fontSize="lg" to="/archive">
             Még több...
-          </Link>
+          </Text>
         </Box>
       </Container>
     </Page>

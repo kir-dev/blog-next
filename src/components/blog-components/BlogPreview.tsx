@@ -1,5 +1,6 @@
 /* eslint-disable react/destructuring-assignment */
-import { Box, Flex, Heading, HStack, Image, Link, Text, useBreakpointValue, useColorModeValue } from '@chakra-ui/react'
+import { Box, Flex, Heading, HStack, Image, Text, useBreakpointValue, useColorModeValue } from '@chakra-ui/react'
+import { Link } from 'gatsby'
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image'
 import React from 'react'
 import { FaClock } from 'react-icons/fa'
@@ -31,7 +32,7 @@ const BlogPreview: React.FC<BlogPreviewProps> = ({ post, isBig }) => {
     <Flex mt={2} direction={{ base: 'column', sm: isBig ? 'row' : 'column', md: 'row' }} justifyContent="space-between">
       <Flex flex={1} position="relative" mr={{ base: 0, md: 2 }} pb={isBig ? 2 : { base: 2, md: 0 }}>
         <Box w="80%" zIndex={2}>
-          <Link href={post.fields.slug}>
+          <Link to={post.fields.slug}>
             {result ? <GatsbyImage image={result} alt="Blog preview" objectFit="contain" /> : <Image src="../../post-default.jpg" />}
           </Link>
         </Box>
@@ -52,11 +53,15 @@ const BlogPreview: React.FC<BlogPreviewProps> = ({ post, isBig }) => {
       >
         {isBig ? (
           <Heading>
-            <Link href={post.fields.slug}>{post.frontmatter.title}</Link>
+            <Text as={Link} to={post.fields.slug}>
+              {post.frontmatter.title}
+            </Text>
           </Heading>
         ) : (
           <Text fontWeight="light" fontSize="2xl">
-            <Link href={post.fields.slug}>{post.frontmatter.title}</Link>
+            <Text as={Link} to={post.fields.slug}>
+              {post.frontmatter.title}
+            </Text>
           </Text>
         )}
         <Text mt={1} fontSize="md">

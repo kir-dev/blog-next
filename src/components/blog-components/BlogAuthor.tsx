@@ -1,4 +1,4 @@
-import { HStack, Image, Text } from '@chakra-ui/react'
+import { Box, HStack, Image, Text, useColorModeValue } from '@chakra-ui/react'
 import { Link } from 'gatsby'
 import React from 'react'
 import { PEK_URL } from '../../utils/constants'
@@ -9,7 +9,7 @@ interface BlogAuthorProps {
   hasLongDate?: boolean
 }
 
-const BlogAuthor: React.FC<BlogAuthorProps> = ({ date, name }) => {
+const BlogAuthor: React.FC<BlogAuthorProps> = ({ date, name, hasLongDate }) => {
   const pekUrl = PEK_URL
 
   return (
@@ -20,9 +20,9 @@ const BlogAuthor: React.FC<BlogAuthorProps> = ({ date, name }) => {
 
       {hasLongDate ? (
         <HStack>
-          <Link fontWeight="medium" fontSize="md" href={`${pekUrl}/profiles/${name}/`}>
+          <Text as={Link} fontWeight="medium" fontSize="md" to={`${pekUrl}/profiles/${name}/`}>
             {name}
-          </Link>
+          </Text>
           <Text>—</Text>
           <Text fontWeight="light" fontSize="md" fontStyle="italic" textColor={useColorModeValue('gray.600', 'gray.400')}>
             {date.toLocaleTimeString('hu-HU', {
@@ -37,9 +37,9 @@ const BlogAuthor: React.FC<BlogAuthorProps> = ({ date, name }) => {
         </HStack>
       ) : (
         <Box>
-          <Link fontWeight="medium" fontSize="md" href={`https://pek.k8s.sch.bme.hu/profiles/${name}/`}>
+          <Text as={Link} fontWeight="medium" fontSize="md" to={`https://pek.k8s.sch.bme.hu/profiles/${name}/`}>
             {name}
-          </Link>
+          </Text>
           <Text fontWeight="light" fontSize="sm" fontStyle="italic" textColor={useColorModeValue('gray.600', 'gray.400')}>
             {date.toLocaleDateString('hu-HU', {
               year: 'numeric',

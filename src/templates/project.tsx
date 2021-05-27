@@ -1,5 +1,5 @@
-import { Box, Flex, Heading, HStack, Link, Tag, Text, useColorModeValue } from '@chakra-ui/react'
-import { graphql } from 'gatsby'
+import { Box, Flex, Heading, HStack, Tag, Text, useColorModeValue } from '@chakra-ui/react'
+import { graphql, Link } from 'gatsby'
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image'
 import * as React from 'react'
 import { FaGithub, FaHome } from 'react-icons/fa'
@@ -75,17 +75,17 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ data }) => {
                 <Box pr={6} mb={4} flex={1}>
                   <HStack>
                     <FaGithub />
-                    <Link fontSize="md" href={data.markdownRemark.frontmatter.github}>
+                    <Text as={Link} fontSize="md" to={data.markdownRemark.frontmatter.github}>
                       {`kir-dev/${data.markdownRemark.frontmatter.github.substring(
                         data.markdownRemark.frontmatter.github.lastIndexOf('/') + 1
                       )}`}
-                    </Link>
+                    </Text>
                   </HStack>
                   <HStack>
                     <FaHome />
-                    <Link fontSize="md" href={data.markdownRemark.frontmatter.website}>
+                    <Text as={Link} fontSize="md" to={data.markdownRemark.frontmatter.website}>
                       {hostname}
-                    </Link>
+                    </Text>
                   </HStack>
                 </Box>
                 <Box>

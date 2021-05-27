@@ -1,5 +1,6 @@
 /* eslint-disable react/destructuring-assignment */
-import { Box, Flex, HStack, Image, Link, Tag, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, Flex, HStack, Image, Tag, Text, useColorModeValue } from '@chakra-ui/react'
+import { Link } from 'gatsby'
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image'
 import React from 'react'
 import { FaGithub } from 'react-icons/fa'
@@ -7,6 +8,9 @@ import { getIcon } from '../project-components/ProjectPreview'
 
 export interface PekProps {
   project: {
+    fields: {
+      slug: string
+    }
     frontmatter: {
       title: string
       lead: string
@@ -27,7 +31,7 @@ const PekPreview: React.FC<PekProps> = ({ project }) => {
     <Flex mt={2} direction={{ base: 'column', sm: 'row' }} justifyContent="space-between">
       <Flex flex={1} position="relative" mr={{ base: 0, md: 2 }} pb={2}>
         <Box w="80%" zIndex={2}>
-          <Link href="projects/pek-next">
+          <Link to={project.fields.slug}>
             {result ? <GatsbyImage image={result} alt="Project preview" objectFit="contain" /> : <Image src="../../post-default.jpg" />}
           </Link>
         </Box>
@@ -39,9 +43,9 @@ const PekPreview: React.FC<PekProps> = ({ project }) => {
         <Flex flex={1} h="fit-content" py={4} px={4} direction="column">
           <Box flex={1}>
             <Flex justifyContent="space-between" direction={{ base: 'column-reverse', md: 'row' }}>
-              <Link fontSize="4xl" fontWeight="semibold" lineHeight="tight" href="projects/pek-next">
+              <Text as={Link} fontSize="4xl" fontWeight="semibold" lineHeight="tight" to={project.fields.slug}>
                 {project.frontmatter.title}
-              </Link>
+              </Text>
               <HStack justifyContent="flex-end" fontSize="xs" color="gray.600">
                 <Text color={useColorModeValue('gray.700', 'gray.400')}>{statusText}</Text>
                 {statusIcon}
@@ -53,9 +57,9 @@ const PekPreview: React.FC<PekProps> = ({ project }) => {
             <Flex wrap="wrap" justifyContent="space-between" direction={{ base: 'column', md: 'row' }}>
               <HStack alignItems="center">
                 <FaGithub />
-                <Link whiteSpace="nowrap" fontSize="md" href={project.frontmatter.github}>
+                <Text as={Link} whiteSpace="nowrap" fontSize="md" to={project.frontmatter.github}>
                   kir-dev/pek-next
-                </Link>
+                </Text>
               </HStack>
               <HStack flex={1} justifyContent="flex-end">
                 {project.frontmatter.techs.split(',').map((tech) => (

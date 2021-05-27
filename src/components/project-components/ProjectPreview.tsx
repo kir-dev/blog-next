@@ -1,5 +1,6 @@
 import { CheckIcon, MoonIcon, WarningIcon } from '@chakra-ui/icons'
-import { Box, Flex, HStack, Image, Link, Tag, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, Flex, HStack, Image, Tag, Text, useColorModeValue } from '@chakra-ui/react'
+import { Link } from 'gatsby'
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image'
 import React from 'react'
 import { FaGithub } from 'react-icons/fa'
@@ -47,13 +48,7 @@ const ProjectPreview: React.FC<ProjectForPreview> = ({ project }) => {
 
   return (
     <Flex direction="column" bg={useColorModeValue('white', 'gray.800')} borderWidth="1px" rounded="lg" shadow="lg" position="relative">
-      <Box
-        maxH="10rem"
-        onClick={() => {
-          window.location.href = project.fields.slug
-        }}
-        cursor="pointer"
-      >
+      <Box as={Link} maxH="10rem" to={project.fields.slug} cursor="pointer">
         {result ? (
           <GatsbyImage
             image={result}
@@ -69,9 +64,9 @@ const ProjectPreview: React.FC<ProjectForPreview> = ({ project }) => {
       <Flex flex={1} h="fit-content" py={4} px={4} direction="column">
         <Box flex={1}>
           <Flex justifyContent="space-between" direction={{ base: 'column-reverse', md: 'row' }}>
-            <Link fontSize="2xl" fontWeight="semibold" lineHeight="tight" href={project.fields.slug}>
+            <Text as={Link} fontSize="2xl" fontWeight="semibold" lineHeight="tight" to={project.fields.slug}>
               {project.frontmatter.title}
-            </Link>
+            </Text>
             <HStack justifyContent="flex-end" fontSize="xs" color="gray.600">
               <Text color={useColorModeValue('gray.700', 'gray.400')}>{statusText}</Text>
               {statusIcon}
@@ -83,9 +78,9 @@ const ProjectPreview: React.FC<ProjectForPreview> = ({ project }) => {
           <Flex wrap="wrap" justifyContent="space-between" direction={{ base: 'column', md: 'row' }}>
             <HStack alignItems="center">
               <FaGithub />
-              <Link whiteSpace="nowrap" fontSize="md" href={project.frontmatter.github}>
+              <Text as={Link} whiteSpace="nowrap" fontSize="md" to={project.frontmatter.github}>
                 {`kir-dev/${githubUrlEnd}`}
-              </Link>
+              </Text>
             </HStack>
             <HStack flex={1} justifyContent="flex-end">
               {project.frontmatter.techs.split(',').map((tech) => (

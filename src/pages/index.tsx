@@ -1,5 +1,6 @@
 import { Box, Button, Flex, Grid, Heading, HStack, Spacer, Text, useBreakpointValue, useColorModeValue } from '@chakra-ui/react'
 import { graphql, Link } from 'gatsby'
+import { ImageDataLike } from 'gatsby-plugin-image'
 import * as React from 'react'
 import { FaFacebook, FaGithub, FaYoutube } from 'react-icons/fa'
 import Logo from '../assets/images/kirdev-simplified.svg'
@@ -33,6 +34,9 @@ interface IndexPageProps {
       ]
     }
     pek: {
+      fields: {
+        slug: string
+      }
       frontmatter: {
         title: string
         lead: string
@@ -47,7 +51,8 @@ interface IndexPageProps {
 
 const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
   const socialSize = useBreakpointValue({ base: '2rem', lg: '3rem' })
-  const [post] = data.allMarkdownRemark.nodes
+  const [post] = data.post.nodes
+  const pek = data.pek
 
   return (
     <IndexLayout>
@@ -134,18 +139,18 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
             <Heading pb={4}>Projektünk: PéK</Heading>
             <Text fontFamily="mono" mb={4} textAlign="justify">
               Fő feladatunk a{' '}
-              <Link textColor="orange.500" href="https://pek.sch.bme.hu/">
+              <Text as={Link} textColor="orange.500" to="https://pek.sch.bme.hu/">
                 Profilok és Körök
-              </Link>{' '}
+              </Text>{' '}
               folyamatos fejlesztése és karbantartása. Ez a rendszer már több generációt is megélt az aktív körtagoknak köszönhetően.
               Jelenleg ezen az alkalmazáson keresztül folyik a kar közösségi pontozása. A felhasználók száma eléri a 7000-et és több mint 10
               évre visszamenőleg tartalmaz információkat a kar közösségi életéről.
             </Text>
             <PekPreview project={pek} />
             <Box textAlign="right" mt={8}>
-              <Link textColor="orange.500" fontSize="lg" href="/projects">
+              <Text as={Link} textColor="orange.500" fontSize="lg" to="/projects">
                 További projektjeink...
-              </Link>
+              </Text>
             </Box>
           </Box>
 
@@ -153,9 +158,9 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
             <Heading pb={4}>Legutóbbi bejegyzés blogunkból</Heading>
             <BlogPreview isBig post={post} />
             <Box textAlign="right" mt={8}>
-              <Link textColor="orange.500" fontSize="lg" href="/blog">
+              <Text as={Link} textColor="orange.500" fontSize="lg" to="/blog">
                 További posztjaink...
-              </Link>
+              </Text>
             </Box>
           </Box>
         </Container>
@@ -190,6 +195,9 @@ export const query = graphql`
       }
     }
     pek: markdownRemark(fields: { slug: { eq: "/project/pek-next/" } }) {
+      fields {
+        slug
+      }
       frontmatter {
         title
         lead
