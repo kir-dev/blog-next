@@ -42,8 +42,9 @@ const ScrollButton: React.FC = () => {
       opacity={visible ? 1 : 0}
       p={0}
       textAlign="center"
+      onClick={scrollToTop}
     >
-      <FaChevronUp style={{ display: 'inline-block' }} onClick={scrollToTop} />
+      <FaChevronUp style={{ display: 'inline-block' }} />
     </Button>
   )
 }
