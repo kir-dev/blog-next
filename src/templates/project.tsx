@@ -1,9 +1,10 @@
-import { Box, Flex, Heading, HStack, Tag, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, Button, Flex, Heading, HStack, Tag, Text, useColorModeValue } from '@chakra-ui/react'
 import { graphql, Link } from 'gatsby'
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image'
 import * as React from 'react'
 import { FaGithub, FaHome } from 'react-icons/fa'
 import SvgPattern from '../assets/images/circuit-board.svg'
+import ScrollButton from '../components/blog-components/ScrollButton'
 import Container from '../components/Container'
 import Page from '../components/Page'
 import { getIcon } from '../components/project-components/ProjectPreview'
@@ -106,8 +107,17 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ data }) => {
             {/* eslint-disable-next-line react/no-danger */}
             <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
           </Box>
+          <Box textAlign="right" mt={10} onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            })
+          }}>
+            <Button colorScheme="orange">Vissza a tetejére</Button>
+          </Box>
         </Container>
       </Page>
+      <ScrollButton />
     </IndexLayout>
   )
 }

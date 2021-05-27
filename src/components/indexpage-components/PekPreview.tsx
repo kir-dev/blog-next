@@ -40,7 +40,7 @@ const PekPreview: React.FC<PekProps> = ({ project }) => {
         </Box>
       </Flex>
       <Flex flex={1.75} direction="column" justifyContent="center" mt={{ base: 3, md: 0 }} pl={{ base: 0, sm: 3 }}>
-        <Flex flex={1} h="fit-content" py={4} px={4} direction="column">
+        <Flex flex={1} h="fit-content" py={4} direction="column">
           <Box flex={1}>
             <Flex justifyContent="space-between" direction={{ base: 'column-reverse', md: 'row' }}>
               <Text as={Link} fontSize="4xl" fontWeight="semibold" lineHeight="tight" to={project.fields.slug}>
@@ -63,7 +63,7 @@ const PekPreview: React.FC<PekProps> = ({ project }) => {
               </HStack>
               <HStack flex={1} justifyContent="flex-end">
                 {project.frontmatter.techs.split(',').map((tech) => (
-                  <Tag>{tech.trim()}</Tag>
+                  <Tag key={tech}>{tech.trim()}</Tag>
                 ))}
               </HStack>
             </Flex>

@@ -1,9 +1,10 @@
-import { Box, Flex, Heading, HStack, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, Button, Flex, Heading, HStack, Text, useColorModeValue } from '@chakra-ui/react'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image'
 import * as React from 'react'
 import { FaClock } from 'react-icons/fa'
 import BlogAuthor from '../components/blog-components/BlogAuthor'
+import ScrollButton from '../components/blog-components/ScrollButton'
 import Container from '../components/Container'
 import Header from '../components/Header'
 import Post from '../components/Post'
@@ -81,8 +82,17 @@ const PostTemplate: React.FC<PostTemplateProps> = ({ data }) => {
         <Container>
           {/* eslint-disable-next-line react/no-danger */}
           <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+          <Box textAlign="right" mt={10} onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            })
+          }}>
+            <Button colorScheme="orange">Vissza a tetejére</Button>
+          </Box>
         </Container>
       </Post>
+      <ScrollButton />
     </IndexLayout>
   )
 }
