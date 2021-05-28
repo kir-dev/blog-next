@@ -37,7 +37,7 @@ const BlogAuthor: React.FC<BlogAuthorProps> = ({ date, name, hasLongDate }) => {
         </HStack>
       ) : (
         <Box>
-          <Text as={Link} fontWeight="medium" fontSize="md" to={`https://pek.k8s.sch.bme.hu/profiles/${name}/`}>
+          <Text as={Link} fontWeight="medium" fontSize="md" to={`${pekUrl}/profiles/${name}/`}>
             {name}
           </Text>
           <Text fontWeight="light" fontSize="sm" fontStyle="italic" textColor={useColorModeValue('gray.600', 'gray.400')}>
