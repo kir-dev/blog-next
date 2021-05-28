@@ -136,14 +136,14 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
           </Box>
 
           <Box pt={16} zIndex={1}>
-            <Heading pb={4}>Projektünk: PéK</Heading>
+            <Heading pb={4}>Fő projektünk: PéK</Heading>
             <Text fontFamily="mono" mb={4} textAlign="justify">
               Fő feladatunk a{' '}
               <Text as={Link} textColor="orange.500" to="https://pek.sch.bme.hu/">
-                Profilok és Körök
+                Profil és Körök
               </Text>{' '}
               folyamatos fejlesztése és karbantartása. Ez a rendszer már több generációt is megélt az aktív körtagoknak köszönhetően.
-              Jelenleg ezen az alkalmazáson keresztül folyik a kar közösségi pontozása. A felhasználók száma eléri a 7000-et és több mint 10
+              Jelenleg ezen az alkalmazáson keresztül folyik a kar közösségi pontozása. A felhasználók száma eléri a 30000-et és közel 20
               évre visszamenőleg tartalmaz információkat a kar közösségi életéről.
             </Text>
             <PekPreview project={pek} />
