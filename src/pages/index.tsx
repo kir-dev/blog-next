@@ -77,27 +77,48 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
           }}
         >
           <Container>
-            <Box py="8" zIndex={1} px={{ base: 0, lg: 8 }}>
+            <Box filter="none" py={10} zIndex={1} px={{ base: 0, lg: 8 }}>
               <Flex direction={{ base: 'column', lg: 'row' }}>
                 <Terminal />
                 <Flex flex={1} direction={{ base: 'row', lg: 'column' }} justifyContent={{ base: 'center', sm: 'left' }}>
-                  <Box textAlign={{ base: 'center', lg: 'right' }} mt={[0, 0, '0rem', '2rem']}>
-                    <Button color="white" bg="orange.500" _hover={{ bg: 'orange.600' }} as="a" href="#" my={6} px={4}>
-                      Csatlakozz!
-                    </Button>
-                    <HStack direction="row" alignItems={{ base: 'baseline', md: 'end' }} mb={6} spacing={6}>
+                  <Flex
+                    direction={{ base: 'column-reverse', lg: 'column' }}
+                    textAlign={{ base: 'center', lg: 'right' }}
+                    mt={[0, 0, '0rem', '2rem']}
+                  >
+                    <Box my={4}>
+                      <Button color="white" bg="orange.500" _hover={{ bg: 'orange.600' }} as={Link} px={6} to="/contact">
+                        Csatlakozz!
+                      </Button>
+                    </Box>
+                    <HStack direction="row" alignItems={{ base: 'baseline', md: 'end' }} my={6} mx={{ base: 4, lg: 0 }} spacing={6}>
                       {useBreakpointValue({ lg: <Spacer /> })}
-                      <Box as={Link} _hover={{ color: 'orange.500' }} to="https://github.com/kir-dev">
+                      <Box
+                        as={Link}
+                        color={useColorModeValue('black', 'grey.200')}
+                        _hover={{ color: 'orange.500' }}
+                        to="https://github.com/kir-dev"
+                      >
                         <FaGithub size={socialSize} />
                       </Box>
-                      <Box as={Link} _hover={{ color: 'orange.500' }} to="https://youtube.com/channel/UCkpMTj9qST_7RDt2YL4RUEw">
+                      <Box
+                        as={Link}
+                        color={useColorModeValue('black', 'grey.200')}
+                        _hover={{ color: 'orange.500' }}
+                        to="https://youtube.com/channel/UCkpMTj9qST_7RDt2YL4RUEw"
+                      >
                         <FaYoutube size={socialSize} />
                       </Box>
-                      <Box as={Link} _hover={{ color: 'orange.500' }} to="https://facebook.com/kirdevteam">
+                      <Box
+                        as={Link}
+                        color={useColorModeValue('black', 'grey.200')}
+                        _hover={{ color: 'orange.500' }}
+                        to="https://facebook.com/kirdevteam"
+                      >
                         <FaFacebook size={socialSize} />
                       </Box>
                     </HStack>
-                  </Box>
+                  </Flex>
                 </Flex>
               </Flex>
               <Logo
