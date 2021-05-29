@@ -101,7 +101,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
                         as={Link}
                         color={useColorModeValue('black', 'grey.200')}
                         _hover={{ color: 'orange.500' }}
-                        to="https://github.com/kir-dev"
+                        to={process.env.GITHUB_ORG_URL ?? ''}
                       >
                         <FaGithub size={socialSize} />
                       </Box>
@@ -109,7 +109,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
                         as={Link}
                         color={useColorModeValue('black', 'grey.200')}
                         _hover={{ color: 'orange.500' }}
-                        to="https://youtube.com/channel/UCkpMTj9qST_7RDt2YL4RUEw"
+                        to={process.env.YOUTUBE_CHANNEL_URL ?? ''}
                       >
                         <FaYoutube size={socialSize} />
                       </Box>
@@ -117,7 +117,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
                         as={Link}
                         color={useColorModeValue('black', 'grey.200')}
                         _hover={{ color: 'orange.500' }}
-                        to="https://facebook.com/kirdevteam"
+                        to={process.env.FACEBOOK_PAGE_URL ?? ''}
                       >
                         <FaFacebook size={socialSize} />
                       </Box>
@@ -164,7 +164,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
             <Heading pb={4}>Fő projektünk: PéK</Heading>
             <Text fontFamily="mono" mb={4} textAlign="justify">
               Fő feladatunk a{' '}
-              <Text as={Link} textColor="orange.500" to={PEK_URL}>
+              <Text as={Link} textColor="orange.500" to={process.env.PEK_URL ?? ''}>
                 Profilok és Körök
               </Text>{' '}
               folyamatos fejlesztése és karbantartása. Ez a rendszer már több generációt is megélt az aktív körtagoknak köszönhetően.

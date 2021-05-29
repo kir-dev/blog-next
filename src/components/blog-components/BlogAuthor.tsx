@@ -1,7 +1,6 @@
 import { Box, HStack, Image, Text, useColorModeValue } from '@chakra-ui/react'
 import { Link } from 'gatsby'
 import React from 'react'
-import { PEK_URL } from '../../utils/constants'
 
 interface BlogAuthorProps {
   date: Date
@@ -11,13 +10,13 @@ interface BlogAuthorProps {
 
 const BlogAuthor: React.FC<BlogAuthorProps> = ({ date, name, hasLongDate }) => (
   <HStack marginTop={2} spacing={2} display="flex" alignItems="center">
-    <Link to={`${PEK_URL}/profiles/${name}/`}>
-      <Image borderRadius="full" boxSize="2.25rem" src={`${PEK_URL}/photos/${name}/`} fallbackSrc="../../favicon.png" />
+    <Link to={`${process.env.PEK_URL}/profiles/${name}`}>
+      <Image borderRadius="full" boxSize="2.25rem" src={`${process.env.PEK_URL}/photos/${name}`} fallbackSrc="../../favicon.png" />
     </Link>
 
     {hasLongDate ? (
       <HStack>
-        <Text as={Link} fontWeight="medium" fontSize="md" to={`${PEK_URL}/profiles/${name}/`}>
+        <Text as={Link} fontWeight="medium" fontSize="md" to={`${process.env.PEK_URL}/profiles/${name}`}>
           {name}
         </Text>
         <Text>—</Text>
@@ -34,7 +33,7 @@ const BlogAuthor: React.FC<BlogAuthorProps> = ({ date, name, hasLongDate }) => (
       </HStack>
     ) : (
       <Box>
-        <Text as={Link} fontWeight="medium" fontSize="md" to={`${PEK_URL}/profiles/${name}/`}>
+        <Text as={Link} fontWeight="medium" fontSize="md" to={`${process.env.PEK_URL}/${name}`}>
           {name}
         </Text>
         <Text fontWeight="light" fontSize="sm" fontStyle="italic" textColor={useColorModeValue('gray.600', 'gray.400')}>
