@@ -9,48 +9,44 @@ interface BlogAuthorProps {
   hasLongDate?: boolean
 }
 
-const BlogAuthor: React.FC<BlogAuthorProps> = ({ date, name, hasLongDate }) => {
-  const pekUrl = PEK_URL
+const BlogAuthor: React.FC<BlogAuthorProps> = ({ date, name, hasLongDate }) => (
+  <HStack marginTop={2} spacing={2} display="flex" alignItems="center">
+    <Link to={`${PEK_URL}/profiles/${name}/`}>
+      <Image borderRadius="full" boxSize="2.25rem" src={`${PEK_URL}/photos/${name}/`} fallbackSrc="../../favicon.png" />
+    </Link>
 
-  return (
-    <HStack marginTop={2} spacing={2} display="flex" alignItems="center">
-      <Link to={`${pekUrl}/profiles/${name}/`}>
-        <Image borderRadius="full" boxSize="2.25rem" src={`${pekUrl}/photos/${name}/`} fallbackSrc="../../favicon.png" />
-      </Link>
-
-      {hasLongDate ? (
-        <HStack>
-          <Text as={Link} fontWeight="medium" fontSize="md" to={`${pekUrl}/profiles/${name}/`}>
-            {name}
-          </Text>
-          <Text>—</Text>
-          <Text fontWeight="light" fontSize="md" fontStyle="italic" textColor={useColorModeValue('gray.600', 'gray.400')}>
-            {date.toLocaleTimeString('hu-HU', {
-              weekday: 'long',
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric',
-              hour: '2-digit',
-              minute: '2-digit'
-            })}
-          </Text>
-        </HStack>
-      ) : (
-        <Box>
-          <Text as={Link} fontWeight="medium" fontSize="md" to={`${pekUrl}/profiles/${name}/`}>
-            {name}
-          </Text>
-          <Text fontWeight="light" fontSize="sm" fontStyle="italic" textColor={useColorModeValue('gray.600', 'gray.400')}>
-            {date.toLocaleDateString('hu-HU', {
-              year: 'numeric',
-              month: 'numeric',
-              day: 'numeric'
-            })}
-          </Text>
-        </Box>
-      )}
-    </HStack>
-  )
-}
+    {hasLongDate ? (
+      <HStack>
+        <Text as={Link} fontWeight="medium" fontSize="md" to={`${PEK_URL}/profiles/${name}/`}>
+          {name}
+        </Text>
+        <Text>—</Text>
+        <Text fontWeight="light" fontSize="md" fontStyle="italic" textColor={useColorModeValue('gray.600', 'gray.400')}>
+          {date.toLocaleTimeString('hu-HU', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+          })}
+        </Text>
+      </HStack>
+    ) : (
+      <Box>
+        <Text as={Link} fontWeight="medium" fontSize="md" to={`${PEK_URL}/profiles/${name}/`}>
+          {name}
+        </Text>
+        <Text fontWeight="light" fontSize="sm" fontStyle="italic" textColor={useColorModeValue('gray.600', 'gray.400')}>
+          {date.toLocaleDateString('hu-HU', {
+            year: 'numeric',
+            month: 'numeric',
+            day: 'numeric'
+          })}
+        </Text>
+      </Box>
+    )}
+  </HStack>
+)
 
 export default BlogAuthor
