@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import { Box } from '@chakra-ui/react'
 import * as React from 'react'
 

@@ -1,5 +1,6 @@
 import { Box, Flex, Link, useColorModeValue } from '@chakra-ui/react'
 import React, { useState } from 'react'
+import { RICKROLL_URL } from '../../utils/configurations'
 import { Frame, Keyframes } from './react-keyframes'
 
 const sleepDuration = 500
@@ -147,7 +148,7 @@ const Terminal: React.FC = () => {
         >
           <Box marginLeft="1" marginTop="auto" w={['3rem', '4rem', '4rem', '6rem']}>
             <Link
-              href="https://bit.ly/3uOVmYt"
+              href={RICKROLL_URL}
               target="_blank"
               w={['0.5rem', '0.75rem', '0.75rem', '1rem']}
               h={['0.5rem', '0.75rem', '0.75rem', '1rem']}

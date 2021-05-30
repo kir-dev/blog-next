@@ -19,6 +19,8 @@ Ha az előkövetlemények megvannak, akkor
 
 A böngésződben pedig a `localhost:8000`-en tudod megnézni a blogot. A GraphiQL oldal a `localhost:8000/___graphql` címen lesz elérhető.
 
+A `.env.example` fájlt másold le, és nevezd át `.env.development`-re. Deploymentnél fontos a kiválasztott felhő platformon a környezeti változókat beállítani.
+
 ## Készítenél posztot?
 
 ---

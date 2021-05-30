@@ -11,7 +11,7 @@ import PekPreview from '../components/indexpage-components/PekPreview'
 import Page from '../components/Page'
 import Terminal from '../components/terminal/Terminal'
 import IndexLayout from '../layouts'
-import { PEK_URL } from '../utils/constants'
+import { FACEBOOK_PAGE_URL, GITHUB_ORG_URL, PEK_URL, YOUTUBE_CHANNEL_URL } from '../utils/configurations'
 
 interface IndexPageProps {
   data: {
@@ -97,28 +97,18 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
                     </Box>
                     <HStack direction="row" alignItems={{ base: 'baseline', md: 'end' }} my={6} mx={{ base: 4, lg: 0 }} spacing={6}>
                       {useBreakpointValue({ lg: <Spacer /> })}
-                      <Box
-                        as={Link}
-                        color={useColorModeValue('black', 'grey.200')}
-                        _hover={{ color: 'orange.500' }}
-                        to="https://github.com/kir-dev"
-                      >
+                      <Box as={Link} color={useColorModeValue('black', 'grey.200')} _hover={{ color: 'orange.500' }} to={GITHUB_ORG_URL}>
                         <FaGithub size={socialSize} />
                       </Box>
                       <Box
                         as={Link}
                         color={useColorModeValue('black', 'grey.200')}
                         _hover={{ color: 'orange.500' }}
-                        to="https://youtube.com/channel/UCkpMTj9qST_7RDt2YL4RUEw"
+                        to={YOUTUBE_CHANNEL_URL}
                       >
                         <FaYoutube size={socialSize} />
                       </Box>
-                      <Box
-                        as={Link}
-                        color={useColorModeValue('black', 'grey.200')}
-                        _hover={{ color: 'orange.500' }}
-                        to="https://facebook.com/kirdevteam"
-                      >
+                      <Box as={Link} color={useColorModeValue('black', 'grey.200')} _hover={{ color: 'orange.500' }} to={FACEBOOK_PAGE_URL}>
                         <FaFacebook size={socialSize} />
                       </Box>
                     </HStack>
@@ -165,7 +155,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
             <Text fontFamily="mono" mb={4} textAlign="justify">
               Fő feladatunk a{' '}
               <Text as={Link} textColor="orange.500" to={PEK_URL}>
-                Profilok és Körök
+                Profil és Körök
               </Text>{' '}
               folyamatos fejlesztése és karbantartása. Ez a rendszer már több generációt is megélt az aktív körtagoknak köszönhetően.
               Jelenleg ezen az alkalmazáson keresztül folyik a kar közösségi pontozása. A felhasználók száma eléri a 30000-et és közel 20

@@ -2,6 +2,7 @@ import { Box, Container, HStack, Stack, Text, useColorModeValue } from '@chakra-
 import React from 'react'
 import { FaAt, FaFacebook, FaGithub, FaYoutube } from 'react-icons/fa'
 import Logo from '../../assets/images/kirdev.svg'
+import { FACEBOOK_PAGE_URL, GITHUB_ORG_URL, PUBLIC_EMAIL, YOUTUBE_CHANNEL_URL } from '../../utils/configurations'
 import SocialButton from './SocialButton'
 
 const Footer: React.FC = () => (
@@ -23,16 +24,16 @@ const Footer: React.FC = () => (
         <Box>
           <FaAt style={{ display: 'inline' }} />
           &nbsp;
-          <span>kir-dev [kukac] sch.bme.hu</span>
+          <span>{PUBLIC_EMAIL}</span>
         </Box>
         <Stack direction="row" spacing={3}>
-          <SocialButton label="GitHub" href="https://github.com/kir-dev" size={12}>
+          <SocialButton label="GitHub" href={GITHUB_ORG_URL} size={12}>
             <FaGithub />
           </SocialButton>
-          <SocialButton label="YouTube" href="https://youtube.com/channel/UCkpMTj9qST_7RDt2YL4RUEw" size={12}>
+          <SocialButton label="YouTube" href={YOUTUBE_CHANNEL_URL} size={12}>
             <FaYoutube />
           </SocialButton>
-          <SocialButton label="Facebook" href="https://facebook.com/kirdevteam" size={12}>
+          <SocialButton label="Facebook" href={FACEBOOK_PAGE_URL} size={12}>
             <FaFacebook />
           </SocialButton>
         </Stack>
