@@ -26,14 +26,18 @@ export interface BlogPreviewProps {
 }
 
 const BlogPreview: React.FC<BlogPreviewProps> = ({ post, isBig }) => {
-  const result = getImage(post.frontmatter.featuredImage)
+  const featuredImage = getImage(post.frontmatter.featuredImage)
 
   return (
     <Flex mt={2} direction={{ base: 'column', sm: isBig ? 'row' : 'column', md: 'row' }} justifyContent="space-between">
       <Flex flex={1} position="relative" mr={{ base: 0, md: 2 }} pb={isBig ? 2 : { base: 2, md: 0 }}>
         <Box w="80%" zIndex={2}>
           <Link to={post.fields.slug}>
-            {result ? <GatsbyImage image={result} alt="Blog preview" objectFit="contain" /> : <Image src="../../post-default.jpg" />}
+            {featuredImage ? (
+              <GatsbyImage image={featuredImage} alt="Blog preview" objectFit="contain" />
+            ) : (
+              <Image src="../../post-default.jpg" />
+            )}
           </Link>
         </Box>
         <Box zIndex={1} w="100%" h="100%" position="absolute" ml={1} mt={1}>

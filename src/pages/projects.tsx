@@ -19,7 +19,10 @@ export interface ProjectsProps {
           title: string
           lead: string
           github: string
-          status: string
+          status: {
+            label: string
+            color: string
+          }
           techs: string
           featuredImage: ImageDataLike
         }
@@ -63,7 +66,10 @@ export const query = graphql`
           title
           lead
           github
-          status
+          status {
+            label
+            color
+          }
           techs
           featuredImage {
             childImageSharp {

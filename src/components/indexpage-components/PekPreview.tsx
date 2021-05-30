@@ -16,23 +16,29 @@ export interface PekProps {
       lead: string
       github: string
       featuredImage: ImageDataLike
-      status: string
+      status: {
+        label: string
+        color: string
+      }
       techs: string
     }
   }
 }
 
 const PekPreview: React.FC<PekProps> = ({ project }) => {
-  const result = getImage(project.frontmatter.featuredImage)
+  const featuredImage = getImage(project.frontmatter.featuredImage)
   const statusIcon = getIcon(project.frontmatter.status)
-  const statusText = project.frontmatter.status.substring(0, project.frontmatter.status.lastIndexOf(' '))
 
   return (
     <Flex mt={2} direction={{ base: 'column', sm: 'row' }} justifyContent="space-between">
       <Flex flex={1} position="relative" mr={{ base: 0, md: 2 }} pb={2}>
         <Box w="80%" zIndex={2}>
           <Link to={project.fields.slug}>
-            {result ? <GatsbyImage image={result} alt="Project preview" objectFit="contain" /> : <Image src="../../post-default.jpg" />}
+            {featuredImage ? (
+              <GatsbyImage image={featuredImage} alt="Project preview" objectFit="contain" />
+            ) : (
+              <Image src="../../post-default.jpg" />
+            )}
           </Link>
         </Box>
         <Box zIndex={1} w="100%" h="100%" position="absolute" ml={1} mt={1}>
@@ -47,7 +53,7 @@ const PekPreview: React.FC<PekProps> = ({ project }) => {
                 {project.frontmatter.title}
               </Text>
               <HStack justifyContent="flex-end" fontSize="xs" color="gray.600">
-                <Text color={useColorModeValue('gray.700', 'gray.400')}>{statusText}</Text>
+                <Text color={useColorModeValue('gray.700', 'gray.400')}>{project.frontmatter.status.label}</Text>
                 {statusIcon}
               </HStack>
             </Flex>

@@ -11,6 +11,7 @@ import PekPreview from '../components/indexpage-components/PekPreview'
 import Page from '../components/Page'
 import Terminal from '../components/terminal/Terminal'
 import IndexLayout from '../layouts'
+import { PEK_URL } from '../utils/constants'
 
 interface IndexPageProps {
   data: {
@@ -42,7 +43,10 @@ interface IndexPageProps {
         lead: string
         github: string
         featuredImage: ImageDataLike
-        status: string
+        status: {
+          label: string
+          color: string
+        }
         techs: string
       }
     }
@@ -137,18 +141,18 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
             <Heading pb={4}>Amivel foglalkozunk</Heading>
             <Grid templateColumns={`repeat(${useBreakpointValue({ base: 1, md: 3 })}, 1fr)`} gap={{ base: 4, md: 10 }}>
               <InfoBox imgSrc="../../laptop.png" title="Webfejlesztés">
-                <Text textAlign="justify">
+                <Text textAlign={{ base: 'left', md: 'center' }}>
                   Webes alkalmazásokat fejlesztünk a kollégiumi közélet különböző területein annak olajozott működése érdekében, a
                   kollégisták igényeit mindig szem előtt tartva.
                 </Text>
               </InfoBox>
               <InfoBox imgSrc="../../mobile.png" title="Mobil alkalmazások">
-                <Text textAlign="justify">
+                <Text textAlign={{ base: 'left', md: 'center' }}>
                   Mobil alkalmazások fejlesztésére használt technológiákkal kísérletezünk, mint az Ionic vagy a Flutter.
                 </Text>
               </InfoBox>
               <InfoBox imgSrc="../../coffee.png" title="Üzemeltetés">
-                <Text textAlign="justify">
+                <Text textAlign={{ base: 'left', md: 'center' }}>
                   Alkalmazásaink nagy részét mi magunk üzemeltetjük, kipróbálunk mindenféle DevOps technológiákat, pl.: CI/CD, cloud
                   szolgáltatások.
                 </Text>
@@ -160,8 +164,8 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
             <Heading pb={4}>Fő projektünk: PéK</Heading>
             <Text fontFamily="mono" mb={4} textAlign="justify">
               Fő feladatunk a{' '}
-              <Text as={Link} textColor="orange.500" to="https://pek.sch.bme.hu/">
-                Profil és Körök
+              <Text as={Link} textColor="orange.500" to={PEK_URL}>
+                Profilok és Körök
               </Text>{' '}
               folyamatos fejlesztése és karbantartása. Ez a rendszer már több generációt is megélt az aktív körtagoknak köszönhetően.
               Jelenleg ezen az alkalmazáson keresztül folyik a kar közösségi pontozása. A felhasználók száma eléri a 30000-et és közel 20
@@ -223,7 +227,10 @@ export const query = graphql`
         title
         lead
         github
-        status
+        status {
+          label
+          color
+        }
         techs
         featuredImage {
           childImageSharp {

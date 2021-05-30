@@ -16,19 +16,21 @@ interface ProjectForPreview {
       lead: string
       github: string
       featuredImage: ImageDataLike
-      status: string
+      status: {
+        label: string
+        color: string
+      }
       techs: string
     }
   }
 }
 
-export function getIcon(status: string): JSX.Element {
-  const words: string[] = status.split(' ')
-  let color: string = words.pop() ?? 'orange'
+export function getIcon(status: { label: string; color: string }): JSX.Element {
+  let { color } = status
   color = color.trim()
   color = color === 'grey' ? 'gray' : color
   const tone: string = color === 'gray' ? useColorModeValue('.600', '.400') : '.500'
-  switch (words[0]) {
+  switch (status.label) {
     case 'Archivált':
       return <MoonIcon color={color + tone} />
     case 'Kész':
@@ -41,17 +43,16 @@ export function getIcon(status: string): JSX.Element {
 }
 
 const ProjectPreview: React.FC<ProjectForPreview> = ({ project }) => {
-  const result = getImage(project.frontmatter.featuredImage)
+  const featuredImage = getImage(project.frontmatter.featuredImage)
   const statusIcon = getIcon(project.frontmatter.status)
-  const statusText = project.frontmatter.status.substring(0, project.frontmatter.status.lastIndexOf(' '))
   const githubUrlEnd = project.frontmatter.github.substring(project.frontmatter.github.lastIndexOf('/') + 1)
 
   return (
     <Flex direction="column" bg={useColorModeValue('white', 'gray.800')} borderWidth="1px" rounded="lg" shadow="lg" position="relative">
       <Box as={Link} maxH="10rem" to={project.fields.slug} cursor="pointer">
-        {result ? (
+        {featuredImage ? (
           <GatsbyImage
-            image={result}
+            image={featuredImage}
             alt="Project preview"
             objectFit="cover"
             imgStyle={{ borderRadius: '0.3rem 0.3rem 0 0', maxHeight: '10rem', width: '100%' }}
@@ -68,7 +69,7 @@ const ProjectPreview: React.FC<ProjectForPreview> = ({ project }) => {
               {project.frontmatter.title}
             </Text>
             <HStack justifyContent="flex-end" fontSize="xs" color="gray.600">
-              <Text color={useColorModeValue('gray.700', 'gray.400')}>{statusText}</Text>
+              <Text color={useColorModeValue('gray.700', 'gray.400')}>{project.frontmatter.status.label}</Text>
               {statusIcon}
             </HStack>
           </Flex>
