@@ -155,7 +155,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
             <Text fontFamily="mono" mb={4} textAlign="justify">
               Fő feladatunk a{' '}
               <Text as={Link} textColor="orange.500" to={PEK_URL}>
-                Profilok és Körök
+                Profil és Körök
               </Text>{' '}
               folyamatos fejlesztése és karbantartása. Ez a rendszer már több generációt is megélt az aktív körtagoknak köszönhetően.
               Jelenleg ezen az alkalmazáson keresztül folyik a kar közösségi pontozása. A felhasználók száma eléri a 30000-et és közel 20
