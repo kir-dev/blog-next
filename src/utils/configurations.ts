@@ -1,0 +1,6 @@
+export const PEK_URL = process.env.PEK_URL || ''
+export const GITHUB_ORG_URL = process.env.GITHUB_ORG_URL || ''
+export const YOUTUBE_CHANNEL_URL = process.env.YOUTUBE_CHANNEL_URL || ''
+export const FACEBOOK_PAGE_URL = process.env.FACEBOOK_PAGE_URL || ''
+export const RICKROLL_URL = process.env.RICKROLL_URL || ''
+export const PUBLIC_EMAIL = process.env.PUBLIC_EMAIL || ''
