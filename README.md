@@ -6,8 +6,6 @@ A projekt jelenleg fejlesztési szakaszban van, az aktuális állapot [Netlify-o
 
 ## Telepítés
 
----
-
 Legyen telepítve [node.js](https://nodejs.org/en/) és [yarn](https://yarnpkg.com/lang/en/docs/install) a gépeden. A gatsby-t szükséges globálisan feltelepíteni, ez a `yarn global add gatsby-cli` paranccsal tehető meg.
 
 Ha az előkövetlemények megvannak, akkor
@@ -22,8 +20,6 @@ A böngésződben pedig a `localhost:8000`-en tudod megnézni a blogot. A Graphi
 A `.env.example` fájlt másold le, és nevezd át `.env.development`-re. Deploymentnél fontos a kiválasztott felhő platformon a környezeti változókat beállítani.
 
 ## Készítenél posztot?
-
----
 
 1. Használd a `create-post.sh` shell scriptet (az `author` fieldnél érdemes a PéK-en is használt felhasználóneved megadni):
 
@@ -42,8 +38,6 @@ Nézz meg néhány korábbi blogposztot, hogy is tudod kihasználni a markdown a
 
 ## Készítenél oldalt egy projektnek?
 
----
-
 Igazából kövesd a fentieket, amit a posztkészítésnél kell, annyi, hogy a `create-project.sh` szkriptet használd.
 
 ```bash
@@ -61,9 +55,28 @@ Szerkesztéskor a projekt markdown fájljában:
   - Extra: `Archivált <color>` megadása esetén hold ikon jelenik meg a státusz feliratban, `Kész <color>` esetén egy pipa, `Áll <color>` esetén pedig egy felkiáltójeles kör alakú ikon.
 - A `techs` fieldben megadhatod vesszővel elválasztva a projekt főbb techjeit (lehetőleg maradj max 3-nál). Pl.: `techs: TypeScript, Node.js`
 
-## License
+## Hozzáadnál új tagot a csapathoz?
 
----
+1. Használd a `create-member.sh` shell scriptet (A `''` aposztrófok fontosak lehetnek többszavas paramétereknél):
+
+```bash
+./create-member.sh '<pekUsername>' '<realName>'
+```
+
+Példa: `./create-member.sh 'mypekusername' 'Gipsz Jakab'`
+
+Szerkeszteni tudod a hozzárendelt tulajdonságokat a létrejött markdown fájlban:
+
+- `pekUsername`: PéK-en is használt felhasználóneved
+- `realName`: valódi neved
+- `position`: jelenlegi beosztottsága a körnél (újonc, tag, PR felelős stb.)
+- `joinDate`: amióta a tag aktív a körnél
+- `interests`: általános kulcsszavak arra, mi érdekli a tagot a webfejlesztéssel kapcsolatosan, vesszővel kell elválasztani a kifejezéseket
+- `featuredImage`: ha nem a PéK-en is használt képét szeretné használni, akkor a megadható a repóból egy kép url-je
+- `active`: megadható, hogy a tag jelenleg aktív tagja-e a csapatnak
+- Minden további infót, amit szeretnél megosztani a világgal, írd meg a markdown fájl további részében.
+
+## License
 
 The following directories and their contents are Copyright Kir-Dev.
 You may not reuse anything therein without Kir-Dev's permission:
