@@ -1,7 +1,8 @@
-import { Box, Heading } from '@chakra-ui/react'
-import { graphql, Link } from 'gatsby'
+import { Heading } from '@chakra-ui/react'
+import { graphql } from 'gatsby'
 import { ImageDataLike } from 'gatsby-plugin-image'
 import * as React from 'react'
+import MemberCard from '../components/about-components/MemberCard'
 import Container from '../components/Container'
 import Header from '../components/Header'
 import Page from '../components/Page'
@@ -38,9 +39,7 @@ const AboutPage: React.FC<MembersProps> = ({ data }) => (
       </Header>
       <Container>
         {data.allMarkdownRemark.nodes.map((member) => (
-          <Box key={member.fields.slug}>
-            <Link to={member.fields.slug}>{member.frontmatter.realName}</Link>
-          </Box>
+          <MemberCard member={member} key={member.fields.slug} />
         ))}
       </Container>
     </Page>

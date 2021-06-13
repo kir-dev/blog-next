@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react'
+import { Box, Heading } from '@chakra-ui/react'
 import { graphql } from 'gatsby'
 import { ImageDataLike } from 'gatsby-plugin-image'
 import * as React from 'react'
@@ -33,7 +33,9 @@ const MemberTemplate: React.FC<MemberTemplateProps> = ({ data }) => (
   <IndexLayout>
     <Box>
       <Container>
-        <h1>{data.markdownRemark.frontmatter.realName}</h1>
+        <Heading as="h1" fontSize="3xl">
+          {data.markdownRemark.frontmatter.realName}
+        </Heading>
         {/* eslint-disable-next-line react/no-danger */}
         <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
       </Container>
