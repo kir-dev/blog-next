@@ -5,6 +5,23 @@ import * as React from 'react'
 import Container from '../components/Container'
 import IndexLayout from '../layouts'
 
+export interface MemberProps {
+  member: {
+    fields: {
+      slug: string
+    }
+    frontmatter: {
+      pekUsername: string
+      realName: string
+      position: string
+      interests: string
+      joinDate: string
+      featuredImage: ImageDataLike
+      active: boolean
+    }
+  }
+}
+
 interface MemberTemplateProps {
   data: {
     site: {
@@ -16,15 +33,7 @@ interface MemberTemplateProps {
     markdownRemark: {
       html: string
       excerpt: string
-      frontmatter: {
-        pekUsername: string
-        realName: string
-        position: string
-        interests: string
-        joinDate: string
-        featuredImage: ImageDataLike
-        active: boolean
-      }
+      frontmatter: MemberProps['member']['frontmatter']
     }
   }
 }
