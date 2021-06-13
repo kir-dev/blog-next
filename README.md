@@ -70,6 +70,7 @@ Szerkeszteni tudod a hozzárendelt tulajdonságokat a létrejött markdown fájl
 - `pekUsername`: PéK-en is használt felhasználóneved
 - `realName`: valódi neved
 - `position`: jelenlegi beosztottsága a körnél (újonc, tag, PR felelős stb.)
+- `email`: e-mail cím, amelyen elérhető
 - `joinDate`: amióta a tag aktív a körnél
 - `interests`: általános kulcsszavak arra, mi érdekli a tagot a webfejlesztéssel kapcsolatosan, vesszővel kell elválasztani a kifejezéseket
 - `featuredImage`: ha nem a PéK-en is használt képét szeretné használni, akkor a megadható a repóból egy kép url-je

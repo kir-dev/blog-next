@@ -2,6 +2,7 @@
 layout: member
 pekUsername: triszt4n
 realName: 'Piller Trisztán'
+email: piller.trisztan@simonyi.bme.hu
 position: tag
 joinDate: 2021-06
 interests: 'NodeJS, Rails, Kotlin, React'

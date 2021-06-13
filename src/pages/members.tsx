@@ -57,6 +57,7 @@ export const query = graphql`
           pekUsername
           realName
           position
+          email
           joinDate
           interests
           featuredImage {
