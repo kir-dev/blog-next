@@ -25,24 +25,18 @@ export const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'Rólunk',
-    href: '/about',
-    children: [
-      {
-        label: 'Csapatunk',
-        href: '/about'
-      },
-      {
-        label: 'Projektjeink',
-        href: '/projects'
-      }
-    ]
+    href: '/about'
+  },
+  {
+    label: 'Csapatunk',
+    href: '/members'
+  },
+  {
+    label: 'Projektjeink',
+    href: '/projects'
   },
   {
     label: 'Tanfolyam',
     href: '/courses'
-  },
-  {
-    label: 'Elérhetőség',
-    href: '/contact'
   }
 ]
