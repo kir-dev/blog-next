@@ -77,6 +77,8 @@ Szerkeszteni tudod a hozzárendelt tulajdonságokat a létrejött markdown fájl
 - `active`: megadható, hogy a tag jelenleg aktív tagja-e a csapatnak
 - Minden további infót, amit szeretnél megosztani a világgal, írd meg a markdown fájl további részében.
 
+**Fontos:** ha képet is teszel a repóba magadról, akkor készíts egy mappát a pekusername-eddel a `content/images/avatars/<pekusername>` elérési úton, és oda helyezd a képeket.
+
 ## License
 
 The following directories and their contents are Copyright Kir-Dev.
