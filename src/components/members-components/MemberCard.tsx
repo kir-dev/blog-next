@@ -17,12 +17,13 @@ const MemberCard: React.FC<MemberProps> = ({ member }) => {
       to={member.fields.slug}
       pos="relative"
       h="12rem"
+      w="full"
       bgGradient="linear(to-t, black, 20%, gray.900)"
       onMouseEnter={onOverlay}
       onMouseLeave={outOfOverlay}
     >
       {avatar ? (
-        <GatsbyImage image={avatar} alt="avatar" style={{ width: '100%', height: '12rem' }} objectFit="cover" />
+        <GatsbyImage image={avatar} alt="avatar" style={{ width: '100%', height: '12rem' }} objectFit="contain" />
       ) : (
         <Flex h="12rem" alignItems="center" textAlign="center">
           <Text color="gray.100" flex={1} fontSize="2xl">

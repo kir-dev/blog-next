@@ -1,4 +1,4 @@
-import { Grid, Heading, useBreakpointValue } from '@chakra-ui/react'
+import { Flex, Heading, useBreakpointValue } from '@chakra-ui/react'
 import { graphql } from 'gatsby'
 import * as React from 'react'
 import Container from '../components/Container'
@@ -32,11 +32,17 @@ const MembersPage: React.FC<MembersProps> = ({ data }) => {
           </Container>
         </Header>
         <Container>
-          <Grid templateColumns={`repeat(${useBreakpointValue({ base: 1, sm: 2, md: 3, lg: 4 })}, 1fr)`} gap={2}>
+          <Flex flexWrap="wrap" justifyContent="center">
             {data.allMarkdownRemark.nodes.map((member) => (
-              <MemberCard member={member} key={member.fields.slug} />
+              <Flex
+                py={{ base: 2, sm: 1 }}
+                px={{ base: 0, sm: 1 }}
+                flex={`0 0 ${useBreakpointValue({ base: '100%', sm: '50%', md: '33%', lg: '25%' })}`}
+              >
+                <MemberCard member={member} key={member.fields.slug} />
+              </Flex>
             ))}
-          </Grid>
+          </Flex>
           <MeetingControls />
         </Container>
       </Page>
