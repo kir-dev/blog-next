@@ -3,9 +3,18 @@ import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React, { useState } from 'react'
 import { FaMicrophoneSlash } from 'react-icons/fa'
-import { MemberProps } from '../../templates/member'
+import { MemberProps } from '../../utils/member.props'
 
-const MemberCard: React.FC<MemberProps> = ({ member }) => {
+interface MemberAvatarCardProps {
+  member: {
+    fields: {
+      slug: string
+    }
+    frontmatter: MemberProps
+  }
+}
+
+const MemberAvatarCard: React.FC<MemberAvatarCardProps> = ({ member }) => {
   const [overlayShown, setOverlayShown] = useState(false)
   const avatar = getImage(member.frontmatter.featuredImage)
   const onOverlay = () => setOverlayShown(true)
@@ -60,4 +69,4 @@ const MemberCard: React.FC<MemberProps> = ({ member }) => {
   )
 }
 
-export default MemberCard
+export default MemberAvatarCard

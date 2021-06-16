@@ -6,8 +6,8 @@ email: piller.trisztan@simonyi.bme.hu
 position: tag
 joinDate: 2021-06
 interests: 'NodeJS, Rails, Kotlin, React'
-featuredImage: null
-active: true
+avatar: null
+active: false
 ---
 
 ## Lorem ipsum...

@@ -27,6 +27,6 @@ echo 'position: tag' >> $filepath
 echo 'email: null' >> $filepath
 echo 'joinDate: '$joindate >> $filepath
 echo 'interests: ""' >> $filepath
-echo 'featuredImage: null' >> $filepath
+echo 'avatar: null' >> $filepath
 echo 'active: true' >> $filepath
 echo '---' >> $filepath
