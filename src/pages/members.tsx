@@ -4,10 +4,10 @@ import * as React from 'react'
 import Container from '../components/Container'
 import Header from '../components/Header'
 import MeetingControls from '../components/members-components/MeetingControls'
-import MemberCard from '../components/members-components/MemberCard'
+import MemberAvatarCard from '../components/members-components/MemberAvatarCard'
 import Page from '../components/Page'
 import IndexLayout from '../layouts'
-import { MemberProps } from '../templates/member'
+import { MemberProps } from '../utils/member.props'
 
 export interface MembersProps {
   data: {
@@ -16,7 +16,7 @@ export interface MembersProps {
         fields: {
           slug: string
         }
-        frontmatter: MemberProps['member']['frontmatter']
+        frontmatter: MemberProps
       }[]
     }
   }
@@ -38,8 +38,9 @@ const MembersPage: React.FC<MembersProps> = ({ data }) => {
                 py={{ base: 2, sm: 1 }}
                 px={{ base: 0, sm: 1 }}
                 flex={`0 0 ${useBreakpointValue({ base: '100%', sm: '50%', md: '33%', lg: '25%' })}`}
+                key={member.fields.slug}
               >
-                <MemberCard member={member} key={member.fields.slug} />
+                <MemberAvatarCard member={member} />
               </Flex>
             ))}
           </Flex>
@@ -66,7 +67,7 @@ export const query = graphql`
           email
           joinDate
           interests
-          featuredImage {
+          avatar {
             childImageSharp {
               gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
             }

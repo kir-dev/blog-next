@@ -1,27 +1,10 @@
-import { Box, Heading } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import { graphql } from 'gatsby'
-import { ImageDataLike } from 'gatsby-plugin-image'
 import * as React from 'react'
 import Container from '../components/Container'
+import MemberFullCard from '../components/members-components/MemberFullCard'
 import IndexLayout from '../layouts'
-
-export interface MemberProps {
-  member: {
-    fields: {
-      slug: string
-    }
-    frontmatter: {
-      pekUsername: string
-      realName: string
-      position: string
-      email: string
-      interests: string
-      joinDate: string
-      featuredImage: ImageDataLike
-      active: boolean
-    }
-  }
-}
+import { MemberProps } from '../utils/member.props'
 
 interface MemberTemplateProps {
   data: {
@@ -34,7 +17,7 @@ interface MemberTemplateProps {
     markdownRemark: {
       html: string
       excerpt: string
-      frontmatter: MemberProps['member']['frontmatter']
+      frontmatter: MemberProps
     }
   }
 }
@@ -43,9 +26,7 @@ const MemberTemplate: React.FC<MemberTemplateProps> = ({ data }) => (
   <IndexLayout>
     <Box>
       <Container>
-        <Heading as="h1" fontSize="3xl">
-          {data.markdownRemark.frontmatter.realName}
-        </Heading>
+        <MemberFullCard member={data.markdownRemark.frontmatter} />
         {/* eslint-disable-next-line react/no-danger */}
         <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
       </Container>
@@ -73,7 +54,7 @@ export const query = graphql`
         email
         interests
         joinDate
-        featuredImage {
+        avatar {
           childImageSharp {
             gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
           }
