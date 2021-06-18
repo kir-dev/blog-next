@@ -4,7 +4,7 @@ title: 'Something great!'
 author: triszt4n
 lead: 'This is a lead, also known as excerpt'
 date: '2019-11-30'
-featuredImage: '../images/docker.jpg'
+featuredImage: ../images/posts/docker.jpg
 ---
 
 # Table test

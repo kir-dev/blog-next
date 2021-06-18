@@ -6,7 +6,7 @@ github: https://github.com/kir-dev/vikoverflow
 website: https://vikoverflow.sch.bme.hu
 status: { label: 'Inaktív', color: 'orange' }
 techs: 'NextJS, NodeJS, AWS, SEO'
-featuredImage: ../images/vikoverflow-banner.png
+featuredImage: ../images/projects/vikoverflow-banner.png
 ---
 
 # Header

@@ -1,12 +1,12 @@
 ---
 layout: member
-pekUsername: triszt4n
-realName: 'Piller Trisztán'
-email: piller.trisztan@simonyi.bme.hu
-position: tag
+pekUsername: takacseszter
+realName: 'Takács Eszter'
+email: takacs.eszter@bme.hu
+position: körvezető
 joinDate: 2021-06
 interests: 'NodeJS, Rails, Kotlin, React'
-avatar: '../images/avatars/triszt4n/default.jpg'
+avatar: ../images/avatars/takacseszter.jpg
 active: true
 ---
 

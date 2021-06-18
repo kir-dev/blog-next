@@ -16,7 +16,7 @@ interface MemberAvatarCardProps {
 
 const MemberAvatarCard: React.FC<MemberAvatarCardProps> = ({ member }) => {
   const [overlayShown, setOverlayShown] = useState(false)
-  const avatar = getImage(member.frontmatter.featuredImage)
+  const avatar = getImage(member.frontmatter.avatar)
   const onOverlay = () => setOverlayShown(true)
   const outOfOverlay = () => setOverlayShown(false)
 

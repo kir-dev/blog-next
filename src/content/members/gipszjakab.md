@@ -1,12 +1,12 @@
 ---
 layout: member
-pekUsername: triszt4n
-realName: 'Piller Trisztán'
-email: piller.trisztan@simonyi.bme.hu
+pekUsername: gipszjakab
+realName: 'Gipsz Jakab'
+email: gipsz.jakab@bme.hu
 position: tag
 joinDate: 2021-06
 interests: 'NodeJS, Rails, Kotlin, React'
-avatar: '../images/avatars/triszt4n/docker.jpg'
+avatar: ../images/avatars/gipszjakab.jpg
 active: true
 ---
 

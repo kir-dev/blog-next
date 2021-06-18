@@ -30,7 +30,7 @@ A `.env.example` fájlt másold le, és nevezd át `.env.development`-re. Deploy
 Példa: `./create-post.sh 'Heroku és társai' 'mypekusername'`
 
 2. Ezután keresd meg a posztod markdown fájlját. Adj egy maximum 2 mondatos ízelítőt a posztról a `lead` field alatt.
-3. A `featuredImage` fieldben megadhatsz egy képet, amelyet használnál a blogbejegyzésed previewjában, ezt a képed be is kell illesszed a `content/images` mappába, és a `default.jpg`-t erre tudod lecserélni. Ha nincs szükséged ilyenre, hagyd benn a defaultot.
+3. A `featuredImage` fieldben megadhatsz egy képet, amelyet használnál a blogbejegyzésed previewjában, ezt a képed be is kell illesszed a `content/images/posts/` mappába. Ha nincs szükséged ilyenre, hagyd benn a defaultot.
 4. Írd meg a posztot markdownban, jelenleg képeket csak külső forrásból tudsz berakni a posztjaidba (használd pl.: az Imgur-t).
 5. érj review-t körtársaidtól egy pull requesten keresztül.
 
@@ -77,7 +77,7 @@ Szerkeszteni tudod a hozzárendelt tulajdonságokat a létrejött markdown fájl
 - `active`: megadható, hogy a tag jelenleg aktív tagja-e a csapatnak
 - Minden további infót, amit szeretnél megosztani a világgal, írd meg a markdown fájl további részében.
 
-**Fontos:** ha képet is teszel a repóba magadról, akkor készíts egy mappát a pekusername-eddel a `content/images/avatars/<pekusername>` elérési úton, és oda helyezd a képeket.
+**Fontos:** ha képet is teszel a repóba magadról, akkor tedd be a képet pekusername-eddel elnevezve a `content/images/avatars/` könyvtárba.
 
 ## License
 

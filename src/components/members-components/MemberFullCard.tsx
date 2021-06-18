@@ -1,4 +1,4 @@
-import { Badge, Box, chakra, Flex, Heading, Image, Link, Text, useColorModeValue } from '@chakra-ui/react'
+import { Badge, Box, chakra, Flex, Heading, Link, Text, useColorModeValue } from '@chakra-ui/react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React, { useState } from 'react'
 import { FaAt, FaBriefcase, FaCalendar, FaHeart, FaUserCircle } from 'react-icons/fa'
@@ -6,35 +6,30 @@ import { PEK_URL } from '../../utils/configurations'
 import { MemberProps } from '../../utils/member.props'
 
 const MemberFullCard: React.FC<{ member: MemberProps }> = ({ member }) => {
-  const originalAvatarImage = getImage(member.featuredImage)
+  const originalAvatarImage = getImage(member.avatar)
   const originalAvatarComponent = originalAvatarImage ? (
     <GatsbyImage image={originalAvatarImage} alt="avatar" style={{ width: '100%', height: '12rem' }} objectFit="contain" />
   ) : null
-
-  const funnyAvatarComponent = <Image src="../../../coffee.png" objectFit="contain" w="full" />
+  // const funnyAvatarComponent = <Image src="../../../coffee.png" objectFit="contain" w="full" />
 
   const [avatarComponent, setAvatarComponent] = useState(originalAvatarComponent)
-
-  const onOverlay = () => {
-    setAvatarComponent(funnyAvatarComponent)
-  }
-
-  const outOfOverlay = () => {
-    setAvatarComponent(originalAvatarComponent)
-  }
+  const onOverlay = () => null // setAvatarComponent(funnyAvatarComponent)
+  const outOfOverlay = () => null // setAvatarComponent(originalAvatarComponent)
 
   return (
     <Flex my={6} direction={{ base: 'column', sm: 'row' }} w="full" overflow="hidden">
-      <Flex flex={1} h="12rem" position="relative" mb={4} onMouseEnter={onOverlay} onMouseLeave={outOfOverlay}>
-        <Box w={{ base: 'inherit', sm: '90%' }} zIndex={2} transition="all 300ms ease">
-          {avatarComponent || <Image src="../../post-default.jpg" />}
-        </Box>
-        <Box zIndex={1} w="100%" h="100%" position="absolute" ml={1} mt={1}>
-          <Box bgGradient="radial(orange.400 1px, transparent 1px)" bgSize={{ base: '1.5rem 1.5rem', sm: '1rem 1rem' }} h="100%" />
-        </Box>
-      </Flex>
+      {avatarComponent && (
+        <Flex flex={1} h="12rem" position="relative" mb={4} mr={6} onMouseEnter={onOverlay} onMouseLeave={outOfOverlay}>
+          <Box w={{ base: 'inherit', sm: '90%' }} zIndex={2} transition="all 300ms ease">
+            {avatarComponent}
+          </Box>
+          <Box zIndex={1} w="100%" h="100%" position="absolute" ml={1} mt={1}>
+            <Box bgGradient="radial(orange.400 1px, transparent 1px)" bgSize={{ base: '1.5rem 1.5rem', sm: '1rem 1rem' }} h="100%" />
+          </Box>
+        </Flex>
+      )}
       <Flex flexWrap="wrap" flex={{ base: 1, sm: 1, md: 2, lg: 3 }}>
-        <Box lineHeight="taller" px={6}>
+        <Box lineHeight="taller">
           <Heading fontSize="2xl" fontWeight="bold">
             {member.realName}
           </Heading>

@@ -1,13 +1,13 @@
 ---
 layout: member
-pekUsername: triszt4n
-realName: 'Piller Trisztán'
-email: piller.trisztan@simonyi.bme.hu
-position: tag
+pekUsername: gepelek
+realName: 'Gép Elek'
+email: gep.elek@bme.hu
+position: volt PR felelős
 joinDate: 2021-06
 interests: 'NodeJS, Rails, Kotlin, React'
-avatar: '../images/avatars/triszt4n/default.jpg'
-active: true
+avatar: null
+active: false
 ---
 
 ## Lorem ipsum...

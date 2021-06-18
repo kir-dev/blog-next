@@ -1,13 +1,13 @@
 ---
 layout: member
 pekUsername: triszt4n
-realName: 'Piller Trisztán'
-email: piller.trisztan@simonyi.bme.hu
-position: tag
+realName: 'Kovács Béla'
+email: kovacs.bela@bme.hu
+position: PR felelős
 joinDate: 2021-06
 interests: 'NodeJS, Rails, Kotlin, React'
 avatar: null
-active: false
+active: true
 ---
 
 ## Lorem ipsum...
