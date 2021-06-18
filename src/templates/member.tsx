@@ -51,7 +51,6 @@ export const query = graphql`
         pekUsername
         realName
         position
-        email
         interests
         joinDate
         avatar {

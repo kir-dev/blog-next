@@ -24,7 +24,6 @@ echo 'layout: member' >> $filepath
 echo 'pekUsername: '$pekusername >> $filepath
 echo 'realName: "'$realname'"' >> $filepath
 echo 'position: tag' >> $filepath
-echo 'email: null' >> $filepath
 echo 'joinDate: '$joindate >> $filepath
 echo 'interests: ""' >> $filepath
 echo 'avatar: ../images/avatars/'$pekusername'.jpg' >> $filepath

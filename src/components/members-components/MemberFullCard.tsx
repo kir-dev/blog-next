@@ -1,7 +1,7 @@
 import { Badge, Box, chakra, Flex, Heading, Link, Text, useColorModeValue } from '@chakra-ui/react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React, { useState } from 'react'
-import { FaAt, FaBriefcase, FaCalendar, FaHeart, FaUserCircle } from 'react-icons/fa'
+import { FaBriefcase, FaCalendar, FaHeart, FaUserCircle } from 'react-icons/fa'
 import { PEK_URL } from '../../utils/configurations'
 import { MemberProps } from '../../utils/member.props'
 
@@ -13,13 +13,13 @@ const MemberFullCard: React.FC<{ member: MemberProps }> = ({ member }) => {
   // const funnyAvatarComponent = <Image src="../../../coffee.png" objectFit="contain" w="full" />
 
   const [avatarComponent, setAvatarComponent] = useState(originalAvatarComponent)
-  const onOverlay = () => null // setAvatarComponent(funnyAvatarComponent)
-  const outOfOverlay = () => null // setAvatarComponent(originalAvatarComponent)
+  const onOverlayEnter = () => null // setAvatarComponent(funnyAvatarComponent)
+  const onOverlayLeave = () => null // setAvatarComponent(originalAvatarComponent)
 
   return (
     <Flex my={6} direction={{ base: 'column', sm: 'row' }} w="full" overflow="hidden">
       {avatarComponent && (
-        <Flex flex={1} h="12rem" position="relative" mb={4} mr={6} onMouseEnter={onOverlay} onMouseLeave={outOfOverlay}>
+        <Flex flex={1} h="12rem" position="relative" mb={4} mr={6} onMouseEnter={onOverlayEnter} onMouseLeave={onOverlayLeave}>
           <Box w={{ base: 'inherit', sm: '90%' }} zIndex={2} transition="all 300ms ease">
             {avatarComponent}
           </Box>
@@ -52,31 +52,27 @@ const MemberFullCard: React.FC<{ member: MemberProps }> = ({ member }) => {
               {member.joinDate} óta a csapatban
             </Text>
           </Flex>
-          <Flex alignItems="center">
-            <FaAt />
-            <Text as={Link} href={`mailto:${member.email}`} pl={3} fontSize="sm">
-              {member.email}
-            </Text>
-          </Flex>
-          <Flex flexWrap="wrap" alignItems="center">
-            <FaHeart />
-            <Text pl={3} fontSize="sm">
-              Érdeklődés:
-            </Text>
-            {member.interests.split(',').map((interest) => (
-              <Badge
-                key={interest}
-                lineHeight="base"
-                px={1}
-                ml={1}
-                color="white"
-                bg={useColorModeValue('blue.400', 'orange.600')}
-                fontWeight="600"
-              >
-                {interest.trim()}
-              </Badge>
-            ))}
-          </Flex>
+          {member.interests && (
+            <Flex flexWrap="wrap" alignItems="center">
+              <FaHeart />
+              <Text pl={3} fontSize="sm">
+                Érdeklődés:
+              </Text>
+              {member.interests.split(',').map((interest) => (
+                <Badge
+                  key={interest}
+                  lineHeight="base"
+                  px={1}
+                  ml={1}
+                  color="white"
+                  bg={useColorModeValue('blue.400', 'orange.600')}
+                  fontWeight="600"
+                >
+                  {interest.trim()}
+                </Badge>
+              ))}
+            </Flex>
+          )}
         </Box>
       </Flex>
     </Flex>

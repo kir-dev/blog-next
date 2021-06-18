@@ -5,7 +5,7 @@ realName: 'Gép Elek'
 email: gep.elek@bme.hu
 position: volt PR felelős
 joinDate: 2021-06
-interests: 'NodeJS, Rails, Kotlin, React'
+interests: ''
 avatar: null
 active: false
 ---

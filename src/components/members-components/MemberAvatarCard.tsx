@@ -1,4 +1,4 @@
-import { Box, chakra, Flex, Text } from '@chakra-ui/react'
+import { Badge, Box, chakra, Flex, Text } from '@chakra-ui/react'
 import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React, { useState } from 'react'
@@ -17,8 +17,8 @@ interface MemberAvatarCardProps {
 const MemberAvatarCard: React.FC<MemberAvatarCardProps> = ({ member }) => {
   const [overlayShown, setOverlayShown] = useState(false)
   const avatar = getImage(member.frontmatter.avatar)
-  const onOverlay = () => setOverlayShown(true)
-  const outOfOverlay = () => setOverlayShown(false)
+  const onOverlayEnter = () => setOverlayShown(true)
+  const onOverlayLeave = () => setOverlayShown(false)
 
   return (
     <Box
@@ -28,8 +28,8 @@ const MemberAvatarCard: React.FC<MemberAvatarCardProps> = ({ member }) => {
       h="12rem"
       w="full"
       bgGradient="linear(to-t, black, 20%, gray.900)"
-      onMouseEnter={onOverlay}
-      onMouseLeave={outOfOverlay}
+      onMouseEnter={onOverlayEnter}
+      onMouseLeave={onOverlayLeave}
     >
       {avatar ? (
         <GatsbyImage image={avatar} alt="avatar" style={{ width: '100%', height: '12rem' }} objectFit="contain" />
@@ -56,13 +56,14 @@ const MemberAvatarCard: React.FC<MemberAvatarCardProps> = ({ member }) => {
         w="full"
         opacity={overlayShown ? 1 : 0}
         transition="300ms ease"
-        bgColor="rgb(0, 0, 0, 0.9)"
+        bgColor="rgb(0, 0, 0, 0.7)"
       >
         <Flex fontSize="sm" direction="column" h="full" justifyContent="center" alignItems="center" color="white">
-          <Text>{member.frontmatter.realName}</Text>
-          <Text>{member.frontmatter.email}</Text>
+          <Text fontSize="lg">{member.frontmatter.realName}</Text>
+          <Badge lineHeight="base" px={1} color="white" bg="orange.600" fontWeight="600">
+            {member.frontmatter.position}
+          </Badge>
           <Text mt={4}>{member.frontmatter.joinDate} óta a csapatban</Text>
-          <Text fontFamily="mono">{member.frontmatter.position}</Text>
         </Flex>
       </Box>
     </Box>

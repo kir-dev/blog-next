@@ -5,9 +5,6 @@ import { FaMicrophone, FaPhone, FaVideo } from 'react-icons/fa'
 const MeetingControls: React.FC = () => {
   const [showControls, setShowControls] = React.useState(true)
   const close = () => setShowControls(false)
-  const doNothing = () => {
-    return null
-  }
 
   return (
     <Grid
@@ -43,7 +40,7 @@ const MeetingControls: React.FC = () => {
         <Box to="./" rounded="full" p={4} bgColor="gray.200">
           <FaMicrophone />
         </Box>
-        <Box onClick={useBreakpointValue({ base: close, sm: doNothing })} to="./" rounded="full" p={4} color="gray.100" bgColor="red.500">
+        <Box onClick={useBreakpointValue({ base: close, sm: undefined })} to="./" rounded="full" p={4} color="gray.100" bgColor="red.500">
           <FaPhone />
         </Box>
         <Box to="./" rounded="full" p={4} bgColor="gray.200">

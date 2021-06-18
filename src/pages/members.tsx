@@ -55,7 +55,7 @@ export default MembersPage
 
 export const query = graphql`
   query AboutPageQueries {
-    allMarkdownRemark(filter: { fields: { layout: { eq: "member" } } }, sort: { fields: [frontmatter___joinDate], order: DESC }) {
+    allMarkdownRemark(filter: { fields: { layout: { eq: "member" } } }, sort: { fields: [frontmatter___realName], order: ASC }) {
       nodes {
         fields {
           slug
@@ -64,7 +64,6 @@ export const query = graphql`
           pekUsername
           realName
           position
-          email
           joinDate
           interests
           avatar {
