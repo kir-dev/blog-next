@@ -7,18 +7,18 @@ comment: true
 category: javascript
 ---
 
-Múltkor elkezdtem egy mini-sorozatot azokról a témákról, amik nem fértek bele a web alapozó tanfolyamunkba. Az [első bejegyzésben]({% post_url 2014-03-13-call-apply-bind %}) a `Function.prototype.call` és társai kerültek elő. Most erre építkezve elmélyedünk a `new` operátor szépségeiben.
+Múltkor elkezdtem egy mini-sorozatot azokról a témákról, amik nem fértek bele a web alapozó tanfolyamunkba. Az [első bejegyzésben](/post/2014-03-13-call-apply-bind) a `Function.prototype.call` és társai kerültek elő. Most erre építkezve elmélyedünk a `new` operátor szépségeiben.
 
 ## A new feladata
 
 A `new` operátor egy előre definiált típust példányosít. Ez persze így nem igaz, mert JavaScriptben nem lehet új típust létrehozni. Valójában a `new` operátor által létrehozott új objektum `Object` típusú lesz, de egy `constructor function` hozza létre, így lényegében egy olyan objektumot kapunk, amit előre felparamétereztünk.
 
 ```js
-var Person = function(name) {
+var Person = function (name) {
   this.name = name
 }
 
-Person.prototype.greet = function() {
+Person.prototype.greet = function () {
   return 'Hi, my name is ' + this.name + '!'
 }
 
