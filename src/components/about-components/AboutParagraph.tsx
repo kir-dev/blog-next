@@ -3,8 +3,8 @@ import React from 'react'
 
 interface ParagraphProps {
   id?: string
-  title: string | undefined
-  titleSize: string | undefined
+  title?: string
+  titleSize?: string
 }
 
 const AboutParagraph: React.FC<ParagraphProps> = ({ id, title, titleSize, children }) => {
