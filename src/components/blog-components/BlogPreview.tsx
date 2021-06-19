@@ -1,9 +1,10 @@
 /* eslint-disable react/destructuring-assignment */
 import { Box, Flex, Heading, HStack, Image, Text, useBreakpointValue, useColorModeValue } from '@chakra-ui/react'
 import { Link } from 'gatsby'
-import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React from 'react'
 import { FaClock } from 'react-icons/fa'
+import { PostProps } from '../../utils/post.props'
 import BlogAuthor from './BlogAuthor'
 
 export interface BlogPreviewProps {
@@ -14,13 +15,7 @@ export interface BlogPreviewProps {
         minutes: number
       }
     }
-    frontmatter: {
-      title: string
-      lead: string
-      date: string
-      author: string
-      featuredImage: ImageDataLike
-    }
+    frontmatter: PostProps
   }
   isBig?: boolean
 }
