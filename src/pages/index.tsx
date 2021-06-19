@@ -1,4 +1,16 @@
-import { Box, Button, Flex, Grid, Heading, HStack, Spacer, Text, useBreakpointValue, useColorModeValue } from '@chakra-ui/react'
+import {
+  Box,
+  Button,
+  Flex,
+  Grid,
+  Heading,
+  HStack,
+  Link as ChakraLink,
+  Spacer,
+  Text,
+  useBreakpointValue,
+  useColorModeValue
+} from '@chakra-ui/react'
 import { graphql, Link } from 'gatsby'
 import { ImageDataLike } from 'gatsby-plugin-image'
 import * as React from 'react'
@@ -97,18 +109,28 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
                     </Box>
                     <HStack direction="row" alignItems={{ base: 'baseline', md: 'end' }} my={6} mx={{ base: 4, lg: 0 }} spacing={6}>
                       {useBreakpointValue({ lg: <Spacer /> })}
-                      <Box as={Link} color={useColorModeValue('black', 'grey.200')} _hover={{ color: 'orange.500' }} to={GITHUB_ORG_URL}>
+                      <Box
+                        as={ChakraLink}
+                        color={useColorModeValue('black', 'grey.200')}
+                        _hover={{ color: 'orange.500' }}
+                        href={GITHUB_ORG_URL}
+                      >
                         <FaGithub size={socialSize} />
                       </Box>
                       <Box
-                        as={Link}
+                        as={ChakraLink}
                         color={useColorModeValue('black', 'grey.200')}
                         _hover={{ color: 'orange.500' }}
-                        to={YOUTUBE_CHANNEL_URL}
+                        href={YOUTUBE_CHANNEL_URL}
                       >
                         <FaYoutube size={socialSize} />
                       </Box>
-                      <Box as={Link} color={useColorModeValue('black', 'grey.200')} _hover={{ color: 'orange.500' }} to={FACEBOOK_PAGE_URL}>
+                      <Box
+                        as={ChakraLink}
+                        color={useColorModeValue('black', 'grey.200')}
+                        _hover={{ color: 'orange.500' }}
+                        href={FACEBOOK_PAGE_URL}
+                      >
                         <FaFacebook size={socialSize} />
                       </Box>
                     </HStack>
@@ -154,7 +176,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
             <Heading pb={4}>Fő projektünk: PéK</Heading>
             <Text fontFamily="mono" mb={4} textAlign="justify">
               Fő feladatunk a{' '}
-              <Text as={Link} textColor="orange.500" to={PEK_URL}>
+              <Text as={ChakraLink} textColor="orange.500" href={PEK_URL}>
                 Profil és Körök
               </Text>{' '}
               folyamatos fejlesztése és karbantartása. Ez a rendszer már több generációt is megélt az aktív körtagoknak köszönhetően.
