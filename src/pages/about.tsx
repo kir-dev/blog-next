@@ -71,16 +71,22 @@ const AboutPage: React.FC = () => {
                 </Text>
                 <Text py={2}>
                   Fő feladatunk a{' '}
-                  <GatsbyLink to="/projects/pek-next">
+                  <GatsbyLink to="/project/pek-next">
                     <Text display="inline" w="full" bgClip="text" bgGradient="linear(to-r, tomato, orange.300)" fontWeight="extrabold">
                       Profil és Körök
                     </Text>
                   </GatsbyLink>{' '}
                   – röviden PéK – folyamatos fejlesztése és karbantartása. Jelenleg ezen az alkalmazáson keresztül folyik a kar közösségi
                   pontozása. Ez a rendszer már több generációt is megélt az aktív körtagoknak köszönhetően: legelőször Kollégiumi
-                  Információs Rendszernek hívtuk (KIR), aztán a kiterjedésével Villanykari Információs Rendszer (VIR) lett, amelynek tech
-                  stackjében részt vett a JavaEE és az OpenAM. A PéK mai nevét ????-ben vette fel, korábbi generációja még JavaEE-s alapokon
-                  futott, azonban 2015-ben Ruby on Rails alapokra lett migrálva.
+                  Információs Rendszernek hívtuk (KIR), aztán a kiterjedésével Villanykari Információs Rendszer (VIR) lett, később pedig
+                  megkapta modern nevét, a PéK-et. A korábbi generációi még JavaEE-s alapokon, OpenAM mellett futottak, aztán 2015-ben Ruby
+                  on Rails alapokra lett migrálva. További történeteket blogunk archívumában olvashatsz{' '}
+                  <GatsbyLink to="/post/2014-01-29-pek-jelen-es-jovo-iv/">
+                    <chakra.span color={linkColor} _hover={linkHover}>
+                      PÉK jelene és jövője
+                    </chakra.span>
+                  </GatsbyLink>{' '}
+                  címek alatt.
                 </Text>
                 <Text />
               </AboutParagraph>
@@ -303,15 +309,15 @@ const AboutPage: React.FC = () => {
                   1319-es szobájába!
                 </Text>
                 <Flex flex={1} whiteSpace="nowrap" width="full" direction="column" alignItems="flex-end">
-                  <HStack as={Link} _hover={{ color: 'orange.400' }} to={GITHUB_ORG_URL}>
+                  <HStack as={Link} _hover={{ color: 'orange.400' }} href={GITHUB_ORG_URL}>
                     <Text>GitHub szervezetünk</Text>
                     <FaGithub size={socialSize} />
                   </HStack>
-                  <HStack as={Link} _hover={{ color: 'orange.400' }} to={YOUTUBE_CHANNEL_URL}>
+                  <HStack as={Link} _hover={{ color: 'orange.400' }} href={YOUTUBE_CHANNEL_URL}>
                     <Text>YouTube csatornánk</Text>
                     <FaYoutube size={socialSize} />
                   </HStack>
-                  <HStack as={Link} _hover={{ color: 'orange.400' }} to={FACEBOOK_PAGE_URL}>
+                  <HStack as={Link} _hover={{ color: 'orange.400' }} href={FACEBOOK_PAGE_URL}>
                     <Text>Facebook oldalunk</Text>
                     <FaFacebook size={socialSize} />
                   </HStack>
