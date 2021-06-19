@@ -8,7 +8,6 @@ import BlogPreview from '../components/blog-components/BlogPreview'
 import Container from '../components/Container'
 import InfoBox from '../components/indexpage-components/InfoBox'
 import PekPreview from '../components/indexpage-components/PekPreview'
-import Page from '../components/Page'
 import Terminal from '../components/terminal/Terminal'
 import IndexLayout from '../layouts'
 import { FACEBOOK_PAGE_URL, GITHUB_ORG_URL, PEK_URL, YOUTUBE_CHANNEL_URL } from '../utils/configurations'
@@ -60,7 +59,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
 
   return (
     <IndexLayout>
-      <Page>
+      <Box>
         <Box
           bgImage="url('../../index-bg.jpeg')"
           bgPos="center"
@@ -179,7 +178,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
             </Box>
           </Box>
         </Container>
-      </Page>
+      </Box>
     </IndexLayout>
   )
 }

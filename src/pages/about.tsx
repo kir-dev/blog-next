@@ -2,7 +2,6 @@ import { Heading, Link } from '@chakra-ui/react'
 import * as React from 'react'
 import Container from '../components/Container'
 import Header from '../components/Header'
-import Page from '../components/Page'
 import IndexLayout from '../layouts'
 
 const AboutPage: React.FC = () => {
