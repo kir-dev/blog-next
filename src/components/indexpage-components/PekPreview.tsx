@@ -1,31 +1,12 @@
 /* eslint-disable react/destructuring-assignment */
 import { Box, Flex, HStack, Image, Tag, Text, useColorModeValue } from '@chakra-ui/react'
 import { Link } from 'gatsby'
-import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React from 'react'
 import { FaGithub } from 'react-icons/fa'
-import { getIcon } from '../project-components/ProjectPreview'
+import { getIcon, ProjectPreviewProps } from '../project-components/ProjectPreview'
 
-export interface PekProps {
-  project: {
-    fields: {
-      slug: string
-    }
-    frontmatter: {
-      title: string
-      lead: string
-      github: string
-      featuredImage: ImageDataLike
-      status: {
-        label: string
-        color: string
-      }
-      techs: string
-    }
-  }
-}
-
-const PekPreview: React.FC<PekProps> = ({ project }) => {
+const PekPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
   const featuredImage = getImage(project.frontmatter.featuredImage)
   const statusIcon = getIcon(project.frontmatter.status)
 
