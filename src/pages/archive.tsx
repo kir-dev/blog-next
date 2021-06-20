@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import * as React from 'react'
 import Container from '../components/Container'
 import Header from '../components/Header'
-import Page from '../components/Page'
 import IndexLayout from '../layouts'
 import { BlogPostsProps } from './blog'
 
@@ -26,7 +25,7 @@ export const query = graphql`
 
 const Archive: React.FC<BlogPostsProps> = ({ data }) => (
   <IndexLayout>
-    <Page>
+    <Box>
       <Header>
         <Container>
           <Heading as="h1">Archívum</Heading>
@@ -42,7 +41,7 @@ const Archive: React.FC<BlogPostsProps> = ({ data }) => (
           </Box>
         ))}
       </Container>
-    </Page>
+    </Box>
   </IndexLayout>
 )
 

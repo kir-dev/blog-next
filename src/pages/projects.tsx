@@ -1,10 +1,9 @@
-import { Grid, Heading, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Grid, Heading, Text, useBreakpointValue } from '@chakra-ui/react'
 import { graphql } from 'gatsby'
 import { ImageDataLike } from 'gatsby-plugin-image'
 import * as React from 'react'
 import Container from '../components/Container'
 import Header from '../components/Header'
-import Page from '../components/Page'
 import ProjectPreview from '../components/project-components/ProjectPreview'
 import IndexLayout from '../layouts'
 
@@ -33,7 +32,7 @@ export interface ProjectsProps {
 
 const Projects: React.FC<ProjectsProps> = ({ data }) => (
   <IndexLayout>
-    <Page>
+    <Box>
       <Header>
         <Container>
           <Heading as="h1">Projektjeink</Heading>
@@ -49,7 +48,7 @@ const Projects: React.FC<ProjectsProps> = ({ data }) => (
           ))}
         </Grid>
       </Container>
-    </Page>
+    </Box>
   </IndexLayout>
 )
 

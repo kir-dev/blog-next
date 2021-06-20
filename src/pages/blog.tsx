@@ -5,7 +5,6 @@ import * as React from 'react'
 import BlogPreview from '../components/blog-components/BlogPreview'
 import Container from '../components/Container'
 import Header from '../components/Header'
-import Page from '../components/Page'
 import IndexLayout from '../layouts'
 
 export interface BlogPostsProps {
@@ -32,7 +31,7 @@ export interface BlogPostsProps {
 
 const Blog: React.FC<BlogPostsProps> = ({ data }) => (
   <IndexLayout>
-    <Page>
+    <Box>
       <Header>
         <Container>
           <Heading as="h1">Legújabb posztjaink</Heading>
@@ -50,7 +49,7 @@ const Blog: React.FC<BlogPostsProps> = ({ data }) => (
           </Text>
         </Box>
       </Container>
-    </Page>
+    </Box>
   </IndexLayout>
 )
 
