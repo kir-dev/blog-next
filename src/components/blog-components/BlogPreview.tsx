@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React from 'react'
 import { FaClock } from 'react-icons/fa'
-import { PostProps } from '../../utils/post.props'
+import { PostProps } from '../../types/post.props'
 import BlogAuthor from './BlogAuthor'
 
 export interface BlogPreviewProps {

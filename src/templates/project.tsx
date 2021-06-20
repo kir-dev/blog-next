@@ -9,7 +9,7 @@ import Container from '../components/Container'
 import Page from '../components/Page'
 import { getIcon } from '../components/project-components/ProjectPreview'
 import IndexLayout from '../layouts'
-import { ProjectProps } from '../utils/project.props'
+import { ProjectProps } from '../types/project.props'
 
 interface ProjectTemplateProps {
   data: {

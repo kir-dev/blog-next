@@ -10,9 +10,9 @@ import PekPreview from '../components/indexpage-components/PekPreview'
 import Page from '../components/Page'
 import Terminal from '../components/terminal/Terminal'
 import IndexLayout from '../layouts'
+import { PostProps } from '../types/post.props'
+import { ProjectProps } from '../types/project.props'
 import { FACEBOOK_PAGE_URL, GITHUB_ORG_URL, PEK_URL, YOUTUBE_CHANNEL_URL } from '../utils/configurations'
-import { PostProps } from '../utils/post.props'
-import { ProjectProps } from '../utils/project.props'
 
 interface IndexPageProps {
   data: {

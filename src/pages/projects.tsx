@@ -6,7 +6,7 @@ import Header from '../components/Header'
 import Page from '../components/Page'
 import ProjectPreview from '../components/project-components/ProjectPreview'
 import IndexLayout from '../layouts'
-import { ProjectProps } from '../utils/project.props'
+import { ProjectProps } from '../types/project.props'
 
 export interface ProjectsProps {
   data: {

@@ -6,7 +6,7 @@ import Container from '../components/Container'
 import Header from '../components/Header'
 import Page from '../components/Page'
 import IndexLayout from '../layouts'
-import { PostProps } from '../utils/post.props'
+import { PostProps } from '../types/post.props'
 
 export interface BlogPostsProps {
   data: {

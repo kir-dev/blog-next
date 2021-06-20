@@ -4,7 +4,7 @@ import * as React from 'react'
 import Container from '../components/Container'
 import MemberFullCard from '../components/members-components/MemberFullCard'
 import IndexLayout from '../layouts'
-import { MemberProps } from '../utils/member.props'
+import { MemberProps } from '../types/member.props'
 
 interface MemberTemplateProps {
   data: {

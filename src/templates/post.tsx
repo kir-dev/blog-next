@@ -9,7 +9,7 @@ import Container from '../components/Container'
 import Header from '../components/Header'
 import Post from '../components/Post'
 import IndexLayout from '../layouts'
-import { PostProps } from '../utils/post.props'
+import { PostProps } from '../types/post.props'
 
 interface PostTemplateProps {
   data: {
