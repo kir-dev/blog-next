@@ -1,4 +1,4 @@
-import { Heading, Link } from '@chakra-ui/react'
+import { Box, Heading, Link } from '@chakra-ui/react'
 import * as React from 'react'
 import Container from '../components/Container'
 import Header from '../components/Header'
@@ -7,7 +7,7 @@ import IndexLayout from '../layouts'
 const AboutPage: React.FC = () => {
   return (
     <IndexLayout>
-      <Page>
+      <Box>
         <Header>
           <Container>
             <Heading as="h1">Rólunk</Heading>
@@ -77,7 +77,7 @@ const AboutPage: React.FC = () => {
           <Link id="contact" href="." />
           <Heading as="h1">Kapcsolat</Heading>
         </Container>
-      </Page>
+      </Box>
     </IndexLayout>
   )
 }
