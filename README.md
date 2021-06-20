@@ -6,8 +6,6 @@ A projekt jelenleg fejlesztési szakaszban van, az aktuális állapot [Netlify-o
 
 ## Telepítés
 
----
-
 Legyen telepítve [node.js](https://nodejs.org/en/) és [yarn](https://yarnpkg.com/lang/en/docs/install) a gépeden. A gatsby-t szükséges globálisan feltelepíteni, ez a `yarn global add gatsby-cli` paranccsal tehető meg.
 
 Ha az előkövetlemények megvannak, akkor
@@ -23,8 +21,6 @@ A `.env.example` fájlt másold le, és nevezd át `.env.development`-re. Deploy
 
 ## Készítenél posztot?
 
----
-
 1. Használd a `create-post.sh` shell scriptet (az `author` fieldnél érdemes a PéK-en is használt felhasználóneved megadni):
 
 ```bash
@@ -34,15 +30,13 @@ A `.env.example` fájlt másold le, és nevezd át `.env.development`-re. Deploy
 Példa: `./create-post.sh 'Heroku és társai' 'mypekusername'`
 
 2. Ezután keresd meg a posztod markdown fájlját. Adj egy maximum 2 mondatos ízelítőt a posztról a `lead` field alatt.
-3. A `featuredImage` fieldben megadhatsz egy képet, amelyet használnál a blogbejegyzésed previewjában, ezt a képed be is kell illesszed a `content/images` mappába, és a `default.jpg`-t erre tudod lecserélni. Ha nincs szükséged ilyenre, hagyd benn a defaultot.
+3. A `featuredImage` fieldben megadhatsz egy képet, amelyet használnál a blogbejegyzésed previewjában, ezt a képed be is kell illesszed a `content/images/posts/` mappába. Ha nincs szükséged ilyenre, hagyd benn a defaultot.
 4. Írd meg a posztot markdownban, jelenleg képeket csak külső forrásból tudsz berakni a posztjaidba (használd pl.: az Imgur-t).
 5. érj review-t körtársaidtól egy pull requesten keresztül.
 
 Nézz meg néhány korábbi blogposztot, hogy is tudod kihasználni a markdown adta lehetőségeket: code részletek beszúrása, képek beszúrása. Windows-on a create-post.sh shell scriptet tudod futtatni a Git bash-ben, ha már fel van telepítve a Git kliens.
 
 ## Készítenél oldalt egy projektnek?
-
----
 
 Igazából kövesd a fentieket, amit a posztkészítésnél kell, annyi, hogy a `create-project.sh` szkriptet használd.
 
@@ -61,9 +55,30 @@ Szerkesztéskor a projekt markdown fájljában:
   - Extra: `Archivált <color>` megadása esetén hold ikon jelenik meg a státusz feliratban, `Kész <color>` esetén egy pipa, `Áll <color>` esetén pedig egy felkiáltójeles kör alakú ikon.
 - A `techs` fieldben megadhatod vesszővel elválasztva a projekt főbb techjeit (lehetőleg maradj max 3-nál). Pl.: `techs: TypeScript, Node.js`
 
-## License
+## Hozzáadnál új tagot a csapathoz?
 
----
+1. Használd a `create-member.sh` shell scriptet (A `''` aposztrófok fontosak lehetnek többszavas paramétereknél):
+
+```bash
+./create-member.sh '<pekUsername>' '<realName>'
+```
+
+Példa: `./create-member.sh 'mypekusername' 'Gipsz Jakab'`
+
+Szerkeszteni tudod a hozzárendelt tulajdonságokat a létrejött markdown fájlban:
+
+- `pekUsername`: PéK-en is használt felhasználóneved
+- `realName`: valódi neved
+- `position`: jelenlegi beosztottsága a körnél (újonc, tag, PR felelős stb.)
+- `joinDate`: amióta a tag aktív a körnél
+- `interests`: általános kulcsszavak arra, mi érdekli a tagot a webfejlesztéssel kapcsolatosan, vesszővel kell elválasztani a kifejezéseket
+- `avatar`: ha nem a PéK-en is használt képét szeretné használni, akkor a megadható a repóból egy kép url-je
+- `active`: megadható, hogy a tag jelenleg aktív tagja-e a csapatnak
+- Minden további infót, amit szeretnél megosztani a világgal, írd meg a markdown fájl további részében.
+
+**Fontos:** ha képet is teszel a repóba magadról, akkor tedd be a képet pekusername-eddel elnevezve a `content/images/avatars/` könyvtárba.
+
+## License
 
 The following directories and their contents are Copyright Kir-Dev.
 You may not reuse anything therein without Kir-Dev's permission:

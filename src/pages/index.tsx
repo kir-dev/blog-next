@@ -91,7 +91,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
                     mt={[0, 0, '0rem', '2rem']}
                   >
                     <Box my={4}>
-                      <Button color="white" bg="orange.500" _hover={{ bg: 'orange.600' }} as={Link} px={6} to="/contact">
+                      <Button color="white" bg="orange.500" _hover={{ bg: 'orange.600' }} as={Link} px={6} to="/about#contact">
                         Csatlakozz!
                       </Button>
                     </Box>
