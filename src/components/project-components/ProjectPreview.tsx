@@ -1,5 +1,5 @@
 import { CheckIcon, MoonIcon, WarningIcon } from '@chakra-ui/icons'
-import { Box, Flex, HStack, Image, Tag, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, Flex, HStack, Image, Link as ChakraLink, Tag, Text, useColorModeValue } from '@chakra-ui/react'
 import { Link } from 'gatsby'
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image'
 import React from 'react'
@@ -79,7 +79,7 @@ const ProjectPreview: React.FC<ProjectForPreview> = ({ project }) => {
           <Flex wrap="wrap" justifyContent="space-between" direction={{ base: 'column', md: 'row' }}>
             <HStack alignItems="center">
               <FaGithub />
-              <Text as={Link} whiteSpace="nowrap" fontSize="md" to={project.frontmatter.github}>
+              <Text as={ChakraLink} whiteSpace="nowrap" fontSize="md" href={project.frontmatter.github}>
                 {`kir-dev/${githubUrlEnd}`}
               </Text>
             </HStack>

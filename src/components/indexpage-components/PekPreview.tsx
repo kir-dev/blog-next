@@ -1,5 +1,5 @@
 /* eslint-disable react/destructuring-assignment */
-import { Box, Flex, HStack, Image, Tag, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, Flex, HStack, Image, Link as ChakraLink, Tag, Text, useColorModeValue } from '@chakra-ui/react'
 import { Link } from 'gatsby'
 import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image'
 import React from 'react'
@@ -63,7 +63,7 @@ const PekPreview: React.FC<PekProps> = ({ project }) => {
             <Flex wrap="wrap" justifyContent="space-between" direction={{ base: 'column', md: 'row' }}>
               <HStack alignItems="center">
                 <FaGithub />
-                <Text as={Link} whiteSpace="nowrap" fontSize="md" to={project.frontmatter.github}>
+                <Text as={ChakraLink} whiteSpace="nowrap" fontSize="md" to={project.frontmatter.github}>
                   kir-dev/pek-next
                 </Text>
               </HStack>

@@ -1,5 +1,4 @@
-import { Box, HStack, Image, Text, useColorModeValue } from '@chakra-ui/react'
-import { Link } from 'gatsby'
+import { Box, HStack, Image, Link, Text, useColorModeValue } from '@chakra-ui/react'
 import React from 'react'
 import { PEK_URL } from '../../utils/configurations'
 
@@ -17,7 +16,7 @@ const BlogAuthor: React.FC<BlogAuthorProps> = ({ date, name, hasLongDate }) => (
 
     {hasLongDate ? (
       <HStack>
-        <Text as={Link} fontWeight="medium" fontSize="md" to={`${PEK_URL}/profiles/${name}`}>
+        <Text as={Link} fontWeight="medium" fontSize="md" href={`${PEK_URL}/profiles/${name}`}>
           {name}
         </Text>
         <Text>—</Text>
