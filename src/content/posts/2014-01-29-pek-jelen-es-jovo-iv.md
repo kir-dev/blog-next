@@ -10,9 +10,9 @@ excerpt: '<p>A negyedik résszel elérkeztünk a sorozat végére. Ebben a rész
 
 Előzmények:
 
-1. [PÉK jelene és jövője, I. rész]({% post_url 2014-01-23-pek-jelen-es-jovo-i %})
-2. [PÉK jelene és jövője, II. rész]({% post_url 2014-01-25-pek-jelen-es-jovo-ii %})
-3. [PÉK jelene és jövője, III. rész]({% post_url 2014-01-27-pek-jelen-es-jovo-iii %})
+1. [PÉK jelene és jövője, I. rész](/post/2014-01-23-pek-jelen-es-jovo-i)
+2. [PÉK jelene és jövője, II. rész](/post/2014-01-25-pek-jelen-es-jovo-ii)
+3. [PÉK jelene és jövője, III. rész](/post/2014-01-27-pek-jelen-es-jovo-iii)
 
 A negyedik résszel elérkeztünk a sorozat végére. Ebben a részben áttekintjük, hogy mire jutottunk az utóbbi 1-2 hónapban. Rengeteget beszéltünk arról, hogy merre vigyük a PÉK-et, mert több ötlet is felmerült. Megrágtunk jó néhány variációt, de végül győzött a józan ész.
 
