@@ -11,7 +11,6 @@ import AboutParagraph from '../components/about-components/AboutParagraph'
 import StickyNote from '../components/about-components/StickyNote'
 import Container from '../components/Container'
 import InfoBox from '../components/indexpage-components/InfoBox'
-import Page from '../components/Page'
 import IndexLayout from '../layouts'
 import { FACEBOOK_PAGE_URL, GITHUB_ORG_URL, PUBLIC_EMAIL, YOUTUBE_CHANNEL_URL } from '../utils/configurations'
 
@@ -35,15 +34,15 @@ const AboutPage: React.FC = () => {
 
   return (
     <IndexLayout>
-      <Page>
+      <Box>
         <Container>
           <Box textAlign="center" my={6}>
             <Heading mb={6} fontSize={{ base: '4xl', sm: '5xl', md: '6xl' }} fontWeight="bold" lineHeight="none" letterSpacing="tight">
-              A{' '}
+              A kollégium{' '}
               <Text display="inline" w="full" bgClip="text" bgGradient="linear(to-r, tomato, orange.300)" fontWeight="extrabold">
-                Schönherz koli
+                webfejlesztő
               </Text>{' '}
-              webfejlesztői
+              köre
             </Heading>
           </Box>
 
@@ -61,10 +60,8 @@ const AboutPage: React.FC = () => {
                 <Text mt={6}>
                   A Kollégiumi Információs Rendszer Fejlesztői és Üzemeltetői – röviden Kir-Dev – a BME VIK hallgatóiból álló webfejlesztő
                   csapat. Körünk 2001-ben alakult, 2009 óta a{' '}
-                  <Link _hover={{ textDecor: 'none' }} href="https://simonyi.bme.hu/">
-                    <Text display="inline" w="full" bgClip="text" bgGradient="linear(to-r, green.400, teal.500)" fontWeight="extrabold">
-                      Simonyi Károly Szakkollégium
-                    </Text>
+                  <Link href="https://simonyi.bme.hu/" color={linkColor} _hover={linkHover}>
+                    Simonyi Károly Szakkollégium
                   </Link>{' '}
                   része. Alakulásunk óta foglalkozunk különféle webes technológiák alkalmazásával és oktatásával, valamint fejlesztünk és
                   üzemeltetünk a kollégiumi közösség számára hasznos webes alkalmazásokat.
@@ -72,9 +69,9 @@ const AboutPage: React.FC = () => {
                 <Text py={2}>
                   Fő feladatunk a{' '}
                   <GatsbyLink to="/project/pek-next">
-                    <Text display="inline" w="full" bgClip="text" bgGradient="linear(to-r, tomato, orange.300)" fontWeight="extrabold">
+                    <chakra.span color={linkColor} _hover={linkHover}>
                       Profil és Körök
-                    </Text>
+                    </chakra.span>
                   </GatsbyLink>{' '}
                   – röviden PéK – folyamatos fejlesztése és karbantartása. Jelenleg ezen az alkalmazáson keresztül folyik a kar közösségi
                   pontozása. Ez a rendszer már több generációt is megélt az aktív körtagoknak köszönhetően: legelőször Kollégiumi
@@ -309,19 +306,19 @@ const AboutPage: React.FC = () => {
                   1319-es szobájába!
                 </Text>
                 <Flex flex={1} whiteSpace="nowrap" width="full" direction="column" alignItems="flex-end">
-                  <HStack as={Link} _hover={{ color: 'orange.400' }} href={GITHUB_ORG_URL}>
+                  <HStack pb={2} as={Link} _hover={{ color: 'orange.400' }} href={GITHUB_ORG_URL}>
                     <Text>GitHub szervezetünk</Text>
                     <FaGithub size={socialSize} />
                   </HStack>
-                  <HStack as={Link} _hover={{ color: 'orange.400' }} href={YOUTUBE_CHANNEL_URL}>
+                  <HStack py={2} as={Link} _hover={{ color: 'orange.400' }} href={YOUTUBE_CHANNEL_URL}>
                     <Text>YouTube csatornánk</Text>
                     <FaYoutube size={socialSize} />
                   </HStack>
-                  <HStack as={Link} _hover={{ color: 'orange.400' }} href={FACEBOOK_PAGE_URL}>
+                  <HStack py={2} as={Link} _hover={{ color: 'orange.400' }} href={FACEBOOK_PAGE_URL}>
                     <Text>Facebook oldalunk</Text>
                     <FaFacebook size={socialSize} />
                   </HStack>
-                  <HStack>
+                  <HStack py={2}>
                     <Text>{PUBLIC_EMAIL}</Text>
                     <FaAt size={socialSize} />
                   </HStack>
