@@ -80,6 +80,10 @@ Szerkeszteni tudod a hozzárendelt tulajdonságokat a létrejött markdown fájl
 
 ## License
 
+- Front page header background image by Chris Reid on Unsplash: https://unsplash.com/photos/LfG7RwMM6g8
+- Terminal component (with little customization) by [vercel/hyper-site](https://github.com/vercel/hyper-site) (MIT license)
+- Default post featured image by Clément Hélardot on Unsplash: https://unsplash.com/photos/95YRwf6CNw8
+
 The following directories and their contents are Copyright Kir-Dev.
 You may not reuse anything therein without Kir-Dev's permission:
 
