@@ -36,7 +36,7 @@ const IndexLayout: React.FC = ({ children }) => (
             { name: 'description', content: data.site.siteMetadata.description },
             { name: 'keywords', content: data.site.siteMetadata.keywords }
           ]}
-          link={[{ rel: 'icon', href: '../favicon.png' }]}
+          link={[{ rel: 'icon', href: '/favicon.png' }]}
         />
         <Flex direction="column" minHeight="100vh">
           <Navbar />

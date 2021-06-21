@@ -6,7 +6,6 @@ import { FaGithub, FaHome } from 'react-icons/fa'
 import SvgPattern from '../assets/images/circuit-board.svg'
 import ScrollButton from '../components/blog-components/ScrollButton'
 import Container from '../components/Container'
-import Page from '../components/Page'
 import { getIcon } from '../components/project-components/ProjectPreview'
 import IndexLayout from '../layouts'
 import { ProjectProps } from '../types/project.props'
@@ -35,7 +34,7 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ data }) => {
 
   return (
     <IndexLayout>
-      <Page>
+      <Box>
         <Box pt={featuredImage ? 2 : 16}>
           <Container>
             {featuredImage ? (
@@ -112,7 +111,7 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ data }) => {
             <Button colorScheme="orange">Vissza a tetejére</Button>
           </Box>
         </Container>
-      </Page>
+      </Box>
       <ScrollButton />
     </IndexLayout>
   )

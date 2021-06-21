@@ -66,7 +66,7 @@ const BlogPreview: React.FC<BlogPreviewProps> = ({ post, isBig }) => {
         <Text mt={1} fontSize="md">
           {post.frontmatter.lead}
         </Text>
-        <Flex justifyContent="space-between">
+        <Flex mt={2} justifyContent="space-between">
           <BlogAuthor
             hasLongDate={isBig && useBreakpointValue({ base: false, md: true })}
             name={post.frontmatter.author}

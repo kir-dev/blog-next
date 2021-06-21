@@ -1,11 +1,10 @@
-import { Flex, Heading, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Flex, Heading, useBreakpointValue } from '@chakra-ui/react'
 import { graphql } from 'gatsby'
 import * as React from 'react'
 import Container from '../components/Container'
 import Header from '../components/Header'
 import MeetingControls from '../components/members-components/MeetingControls'
 import MemberAvatarCard from '../components/members-components/MemberAvatarCard'
-import Page from '../components/Page'
 import IndexLayout from '../layouts'
 import { MemberProps } from '../types/member.props'
 
@@ -25,7 +24,7 @@ export interface MembersProps {
 const MembersPage: React.FC<MembersProps> = ({ data }) => {
   return (
     <IndexLayout>
-      <Page>
+      <Box>
         <Header>
           <Container>
             <Heading as="h1">Csapatunk</Heading>
@@ -46,7 +45,7 @@ const MembersPage: React.FC<MembersProps> = ({ data }) => {
           </Flex>
           <MeetingControls />
         </Container>
-      </Page>
+      </Box>
     </IndexLayout>
   )
 }

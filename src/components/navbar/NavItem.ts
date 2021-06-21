@@ -6,10 +6,6 @@ export interface NavItem {
 
 export const NAV_ITEMS: Array<NavItem> = [
   {
-    label: 'Kezdőlap',
-    href: '/'
-  },
-  {
     label: 'Blog',
     href: '/blog',
     children: [

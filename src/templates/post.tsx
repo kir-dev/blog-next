@@ -7,7 +7,6 @@ import BlogAuthor from '../components/blog-components/BlogAuthor'
 import ScrollButton from '../components/blog-components/ScrollButton'
 import Container from '../components/Container'
 import Header from '../components/Header'
-import Post from '../components/Post'
 import IndexLayout from '../layouts'
 import { PostProps } from '../types/post.props'
 
@@ -38,7 +37,7 @@ const PostTemplate: React.FC<PostTemplateProps> = ({ data }) => {
 
   return (
     <IndexLayout>
-      <Post>
+      <Box>
         <Header>
           <Container>
             <Flex mt={2} direction={{ base: 'column', sm: 'row' }} justifyContent="space-between">
@@ -88,7 +87,7 @@ const PostTemplate: React.FC<PostTemplateProps> = ({ data }) => {
             <Button colorScheme="orange">Vissza a tetejére</Button>
           </Box>
         </Container>
-      </Post>
+      </Box>
       <ScrollButton />
     </IndexLayout>
   )

@@ -1,9 +1,8 @@
-import { Box, Heading, Link } from '@chakra-ui/react'
-import { graphql } from 'gatsby'
+import { Box, chakra, Heading } from '@chakra-ui/react'
+import { graphql, Link } from 'gatsby'
 import * as React from 'react'
 import Container from '../components/Container'
 import Header from '../components/Header'
-import Page from '../components/Page'
 import IndexLayout from '../layouts'
 import { BlogPostsProps } from './blog'
 
@@ -26,7 +25,7 @@ export const query = graphql`
 
 const Archive: React.FC<BlogPostsProps> = ({ data }) => (
   <IndexLayout>
-    <Page>
+    <Box>
       <Header>
         <Container>
           <Heading as="h1">Archívum</Heading>
@@ -36,13 +35,15 @@ const Archive: React.FC<BlogPostsProps> = ({ data }) => (
         {data.allMarkdownRemark.nodes.map((post) => (
           <Box key={post.fields.slug} fontSize={{ base: 'md', md: 'lg' }} py={1}>
             <span>{post.frontmatter.date.split('T')[0]} » </span>
-            <Link fontWeight="bold" href={post.fields.slug}>
-              {post.frontmatter.title}
+            <Link to={post.fields.slug}>
+              <chakra.span fontWeight="bold" _hover={{ textDecor: 'underline', color: 'tomato', transition: '.2s ease-in-out' }}>
+                {post.frontmatter.title}
+              </chakra.span>
             </Link>
           </Box>
         ))}
       </Container>
-    </Page>
+    </Box>
   </IndexLayout>
 )
 

@@ -1,14 +1,13 @@
-import { Button, Flex, Heading } from '@chakra-ui/react'
+import { Box, Button, Flex, Heading } from '@chakra-ui/react'
 import { Link } from 'gatsby'
 import * as React from 'react'
 import Container from '../components/Container'
 import Header from '../components/Header'
-import Page from '../components/Page'
 import IndexLayout from '../layouts'
 
 const NotFoundPage: React.FC = () => (
   <IndexLayout>
-    <Page>
+    <Box>
       <Header>
         <Container>
           <Heading as="h1">Page not found (404)</Heading>
@@ -22,7 +21,7 @@ const NotFoundPage: React.FC = () => (
           </Button>
         </Flex>
       </Container>
-    </Page>
+    </Box>
   </IndexLayout>
 )
 

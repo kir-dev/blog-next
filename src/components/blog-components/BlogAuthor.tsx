@@ -1,5 +1,4 @@
-import { Box, HStack, Image, Text, useColorModeValue } from '@chakra-ui/react'
-import { Link } from 'gatsby'
+import { Box, HStack, Image, Link, Text, useColorModeValue } from '@chakra-ui/react'
 import React from 'react'
 import { PEK_URL } from '../../utils/configurations'
 
@@ -10,14 +9,14 @@ interface BlogAuthorProps {
 }
 
 const BlogAuthor: React.FC<BlogAuthorProps> = ({ date, name, hasLongDate }) => (
-  <HStack marginTop={2} spacing={2} display="flex" alignItems="center">
+  <HStack spacing={2} display="flex" alignItems="center">
     <Link to={`${PEK_URL}/profiles/${name}`}>
       <Image borderRadius="full" boxSize="2.25rem" src={`${PEK_URL}/photos/${name}`} fallbackSrc="../../favicon.png" />
     </Link>
 
     {hasLongDate ? (
       <HStack>
-        <Text as={Link} fontWeight="medium" fontSize="md" to={`${PEK_URL}/profiles/${name}`}>
+        <Text as={Link} fontWeight="medium" fontSize="md" href={`${PEK_URL}/profiles/${name}`}>
           {name}
         </Text>
         <Text>—</Text>
