@@ -1,27 +1,18 @@
 import { CheckIcon, MoonIcon, WarningIcon } from '@chakra-ui/icons'
 import { Box, Flex, HStack, Image, Link as ChakraLink, Tag, Text, useColorModeValue } from '@chakra-ui/react'
 import { Link } from 'gatsby'
-import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React from 'react'
 import { FaGithub } from 'react-icons/fa'
+import { ProjectProps } from '../../types/project.props'
 import { CircleIcon } from './CircleIcon'
 
-interface ProjectForPreview {
+export interface ProjectPreviewProps {
   project: {
     fields: {
       slug: string
     }
-    frontmatter: {
-      title: string
-      lead: string
-      github: string
-      featuredImage: ImageDataLike
-      status: {
-        label: string
-        color: string
-      }
-      techs: string
-    }
+    frontmatter: ProjectProps
   }
 }
 
@@ -42,7 +33,7 @@ export function getIcon(status: { label: string; color: string }): JSX.Element {
   }
 }
 
-const ProjectPreview: React.FC<ProjectForPreview> = ({ project }) => {
+const ProjectPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
   const featuredImage = getImage(project.frontmatter.featuredImage)
   const statusIcon = getIcon(project.frontmatter.status)
   const githubUrlEnd = project.frontmatter.github.substring(project.frontmatter.github.lastIndexOf('/') + 1)

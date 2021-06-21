@@ -9,7 +9,7 @@ interface BlogAuthorProps {
 }
 
 const BlogAuthor: React.FC<BlogAuthorProps> = ({ date, name, hasLongDate }) => (
-  <HStack marginTop={2} spacing={2} display="flex" alignItems="center">
+  <HStack spacing={2} display="flex" alignItems="center">
     <Link to={`${PEK_URL}/profiles/${name}`}>
       <Image borderRadius="full" boxSize="2.25rem" src={`${PEK_URL}/photos/${name}`} fallbackSrc="../../favicon.png" />
     </Link>

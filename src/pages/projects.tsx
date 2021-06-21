@@ -1,11 +1,11 @@
 import { Box, Grid, Heading, Text, useBreakpointValue } from '@chakra-ui/react'
 import { graphql } from 'gatsby'
-import { ImageDataLike } from 'gatsby-plugin-image'
 import * as React from 'react'
 import Container from '../components/Container'
 import Header from '../components/Header'
 import ProjectPreview from '../components/project-components/ProjectPreview'
 import IndexLayout from '../layouts'
+import { ProjectProps } from '../types/project.props'
 
 export interface ProjectsProps {
   data: {
@@ -14,17 +14,7 @@ export interface ProjectsProps {
         fields: {
           slug: string
         }
-        frontmatter: {
-          title: string
-          lead: string
-          github: string
-          status: {
-            label: string
-            color: string
-          }
-          techs: string
-          featuredImage: ImageDataLike
-        }
+        frontmatter: ProjectProps
       }[]
     }
   }

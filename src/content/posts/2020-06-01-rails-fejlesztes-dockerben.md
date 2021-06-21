@@ -241,6 +241,7 @@ https://github.com/SepsiLaszlo/rails_development_in_containers
 - Ruby Mine: https://www.jetbrains.com/ruby
 - Visual Studio Code: https://code.visualstudio.com/
 - alap projekt: https://github.com/JetBrains/sample_rails_app
+- featured image in the post by Ian Taylor on Unsplash: https://unsplash.com/photos/HjBOmBPbi9k
 
 [1]: https://youtrack.jetbrains.com/issue/RUBY-12337
 [2]: https://solargraph.org/guides/rails

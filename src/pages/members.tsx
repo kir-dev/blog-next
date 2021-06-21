@@ -6,7 +6,7 @@ import Header from '../components/Header'
 import MeetingControls from '../components/members-components/MeetingControls'
 import MemberAvatarCard from '../components/members-components/MemberAvatarCard'
 import IndexLayout from '../layouts'
-import { MemberProps } from '../utils/member.props'
+import { MemberProps } from '../types/member.props'
 
 export interface MembersProps {
   data: {

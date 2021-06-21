@@ -12,7 +12,6 @@ import {
   useColorModeValue
 } from '@chakra-ui/react'
 import { graphql, Link } from 'gatsby'
-import { ImageDataLike } from 'gatsby-plugin-image'
 import * as React from 'react'
 import { FaFacebook, FaGithub, FaYoutube } from 'react-icons/fa'
 import Logo from '../assets/images/kirdev-simplified.svg'
@@ -22,6 +21,8 @@ import InfoBox from '../components/indexpage-components/InfoBox'
 import PekPreview from '../components/indexpage-components/PekPreview'
 import Terminal from '../components/terminal/Terminal'
 import IndexLayout from '../layouts'
+import { PostProps } from '../types/post.props'
+import { ProjectProps } from '../types/project.props'
 import { FACEBOOK_PAGE_URL, GITHUB_ORG_URL, PEK_URL, YOUTUBE_CHANNEL_URL } from '../utils/configurations'
 
 interface IndexPageProps {
@@ -35,13 +36,7 @@ interface IndexPageProps {
               minutes: number
             }
           }
-          frontmatter: {
-            title: string
-            lead: string
-            date: string
-            author: string
-            featuredImage: ImageDataLike
-          }
+          frontmatter: PostProps
         }
       ]
     }
@@ -49,17 +44,7 @@ interface IndexPageProps {
       fields: {
         slug: string
       }
-      frontmatter: {
-        title: string
-        lead: string
-        github: string
-        featuredImage: ImageDataLike
-        status: {
-          label: string
-          color: string
-        }
-        techs: string
-      }
+      frontmatter: ProjectProps
     }
   }
 }
