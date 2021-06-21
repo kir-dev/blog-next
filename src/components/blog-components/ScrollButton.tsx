@@ -12,7 +12,7 @@ const ScrollButton: React.FC = () => {
 
   const [visible, setVisible] = useState(false)
   const [fromTop, setFromTop] = useState(0)
-  const [fromBottom, setFromBottom] = useState(window.innerHeight)
+  const [fromBottom, setFromBottom] = useState(0)
 
   const onScroll = () => {
     setFromTop(window.scrollY)
