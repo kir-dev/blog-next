@@ -6,3 +6,5 @@ lecturer: 'Király Bálint'
 featuredImage: ../../assets/images/kirdev-simplified.svg
 active: true
 ---
+
+A tanfolyamon résztvevők megismerkedhetnek a web működésével, a HTML és a CSS világával.

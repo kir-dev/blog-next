@@ -1,6 +1,6 @@
 import { ImageDataLike } from 'gatsby-plugin-image'
 
-interface CourseProps {
+export interface CourseProps {
   title: string
   sessions: Array<{ time: string; place: string }>
   lecturer: string

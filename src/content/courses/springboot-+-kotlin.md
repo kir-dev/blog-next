@@ -6,3 +6,5 @@ lecturer: 'Szabó Gergely'
 featuredImage: ../../assets/images/spring-logo.svg
 active: true
 ---
+
+Két alkalmas SpringBoot és Kotlin tanfolyam, amely segítségével megismerkedhettek a nyelv és a keretrendszer alapjaival.
