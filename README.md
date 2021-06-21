@@ -92,3 +92,7 @@ You may not reuse anything therein without Kir-Dev's permission:
 All other directories and files are MIT Licensed.
 
 [1]: https://github.com/kir-dev/kir-dev.sch.bme.hu/pulls
+
+## Sponsors
+
+<a href="https://vercel.com?utm_source=kir-dev&utm_campaign=oss"><img src="src/assets/images/powered-by-vercel.svg" height="36" /></a>
