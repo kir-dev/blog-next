@@ -1,6 +1,6 @@
 import { Box, Button, Flex, Heading, HStack, Tag, Text, useColorModeValue } from '@chakra-ui/react'
 import { graphql, Link } from 'gatsby'
-import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import * as React from 'react'
 import { FaGithub, FaHome } from 'react-icons/fa'
 import SvgPattern from '../assets/images/circuit-board.svg'
@@ -8,6 +8,7 @@ import ScrollButton from '../components/blog-components/ScrollButton'
 import Container from '../components/Container'
 import { getIcon } from '../components/project-components/ProjectPreview'
 import IndexLayout from '../layouts'
+import { ProjectProps } from '../types/project.props'
 
 interface ProjectTemplateProps {
   data: {
@@ -20,17 +21,7 @@ interface ProjectTemplateProps {
     markdownRemark: {
       html: string
       excerpt: string
-      frontmatter: {
-        title: string
-        github: string
-        website: string
-        featuredImage: ImageDataLike
-        status: {
-          label: string
-          color: string
-        }
-        techs: string
-      }
+      frontmatter: ProjectProps
     }
   }
 }

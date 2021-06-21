@@ -1,11 +1,11 @@
 import { Box, Grid, Heading, Text, useBreakpointValue } from '@chakra-ui/react'
 import { graphql, Link } from 'gatsby'
-import { ImageDataLike } from 'gatsby-plugin-image'
 import * as React from 'react'
 import BlogPreview from '../components/blog-components/BlogPreview'
 import Container from '../components/Container'
 import Header from '../components/Header'
 import IndexLayout from '../layouts'
+import { PostProps } from '../types/post.props'
 
 export interface BlogPostsProps {
   data: {
@@ -17,13 +17,7 @@ export interface BlogPostsProps {
             minutes: number
           }
         }
-        frontmatter: {
-          title: string
-          lead: string
-          date: string
-          author: string
-          featuredImage: ImageDataLike
-        }
+        frontmatter: PostProps
       }[]
     }
   }
