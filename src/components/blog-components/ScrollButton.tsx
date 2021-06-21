@@ -1,22 +1,8 @@
 import { Button } from '@chakra-ui/react'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaChevronUp } from 'react-icons/fa'
 
 const ScrollButton: React.FC = () => {
-  const [visible, setVisible] = useState(false)
-
-  const toggleVisible = (): void => {
-    if (window.scrollY > 300) {
-      if (window.innerHeight + window.scrollY < document.body.offsetHeight - 150) {
-        setVisible(true)
-      } else {
-        setVisible(false)
-      }
-    } else {
-      setVisible(false)
-    }
-  }
-
   const scrollToTop = (): void => {
     window.scrollTo({
       top: 0,
@@ -24,17 +10,29 @@ const ScrollButton: React.FC = () => {
     })
   }
 
-  if (typeof window !== 'undefined') {
-    window.addEventListener('scroll', toggleVisible)
+  const [visible, setVisible] = useState(false)
+  const [fromTop, setFromTop] = useState(0)
+  const [fromBottom, setFromBottom] = useState(window.innerHeight)
+
+  const onScroll = () => {
+    setFromTop(window.scrollY)
+    setFromBottom(document.body.offsetHeight - window.innerHeight - window.scrollY)
+    setVisible(fromTop > 200 && fromBottom > 200)
   }
+
+  useEffect(() => {
+    window.addEventListener('scroll', onScroll)
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+    }
+  })
 
   return (
     <Button
       position="fixed"
       w="2.5rem"
       h="2.5rem"
-      left="50%"
-      transform="translateX(-50%)"
+      right="2.5rem"
       bottom={visible ? '1.5rem' : '0.5rem'}
       colorScheme="orange"
       transition="all .5s"
