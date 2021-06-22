@@ -49,7 +49,7 @@ const PekPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
                 </Text>
               </HStack>
               <HStack flex={1} justifyContent="flex-end">
-                {project.frontmatter.techs.split(',').map((tech) => (
+                {project.frontmatter.techs.map((tech) => (
                   <Tag key={tech}>{tech.trim()}</Tag>
                 ))}
               </HStack>

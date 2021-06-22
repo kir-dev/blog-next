@@ -82,7 +82,7 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ data }) => {
                 </Box>
                 <Box>
                   <HStack wrap="wrap" justifyContent="flex-end">
-                    {project.techs.split(',').map((tech) => (
+                    {project.techs.map((tech) => (
                       <Tag colorScheme="blue" key={tech}>
                         {tech.trim()}
                       </Tag>

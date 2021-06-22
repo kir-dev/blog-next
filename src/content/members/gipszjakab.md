@@ -5,7 +5,7 @@ realName: 'Gipsz Jakab'
 email: gipsz.jakab@bme.hu
 position: tag
 joinDate: 2021-06
-interests: 'NodeJS, Rails, Kotlin, React'
+interests: ['NodeJS', 'Rails', 'Kotlin', 'React']
 avatar: ../images/avatars/gipszjakab.jpg
 active: true
 ---

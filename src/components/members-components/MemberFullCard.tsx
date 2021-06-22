@@ -58,7 +58,7 @@ const MemberFullCard: React.FC<{ member: MemberProps }> = ({ member }) => {
               <Text pl={3} fontSize="sm">
                 Érdeklődés:
               </Text>
-              {member.interests.split(',').map((interest) => (
+              {member.interests.map((interest) => (
                 <Badge
                   key={interest}
                   lineHeight="base"

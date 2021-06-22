@@ -5,7 +5,7 @@ realName: 'Kovács Béla'
 email: kovacs.bela@bme.hu
 position: PR felelős
 joinDate: 2021-06
-interests: 'NodeJS, Rails, Kotlin, React'
+interests: ['NodeJS', 'Rails', 'Kotlin', 'React']
 avatar: null
 active: true
 ---

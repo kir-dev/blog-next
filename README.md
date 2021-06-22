@@ -55,7 +55,7 @@ Szerkesztéskor a projekt markdown fájljában:
 - A `status` fieldben megadhatod a projekt jelenlegi állását, illetve hogy milyen színű pötty jelenjen meg a felirat mellett a project previewban. Pl.: `status: 'Aktív green'` esetén az Aktív felirat mellett zöld pötty fog megjelenni, mindig az utolsó szó adja meg a színt.
   - Használhatóak ilyen feliratok, mint `Tervezés green`, `Fejlesztés alatt green`, `Üzemeltetve green`, `Megszakadt red`, `Áll orange` de lehetőleg maradjunk értelmes feliratoknál és színeknél a konzisztencia érdekében (aktív fázisokban inkább a zöld színt használjuk, a szöveg lehet akármi, inaktívaknál a vörös és narancssárga ajánlott).
   - Extra: `Archivált <color>` megadása esetén hold ikon jelenik meg a státusz feliratban, `Kész <color>` esetén egy pipa, `Áll <color>` esetén pedig egy felkiáltójeles kör alakú ikon.
-- A `techs` fieldben megadhatod vesszővel elválasztva a projekt főbb techjeit (lehetőleg maradj max 3-nál). Pl.: `techs: TypeScript, Node.js`
+- A `techs` fieldben megadhatod vesszővel elválasztva egy tömbben a projekt főbb techjeit (lehetőleg maradj max 3-nál). Pl.: `techs: ['TypeScript', 'Node.js']`
 
 ## Hozzáadnál új tagot a csapathoz?
 
@@ -73,7 +73,7 @@ Szerkeszteni tudod a hozzárendelt tulajdonságokat a létrejött markdown fájl
 - `realName`: valódi neved
 - `position`: jelenlegi beosztottsága a körnél (újonc, tag, PR felelős stb.)
 - `joinDate`: amióta a tag aktív a körnél
-- `interests`: általános kulcsszavak arra, mi érdekli a tagot a webfejlesztéssel kapcsolatosan, vesszővel kell elválasztani a kifejezéseket
+- `interests`: általános kulcsszavak arra, mi érdekli a tagot a webfejlesztéssel kapcsolatosan, vesszővel kell elválasztani a kifejezéseket tömbben, pl.: `interests: ['TypeScript', 'Node']`
 - `avatar`: ha nem a PéK-en is használt képét szeretné használni, akkor a megadható a repóból egy kép url-je
 - `active`: megadható, hogy a tag jelenleg aktív tagja-e a csapatnak
 - Minden további infót, amit szeretnél megosztani a világgal, írd meg a markdown fájl további részében.

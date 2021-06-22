@@ -75,7 +75,7 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
               </Text>
             </HStack>
             <HStack flex={1} justifyContent="flex-end">
-              {project.frontmatter.techs.split(',').map((tech) => (
+              {project.frontmatter.techs.map((tech) => (
                 <Tag>{tech.trim()}</Tag>
               ))}
             </HStack>

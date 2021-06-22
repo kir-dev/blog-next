@@ -5,7 +5,7 @@ realName: 'Takács Eszter'
 email: takacs.eszter@bme.hu
 position: körvezető
 joinDate: 2021-06
-interests: 'NodeJS, Rails, Kotlin, React'
+interests: ['NodeJS', 'Rails', 'Kotlin', 'React']
 avatar: ../images/avatars/takacseszter.jpg
 active: true
 ---
