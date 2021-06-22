@@ -158,7 +158,8 @@ export const query = graphql`
         frontmatter {
           title
           sessions {
-            time
+            startDateTime
+            lengthInHours
             place
           }
           lecturer

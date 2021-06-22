@@ -1,7 +1,11 @@
 ---
 layout: course
 title: 'NodeJS + TypeScript 🤖'
-sessions: [{ time: 'febr. 25. 18:00 - 20:30', place: 'Google Meet' }, { time: 'márc. 4. 18:00 - 21:00', place: 'Google Meet' }]
+sessions:
+  [
+    { startDateTime: '2021-02-25 18:00:00', lengthInHours: 2.5, place: 'Google Meet' },
+    { startDateTime: '2021-03-04 18:00:00', lengthInHours: 3, place: 'Google Meet' }
+  ]
 lecturer: 'Piller Trisztán'
 active: true
 ---

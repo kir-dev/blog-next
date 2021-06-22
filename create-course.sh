@@ -22,7 +22,7 @@ touch $filepath
 echo '---' >> $filepath
 echo 'layout: course' >> $filepath
 echo 'title: "'$title'"' >> $filepath
-echo 'sessions: [{ time: "2021-06-21 16:00", place: "SCH 103" }]' >> $filepath
+echo 'sessions: [{ date: "2021-06-21", startTime: "18:00:00", endTime: "20:00:00", place: "SCH 103" }]' >> $filepath
 echo 'lecturer: "'$lecturer'"' >> $filepath
 echo 'active: true' >> $filepath
 echo '---' >> $filepath

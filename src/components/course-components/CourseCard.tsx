@@ -1,7 +1,7 @@
 import { Box, Flex, HStack, Text } from '@chakra-ui/react'
 import React from 'react'
-import { FaChalkboardTeacher, FaClock } from 'react-icons/fa'
-import { CourseProps } from '../../types/course.props'
+import { FaChalkboardTeacher, FaClock, FaMapMarkerAlt } from 'react-icons/fa'
+import { CourseProps, ISession } from '../../types/course.props'
 
 interface CourseCardProps {
   course: {
@@ -13,6 +13,23 @@ interface CourseCardProps {
   }
 }
 
+const getSessionString = (session: ISession): string => {
+  const startDateTime = new Date(session.startDateTime)
+  const targetDateTime = new Date(startDateTime)
+  targetDateTime.setHours(targetDateTime.getHours() + session.lengthInHours)
+
+  return `${startDateTime.toLocaleTimeString('hu-HU', {
+    weekday: 'long',
+    month: 'short',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit'
+  })} - ${targetDateTime.toLocaleTimeString('hu-HU', {
+    hour: '2-digit',
+    minute: '2-digit'
+  })}`
+}
+
 const CourseCard: React.FC<CourseCardProps> = ({ course }) => (
   <Flex direction="column">
     <Text fontWeight="light" fontSize="2xl">
@@ -20,15 +37,19 @@ const CourseCard: React.FC<CourseCardProps> = ({ course }) => (
     </Text>
     <Box mt={2}>
       {course.frontmatter.sessions.map((session) => (
-        <HStack mt={1} justifyItems="center">
-          <FaClock />
-          <Text>
-            {session.time} - {session.place}
-          </Text>
-        </HStack>
+        <Flex mt={3} justifyContent="space-between" alignItems="center" flexWrap="wrap">
+          <HStack pr={4}>
+            <FaClock />
+            <Text>{getSessionString(session)}</Text>
+          </HStack>
+          <HStack>
+            <FaMapMarkerAlt />
+            <Text>{session.place}</Text>
+          </HStack>
+        </Flex>
       ))}
       {course.frontmatter.lecturer && (
-        <HStack mt={2}>
+        <HStack mt={4}>
           <FaChalkboardTeacher />
           <Text>{course.frontmatter.lecturer}</Text>
         </HStack>

@@ -1,7 +1,11 @@
 ---
 layout: course
 title: 'SpringBoot + Kotlin 🍃'
-sessions: [{ time: 'febr. 23. 18:00 - 20:00', place: 'Google Meet' }, { time: 'márc. 3. 18:00 - 20:00', place: 'Google Meet' }]
+sessions:
+  [
+    { startDateTime: '2021-02-23 18:00:00', lengthInHours: 2, place: 'Google Meet' },
+    { startDateTime: '2021-03-03 18:00:00', lengthInHours: 2, place: 'Google Meet' }
+  ]
 lecturer: 'Szabó Gergely'
 featuredImage: ../../assets/images/spring-logo.svg
 active: true
