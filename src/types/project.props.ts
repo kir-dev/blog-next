@@ -10,5 +10,5 @@ export interface ProjectProps {
     label: string
     color: string
   }
-  techs: string
+  techs: Array<string>
 }

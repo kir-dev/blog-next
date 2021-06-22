@@ -4,7 +4,7 @@ export interface MemberProps {
   pekUsername: string
   realName: string
   position: string
-  interests: string
+  interests: Array<string>
   joinDate: string
   avatar: ImageDataLike
   active: boolean
