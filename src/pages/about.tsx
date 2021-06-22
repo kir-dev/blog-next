@@ -75,9 +75,10 @@ const AboutPage: React.FC = () => {
                   </GatsbyLink>{' '}
                   – röviden PéK – folyamatos fejlesztése és karbantartása. Jelenleg ezen az alkalmazáson keresztül folyik a kar közösségi
                   pontozása. Ez a rendszer már több generációt is megélt az aktív körtagoknak köszönhetően: legelőször Kollégiumi
-                  Információs Rendszernek hívtuk (KIR), aztán a kiterjedésével Villanykari Információs Rendszer (VIR) lett, később pedig
-                  megkapta modern nevét, a PéK-et. A korábbi generációi még JavaEE-s alapokon, OpenAM mellett futottak, aztán 2015-ben Ruby
-                  on Rails alapokra lett migrálva. További történeteket blogunk archívumában olvashatsz{' '}
+                  Információs Rendszernek hívtuk (KIR), ez a generáció PHP-ban íródott még. Aztán a kiterjedésével újraírtuk JavaEE-s
+                  alapokon, OpenAM mellett, és Villanykari Információs Rendszer (VIR) lett a neve, később pedig megkapta modern nevét, a
+                  PéK-et. 2015-ben végül pedig a PéK Ruby on Rails alapokra lett migrálva. További történeteket blogunk archívumában
+                  olvashatsz{' '}
                   <GatsbyLink to="/post/2014-01-29-pek-jelen-es-jovo-iv/">
                     <chakra.span color={linkColor} _hover={linkHover}>
                       PÉK jelene és jövője
