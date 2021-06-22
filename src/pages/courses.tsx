@@ -70,7 +70,7 @@ const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
         <Box>
           <Heading as="h2">{CURRENT_COURSE_SEMESTER}</Heading>
           <Box mt={6}>
-            <Grid templateColumns={`repeat(${useBreakpointValue({ base: 1, sm: 2 })}, 1fr)`} gap={16}>
+            <Grid templateColumns={`repeat(${useBreakpointValue({ base: 1, sm: 2 })}, 1fr)`} gap={6}>
               {data.allMarkdownRemark.nodes.map((course) => (
                 <CourseCard key={course.fields.slug} course={course} />
               ))}
