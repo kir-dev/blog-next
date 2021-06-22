@@ -39,17 +39,19 @@ const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
               </Text>
             </Box>
             <Flex justifyContent="space-between" mt={4}>
-              <Button
-                display={{ base: 'inherit', md: 'none' }}
-                color="white"
-                bg="orange.500"
-                _hover={{ bg: 'orange.600' }}
-                as={ChakraLink}
-                px={4}
-                href={CURRENT_COURSE_FORM_URL}
-              >
-                Jelentkezz!
-              </Button>
+              {CURRENT_COURSE_FORM_URL && (
+                <Button
+                  display={{ base: 'inherit', md: 'none' }}
+                  color="white"
+                  bg="orange.500"
+                  _hover={{ bg: 'orange.600' }}
+                  as={ChakraLink}
+                  px={4}
+                  href={CURRENT_COURSE_FORM_URL}
+                >
+                  Jelentkezz!
+                </Button>
+              )}
               <Flex justifyContent="flex-end" h={{ base: '7rem', sm: '9rem', md: '14rem', lg: '12rem' }} ml={4}>
                 <TechsLogo style={{ height: '100%' }} />
               </Flex>
