@@ -7,7 +7,7 @@ category: pek
 comment: true
 ---
 
-Az [előző részben]({% post_url 2014-01-23-pek-jelen-es-jovo-i %}) a VIR és a
+Az [előző részben](/post/2014-01-23-pek-jelen-es-jovo-i) a VIR és a
 PÉK különbségére próbáltam rávilágítani. Mielőtt még tényleg rátérnénk a címben
 említett jelenre és jövőre, még egy picit a múltba kell merülnünk. A múlt fontos
 szerepet játszik abban, hogy megértsük a PÉK jövőjével kapcsolatos, már-már

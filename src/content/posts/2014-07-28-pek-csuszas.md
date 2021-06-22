@@ -35,8 +35,8 @@ A PÉKben az a szép, hogy open source. A kód kint van [githubon][5], és pull-
 requesteket szívesen fogadunk. Aki kedvet kapott hozzá, hogy alakítsa a
 Schönherz közéletének egyik fontos pillérét, az ne habozzon. Csak egy `git clone`-nyi távolságra vagyunk.
 
-[1]: {% post_url 2014-07-18-pek-front-end %}
+[1]: /post/2014-07-18-pek-front-end
 [2]: https://lists.sch.bme.hu/wws
 [3]: https://wiki.sch.bme.hu
-[4]: {% post_url 2014-06-05-auth-sch-tesztrepules %}
+[4]: /post/2014-06-05-auth-sch-tesztrepules
 [5]: https://github.com/kir-dev/korok
