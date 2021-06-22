@@ -1,4 +1,4 @@
-import { Box, Button, chakra, Flex, Grid, Heading, Link as ChakraLink, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Button, chakra, Flex, Grid, Heading, Link as ChakraLink, Text, useBreakpointValue, useColorModeValue } from '@chakra-ui/react'
 import { graphql, Link } from 'gatsby'
 import * as React from 'react'
 import TechsLogo from '../assets/images/techs-logo.svg'
@@ -55,11 +55,13 @@ const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
               </Flex>
             </Flex>
           </Flex>
-          <Box display={{ base: 'none', md: 'inherit' }} mt={4}>
-            <Button color="white" bg="orange.500" _hover={{ bg: 'orange.600' }} as={ChakraLink} px={8} href={CURRENT_COURSE_FORM_URL}>
-              Jelentkezz!
-            </Button>
-          </Box>
+          {CURRENT_COURSE_FORM_URL && (
+            <Box display={{ base: 'none', md: 'inherit' }} mt={4}>
+              <Button color="white" bg="orange.500" _hover={{ bg: 'orange.600' }} as={ChakraLink} px={8} href={CURRENT_COURSE_FORM_URL}>
+                Jelentkezz!
+              </Button>
+            </Box>
+          )}
         </Container>
       </Header>
       <Container>
@@ -82,9 +84,15 @@ const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
               férőhelyek száma korlátos, így a tanfolyam résztvevőinek listáját jelentkezési sorrend alapján alakítjuk ki.
             </Text>
             <Flex flex={1} justifyContent="flex-end" pl={{ base: 0, md: 8 }} mt={{ base: 4, md: 0 }}>
-              <Button color="white" bg="orange.500" _hover={{ bg: 'orange.600' }} as={ChakraLink} px={8} href={CURRENT_COURSE_FORM_URL}>
-                Jelentkezz!
-              </Button>
+              {CURRENT_COURSE_FORM_URL ? (
+                <Button color="white" bg="orange.500" _hover={{ bg: 'orange.600' }} as={ChakraLink} px={8} href={CURRENT_COURSE_FORM_URL}>
+                  Jelentkezz!
+                </Button>
+              ) : (
+                <Button colorScheme={useColorModeValue('blackAlpha', 'blue')} variant="outline">
+                  Nincs jelentkezési időszak
+                </Button>
+              )}
             </Flex>
           </Flex>
         </Box>
