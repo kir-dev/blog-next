@@ -24,6 +24,5 @@ echo 'layout: course' >> $filepath
 echo 'title: "'$title'"' >> $filepath
 echo 'sessions: [{ time: "2021-06-21 16:00", place: "SCH 103" }]' >> $filepath
 echo 'lecturer: "'$lecturer'"' >> $filepath
-echo 'featuredImage: null' >> $filepath
 echo 'active: true' >> $filepath
 echo '---' >> $filepath

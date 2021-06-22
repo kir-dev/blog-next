@@ -1,7 +1,6 @@
-import { Box, Flex, Text } from '@chakra-ui/react'
-import { Link } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { Box, Flex, HStack, Text } from '@chakra-ui/react'
 import React from 'react'
+import { FaChalkboardTeacher, FaClock } from 'react-icons/fa'
 import { CourseProps } from '../../types/course.props'
 
 interface CourseCardProps {
@@ -14,28 +13,32 @@ interface CourseCardProps {
   }
 }
 
-const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
-  const featuredImage = getImage(course.frontmatter.featuredImage)
-
-  return (
-    <Flex mt={2} direction={{ base: 'column', md: 'row' }} justifyContent="space-between">
-      <Box zIndex={2}>
-        <Link to={course.fields.slug}>{featuredImage && <GatsbyImage image={featuredImage} alt="Blog preview" objectFit="contain" />}</Link>
-      </Box>
-      <Flex flex={1} direction="column" justifyContent="center" mt={{ base: 3, md: 0 }} pl={{ base: 0, md: 3 }}>
-        <Text fontWeight="light" fontSize="2xl">
-          <Text as={Link} to={course.fields.slug}>
-            {course.frontmatter.title}
+const CourseCard: React.FC<CourseCardProps> = ({ course }) => (
+  <Flex direction="column">
+    <Text fontWeight="light" fontSize="2xl">
+      {course.frontmatter.title}
+    </Text>
+    <Box mt={2}>
+      {course.frontmatter.sessions.map((session) => (
+        <HStack mt={1} justifyItems="center">
+          <FaClock />
+          <Text>
+            {session.time} - {session.place}
           </Text>
-        </Text>
-        <Text mt={1} fontSize="md">
-          {/* eslint-disable-next-line react/no-danger */}
-          <div dangerouslySetInnerHTML={{ __html: course.html }} />
-        </Text>
-        <Flex justifyContent="space-between">asd</Flex>
-      </Flex>
-    </Flex>
-  )
-}
+        </HStack>
+      ))}
+      {course.frontmatter.lecturer && (
+        <HStack mt={2}>
+          <FaChalkboardTeacher />
+          <Text>{course.frontmatter.lecturer}</Text>
+        </HStack>
+      )}
+    </Box>
+    <Box mt={2} fontSize="md">
+      {/* eslint-disable-next-line react/no-danger */}
+      <div dangerouslySetInnerHTML={{ __html: course.html }} />
+    </Box>
+  </Flex>
+)
 
 export default CourseCard

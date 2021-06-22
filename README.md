@@ -87,8 +87,7 @@ Szerkeszteni tudod a hozzárendelt tulajdonságokat a létrejött markdown fájl
 - `title`: Cím
 - `lecturer`: Előadó neve
 - `sessions`: Egy tömb, amelyben objektumonként megadod az egyes alkalmak időpontját és helyét.
-- `featuredImage`: egy kis kép illusztrációként, lehet null
-- `active`: jelenleg aktív-e a tanfolyam
+- `active`: jelenleg aktív-e a tanfolyam, ha false, nem jelenik meg a tanfolyam oldalon sem
 - A leírást pedig írd meg a markdown fájl további részében.
 
 ## License
