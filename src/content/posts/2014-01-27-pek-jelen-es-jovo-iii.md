@@ -7,7 +7,7 @@ category: pek
 comment: true
 ---
 
-Most, hogy már tisztában vagyunk a [PÉK és a VIR különbségével]({% post_url 2014-01-23-pek-jelen-es-jovo-i %}), valamint a [PÉK múltjával]({% post_url 2014-01-25-pek-jelen-es-jovo-ii %}), ideje rátérni a jelenére is. Nézzük meg, hogyan épül fel az alkalmazás és ez milyen problémákhoz vezet!
+Most, hogy már tisztában vagyunk a [PÉK és a VIR különbségével](/post/2014-01-23-pek-jelen-es-jovo-i), valamint a [PÉK múltjával](/post/2014-01-25-pek-jelen-es-jovo-ii), ideje rátérni a jelenére is. Nézzük meg, hogyan épül fel az alkalmazás és ez milyen problémákhoz vezet!
 
 Mielőtt belefognék, meg kell jegyeznem, hogy a PÉK hagyományosan egy tanuló projekt volt a körön belül, emiatt sok egyetemi beadandót élt már meg. Fejlesztői sokszor ezen keresztül ismerkedtek meg a JavaEE világával és a webfejlesztéssel is. Ennek az eredménye, hogy néhol a kódbázis hagy némi kívánni valót maga után.
 
