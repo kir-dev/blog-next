@@ -1364,10 +1364,10 @@
     "@chakra-ui/react-utils" "1.1.1"
     "@chakra-ui/utils" "1.5.2"
 
-"@chakra-ui/gatsby-plugin@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@chakra-ui/gatsby-plugin/-/gatsby-plugin-1.0.2.tgz#7895e49575aad4e7cadcd3ed9ea6a15f7688b5df"
-  integrity sha512-Xunrf4I2SSoiDx8HgOO7doVFv2Y2oTRJSZXGKeqocOA2TW0Zj3OCU2PRB1QuD4mkwxQ1gs73o4Ho9aQimTxTJQ==
+"@chakra-ui/gatsby-plugin@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/gatsby-plugin/-/gatsby-plugin-2.0.1.tgz#c8373f61fa112829dbe72225c7413f709e33751d"
+  integrity sha512-+Gy72AcPGdM6TIoY2RZou+3q2pkGkOzSmohyLGfz6XzWoMKYO8lWk38jKGnB7wyVQ3MR1AM+0hQTab75B0cukg==
 
 "@chakra-ui/hooks@1.4.0":
   version "1.4.0"
@@ -1948,6 +1948,16 @@
     js-yaml "^3.13.1"
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
+
+"@fontsource/open-sans@^4.4.5":
+  version "4.4.5"
+  resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-4.4.5.tgz#07b31617e62ed753c94cabcf552ebaed4de497ce"
+  integrity sha512-PDWEvO1/p8OAHHiielvEmwGXHNbZhrZn96ojV7+/mKgFu+cCUcGVJl9sFs97rCWLe3hKQsYLEsJs4EiLjwa+UQ==
+
+"@fontsource/poppins@^4.4.5":
+  version "4.4.5"
+  resolved "https://registry.yarnpkg.com/@fontsource/poppins/-/poppins-4.4.5.tgz#c75dcc453f7a9381de3f9b932366c2457887184c"
+  integrity sha512-pu675yvBGFhAHD8D7uj7C0NaHqDxD7mlgmLM8ziyYL4kYH79fil7rJ6U5X2oaKxoyRk3rxxb9k1fG0CCc7CquA==
 
 "@gatsbyjs/reach-router@^1.3.6":
   version "1.3.6"

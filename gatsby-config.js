@@ -10,13 +10,7 @@ module.exports = {
     siteUrl: 'https://kir-dev.sch.bme.hu'
   },
   plugins: [
-    {
-      resolve: '@chakra-ui/gatsby-plugin',
-      options: {
-        isResettingCSS: true, // optional, default to true
-        isUsingColorMode: true // optional, default to true
-      }
-    },
+    '@chakra-ui/gatsby-plugin',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
