@@ -35,7 +35,7 @@ const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
               </Heading>
               <Text fontFamily="mono" mt={4} fontSize={{ base: 'md', sm: 'lg', md: 'xl' }}>
                 A tavaszi félévek folyamán webes alapozót, és több alkalmas tanfolyamokat tartunk, ahol megismerkedhettek a HTML és a CSS
-                alapjaival, egy-egy keretrendszer használatával, illetve a munka világában használatos fogalmakkal, eszközökkel.
+                alapjaival, egy-egy keretrendszer használatával, illetve a webfejlesztés során előkerülő fogalmakkal, eszközökkel.
               </Text>
             </Box>
             <Flex justifyContent="space-between" mt={4}>
