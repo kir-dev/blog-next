@@ -49,7 +49,7 @@ git.sch.bme.hu-n: [itt][6] és [itt][7]. Ha bármilyen kérdés van, akkor újfe
 
 meg nem történik, a régi VIR is használható lesz, de csak korlátozottan.
 
-[1]: {% post_url 2014-03-16-auth-sch %}
+[1]: /post/2014-03-16-auth-sch
 [2]: https://auth.sch.bme.hu/
 [3]: https://twitter.com/vbalazs
 [4]: http://webchat.freenode.net/?channels=kir-dev

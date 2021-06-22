@@ -7,7 +7,7 @@ comment: true
 title: 'PÉK kérdőív'
 ---
 
-Múltkor [említettem]({% post_url 2014-01-29-pek-jelen-es-jovo-iv %}), hogy a kíváncsiak vagyunk a véleményetekre a PÉK jelenlegi állapotát illetően. Elsősorban azt szeretnénk tudni ti hogyan használjátok a PÉK-et, milyen nehézségekbe ütköztök és mi hiányzik a legjobban. Ennek a felmérésére készítettünk egy rövid kérdőívet.
+Múltkor [említettem](/post/2014-01-29-pek-jelen-es-jovo-iv), hogy a kíváncsiak vagyunk a véleményetekre a PÉK jelenlegi állapotát illetően. Elsősorban azt szeretnénk tudni ti hogyan használjátok a PÉK-et, milyen nehézségekbe ütköztök és mi hiányzik a legjobban. Ennek a felmérésére készítettünk egy rövid kérdőívet.
 
 A kérdőív kitöltésével nagyban segíted a PÉK fejlesztésének következő iterációját, amiben a mostani felületet fogjuk újragondolni és lecserélni.
 
