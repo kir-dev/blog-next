@@ -1,8 +1,10 @@
 # blog-next
 
+![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=blog-next-kir-dev&style=for-the-badge)
+
 A [kir-dev.sch.bme.hu](https://kir-dev.sch.bme.hu) következő generációs blogja.
 
-A projekt jelenleg fejlesztési szakaszban van, az aktuális állapot [Netlify-on](https://quizzical-mestorf-416189.netlify.com/) tekinthető meg.
+A projekt jelenleg fejlesztési szakaszban van, az aktuális állapot [Vercelen](http://blog-next-kir-dev.vercel.app/) tekinthető meg.
 
 ## Telepítés
 
@@ -95,4 +97,4 @@ All other directories and files are MIT Licensed.
 
 ## Sponsors
 
-<a href="https://vercel.com?utm_source=kir-dev&utm_campaign=oss"><img src="src/assets/images/powered-by-vercel.svg" height="36" /></a>
+<a href="https://vercel.com?utm_source=kir-dev&utm_campaign=oss"><img src="src/assets/images/powered-by-vercel.svg" height="46" /></a>
