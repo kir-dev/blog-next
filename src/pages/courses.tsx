@@ -38,7 +38,7 @@ const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
                 alapjaival, egy-egy keretrendszer használatával, illetve a webfejlesztés során előkerülő fogalmakkal, eszközökkel.
               </Text>
             </Box>
-            <Flex justifyContent="space-between" mt={4}>
+            <Flex justifyContent={CURRENT_COURSE_FORM_URL ? 'space-between' : 'flex-end'} mt={4}>
               {CURRENT_COURSE_FORM_URL && (
                 <Button
                   display={{ base: 'inherit', md: 'none' }}
