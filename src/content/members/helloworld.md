@@ -5,7 +5,7 @@ realName: 'Hegyi Vince'
 email: helloworld@bme.hu
 position: tag
 joinDate: 2021-06
-interests: 'NodeJS, Rails, Kotlin, React'
+interests: ['NodeJS', 'Rails', 'Kotlin', 'React']
 avatar: ../images/avatars/helloworld.jpg
 active: true
 ---
