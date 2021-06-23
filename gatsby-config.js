@@ -1,5 +1,5 @@
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
 })
 
 module.exports = {
@@ -41,6 +41,13 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        name: 'course',
+        path: `${__dirname}/src/content/courses`
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         name: 'images',
         path: `${__dirname}/src/content/images`
       }
@@ -49,9 +56,9 @@ module.exports = {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: /assets\/images/,
-        },
-      },
+          include: /assets\/images/
+        }
+      }
     },
     {
       resolve: 'gatsby-transformer-remark',
@@ -68,8 +75,8 @@ module.exports = {
             options: {
               className: `md-headinglink`,
               isIconAfterHeader: true,
-              elements: [`h1`, `h2`, `h3`, `h4`],
-            },
+              elements: [`h1`, `h2`, `h3`, `h4`]
+            }
           },
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
@@ -89,7 +96,7 @@ module.exports = {
               theme: {
                 default: 'Quiet Light',
                 parentSelector: {
-                  'body[class=chakra-ui-dark]': 'Default Dark+',
+                  'body[class=chakra-ui-dark]': 'Default Dark+'
                 }
               }
             }
@@ -98,26 +105,26 @@ module.exports = {
             resolve: `gatsby-remark-classes`,
             options: {
               classMap: {
-                "heading[depth=1]": "md-h1",
-                "heading[depth=2]": "md-h2",
-                "heading[depth=3]": "md-h3",
-                "heading[depth=4]": "md-h4",
-                "heading[depth=5]": "md-h5",
-                "heading[depth=6]": "md-h6",
-                paragraph: "md-p",
-                "list[ordered=false]": "md-ul",
-                "list[ordered=true]": "md-ol",
-                blockquote: "md-blockquote",
-                listItem: "md-li",
-                link: "md-a",
-                tableCell: "md-td",
-                thematicBreak: "md-hr",
-                table: "md-table",
-                inlineCode: "md-code"
+                'heading[depth=1]': 'md-h1',
+                'heading[depth=2]': 'md-h2',
+                'heading[depth=3]': 'md-h3',
+                'heading[depth=4]': 'md-h4',
+                'heading[depth=5]': 'md-h5',
+                'heading[depth=6]': 'md-h6',
+                paragraph: 'md-p',
+                'list[ordered=false]': 'md-ul',
+                'list[ordered=true]': 'md-ol',
+                blockquote: 'md-blockquote',
+                listItem: 'md-li',
+                link: 'md-a',
+                tableCell: 'md-td',
+                thematicBreak: 'md-hr',
+                table: 'md-table',
+                inlineCode: 'md-code'
               }
             }
           },
-          `gatsby-remark-reading-time`,
+          `gatsby-remark-reading-time`
         ]
       }
     },

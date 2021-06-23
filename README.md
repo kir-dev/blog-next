@@ -80,6 +80,19 @@ Szerkeszteni tudod a hozzárendelt tulajdonságokat a létrejött markdown fájl
 
 **Fontos:** ha képet is teszel a repóba magadról, akkor tedd be a képet pekusername-eddel elnevezve a `content/images/avatars/` könyvtárba.
 
+## Tanfolyamok
+
+Érdemes lehet átírni a már meglévő kurzus entitásokat a `content/courses` könyvtárban. Azonban ha mégis új tanfolyamot kell hozzáadnod, használd a `create-course.sh` shell scriptet (`./create-course.sh '<title>' '<lecturer>'`).
+
+Szerkeszteni tudod a hozzárendelt tulajdonságokat a létrejött markdown fájlban:
+
+- `title`: Cím
+- `lecturer`: Előadó neve
+- `sessions`: Egy tömb, amelyben objektumonként megadod az egyes alkalmak időpontját és helyét.
+  - Fun fact: TanulóSCH-n új feature a tanulószobától független események rendezése, így akár belinkelhetsz egy TanulóSCH eseményt is.
+- `active`: jelenleg aktív-e a tanfolyam, ha false, nem jelenik meg a tanfolyam oldalon sem
+- A leírást pedig írd meg a markdown fájl további részében.
+
 ## License
 
 - Front page header background image by Chris Reid on Unsplash: https://unsplash.com/photos/LfG7RwMM6g8
