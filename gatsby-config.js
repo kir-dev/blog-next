@@ -10,7 +10,13 @@ module.exports = {
     siteUrl: 'https://kir-dev.sch.bme.hu'
   },
   plugins: [
-    '@chakra-ui/gatsby-plugin',
+    {
+      resolve: '@chakra-ui/gatsby-plugin',
+      options: {
+        resetCss: true,
+        portalZIndex: 40
+      }
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
