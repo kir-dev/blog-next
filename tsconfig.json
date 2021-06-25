@@ -12,7 +12,14 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "removeComments": false,
-    "preserveConstEnums": true
+    "preserveConstEnums": true,
+    "baseUrl": "src/",
+    "paths": {
+      "~assets/*": ["assets/*"],
+      "~types/*": ["types/*"],
+      "~components/*": ["components/*"],
+      "~utils/*": ["utils/*"]
+    }
   },
   "include": ["./src/**/*"]
 }
