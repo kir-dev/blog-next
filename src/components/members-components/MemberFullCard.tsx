@@ -33,10 +33,10 @@ const MemberFullCard: React.FC<{ member: MemberProps }> = ({ member }) => {
           <Heading fontSize="2xl" fontWeight="bold">
             {member.realName}
           </Heading>
-          <Flex alignItems="center">
+          <Flex alignItems="center" mt={4}>
             <FaUserCircle />
             <Text pl={3} fontSize="sm" as={Link} href={`${PEK_URL}/profiles/${member.pekUsername}`}>
-              {member.pekUsername}
+              profiles/{member.pekUsername}
             </Text>
           </Flex>
           <Flex alignItems="center">

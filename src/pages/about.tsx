@@ -39,9 +39,9 @@ const AboutPage: React.FC = () => {
           <Box textAlign="center" my={6}>
             <Heading mb={6} fontSize={{ base: '4xl', sm: '5xl', md: '6xl' }} fontWeight="bold" lineHeight="none" letterSpacing="tight">
               A kollégium{' '}
-              <Text display="inline" w="full" bgClip="text" bgGradient="linear(to-r, tomato, orange.300)" fontWeight="extrabold">
+              <chakra.span px={0.5} bgClip="text" bgGradient="linear(to-r, tomato, orange.300)">
                 webfejlesztő
-              </Text>{' '}
+              </chakra.span>{' '}
               köre
             </Heading>
           </Box>
@@ -330,9 +330,9 @@ const AboutPage: React.FC = () => {
 
           <Box textAlign="center" my={10} fontSize={{ base: '3xl', sm: '4xl' }} lineHeight="none" letterSpacing="tight">
             <Text>Üdvözöl: </Text>a{' '}
-            <Text display="inline" w="full" bgClip="text" bgGradient="linear(to-r, tomato, orange.300)" fontWeight="extrabold">
+            <chakra.span px={0.5} bgClip="text" bgGradient="linear(to-r, tomato, orange.300)">
               Kir-Dev
-            </Text>{' '}
+            </chakra.span>{' '}
             csapata
           </Box>
         </Container>

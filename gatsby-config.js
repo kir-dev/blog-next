@@ -13,8 +13,8 @@ module.exports = {
     {
       resolve: '@chakra-ui/gatsby-plugin',
       options: {
-        isResettingCSS: true, // optional, default to true
-        isUsingColorMode: true // optional, default to true
+        resetCss: true,
+        portalZIndex: 40
       }
     },
     {

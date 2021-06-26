@@ -11,7 +11,7 @@ const WithSubnavigation: React.FC = () => {
   const { colorMode, toggleColorMode } = useColorMode()
 
   return (
-    <Box align="center">
+    <Box align="center" fontFamily="heading">
       <Flex
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.800', 'white')}
