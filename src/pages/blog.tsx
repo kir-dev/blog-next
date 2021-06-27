@@ -1,11 +1,11 @@
 import { Box, Grid, Heading, Text, useBreakpointValue } from '@chakra-ui/react'
 import { graphql, Link } from 'gatsby'
 import * as React from 'react'
-import BlogPreview from '../components/blog-components/BlogPreview'
-import Container from '../components/Container'
-import Header from '../components/Header'
+import BlogPreview from '~components/blog-components/BlogPreview'
+import Container from '~components/Container'
+import Header from '~components/Header'
+import { PostProps } from '~types/post.props'
 import IndexLayout from '../layouts'
-import { PostProps } from '../types/post.props'
 
 export interface BlogPostsProps {
   data: {

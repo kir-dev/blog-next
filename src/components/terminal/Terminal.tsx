@@ -1,6 +1,6 @@
 import { Box, Flex, Link, useColorModeValue } from '@chakra-ui/react'
 import React, { useState } from 'react'
-import { RICKROLL_URL } from '../../utils/configurations'
+import { RICKROLL_URL } from '~utils/configurations'
 import { Frame, Keyframes } from './react-keyframes'
 
 const sleepDuration = 500

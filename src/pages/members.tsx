@@ -1,12 +1,12 @@
 import { Box, Flex, Heading, useBreakpointValue } from '@chakra-ui/react'
 import { graphql } from 'gatsby'
 import * as React from 'react'
-import Container from '../components/Container'
-import Header from '../components/Header'
-import MeetingControls from '../components/members-components/MeetingControls'
-import MemberAvatarCard from '../components/members-components/MemberAvatarCard'
+import Container from '~components/Container'
+import Header from '~components/Header'
+import MeetingControls from '~components/members-components/MeetingControls'
+import MemberAvatarCard from '~components/members-components/MemberAvatarCard'
+import { MemberProps } from '~types/member.props'
 import IndexLayout from '../layouts'
-import { MemberProps } from '../types/member.props'
 
 export interface MembersProps {
   data: {

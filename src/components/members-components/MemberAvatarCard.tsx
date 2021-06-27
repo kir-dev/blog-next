@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React, { useState } from 'react'
 import { FaMicrophoneSlash } from 'react-icons/fa'
-import { MemberProps } from '../../types/member.props'
+import { MemberProps } from '~types/member.props'
 
 interface MemberAvatarCardProps {
   member: {

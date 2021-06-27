@@ -1,6 +1,6 @@
 import { Box, HStack, Image, Link, Text, useColorModeValue } from '@chakra-ui/react'
 import React from 'react'
-import { PEK_URL } from '../../utils/configurations'
+import { PEK_URL } from '~utils/configurations'
 
 interface BlogAuthorProps {
   date: Date

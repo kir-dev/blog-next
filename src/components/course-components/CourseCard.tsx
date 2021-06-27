@@ -1,7 +1,7 @@
 import { Box, Divider, Flex, HStack, Text } from '@chakra-ui/react'
 import React from 'react'
 import { FaChalkboardTeacher, FaClock, FaMapMarkerAlt } from 'react-icons/fa'
-import { CourseProps, ISession } from '../../types/course.props'
+import { CourseProps, ISession } from '~types/course.props'
 
 interface CourseCardProps {
   course: {
