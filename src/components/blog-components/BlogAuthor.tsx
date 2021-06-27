@@ -11,7 +11,12 @@ interface BlogAuthorProps {
 const BlogAuthor: React.FC<BlogAuthorProps> = ({ date, name, hasLongDate }) => (
   <HStack spacing={2} display="flex" alignItems="center">
     <Link to={`${PEK_URL}/profiles/${name}`}>
-      <Image borderRadius="full" boxSize="2.25rem" src={`${PEK_URL}/photos/${name}`} fallbackSrc="../../favicon.png" />
+      <Image
+        borderRadius="full"
+        boxSize={hasLongDate ? '2.5rem' : '2rem'}
+        src={`${PEK_URL}/photos/${name}`}
+        fallbackSrc="../../favicon.png"
+      />
     </Link>
 
     {hasLongDate ? (
@@ -33,10 +38,10 @@ const BlogAuthor: React.FC<BlogAuthorProps> = ({ date, name, hasLongDate }) => (
       </HStack>
     ) : (
       <Box>
-        <Text as={Link} fontWeight="medium" fontSize="md" to={`${PEK_URL}/${name}`}>
+        <Text as={Link} fontWeight="medium" fontSize="sm" to={`${PEK_URL}/${name}`}>
           {name}
         </Text>
-        <Text fontWeight="light" fontSize="sm" fontStyle="italic" textColor={useColorModeValue('gray.600', 'gray.400')}>
+        <Text whiteSpace="nowrap" fontWeight="light" fontSize="xs" fontStyle="italic" textColor={useColorModeValue('gray.600', 'gray.400')}>
           {date.toLocaleDateString('hu-HU', {
             year: 'numeric',
             month: 'numeric',
