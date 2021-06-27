@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React from 'react'
 import { FaGithub } from 'react-icons/fa'
-import { getIcon, ProjectPreviewProps } from '../project-components/ProjectPreview'
+import { getIcon, ProjectPreviewProps } from '~components/project-components/ProjectPreview'
 
 const PekPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
   const featuredImage = getImage(project.frontmatter.featuredImage)

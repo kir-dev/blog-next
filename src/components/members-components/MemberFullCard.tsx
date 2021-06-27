@@ -2,8 +2,8 @@ import { Badge, Box, chakra, Flex, Heading, Link, Text, useColorModeValue } from
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React, { useState } from 'react'
 import { FaBriefcase, FaCalendar, FaHeart, FaUserCircle } from 'react-icons/fa'
-import { MemberProps } from '../../types/member.props'
-import { PEK_URL } from '../../utils/configurations'
+import { MemberProps } from '~types/member.props'
+import { PEK_URL } from '~utils/configurations'
 
 const MemberFullCard: React.FC<{ member: MemberProps }> = ({ member }) => {
   const originalAvatarImage = getImage(member.avatar)

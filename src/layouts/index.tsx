@@ -9,8 +9,8 @@ import { graphql, StaticQuery } from 'gatsby'
 import 'modern-normalize'
 import * as React from 'react'
 import Helmet from 'react-helmet'
-import Footer from '../components/footer/Footer'
-import Navbar from '../components/navbar/Navbar'
+import Footer from '~components/footer/Footer'
+import Navbar from '~components/navbar/Navbar'
 
 interface StaticQueryProps {
   site: {

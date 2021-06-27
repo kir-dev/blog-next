@@ -1,10 +1,10 @@
 import { Box } from '@chakra-ui/react'
 import { graphql } from 'gatsby'
 import * as React from 'react'
-import Container from '../components/Container'
-import MemberFullCard from '../components/members-components/MemberFullCard'
+import Container from '~components/Container'
+import MemberFullCard from '~components/members-components/MemberFullCard'
+import { MemberProps } from '~types/member.props'
 import IndexLayout from '../layouts'
-import { MemberProps } from '../types/member.props'
 
 interface MemberTemplateProps {
   data: {

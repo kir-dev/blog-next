@@ -13,7 +13,7 @@
     "noUnusedParameters": true,
     "removeComments": false,
     "preserveConstEnums": true,
-    "baseUrl": "src/",
+    "baseUrl": "src",
     "paths": {
       "~assets/*": ["assets/*"],
       "~types/*": ["types/*"],
