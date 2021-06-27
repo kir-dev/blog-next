@@ -5,5 +5,6 @@ export interface PostProps {
   lead: string
   author: string
   date: string
+  tags?: Array<string>
   featuredImage: ImageDataLike
 }
