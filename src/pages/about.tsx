@@ -33,14 +33,12 @@ const AboutPage: React.FC = () => {
   const logoStyles = { width: useBreakpointValue({ base: '100%', md: '60%' }), height: useBreakpointValue({ base: '100%', md: '60%' }) }
   const rightSideBgs = 'url(/background/top-right4.svg) right top no-repeat,url(/background/bottom-right.svg) right bottom no-repeat'
   const leftSideBgs = 'url(/background/bottom-left.svg) left top no-repeat,url(/background/top-left.svg) left bottom no-repeat'
-  const patternBgs = 'url(/background/pattern-right.svg) right top repeat-y,url(/background/pattern-left.svg) left top repeat-y'
 
   return (
     <IndexLayout
       background={`${useBreakpointValue({
         base: rightSideBgs,
-        sm: `${patternBgs},${rightSideBgs}`,
-        md: `${patternBgs},${rightSideBgs},${leftSideBgs}`
+        md: `${rightSideBgs},${leftSideBgs}`
       })}`}
     >
       <Box>

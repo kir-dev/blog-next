@@ -38,7 +38,7 @@ const PostTemplate: React.FC<PostTemplateProps> = ({ data }) => {
   return (
     <IndexLayout
       background={useBreakpointValue({
-        lg: 'url(/background/pattern-right.svg) right top repeat-y,url(/background/pattern-left.svg) left top repeat-y'
+        xl: 'url(/background/pattern-right.svg) right top repeat-y,url(/background/pattern-left.svg) left top repeat-y'
       })}
     >
       <Box>

@@ -25,13 +25,10 @@ export const query = graphql`
 
 const Archive: React.FC<BlogPostsProps> = ({ data }) => (
   <IndexLayout
-    background={
-      `url(/background/pattern-right.svg) right top repeat-y,url(/background/pattern-left.svg) left top repeat-y,` +
-      `${useBreakpointValue({
-        base: '',
-        sm: 'url(/background/bottom-left.svg) left top no-repeat, url(/background/top-left.svg) left bottom no-repeat,'
-      })}url(/background/top-right4.svg) right top no-repeat, url(/background/bottom-right.svg) right bottom no-repeat`
-    }
+    background={`${useBreakpointValue({
+      base: '',
+      sm: 'url(/background/bottom-left.svg) left top no-repeat, url(/background/top-left.svg) left bottom no-repeat,'
+    })}url(/background/top-right4.svg) right top no-repeat, url(/background/bottom-right.svg) right bottom no-repeat`}
   >
     <Box>
       <Header>

@@ -6,12 +6,7 @@ import Header from '~components/Header'
 import IndexLayout from '../layouts'
 
 const NotFoundPage: React.FC = () => (
-  <IndexLayout
-    background={
-      `url(/background/pattern-right.svg) right top repeat-y,url(/background/pattern-left.svg) left top repeat-y,` +
-      `url(/background/top-right.svg) right top no-repeat, url(/background/bottom-left.svg) left top no-repeat`
-    }
-  >
+  <IndexLayout background="url(/background/top-right.svg) right top no-repeat, url(/background/bottom-left.svg) left top no-repeat">
     <Box>
       <Header>
         <Container>

@@ -25,7 +25,7 @@ interface MemberTemplateProps {
 const MemberTemplate: React.FC<MemberTemplateProps> = ({ data }) => (
   <IndexLayout
     background={useBreakpointValue({
-      lg: 'url(/background/pattern-right.svg) right top repeat-y,url(/background/pattern-left.svg) left top repeat-y'
+      xl: 'url(/background/pattern-right.svg) right top repeat-y,url(/background/pattern-left.svg) left top repeat-y'
     })}
   >
     <Box>
