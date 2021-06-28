@@ -60,7 +60,7 @@
     "gatsby-remark-images": "^5.0.0",
     "gatsby-remark-reading-time": "^1.1.0",
     "gatsby-remark-responsive-iframe": "^4.0.0",
-    "gatsby-remark-smartypants": "^4.0.0",
+    "gatsby-remark-smartypants": "^4.5.0",
     "gatsby-remark-vscode": "^3.2.1",
     "gatsby-source-filesystem": "^3.7.1",
     "gatsby-transformer-json": "^3.3.0",
@@ -78,7 +78,7 @@
   "devDependencies": {
     "@types/classnames": "^2.3.1",
     "@types/node": "^14.14.37",
-    "@types/react": "^17.0.3",
+    "@types/react": "^17.0.11",
     "@types/react-dom": "^17.0.8",
     "@types/react-helmet": "^6.1.1",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
@@ -87,7 +87,7 @@
     "eslint-config-blvd": "^1.1.1",
     "eslint-config-prettier": "^8.2.0",
     "eslint-import-resolver-typescript": "^2.4.0",
-    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-prettier": "^3.4.0",
     "gh-pages": "^3.1.0",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2"
