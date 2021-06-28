@@ -43,13 +43,12 @@ const BlogPreviewCard: React.FC<BlogPreviewProps> = ({ post }) => {
             <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
           </Text>
           <Box mt={1} fontWeight="light" textColor={useColorModeValue('gray.600', 'gray.400')}>
-            <Box display="inline-block">
-              <HStack p={0} fontSize="sm">
-                <FaClock />
-                <chakra.span whiteSpace="nowrap">{Math.ceil(post.fields.readingTime.minutes)}&nbsp;perc</chakra.span>
-              </HStack>
+            <Box display="inline-block" pr={1}>
+              <FaClock size="0.75rem" />
             </Box>
-            <chakra.span fontSize="md">{post.frontmatter.lead ? ` • ${post.frontmatter.lead}` : ''}</chakra.span>
+            <chakra.span fontSize="md">
+              {Math.ceil(post.fields.readingTime.minutes)}&nbsp;perc{post.frontmatter.lead ? ` • ${post.frontmatter.lead}` : ''}
+            </chakra.span>
           </Box>
         </Flex>
       </Flex>
