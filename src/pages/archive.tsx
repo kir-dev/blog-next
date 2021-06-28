@@ -1,4 +1,4 @@
-import { Box, chakra, Heading } from '@chakra-ui/react'
+import { Box, chakra, Heading, useBreakpointValue } from '@chakra-ui/react'
 import { graphql, Link } from 'gatsby'
 import * as React from 'react'
 import Container from '~components/Container'
@@ -24,7 +24,15 @@ export const query = graphql`
 `
 
 const Archive: React.FC<BlogPostsProps> = ({ data }) => (
-  <IndexLayout>
+  <IndexLayout
+    background={
+      `url(/background/pattern-right.svg) right top repeat-y,url(/background/pattern-left.svg) left top repeat-y,` +
+      `${useBreakpointValue({
+        base: '',
+        sm: 'url(/background/bottom-left.svg) left top no-repeat, url(/background/top-left.svg) left bottom no-repeat,'
+      })}url(/background/top-right4.svg) right top no-repeat, url(/background/bottom-right.svg) right bottom no-repeat`
+    }
+  >
     <Box>
       <Header>
         <Container>

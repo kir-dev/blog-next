@@ -24,7 +24,12 @@ export interface BlogPostsProps {
 }
 
 const Blog: React.FC<BlogPostsProps> = ({ data }) => (
-  <IndexLayout>
+  <IndexLayout
+    background={`${useBreakpointValue({
+      base: '',
+      sm: 'url(/background/top-left.svg) left top no-repeat, '
+    })}url(/background/top-right.svg) right top no-repeat`}
+  >
     <Box>
       <Header>
         <Container>

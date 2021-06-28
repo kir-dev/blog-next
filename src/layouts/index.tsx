@@ -11,7 +11,10 @@ import Footer from '~components/footer/Footer'
 import Navbar from '~components/navbar/Navbar'
 import SEO from './SEO'
 
-const IndexLayout: React.FC = ({ children }) => (
+interface IndexLayoutProps {
+  background?: string
+}
+const IndexLayout: React.FC<IndexLayoutProps> = ({ children, background }) => (
   <>
     <SEO />
     <Flex direction="column" minHeight="100vh">

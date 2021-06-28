@@ -24,7 +24,15 @@ interface CoursesProps {
 }
 
 const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
-  <IndexLayout>
+  <IndexLayout
+    background={
+      `url(/background/pattern-right.svg) right top repeat-y,url(/background/pattern-left.svg) left top repeat-y,` +
+      `${useBreakpointValue({
+        base: '',
+        md: 'url(/background/bottom-left.svg) left top no-repeat, '
+      })}url(/background/bottom-right.svg) right bottom no-repeat`
+    }
+  >
     <Box>
       <Header>
         <Container>

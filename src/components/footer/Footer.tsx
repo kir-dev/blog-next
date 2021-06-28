@@ -7,7 +7,7 @@ import { FACEBOOK_PAGE_URL, GITHUB_ORG_URL, PUBLIC_EMAIL, YOUTUBE_CHANNEL_URL } 
 import SocialButton from './SocialButton'
 
 const Footer: React.FC = () => (
-  <Box zIndex={1} mt={12}>
+  <Box zIndex={1}>
     <Box borderTopWidth={1} borderStyle="solid" borderColor={useColorModeValue('gray.200', 'gray.700')}>
       <Container maxW="6xl" py={4}>
         <Flex flexDirection={{ base: 'column-reverse', sm: 'row' }}>
