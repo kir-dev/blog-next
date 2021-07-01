@@ -4,7 +4,7 @@ author: sepsilaci
 date: 2020-06-09 15:33:54
 title: 'Fejlesztés Docker konténerekben'
 tags: ['tech', 'rails', 'vscode']
-lead: Betekintünk a konténerizáció világába
+lead: Betekintés a konténerizáció világába
 comment: true
 featuredImage: ../images/posts/docker.jpg
 ---

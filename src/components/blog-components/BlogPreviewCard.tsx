@@ -46,7 +46,7 @@ const BlogPreviewCard: React.FC<BlogPreviewProps> = ({ post }) => {
             <Box display="inline-block" pr={1}>
               <FaClock size="0.75rem" />
             </Box>
-            <chakra.span fontSize="md">
+            <chakra.span fontSize="sm">
               {Math.ceil(post.fields.readingTime.minutes)}&nbsp;perc{post.frontmatter.lead ? ` • ${post.frontmatter.lead}` : ''}
             </chakra.span>
           </Box>
