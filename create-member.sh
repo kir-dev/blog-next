@@ -25,7 +25,7 @@ echo 'pekUsername: '$pekusername >> $filepath
 echo 'realName: "'$realname'"' >> $filepath
 echo 'position: tag' >> $filepath
 echo 'joinDate: '$joindate >> $filepath
-echo 'interests: ""' >> $filepath
+echo 'interests: []' >> $filepath
 echo 'avatar: ../images/avatars/'$pekusername'.jpg' >> $filepath
 echo 'active: true' >> $filepath
 echo '---' >> $filepath

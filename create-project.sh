@@ -24,6 +24,6 @@ echo 'title: "'$title'"' >> $filepath
 echo 'lead: ""' >> $filepath
 echo 'github: https://github.com/kir-dev/'$urlpath >> $filepath
 echo 'status: { label: "Aktív", color: "green" }' >> $filepath
-echo 'techs: ""' >> $filepath
+echo 'techs: []' >> $filepath
 echo 'featuredImage: null' >> $filepath
 echo '---' >> $filepath
