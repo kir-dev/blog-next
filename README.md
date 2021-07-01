@@ -52,9 +52,9 @@ Igazából kövesd a fentieket, amit a posztkészítésnél kell, annyi, hogy a 
 Szerkesztéskor a projekt markdown fájljában:
 
 - A `github` fieldben megadhatod a projekt GitHub-os repóját a Kir-Dev organisation-ből.
-- A `status` fieldben megadhatod a projekt jelenlegi állását, illetve hogy milyen színű pötty jelenjen meg a felirat mellett a project previewban. Pl.: `status: 'Aktív green'` esetén az Aktív felirat mellett zöld pötty fog megjelenni, mindig az utolsó szó adja meg a színt.
-  - Használhatóak ilyen feliratok, mint `Tervezés green`, `Fejlesztés alatt green`, `Üzemeltetve green`, `Megszakadt red`, `Áll orange` de lehetőleg maradjunk értelmes feliratoknál és színeknél a konzisztencia érdekében (aktív fázisokban inkább a zöld színt használjuk, a szöveg lehet akármi, inaktívaknál a vörös és narancssárga ajánlott).
-  - Extra: `Archivált <color>` megadása esetén hold ikon jelenik meg a státusz feliratban, `Kész <color>` esetén egy pipa, `Áll <color>` esetén pedig egy felkiáltójeles kör alakú ikon.
+- A `status` fieldben megadhatod a projekt jelenlegi állását, illetve hogy milyen színű pötty jelenjen meg a felirat mellett a project previewban. Pl.: `status: { label: 'Aktív', color: 'green' }` esetén az Aktív felirat mellett zöld pötty fog megjelenni, mindig az utolsó szó adja meg a színt.
+  - Használhatóak ilyen feliratok, mint `{label: 'Tervezés alatt', color: 'green'}`, `{label: 'Fejlesztés alatt', color: 'green'}`, `{label: 'Üzemel', color: 'green'}`, `{label: 'Megszakadt', color: 'red'}`, `{label: 'Áll', color: 'orange'}` de lehetőleg maradjunk értelmes feliratoknál és színeknél a konzisztencia érdekében (aktív fázisokban inkább a zöld színt használjuk, a szöveg lehet akármi, inaktívaknál a vörös és narancssárga ajánlott).
+  - Extra: `Archivált` label megadása esetén hold ikon jelenik meg a státusz feliratban, `Kész` vagy `Üzemel` esetén egy pipa, `Áll` vagy `Megszakadt` esetén pedig egy felkiáltójeles kör alakú ikon.
 - A `techs` fieldben megadhatod vesszővel elválasztva egy tömbben a projekt főbb techjeit (lehetőleg maradj max 3-nál). Pl.: `techs: ['TypeScript', 'Node.js']`
 
 ## Hozzáadnál új tagot a csapathoz?

@@ -1,9 +1,10 @@
 ---
 layout: project
 title: 'AirsoftSCH'
-lead: '🏅 A Schönherz Airsoft Team kör honlapja'
+lead: 'A Schönherz Airsoft Team kör honlapja'
 github: https://github.com/kir-dev/airsoft
-status: { label: 'Aktív', color: 'green' }
+website: https://airsoft.sch.bme.hu
+status: { label: 'Fejlesztés alatt', color: 'green' }
 techs: ['Bootstrap', 'Rails']
 featuredImage: null
 ---
