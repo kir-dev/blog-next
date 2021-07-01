@@ -5,6 +5,6 @@ realName: 'Sepsi László'
 position: tag
 joinDate: 2021-06
 interests: []
-avatar: null
+featuredImage: null
 active: true
 ---

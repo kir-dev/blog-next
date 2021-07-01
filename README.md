@@ -74,7 +74,7 @@ Szerkeszteni tudod a hozzárendelt tulajdonságokat a létrejött markdown fájl
 - `position`: jelenlegi beosztottsága a körnél (újonc, tag, PR felelős stb.)
 - `joinDate`: amióta a tag aktív a körnél
 - `interests`: általános kulcsszavak arra, mi érdekli a tagot a webfejlesztéssel kapcsolatosan, vesszővel kell elválasztani a kifejezéseket tömbben, pl.: `interests: ['TypeScript', 'Node']`
-- `avatar`: ha nem a PéK-en is használt képét szeretné használni, akkor a megadható a repóból egy kép url-je
+- `featuredImage`: ha nem a PéK-en is használt képét szeretné használni, akkor a megadható a repóból egy kép url-je
 - `active`: megadható, hogy a tag jelenleg aktív tagja-e a csapatnak
 - Minden további infót, amit szeretnél megosztani a világgal, írd meg a markdown fájl további részében.
 
