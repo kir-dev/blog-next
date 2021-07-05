@@ -53,7 +53,7 @@ export const query = graphql`
         position
         interests
         joinDate
-        avatar {
+        featuredImage {
           childImageSharp {
             gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
           }

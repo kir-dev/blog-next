@@ -6,6 +6,6 @@ export interface MemberProps {
   position: string
   interests: Array<string>
   joinDate: string
-  avatar: ImageDataLike
+  featuredImage: ImageDataLike
   active: boolean
 }

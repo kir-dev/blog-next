@@ -6,7 +6,7 @@ import { MemberProps } from '~types/member.props'
 import { PEK_URL } from '~utils/configurations'
 
 const MemberFullCard: React.FC<{ member: MemberProps }> = ({ member }) => {
-  const originalAvatarImage = getImage(member.avatar)
+  const originalAvatarImage = getImage(member.featuredImage)
   const originalAvatarComponent = originalAvatarImage ? (
     <GatsbyImage image={originalAvatarImage} alt="avatar" style={{ width: '100%', height: '12rem' }} objectFit="contain" />
   ) : null

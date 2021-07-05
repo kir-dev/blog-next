@@ -25,8 +25,10 @@ export function getIcon(status: { label: string; color: string }): JSX.Element {
     case 'Archivált':
       return <MoonIcon color={color + tone} />
     case 'Kész':
+    case 'Üzemel':
       return <CheckIcon color={color + tone} />
     case 'Áll':
+    case 'Megszakadt':
       return <WarningIcon color={color + tone} />
     default:
       return <CircleIcon color={color + tone} />
