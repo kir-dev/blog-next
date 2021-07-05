@@ -15,7 +15,7 @@ import { graphql, Link } from 'gatsby'
 import * as React from 'react'
 import { FaFacebook, FaGithub, FaYoutube } from 'react-icons/fa'
 import Logo from '~assets/images/kirdev-simplified.svg'
-import BlogPreview from '~components/blog-components/BlogPreview'
+import BlogFullCard from '~components/blog-components/BlogFullCard'
 import Container from '~components/Container'
 import InfoBox from '~components/indexpage-components/InfoBox'
 import PekPreview from '~components/indexpage-components/PekPreview'
@@ -177,7 +177,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
 
           <Box py={16} zIndex={1}>
             <Heading pb={4}>Legutóbbi bejegyzés blogunkból</Heading>
-            <BlogPreview isBig post={post} />
+            <BlogFullCard post={post} />
             <Box textAlign="right" mt={8}>
               <Text as={Link} textColor="orange.500" fontSize="lg" to="/blog">
                 További posztjaink...
@@ -207,6 +207,7 @@ export const query = graphql`
           lead
           date
           author
+          tags
           featuredImage {
             childImageSharp {
               gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])

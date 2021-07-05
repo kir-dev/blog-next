@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, HStack, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, Button, Flex, Heading, HStack, Tag, Text, useColorModeValue } from '@chakra-ui/react'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import * as React from 'react'
@@ -69,6 +69,15 @@ const PostTemplate: React.FC<PostTemplateProps> = ({ data }) => {
                 </Flex>
               </Flex>
             </Flex>
+            <Flex>
+              {post.frontmatter.tags && (
+                <HStack flex={1} my={3} flexWrap={{ base: 'wrap', sm: 'nowrap' }} justifyContent="flex-end">
+                  {post.frontmatter.tags.map((tag) => (
+                    <Tag key={tag}>#{tag.trim()}</Tag>
+                  ))}
+                </HStack>
+              )}
+            </Flex>
           </Container>
         </Header>
         <Container>
@@ -110,6 +119,7 @@ export const query = graphql`
         title
         date
         author
+        tags
         featuredImage {
           childImageSharp {
             gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])

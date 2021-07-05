@@ -27,6 +27,7 @@ echo 'author: '$author >> $filepath
 echo 'date: '$postdate >> $filepath
 echo 'title: "'$title'"' >> $filepath
 echo 'lead: ""' >> $filepath
+echo 'tags: []' >> $filepath
 echo 'comment: true' >> $filepath
-echo 'featuredImage: "../images/default.jpg"' >> $filepath
+echo 'featuredImage: null' >> $filepath
 echo '---' >> $filepath

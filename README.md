@@ -31,12 +31,23 @@ A `.env.example` fájlt másold le, és nevezd át `.env.development`-re. Deploy
 
 Példa: `./create-post.sh 'Heroku és társai' 'mypekusername'`
 
-2. Ezután keresd meg a posztod markdown fájlját. Adj egy maximum 2 mondatos ízelítőt a posztról a `lead` field alatt.
-3. A `featuredImage` fieldben megadhatsz egy képet, amelyet használnál a blogbejegyzésed previewjában, ezt a képed be is kell illesszed a `content/images/posts/` mappába. Ha nincs szükséged ilyenre, hagyd benn a defaultot.
-4. Írd meg a posztot markdownban, jelenleg képeket csak külső forrásból tudsz berakni a posztjaidba (használd pl.: az Imgur-t).
-5. érj review-t körtársaidtól egy pull requesten keresztül.
+2. Ezután keresd meg a posztod markdown fájlját.
+
+- Adj egy roppant rövid, maximum 6-7 szavas, 1 mondatos ízelítőt a posztról a `lead` field alatt (akár ki is hagyható).
+- A `featuredImage` fieldben megadhatsz egy képet, amelyet használnál a blogbejegyzésed previewjában, ezt a képed be is kell illesszed a `content/images/posts/` mappába. Ha nincs szükséged ilyenre, hagyd `null`-on.
+- A posztodnak lehetnek rövid tag-jei `tags` field alatt, de úgy, hogy értelme is legyen. Lehetőleg maradj max. 3 db rövid tag-nél. Pl.: `tags: ['hírek', 'média']`
+  - Ha rövid a poszt, és csak valami frissítést tartalmaz tagokról, jövőnkről, valami indulásáról --> **hírek**
+  - Ha egy projektünkről szól --> **projekt**
+  - Ha valami technológiairól --> **tech**, **web** stb.
+  - Ha a körről közösségéről szól --> **közösség**
+  - És így tovább (természetesen szabad kezed van ezekben).
+- Írd meg a posztot markdownban, jelenleg képeket csak külső forrásból tudsz berakni a posztjaidba (használd pl.: az Imgur-t).
+
+3. Kérj review-t körtársaidtól egy pull requesten keresztül.
 
 Nézz meg néhány korábbi blogposztot, hogy is tudod kihasználni a markdown adta lehetőségeket: code részletek beszúrása, képek beszúrása. Windows-on a create-post.sh shell scriptet tudod futtatni a Git bash-ben, ha már fel van telepítve a Git kliens.
+
+Mi az indoka, hogy a `lead` rövid kell legyen, valamint a `tags` száma ne haladja meg a 3-at? Az olvasók szemét ritkán fogja meg egy-egy hosszabb szó, inkább a rövid hívószavaknak örülnek.
 
 ## Készítenél oldalt egy projektnek?
 
