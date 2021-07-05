@@ -8,6 +8,7 @@ dotenv.config({
 export default {
   siteMetadata: {
     baseUrl: 'https://kir-dev.sch.bme.hu',
+    translations: ['hu'],
     lang: 'hu',
     title: 'Kir-Dev',
     titleTemplate: '%s | Kir-Dev',
