@@ -6,5 +6,5 @@ github: https://github.com/kir-dev/schorpong
 website: https://schorpong.sch.bme.hu
 status: { label: 'Üzemel', color: 'green' }
 techs: ['Rails', 'Semantic UI']
-featuredImage: null
+featuredImage: ../images/projects/schorpong.png
 ---
