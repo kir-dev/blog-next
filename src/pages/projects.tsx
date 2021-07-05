@@ -21,7 +21,12 @@ export interface ProjectsProps {
 }
 
 const Projects: React.FC<ProjectsProps> = ({ data }) => (
-  <IndexLayout>
+  <IndexLayout
+    background={`${useBreakpointValue({
+      base: '',
+      sm: 'url(/background/bottom-left2.svg) left top no-repeat,url(/background/bottom-left.svg) left bottom no-repeat,'
+    })}url(/background/top-right3.svg) right top no-repeat`}
+  >
     <Box>
       <Header>
         <Container>

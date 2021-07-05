@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, HStack, Tag, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, Button, Flex, Heading, HStack, Tag, Text, useBreakpointValue, useColorModeValue } from '@chakra-ui/react'
 import { graphql, Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import * as React from 'react'
@@ -33,7 +33,11 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ data }) => {
   const { hostname } = new URL(project.website)
 
   return (
-    <IndexLayout>
+    <IndexLayout
+      background={useBreakpointValue({
+        xl: 'url(/background/pattern-right.svg) right top repeat-y,url(/background/pattern-left.svg) left top repeat-y'
+      })}
+    >
       <Box>
         <Box pt={featuredImage ? 2 : 16}>
           <Container>

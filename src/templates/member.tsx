@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react'
+import { Box, useBreakpointValue } from '@chakra-ui/react'
 import { graphql } from 'gatsby'
 import * as React from 'react'
 import Container from '~components/Container'
@@ -23,7 +23,11 @@ interface MemberTemplateProps {
 }
 
 const MemberTemplate: React.FC<MemberTemplateProps> = ({ data }) => (
-  <IndexLayout>
+  <IndexLayout
+    background={useBreakpointValue({
+      xl: 'url(/background/pattern-right.svg) right top repeat-y,url(/background/pattern-left.svg) left top repeat-y'
+    })}
+  >
     <Box>
       <Container>
         <MemberFullCard member={data.markdownRemark.frontmatter} />

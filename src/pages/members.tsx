@@ -23,7 +23,12 @@ export interface MembersProps {
 
 const MembersPage: React.FC<MembersProps> = ({ data }) => {
   return (
-    <IndexLayout>
+    <IndexLayout
+      background={`${useBreakpointValue({
+        base: '',
+        sm: 'url(/background/bottom-left2.svg) left top no-repeat,'
+      })}url(/background/top-right2.svg) right top no-repeat`}
+    >
       <Box>
         <Header>
           <Container>

@@ -31,9 +31,16 @@ const AboutPage: React.FC = () => {
   const firstHeadingSize = useBreakpointValue({ base: '4xl', sm: '5xl' })
   const secondHeadingSize = useBreakpointValue({ base: '2xl', sm: '3xl' })
   const logoStyles = { width: useBreakpointValue({ base: '100%', md: '60%' }), height: useBreakpointValue({ base: '100%', md: '60%' }) }
+  const rightSideBgs = 'url(/background/top-right4.svg) right top no-repeat,url(/background/bottom-right.svg) right bottom no-repeat'
+  const leftSideBgs = 'url(/background/bottom-left.svg) left top no-repeat,url(/background/top-left.svg) left bottom no-repeat'
 
   return (
-    <IndexLayout>
+    <IndexLayout
+      background={`${useBreakpointValue({
+        base: rightSideBgs,
+        md: `${rightSideBgs},${leftSideBgs}`
+      })}`}
+    >
       <Box>
         <Container>
           <Box textAlign="center" my={6}>
