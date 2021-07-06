@@ -51,7 +51,7 @@ export default Projects
 
 export const query = graphql`
   query Projects {
-    allMarkdownRemark(filter: { fields: { layout: { eq: "project" } } }) {
+    allMarkdownRemark(filter: { fields: { layout: { eq: "project" } } }, sort: { fields: frontmatter___title, order: ASC }) {
       nodes {
         fields {
           slug
