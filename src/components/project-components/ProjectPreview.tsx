@@ -42,14 +42,9 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
 
   return (
     <Flex direction="column" bg={useColorModeValue('white', 'gray.800')} borderWidth="1px" rounded="lg" shadow="lg" position="relative">
-      <Box as={Link} maxH="10rem" to={project.fields.slug} cursor="pointer">
+      <Box as={Link} maxH="12rem" overflowY="hidden" to={project.fields.slug} cursor="pointer">
         {featuredImage ? (
-          <GatsbyImage
-            image={featuredImage}
-            alt="Project preview"
-            objectFit="cover"
-            imgStyle={{ borderRadius: '0.3rem 0.3rem 0 0', maxHeight: '10rem', width: '100%' }}
-          />
+          <GatsbyImage image={featuredImage} alt="Project preview" objectFit="cover" imgStyle={{ borderRadius: '0.3rem 0.3rem 0 0' }} />
         ) : (
           <Image src="../../project-default.png" objectFit="cover" style={{ maxHeight: 'inherit', width: '100%' }} />
         )}
