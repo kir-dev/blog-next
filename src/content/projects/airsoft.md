@@ -15,6 +15,6 @@ A *Schönherz Airsoft Team* 2021 elején keresett meg minket, hogy készítsünk
 
 ## Tech stack
 
-A projekt alapjához **Ruby on Rails**-re esett a választásunk, mert már több [projektünkben](/projects) is bevált a gyors fejlesztés és átlátható projektstruktúra miatt. Hogy a modern ember szépérzékének megfeleljen, és akár mobilon is lehessen az oldalt böngészni, a (projekt indulása óta) a legújabb **Bootstrap 5.0**-t használjuk. Fejlesztés közben felmerült az igény, hogy a kör különböző rendezvényeire különböző űrlapokat lehessen létrehozni, és hogy ezt a Google Forms megkerülésével, saját weblapon lehessen megoldani. Mivel ezeknek feature-öknek a *from scratch* megírása önmagában nagyon elhúzná a fejlesztési időt, ezért a **React** előre megírt építőkockáihoz nyúltunk.
+A projekt alapjához **Ruby on Rails**-re esett a választásunk, mert már több [projektünkben](/projects) is bevált a gyors fejlesztés és átlátható projektstruktúra miatt. Hogy a modern ember szépérzékének megfeleljen, és akár mobilon is lehessen az oldalt böngészni, a (projekt indulása óta) a legújabb **Bootstrap 5.0**-t használjuk. Fejlesztés közben felmerült az igény, hogy a kör különböző rendezvényeire különböző űrlapokat lehessen létrehozni, és hogy ezt a Google Forms megkerülésével, saját weblapon lehessen megoldani. Mivel ezeknek a feature-öknek a *from scratch* megírása önmagában nagyon elhúzná a fejlesztési időt, ezért a **React** előre megírt építőkockáihoz nyúltunk.
 
 ![](https://i.imgur.com/WJnLCRz.png)
