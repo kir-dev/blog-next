@@ -64,7 +64,7 @@
     "gatsby-remark-smartypants": "^4.5.0",
     "gatsby-remark-vscode": "^3.2.1",
     "gatsby-source-filesystem": "^3.7.1",
-    "gatsby-transformer-json": "^3.3.0",
+    "gatsby-transformer-json": "^3.9.0",
     "gatsby-transformer-remark": "^4.0.0",
     "gatsby-transformer-sharp": "^3.3.0",
     "modern-normalize": "^1.0.0",
