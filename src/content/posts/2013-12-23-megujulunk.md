@@ -27,10 +27,6 @@ Az általunk üzemeltetett szolgáltatásokkal kapcsolatos hírek továbbra is
 megjelennek majd a blogon és a nagyobb frissítésekről részletesebb leírást is
 közlünk, ahogy eddig is.
 
-<p style="text-align: center;">
-    <img src="/img/cat-xmass.gif" />
-</p>
+![](https://i.gifer.com/origin/59/5920cf7e6956dfb73d862478d4d00d1e.gif)
 
-<p style="text-align: center; font-weight: bold;">
-    Boldog karácsonyt mindenkinek!
-</p>
+**Boldog karácsonyt mindenkinek!**
