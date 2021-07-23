@@ -1,18 +1,19 @@
 #!/bin/bash
 
-# usage: ./create-member.sh '<pekUsername>' '<realName>'
+# usage: ./create-member.sh '<pekUsername>' '<realName>' '<position>'
 
 DIR=src/content/members
 
 # checking args
-if [ $# != 2 ]; then
-    echo 'Error! Usage: ./create-member.sh "<pekUsername>" "<realName>"'
+if [ $# != 3 ]; then
+    echo 'Error! Usage: ./create-member.sh "<pekUsername>" "<realName>" "<position>"'
     exit -1
 fi
 
 # creating variables
 pekusername=$1
 realname=$2
+position=$3
 joindate=`date +"%Y-%m"`
 filename=$1'.md'
 filepath=$DIR/$filename
@@ -23,7 +24,7 @@ echo '---' >> $filepath
 echo 'layout: member' >> $filepath
 echo 'pekUsername: '$pekusername >> $filepath
 echo 'realName: "'$realname'"' >> $filepath
-echo 'position: tag' >> $filepath
+echo 'position: "'$position'"' >> $filepath
 echo 'joinDate: '$joindate >> $filepath
 echo 'interests: []' >> $filepath
 echo 'featuredImage: ../images/avatars/'$pekusername'.jpg' >> $filepath

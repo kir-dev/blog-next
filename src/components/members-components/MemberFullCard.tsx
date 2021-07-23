@@ -52,7 +52,7 @@ const MemberFullCard: React.FC<{ member: MemberProps }> = ({ member }) => {
               {member.joinDate} óta a csapatban
             </Text>
           </Flex>
-          {member.interests && (
+          {member.interests.length > 0 && (
             <Flex flexWrap="wrap" alignItems="center">
               <FaHeart />
               <Text pl={3} fontSize="sm">
