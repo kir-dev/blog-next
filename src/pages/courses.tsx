@@ -83,13 +83,30 @@ const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
           </Box>
         </Box>
 
-        <Box mt={12}>
+        <Box mt={16}>
           <Heading as="h2">Jelentkezés</Heading>
-          <Flex mt={4} direction={{ base: 'column', md: 'row' }}>
-            <Text>
-              A tanfolyamra azokat várjuk, akik szeretnének elsajátítani egy olyan tudást, ami az iparban is haszon lehet. Sajnos a
-              férőhelyek száma korlátos, így a tanfolyam résztvevőinek listáját jelentkezési sorrend alapján alakítjuk ki.
-            </Text>
+          <Heading as="h3" size="md" mt={4}>
+            Miért érdemes jelentkezned tanfolyamra?
+          </Heading>
+          <Text mt={4}>
+            Ha az utóbbi pár félévben úgy érezted, hogy szeretsz új programnyelveket megismerni, és azokat valódi fejlesztési környezetekben
+            szeretnéd kipróbálni, itt a helyed. Ha szeretnél elsajátítani olyan tudást, ami az iparban is haszon lehet, itt a helyed. Ha
+            több ezres tömegeket elérő alkalmazásokat szeretnél fejleszteni, szeretnéd megmutatni a tervezési képességeid, csapatban
+            szeretnél tanulni és munkálkodni, itt a helyed.
+          </Text>
+          <Heading as="h3" size="md" mt={4}>
+            Mire számíthatsz a tanfolyamokon?
+          </Heading>
+          <Text mt={4}>
+            Zúg a projektor, magyaráz az előadó. Nincs szükséged nagy előtudásra, ha tudod, mik azok az alapvető adatstruktúrák és hogy kell
+            elágazásokat írni, már jó vagy. Kellemes, baráti atmoszféra, gyakori szakmai poénok és segítőkész segédelőadók várnak. Az, hogy
+            mit kell hozni, hova kell menni, minden tanfolyamnál különböző, e-mailben fogod megkapni az összes tudnivalót időben az
+            előadások előtt.
+          </Text>
+          <Flex mt={10} direction={{ base: 'column', md: 'row' }}>
+            <Heading as="h3" size="md">
+              Sajnos a férőhelyek száma korlátos, így a tanfolyam résztvevőinek listáját jelentkezési sorrend alapján alakítjuk ki.
+            </Heading>
             <Flex flex={1} justifyContent="flex-end" pl={{ base: 0, md: 8 }} mt={{ base: 4, md: 0 }}>
               {CURRENT_COURSE_FORM_URL ? (
                 <Button color="white" bg="orange.500" _hover={{ bg: 'orange.600' }} as={ChakraLink} px={8} href={CURRENT_COURSE_FORM_URL}>
@@ -104,7 +121,7 @@ const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
           </Flex>
         </Box>
 
-        <Box mt={8}>
+        <Box mt={16}>
           <Heading as="h2">Folytatás: mentorprogram</Heading>
           <Text mt={4}>
             Mentorprogramunk 2021 tavaszán indult azzal a céllal, hogy hagyományt teremtsünk, és megalapozzuk újoncozási stratégiánkat.
