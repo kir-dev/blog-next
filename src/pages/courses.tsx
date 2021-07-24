@@ -89,23 +89,23 @@ const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
             Miért érdemes jelentkezned tanfolyamra?
           </Heading>
           <Text mt={4}>
-            Ha az utóbbi pár félévben úgy érezted, hogy szeretsz új programnyelveket megismerni, és azokat valódi fejlesztési környezetekben
-            szeretnéd kipróbálni, itt a helyed. Ha szeretnél elsajátítani olyan tudást, ami az iparban is haszon lehet, itt a helyed. Ha
-            több ezres tömegeket elérő alkalmazásokat szeretnél fejleszteni, szeretnéd megmutatni a tervezési képességeid, csapatban
-            szeretnél tanulni és munkálkodni, itt a helyed.
+            Körünkben lehetőséged van különböző webes technológiák megismerésére, amelyek használatát valódi, esetenként több ezres
+            tömegeket kiszolgáló alkalmazások fejlesztésén keresztül sajátíthatod el. Nálunk olyan tudásra tehetsz szert, amit később
+            közvetlenül az iparban is hasznosíthatsz. Szeretünk csapatban dolgozni, így fontosnak tartjuk az ezzel kapcsolatos soft skillek
+            fejlesztését is.
           </Text>
           <Heading as="h3" size="md" mt={4}>
             Mire számíthatsz a tanfolyamokon?
           </Heading>
           <Text mt={4}>
-            Zúg a projektor, magyaráz az előadó. Nincs szükséged nagy előtudásra, ha tudod, mik azok az alapvető adatstruktúrák és hogy kell
-            elágazásokat írni, már jó vagy. Kellemes, baráti atmoszféra, gyakori szakmai poénok és segítőkész segédelőadók várnak. Az, hogy
-            mit kell hozni, hova kell menni, minden tanfolyamnál különböző, e-mailben fogod megkapni az összes tudnivalót időben az
-            előadások előtt.
+            Tanfolyamainkon lehetőséged van betekinteni az általunk használt technológiákba és projektjeinkbe. Kellemes, baráti atmoszféra,
+            gyakori szakmai poénok és segítőkész segédelőadók várnak. Nálunk nincsenek szigorú előkövetelmények, ha tudod, mik azok az
+            alapvető adatstruktúrák, és hogy hogyan kell elágazásokat írni, már jó vagy. Az egyes alkalmakról minden tudnivalót (előadás
+            témája, mit kell hozni, hova kell menni) előzetesen e-mail-ben fogsz megkapni az előadás előtt.
           </Text>
           <Flex mt={10} direction={{ base: 'column', md: 'row' }}>
             <Heading as="h3" size="md">
-              Sajnos a férőhelyek száma korlátos, így a tanfolyam résztvevőinek listáját jelentkezési sorrend alapján alakítjuk ki.
+              Sajnos, a férőhelyek száma korlátozott, így a tanfolyam résztvevőinek listáját jelentkezési sorrend alapján alakítjuk ki.
             </Heading>
             <Flex flex={1} justifyContent="flex-end" pl={{ base: 0, md: 8 }} mt={{ base: 4, md: 0 }}>
               {CURRENT_COURSE_FORM_URL ? (
