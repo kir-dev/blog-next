@@ -6146,10 +6146,10 @@ eslint-config-airbnb@~18.2.1:
     object.assign "^4.1.2"
     object.entries "^1.1.2"
 
-eslint-config-blvd@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-blvd/-/eslint-config-blvd-1.1.1.tgz#4468852c278df0e5f6143d97c29aa7f6caac4e63"
-  integrity sha512-gbpBD/aLR52aNHtgbpwTN+V0Ds96NHLs8ToT6/N5YlFL1sULWhmJdnDIYWTxTChfdVDpg50PhBc9TasBWD59Ug==
+eslint-config-blvd@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-blvd/-/eslint-config-blvd-1.2.1.tgz#cb6140e8c48ece8b2a492af635e5b832995c849d"
+  integrity sha512-/mQXqxZDGoveQszrKHsQGWGYWXo6rXZv2VGApGVPaTw6fASW2ft384Vp5GfsvnYn+R9xUrjcO2Bd2VZ3zhdKSQ==
   dependencies:
     "@typescript-eslint/eslint-plugin" "~4.9.0"
     "@typescript-eslint/parser" "~4.9.0"
