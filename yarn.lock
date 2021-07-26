@@ -1518,7 +1518,7 @@
     "@chakra-ui/react-utils" "1.1.1"
     "@chakra-ui/utils" "1.5.2"
 
-"@chakra-ui/gatsby-plugin@^2.0.1":
+"@chakra-ui/gatsby-plugin@2.0.1":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@chakra-ui/gatsby-plugin/-/gatsby-plugin-2.0.1.tgz#c8373f61fa112829dbe72225c7413f709e33751d"
   integrity sha512-+Gy72AcPGdM6TIoY2RZou+3q2pkGkOzSmohyLGfz6XzWoMKYO8lWk38jKGnB7wyVQ3MR1AM+0hQTab75B0cukg==
@@ -1547,7 +1547,7 @@
   dependencies:
     "@chakra-ui/utils" "1.5.2"
 
-"@chakra-ui/icons@^1.0.14":
+"@chakra-ui/icons@1.0.14":
   version "1.0.14"
   resolved "https://registry.yarnpkg.com/@chakra-ui/icons/-/icons-1.0.14.tgz#8d402074dabdb410af36e6f1af047bb186973053"
   integrity sha512-VM21FkQc4rWcES1D6ddNIq6VYaCnTwWBIaqM9GRQZ7FpsLeVNk6UFYiE8MMtGWVIXq3k9jEYLbQHm7YdEF9yLQ==
@@ -1704,7 +1704,7 @@
   dependencies:
     "@chakra-ui/utils" "^1.5.1"
 
-"@chakra-ui/react@^1.5.1":
+"@chakra-ui/react@1.5.1":
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/@chakra-ui/react/-/react-1.5.1.tgz#117cce2c52642780777535e01f6af66fcbb957a6"
   integrity sha512-+/hwK2wxLqf/rDnsDN2+wgsh9hmKYTsgJcswu9RF+bj7CRroM4liMjWGyPi1xi/tWHwAd0d8Yt9csJT0kKdNhQ==
@@ -1816,7 +1816,7 @@
     "@chakra-ui/checkbox" "1.4.2"
     "@chakra-ui/utils" "1.5.2"
 
-"@chakra-ui/system@1.6.2", "@chakra-ui/system@^1.6.2":
+"@chakra-ui/system@1.6.2":
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/@chakra-ui/system/-/system-1.6.2.tgz#14b7310e961e680197c72c87271cfeaccabfe267"
   integrity sha512-QZ/TrStf/bpIeNe0A1oMEnotPpUA9cDl+8U3fGeR7lPjsWL8k2vVLpceSrE/m8I1aMeS9U8SNqiwWtXH02c+0w==
@@ -2092,12 +2092,12 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/open-sans@^4.5.0":
+"@fontsource/open-sans@4.5.0":
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-4.5.0.tgz#e6d05dfdfe74580001010302f9c418067b45a6a9"
   integrity sha512-49+A0IkTTv3cpS1YecrZNCqvlVTThUt/qioiAIZsXfgC3TqavgRqwXXvroXmhVeP/f0sqZw5CRDMS1Hj4aSTbQ==
 
-"@fontsource/poppins@^4.5.0":
+"@fontsource/poppins@4.5.0":
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/@fontsource/poppins/-/poppins-4.5.0.tgz#a419697b85864afbf8363f5c247b1e9d1f117564"
   integrity sha512-RqgMIQqKHWNH3IUj+a0MAhlb4g5fftsXRTJ2bauefBmfM8Ja5q+qQZjKwyB/iCc+paJD320zFnLJ8G+y1ZyemQ==
