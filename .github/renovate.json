@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "config:js-app",
+    ":automergeMinor",
+    ":onlyNpm",
+    ":separateMajorReleases",
+    ":combinePatchMinorReleases",
+    ":ignoreUnstable",
+    ":prImmediately",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":updateNotScheduled",
+    ":ignoreModulesAndTests",
+    ":autodetectPinVersions",
+    ":prHourlyLimit2",
+    ":prConcurrentLimit20",
+    "group:monorepos",
+    "group:recommended",
+    "group:definitelyTyped",
+    "workarounds:all"
+  ],
+  "reviewers": ["triszt4n"],
+  "labels": ["dependencies"],
+  "dependencyDashboard": true,
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true
+  }
+}
