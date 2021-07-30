@@ -9,6 +9,12 @@ comment: true
 featuredImage: ../images/posts/docker.jpg
 ---
 
+## Tartalomjegyzék
+
+```toc
+# There comes the toc
+```
+
 ## Bevezetés
 
 A Docker és egyéb virtualizációs technológiák az üzemeltetésben már jelentősen elterjedtek, viszont a fejlesztésnél még csak szűkebb körben használtak. Egy egyszerű [Ruby on Rails][9] framework alapú projekten keresztül vizsgáljuk meg, hogy milyen szinten lehet hasznosítani a konténereket már a fejlesztés folyamatában is. Az alkalmazásnak szüksége van egy Ruby nyelvet támogató környezetre és egy PostgreSQL adatbázisra. Ezek a gazdagépre nem lesznek telepítve, kizárólag konténereken keresztül lesznek használva. A [RubyMine][3] és [Visual Studio Code][4] IDE-ket fogjuk beállítani és használni. Ez a két eszköz eltérő módon közelíti meg a konténerek használatát, ezért érdemes mindkettőt megismerni.
