@@ -9,6 +9,14 @@ techs: ['React', 'Gatsby']
 featuredImage: ../images/projects/blog-next.png
 ---
 
+<style>
+.caption {
+  font-style: italic;
+  text-align: center;
+  margin: -0.5rem 0 2rem 0;
+}
+</style>
+
 # Blogunk története
 
 ## Korábbiakban
@@ -19,7 +27,7 @@ Régebbi posztjainkat áthoztuk az új platformra is, az [archívumban](/archive
 
 ![](https://i.imgur.com/rGoWmhW.png)
 
-_<p style="text-align: center; margin: -0.5rem 0 2rem 0;">Korábbi blogunk nyitólapja</p>_
+<div class="caption">Korábbi blogunk nyitólapja</div>
 
 ## Új célok
 
@@ -38,4 +46,4 @@ Az új oldal segítségével törekszünk a lehető leginformatívabb módon bet
 
 ![](https://i.imgur.com/2o5hook.png)
 
-_<p style="text-align: center; margin: -0.5rem 0 2rem 0;">Kódrészlet a blogból</p>_
+<div class="caption">Kódrészlet a blogból</div>

@@ -68,9 +68,14 @@ export default {
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-responsive-iframe',
+            resolve: `gatsby-remark-table-of-contents`,
             options: {
-              wrapperStyle: 'margin-bottom: 1rem'
+              exclude: 'Tartalomjegyzék',
+              tight: true,
+              ordered: true,
+              fromHeading: 1,
+              toHeading: 6,
+              className: 'md-toc'
             }
           },
           {
@@ -81,6 +86,7 @@ export default {
               elements: [`h1`, `h2`, `h3`, `h4`]
             }
           },
+          'gatsby-remark-responsive-iframe',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
           'gatsby-remark-gemoji-to-emoji',
