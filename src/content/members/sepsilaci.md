@@ -2,8 +2,8 @@
 layout: member
 pekUsername: sepsilaci
 realName: 'Sepsi László'
-position: tag
-joinDate: 2021-06
+position: körvezető
+joinDate: 2019-03
 interests: []
 featuredImage: null
 active: true
