@@ -4,7 +4,7 @@ export interface ProjectProps {
   title: string
   lead: string
   github: string
-  website: string
+  website?: string
   featuredImage: ImageDataLike
   status: {
     label: string

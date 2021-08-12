@@ -1,10 +1,9 @@
 ---
 layout: project
-title: "Paybasz"
-lead: ""
+title: 'Paybasz'
+lead: 'Szakkollégiumi belsős fizetési rendszer'
 github: https://github.com/kir-dev/paybasz
-website: https://< enter >.sch.bme.hu/
-status: { label: "Aktív", color: "green" }
-techs: []
+status: { label: 'Aktív', color: 'green' }
+techs: ['Spring Boot', 'Arduino', 'C/C++']
 featuredImage: null
 ---

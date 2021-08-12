@@ -30,7 +30,7 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ data }) => {
   const project = data.markdownRemark.frontmatter
   const featuredImage = getImage(project.featuredImage)
   const statusIcon = getIcon(project.status)
-  const { hostname } = new URL(project.website)
+  const hostname = project.website ? new URL(project.website).hostname : null
 
   return (
     <IndexLayout
@@ -79,9 +79,11 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ data }) => {
                   </HStack>
                   <HStack>
                     <FaHome />
-                    <Text as={Link} fontSize="md" to={project.website}>
-                      {hostname}
-                    </Text>
+                    {project.website && (
+                      <Text as={Link} fontSize="md" to={project.website}>
+                        {hostname}
+                      </Text>
+                    )}
                   </HStack>
                 </Box>
                 <Box>
