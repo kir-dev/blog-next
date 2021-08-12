@@ -77,14 +77,14 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ data }) => {
                       {`kir-dev/${project.github.substring(project.github.lastIndexOf('/') + 1)}`}
                     </Text>
                   </HStack>
-                  <HStack>
-                    <FaHome />
-                    {project.website && (
+                  {project.website && (
+                    <HStack>
+                      <FaHome />
                       <Text as={Link} fontSize="md" to={project.website}>
                         {hostname}
                       </Text>
-                    )}
-                  </HStack>
+                    </HStack>
+                  )}
                 </Box>
                 <Box>
                   <HStack wrap="wrap" justifyContent="flex-end">
