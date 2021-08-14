@@ -67,6 +67,7 @@ Szerkesztéskor a projekt markdown fájljában:
   - Használhatóak ilyen feliratok, mint `{label: 'Tervezés alatt', color: 'green'}`, `{label: 'Fejlesztés alatt', color: 'green'}`, `{label: 'Üzemel', color: 'green'}`, `{label: 'Megszakadt', color: 'red'}`, `{label: 'Áll', color: 'orange'}` de lehetőleg maradjunk értelmes feliratoknál és színeknél a konzisztencia érdekében (aktív fázisokban inkább a zöld színt használjuk, a szöveg lehet akármi, inaktívaknál a vörös és narancssárga ajánlott).
   - Extra: `Archivált` label megadása esetén hold ikon jelenik meg a státusz feliratban, `Kész` vagy `Üzemel` esetén egy pipa, `Áll` vagy `Megszakadt` esetén pedig egy felkiáltójeles kör alakú ikon.
 - A `techs` fieldben megadhatod vesszővel elválasztva egy tömbben a projekt főbb techjeit (lehetőleg maradj max 3-nál). Pl.: `techs: ['TypeScript', 'Node.js']`
+- A `website` field akár elhagyható, ha nincs tipikus kir-deves oldala a projektnek.
 
 ## Hozzáadnál új tagot a csapathoz?
 

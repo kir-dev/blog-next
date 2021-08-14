@@ -30,7 +30,7 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ data }) => {
   const project = data.markdownRemark.frontmatter
   const featuredImage = getImage(project.featuredImage)
   const statusIcon = getIcon(project.status)
-  const { hostname } = new URL(project.website)
+  const hostname = project.website ? new URL(project.website).hostname : null
 
   return (
     <IndexLayout
@@ -77,12 +77,14 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ data }) => {
                       {`kir-dev/${project.github.substring(project.github.lastIndexOf('/') + 1)}`}
                     </Text>
                   </HStack>
-                  <HStack>
-                    <FaHome />
-                    <Text as={Link} fontSize="md" to={project.website}>
-                      {hostname}
-                    </Text>
-                  </HStack>
+                  {project.website && (
+                    <HStack>
+                      <FaHome />
+                      <Text as={Link} fontSize="md" to={project.website}>
+                        {hostname}
+                      </Text>
+                    </HStack>
+                  )}
                 </Box>
                 <Box>
                   <HStack wrap="wrap" justifyContent="flex-end">
