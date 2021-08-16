@@ -20,7 +20,7 @@ const BlogAuthor: React.FC<BlogAuthorProps> = ({ date, name, hasLongDate }) => (
     </Link>
 
     {hasLongDate ? (
-      <HStack>
+      <HStack flex={1}>
         <Text as={Link} fontWeight="medium" fontSize="md" href={`${PEK_URL}/profiles/${name}`}>
           {name}
         </Text>
@@ -37,7 +37,7 @@ const BlogAuthor: React.FC<BlogAuthorProps> = ({ date, name, hasLongDate }) => (
         </Text>
       </HStack>
     ) : (
-      <Box>
+      <Box flex={1}>
         <Text as={Link} fontWeight="medium" fontSize="sm" to={`${PEK_URL}/${name}`}>
           {name}
         </Text>

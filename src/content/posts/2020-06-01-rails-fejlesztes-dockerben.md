@@ -54,7 +54,7 @@ A fenti image a Ruby 2.6.3-as verzióját tartalmazza, egy Debian rendszeren. Te
 
 A Dockerfile elkészítése után elkészíthetjük a **docker-compose.yml** fájl-t, ami a több konténerből álló alkalmazásunkat írja le.
 
-```docker
+```yaml
 version: '3'
 services:
   db:
@@ -64,7 +64,7 @@ services:
     environment:
       POSTGRES_HOST_AUTH_METHOD: trust
     ports:
-      - "5432:5432"
+      - '5432:5432'
   web:
     build: .
     # command: bundle exec rails s -p 3000 -b '0.0.0.0'
@@ -73,10 +73,10 @@ services:
       - .:/test_app
       - /test_app/node_modules
     ports:
-      - "3000:3000"
+      - '3000:3000'
       # Ports required for debugging
-      - "1234:1234"
-      - "26166:26168"
+      - '1234:1234'
+      - '26166:26168'
     depends_on:
       - db
 ```
@@ -119,7 +119,7 @@ user:127:1
 
 A fenti beállítások elvégzése után, userns-remap tulajdonságot kell beállítani a felhasználónevünkre. Ez megtehetjük kapcsolóként.
 
-```cmd
+```sh
 dockerd --userns-remap=user
 ```
 
@@ -150,7 +150,7 @@ Ahhoz, hogy el tudjuk indítani az IDE-ből a webszervert, létre kell hoznunk a
 
 A debugolás használatához még szükségünk lesz 2 gem-re. Ezek felvételéhez először írjuk be az alábbi sorokat a Gemfile-ba.
 
-```Gemfile
+```rb
 #Gemfile
 
 gem 'debase'

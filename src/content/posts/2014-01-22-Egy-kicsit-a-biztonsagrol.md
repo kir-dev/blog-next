@@ -12,19 +12,19 @@ Egy weboldal nagyon hasznos annak a közösségnek, akik mindennap használják 
 
 Az SQL Injection egy kód futtatási technika adatbázist használó alkalmazások támadására. Rosszindulatú SQL kódot írnak be egy beviteli mezőbe, ami majd később végrehajtódik a szerver oldalon. Ez akkor fordulhat elő, hogyha a beviteli mezőben nem szűrjük a megfelelő karaktereket és ezek belekerülnek az SQL kifejezésbe. A megoldás az, hogyha az ilyen karaktereket kiszűrjük a bevitt adatokból, tehát a beviteli mezők validációjával illetve prepared statementek használatával ez a sebezhetőség elkerülhető. Nézzünk egy nagyon egyszerű példát:
 
-```mysql
+```sql
 sql_statement = "SELECT * FROM users WHERE name='" + user_name + "';"
 ```
 
 Ez az SQL kifejezés a `users` táblából kikeresi azt a felhasználót amelyiknek a felhasználó neve megegyezik a `user_name` változó tartalmával. Ha viszont egy rosszindulatú felhasználó SQL kódot ír a beviteli mezőbe akkor ez a lekérdezés másképpen fog kiértékelődni.
 
-```mysql
+```sql
 ' or '1'='1
 ```
 
 Amennyiben ez a kódrészlet kerül a `user_name` változóba, akkor a kifejezésünk igazként fog kiértékelődni mivel az 1=1 mindig teljesülni fog. A végén pedig így néz majd ki a végrehajtott lekérdezésünk:
 
-```mysql
+```sql
 SELECT * FROM users WHERE name = '' OR '1'='1';
 ```
 
