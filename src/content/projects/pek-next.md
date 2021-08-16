@@ -13,7 +13,7 @@ featuredImage: ../images/projects/pek-next.png
 
 Az alkalmazás a Schönherz Kollégium öntevékeny köreinek **adminisztrációs felülete**. Az weboldal rengeteg funkcióval rendelkezik. Többek között megtekinthető rajta a körök taglistája és a felhasználók közösségi története.
 
-![pek-next](https://i.imgur.com/OOrUkeG.png)
+![pek-next](https://warp.kir-dev.sch.bme.hu/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9093c5663ef90fcce4cd9808103cd5089edba934/OOrUkeG.png)
 
 # Történelem
 

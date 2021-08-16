@@ -32,7 +32,7 @@ SELECT * FROM users WHERE name = '' OR '1'='1';
 
 Az XSS lehetőséget nyújt kliens oldali szkriptek beszúrására a weboldalba, ami egy másik felhasználó számára fog megjelenni. Egy tipikus XSS támadásban a támadó egy legitim webalkalmazásba rosszindulatú kliens oldali scriptet helyez el.
 
-![](https://www.acunetix.com/wp-content/uploads/2012/10/PTMFOG0000001531.png")
+![](https://warp.kir-dev.sch.bme.hu/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8b8cc4c733162cb3489802c9b991fefbd11a6715/xss.png)
 
 Amikor egy felhasználó meglátogatja a weboldalt akkor a böngészőjében ez a szkript letöltődik és végrehajtódik (gyakorlatilag itt történik meg ténylegesen a beszúrás) és ezek után már a támadó által elhelyezett szkript fog futni a felhasználó böngészőjében. Legtöbbször a `<script>` az `<img>` és az `<iframe>` elemeket támadják. Például a beviteli mezőbe ezt írják be:
 
