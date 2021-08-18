@@ -7,17 +7,12 @@ import SvgPattern from '~assets/images/circuit-board.svg'
 import ScrollButton from '~components/blog-components/ScrollButton'
 import Container from '~components/Container'
 import { getIcon } from '~components/project-components/ProjectPreview'
+import SEO from '~components/SEO'
 import { ProjectProps } from '~types/project.props'
 import IndexLayout from '../layouts'
 
 interface ProjectTemplateProps {
   data: {
-    site: {
-      siteMetadata: {
-        title: string
-        description: string
-      }
-    }
     markdownRemark: {
       html: string
       excerpt: string
@@ -33,93 +28,96 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ data }) => {
   const hostname = project.website ? new URL(project.website).hostname : null
 
   return (
-    <IndexLayout
-      background={useBreakpointValue({
-        xl: 'url(/background/pattern-right.svg) right top repeat-y,url(/background/pattern-left.svg) left top repeat-y'
-      })}
-    >
-      <Box>
-        <Box pt={featuredImage ? 2 : 16}>
-          <Container>
-            {featuredImage ? (
-              <GatsbyImage image={featuredImage} alt="Project" />
-            ) : (
-              <SvgPattern
-                style={{
-                  maxHeight: '10rem',
-                  fill: useColorModeValue('black', 'white'),
-                  position: 'absolute',
-                  marginTop: '-2rem',
-                  marginLeft: '-6rem',
-                  zIndex: 0
-                }}
-              />
-            )}
-            <Box
-              shadow="xl"
-              bgGradient={`linear(to-b, ${useColorModeValue('white', 'gray.800')}, 70%, ${useColorModeValue('gray.200', 'blue.900')})`}
-              zIndex={1}
-              py={featuredImage ? 4 : 12}
-              px={6}
-            >
-              <Flex justifyContent="space-between" wrap="wrap">
-                <Heading>{project.title}</Heading>
-                <HStack pl={6} flex={1} justifyContent="flex-end" fontSize="md">
-                  <Text>{project.status.label}</Text>
-                  <Box>{statusIcon}</Box>
-                </HStack>
-              </Flex>
-              <Flex justifyContent="space-between" alignItems="flex-end" placeContent="flex-end" wrap="wrap" mt={4}>
-                <Box pr={6} mb={4} flex={1}>
-                  <HStack>
-                    <FaGithub />
-                    <Text as={Link} fontSize="md" to={project.github}>
-                      {`kir-dev/${project.github.substring(project.github.lastIndexOf('/') + 1)}`}
-                    </Text>
+    <>
+      <SEO title={project.title} description={project.lead} />
+      <IndexLayout
+        background={useBreakpointValue({
+          xl: 'url(/background/pattern-right.svg) right top repeat-y,url(/background/pattern-left.svg) left top repeat-y'
+        })}
+      >
+        <Box>
+          <Box pt={featuredImage ? 2 : 16}>
+            <Container>
+              {featuredImage ? (
+                <GatsbyImage image={featuredImage} alt="Project" />
+              ) : (
+                <SvgPattern
+                  style={{
+                    maxHeight: '10rem',
+                    fill: useColorModeValue('black', 'white'),
+                    position: 'absolute',
+                    marginTop: '-2rem',
+                    marginLeft: '-6rem',
+                    zIndex: 0
+                  }}
+                />
+              )}
+              <Box
+                shadow="xl"
+                bgGradient={`linear(to-b, ${useColorModeValue('white', 'gray.800')}, 70%, ${useColorModeValue('gray.200', 'blue.900')})`}
+                zIndex={1}
+                py={featuredImage ? 4 : 12}
+                px={6}
+              >
+                <Flex justifyContent="space-between" wrap="wrap">
+                  <Heading>{project.title}</Heading>
+                  <HStack pl={6} flex={1} justifyContent="flex-end" fontSize="md">
+                    <Text>{project.status.label}</Text>
+                    <Box>{statusIcon}</Box>
                   </HStack>
-                  {project.website && (
+                </Flex>
+                <Flex justifyContent="space-between" alignItems="flex-end" placeContent="flex-end" wrap="wrap" mt={4}>
+                  <Box pr={6} mb={4} flex={1}>
                     <HStack>
-                      <FaHome />
-                      <Text as={Link} fontSize="md" to={project.website}>
-                        {hostname}
+                      <FaGithub />
+                      <Text as={Link} fontSize="md" to={project.github}>
+                        {`kir-dev/${project.github.substring(project.github.lastIndexOf('/') + 1)}`}
                       </Text>
                     </HStack>
-                  )}
-                </Box>
-                <Box>
-                  <HStack wrap="wrap" justifyContent="flex-end">
-                    {project.techs.map((tech) => (
-                      <Tag colorScheme="blue" key={tech}>
-                        {tech.trim()}
-                      </Tag>
-                    ))}
-                  </HStack>
-                </Box>
-              </Flex>
+                    {project.website && (
+                      <HStack>
+                        <FaHome />
+                        <Text as={Link} fontSize="md" to={project.website}>
+                          {hostname}
+                        </Text>
+                      </HStack>
+                    )}
+                  </Box>
+                  <Box>
+                    <HStack wrap="wrap" justifyContent="flex-end">
+                      {project.techs.map((tech) => (
+                        <Tag colorScheme="blue" key={tech}>
+                          {tech.trim()}
+                        </Tag>
+                      ))}
+                    </HStack>
+                  </Box>
+                </Flex>
+              </Box>
+            </Container>
+          </Box>
+          <Container>
+            <Box py={8}>
+              {/* eslint-disable-next-line react/no-danger */}
+              <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+            </Box>
+            <Box
+              textAlign="right"
+              mt={10}
+              onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth'
+                })
+              }}
+            >
+              <Button colorScheme="orange">Vissza a tetejére</Button>
             </Box>
           </Container>
         </Box>
-        <Container>
-          <Box py={8}>
-            {/* eslint-disable-next-line react/no-danger */}
-            <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-          </Box>
-          <Box
-            textAlign="right"
-            mt={10}
-            onClick={() => {
-              window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-              })
-            }}
-          >
-            <Button colorScheme="orange">Vissza a tetejére</Button>
-          </Box>
-        </Container>
-      </Box>
-      <ScrollButton />
-    </IndexLayout>
+        <ScrollButton />
+      </IndexLayout>
+    </>
   )
 }
 
@@ -127,12 +125,6 @@ export default ProjectTemplate
 
 export const query = graphql`
   query ProjectTemplateQuery($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       excerpt

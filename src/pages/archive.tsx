@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby'
 import * as React from 'react'
 import Container from '~components/Container'
 import Header from '~components/Header'
+import SEO from '~components/SEO'
 import IndexLayout from '../layouts'
 import { BlogPostsProps } from './blog'
 
@@ -24,32 +25,35 @@ export const query = graphql`
 `
 
 const Archive: React.FC<BlogPostsProps> = ({ data }) => (
-  <IndexLayout
-    background={`${useBreakpointValue({
-      base: '',
-      sm: 'url(/background/bottom-left.svg) left top no-repeat, url(/background/top-left.svg) left bottom no-repeat,'
-    })}url(/background/top-right4.svg) right top no-repeat, url(/background/bottom-right.svg) right bottom no-repeat`}
-  >
-    <Box>
-      <Header>
+  <>
+    <SEO title="Archívum" />
+    <IndexLayout
+      background={`${useBreakpointValue({
+        base: '',
+        sm: 'url(/background/bottom-left.svg) left top no-repeat, url(/background/top-left.svg) left bottom no-repeat,'
+      })}url(/background/top-right4.svg) right top no-repeat, url(/background/bottom-right.svg) right bottom no-repeat`}
+    >
+      <Box>
+        <Header>
+          <Container>
+            <Heading as="h1">Archívum</Heading>
+          </Container>
+        </Header>
         <Container>
-          <Heading as="h1">Archívum</Heading>
+          {data.allMarkdownRemark.nodes.map((post) => (
+            <Box key={post.fields.slug} fontSize={{ base: 'md', md: 'lg' }} py={1}>
+              <span>{post.frontmatter.date.split('T')[0]} » </span>
+              <Link to={post.fields.slug}>
+                <chakra.span fontWeight="bold" _hover={{ textDecor: 'underline', color: 'tomato', transition: '.2s ease-in-out' }}>
+                  {post.frontmatter.title}
+                </chakra.span>
+              </Link>
+            </Box>
+          ))}
         </Container>
-      </Header>
-      <Container>
-        {data.allMarkdownRemark.nodes.map((post) => (
-          <Box key={post.fields.slug} fontSize={{ base: 'md', md: 'lg' }} py={1}>
-            <span>{post.frontmatter.date.split('T')[0]} » </span>
-            <Link to={post.fields.slug}>
-              <chakra.span fontWeight="bold" _hover={{ textDecor: 'underline', color: 'tomato', transition: '.2s ease-in-out' }}>
-                {post.frontmatter.title}
-              </chakra.span>
-            </Link>
-          </Box>
-        ))}
-      </Container>
-    </Box>
-  </IndexLayout>
+      </Box>
+    </IndexLayout>
+  </>
 )
 
 export default Archive
