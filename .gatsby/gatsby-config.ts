@@ -8,7 +8,7 @@ dotenv.config({
 
 export default {
   siteMetadata: {
-    siteUrl: 'https://kir-dev.sch.bme.hu',
+    siteUrl: 'https://kir-dev.sch.bme.hu/',
     translations: ['hu'],
     lang: 'hu',
     title: 'Kir-Dev',
@@ -160,6 +160,19 @@ export default {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-tsconfig-paths'
+    'gatsby-plugin-tsconfig-paths',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Kir-Dev blogja`,
+        short_name: `Kir-Dev`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#f15a29`,
+        display: `standalone`,
+        icon: `static/favicon.png`
+      }
+    },
+    `gatsby-plugin-offline`
   ]
 }

@@ -32,7 +32,7 @@ const PostTemplate: React.FC<PostTemplateProps> = ({ data }) => {
 
   return (
     <>
-      <SEO title={post.frontmatter.title} description={post.frontmatter.lead} />
+      <SEO title={post.frontmatter.title} description={post.frontmatter.lead} type="article" />
       <IndexLayout
         background={useBreakpointValue({
           xl: 'url(/background/pattern-right.svg) right top repeat-y,url(/background/pattern-left.svg) left top repeat-y'

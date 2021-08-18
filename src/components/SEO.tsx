@@ -9,6 +9,7 @@ type SEOProps = {
   description?: string
   author?: string
   image?: string
+  type?: string
   robots?: string
   keywords?: string[]
   meta?: { name: string; content: string }[]
@@ -39,7 +40,18 @@ type SiteMetadataProps = {
   }
 }
 
-const SEO: React.FC<SEOProps> = ({ title, description, image, author, lang, robots, keywords = [], meta = [], links = [] }) => {
+const SEO: React.FC<SEOProps> = ({
+  title,
+  description,
+  image,
+  author,
+  lang,
+  type = 'website',
+  robots,
+  keywords = [],
+  meta = [],
+  links = []
+}) => {
   const data: SiteMetadataProps = useStaticQuery(graphql`
     query SiteMetadata {
       site {
@@ -96,7 +108,8 @@ const SEO: React.FC<SEOProps> = ({ title, description, image, author, lang, robo
     url: pathname === '/' ? `${siteUrl}` : `${siteUrl}${pathname}`,
     keywords: keywords.length ? keywords : defaultKeywords,
     robots: robots || defaultRobots,
-    social
+    social,
+    type
   }
 
   return (
@@ -152,7 +165,7 @@ const SEO: React.FC<SEOProps> = ({ title, description, image, author, lang, robo
         },
         {
           property: 'og:type',
-          content: 'website'
+          content: seo.type
         },
         {
           name: 'twitter:card',
