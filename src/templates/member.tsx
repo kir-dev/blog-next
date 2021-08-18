@@ -22,7 +22,11 @@ const MemberTemplate: React.FC<MemberTemplateProps> = ({ data }) => {
 
   return (
     <>
-      <SEO title={member.realName} description={`${member.realName}, ${member.position} a Kir-Dev csapatában.`} />
+      <SEO
+        robots="nofollow, noindex"
+        title={member.realName}
+        description={`${member.realName}, ${member.position} a Kir-Dev csapatában.`}
+      />
       <IndexLayout
         background={useBreakpointValue({
           xl: 'url(/background/pattern-right.svg) right top repeat-y,url(/background/pattern-left.svg) left top repeat-y'

@@ -129,6 +129,7 @@ export const query = graphql`
       html
       excerpt
       frontmatter {
+        lead
         title
         github
         website

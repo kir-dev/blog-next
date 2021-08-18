@@ -116,6 +116,7 @@ export const query = graphql`
       html
       excerpt
       frontmatter {
+        lead
         title
         date
         author
