@@ -1,5 +1,6 @@
 import dotenv from 'dotenv'
 import path from 'path'
+import { FACEBOOK_PAGE_URL, GITHUB_ORG_URL, INSTAGRAM_PAGE_URL, TWITTER_USERNAME } from '../src/utils/configurations'
 
 dotenv.config({
   path: `.env.${process.env.NODE_ENV}`
@@ -7,16 +8,25 @@ dotenv.config({
 
 export default {
   siteMetadata: {
-    baseUrl: 'https://kir-dev.sch.bme.hu',
+    siteUrl: 'https://kir-dev.sch.bme.hu',
     translations: ['hu'],
     lang: 'hu',
     title: 'Kir-Dev',
     titleTemplate: '%s | Kir-Dev',
-    description: 'A Kir-Dev kör blogja',
+    description:
+      `A Schönherz kollégium webfejlesztő körének, azaz a Kir-Dev kör blog és portfolió weboldala. Olvashatsz körünk ` +
+      `történetéről, szakmai újdonságokról, tanfolyamainkról és projektjeink haladásáról. Körünk a BME VIK Simonyi Szakkollégiumának tagja.`,
     author: 'kir-dev',
-    image: '/favicon.png',
-    keywords: ['gatsbyjs', 'gatsby', 'javascript', 'ruby', 'rails', 'nodejs', 'typescript', 'community', 'simonyi'],
-    robots: 'index, follow'
+    image: '/default-og-image.png',
+    keywords: ['gatsbyjs', 'typescript', 'javascript', 'ruby', 'rails', 'nodejs', 'typescript', 'community', 'simonyi'],
+    robots: 'index, follow',
+    social: {
+      twitter: `https://twitter.com/${TWITTER_USERNAME}`,
+      twitterUsername: TWITTER_USERNAME,
+      github: GITHUB_ORG_URL,
+      facebook: FACEBOOK_PAGE_URL,
+      instagram: INSTAGRAM_PAGE_URL
+    }
   },
   plugins: [
     '@chakra-ui/gatsby-plugin',

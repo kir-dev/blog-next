@@ -1,5 +1,7 @@
 export const PEK_URL = process.env.GATSBY_PEK_URL || ''
 export const GITHUB_ORG_URL = process.env.GATSBY_GITHUB_ORG_URL || ''
+export const TWITTER_USERNAME = process.env.GATSBY_TWITTER_USERNAME || ''
+export const INSTAGRAM_PAGE_URL = process.env.GATSBY_INSTAGRAM_PAGE_URL || ''
 export const YOUTUBE_CHANNEL_URL = process.env.GATSBY_YOUTUBE_CHANNEL_URL || ''
 export const FACEBOOK_PAGE_URL = process.env.GATSBY_FACEBOOK_PAGE_URL || ''
 export const RICKROLL_URL = process.env.GATSBY_RICKROLL_URL || ''

@@ -1,7 +1,7 @@
 import { useLocation } from '@reach/router'
-import React, { FC } from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+import React from 'react'
 import { Helmet, HelmetProps } from 'react-helmet'
-import { useSiteMetadata } from '~utils/useSiteMetadata'
 
 type SEOProps = {
   lang?: string
@@ -15,11 +15,61 @@ type SEOProps = {
   links?: { rel: string; href: string }[]
 } & HelmetProps
 
-const SEO: FC<SEOProps> = ({ title, description, image, author, lang, robots, keywords = [], meta = [], links = [] }) => {
+type SiteMetadataProps = {
+  site: {
+    siteMetadata: {
+      siteUrl: string
+      translations?: string[]
+      lang?: string
+      title: string
+      titleTemplate: string
+      description: string
+      author: string
+      image: string
+      keywords?: string[]
+      robots?: string
+      social?: {
+        twitter?: string
+        twitterUsername?: string
+        github?: string
+        facebook?: string
+        instagram?: string
+      }
+    }
+  }
+}
+
+const SEO: React.FC<SEOProps> = ({ title, description, image, author, lang, robots, keywords = [], meta = [], links = [] }) => {
+  const data: SiteMetadataProps = useStaticQuery(graphql`
+    query SiteMetadata {
+      site {
+        siteMetadata {
+          siteUrl
+          translations
+          lang
+          title
+          titleTemplate
+          description
+          author
+          image
+          keywords
+          robots
+          social {
+            twitter
+            twitterUsername
+            github
+            facebook
+            instagram
+          }
+        }
+      }
+    }
+  `)
+
   const { pathname } = useLocation()
 
   const {
-    baseUrl,
+    siteUrl,
     lang: defaultLang,
     title: defaultTitle,
     titleTemplate,
@@ -27,13 +77,14 @@ const SEO: FC<SEOProps> = ({ title, description, image, author, lang, robots, ke
     description: defaultDescription,
     image: defaultImage,
     robots: defaultRobots,
-    keywords: defaultKeywords
-  } = useSiteMetadata()
+    keywords: defaultKeywords,
+    social
+  } = data.site.siteMetadata
 
   const imageUrl = (() => {
     let url = image || defaultImage
     url = url.replace(/^\/+/, '')
-    return url.includes('://') ? url : `${baseUrl}${url}`
+    return url.includes('://') ? url : `${siteUrl}${url}`
   })()
 
   const seo = {
@@ -42,9 +93,10 @@ const SEO: FC<SEOProps> = ({ title, description, image, author, lang, robots, ke
     description: description || defaultDescription,
     author: author || defaultAuthor,
     image: imageUrl,
-    url: pathname === '/' ? `${baseUrl}` : `${baseUrl}${pathname}`,
+    url: pathname === '/' ? `${siteUrl}` : `${siteUrl}${pathname}`,
     keywords: keywords.length ? keywords : defaultKeywords,
-    robots: robots || defaultRobots
+    robots: robots || defaultRobots,
+    social
   }
 
   return (
@@ -75,6 +127,18 @@ const SEO: FC<SEOProps> = ({ title, description, image, author, lang, robots, ke
           content: seo.author
         },
         {
+          property: 'og:locale',
+          content: seo.lang
+        },
+        {
+          property: 'og:site_name',
+          content: seo.title
+        },
+        {
+          property: 'og:url',
+          content: seo.url
+        },
+        {
           property: 'og:title',
           content: seo.title
         },
@@ -95,12 +159,32 @@ const SEO: FC<SEOProps> = ({ title, description, image, author, lang, robots, ke
           content: 'summary_large_image'
         },
         {
+          name: 'twitter:site',
+          content: seo.social?.twitter
+        },
+        {
+          name: 'twitter:creator',
+          content: seo.social?.twitterUsername
+        },
+        {
+          name: 'twitter:title',
+          content: seo.title
+        },
+        {
+          name: 'twitter:description',
+          content: seo.description
+        },
+        {
+          name: 'twitter:image',
+          content: seo.image
+        },
+        {
           name: 'robots',
           content: seo.robots
         }
       ]
         .concat(
-          seo.keywords.length
+          seo.keywords?.length
             ? {
                 name: 'keywords',
                 content: seo.keywords.join(', ')
