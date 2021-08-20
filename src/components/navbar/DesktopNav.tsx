@@ -41,7 +41,7 @@ const DesktopNav: React.FC = () => {
                 p={2}
                 as={Link}
                 to={navItem.href ?? '#'}
-                fontSize="sm"
+                fontSize="md"
                 fontWeight={500}
                 _hover={{
                   textDecoration: 'none',
