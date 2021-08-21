@@ -1,7 +1,7 @@
 import { Box, chakra, Flex, Grid, Heading, HStack, Link, Text, useBreakpointValue } from '@chakra-ui/react'
 import { Link as GatsbyLink } from 'gatsby'
 import * as React from 'react'
-import { FaAt, FaFacebook, FaGithub, FaYoutube } from 'react-icons/fa'
+import { FaFacebook, FaGithub, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
 import NodeLogo from '~assets/images/node-logo.svg'
 import RailsLogo from '~assets/images/rails-logo.svg'
 import SimonyiLogo from '~assets/images/simonyi-logo.svg'
@@ -12,7 +12,15 @@ import StickyNote from '~components/about-components/StickyNote'
 import Container from '~components/Container'
 import InfoBox from '~components/indexpage-components/InfoBox'
 import SEO from '~components/SEO'
-import { FACEBOOK_PAGE_URL, GITHUB_ORG_URL, PUBLIC_EMAIL, YOUTUBE_CHANNEL_URL } from '~utils/configurations'
+import {
+  FACEBOOK_PAGE_URL,
+  GITHUB_ORG_URL,
+  INSTAGRAM_PAGE_URL,
+  MEETING_START_TIME,
+  PUBLIC_EMAIL,
+  TWITTER_USERNAME,
+  YOUTUBE_CHANNEL_URL
+} from '~utils/configurations'
 import IndexLayout from '../layouts'
 
 const ABOUT_MAP: Map<string, string> = new Map([
@@ -314,10 +322,11 @@ const AboutPage: React.FC = () => {
                 <Flex mt={6} direction={{ base: 'column', sm: 'row' }}>
                   <Text pr={{ base: 0, sm: 10 }}>
                     Ha maradt még kérdésed, hibajegyet szeretnél feladni valamilyen projektünkkel kapcsolatban, vagy van valami izgalmas
-                    feladatod számunkra: vedd fel a kapcsolatot velünk email címünkön, esetleg gyere el gyűléseinkre a Schönherz Kollégium
-                    1319-es szobájába!
+                    feladatod számunkra: vedd fel a kapcsolatot velünk email címünkön:{' '}
+                    <chakra.span fontWeight="bold">{PUBLIC_EMAIL}</chakra.span>, illetve gyere el gyűléseinkre a Schönherz Kollégium{' '}
+                    <chakra.span fontWeight="bold">1319-es szobájába {MEETING_START_TIME}-kor</chakra.span>!
                   </Text>
-                  <Flex flex={1} whiteSpace="nowrap" width="full" direction="column" alignItems="flex-end">
+                  <Flex mt={{ base: 4, sm: 0 }} flex={1} whiteSpace="nowrap" width="full" direction="column" alignItems="flex-end">
                     <HStack pb={2} as={Link} _hover={{ color: 'orange.400' }} href={GITHUB_ORG_URL}>
                       <Text>GitHub szervezetünk</Text>
                       <FaGithub size={socialSize} />
@@ -330,9 +339,13 @@ const AboutPage: React.FC = () => {
                       <Text>Facebook oldalunk</Text>
                       <FaFacebook size={socialSize} />
                     </HStack>
-                    <HStack py={2}>
-                      <Text>{PUBLIC_EMAIL}</Text>
-                      <FaAt size={socialSize} />
+                    <HStack py={2} as={Link} _hover={{ color: 'orange.400' }} href={INSTAGRAM_PAGE_URL}>
+                      <Text>Instagram oldalunk</Text>
+                      <FaInstagram size={socialSize} />
+                    </HStack>
+                    <HStack py={2} as={Link} _hover={{ color: 'orange.400' }} href={`https://twitter.com/${TWITTER_USERNAME}`}>
+                      <Text>Twitter oldalunk</Text>
+                      <FaTwitter size={socialSize} />
                     </HStack>
                   </Flex>
                 </Flex>
