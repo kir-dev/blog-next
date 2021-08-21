@@ -7,4 +7,5 @@ export interface PostProps {
   date: string
   tags?: Array<string>
   featuredImage: ImageDataLike
+  ogImage?: ImageDataLike
 }

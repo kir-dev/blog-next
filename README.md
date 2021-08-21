@@ -42,6 +42,7 @@ Példa: `./create-post.sh 'Heroku és társai' 'mypekusername'`
   - Ha a körről közösségéről szól --> **közösség**
   - És így tovább (természetesen szabad kezed van ezekben).
 - Írd meg a posztot markdownban, jelenleg képeket csak külső forrásból tudsz berakni a posztjaidba (használd pl.: az Imgur-t).
+- Ha a posztnak saját og:image-et akarsz adni, azt is tedd a `content/images/posts/` mappába, majd adj hozzá egy `ogImage` fieldet a `featuredImage` alatt. Ha nem adsz meg, akkor a featuredImage lesz az og:image-e a posztnak. (ha egy kicsit lusta vagy og:image-et szerkeszteni, ajánlom a [Vercel og-image generatorát](https://github.com/vercel/og-image))
 
 3. Kérj review-t körtársaidtól egy pull requesten keresztül.
 

@@ -15,9 +15,10 @@ export default {
     titleTemplate: '%s | Kir-Dev',
     description:
       `A Schönherz kollégium webfejlesztő körének, azaz a Kir-Dev kör blog és portfolió weboldala. Olvashatsz körünk ` +
-      `történetéről, szakmai újdonságokról, tanfolyamainkról és projektjeink haladásáról. Körünk a BME VIK Simonyi Szakkollégiumának tagja.`,
+      `történetéről, szakmai újdonságokról, tanfolyamainkról és projektjeink haladásáról. Körünk a BME VIK Simonyi Károly ` +
+      `Szakkollégiumának tagja.`,
     author: 'kir-dev',
-    image: '/default-og-image.png',
+    image: '/default-og.png',
     keywords: ['gatsbyjs', 'typescript', 'javascript', 'ruby', 'rails', 'nodejs', 'typescript', 'community', 'simonyi'],
     robots: 'index, follow',
     social: {

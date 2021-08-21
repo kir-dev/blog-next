@@ -1,6 +1,6 @@
 import { Box, Button, Flex, Heading, HStack, Tag, Text, useBreakpointValue, useColorModeValue } from '@chakra-ui/react'
 import { graphql } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
 import * as React from 'react'
 import { FaClock } from 'react-icons/fa'
 import BlogAuthor from '~components/blog-components/BlogAuthor'
@@ -29,10 +29,11 @@ interface PostTemplateProps {
 const PostTemplate: React.FC<PostTemplateProps> = ({ data }) => {
   const post = data.markdownRemark
   const featuredImage = getImage(post.frontmatter.featuredImage)
+  const ogImageSrc = post.frontmatter.ogImage ? getSrc(post.frontmatter.ogImage) : getSrc(post.frontmatter.featuredImage)
 
   return (
     <>
-      <SEO title={post.frontmatter.title} description={post.frontmatter.lead} type="article" />
+      <SEO title={post.frontmatter.title} description={post.frontmatter.lead} type="article" image={ogImageSrc} />
       <IndexLayout
         background={useBreakpointValue({
           xl: 'url(/background/pattern-right.svg) right top repeat-y,url(/background/pattern-left.svg) left top repeat-y'
@@ -124,6 +125,11 @@ export const query = graphql`
         featuredImage {
           childImageSharp {
             gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+          }
+        }
+        ogImage {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED, formats: [AUTO])
           }
         }
       }

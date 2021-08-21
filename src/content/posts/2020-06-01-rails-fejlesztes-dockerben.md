@@ -7,6 +7,7 @@ tags: ['tech', 'rails', 'vscode']
 lead: Betekintés a konténerizáció világába
 comment: true
 featuredImage: ../images/posts/docker.jpg
+ogImage: ../images/posts/docker-og.png
 ---
 
 ## Tartalomjegyzék

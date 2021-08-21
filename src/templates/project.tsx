@@ -1,6 +1,6 @@
 import { Box, Button, Flex, Heading, HStack, Tag, Text, useBreakpointValue, useColorModeValue } from '@chakra-ui/react'
 import { graphql, Link } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
 import * as React from 'react'
 import { FaGithub, FaHome } from 'react-icons/fa'
 import SvgPattern from '~assets/images/circuit-board.svg'
@@ -24,12 +24,13 @@ interface ProjectTemplateProps {
 const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ data }) => {
   const project = data.markdownRemark.frontmatter
   const featuredImage = getImage(project.featuredImage)
+  const featuredImageSrc = getSrc(project.featuredImage)
   const statusIcon = getIcon(project.status)
   const hostname = project.website ? new URL(project.website).hostname : null
 
   return (
     <>
-      <SEO title={project.title} description={project.lead} />
+      <SEO title={project.title} description={project.lead} image={featuredImageSrc} />
       <IndexLayout
         background={useBreakpointValue({
           xl: 'url(/background/pattern-right.svg) right top repeat-y,url(/background/pattern-left.svg) left top repeat-y'
