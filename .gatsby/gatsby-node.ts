@@ -67,7 +67,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
     throw new Error(allMarkdown.errors)
   }
 
-  allMarkdown.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  allMarkdown.data?.allMarkdownRemark.edges.forEach(({ node }) => {
     const { slug, layout } = node.fields
 
     createPage({

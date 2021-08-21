@@ -4,6 +4,7 @@ import * as React from 'react'
 import Container from '~components/Container'
 import MeetingControls from '~components/members-components/MeetingControls'
 import MemberAvatarCard from '~components/members-components/MemberAvatarCard'
+import SEO from '~components/SEO'
 import { MemberProps } from '~types/member.props'
 import IndexLayout from '../layouts'
 
@@ -35,8 +36,9 @@ const getMemberCollage = ({ nodes }: AllMarkdownRemark): JSX.Element[] =>
     </Flex>
   ))
 
-const MembersPage: React.FC<MembersProps> = ({ data }) => {
-  return (
+const MembersPage: React.FC<MembersProps> = ({ data }) => (
+  <>
+    <SEO title="Csapatunk" />
     <IndexLayout
       background={`${useBreakpointValue({
         base: '',
@@ -65,8 +67,8 @@ const MembersPage: React.FC<MembersProps> = ({ data }) => {
         </Container>
       </Box>
     </IndexLayout>
-  )
-}
+  </>
+)
 
 export default MembersPage
 
