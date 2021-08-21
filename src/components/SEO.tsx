@@ -94,8 +94,7 @@ const SEO: React.FC<SEOProps> = ({
   } = data.site.siteMetadata
 
   const imageUrl = (() => {
-    let url = image || defaultImage
-    url = url.replace(/^\/+/, '')
+    const url = (image || defaultImage).replace(/^\/+/, '')
     return url.includes('://') ? url : `${siteUrl}/${url}`
   })()
 
