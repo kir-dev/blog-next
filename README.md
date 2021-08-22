@@ -41,7 +41,7 @@ Példa: `./create-post.sh 'Heroku és társai' 'mypekusername'`
   - Ha valami technológiairól --> **tech**, **web** stb.
   - Ha a körről közösségéről szól --> **közösség**
   - És így tovább (természetesen szabad kezed van ezekben).
-- Írd meg a posztot markdownban, jelenleg képeket csak külső forrásból tudsz berakni a posztjaidba (használd pl.: az Imgur-t).
+- Írd meg a posztot markdownban, **FONTOS:** képeket posztjaidba a [warp drive](https://warp.kir-dev.sch.bme.hu/)-on keresztül tegyél be. Jelentkezz be, készíts egy albumot, tedd be a képeket, és használd a 'copy to clipboard' gombot. Ha google képkeresőben vagy egy másik weboldalon találtál képet és azt illesztenéd be, először töltsd le a gépedre a kívánt képet, töltsd fel a warpra, majd onnan addresseld a képet. Így sosem vesznek el a képek, még ha a weboldal, ahonnan kölcsönveszed, megszüntetné a kép osztását.
 - Ha a posztnak saját og:image-et akarsz adni, azt is tedd a `content/images/posts/` mappába, majd adj hozzá egy `ogImage` fieldet a `featuredImage` alatt. Ha nem adsz meg, akkor a featuredImage lesz az og:image-e a posztnak. (ha egy kicsit lusta vagy og:image-et szerkeszteni, ajánlom a [Vercel og-image generatorát](https://github.com/vercel/og-image))
 
 3. Kérj review-t körtársaidtól egy pull requesten keresztül.
@@ -69,6 +69,7 @@ Szerkesztéskor a projekt markdown fájljában:
   - Extra: `Archivált` label megadása esetén hold ikon jelenik meg a státusz feliratban, `Kész` vagy `Üzemel` esetén egy pipa, `Áll` vagy `Megszakadt` esetén pedig egy felkiáltójeles kör alakú ikon.
 - A `techs` fieldben megadhatod vesszővel elválasztva egy tömbben a projekt főbb techjeit (lehetőleg maradj max 3-nál). Pl.: `techs: ['TypeScript', 'Node.js']`
 - A `website` field akár elhagyható, ha nincs tipikus kir-deves oldala a projektnek.
+- **FONTOS:** képeket projektleírásba a [warp drive](https://warp.kir-dev.sch.bme.hu/)-on keresztül tegyél be. Jelentkezz be, készíts egy albumot, tedd be a képeket, és jobb egér a képnézegetőben, majd Copy Image address.
 
 ## Hozzáadnál új tagot a csapathoz?
 
@@ -91,7 +92,9 @@ Szerkeszteni tudod a hozzárendelt tulajdonságokat a létrejött markdown fájl
 - `active`: megadható, hogy a tag jelenleg aktív tagja-e a csapatnak
 - Minden további infót, amit szeretnél megosztani a világgal, írd meg a markdown fájl további részében.
 
-**Fontos:** ha képet is teszel a repóba magadról, akkor tedd be a képet pekusername-eddel elnevezve a `content/images/avatars/` könyvtárba.
+**FONTOS:** ha képet is teszel a repóba magadról, akkor tedd be a képet pekusername-eddel elnevezve a `content/images/avatars/` könyvtárba.
+
+**FONTOS:** ha kép(ek)et tennél a saját leírásodba, azt a [warp drive](https://warp.kir-dev.sch.bme.hu/)-on keresztül tedd. Jelentkezz be, készíts egy albumot, tedd be a képeket, és jobb egér a képnézegetőben, majd Copy Image address.
 
 ## Tanfolyamok
 

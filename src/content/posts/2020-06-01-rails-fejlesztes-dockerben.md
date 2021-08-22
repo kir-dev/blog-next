@@ -141,7 +141,7 @@ docker-compose up
 
 A [localhost:3000](http://localhost:3000/) megtekinthetjük a Rails szerver kezdőoldalát.
 
-![Imgur](https://i.imgur.com/5DGpHV2.png)
+![Imgur](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8cec0c76ed80e7d138a6236a13ef1eccd7ba724a/5DGpHV2.png)
 
 ## RubyMine konfigurálása
 
@@ -178,19 +178,19 @@ rails g scaffold ruby_mine name:string points:integer
 
 Ha mindent jól csináltunk, akkor az alábbi sorok jelennek meg a konzolon:
 
-![Imgur](https://i.imgur.com/wDxKCEh.png)
+![Imgur](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBUQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--cf52887cf07293ce99f1da21ff656b80bb44025b/wDxKCEh.png)
 
 Láthajuk, hogy létrejöttek oldalak, tesztek, valamint egy kontroller is. Főként ezeket fogjuk használni az IDE tesztelés során. A **zöld háromszög** gomb lenyomásával elindítható a webszerver, ami a [localhost:3000](http://localhost:3000/)-es címen elérhető.
 
-![Imgur](https://i.imgur.com/IJgL6cZ.png)
+![Imgur](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBTUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0ffdcbe4efdfcdb35eb58892ef6fd2e220339072/IJgL6cZ.png)
 
 Ezután próbáljuk ki a többi fontosabb eszköz működését az IDE-ben. A debug, miután beállítottuk, hogy docker exec-kel legyen használva, egyből használható.
 
-![Imgur](https://i.imgur.com/Dgln72k.png)
+![Imgur](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d967304f2860d66d4eb052ad4ac2fb7d350c8ddf/Dgln72k.png)
 
 Teszteket is könnyedén futthatunk az IDE GUI-ján keresztül. Ehhez navigáljunk egy teszteket tartalmazó fájl-hoz, mondjuk **test/controllers/ruby_mines_controller_test.rb**-hez, itt a **jobb egérgomb** lenyomásával megjelennek a kontextusfüggő lehetőségek. Ezek közül válasszuk a **Run Minitest:**-lehetőséget. A tesztek futásának eredményét is megjeleníti a fejlesztőkörnyezet. Emellett lehetőség van a tesztek közül csak egyet futtani, valamint debug módban is elindíthatjuk a teszteket.
 
-![Imgur](https://i.imgur.com/IrfSvfK.png)
+![Imgur](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBTZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--507814c25b45dd079f7a894fcb7ce97632520a3a/IrfSvfK.png)
 
 A code-completion és az intelligens navigáció is működik, bár ezekhez nem szükséges a nyelvi környezet, az IDE önállóan nyújtja ezeket a szolgáltatásokat. Szinte minden lehetőség elérhető a konténerből, amit a natívan használt verzió támogat. Egy kivételt találtam: a natív ruby-t használó IDE-ben van lehetőség egyes tesztek futtatása után kilistázni a tesztfedettséget. Valamint az érintett sorokat is színezi a környezet annak függvényében, hogy érintette-e őket az adott futás. Ez a lehetőség még konténeres használat során nem elérhető, de a fejlesztők már tudnak a [problémáról][1].(A PyCharm alkalmazásban már megoldották, hogy elérhető legyen remote használatával ez a funkcionalitás.)
 
@@ -214,19 +214,19 @@ rails g scaffold vs_code name:string points:integer
 
 A fenti parancs kimenetén a létrehozott fájlok nevére kattintva gyorsan megnyithatjuk az adott fájlt.
 
-![Imgur](https://i.imgur.com/HGVdaEL.png)
+![Imgur](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBTQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8d8d74ee3b22b71c610951204f9bf75495bfbb12/HGVdaEL.png)
 
 Ha sikeresen felvettük a szükséges konfigurációkat a launch.json fájlba, akkor a **Run** tabon kiválaszthatjuk a **Rails server** konfigurációt és a zöld háromszöggel elindíthatjuk a szervert.
 
-![Imgur](https://i.imgur.com/Ewk3Aua.png)
+![Imgur](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8bdd736197e9e504ed6acac49303e6856472c548/Ewk3Aua.png)
 
 A debuggoláshoz **Run** tabon, válasszuk ki a **Listen for rdebug-ide** konfigurációt, majd indítsuk el. Felvehetünk breakpontokat, megnézhetjük a stack trace-t, valamint megfigyelhetjük a változók értékeit.
 
-![Imgur](https://i.imgur.com/NcIQcFv.png)
+![Imgur](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBTdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--133cebeeb425a7e39b267eddc354d9759b88b455/NcIQcFv.png)
 
 A teszteket a **Run** tabon a **Rails test** konfiguráció elindításával tudjuk futtatni. A VSCode tesztfuttatás terén kevesebb lehetőséget biztosít, mint a RubyMine. Külön konfiguráció nélkül csak egyszerre tudjuk futtatni a teszteket, egy kiválasztott tesztet önállóan nem indíthatunk el. Valamint a tesztek debug-olásaház is új konfigurációt kell hozzáadni a launch.json fájlhoz.
 
-![Imgur](https://i.imgur.com/c2vV8WC.png)
+![Imgur](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--55c184c47101981a6b4c414370fea574f2a2d24e/c2vV8WC.png)
 
 ## Összefoglalás
 
