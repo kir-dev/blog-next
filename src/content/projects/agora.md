@@ -17,9 +17,7 @@ A weboldal kollégiumi piactérként szolgál, ahol a felhasználók segítsége
 - van a koliban a szobádban egy irodai forgószék, amelyre már nincs szükséged ➞ adj fel az eladására egy apróhirdetést az Agorán!
 - szükséged van egy személyes korrepetálásra analízisből ➞ adj fel rá egy apróhirdetést az Agorán!
 
-Ha sikerül elég motiváltaknak és ambíciózusnak maradnunk a projekt kivitelezőivel, akkor létrejöhet egy integráció a [TanulóSCH](/project/tanulo-next) weboldalunkkal is, hogy az a közösségben könnyedén tudjanak az emberek akár tanuló társakat találni egy-egy apróhirdetés feladásával és ahhoz egy tanulószoba foglalásával.
-
-Mivel egy fizetési rendszer csak túlbonyolítani a dolgokat, így a weboldal főként arra adna lehetőséget, hogy az emberek megtalálják egymást és elősegítsük a közösség együttműködését.
+Ha sikerül elég motiváltaknak és ambíciózusnak maradnunk a projekt kivitelezőivel, akkor létrejöhet egy integráció a [TanulóSCH](/project/tanulo-next) weboldalunkkal is, hogy a közösségben könnyedén tudjanak az emberek akár tanulótársakat találni egy-egy apróhirdetés feladásával és ahhoz egy tanulószoba foglalásával.
 
 # Hogy indultunk?
 
