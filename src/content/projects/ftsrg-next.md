@@ -13,8 +13,6 @@ featuredImage: ../images/projects/ftsrg-next.png
 
 A projektet nem mi alapítottuk, egyetemünk kutatócsoportja, a MIT tanszékhez tartozó Ftsrg néven ismert **Kritikus Rendszerek Kutatócsoport** kezdte el saját weboldalukat összerakni egy **Colorlib** scss sablonnal, amely a **Bootstrap** frontend frameworköt használja. 2021 tavaszán viszont hozzánk fordultak igényükkel, méghozzá a következőkkel:
 
-> Első körben az alábbi fejlesztésekre lenne szükségünk:
->
 > - angol nyelvű változat elkészítése (a teljes struktúra duplikálása nélkül),
 > - a designhoz illeszkedő sablon kialakítasa további aloldalaknak (pl. projektek, tantárgyak),
 > - apróbb hibák javítása
