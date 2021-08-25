@@ -17,7 +17,7 @@ Két számot érdemes megjegyezni a front-end optimalizációval kapcsolatban:
 
 A bevezetőben sugalltuk, hogy a kliens oldali teljesítménynél nem csak a felhasználóhoz megérkezett adatoktól számított feldolgozási és renderelési időt vesszük figyelembe, hanem azt is, hogy a bitek milyen formában közlekednek a böngésző és a szerver(ek) között. Mielőtt elkezdenénk megvizsgálni a különböző optimalizálási lehetőségeket, nagy vonalakban áttekintjük a HTTP lekérdezések felépítését.
 
-![httprequest](/img/2014-03-06-httprequest.png)
+![httprequest](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBUdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ae88c4c326b1758c139beed9e5b402a6fe4c2525/2014-03-06-httprequest.png)
 
 1. DNS lekérdezés: A kliens megpróbálja feloldani a domain nevet, a DNS szerver válaszol egy IP címmel.
 2. Kapcsolódás: Megtörténik a háromfázisú TCP handshake, a kliens SYN csomagot küld a szervernek, a szerver SYN-ACK csomaggal válaszol, végül a kliens ACK csomagot küld és ezzel létrejött a TCP kapcsolat.
@@ -69,7 +69,7 @@ A nélkülözhetetlen funkciókat tartalmazó kritikus JS és CSS fájlok kivál
 
 A lehető leggyorsabb alkalmazás betöltődéshez és a minél hamarabbi használhatósághoz a kritikus funkciókat tartalmazó rövidebb JS és CSS részeket tehát érdemes inline az oldal _head_ részében megírni, mivel azon kódrészletek futnak le a leghamarabb a HTML fájl letöltődése után. A hosszabb kritikus JS és CSS fájlokat azonban érdemesebb már külső erőforrásként betölteni, mivel azokat a böngésző cacheli. A többi fájl betöltése történhet _lazy loading_ segítségével (azaz JavaScript-ből adjuk hozzá a script tag-et a HTML-hez), vagy használhatjuk a késleltetett betöltés technikáját.
 
-![scriptexecution](/img/2014-03-06-scriptexecution.jpg)
+![scriptexecution](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBVUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5f2a78c7d79a805ece8e334fd87ed3cf0fe77fc2/2014-03-06-scriptexecution.jpg)
 
 Alapvetően háromféle módon tölthetünk be külső JavaScript-et:
 
@@ -126,7 +126,7 @@ Először is gratulálok mindenkinek, aki eljutott az olvasással idáig. Hossz�
 - erőforrások okos betöltése
 - képek optimalizálása
 
-![pagespeedinsights](/img/2014-03-06-pagespeedinsights.png)
+![pagespeedinsights](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBVQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--224f4f80099958dbb119f7af9175992a218b3ce2/2014-03-06-pagespeedinsights.png)
 
 Természetesen a fenti műveletek végrehajtása után is érdemes méréseket végezni, ehhez ajánlom a [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) és [Webpagetest](http://www.webpagetest.org/) elemzőprogramokat, melyek értékelési szempontjai alapján ezen cikk is készült. További olvasnivalónak pedig ajánlom az alábbi linkeket:
 

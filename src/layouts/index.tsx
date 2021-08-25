@@ -3,15 +3,13 @@ import 'modern-normalize'
 import * as React from 'react'
 import Footer from '~components/footer/Footer'
 import Navbar from '~components/navbar/Navbar'
-import SEO from './SEO'
 
-interface IndexLayoutProps {
+type IndexLayoutProps = {
   background?: string
 }
 
-const IndexLayout: React.FC<IndexLayoutProps> = ({ children, background }) => (
+const IndexLayout: React.FC<IndexLayoutProps> = ({ background, children }) => (
   <>
-    <SEO />
     <Flex direction="column" minHeight="100vh">
       <Navbar />
       <Box background={background} flex={1} pb={20}>

@@ -101,4 +101,4 @@ $ source myvars.sh
 _A cikk szakmai felülvizsgálatáért és a javaslatokért köszönet [night[w]](https://korok.sch.bme.hu/profile/show/uid/nightw)-nak!_
 
 Happy scripting!
-![](https://imgs.xkcd.com/comics/automation.png)
+![](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--21241e5e843a2de55de91819b7983837e2809aed/automation.png)

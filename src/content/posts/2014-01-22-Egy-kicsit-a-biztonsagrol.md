@@ -12,19 +12,19 @@ Egy weboldal nagyon hasznos annak a közösségnek, akik mindennap használják 
 
 Az SQL Injection egy kód futtatási technika adatbázist használó alkalmazások támadására. Rosszindulatú SQL kódot írnak be egy beviteli mezőbe, ami majd később végrehajtódik a szerver oldalon. Ez akkor fordulhat elő, hogyha a beviteli mezőben nem szűrjük a megfelelő karaktereket és ezek belekerülnek az SQL kifejezésbe. A megoldás az, hogyha az ilyen karaktereket kiszűrjük a bevitt adatokból, tehát a beviteli mezők validációjával illetve prepared statementek használatával ez a sebezhetőség elkerülhető. Nézzünk egy nagyon egyszerű példát:
 
-```mysql
+```sql
 sql_statement = "SELECT * FROM users WHERE name='" + user_name + "';"
 ```
 
 Ez az SQL kifejezés a `users` táblából kikeresi azt a felhasználót amelyiknek a felhasználó neve megegyezik a `user_name` változó tartalmával. Ha viszont egy rosszindulatú felhasználó SQL kódot ír a beviteli mezőbe akkor ez a lekérdezés másképpen fog kiértékelődni.
 
-```mysql
+```sql
 ' or '1'='1
 ```
 
 Amennyiben ez a kódrészlet kerül a `user_name` változóba, akkor a kifejezésünk igazként fog kiértékelődni mivel az 1=1 mindig teljesülni fog. A végén pedig így néz majd ki a végrehajtott lekérdezésünk:
 
-```mysql
+```sql
 SELECT * FROM users WHERE name = '' OR '1'='1';
 ```
 
@@ -32,7 +32,7 @@ SELECT * FROM users WHERE name = '' OR '1'='1';
 
 Az XSS lehetőséget nyújt kliens oldali szkriptek beszúrására a weboldalba, ami egy másik felhasználó számára fog megjelenni. Egy tipikus XSS támadásban a támadó egy legitim webalkalmazásba rosszindulatú kliens oldali scriptet helyez el.
 
-![](https://www.acunetix.com/wp-content/uploads/2012/10/PTMFOG0000001531.png")
+![](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bf882316fe9b3badeb56e688fcf42dc0ee42b4e6/xss.png)
 
 Amikor egy felhasználó meglátogatja a weboldalt akkor a böngészőjében ez a szkript letöltődik és végrehajtódik (gyakorlatilag itt történik meg ténylegesen a beszúrás) és ezek után már a támadó által elhelyezett szkript fog futni a felhasználó böngészőjében. Legtöbbször a `<script>` az `<img>` és az `<iframe>` elemeket támadják. Például a beviteli mezőbe ezt írják be:
 

@@ -1,5 +1,6 @@
 import dotenv from 'dotenv'
 import path from 'path'
+import { FACEBOOK_PAGE_URL, GITHUB_ORG_URL, INSTAGRAM_PAGE_URL, TWITTER_USERNAME } from '../src/utils/configurations'
 
 dotenv.config({
   path: `.env.${process.env.NODE_ENV}`
@@ -7,16 +8,26 @@ dotenv.config({
 
 export default {
   siteMetadata: {
-    baseUrl: 'https://kir-dev.sch.bme.hu',
+    siteUrl: 'https://kir-dev.sch.bme.hu/',
     translations: ['hu'],
     lang: 'hu',
     title: 'Kir-Dev',
     titleTemplate: '%s | Kir-Dev',
-    description: 'A Kir-Dev kör blogja',
+    description:
+      `A Schönherz kollégium webfejlesztő körének, azaz a Kir-Dev kör blog és portfolió weboldala. Olvashatsz körünk ` +
+      `történetéről, szakmai újdonságokról, tanfolyamainkról és projektjeink haladásáról. Körünk a BME VIK Simonyi Károly ` +
+      `Szakkollégiumának tagja.`,
     author: 'kir-dev',
-    image: '/favicon.png',
-    keywords: ['gatsbyjs', 'gatsby', 'javascript', 'ruby', 'rails', 'nodejs', 'typescript', 'community', 'simonyi'],
-    robots: 'index, follow'
+    image: '/default-og.png',
+    keywords: ['gatsbyjs', 'typescript', 'javascript', 'ruby', 'rails', 'nodejs', 'typescript', 'community', 'simonyi'],
+    robots: 'index, follow',
+    social: {
+      twitter: `https://twitter.com/${TWITTER_USERNAME}`,
+      twitterUsername: TWITTER_USERNAME,
+      github: GITHUB_ORG_URL,
+      facebook: FACEBOOK_PAGE_URL,
+      instagram: INSTAGRAM_PAGE_URL
+    }
   },
   plugins: [
     '@chakra-ui/gatsby-plugin',
@@ -68,9 +79,14 @@ export default {
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-responsive-iframe',
+            resolve: `gatsby-remark-table-of-contents`,
             options: {
-              wrapperStyle: 'margin-bottom: 1rem'
+              exclude: 'Tartalomjegyzék',
+              tight: true,
+              ordered: true,
+              fromHeading: 1,
+              toHeading: 6,
+              className: 'md-toc'
             }
           },
           {
@@ -81,6 +97,7 @@ export default {
               elements: [`h1`, `h2`, `h3`, `h4`]
             }
           },
+          'gatsby-remark-responsive-iframe',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
           'gatsby-remark-gemoji-to-emoji',
@@ -144,6 +161,19 @@ export default {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-tsconfig-paths'
+    'gatsby-plugin-tsconfig-paths',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Kir-Dev blogja`,
+        short_name: `Kir-Dev`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#f15a29`,
+        display: `standalone`,
+        icon: `static/favicon.png`
+      }
+    },
+    `gatsby-plugin-offline`
   ]
 }

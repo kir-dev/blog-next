@@ -32,7 +32,7 @@ const getSessionString = (session: ISession): string => {
 
 const CourseCard: React.FC<CourseCardProps> = ({ course }) => (
   <Box borderWidth="1px" rounded="lg" shadow="lg">
-    <Box pt={4} pb={6} px={4}>
+    <Box pt={4} pb={4} px={4}>
       <Text fontWeight="light" fontSize="2xl">
         {course.frontmatter.title}
       </Text>
@@ -57,7 +57,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ course }) => (
           </HStack>
         )}
       </Box>
-      <Box mt={6} fontSize="md">
+      <Box mt={2} fontSize="md">
         {/* eslint-disable-next-line react/no-danger */}
         <div dangerouslySetInnerHTML={{ __html: course.html }} />
       </Box>

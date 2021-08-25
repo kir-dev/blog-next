@@ -9,6 +9,14 @@ techs: ['React', 'Gatsby']
 featuredImage: ../images/projects/blog-next.png
 ---
 
+<style>
+.caption {
+  font-style: italic;
+  text-align: center;
+  margin: -0.5rem 0 2rem 0;
+}
+</style>
+
 # Blogunk története
 
 ## Korábbiakban
@@ -17,9 +25,9 @@ Blogunk legelőször még Wordpress-ben szerkesztődött, azonban [2013-ban köl
 
 Régebbi posztjainkat áthoztuk az új platformra is, az [archívumban](/archive) elérhetőek.
 
-![](https://i.imgur.com/rGoWmhW.png)
+![](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBRZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8c0201879b26e0649ca7ca7c6728c8a9cea28529/rGoWmhW.png)
 
-_<p style="text-align: center; margin: -0.5rem 0 2rem 0;">Korábbi blogunk nyitólapja</p>_
+<div class="caption">Korábbi blogunk nyitólapja</div>
 
 ## Új célok
 
@@ -36,6 +44,6 @@ Az új oldal segítségével törekszünk a lehető leginformatívabb módon bet
 
 [Kis vacillálás után](/post/2019-12-21-blog-2.0/) a **Gatsby**-re esett a választás az új blog alapításakor. Ez a népszerű, Node-os framework a weboldal teljes meghajtója. Nagyon jó lehetőséget ad a **React** kiismerésére, ugyanis a frontend azzal épül fel. Egy mondhatni _state-of-the-art_ UI komponens frameworköt, a **Chakra UI**-t használjuk a CSS-ezés leegyszerűsítésére. Szeretjük az erős típusosságot, úgyhogy **TypeScript**ben fejlesztjük.
 
-![](https://i.imgur.com/2o5hook.png)
+![](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBQdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1327c0854ae1448ab30d3dcaa9d2e43d79159432/2o5hook.png)
 
-_<p style="text-align: center; margin: -0.5rem 0 2rem 0;">Kódrészlet a blogból</p>_
+<div class="caption">Kódrészlet a blogból</div>
