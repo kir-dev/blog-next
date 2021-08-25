@@ -4,7 +4,7 @@ title: 'Ftsrg blog'
 lead: 'Az ftsrg kutatócsoport statikusan generált portfolió weboldala'
 github: https://github.com/kir-dev/ftsrg-next
 website: https://ftsrg-kir-dev.netlify.app
-status: { label: 'Aktív', color: 'green' }
+status: { label: 'Üzemel', color: 'green' }
 techs: ['React', 'Gatsby', 'I18next']
 featuredImage: ../images/projects/ftsrg-next.png
 ---
