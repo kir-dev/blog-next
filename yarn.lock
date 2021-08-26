@@ -6971,10 +6971,10 @@ gatsby-plugin-sharp@3.12.0:
     svgo "1.3.2"
     uuid "3.4.0"
 
-gatsby-plugin-ts-config@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-ts-config/-/gatsby-plugin-ts-config-2.0.0.tgz#d09a45b6fbb36465569694273a931b547fdb09dd"
-  integrity sha512-3ZT7Z1JZi6EleolHCMjbCQ5tSX9i6oH09OsnPCTLRQAKXpCh5rb+5rFkPIwaAo/NWlzTotYiYHzEXsjUlwqQrg==
+gatsby-plugin-ts-config@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-ts-config/-/gatsby-plugin-ts-config-2.0.1.tgz#727801321d715b3f5ab8094059a21a24dbcc869b"
+  integrity sha512-ne0SmPvMjDwYrL+wSMk6e5fsVwxEYyUMmGWuf7hUEtBi3YqV9P1h/bny8nltbSR5u7GYasoDKYPnugSCkTAXvg==
   dependencies:
     "@babel/plugin-proposal-nullish-coalescing-operator" "^7.10.1"
     "@babel/plugin-proposal-optional-chaining" "^7.10.3"
@@ -6993,7 +6993,6 @@ gatsby-plugin-ts-config@2.0.0:
     find-up "^5.0.0"
     fs-extra "^8.1.0"
     lodash "^4.17.21"
-    lodash.mergewith "^4.6.2"
     serialize-error "^8.1.0"
     ts-node "^9.0.0"
     tslog "^3.2.0"
@@ -9555,7 +9554,7 @@ lodash.merge@^4.6.2:
   resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
   integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
 
-lodash.mergewith@4.6.2, lodash.mergewith@^4.6.2:
+lodash.mergewith@4.6.2:
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/lodash.mergewith/-/lodash.mergewith-4.6.2.tgz#617121f89ac55f59047c7aec1ccd6654c6590f55"
   integrity sha512-GK3g5RPZWTRSeLSpgP8Xhra+pnjBC56q9FZYe1d5RN3TJ35dbkGy3YqBSMbyCrlbi+CM9Z3Jk5yTL7RCsqboyQ==
