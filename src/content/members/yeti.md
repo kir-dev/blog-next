@@ -4,7 +4,7 @@ pekUsername: yeti
 realName: 'Fehér János'
 position: 'volt körvezető'
 joinDate: 2018-03
-interests: []
+interests: ['Node', 'Rails', 'React', 'TypeScript']
 featuredImage: ../images/avatars/yeti.jpg
 active: false
 ---
