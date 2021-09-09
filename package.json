@@ -27,7 +27,7 @@
     "type-check": "tsc"
   },
   "dependencies": {
-    "@babel/core": "7.15.0",
+    "@babel/core": "7.15.5",
     "@chakra-ui/gatsby-plugin": "2.0.1",
     "@chakra-ui/icons": "1.0.15",
     "@chakra-ui/react": "1.6.7",
