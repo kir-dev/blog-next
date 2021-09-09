@@ -90,7 +90,7 @@
     "eslint-import-resolver-typescript": "2.4.0",
     "eslint-plugin-prettier": "3.4.1",
     "gh-pages": "3.2.3",
-    "prettier": "2.3.2",
+    "prettier": "2.4.0",
     "rimraf": "3.0.2"
   }
 }
