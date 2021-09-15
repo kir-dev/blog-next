@@ -2,15 +2,13 @@
 layout: post
 author: triszt4n
 date: 2021-08-22 23:55:13
-title: 'Új arculat'
+title: 'Mi történt velünk mostanában?'
 lead: 'Beszámoló a kört ért újdonságokról'
 tags: ['hírek', 'PR', 'projektek']
 comment: true
 featuredImage: ../images/posts/uj-arculat.jpg
 ogImage: ../images/posts/uj-arculat-og.png
 ---
-
-## Mi történt velünk az utóbbi időkben?
 
 A nyáron sem állt meg a munka a körünkben, ebből szeretnénk egy kis ízelítőt mutatni nektek...
 
