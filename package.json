@@ -30,7 +30,7 @@
     "@babel/core": "7.15.5",
     "@chakra-ui/gatsby-plugin": "2.0.1",
     "@chakra-ui/icons": "1.0.15",
-    "@chakra-ui/react": "1.6.7",
+    "@chakra-ui/react": "1.6.8",
     "@chakra-ui/system": "1.7.3",
     "@emotion/react": "11.4.1",
     "@emotion/styled": "11.3.0",
