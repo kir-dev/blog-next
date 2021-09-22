@@ -6622,10 +6622,10 @@ gatsby-remark-autolink-headers@4.11.0:
     mdast-util-to-string "^2.0.0"
     unist-util-visit "^2.0.3"
 
-gatsby-remark-classes@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-classes/-/gatsby-remark-classes-1.0.0.tgz#6d93f7054a558c2cd7ba73ff5e25a5adc01fd5a9"
-  integrity sha512-F0pM8FdTwqFDDiP2qR4TnZZmkRI6Q3Mry/qzbxI4ORE/7ZnR6EKfvA1DryZ2RnrZyVUnbBEdzmZDPAYcBPE4PA==
+gatsby-remark-classes@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-classes/-/gatsby-remark-classes-1.0.1.tgz#8d15cb95ad9fe18b4132cb081ce935f44b0da1dc"
+  integrity sha512-J6NGV7L9Rkhf12mIt9/+vQ8fFgmk04+OBR5KTWQQGdx91iCOkRauKvtbPhkA+Ot4txyeEB+9XLcFDuH7enXTZA==
   dependencies:
     unist-util-select "^2.0.2"
 
