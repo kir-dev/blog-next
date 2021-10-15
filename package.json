@@ -40,7 +40,7 @@
     "classnames": "2.3.1",
     "dotenv": "10.0.0",
     "framer-motion": "4.1.17",
-    "gatsby": "3.14.2",
+    "gatsby": "3.14.3",
     "gatsby-plugin-canonical-urls": "3.14.0",
     "gatsby-plugin-emotion": "6.14.0",
     "gatsby-plugin-image": "1.14.1",
