@@ -21,4 +21,4 @@ A projekt alapjához **Ruby on Rails**-re esett a választásunk, mert már töb
 
 ## A projekt jelenlegi helyzete
 
-2021 októberében, kis késedelem után végre offline tudtunk találkozni a Schönherz Airsoft Team körvezetőjével, és egy körbevezetés után átadtuk neki az oldal admin jogát. Ezek szerint készen van a project? Hát ez így nem teljesem igaz. A weblap elérkezett abba az állapotba, hogy a csapat már tudja használni a főbb funkciókat, és mi eközben ezzel párhuzamosan tudjuk tovább fejleszteni az oldalt.
+2021 októberében, kis késedelem után végre offline tudtunk találkozni a Schönherz Airsoft Team körvezetőjével, és egy körbevezetés után átadtuk neki az oldal admin jogát. Ezek szerint készen van a projekt? Hát ez így nem teljesen igaz. A weblap elérkezett abba az állapotba, hogy a csapat már tudja használni a főbb funkciókat, és mi eközben ezzel párhuzamosan tudjuk továbbfejleszteni az oldalt.
