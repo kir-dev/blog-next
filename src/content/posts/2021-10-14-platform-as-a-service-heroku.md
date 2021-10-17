@@ -1,14 +1,14 @@
 ---
 layout: post
 author: triszt4n
-date: 2021-05-20 22:45:38
-title: "Platform-as-a-Service: Heroku"
-lead: "Mi a Paas? Hogy jön webfejlesztéshez? Hogy kell a Herokut használni?"
+date: 2021-10-14 22:45:38
+title: 'Platform-as-a-Service: Heroku'
+lead: 'PaaS a webfejlesztéshezben - a Heroku használatáról röviden'
 comment: true
 ---
 
 <style>
-* {
+p .md-p {
   text-align: justify;
 }
 
@@ -25,23 +25,23 @@ A blogposztban szóba kerül, hogy mi is az a PaaS avagy Platform-as-a-Service, 
 
 ## Az alapok
 
-A **felhőalapú számítástechnikai szolgáltatók** *(Cloud Computing Providers)* célja virtualizált erőforrások szükség szerinti kiosztása az igénybevevők számára. Lehetőséget adnak arra, hogy számítási erőforrásaink az internet segítségével távolról is menedzselhessük és szükség szerint tegyük elérhetővé.<sup>[1]</sup>
+A **felhőalapú számítástechnikai szolgáltatók** _(Cloud Computing Providers)_ célja virtualizált erőforrások szükség szerinti kiosztása az igénybevevők számára. Lehetőséget adnak arra, hogy számítási erőforrásaink az internet segítségével távolról is menedzselhessük és szükség szerint tegyük elérhetővé.<sup>[1]</sup>
 
 ![](https://www.stackscale.com/wp-content/uploads/2020/04/cloud-service-models-iaas-paas-saas-stackscale.jpg)
 
 <div class="caption">1. ábra: A rendszerek egymásra épülése</div>
 
-A **Cloud Computing** főbb modellei az ilyenfajta szolgáltatásokra: az **IaaS** *(Infrastructure-as-a-Service, pl.: Azure, AWS)*, a **PaaS** *(Platform-as-a-Service, pl.: Heroku)* és a **SaaS** *(Software-as-a-Service, pl.: Netflix, Google Docs)*.
+A **Cloud Computing** főbb modellei az ilyenfajta szolgáltatásokra: az **IaaS** _(Infrastructure-as-a-Service, pl.: Azure, AWS)_, a **PaaS** _(Platform-as-a-Service, pl.: Heroku)_ és a **SaaS** _(Software-as-a-Service, pl.: Netflix, Google Docs)_.
 
 ![](./infrastructure.png)
 
 <div class="caption">2. ábra: Sémaábra egy webes rendszer infrastruktúrájáról</div>
 
-A **PaaS**, a könnyű megértésért magyarra fordítható: jelentése *szolgáltatott platform*. A modell fő célja telepítési felületet, futtatókörnyezetet, tesztfelületet és menedzselési lehetőségeket biztosítani az felhasználók applikációi számára.<sup>[2]</sup> Ahogy a fenti képen is látható, valójában egy nehéz munkától szabadít meg egy adott platform használata. Ahelyett, hogy nekünk kelljen beletanulni a teljes infrastruktúra összeállításába, nekünk kelljen utána a felmerülő karbantartással foglalkozni, **áthárul ez a nagy feladat** a PaaS szolgáltatójára. Ahogy a narancssárga nyíl is rámutat: a mi részünk így csak egy nagyszerű webes alkalmazás fejlesztése (a képen illusztrált esetben...).
+A **PaaS**, a könnyű megértésért magyarra fordítható: jelentése _szolgáltatott platform_. A modell fő célja telepítési felületet, futtatókörnyezetet, tesztfelületet és menedzselési lehetőségeket biztosítani az felhasználók applikációi számára.<sup>[2]</sup> Ahogy a fenti képen is látható, valójában egy nehéz munkától szabadít meg egy adott platform használata. Ahelyett, hogy nekünk kelljen beletanulni a teljes infrastruktúra összeállításába, nekünk kelljen utána a felmerülő karbantartással foglalkozni, **áthárul ez a nagy feladat** a PaaS szolgáltatójára. Ahogy a narancssárga nyíl is rámutat: a mi részünk így csak egy nagyszerű webes alkalmazás fejlesztése (a képen illusztrált esetben...).
 
 A legfőbb **felhasználói** az ilyen rendszereknek a szoftverfejlesztők és a DevOps mérnökök.
 
-A **DevOps** mérnökök foglalkoznak egy alkalmazás/szolgáltatás fejlesztése során szükséges automatizálási munkákkal: automatizálják a tesztelést, a deploymentet; üzemeltetnek; felügyelik a szoftver részeinek integrációját és a szoftver-kiadások folytonosságát *(Continuous Integration, Continuous Deployment, CI/CD)*.<sup>[3]</sup>
+A **DevOps** mérnökök foglalkoznak egy alkalmazás/szolgáltatás fejlesztése során szükséges automatizálási munkákkal: automatizálják a tesztelést, a deploymentet; üzemeltetnek; felügyelik a szoftver részeinek integrációját és a szoftver-kiadások folytonosságát _(Continuous Integration, Continuous Deployment, CI/CD)_.<sup>[3]</sup>
 
 A PaaS a teljes **webalkalmazás-fejlesztési életciklust** (fejlesztés, tesztelés, üzembe helyezés, felügyelet és frissítés) támogatja.
 
@@ -49,12 +49,12 @@ A PaaS az IaaS rendszerekre épül, ez amúgy egyben azt is biztosítja a felhas
 
 ## Deployment
 
-Sokszor szóba került ez a kifejezés az ismertető eddigi részében, vajon mit is jelent? Ugyanis gyakori a PaaS rendszerek igénybevételénél a deploy *(bevet, telepít)* és deployment (*telepített változat*) szó használata.
+Sokszor szóba került ez a kifejezés az ismertető eddigi részében, vajon mit is jelent? Ugyanis gyakori a PaaS rendszerek igénybevételénél a deploy _(bevet, telepít)_ és deployment (_telepített változat_) szó használata.
 
 **Deploy** (ige): az a cselekedet, amikor futásra felkonfiguráljuk a PaaS felhőben az alkalmazásunkat.
 **Deployment** (fn.): az alkalmazás egy, éppen a felhőben futó példánya.<sup>[5]</sup>
 
-Ezek fogalmakat viszont a magyar szakmai nyelvben nem használjuk úgy, mint *telepít* vagy *telepített változat*, mert nem igazán szeretnénk keverni a telepítés fogalmával, nem teljesen az történik. Többet használjuk a deploy és deployment szavakat önmagukban, vagy informális kifejezésekkel helyettesítjük őket. Pl.: *"Fellövöm a szerverre a staging környezetet"*, *"Felélesztettem a productiont AWS-en."*
+Ezek fogalmakat viszont a magyar szakmai nyelvben nem használjuk úgy, mint _telepít_ vagy _telepített változat_, mert nem igazán szeretnénk keverni a telepítés fogalmával, nem teljesen az történik. Többet használjuk a deploy és deployment szavakat önmagukban, vagy informális kifejezésekkel helyettesítjük őket. Pl.: _"Fellövöm a szerverre a staging környezetet"_, _"Felélesztettem a productiont AWS-en."_
 
 Az egyes PaaS szolgáltatók alaposan megadják, hogy várják szervereik a deploymentjeinket. Jó példa lehet a Netlify<sup>[6]</sup>, vagy a Heroku, amik git kiszolgálókon keresztül (pl.: GitHub) a publikus git repositorynk adott branchjéből képesek megszerezni a kódot. A Herokunak ezen módszere később bemutatásra is kerül. Természetesen ezen szolgáltatók nemcsak giten keresztül képesek fogadni deploymentet, hanem adnak erre külön API-t is.
 
@@ -66,25 +66,25 @@ Az egyes PaaS szolgáltatók alaposan megadják, hogy várják szervereik a depl
 
 PaaS esetén a következőket a cloud szolgáltató menedzseli számunkra (hierarchiai sorrendben, legalsótól legfelsőig):<sup>[7]</sup>
 
-* **Hálózat**
-* **Tárhely**
-* **Szervergépek**
-* **Virtualizáció** (minden erőforrásra)
-* **Operációs rendszer**
-* **Köztes szoftver** *(middlewares)*: Ami az appunk és az operációs rendszer között áll, és szükséges lehet az app futásához, a szolgáltatásunk kiegészítéséhez.
-* **Futtatókörnyezet** *(runtime environment)*
-* **+ Fejlesztői eszközök** (pl.: debugger, fordító, monitorprogramok)
+- **Hálózat**
+- **Tárhely**
+- **Szervergépek**
+- **Virtualizáció** (minden erőforrásra)
+- **Operációs rendszer**
+- **Köztes szoftver** _(middlewares)_: Ami az appunk és az operációs rendszer között áll, és szükséges lehet az app futásához, a szolgáltatásunk kiegészítéséhez.
+- **Futtatókörnyezet** _(runtime environment)_
+- **+ Fejlesztői eszközök** (pl.: debugger, fordító, monitorprogramok)
 
 A felhasználónak (fejlesztő) így csak két dolgot kell menedzselnie:
 
-* **Adatok** (avagy adatbázisok)
-* **Alkalmazások**
+- **Adatok** (avagy adatbázisok)
+- **Alkalmazások**
 
 ## Virtualizáció
 
 A szolgáltatói feladatkörök közül érdemes megtekinteni a virtualizációt közelebbről. A virtualizáció bevetésével tudják a cloud szolgáltatók maxiálisan hasznosítani erőforrásaikat az igénybevevők számára.
 
-A felhasználó kap egy **virtuális gépet** *(virtual machine, VM)*, vagy az applikációját a szolgáltató **konténerbe** teszi *(container)*.<sup>[8]</sup>
+A felhasználó kap egy **virtuális gépet** _(virtual machine, VM)_, vagy az applikációját a szolgáltató **konténerbe** teszi _(container)_.<sup>[8]</sup>
 
 ![](https://www.veritis.com/wp-content/uploads/2019/08/containers-vs-virtual-machines.jpg)
 
@@ -96,7 +96,7 @@ Vegyünk egy PaaS szolgáltatót: **Heroku**, aminek megtekinthetjük a számunk
 
 <div class="caption">5. ábra: Heroku irányítópultja: metrikák megjelenítése</div>
 
-A Heroku appjaink futtatási környezetére **"Dyno"**-kat ajánl fel. Ezek egyedi, lightweight *(könnyed, kis erőforrásigényű)* Linux alapú **konténerek**, azaz Linux kernel fut alattuk, és az egyes app-példányokhoz csak a legszükségesebb rendszerkönyvtárakat + rendszerszolgáltatásokat emeli be az applikációnk futtatásához.
+A Heroku appjaink futtatási környezetére **"Dyno"**-kat ajánl fel. Ezek egyedi, lightweight _(könnyed, kis erőforrásigényű)_ Linux alapú **konténerek**, azaz Linux kernel fut alattuk, és az egyes app-példányokhoz csak a legszükségesebb rendszerkönyvtárakat + rendszerszolgáltatásokat emeli be az applikációnk futtatásához.
 
 Az konténerek **alá rendelt operációs rendszer image**-et a cég **"Stack"**-nek nevezi, amik általában Ubuntu disztribúciók egyedi változatai. Herokus applikációink kódjának futtatható csomaggá építése egy-egy **buildpack** feladata, hogy az a megcélzott "stackkel" kompatibilis is legyen.
 
@@ -106,18 +106,20 @@ Az konténerek **alá rendelt operációs rendszer image**-et a cég **"Stack"**
 
 Dynok működése, használata:
 
-* 3 féle **konfiguráció** létezik egy-egy dynora:
-    1. *Web*: webapp folyamatok futtatására
-    2. *Worker*: időzített, háttérben futó stb. jobok futtatására
-    3. *One-off*: nem túl gyakran használt folyamatok futtatására (migrációkra, konzol kiírásokra)
-- **Load balancing** *(terhelés elosztás)* is történik.
-* *Dyno Runtime* működik rajtuk, ami...
-    * **menedzsel**i az életciklusát a dynoknak.
-    * **horizontálisan skáláz** = hozzáad újabb konténereket, ha szükséges pl.: a forgalom növekedésénél.
-    * az applikáció számára **irányítja a forgalmat**, ami a domainra érkezik.
-    * elkapja az app által adott **output**ot.
-    * **felülvigyázza** az izolációját és védelmét a konténereknek.
-    * **hálózati elérést biztosít** az app számára, ha az külső endpointokra, hozzácsatolt szolgáltatásokra kívánna forgalmazni.
+- 3 féle **konfiguráció** létezik egy-egy dynora:
+  1. _Web_: webapp folyamatok futtatására
+  2. _Worker_: időzített, háttérben futó stb. jobok futtatására
+  3. _One-off_: nem túl gyakran használt folyamatok futtatására (migrációkra, konzol kiírásokra)
+
+* **Load balancing** _(terhelés elosztás)_ is történik.
+
+- _Dyno Runtime_ működik rajtuk, ami...
+  - **menedzsel**i az életciklusát a dynoknak.
+  - **horizontálisan skáláz** = hozzáad újabb konténereket, ha szükséges pl.: a forgalom növekedésénél.
+  - az applikáció számára **irányítja a forgalmat**, ami a domainra érkezik.
+  - elkapja az app által adott **output**ot.
+  - **felülvigyázza** az izolációját és védelmét a konténereknek.
+  - **hálózati elérést biztosít** az app számára, ha az külső endpointokra, hozzácsatolt szolgáltatásokra kívánna forgalmazni.
 
 Ha esetleg nem a Heroku konténerizációs módszerét szeretnénk alkalmazni (az egyedi Ubuntu "stackekkel"), akkor van esélyünk **Docker konténer**ben is felküldeni Herokura alkalmazásaink.
 
@@ -131,18 +133,18 @@ Ha esetleg nem a Heroku konténerizációs módszerét szeretnénk alkalmazni (a
 
 ### Mi haszna mindennek?
 
-* **Költség csökkenése** - kisebb a fizikai infrastruktúra, így kisebb a technológiai lábnyomunk. Ha bemutatásra készülne egy Proof-of-Concept állapotú alkalmazás, azt könnyen fel lehet lőni a felhőbe, majd amint végeztünk a bemutatással, el lehet távolítani, amely ismét költségtakarékos, nem szükséges akár hónapokat kifizetni egy rövid futtatásért.
-* **Skálázhatóság** - ha megnőne a forgalmunk, könnyen lehet erőforrásainkat kiszélesíttetni a szolgáltatónál.
-* **Downtime csökkenése** - több példányban is futhat az alkalmazásunk a biztos kiszolgálás érdekében.
-* **Gyors programozás** - Nem kell külön időt szánni az infrastruktúra üzemeltetésére.
-* **Gyorsabb életciklusok** - lásd feljebb a DevOps mérnökség kifejtésénél.
-* **Flexibilitás** - könnyedén lehet a szoftveres VM-eket és konténereket mozgatni hosztok között, sokkal gyorsabban lehet felállítani teljes szolgáltatásokat. Így példának hozható ismét az, ha bemutatásra készülne egy Proof-of-Concept állapotú alkalmazás, amelyet rövid időre kell csak deployolni.
+- **Költség csökkenése** - kisebb a fizikai infrastruktúra, így kisebb a technológiai lábnyomunk. Ha bemutatásra készülne egy Proof-of-Concept állapotú alkalmazás, azt könnyen fel lehet lőni a felhőbe, majd amint végeztünk a bemutatással, el lehet távolítani, amely ismét költségtakarékos, nem szükséges akár hónapokat kifizetni egy rövid futtatásért.
+- **Skálázhatóság** - ha megnőne a forgalmunk, könnyen lehet erőforrásainkat kiszélesíttetni a szolgáltatónál.
+- **Downtime csökkenése** - több példányban is futhat az alkalmazásunk a biztos kiszolgálás érdekében.
+- **Gyors programozás** - Nem kell külön időt szánni az infrastruktúra üzemeltetésére.
+- **Gyorsabb életciklusok** - lásd feljebb a DevOps mérnökség kifejtésénél.
+- **Flexibilitás** - könnyedén lehet a szoftveres VM-eket és konténereket mozgatni hosztok között, sokkal gyorsabban lehet felállítani teljes szolgáltatásokat. Így példának hozható ismét az, ha bemutatásra készülne egy Proof-of-Concept állapotú alkalmazás, amelyet rövid időre kell csak deployolni.
 
 ### Mik a hátrányai?
 
-* **Kontroll hiánya** - ha netán finomhangolnánk a rendszerünket, arra nincs lehetőség, mert az a szolgáltató feladatköre. Természetesen lehetnek erre a szolgáltatónak saját megoldásai.
-* **Vendor lock-in** - a jelenség arra utal, ha netán az alkalmazásaink teljesen a PaaS szolgáltatótól függenek, nehéz lehet őket másik szolgáltatóhoz átmigrálni.
-* **Teljesítmény** - megeshet, hogy a forgalom növekedésével a szolgáltatás nem lesz olyan sima, mintha egy dedikált szervergépen futna.
+- **Kontroll hiánya** - ha netán finomhangolnánk a rendszerünket, arra nincs lehetőség, mert az a szolgáltató feladatköre. Természetesen lehetnek erre a szolgáltatónak saját megoldásai.
+- **Vendor lock-in** - a jelenség arra utal, ha netán az alkalmazásaink teljesen a PaaS szolgáltatótól függenek, nehéz lehet őket másik szolgáltatóhoz átmigrálni.
+- **Teljesítmény** - megeshet, hogy a forgalom növekedésével a szolgáltatás nem lesz olyan sima, mintha egy dedikált szervergépen futna.
 
 ## PaaS modellen alapuló SW architektúrák <sup>[10]</sup>
 
@@ -152,12 +154,12 @@ Ha esetleg nem a Heroku konténerizációs módszerét szeretnénk alkalmazni (a
 
 A fenti ábrán is látható Azure PaaS szolgáltatásokból merítve néhány fontosabbat:
 
-* Application Programming Interface appok / **API apps** és **mikroszolgáltatások**
-    * Szívesen használják címtár- (OAuth2), adatbank- és banki kiszolgálóknál
-* **IoT eszközök** összekötésére szolgáló alkalmazások
-    * Központilag tudnak felküldeni a szervereinkre adatokat IoT eszközeink
-* **Vállalati információs rendszerek**
-    * PaaS eszközök segítségével analitikus adatokat könnyedén lehet gyűjteni vállalkozásunk informált döntéseihez és előrelátható eseményeihez.
+- Application Programming Interface appok / **API apps** és **mikroszolgáltatások**
+  - Szívesen használják címtár- (OAuth2), adatbank- és banki kiszolgálóknál
+- **IoT eszközök** összekötésére szolgáló alkalmazások
+  - Központilag tudnak felküldeni a szervereinkre adatokat IoT eszközeink
+- **Vállalati információs rendszerek**
+  - PaaS eszközök segítségével analitikus adatokat könnyedén lehet gyűjteni vállalkozásunk informált döntéseihez és előrelátható eseményeihez.
 
 # Heroku
 
@@ -168,9 +170,9 @@ Korábban megismerhettük a Herokuban használt virtualizációs technológiáka
 A Heroku tanulóbarát, felajánl bizonyos limitekkel [ingyenes lehetőségeket](https://www.heroku.com/pricing). Mi is az "Free tier"-ben elérhető ingyenesen használható dynokat fogjuk használni.
 Ennek a használatára jellemző: <sup>[11]</sup>
 
-* Rövid élettartamú tárhelyet biztosít. Felhasználók által feltöltött fájlok így nincsenek biztonságosan letárolva a dynon.
-* Ha webalkalmazásunk inaktív, azaz nincsenek hozzá bejövő kérések egy 30 perces intervallumon belül, akkor hibernálódik a dynonk. Ez azt is hordozza magával, hogy esélyes egy-egy "cold start" miatti hosszadalmas kéréskiszolgálás.
-* Meghatározott, hogy maximum mennyi ideig futhat aktív állapotban az alkalmazásod egy hónapban összesen (ebbe nem számít bele az, amikor hibernált állapotban van). Emiatt tökéletesen megfelelhet ez a tier egy demonstrációs oldalnak, azonban ~100%-ban kihasznált üzemidejű dynokra nem alkalmas.
+- Rövid élettartamú tárhelyet biztosít. Felhasználók által feltöltött fájlok így nincsenek biztonságosan letárolva a dynon.
+- Ha webalkalmazásunk inaktív, azaz nincsenek hozzá bejövő kérések egy 30 perces intervallumon belül, akkor hibernálódik a dynonk. Ez azt is hordozza magával, hogy esélyes egy-egy "cold start" miatti hosszadalmas kéréskiszolgálás.
+- Meghatározott, hogy maximum mennyi ideig futhat aktív állapotban az alkalmazásod egy hónapban összesen (ebbe nem számít bele az, amikor hibernált állapotban van). Emiatt tökéletesen megfelelhet ez a tier egy demonstrációs oldalnak, azonban ~100%-ban kihasznált üzemidejű dynokra nem alkalmas.
 
 ![](./dyno_pricing.png)
 
@@ -192,13 +194,13 @@ Az alkalmazás a következő szoftveres alapokon működik:
 
 <div class="caption">10. ábra: Sematikus ábra az általunk is használt szoftverrendszer működésére</div>
 
-* [**NodeJS**](https://nodejs.org/en/about/): Egy híres JavaScript runtime, ő fogja kezelni a http routingot, működtetni az alkalmazást [V8-as](https://hu.wikipedia.org/wiki/V8_JavaScript-motor) alapú motorjával.
-    * [**Express**](https://expressjs.com): Elterjedt NodeJS felett használt keretrendszer. Hasznos segédmetódusokat definiál, leegyszerűsíti a routing megírását.
-* [**MongoDB**](https://www.mongodb.com): Általános felhasználású, dokumentum-alapú (JSON), NoSQL DBMS. Ebben fogjuk tárolni a posztjainkat.
-    * [**Mongoose**](https://mongoosejs.com): MongoDB-hez használt keretrendszer, amely a modellünkhöz objektum leképezéses API-t ajánl fel, valamint biztosítja a drivert, összekapcsolást MongoDB adatbázisunkhoz.
-    * [**MongoDB Atlas**](https://www.mongodb.com/cloud/atlas): Egy DaaS *(Database-as-a-Service, egy specifikusabb cloud modell)*, azaz cloud adatbázis szolgáltatása a MongoDB-nek, ahol a free tierben elérhető módon az Azure-nál kérünk clustert az adatbázisunkra az [MDN Web Docs útmutatója szerint](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#setting_up_the_mongodb_database).
+- [**NodeJS**](https://nodejs.org/en/about/): Egy híres JavaScript runtime, ő fogja kezelni a http routingot, működtetni az alkalmazást [V8-as](https://hu.wikipedia.org/wiki/V8_JavaScript-motor) alapú motorjával.
+  - [**Express**](https://expressjs.com): Elterjedt NodeJS felett használt keretrendszer. Hasznos segédmetódusokat definiál, leegyszerűsíti a routing megírását.
+- [**MongoDB**](https://www.mongodb.com): Általános felhasználású, dokumentum-alapú (JSON), NoSQL DBMS. Ebben fogjuk tárolni a posztjainkat.
+  - [**Mongoose**](https://mongoosejs.com): MongoDB-hez használt keretrendszer, amely a modellünkhöz objektum leképezéses API-t ajánl fel, valamint biztosítja a drivert, összekapcsolást MongoDB adatbázisunkhoz.
+  - [**MongoDB Atlas**](https://www.mongodb.com/cloud/atlas): Egy DaaS _(Database-as-a-Service, egy specifikusabb cloud modell)_, azaz cloud adatbázis szolgáltatása a MongoDB-nek, ahol a free tierben elérhető módon az Azure-nál kérünk clustert az adatbázisunkra az [MDN Web Docs útmutatója szerint](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#setting_up_the_mongodb_database).
 
-> A fenti rendszerek mindegyike (kivéve az Atlast) *open source*, elérhetőek a kódbázisaik GitHubon. A NodeJS community világát vizsgálva során gyakran találkozhatunk nyílt forráskódú projektekkel. <sup>[11]</sup>
+> A fenti rendszerek mindegyike (kivéve az Atlast) _open source_, elérhetőek a kódbázisaik GitHubon. A NodeJS community világát vizsgálva során gyakran találkozhatunk nyílt forráskódú projektekkel. <sup>[11]</sup>
 
 Klónozás után nyissuk meg a projektet, nézzünk bele a projekt struktúrába:
 
@@ -265,7 +267,7 @@ heroku create
 
 <div class="caption">18. ábra: `heroku create` parancs futásának outputja</div>
 
-Szükségelni fog egy bejelentkezést is a parancs futtatása. Ennek végeztével a projektmappánk összekötésre kerül egy újabb *git remote*-tal, ez lesz az az új repository, amelyet majd a Heroku használ a deploymentünkhöz.
+Szükségelni fog egy bejelentkezést is a parancs futtatása. Ennek végeztével a projektmappánk összekötésre kerül egy újabb _git remote_-tal, ez lesz az az új repository, amelyet majd a Heroku használ a deploymentünkhöz.
 
 Most pedig futtassuk a következő parancsot:
 
@@ -273,10 +275,10 @@ Most pedig futtassuk a következő parancsot:
 npm run deploy
 ```
 
-Ezt a szkriptet is definiáltuk a `package.json`-ban, és ezzel feltolunk egy commitot a saját repónkban, valamint a git repository-nk tartalma lemásolódik a távoli *herokus*  git remote-ba, és rögtön lefut az `npm start` parancs (illetve az `npm run postinstall` szkript is, ilyen okosra lett tervezve a Heroku, ami nekünk előny, így nem kell saját kézzel lefordítanunk a TypeScript kódot JavaScriptre). Következő lépés a konfigurációs változók beállítása, utána rátekintünk a weboldalunkra, amint a Heroku sikeresen újradeployolta az appot a környezeti változók beállítása után:
+Ezt a szkriptet is definiáltuk a `package.json`-ban, és ezzel feltolunk egy commitot a saját repónkban, valamint a git repository-nk tartalma lemásolódik a távoli _herokus_ git remote-ba, és rögtön lefut az `npm start` parancs (illetve az `npm run postinstall` szkript is, ilyen okosra lett tervezve a Heroku, ami nekünk előny, így nem kell saját kézzel lefordítanunk a TypeScript kódot JavaScriptre). Következő lépés a konfigurációs változók beállítása, utána rátekintünk a weboldalunkra, amint a Heroku sikeresen újradeployolta az appot a környezeti változók beállítása után:
 
-* **`NODE_ENV`**: beállítja, milyen változatban indul a környezet (most már productionben).
-* **`MONGODB_URI`**: beállítja az adatbázis címét (A MongoDB Atlas szolgáltatáson korábban általam létrehozott adatbázist fogjuk használni.<sup>[14]</sup> A jelszót természetesen nem osztottam meg.)
+- **`NODE_ENV`**: beállítja, milyen változatban indul a környezet (most már productionben).
+- **`MONGODB_URI`**: beállítja az adatbázis címét (A MongoDB Atlas szolgáltatáson korábban általam létrehozott adatbázist fogjuk használni.<sup>[14]</sup> A jelszót természetesen nem osztottam meg.)
 
 ```bash
 heroku config:set NODE_ENV='production'
