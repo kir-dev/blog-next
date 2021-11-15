@@ -2,7 +2,7 @@ import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons'
 import { Box, Collapse, Flex, IconButton, useColorMode, useColorModeValue, useDisclosure } from '@chakra-ui/react'
 import { Link } from 'gatsby'
 import * as React from 'react'
-import Logo from '~assets/images/kirdev-named.svg'
+import Logo from '~assets/images/kirdev-named.inline.svg'
 import DesktopNav from './DesktopNav'
 import MobileNav from './MobileNav'
 

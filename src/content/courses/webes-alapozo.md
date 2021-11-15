@@ -3,7 +3,7 @@ layout: course
 title: 'Webes alapozó 🚀'
 sessions: [{ startDateTime: '2021-02-22 18:00:00', lengthInHours: 2, place: 'Google Meet' }]
 lecturer: 'Király Bálint'
-featuredImage: ../../assets/images/kirdev-simplified.svg
+featuredImage: ../../assets/images/kirdev-simplified.inline.svg
 active: true
 ---
 

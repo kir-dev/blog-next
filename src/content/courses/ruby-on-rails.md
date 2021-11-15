@@ -8,7 +8,7 @@ sessions:
     { startDateTime: '2021-03-10 18:00:00', lengthInHours: 2, place: 'Google Meet' }
   ]
 lecturer: 'Sepsi László'
-featuredImage: ../../assets/images/rails-logo.svg
+featuredImage: ../../assets/images/rails-logo.inline.svg
 active: true
 ---
 

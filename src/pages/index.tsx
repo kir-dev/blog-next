@@ -14,7 +14,7 @@ import {
 import { graphql, Link } from 'gatsby'
 import * as React from 'react'
 import { FaFacebook, FaGithub, FaYoutube } from 'react-icons/fa'
-import Logo from '~assets/images/kirdev-simplified.svg'
+import Logo from '~assets/images/kirdev-simplified.inline.svg'
 import BlogFullCard from '~components/blog-components/BlogFullCard'
 import Container from '~components/Container'
 import InfoBox from '~components/indexpage-components/InfoBox'

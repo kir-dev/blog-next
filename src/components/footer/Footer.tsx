@@ -1,8 +1,8 @@
 import { Box, Container, Flex, HStack, Link, Text, useColorModeValue } from '@chakra-ui/react'
 import React from 'react'
 import { FaAt, FaFacebook, FaGithub, FaYoutube } from 'react-icons/fa'
-import KirdevLogo from '~assets/images/kirdev.svg'
-import VercelLogo from '~assets/images/powered-by-vercel.svg'
+import KirdevLogo from '~assets/images/kirdev.inline.svg'
+import VercelLogo from '~assets/images/powered-by-vercel.inline.svg'
 import { FACEBOOK_PAGE_URL, GITHUB_ORG_URL, PUBLIC_EMAIL, YOUTUBE_CHANNEL_URL } from '~utils/configurations'
 import SocialButton from './SocialButton'
 

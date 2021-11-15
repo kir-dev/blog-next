@@ -7,5 +7,6 @@ export interface MemberProps {
   interests: Array<string>
   joinDate: string
   featuredImage: ImageDataLike
+  onhoverImage: ImageDataLike
   active: boolean
 }

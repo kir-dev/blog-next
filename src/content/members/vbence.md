@@ -5,6 +5,7 @@ realName: 'Vass Bence'
 position: 'újonc'
 joinDate: 2020-10
 interests: []
-featuredImage: ../images/avatars/vbence.jpg
+featuredImage: null
+onhoverImage: null
 active: true
 ---

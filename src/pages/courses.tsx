@@ -1,7 +1,7 @@
 import { Box, Button, chakra, Flex, Grid, Heading, Link as ChakraLink, Text, useBreakpointValue, useColorModeValue } from '@chakra-ui/react'
 import { graphql, Link } from 'gatsby'
 import * as React from 'react'
-import TechsLogo from '~assets/images/techs-logo.svg'
+import TechsLogo from '~assets/images/techs-logo.inline.svg'
 import Container from '~components/Container'
 import CourseCard from '~components/course-components/CourseCard'
 import Header from '~components/Header'

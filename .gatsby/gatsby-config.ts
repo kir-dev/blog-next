@@ -70,7 +70,7 @@ export default {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: /assets\/images/
+          include: /\.inline\.svg$/
         }
       }
     },
