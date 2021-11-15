@@ -37,13 +37,24 @@ const MeetingControls: React.FC = () => {
         Kir-Dev gyűlés
       </Text>
       <HStack justifySelf="center" fontSize={useBreakpointValue({ base: 'md', sm: 'xl' })}>
-        <Box to="./" rounded="full" p={4} bgColor="gray.200">
+        <Box rounded="full" cursor="pointer" p={4} bgColor="gray.200">
           <FaMicrophone />
         </Box>
-        <Box onClick={useBreakpointValue({ base: close, sm: undefined })} to="./" rounded="full" p={4} color="gray.100" bgColor="red.500">
+        <Box
+          onClick={useBreakpointValue({
+            base: close,
+            // eslint-disable-next-line @typescript-eslint/no-empty-function
+            sm: () => {}
+          })}
+          rounded="full"
+          cursor="pointer"
+          p={4}
+          color="gray.100"
+          bgColor="red.500"
+        >
           <FaPhone />
         </Box>
-        <Box to="./" rounded="full" p={4} bgColor="gray.200">
+        <Box rounded="full" cursor="pointer" p={4} bgColor="gray.200">
           <FaVideo />
         </Box>
       </HStack>
