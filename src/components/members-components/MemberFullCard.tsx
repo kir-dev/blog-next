@@ -30,7 +30,7 @@ const MemberFullCard: React.FC<{ member: MemberProps }> = ({ member }) => {
       )}
       <Flex flexWrap="wrap" flex={{ base: 1, sm: 1, md: 2, lg: 3 }}>
         <Box lineHeight="taller">
-          <Heading fontSize="2xl" fontWeight="bold">
+          <Heading fontSize="2xl" fontWeight="bold" mt={2}>
             {member.realName}
           </Heading>
           <Flex alignItems="center" mt={4}>
