@@ -14,8 +14,6 @@ A nyáron sem állt meg a munka a körünkben, ebből szeretnénk egy kis ízel�
 
 ## Új projektek
 
-![egyveleg](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bf24b78fcb0c9fd588186d752ffa9cc66364f54b/egyveleg.png)
-
 ### Új blog
 
 Korábban a blogunk csupán egy rövid bemutatkozóval és a blogposztokkal rendelkezett. Azonban már régebb óta tervben volt egy új blog és portfolió oldal összerakása, hiszen jól jön az, ha meg tudjuk mutatni egy csinos weboldalon, mivel foglalkozunk a körnél, kik vagyunk mi. Éppen ezért foglalnak helyet ezen az új weboldalon a projektek bemutatásai, a tagok portfoliója, a tanfolyamok rendje és a részletes _Rólunk_ oldal is.
@@ -48,7 +46,7 @@ A tavaszi félév elején elkezdtük egyeztetni, hogy tudnánk feldobni a Kir-De
 
 A design elkészítésére az [schdesign](schdesign.hu)-t kerestük meg, és a félév végére össze is jött a végső design. Mostanában indult el a rendelés, hamarosan a nyomtatás is el tud kezdődni. Lentebb az általuk kialakított látványtervet láthatjátok.
 
-![poloterv](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBZUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8346f2a9fcb3410af616a625d4c282760ed73e4b/238139936_1028199424593673_210615317175961110_n.jpg)
+![poloterv](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ddf987fccff2f62b8f00b24e1c52d7b743489f98/kirdev_mockup.png)
 
 ## Sikeres bemutatkozó
 
@@ -56,10 +54,10 @@ Augusztusban a VIK Gólyatáborában nagy sikerrel mutatkoztunk be a gólyáknak
 
 Örülünk neki, hogy ilyen nagyszerű motivációval készülnek a gólyák nekifutni az egyetemi életnek. Reméljük, a következő tanfolyamidőszakban sokukkal találkozunk majd!
 
-![standolas](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBYdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--40ec274dd63ad6857b8405cfdb270e7392533598/20210814_145833_vince.jpg)
+![standolas](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--278668d7c14e082c2921e599742295eb0292f74f/20210814_145833_vince.jpg)
 
 Sok projekt indult, zárult és futott tovább ebben a félévben is sikeresen, lelkes újoncok is bekapcsolódtak a kör életébe. A Simonyi Nyári Táborban készült képünkkel búcsúzom Tőletek ebben a posztban:
 
-![snyt](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBZQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1381eead7a715c465efb0a7a96b9cdf1f3a7c477/20210718_095824_talli.jpg)
+![snyt](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--219692dc85b16c4d08e17aef4d357312b8c14aa8/20210718_095824_talli.jpg)
 
 Köszönet a fotókért a [SPOT](https://spot.sch.bme.hu/) csapatának.
