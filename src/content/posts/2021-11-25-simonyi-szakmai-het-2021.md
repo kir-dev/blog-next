@@ -9,14 +9,14 @@ comment: true
 featuredImage: ../images/posts/szakmai-het-cover.jpg
 ---
 
-Nagyon vártuk Simonyi Szakmai Hetet. Rengeteg izgalmas program és előadás volt a menetrendben. Az előadások közül több is kapcsolódott a kör profiljához, a webfejlesztéshez.
+Nagyon vártuk a Simonyi Szakmai Hetet. Rengeteg izgalmas program és előadás volt a menetrendben. Az előadások közül több is kapcsolódott a kör profiljához, a webfejlesztéshez.
 
 ![szakmai-het](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d967304f2860d66d4eb052ad4ac2fb7d350c8ddf/szakmai-het-cover.jpg
 )
 
 ## Szakmai Est
 
-A hét első napja a Szakmai Est volt, ahol a Simonyi aktív tagjai mutatták be, hogy mivel foglalkoztak az utóbbi időben. Több szakkollégiumi körből is jöttek előadók. Mi is készültünk előadással, aminek a címe PéK: Webfejlesztés hosszútávon lett. Itt meséltünk egy kicsit a projekt történelméről valamint arról, hogy milyen szakmai kihívásokkal kell megbírkóznia a fejlesztőknek, ha több mint 20 éven át szeretnének egy webes szolgáltatást biztosítani. Az előadást a kör PéK Adminja, Sepsi László tartotta meg.
+A hét első napja a Szakmai Est volt, ahol a Simonyi aktív tagjai mutatták be, hogy mivel foglalkoztak az utóbbi időben. Több szakkollégiumi körből is jöttek előadók. Mi is készültünk előadással, aminek a címe PéK: Webfejlesztés hosszútávon lett. Itt meséltünk egy kicsit a projekt történelméről valamint arról, hogy milyen szakmai kihívásokkal kell megbirkóznia a fejlesztőknek, ha több mint 20 éven át szeretnének egy webes szolgáltatást biztosítani. Az előadást a kör PéK Adminja, Sepsi László tartotta meg.
 
 ![szakmai-est-pek](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8bdd736197e9e504ed6acac49303e6856472c548/minikonf-pek-eloadas.jpg)
 
@@ -28,7 +28,7 @@ A hét további részében is feltűntek ismerős arcok az előadók között. A
 
 
 ## Szülinap
-Az elsők között érkeztünk meg a Szülinap helyszínére, igy még volt asztal, ahova mindannyian le tudtunk ülni. Az utóbbi hetek nagyon mozgalmasan teltek mindenki számra, ezért kifejezetten jó volt kicsit összeülni és sztorizgatni. A sajtófalat is meglátogattuk, néhány kép erejéig. A Szülinap további része is nagyon jól telt, a táncolás és a bulizás mellett néhány sörpöng mérkőzés lejátszására is volt időnk. Sajnos csak olyan képet találtunk, ahol a Kir-Dev-es csapat nem látszik, de az asztal másik végén tényleg mi vagyunk. :wink:
+Az elsők között érkeztünk meg a Szülinap helyszínére, így még volt asztal, ahova mindannyian le tudtunk ülni. Az utóbbi hetek nagyon mozgalmasan teltek mindenki számára, ezért kifejezetten jó volt kicsit összeülni és sztorizgatni. A sajtófalat is meglátogattuk, néhány kép erejéig. A Szülinap további része is nagyon jól telt, a táncolás és a bulizás mellett néhány sörpöng mérkőzés lejátszására is volt időnk. Sajnos csak olyan képet találtunk, ahol a Kir-Dev-es csapat nem teljesen látszik, de az asztal másik végén tényleg mi vagyunk. :wink:
 
 
 ![beszelgetes](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8cec0c76ed80e7d138a6236a13ef1eccd7ba724a/kir-dev-at-simonyi-szulinap-table.jpg
