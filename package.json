@@ -29,9 +29,9 @@
   "dependencies": {
     "@babel/core": "7.16.0",
     "@chakra-ui/gatsby-plugin": "2.0.2",
-    "@chakra-ui/icons": "1.0.17",
-    "@chakra-ui/react": "1.6.12",
-    "@chakra-ui/system": "1.7.6",
+    "@chakra-ui/icons": "1.1.1",
+    "@chakra-ui/react": "1.7.2",
+    "@chakra-ui/system": "1.8.2",
     "@emotion/react": "11.7.0",
     "@emotion/styled": "11.6.0",
     "@fontsource/open-sans": "4.5.2",
