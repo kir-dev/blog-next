@@ -4,8 +4,6 @@
 
 A [kir-dev.sch.bme.hu](https://kir-dev.sch.bme.hu) következő generációs blogja.
 
-A projekt jelenleg fejlesztési szakaszban van, az aktuális állapot [Vercelen](http://blog-next-kir-dev.vercel.app/) tekinthető meg.
-
 ## Telepítés
 
 Legyen telepítve [node.js](https://nodejs.org/en/) és [yarn](https://yarnpkg.com/lang/en/docs/install) a gépeden. A gatsby-t szükséges globálisan feltelepíteni, ez a `yarn global add gatsby-cli` paranccsal tehető meg.
@@ -108,6 +106,10 @@ Szerkeszteni tudod a hozzárendelt tulajdonságokat a létrejött markdown fájl
   - Fun fact: TanulóSCH-n új feature a tanulószobától független események rendezése, így akár belinkelhetsz egy TanulóSCH eseményt is.
 - `active`: jelenleg aktív-e a tanfolyam, ha false, nem jelenik meg a tanfolyam oldalon sem
 - A leírást pedig írd meg a markdown fájl további részében.
+
+## Developer Notes
+
+- Jelenleg a képek a `gatsby-image-plugin` segítségével töltődnek be a repóból, ha azok használatban vannak egy-egy poszt vagy projekt vagy member featuredImage vagy egyéb fieldjében. FONTOS: `gatsby-node.ts` fájlban a `type Frontmatter` GraphQL sémát módosítsd, ha új olyan fieldet definiáltál egy markdown frontmatterban, ami valami képre/fájlra fog mutatni. Jelenleg a `featuredImage` és `ogImage` fieldek lesznek előre `File` típussal ellátva a MarkdownRemark Frontmatter interfészében, amikor a Gatsby ezeket a GraphQL sémákat generálja.
 
 ## License
 

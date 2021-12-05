@@ -84,13 +84,9 @@ export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] 
   const { createTypes } = actions
 
   const typeDefs = `
-    type Frontmatter @infer {
+    type MarkdownRemarkFrontmatter @infer {
       featuredImage: File
       ogImage: File
-    }
-
-    type MarkdownRemark implements Node @infer {
-      frontmatter: Frontmatter
     }
   `
 
