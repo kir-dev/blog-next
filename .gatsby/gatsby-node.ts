@@ -79,3 +79,16 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
     })
   })
 }
+
+export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = ({ actions }) => {
+  const { createTypes } = actions
+
+  const typeDefs = `
+    type MarkdownRemarkFrontmatter @infer {
+      featuredImage: File
+      ogImage: File
+    }
+  `
+
+  createTypes(typeDefs)
+}
