@@ -1,0 +1,9 @@
+{
+  "plugins": [],
+  "presets": ["babel-preset-gatsby"],
+  "env": {
+    "development": {
+      "compact": false
+    }
+  }
+}
