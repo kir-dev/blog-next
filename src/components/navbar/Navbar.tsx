@@ -1,7 +1,8 @@
 import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons'
-import { Box, Collapse, Flex, IconButton, Image, useColorMode, useColorModeValue, useDisclosure } from '@chakra-ui/react'
+import { Box, Collapse, Flex, IconButton, useColorMode, useColorModeValue, useDisclosure } from '@chakra-ui/react'
 import { Link } from 'gatsby'
 import * as React from 'react'
+import KirdevNamed from '~components/themed-svgs/KirdevNamed'
 import DesktopNav from './DesktopNav'
 import MobileNav from './MobileNav'
 
@@ -40,7 +41,7 @@ const WithSubnavigation: React.FC = () => {
             }}
           >
             <Box textAlign={{ base: 'center', md: 'left' }} mx="2">
-              <Image height="1.25rem" fill={useColorModeValue('#000', '#fff')} src="/svg/kirdev-named.svg" alt="Kir-Dev Logo named" />
+              <KirdevNamed style={{ height: '1.25rem' }} />
             </Box>
           </Box>
         </Flex>

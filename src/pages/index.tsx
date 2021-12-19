@@ -5,7 +5,6 @@ import {
   Grid,
   Heading,
   HStack,
-  Image,
   Link as ChakraLink,
   Spacer,
   Text,
@@ -21,6 +20,7 @@ import InfoBox from '~components/indexpage-components/InfoBox'
 import PekPreview from '~components/indexpage-components/PekPreview'
 import SEO from '~components/SEO'
 import Terminal from '~components/terminal/Terminal'
+import KirdevSimplified from '~components/themed-svgs/KirdevSimplified'
 import { PostProps } from '~types/post.props'
 import { ProjectProps } from '~types/project.props'
 import { FACEBOOK_PAGE_URL, GITHUB_ORG_URL, PEK_URL, YOUTUBE_CHANNEL_URL } from '~utils/configurations'
@@ -124,13 +124,12 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
                     </Flex>
                   </Flex>
                 </Flex>
-                <Image
-                  marginTop={useBreakpointValue([0, '-14rem', '-18rem', '-10rem'])}
-                  height={useBreakpointValue([0, '14rem', '18rem', '20rem'])}
-                  fill={useColorModeValue('black', '#EBECEC')}
-                  marginLeft="auto"
-                  src="/svg/kirdev-simplified.svg"
-                  alt="Kir-Dev logo"
+                <KirdevSimplified
+                  style={{
+                    marginTop: useBreakpointValue([0, '-14rem', '-18rem', '-10rem']),
+                    height: useBreakpointValue([0, '14rem', '18rem', '20rem']),
+                    marginLeft: 'auto'
+                  }}
                 />
               </Box>
             </Container>

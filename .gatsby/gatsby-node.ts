@@ -80,6 +80,8 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
   })
 }
 
+/// todo: check why this method broke the image processing job and made the gatsby-image plugin miss the images
+/*
 export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = ({ actions }) => {
   const { createTypes } = actions
 
@@ -91,5 +93,6 @@ export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] 
     }
   `
 
-  // createTypes(typeDefs)
+  createTypes(typeDefs)
 }
+*/

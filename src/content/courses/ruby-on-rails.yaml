@@ -10,7 +10,6 @@ sessions:
     lengthInHours: 2
     place: Google Meet
 lecturer: Sepsi László
-featuredImage: ../../assets/svgs/rails-logo.svg
 active: true
 description: >
   Szeretnél innovatív weboldalakat készíteni villámgyorsan? Tanfolyamunk keretében megismerhetsz egy olyan backend

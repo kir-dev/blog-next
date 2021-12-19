@@ -1,6 +1,7 @@
 import { Box, Container, Flex, HStack, Image, Link, Text, useColorModeValue } from '@chakra-ui/react'
 import React from 'react'
 import { FaAt, FaFacebook, FaGithub, FaYoutube } from 'react-icons/fa'
+import KirdevOriginal from '~components/themed-svgs/KirdevOriginal'
 import { FACEBOOK_PAGE_URL, GITHUB_ORG_URL, PUBLIC_EMAIL, YOUTUBE_CHANNEL_URL } from '~utils/configurations'
 import SocialButton from './SocialButton'
 
@@ -29,7 +30,7 @@ const Footer: React.FC = () => (
         <Flex flexDirection={{ base: 'column-reverse', sm: 'row' }}>
           <Flex flex={1} justifyContent={{ base: 'center', sm: 'flex-start' }}>
             <HStack>
-              <Image fill={useColorModeValue('black', 'white')} height="3rem" src="/svg/kirdev.svg" alt="Kir-Dev Logo full" />
+              <KirdevOriginal style={{ height: '3rem' }} />
               <Link href="https://vercel.com?utm_source=kir-dev&utm_campaign=oss">
                 <Image height="1.75rem" src="/svg/powered-by-vercel.svg" alt="Vercel Logo" />
               </Link>

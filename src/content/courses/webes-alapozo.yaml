@@ -4,7 +4,6 @@ sessions:
     lengthInHours: 2
     place: Google Meet
 lecturer: Király Bálint
-featuredImage: ../../assets/svgs/kirdev-simplified.svg
 active: true
 description: >
   A tanfolyamon résztvevők elsajátíthatják az webfejlesztés hálózati alapjait, megismerkedhetnek a web működésével,
