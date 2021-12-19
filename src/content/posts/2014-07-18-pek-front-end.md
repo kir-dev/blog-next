@@ -2,7 +2,7 @@
 layout: post
 author: kresshy
 date: 2014-07-18 11:08:00
-title: 'WIP PéK Front-end'
+title: WIP PéK Front-end
 comment: true
 ---
 

@@ -14,13 +14,13 @@ import {
 import { graphql, Link } from 'gatsby'
 import * as React from 'react'
 import { FaFacebook, FaGithub, FaYoutube } from 'react-icons/fa'
-import Logo from '~assets/images/kirdev-simplified.svg'
 import BlogFullCard from '~components/blog-components/BlogFullCard'
 import Container from '~components/Container'
 import InfoBox from '~components/indexpage-components/InfoBox'
 import PekPreview from '~components/indexpage-components/PekPreview'
 import SEO from '~components/SEO'
 import Terminal from '~components/terminal/Terminal'
+import KirdevSimplified from '~components/themed-svgs/KirdevSimplified'
 import { PostProps } from '~types/post.props'
 import { ProjectProps } from '~types/project.props'
 import { FACEBOOK_PAGE_URL, GITHUB_ORG_URL, PEK_URL, YOUTUBE_CHANNEL_URL } from '~utils/configurations'
@@ -33,9 +33,9 @@ interface IndexPageProps {
         {
           fields: {
             slug: string
-            readingTime: {
-              minutes: number
-            }
+          }
+          wordCount: {
+            words: number
           }
           frontmatter: PostProps
         }
@@ -61,7 +61,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
       <IndexLayout>
         <Box>
           <Box
-            bgImage="url('../../index-bg.jpeg')"
+            bgImage="url(/index-bg.jpeg)"
             bgPos="center"
             bgRepeat="no-repeat"
             bgSize="cover"
@@ -124,11 +124,10 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
                     </Flex>
                   </Flex>
                 </Flex>
-                <Logo
+                <KirdevSimplified
                   style={{
                     marginTop: useBreakpointValue([0, '-14rem', '-18rem', '-10rem']),
                     height: useBreakpointValue([0, '14rem', '18rem', '20rem']),
-                    fill: useColorModeValue('black', '#EBECEC'),
                     marginLeft: 'auto'
                   }}
                 />
@@ -202,9 +201,9 @@ export const query = graphql`
       nodes {
         fields {
           slug
-          readingTime {
-            minutes
-          }
+        }
+        wordCount {
+          words
         }
         frontmatter {
           title

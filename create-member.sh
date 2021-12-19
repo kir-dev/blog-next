@@ -23,10 +23,11 @@ touch $filepath
 echo '---' >> $filepath
 echo 'layout: member' >> $filepath
 echo 'pekUsername: '$pekusername >> $filepath
-echo 'realName: "'$realname'"' >> $filepath
-echo 'position: "'$position'"' >> $filepath
+echo 'realName: '$realname >> $filepath
+echo 'position: '$position >> $filepath
 echo 'joinDate: '$joindate >> $filepath
-echo 'interests: []' >> $filepath
-echo 'featuredImage: ../images/avatars/'$pekusername'.jpg' >> $filepath
+echo 'interests: ' >> $filepath
+echo '  - Node' >> $filepath
+echo 'featuredImage:' >> $filepath
 echo 'active: true' >> $filepath
 echo '---' >> $filepath

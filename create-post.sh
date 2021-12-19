@@ -25,9 +25,11 @@ echo '---' >> $filepath
 echo 'layout: post' >> $filepath
 echo 'author: '$author >> $filepath
 echo 'date: '$postdate >> $filepath
-echo 'title: "'$title'"' >> $filepath
-echo 'lead: ""' >> $filepath
-echo 'tags: []' >> $filepath
+echo 'title: '$title >> $filepath
+echo 'lead: ' >> $filepath
+echo 'tags: ' >> $filepath
+echo '  - hírek' >> $filepath
 echo 'comment: true' >> $filepath
-echo 'featuredImage: null' >> $filepath
+echo 'featuredImage:' >> $filepath
+echo 'ogImage: ' >> $filepath
 echo '---' >> $filepath

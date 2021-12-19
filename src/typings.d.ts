@@ -14,9 +14,4 @@ declare module '*.module.css' {
   export = cssModule
 }
 
-declare module '*.svg' {
-  const content: any
-  export default content
-}
-
 declare module 'gatsby-plugin-open-graph-images'

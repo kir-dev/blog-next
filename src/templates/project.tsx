@@ -1,9 +1,8 @@
-import { Box, Button, Flex, Heading, HStack, Tag, Text, useBreakpointValue, useColorModeValue } from '@chakra-ui/react'
+import { Box, Button, Flex, Heading, HStack, Image, Tag, Text, useBreakpointValue, useColorModeValue } from '@chakra-ui/react'
 import { graphql, Link } from 'gatsby'
 import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
 import * as React from 'react'
 import { FaGithub, FaHome } from 'react-icons/fa'
-import SvgPattern from '~assets/images/circuit-board.svg'
 import ScrollButton from '~components/blog-components/ScrollButton'
 import Container from '~components/Container'
 import { getIcon } from '~components/project-components/ProjectPreview'
@@ -42,15 +41,15 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ data }) => {
               {featuredImage ? (
                 <GatsbyImage image={featuredImage} alt="Project" />
               ) : (
-                <SvgPattern
-                  style={{
-                    maxHeight: '10rem',
-                    fill: useColorModeValue('black', 'white'),
-                    position: 'absolute',
-                    marginTop: '-2rem',
-                    marginLeft: '-6rem',
-                    zIndex: 0
-                  }}
+                <Image
+                  maxHeight="10rem"
+                  fill={useColorModeValue('black', 'white')}
+                  position="absolute"
+                  marginTop="-2rem"
+                  marginLeft="-1.5rem"
+                  zIndex={0}
+                  src="/svg/circuit-board.svg"
+                  alt="Circuit board"
                 />
               )}
               <Box

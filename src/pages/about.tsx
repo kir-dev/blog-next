@@ -1,12 +1,7 @@
-import { Box, chakra, Flex, Grid, Heading, HStack, Link, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Box, chakra, Flex, Grid, Heading, HStack, Image, Link, Text, useBreakpointValue } from '@chakra-ui/react'
 import { Link as GatsbyLink } from 'gatsby'
 import * as React from 'react'
 import { FaFacebook, FaGithub, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
-import NodeLogo from '~assets/images/node-logo.svg'
-import RailsLogo from '~assets/images/rails-logo.svg'
-import SimonyiLogo from '~assets/images/simonyi-logo.svg'
-import SlackDcLogo from '~assets/images/slack-dc-logo.svg'
-import SpringLogo from '~assets/images/spring-logo.svg'
 import AboutParagraph from '~components/about-components/AboutParagraph'
 import StickyNote from '~components/about-components/StickyNote'
 import Container from '~components/Container'
@@ -67,11 +62,11 @@ const AboutPage: React.FC = () => {
             <AboutParagraph title={ABOUT_MAP.get('inception')} id="inception" titleSize={firstHeadingSize}>
               <Box>
                 <Box float="right" pl={3} pb={3}>
-                  <SimonyiLogo
-                    style={{
-                      width: useBreakpointValue({ base: '4rem', md: '6rem' }),
-                      height: useBreakpointValue({ base: '4rem', md: '6rem' })
-                    }}
+                  <Image
+                    width={useBreakpointValue({ base: '4rem', md: '6rem' })}
+                    height={useBreakpointValue({ base: '4rem', md: '6rem' })}
+                    src="/svg/simonyi-logo.svg"
+                    alt="Simonyi Logo"
                   />
                 </Box>
                 <AboutParagraph title="Történelem" titleSize={secondHeadingSize}>
@@ -153,20 +148,29 @@ const AboutPage: React.FC = () => {
               </Flex>
               <AboutParagraph title="Tech Stack" titleSize={secondHeadingSize}>
                 <Grid my={4} templateColumns={`repeat(${useBreakpointValue({ base: 1, md: 3 })}, 1fr)`} gap={{ base: 4, md: 10 }}>
-                  <InfoBox img={<RailsLogo style={logoStyles} />} title="Ruby on Rails">
+                  <InfoBox
+                    img={<Image width={logoStyles.width} height={logoStyles.height} src="/svg/rails-logo.svg" alt="Rails Logo" />}
+                    title="Ruby on Rails"
+                  >
                     <Text textAlign={{ base: 'left', md: 'center' }}>
                       Ruby nyelvet használó összetett webes MVC framework. Villámgyorsan lehet benne fejleszteni, izgalmas a nyelv és magas
                       szintű a Rails támogatottsága, óriási a választék a közösség által fejlesztett modulokban.
                     </Text>
                   </InfoBox>
-                  <InfoBox img={<NodeLogo style={logoStyles} />} title="NodeJS">
+                  <InfoBox
+                    img={<Image width={logoStyles.width} height={logoStyles.height} src="/svg/node-logo.svg" alt="Node Logo" />}
+                    title="NodeJS"
+                  >
                     <Text textAlign={{ base: 'left', md: 'center' }}>
                       A piac talán legelterjedtebb technológiája, aszinkron eseményvezérelt webes JavaScriptes runtime. Express
                       keretrendszerrel és TypeScript nyelvvel használjuk együtt. Kényelmesen használható, színes tech stackeket lehet köré
                       varázsolni.
                     </Text>
                   </InfoBox>
-                  <InfoBox img={<SpringLogo style={logoStyles} />} title="Spring Boot">
+                  <InfoBox
+                    img={<Image width={logoStyles.width} height={logoStyles.height} src="/svg/spring-logo.svg" alt="Spring Logo" />}
+                    title="Spring Boot"
+                  >
                     <Text textAlign={{ base: 'left', md: 'center' }}>
                       A Spring platformjának előkonfigurált változata, amely roppant könnyűvé teszi a fejlesztést. Kotlin nyelvvel és
                       Thymeleaf sablonmotorral használjuk együtt. Számításigényes feladatokra alkalmazzák, többszálasan működik, és egyszerű
@@ -284,11 +288,11 @@ const AboutPage: React.FC = () => {
 
             <Box>
               <Box mt={10} float="right" pl={3} pb={3}>
-                <SlackDcLogo
-                  style={{
-                    width: useBreakpointValue({ base: '6rem', md: '9rem' }),
-                    height: useBreakpointValue({ base: '6rem', md: '9rem' })
-                  }}
+                <Image
+                  width={useBreakpointValue({ base: '6rem', md: '9rem' })}
+                  height={useBreakpointValue({ base: '6rem', md: '9rem' })}
+                  src="/svg/slack-dc-logo.svg"
+                  alt="Slack and DC Logo"
                 />
               </Box>
               <AboutParagraph title={ABOUT_MAP.get('slack_dc')} id="slack_dc" titleSize={firstHeadingSize}>

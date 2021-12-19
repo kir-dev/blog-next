@@ -1,18 +1,19 @@
-import { Box, chakra, Flex, HStack, Image, Tag, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, chakra, Flex, Heading, HStack, Image, Tag, useColorModeValue } from '@chakra-ui/react'
 import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React from 'react'
 import { FaClock } from 'react-icons/fa'
 import { PostProps } from '~types/post.props'
+import { readTimeInMinutes } from '~utils/commonFunctions'
 import BlogAuthor from './BlogAuthor'
 
 export interface BlogPreviewProps {
   post: {
     fields: {
       slug: string
-      readingTime: {
-        minutes: number
-      }
+    }
+    wordCount: {
+      words: number
     }
     frontmatter: PostProps
   }
@@ -39,15 +40,15 @@ const BlogPreviewCard: React.FC<BlogPreviewProps> = ({ post }) => {
           </Box>
         </Flex>
         <Flex flex={2.15} direction="column" justifyContent="center" mt={{ base: 3, sm: 0 }} pl={{ base: 0, sm: 3 }}>
-          <Text fontWeight="light" fontSize="2xl">
-            <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
-          </Text>
+          <Heading as={Link} fontSize="2xl" fontWeight="400" lineHeight="tight" to={post.fields.slug}>
+            {post.frontmatter.title}
+          </Heading>
           <Box mt={1} fontWeight="light" textColor={useColorModeValue('gray.600', 'gray.400')}>
             <Box display="inline-block" pr={1}>
               <FaClock size="0.75rem" />
             </Box>
             <chakra.span fontSize="sm">
-              {Math.ceil(post.fields.readingTime.minutes)}&nbsp;perc{post.frontmatter.lead ? ` • ${post.frontmatter.lead}` : ''}
+              {readTimeInMinutes(post.wordCount.words)}&nbsp;perc{post.frontmatter.lead ? ` • ${post.frontmatter.lead}` : ''}
             </chakra.span>
           </Box>
         </Flex>

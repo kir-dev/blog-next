@@ -2,8 +2,10 @@
 layout: post
 author: yeti
 date: 2019-11-11 21:41:05
-title: 'Költözünk'
-tags: ['hírek', 'ops']
+title: Költözünk
+tags:
+  - hírek
+  - ops
 comment: true
 ---
 

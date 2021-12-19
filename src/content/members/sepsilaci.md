@@ -1,10 +1,9 @@
 ---
 layout: member
 pekUsername: sepsilaci
-realName: 'Sepsi László'
-position: 'volt körvezető'
+realName: Sepsi László
+position: volt körvezető
 joinDate: 2019-03
-interests: []
-featuredImage: null
+interests:
 active: true
 ---

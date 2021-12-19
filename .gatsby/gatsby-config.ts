@@ -30,52 +30,48 @@ export default {
     }
   },
   plugins: [
-    '@chakra-ui/gatsby-plugin',
+    `@chakra-ui/gatsby-plugin`,
+    `gatsby-transformer-yaml`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'post',
-        path: `${path.join(__dirname, '../src/content/posts')}`
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'project',
-        path: `${path.join(__dirname, '../src/content/projects')}`
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'member',
-        path: `${path.join(__dirname, '../src/content/members')}`
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'course',
-        path: `${path.join(__dirname, '../src/content/courses')}`
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-filesystem`,
       options: {
         name: 'images',
         path: `${path.join(__dirname, '../src/content/images')}`
       }
     },
     {
-      resolve: 'gatsby-plugin-react-svg',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        rule: {
-          include: /assets\/images/
-        }
+        name: 'post',
+        path: `${path.join(__dirname, '../src/content/posts')}`
       }
     },
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'project',
+        path: `${path.join(__dirname, '../src/content/projects')}`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'member',
+        path: `${path.join(__dirname, '../src/content/members')}`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'course',
+        path: `${path.join(__dirname, '../src/content/courses')}`
+      }
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           {
@@ -97,13 +93,11 @@ export default {
               elements: [`h1`, `h2`, `h3`, `h4`]
             }
           },
-          'gatsby-remark-responsive-iframe',
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants',
-          'gatsby-remark-gemoji-to-emoji',
-          'gatsby-remark-external-links',
+          `gatsby-remark-responsive-iframe`,
+          `gatsby-remark-smartypants`,
+          `gatsby-remark-external-links`,
           {
-            resolve: 'gatsby-remark-images',
+            resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1140,
               quality: 90,
@@ -111,7 +105,7 @@ export default {
             }
           },
           {
-            resolve: 'gatsby-remark-vscode',
+            resolve: `gatsby-remark-vscode`,
             options: {
               theme: {
                 default: 'Quiet Light',
@@ -143,25 +137,20 @@ export default {
                 inlineCode: 'md-code'
               }
             }
-          },
-          `gatsby-remark-reading-time`
+          }
         ]
       }
     },
-    'gatsby-transformer-json',
     {
-      resolve: 'gatsby-plugin-canonical-urls',
+      resolve: `gatsby-plugin-canonical-urls`,
       options: {
         siteUrl: 'https://kir-dev.sch.bme.hu'
       }
     },
-    'gatsby-plugin-emotion',
-    'gatsby-plugin-typescript',
-    'gatsby-plugin-image',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-tsconfig-paths',
+    `gatsby-plugin-emotion`,
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-tsconfig-paths`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

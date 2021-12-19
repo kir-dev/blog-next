@@ -2,9 +2,12 @@
 layout: post
 author: triszt4n
 date: 2021-08-22 23:55:13
-title: 'Mi történt velünk mostanában?'
-lead: 'Beszámoló a kört ért újdonságokról'
-tags: ['hírek', 'PR', 'projektek']
+title: Mi történt velünk mostanában?
+lead: Beszámoló a kört ért újdonságokról
+tags:
+  - hírek
+  - PR
+  - projektek
 comment: true
 featuredImage: ../images/posts/uj-arculat.jpg
 ogImage: ../images/posts/uj-arculat-og.png

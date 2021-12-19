@@ -1,7 +1,18 @@
-import { Box, Button, chakra, Flex, Grid, Heading, Link as ChakraLink, Text, useBreakpointValue, useColorModeValue } from '@chakra-ui/react'
+import {
+  Box,
+  Button,
+  chakra,
+  Flex,
+  Grid,
+  Heading,
+  Image,
+  Link as ChakraLink,
+  Text,
+  useBreakpointValue,
+  useColorModeValue
+} from '@chakra-ui/react'
 import { graphql, Link } from 'gatsby'
 import * as React from 'react'
-import TechsLogo from '~assets/images/techs-logo.svg'
 import Container from '~components/Container'
 import CourseCard from '~components/course-components/CourseCard'
 import Header from '~components/Header'
@@ -12,14 +23,8 @@ import IndexLayout from '../layouts'
 
 interface CoursesProps {
   data: {
-    allMarkdownRemark: {
-      nodes: {
-        fields: {
-          slug: string
-        }
-        html: string
-        frontmatter: CourseProps
-      }[]
+    allCoursesYaml: {
+      nodes: CourseProps[]
     }
   }
 }
@@ -60,9 +65,9 @@ const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
                     Jelentkezz!
                   </Button>
                 )}
-                <Flex justifyContent="flex-end" h={{ base: '7rem', sm: '9rem', md: '14rem', lg: '12rem' }} ml={4}>
-                  <TechsLogo style={{ height: '100%' }} />
-                </Flex>
+                <Box w={{ base: '7rem', sm: '9rem', md: '14rem', lg: '12rem' }} ml={4}>
+                  <Image src="/svg/techs-logo.svg" alt="Techs Logo" />
+                </Box>
               </Flex>
             </Flex>
             {CURRENT_COURSE_FORM_URL && (
@@ -79,8 +84,8 @@ const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
             <Heading as="h2">{CURRENT_COURSE_SEMESTER}</Heading>
             <Box mt={6}>
               <Grid templateColumns={`repeat(${useBreakpointValue({ base: 1, sm: 2 })}, 1fr)`} gap={6}>
-                {data.allMarkdownRemark.nodes.map((course) => (
-                  <CourseCard key={course.fields.slug} course={course} />
+                {data.allCoursesYaml.nodes.map((course) => (
+                  <CourseCard key={course.title} course={course} />
                 ))}
               </Grid>
             </Box>
@@ -177,22 +182,17 @@ export default CoursesPage
 
 export const query = graphql`
   query Courses {
-    allMarkdownRemark(filter: { fields: { layout: { eq: "course" } }, frontmatter: { active: { eq: true } } }) {
+    allCoursesYaml {
       nodes {
-        fields {
-          slug
+        title
+        sessions {
+          startDateTime
+          lengthInHours
+          place
         }
-        html
-        frontmatter {
-          title
-          sessions {
-            startDateTime
-            lengthInHours
-            place
-          }
-          lecturer
-          active
-        }
+        lecturer
+        active
+        description
       }
     }
   }

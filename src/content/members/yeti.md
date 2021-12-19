@@ -1,10 +1,13 @@
 ---
 layout: member
 pekUsername: yeti
-realName: 'Fehér János'
-position: 'volt körvezető'
+realName: Fehér János
+position: volt körvezető
 joinDate: 2018-03
-interests: ['Node', 'Rails', 'React', 'TypeScript']
-featuredImage: ../images/avatars/yeti.jpg
+interests:
+  - Node
+  - Rails
+  - React
+  - TypeScript
 active: false
 ---

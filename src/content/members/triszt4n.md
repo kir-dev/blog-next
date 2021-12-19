@@ -1,10 +1,12 @@
 ---
 layout: member
 pekUsername: triszt4n
-realName: 'Piller Trisztán'
+realName: Piller Trisztán
 position: gazdaságis
 joinDate: 2020-04
-interests: ['Node', 'Rails', 'CI/CD', 'PaaS']
-featuredImage: null
+interests:
+  - Node
+  - Rails
+  - DevOps
 active: true
 ---

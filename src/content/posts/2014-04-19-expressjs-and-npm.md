@@ -2,7 +2,7 @@
 layout: post
 author: kresshy
 date: 2014-04-19 10:00:00
-title: 'Az express.js és az npm, Node is still a badass tech - III. rész'
+title: Az express.js és az npm, Node is still a badass tech - III. rész
 comment: true
 ---
 
@@ -90,7 +90,7 @@ Ami viszont sokkal érdekesebb az a `routes` könyvtár, ahol kapásból találh
  * GET home page.
  */
 
-exports.index = function(req, res) {
+exports.index = function (req, res) {
   res.render('index', { title: 'Express' })
 }
 ```
@@ -137,7 +137,7 @@ A legutolsó legfontosabb rész pedig a route-ok megadása, ezeket a böngésző
 app.get('/', routes.index)
 app.get('/users', user.list)
 
-http.createServer(app).listen(app.get('port'), function() {
+http.createServer(app).listen(app.get('port'), function () {
   console.log('Express server listening on port ' + app.get('port'))
 })
 ```

@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React from 'react'
 import { FaClock } from 'react-icons/fa'
+import { readTimeInMinutes } from '~utils/commonFunctions'
 import BlogAuthor from './BlogAuthor'
 import { BlogPreviewProps } from './BlogPreviewCard'
 
@@ -26,10 +27,8 @@ const BlogFullCard: React.FC<BlogPreviewProps> = ({ post }) => {
         </Box>
       </Flex>
       <Flex flex={1.75} direction="column" justifyContent="center" mt={{ base: 3, md: 0 }} pl={{ base: 0, sm: 3 }}>
-        <Heading>
-          <Text as={Link} to={post.fields.slug}>
-            {post.frontmatter.title}
-          </Text>
+        <Heading as={Link} fontSize="4xl" fontWeight="600" lineHeight="tight" to={post.fields.slug}>
+          {post.frontmatter.title}
         </Heading>
 
         <Text mt={1} fontSize="md">
@@ -43,7 +42,7 @@ const BlogFullCard: React.FC<BlogPreviewProps> = ({ post }) => {
           />
           <HStack fontWeight="light" fontSize={{ base: 'sm', md: 'xs', lg: 'sm' }} textColor={useColorModeValue('gray.600', 'gray.400')}>
             <FaClock />
-            <Text>{Math.ceil(post.fields.readingTime.minutes)}&nbsp;perc</Text>
+            <Text>{readTimeInMinutes(post.wordCount.words)}&nbsp;perc</Text>
           </HStack>
         </Flex>
 

@@ -80,15 +80,19 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
   })
 }
 
+/// todo: check why this method broke the image processing job and made the gatsby-image plugin miss the images
+/*
 export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = ({ actions }) => {
   const { createTypes } = actions
 
   const typeDefs = `
     type MarkdownRemarkFrontmatter @infer {
       featuredImage: File
+      funnyImage: File
       ogImage: File
     }
   `
 
   createTypes(typeDefs)
 }
+*/
