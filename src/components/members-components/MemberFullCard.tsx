@@ -6,28 +6,36 @@ import { MemberProps } from '~types/member.props'
 import { PEK_URL } from '~utils/configurations'
 
 const MemberFullCard: React.FC<{ member: MemberProps }> = ({ member }) => {
-  const originalAvatarImage = getImage(member.featuredImage)
-  const originalAvatarComponent = originalAvatarImage ? (
-    <GatsbyImage image={originalAvatarImage} alt="avatar" style={{ width: '100%', height: '12rem' }} objectFit="contain" />
-  ) : null
-  // const funnyAvatarComponent = <Image src="../../../coffee.png" objectFit="contain" w="full" />
+  const featuredImage = getImage(member.featuredImage)
+  const funnyImage = getImage(member.funnyImage)
 
-  const [avatarComponent, setAvatarComponent] = useState(originalAvatarComponent)
-  const onOverlayEnter = () => null // setAvatarComponent(funnyAvatarComponent)
-  const onOverlayLeave = () => null // setAvatarComponent(originalAvatarComponent)
+  const [overlayShown, setOverlayShown] = useState(false)
+  const onOverlayEnter = () => setOverlayShown(true)
+  const onOverlayLeave = () => setOverlayShown(false)
 
   return (
-    <Flex my={6} direction={{ base: 'column', sm: 'row' }} w="full" overflow="hidden">
-      {avatarComponent && (
-        <Flex flex={1} h="12rem" position="relative" mb={4} mr={6} onMouseEnter={onOverlayEnter} onMouseLeave={onOverlayLeave}>
-          <Box w={{ base: 'inherit', sm: '90%' }} zIndex={2} transition="all 300ms ease">
-            {avatarComponent}
-          </Box>
-          <Box zIndex={1} w="100%" h="100%" position="absolute" ml={1} mt={1}>
-            <Box bgGradient="radial(orange.400 1px, transparent 1px)" bgSize={{ base: '1.5rem 1.5rem', sm: '1rem 1rem' }} h="100%" />
-          </Box>
-        </Flex>
-      )}
+    <Flex my={6} display={{ base: 'block', sm: 'flex' }} direction={{ base: 'column', sm: 'row' }} w="full" overflow="hidden">
+      <Flex
+        flex={1}
+        mr={{ base: 0, sm: 6 }}
+        mb={{ base: 4, sm: 0 }}
+        height="13rem"
+        onMouseOver={onOverlayEnter}
+        onMouseLeave={onOverlayLeave}
+        position="relative"
+        transition="all 300ms ease"
+      >
+        <Box position="absolute" zIndex={2} top={0} right={0}>
+          {featuredImage && <GatsbyImage image={featuredImage} alt="img" style={{ width: '12rem', height: '100%' }} objectFit="contain" />}
+        </Box>
+        <Box position="absolute" zIndex={3} top={0} right={0} opacity={overlayShown ? 1 : 0} transition="200ms ease">
+          {funnyImage && <GatsbyImage image={funnyImage} alt="funny" style={{ width: '12rem', height: '100%' }} objectFit="contain" />}
+        </Box>
+        <Box zIndex={1} w="full" h="full" position="absolute" top={0} left={0}>
+          <Box bgGradient="radial(orange.400 1px, transparent 1px)" bgSize={{ base: '1.5rem 1.5rem', sm: '1rem 1rem' }} h="full" />
+        </Box>
+      </Flex>
+
       <Flex flexWrap="wrap" flex={{ base: 1, sm: 1, md: 2, lg: 3 }}>
         <Box lineHeight="taller">
           <Heading fontSize="2xl" fontWeight="bold">

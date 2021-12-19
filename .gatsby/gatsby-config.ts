@@ -32,9 +32,18 @@ export default {
   plugins: [
     `@chakra-ui/gatsby-plugin`,
     `gatsby-transformer-yaml`,
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`webp`],
+          placeholder: `blurred`,
+          quality: 75
+        }
+      }
+    },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
