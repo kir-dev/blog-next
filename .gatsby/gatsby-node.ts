@@ -91,5 +91,5 @@ export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] 
     }
   `
 
-  createTypes(typeDefs)
+  // createTypes(typeDefs)
 }
