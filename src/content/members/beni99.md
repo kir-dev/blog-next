@@ -9,4 +9,6 @@ interests:
   - TypeScript
   - Kotlin
 active: true
+featuredImage: ../images/avatars/beni99/normal.jpg
+funnyImage: ../images/avatars/beni99/funny.jpg
 ---
