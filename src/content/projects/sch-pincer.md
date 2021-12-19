@@ -10,5 +10,5 @@ status:
 techs:
   - Kotlin
   - Spring Boot
-featuredImage: null
+featuredImage:
 ---

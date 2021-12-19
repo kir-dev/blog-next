@@ -11,9 +11,5 @@ techs:
   - NextJS
   - Node
   - AWS Lambda
-featuredImage: null
+featuredImage:
 ---
-
-# Header
-
-Template example.

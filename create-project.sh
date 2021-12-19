@@ -21,7 +21,7 @@ touch $filepath
 echo '---' >> $filepath
 echo 'layout: project' >> $filepath
 echo 'title: '$title >> $filepath
-echo 'lead: null' >> $filepath
+echo 'lead:' >> $filepath
 echo 'github: https://github.com/kir-dev/'$urlpath >> $filepath
 echo 'website: https://< enter >.sch.bme.hu/' >> $filepath
 echo 'status:' >> $filepath
@@ -29,5 +29,5 @@ echo '  label: Aktív' >> $filepath
 echo '  color: green' >> $filepath
 echo 'techs:' >> $filepath
 echo '  - Node' >> $filepath
-echo 'featuredImage: null' >> $filepath
+echo 'featuredImage:' >> $filepath
 echo '---' >> $filepath

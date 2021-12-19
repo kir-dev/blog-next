@@ -8,7 +8,5 @@ interests:
   - Node
   - Rails
   - DevOps
-featuredImage: ../images/avatars/triszt4n/normal.jpg
-funnyImage: ../images/avatars/triszt4n/funny.jpg
 active: true
 ---

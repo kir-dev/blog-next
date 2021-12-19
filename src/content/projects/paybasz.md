@@ -10,5 +10,5 @@ techs:
   - Spring Boot
   - Arduino
   - C/C++
-featuredImage: null
+featuredImage:
 ---

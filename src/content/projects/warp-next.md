@@ -1,7 +1,7 @@
 ---
 layout: project
-title: 'Warp drive'
-lead: 'Egyszerű fájlhosztoláshoz használt alkalmazás'
+title: Warp drive
+lead: Egyszerű fájlhosztoláshoz használt alkalmazás
 github: https://github.com/kir-dev/warp-next
 website: https://warp.kir-dev.sch.bme.hu/
 status:

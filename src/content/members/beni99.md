@@ -8,7 +8,5 @@ interests:
   - Rails
   - TypeScript
   - Kotlin
-featuredImage: ../images/avatars/beni99/normal.jpg
-funnyImage: ../images/avatars/beni99/funny.jpg
 active: true
 ---

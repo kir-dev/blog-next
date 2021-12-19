@@ -30,6 +30,6 @@ echo 'lead: ' >> $filepath
 echo 'tags: ' >> $filepath
 echo '  - hírek' >> $filepath
 echo 'comment: true' >> $filepath
-echo 'featuredImage: ' >> $filepath
+echo 'featuredImage:' >> $filepath
 echo 'ogImage: ' >> $filepath
 echo '---' >> $filepath

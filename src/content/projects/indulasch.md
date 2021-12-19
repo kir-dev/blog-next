@@ -1,7 +1,7 @@
 ---
 layout: project
 title: InduláSCH
-lead: null
+lead:
 github: https://github.com/kir-dev/indulasch
 website: https://indula.sch.bme.hu/
 status:
@@ -10,5 +10,5 @@ status:
 techs:
   - Node
   - React
-featuredImage: null
+featuredImage:
 ---

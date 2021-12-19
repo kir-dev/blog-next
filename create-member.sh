@@ -28,6 +28,6 @@ echo 'position: '$position >> $filepath
 echo 'joinDate: '$joindate >> $filepath
 echo 'interests: ' >> $filepath
 echo '  - Node' >> $filepath
-echo 'featuredImage: ' >> $filepath
+echo 'featuredImage:' >> $filepath
 echo 'active: true' >> $filepath
 echo '---' >> $filepath

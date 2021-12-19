@@ -11,7 +11,7 @@ techs:
   - Node
   - Typescript
   - React
-featuredImage: null
+featuredImage:
 ---
 
 # Mi a projekt célja?
