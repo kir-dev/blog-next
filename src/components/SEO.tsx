@@ -1,3 +1,4 @@
+import { useLocation } from '@reach/router'
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import { Helmet, HelmetProps } from 'react-helmet'
@@ -79,7 +80,7 @@ const SEO: React.FC<SEOProps> = ({
     }
   `)
 
-  const { pathname } = window.location
+  const { pathname } = useLocation()
 
   const {
     siteUrl,
