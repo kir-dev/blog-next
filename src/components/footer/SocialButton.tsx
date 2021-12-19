@@ -13,6 +13,7 @@ const SocialButton: React.FC<SocialButtonProps> = ({ children, label, href, size
     <Button
       bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
       rounded="full"
+      p={0}
       w={size}
       h={size}
       cursor="pointer"

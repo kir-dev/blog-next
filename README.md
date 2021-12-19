@@ -129,4 +129,4 @@ All other directories and files are MIT Licensed.
 
 ## Sponsors
 
-<a href="https://vercel.com?utm_source=kir-dev&utm_campaign=oss"><img src="src/assets/images/powered-by-vercel.svg" height="46" /></a>
+<a href="https://vercel.com?utm_source=kir-dev&utm_campaign=oss"><img src="src/assets/svgs/powered-by-vercel.svg" height="46" /></a>

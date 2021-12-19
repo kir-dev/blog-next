@@ -20,11 +20,14 @@ filepath=$DIR/$filename
 touch $filepath
 echo '---' >> $filepath
 echo 'layout: project' >> $filepath
-echo 'title: "'$title'"' >> $filepath
-echo 'lead: ""' >> $filepath
+echo 'title: '$title >> $filepath
+echo 'lead: null' >> $filepath
 echo 'github: https://github.com/kir-dev/'$urlpath >> $filepath
 echo 'website: https://< enter >.sch.bme.hu/' >> $filepath
-echo 'status: { label: "Aktív", color: "green" }' >> $filepath
-echo 'techs: []' >> $filepath
+echo 'status:' >> $filepath
+echo '  label: Aktív' >> $filepath
+echo '  color: green' >> $filepath
+echo 'techs:' >> $filepath
+echo '  - Node' >> $filepath
 echo 'featuredImage: null' >> $filepath
 echo '---' >> $filepath

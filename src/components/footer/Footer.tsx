@@ -1,10 +1,26 @@
-import { Box, Container, Flex, HStack, Link, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, Container, Flex, HStack, Image, Link, Text, useColorModeValue } from '@chakra-ui/react'
 import React from 'react'
 import { FaAt, FaFacebook, FaGithub, FaYoutube } from 'react-icons/fa'
-import KirdevLogo from '~assets/images/kirdev.svg'
-import VercelLogo from '~assets/images/powered-by-vercel.svg'
 import { FACEBOOK_PAGE_URL, GITHUB_ORG_URL, PUBLIC_EMAIL, YOUTUBE_CHANNEL_URL } from '~utils/configurations'
 import SocialButton from './SocialButton'
+
+const socialButtons = [
+  {
+    href: GITHUB_ORG_URL,
+    label: 'GitHub',
+    icon: <FaGithub size="2rem" />
+  },
+  {
+    href: YOUTUBE_CHANNEL_URL,
+    label: 'YouTube',
+    icon: <FaYoutube size="2rem" />
+  },
+  {
+    href: FACEBOOK_PAGE_URL,
+    label: 'Facebook',
+    icon: <FaFacebook size="2rem" />
+  }
+]
 
 const Footer: React.FC = () => (
   <Box zIndex={1}>
@@ -13,15 +29,15 @@ const Footer: React.FC = () => (
         <Flex flexDirection={{ base: 'column-reverse', sm: 'row' }}>
           <Flex flex={1} justifyContent={{ base: 'center', sm: 'flex-start' }}>
             <HStack>
-              <KirdevLogo height="3rem" style={{ fill: useColorModeValue('black', 'white') }} />
+              <Image fill={useColorModeValue('black', 'white')} height="3rem" src="/svg/kirdev.svg" alt="Kir-Dev Logo full" />
               <Link href="https://vercel.com?utm_source=kir-dev&utm_campaign=oss">
-                <VercelLogo height="1.75rem" />
+                <Image height="1.75rem" src="/svg/powered-by-vercel.svg" alt="Vercel Logo" />
               </Link>
             </HStack>
           </Flex>
 
           <Box py={{ base: 4, sm: 0 }} flex={1} textAlign="center">
-            <FaAt style={{ display: 'inline' }} />
+            <FaAt style={{ display: 'inline' }} size="0.75rem" />
             &nbsp;
             <span>{PUBLIC_EMAIL}</span>
             <Text>&copy; 2021 Kir-Dev</Text>
@@ -29,15 +45,11 @@ const Footer: React.FC = () => (
 
           <Flex flex={1} textAlign="right" justifyContent={{ base: 'center', sm: 'flex-end' }}>
             <HStack spacing={3}>
-              <SocialButton label="GitHub" href={GITHUB_ORG_URL} size={12}>
-                <FaGithub />
-              </SocialButton>
-              <SocialButton label="YouTube" href={YOUTUBE_CHANNEL_URL} size={12}>
-                <FaYoutube />
-              </SocialButton>
-              <SocialButton label="Facebook" href={FACEBOOK_PAGE_URL} size={12}>
-                <FaFacebook />
-              </SocialButton>
+              {socialButtons.map((btn) => (
+                <SocialButton key={btn.label} label={btn.label} href={btn.href} size="3rem">
+                  {btn.icon}
+                </SocialButton>
+              ))}
             </HStack>
           </Flex>
         </Flex>

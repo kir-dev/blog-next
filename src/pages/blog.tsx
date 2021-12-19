@@ -14,9 +14,9 @@ export interface BlogPostsProps {
       nodes: {
         fields: {
           slug: string
-          readingTime: {
-            minutes: number
-          }
+        }
+        wordCount: {
+          words: number
         }
         frontmatter: PostProps
       }[]
@@ -64,9 +64,9 @@ export const query = graphql`
       nodes {
         fields {
           slug
-          readingTime {
-            minutes
-          }
+        }
+        wordCount {
+          words
         }
         frontmatter {
           title

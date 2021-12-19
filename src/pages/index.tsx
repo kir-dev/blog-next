@@ -5,6 +5,7 @@ import {
   Grid,
   Heading,
   HStack,
+  Image,
   Link as ChakraLink,
   Spacer,
   Text,
@@ -14,7 +15,6 @@ import {
 import { graphql, Link } from 'gatsby'
 import * as React from 'react'
 import { FaFacebook, FaGithub, FaYoutube } from 'react-icons/fa'
-import Logo from '~assets/images/kirdev-simplified.svg'
 import BlogFullCard from '~components/blog-components/BlogFullCard'
 import Container from '~components/Container'
 import InfoBox from '~components/indexpage-components/InfoBox'
@@ -33,9 +33,9 @@ interface IndexPageProps {
         {
           fields: {
             slug: string
-            readingTime: {
-              minutes: number
-            }
+          }
+          wordCount: {
+            words: number
           }
           frontmatter: PostProps
         }
@@ -61,7 +61,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
       <IndexLayout>
         <Box>
           <Box
-            bgImage="url('../../index-bg.jpeg')"
+            bgImage="url(/index-bg.jpeg)"
             bgPos="center"
             bgRepeat="no-repeat"
             bgSize="cover"
@@ -124,13 +124,13 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
                     </Flex>
                   </Flex>
                 </Flex>
-                <Logo
-                  style={{
-                    marginTop: useBreakpointValue([0, '-14rem', '-18rem', '-10rem']),
-                    height: useBreakpointValue([0, '14rem', '18rem', '20rem']),
-                    fill: useColorModeValue('black', '#EBECEC'),
-                    marginLeft: 'auto'
-                  }}
+                <Image
+                  marginTop={useBreakpointValue([0, '-14rem', '-18rem', '-10rem'])}
+                  height={useBreakpointValue([0, '14rem', '18rem', '20rem'])}
+                  fill={useColorModeValue('black', '#EBECEC')}
+                  marginLeft="auto"
+                  src="/svg/kirdev-simplified.svg"
+                  alt="Kir-Dev logo"
                 />
               </Box>
             </Container>
@@ -202,9 +202,9 @@ export const query = graphql`
       nodes {
         fields {
           slug
-          readingTime {
-            minutes
-          }
+        }
+        wordCount {
+          words
         }
         frontmatter {
           title

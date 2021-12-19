@@ -1,5 +1,5 @@
 import { CheckIcon, MoonIcon, WarningIcon } from '@chakra-ui/icons'
-import { Box, Flex, HStack, Image, Link as ChakraLink, Tag, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, Flex, Heading, HStack, Image, Link as ChakraLink, Tag, Text, useColorModeValue } from '@chakra-ui/react'
 import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React from 'react'
@@ -53,9 +53,9 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
       <Flex flex={1} h="fit-content" py={4} px={4} direction="column">
         <Box flex={1}>
           <Flex justifyContent="space-between" direction={{ base: 'column-reverse', md: 'row' }}>
-            <Text as={Link} fontSize="2xl" fontWeight="semibold" lineHeight="tight" to={project.fields.slug}>
+            <Heading as={Link} fontSize="2xl" fontWeight="400" lineHeight="tight" to={project.fields.slug}>
               {project.frontmatter.title}
-            </Text>
+            </Heading>
             <HStack justifyContent="flex-end" fontSize="xs" color="gray.600">
               <Text color={useColorModeValue('gray.700', 'gray.400')}>{project.frontmatter.status.label}</Text>
               {statusIcon}

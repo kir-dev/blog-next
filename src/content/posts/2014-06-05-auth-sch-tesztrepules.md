@@ -2,7 +2,7 @@
 layout: post
 author: tmichel
 date: 2014-06-05 00:56:00
-title: 'auth.sch tesztrepülés'
+title: auth.sch tesztrepülés
 comment: true
 ---
 

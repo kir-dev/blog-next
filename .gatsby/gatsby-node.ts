@@ -86,6 +86,7 @@ export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] 
   const typeDefs = `
     type MarkdownRemarkFrontmatter @infer {
       featuredImage: File
+      funnyImage: File
       ogImage: File
     }
   `

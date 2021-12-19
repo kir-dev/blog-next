@@ -9,4 +9,5 @@ export interface CourseProps {
   sessions: Array<ISession>
   lecturer: string
   active: boolean
+  description: string
 }

@@ -2,7 +2,7 @@
 layout: post
 author: tmichel
 date: 2014-07-28 14:30:00
-title: 'PÉK fejlesztés várhatóan csúszik némileg'
+title: PÉK fejlesztés várhatóan csúszik némileg
 comment: true
 ---
 

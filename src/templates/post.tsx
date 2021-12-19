@@ -9,6 +9,7 @@ import Container from '~components/Container'
 import Header from '~components/Header'
 import SEO from '~components/SEO'
 import { PostProps } from '~types/post.props'
+import { readTimeInMinutes } from '~utils/commonFunctions'
 import IndexLayout from '../layouts'
 
 interface PostTemplateProps {
@@ -17,10 +18,8 @@ interface PostTemplateProps {
       html: string
       excerpt: string
       frontmatter: PostProps
-      fields: {
-        readingTime: {
-          minutes: number
-        }
+      wordCount: {
+        words: number
       }
     }
   }
@@ -58,7 +57,11 @@ const PostTemplate: React.FC<PostTemplateProps> = ({ data }) => {
                 <Flex flex={{ base: 2, md: 4 }} direction="column" justifyContent="center" mt={{ base: 3, sm: 0 }} pl={{ base: 0, sm: 3 }}>
                   <Heading as="h1">{post.frontmatter.title}</Heading>
                   <Flex justifyContent="space-between" wrap="wrap-reverse">
-                    <BlogAuthor hasLongDate name={post.frontmatter.author} date={new Date(post.frontmatter.date)} />
+                    <BlogAuthor
+                      hasLongDate={useBreakpointValue({ base: false, md: true })}
+                      name={post.frontmatter.author}
+                      date={new Date(post.frontmatter.date)}
+                    />
                     <HStack
                       ml={4}
                       mb={2}
@@ -70,7 +73,7 @@ const PostTemplate: React.FC<PostTemplateProps> = ({ data }) => {
                       textColor={useColorModeValue('gray.600', 'gray.400')}
                     >
                       <FaClock />
-                      <Text>{Math.ceil(post.fields.readingTime.minutes)}&nbsp;perc</Text>
+                      <Text>{readTimeInMinutes(post.wordCount.words)}&nbsp;perc</Text>
                     </HStack>
                   </Flex>
                 </Flex>
@@ -133,10 +136,8 @@ export const query = graphql`
           }
         }
       }
-      fields {
-        readingTime {
-          minutes
-        }
+      wordCount {
+        words
       }
     }
   }

@@ -2,7 +2,7 @@
 layout: post
 author: snapdragon
 date: 2014-04-06 20:18:40
-title: 'A kliens oldali teljesítmény számít'
+title: A kliens oldali teljesítmény számít
 comment: true
 ---
 

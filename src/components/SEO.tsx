@@ -1,8 +1,8 @@
-import { useLocation } from '@reach/router'
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import { Helmet, HelmetProps } from 'react-helmet'
 
+/* eslint-disable react/require-default-props */
 type SEOProps = {
   lang?: string
   title?: string
@@ -15,6 +15,7 @@ type SEOProps = {
   meta?: { name: string; content: string }[]
   links?: { rel: string; href: string }[]
 } & HelmetProps
+/* eslint-enable react/require-default-props */
 
 type SiteMetadataProps = {
   site: {
@@ -78,7 +79,7 @@ const SEO: React.FC<SEOProps> = ({
     }
   `)
 
-  const { pathname } = useLocation()
+  const { pathname } = window.location
 
   const {
     siteUrl,

@@ -1,11 +1,16 @@
 ---
 layout: project
-title: 'Ftsrg blog'
-lead: 'Az ftsrg kutatócsoport statikusan generált portfolió weboldala'
+title: Ftsrg blog
+lead: Az ftsrg kutatócsoport statikusan generált portfolió weboldala
 github: https://github.com/kir-dev/ftsrg-next
 website: https://ftsrg.mit.bme.hu/
-status: { label: 'Üzemel', color: 'green' }
-techs: ['React', 'Gatsby', 'I18next']
+status:
+  label: Üzemel
+  color: green
+techs:
+  - Gatsby
+  - I18Next
+  - React
 featuredImage: ../images/projects/ftsrg-next.png
 ---
 

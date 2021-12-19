@@ -1,16 +1,10 @@
-import { Box, Divider, Flex, HStack, Text } from '@chakra-ui/react'
+import { Box, Divider, Flex, Heading, HStack, Text } from '@chakra-ui/react'
 import React from 'react'
 import { FaChalkboardTeacher, FaClock, FaMapMarkerAlt } from 'react-icons/fa'
 import { CourseProps, ISession } from '~types/course.props'
 
 interface CourseCardProps {
-  course: {
-    html: string
-    fields: {
-      slug: string
-    }
-    frontmatter: CourseProps
-  }
+  course: CourseProps
 }
 
 const getSessionString = (session: ISession): string => {
@@ -33,11 +27,11 @@ const getSessionString = (session: ISession): string => {
 const CourseCard: React.FC<CourseCardProps> = ({ course }) => (
   <Box borderWidth="1px" rounded="lg" shadow="lg">
     <Box pt={4} pb={4} px={4}>
-      <Text fontWeight="light" fontSize="2xl">
-        {course.frontmatter.title}
-      </Text>
+      <Heading fontWeight="400" fontSize="2xl">
+        {course.title}
+      </Heading>
       <Box mt={6}>
-        {course.frontmatter.sessions.map((session) => (
+        {course.sessions.map((session) => (
           <Flex key={session.startDateTime} mt={2} justifyContent="space-between" alignItems="center" flexWrap="wrap">
             <HStack pr={4}>
               <FaClock />
@@ -50,16 +44,15 @@ const CourseCard: React.FC<CourseCardProps> = ({ course }) => (
             <Divider />
           </Flex>
         ))}
-        {course.frontmatter.lecturer && (
+        {course.lecturer && (
           <HStack mt={6}>
             <FaChalkboardTeacher />
-            <Text>{course.frontmatter.lecturer}</Text>
+            <Text>{course.lecturer}</Text>
           </HStack>
         )}
       </Box>
       <Box mt={2} fontSize="md">
-        {/* eslint-disable-next-line react/no-danger */}
-        <div dangerouslySetInnerHTML={{ __html: course.html }} />
+        {course.description}
       </Box>
     </Box>
   </Box>
