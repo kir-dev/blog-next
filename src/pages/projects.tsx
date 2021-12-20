@@ -10,7 +10,15 @@ import IndexLayout from '../layouts'
 
 export interface ProjectsProps {
   data: {
-    allMarkdownRemark: {
+    activeProjects: {
+      nodes: {
+        fields: {
+          slug: string
+        }
+        frontmatter: ProjectProps
+      }[]
+    }
+    oldProjects: {
       nodes: {
         fields: {
           slug: string
@@ -41,7 +49,10 @@ const Projects: React.FC<ProjectsProps> = ({ data }) => (
         </Header>
         <Container>
           <Grid templateColumns={`repeat(${useBreakpointValue({ base: 1, sm: 2 })}, 1fr)`} gap={8}>
-            {data.allMarkdownRemark.nodes.map((project) => (
+            {data.activeProjects.nodes.map((project) => (
+              <ProjectPreview key={project.fields.slug} project={project} />
+            ))}
+            {data.oldProjects.nodes.map((project) => (
               <ProjectPreview key={project.fields.slug} project={project} />
             ))}
           </Grid>
@@ -55,7 +66,35 @@ export default Projects
 
 export const query = graphql`
   query Projects {
-    allMarkdownRemark(filter: { fields: { layout: { eq: "project" } } }, sort: { fields: frontmatter___title, order: ASC }) {
+    activeProjects: allMarkdownRemark(
+      filter: { fields: { layout: { eq: "project" } }, frontmatter: { status: { color: { in: "green" } } } }
+      sort: { fields: frontmatter___title, order: ASC }
+    ) {
+      nodes {
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          lead
+          github
+          status {
+            label
+            color
+          }
+          techs
+          featuredImage {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+            }
+          }
+        }
+      }
+    }
+    oldProjects: allMarkdownRemark(
+      filter: { fields: { layout: { eq: "project" } }, frontmatter: { status: { color: { nin: "green" } } } }
+      sort: { fields: frontmatter___title, order: ASC }
+    ) {
       nodes {
         fields {
           slug
