@@ -59,7 +59,12 @@ export const query = graphql`
         joinDate
         featuredImage {
           childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+            gatsbyImageData(placeholder: BLURRED, formats: [WEBP])
+          }
+        }
+        funnyImage {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED, formats: [WEBP])
           }
         }
         active

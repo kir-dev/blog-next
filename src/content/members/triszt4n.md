@@ -9,4 +9,6 @@ interests:
   - Rails
   - DevOps
 active: true
+featuredImage: ../images/avatars/triszt4n/normal.jpg
+funnyImage: ../images/avatars/triszt4n/funny.jpg
 ---

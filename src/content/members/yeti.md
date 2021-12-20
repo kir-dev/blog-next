@@ -10,4 +10,6 @@ interests:
   - React
   - TypeScript
 active: false
+featuredImage: ../images/avatars/yeti/normal.jpg
+funnyImage: ../images/avatars/yeti/funny.jpg
 ---
