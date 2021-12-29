@@ -6650,10 +6650,10 @@ gatsby-plugin-ts-config@2.1.3:
     tslog "^3.2.0"
     type-fest "^0.12.0"
 
-gatsby-plugin-tsconfig-paths@1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-tsconfig-paths/-/gatsby-plugin-tsconfig-paths-1.0.4.tgz#e6c93ee49ca159056f05c8b4423f64e8d7be0c80"
-  integrity sha512-8yA3H4GphiUY/6Z4p76dtS2+4gf+0Idln1iQDpOh8QmsVLhYTebIvemhDOWThp+MdC9hLVl7zRSwZKNAmwpq1g==
+gatsby-plugin-tsconfig-paths@1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-tsconfig-paths/-/gatsby-plugin-tsconfig-paths-1.0.5.tgz#ee52756545874b954d44a7a29d4e33126f44f4c5"
+  integrity sha512-L+/XRv/dbUQLqak5BkDDxxAw/9bl1u3FFs1qgcqaTQN8BXmphdKno/G63uuxu+qs2udtXGhLOgWRYQDI4G3Jdw==
   dependencies:
     tsconfig-paths-webpack-plugin "^3.2.0"
 
