@@ -41,7 +41,7 @@ const Footer: React.FC = () => (
             <FaAt style={{ display: 'inline' }} size="0.75rem" />
             &nbsp;
             <span>{PUBLIC_EMAIL}</span>
-            <Text>&copy; 2021 Kir-Dev</Text>
+            <Text>&copy; {new Date().getFullYear()} Kir-Dev</Text>
           </Box>
 
           <Flex flex={1} textAlign="right" justifyContent={{ base: 'center', sm: 'flex-end' }}>
