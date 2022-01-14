@@ -26,7 +26,7 @@ A klasszikus esetben tényleg a fogadó objektumra mutat.
 
 ```javascript
 var obj = {
-  myMethod: function() {
+  myMethod: function () {
     console.log(this)
   }
 }
@@ -39,7 +39,7 @@ Itt egyértelmű, hogy az `obj` változóban tárolt objektumra mutat a `this`, 
 A másik sokat használt eset, amikor a nagyvilágban van egy függvényem és azt hívom meg.
 
 ```javascript
-var f = function() {
+var f = function () {
   console.log(this)
 }
 
@@ -56,11 +56,11 @@ Az alap koncepciót lehet kicsit bonyolítani. Gondoljunk csak a következő ese
 
 ```javascript
 var obj = {
-  method: function(f) {
+  method: function (f) {
     f()
   },
-  otherMethod: function() {
-    var f = function() {
+  otherMethod: function () {
+    var f = function () {
       console.log(this)
     }
 
@@ -68,13 +68,13 @@ var obj = {
   }
 }
 
-obj.method(function() {
+obj.method(function () {
   console.log(this)
 }) // => Window {...}
 obj.otherMethod() // => Window {...}
 
 var otherObj = {
-  f: function() {
+  f: function () {
     console.log(this)
   }
 }
@@ -87,7 +87,7 @@ A fenti példa nagyon sarkított, és itt valójában mindegy, hogy mi a `this` 
 Erre nyújt megoldást a `call` és az `apply`. Ugyanaz a feladatuk, csak a szignatúrájuk más. Mindkét metódussal a `this` értékét lehet beállítani egy-egy függvényhívás esetén.
 
 ```javascript
-var f = function(a, b) {
+var f = function (a, b) {
   console.log(this, a, b)
 }
 
@@ -121,8 +121,8 @@ boundF('hello', 'world')
 A `bind` nem alkalmaz fekete mágiát a háttérben. Nagyjából a következő kódrészlettel lehetne is szimulálni:
 
 ```javascript
-var bind2 = function(f, context) {
-  return function() {
+var bind2 = function (f, context) {
+  return function () {
     f.apply(context, arguments)
   }
 }

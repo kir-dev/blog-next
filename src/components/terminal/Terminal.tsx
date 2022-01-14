@@ -1,4 +1,5 @@
-import { Box, Flex, Link, useColorModeValue } from '@chakra-ui/react'
+import { Box, Flex, Link } from '@chakra-ui/react'
+import { useColorModeValue } from '@chakra-ui/system'
 import React, { useState } from 'react'
 import { RICKROLL_URL } from '~utils/configurations'
 import { Frame, Keyframes } from './react-keyframes'

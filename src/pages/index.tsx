@@ -1,16 +1,5 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Grid,
-  Heading,
-  HStack,
-  Link as ChakraLink,
-  Spacer,
-  Text,
-  useBreakpointValue,
-  useColorModeValue
-} from '@chakra-ui/react'
+import { Box, Button, Flex, Grid, Heading, HStack, Link as ChakraLink, Spacer, Text, useBreakpointValue } from '@chakra-ui/react'
+import { useColorModeValue } from '@chakra-ui/system'
 import { graphql, Link } from 'gatsby'
 import * as React from 'react'
 import { FaFacebook, FaGithub, FaYoutube } from 'react-icons/fa'

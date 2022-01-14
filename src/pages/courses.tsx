@@ -1,16 +1,5 @@
-import {
-  Box,
-  Button,
-  chakra,
-  Flex,
-  Grid,
-  Heading,
-  Image,
-  Link as ChakraLink,
-  Text,
-  useBreakpointValue,
-  useColorModeValue
-} from '@chakra-ui/react'
+import { Box, Button, Flex, Grid, Heading, Image, Link as ChakraLink, Text, useBreakpointValue } from '@chakra-ui/react'
+import { chakra, useColorModeValue } from '@chakra-ui/system'
 import { graphql, Link } from 'gatsby'
 import * as React from 'react'
 import Container from '~components/Container'

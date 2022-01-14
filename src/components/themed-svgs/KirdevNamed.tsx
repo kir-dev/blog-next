@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import { useColorModeValue } from '@chakra-ui/react'
+import { useColorModeValue } from '@chakra-ui/system'
 import * as React from 'react'
 
 type LogoProps = {

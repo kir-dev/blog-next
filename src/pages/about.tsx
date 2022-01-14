@@ -1,4 +1,5 @@
-import { Box, chakra, Flex, Grid, Heading, HStack, Image, Link, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Flex, Grid, Heading, HStack, Image, Link, Text, useBreakpointValue } from '@chakra-ui/react'
+import { chakra } from '@chakra-ui/system'
 import { Link as GatsbyLink } from 'gatsby'
 import * as React from 'react'
 import { FaFacebook, FaGithub, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'

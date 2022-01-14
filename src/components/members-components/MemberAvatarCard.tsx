@@ -1,4 +1,5 @@
-import { Badge, Box, chakra, Flex, Text } from '@chakra-ui/react'
+import { Badge, Box, Flex, Text } from '@chakra-ui/react'
+import { chakra } from '@chakra-ui/system'
 import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React, { useState } from 'react'

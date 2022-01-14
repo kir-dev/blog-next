@@ -1,4 +1,5 @@
-import { Box, Container, Flex, HStack, Image, Link, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, Container, Flex, HStack, Image, Link, Text } from '@chakra-ui/react'
+import { useColorModeValue } from '@chakra-ui/system'
 import React from 'react'
 import { FaAt, FaFacebook, FaGithub, FaYoutube } from 'react-icons/fa'
 import KirdevOriginal from '~components/themed-svgs/KirdevOriginal'

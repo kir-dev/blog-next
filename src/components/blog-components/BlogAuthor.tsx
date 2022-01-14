@@ -1,4 +1,5 @@
-import { Box, HStack, Image, Link, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, HStack, Image, Link, Text } from '@chakra-ui/react'
+import { useColorModeValue } from '@chakra-ui/system'
 import React from 'react'
 import { PEK_URL } from '~utils/configurations'
 

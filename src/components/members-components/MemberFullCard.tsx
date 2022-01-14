@@ -1,4 +1,5 @@
-import { Badge, Box, chakra, Flex, Heading, Link, Text, useColorModeValue } from '@chakra-ui/react'
+import { Badge, Box, Flex, Heading, Link, Text } from '@chakra-ui/react'
+import { chakra, useColorModeValue } from '@chakra-ui/system'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React, { useState } from 'react'
 import { FaBriefcase, FaCalendar, FaHeart, FaUserCircle } from 'react-icons/fa'

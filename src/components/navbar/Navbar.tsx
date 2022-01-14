@@ -1,5 +1,6 @@
 import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons'
-import { Box, Collapse, Flex, IconButton, useColorMode, useColorModeValue, useDisclosure } from '@chakra-ui/react'
+import { Box, Collapse, Flex, IconButton, useDisclosure } from '@chakra-ui/react'
+import { useColorMode, useColorModeValue } from '@chakra-ui/system'
 import { Link } from 'gatsby'
 import * as React from 'react'
 import KirdevNamed from '~components/themed-svgs/KirdevNamed'

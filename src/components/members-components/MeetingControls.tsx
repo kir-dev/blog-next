@@ -1,4 +1,5 @@
-import { Box, Grid, HStack, Text, useBreakpointValue, useColorModeValue } from '@chakra-ui/react'
+import { Box, Grid, HStack, Text, useBreakpointValue } from '@chakra-ui/react'
+import { useColorModeValue } from '@chakra-ui/system'
 import React from 'react'
 import { FaMicrophone, FaPhone, FaVideo } from 'react-icons/fa'
 

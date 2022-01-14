@@ -1,4 +1,4 @@
-import { Button, Link, VisuallyHidden } from '@chakra-ui/react'
+import { Button, Link } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
 import React from 'react'
 
@@ -26,8 +26,8 @@ const SocialButton: React.FC<SocialButtonProps> = ({ children, label, href, size
       _hover={{
         bg: 'orange.500'
       }}
+      title={label}
     >
-      <VisuallyHidden>{label}</VisuallyHidden>
       {children}
     </Button>
   )

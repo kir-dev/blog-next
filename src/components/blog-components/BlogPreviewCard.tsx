@@ -1,4 +1,5 @@
-import { Box, chakra, Flex, Heading, HStack, Image, Tag, useColorModeValue } from '@chakra-ui/react'
+import { Box, Flex, Heading, HStack, Image, Tag } from '@chakra-ui/react'
+import { chakra, useColorModeValue } from '@chakra-ui/system'
 import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React from 'react'

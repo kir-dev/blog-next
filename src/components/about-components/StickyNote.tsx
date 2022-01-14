@@ -1,4 +1,5 @@
-import { Box, theme, useColorModeValue } from '@chakra-ui/react'
+import { Box, theme } from '@chakra-ui/react'
+import { useColorModeValue } from '@chakra-ui/system'
 import React from 'react'
 
 const StickyNote: React.FC = ({ children }) => (

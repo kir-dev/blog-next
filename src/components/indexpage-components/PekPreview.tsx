@@ -1,5 +1,6 @@
 /* eslint-disable react/destructuring-assignment */
-import { Box, Flex, Heading, HStack, Image, Link as ChakraLink, Tag, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, Flex, Heading, HStack, Image, Link as ChakraLink, Tag, Text } from '@chakra-ui/react'
+import { useColorModeValue } from '@chakra-ui/system'
 import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React from 'react'
