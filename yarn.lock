@@ -6609,10 +6609,10 @@ gatsby-remark-table-of-contents@1.0.0:
     js-yaml "^3.14.1"
     mdast-util-toc "^5.1.0"
 
-gatsby-remark-vscode@3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-vscode/-/gatsby-remark-vscode-3.3.0.tgz#0ef00359c14183152a02771ab3d9ff954dff4a3f"
-  integrity sha512-55ucO1KryOwz9UlvQzsdNC6mI8wiWqSrE8pkV/fvHP9Q4NBttOGShU7pLuIUiWlSrzBFGWwtZSvVRTnklbPeCw==
+gatsby-remark-vscode@3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-vscode/-/gatsby-remark-vscode-3.3.1.tgz#0a42583d3f7ccc043ddef9c5c4cfb0a677a190cd"
+  integrity sha512-KUCDU8KauLikURYuGyAZ0aLhHhd/BP2XwzP/WP0wkgyKjh650PwewQghwpD9g2wVkN+fThFJDs4G64K4fduDGQ==
   dependencies:
     decompress "^4.2.0"
     json5 "^2.1.1"
