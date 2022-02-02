@@ -10,7 +10,7 @@ tags:
   - tanfolyam
 comment: true
 featuredImage: ../images/posts/rails_feature.png
-ogImage: ../images/posts/rails_og.png
+ogImage: ../images/posts/rails_og.jpg
 ---
 
 ## Tartalomjegyzék
