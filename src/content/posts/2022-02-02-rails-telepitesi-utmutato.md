@@ -23,7 +23,7 @@ ogImage: ../images/posts/rails_og.jpg
 
 Ez a kis útmutató legfőképpen a tavaszi tanfolyamon résztvevőknek szól, de bárki más is olvassa nyugodt szívvel.
 
-A Ruby on Rails egy nagyon népszerű webes keretrendszer, amivel érdemes megismerkednie akár annak is, aki nem feltétlen a webes világban akar elhejezkedni. Sajnos a legelső akadály sokszor elég nagy szokott lenni, ami nem más mint a keretrendszer beüzemelése. Az olyan nyelvekkel ellentétben mint például a NodeJS, ahol az LTS verzió feltepítéséve után már neki is lehet állni, itt elég sok buktatóba bele lehet esni, főleg ha valaki Windows rendszeren szeretne fejleszteni. Mivel a tanfolyamunk szerves része, hogy közös kódolások alkalmával mindenki kipróbálja a fejlesztés élményét, ezért ebben a kis cikkben leírom, hogyan lehet megugrani ezt az első akadályt. A telepítés menetét megmutatom **Windows 10** és **Ubuntu 20.04** operációs rendszereken is.
+A Ruby on Rails egy nagyon népszerű webes keretrendszer, amivel érdemes megismerkednie akár annak is, aki nem feltétlen a webes világban akar elhelyezkedni. Sajnos a legelső akadály sokszor elég nagy szokott lenni, ami nem más mint a keretrendszer beüzemelése. Az olyan runtimeokkal ellentétben, mint például a NodeJS, ahol az LTS verzió feltepítéséve után már neki is lehet állni, itt elég sok buktatóba bele lehet futni, főleg ha valaki Windows rendszeren szeretne fejleszteni. Mivel a tanfolyamunk szerves része, hogy közös kódolások alkalmával mindenki kipróbálja a fejlesztés élményét, ezért ebben a kis cikkben leírom, hogyan lehet megugrani ezt az első akadályt. A telepítés menetét megmutatom **Windows 10** és **Ubuntu 20.04** operációs rendszereken is.
 
 ## Ruby telepítése
 
@@ -31,11 +31,11 @@ Első lépésként a Ruby-t kell felraknunk, ami Windows és Linux rendszereken 
 
 ### Windows
 
-Bár van néhány dolog, ami windows rendszereken nem igen, vagy csak nehézkesen működik, amikor rubyval dolgozunk, a tanfolyam alkalmakon csak olyan részeket fogunk érinteni, amiknek mindenképpen működniük kell.
+Bár van néhány dolog, ami Windows rendszereken nem igen, vagy csak nehézkesen működik, amikor Ruby-val dolgozunk, a tanfolyam alkalmakon csak olyan részeket fogunk érinteni, amiknek mindenképpen működniük kell.
 
 #### Szükséges szoftverek
 
-A rails helyes működéséhez szükséged lesz néhány dologra.
+A Rails helyes működéséhez szükséged lesz néhány dologra.
 
 - git: [git-scm.com](https://git-scm.com/download/win)
 - nodeJs (LTS verzió megfelelő): [nodejs.org](https://nodejs.org/en/)
@@ -44,7 +44,7 @@ Ezeknek a telepítésénél maradhatunk az alapértelmezett beállításoknál.
 
 #### Ruby telepítése Windowsra
 
-A telepítőt a [rubyinstaller.org](https://rubyinstaller.org/downloads/) oldalról tudjuk, letölteni. A (_2022 tavaszi_) tanfolyamhoz a **Ruby+Devkit3.0.3-(x64)** verziót töltsük le, majd futtassuk.
+A telepítőt a [rubyinstaller.org](https://rubyinstaller.org/downloads/) oldalról tudjuk letölteni. A (_2022 tavaszi_) tanfolyamhoz a **Ruby+Devkit3.0.3-(x64)** verziót töltsük le, majd futtassuk.
 
 A telepítő varázslóban mindent hagyhatunk az alapértelmezett értéken.
 ![installler](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBidz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2be162588d0e615761c1e5b77a2d2b676dcd05ae/Screenshot%202022-02-02%20195239.png)
@@ -61,16 +61,16 @@ Ha minden jól megy a `ruby -v` parancs kiadása után valami ilyesminek kell me
 
 #### Megjegyzés a WSL-ről
 
-Az interneten sok útmutatót találhat az ember, ahol a WSL (_Windows Subsystem for Linux_) segítségével telepítik fel a keretrendszert. Bár működőképes, de sok olyan mellékhatása van, amit ezen cikk keretében nem tudok mind felsorolni. Ezért aki komolyabban szeretne foglalkozni a Ruby fejlesztéssel, annak ajánlanék inkább egy Linux virtuális gépet , vagy második operációs rendszerként (Dual BOOT) egy linux disztribúciót felrakni.
+Az interneten sok útmutatót találhat az ember, ahol a [WSL](https://docs.microsoft.com/en-us/windows/wsl/) (_Windows Subsystem for Linux_) segítségével telepítik fel a keretrendszert. Bár működőképes, de sok olyan mellékhatása van, amit ezen cikk keretében nem tudok mind felsorolni. Ezért aki komolyabban szeretne foglalkozni a Ruby fejlesztéssel, annak ajánlanék inkább egy [Linux virtuális gépet](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview), vagy második operációs rendszerként ([Dual BOOT](https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/)) egy linux disztribúciót felrakni.
 
 ### Ubuntu
 
-Aki rendszeresen használ linux alapú rendzsereket, annak biztos ismerős lesz a feltelepítés módja, de azok kedvéért, akik esetleg most ismerkednek a rendszerrel, megmutatom, hogy egy frissen telepített rendszerrre hogyan érdemes felvarázsolni a railst.
+Aki rendszeresen használ Linux alapú rendzsereket, annak biztos ismerős lesz a feltelepítés módja, de azok kedvéért, akik esetleg most ismerkednek a rendszerrel, megmutatom, hogy egy frissen telepített rendszerrre hogyan érdemes felvarázsolni a Railst.
 
 #### Szükséges szoftverek
 
 **Figyelem! A Linuxon való telepítéshez sudo jogosultsággal kell rednelkezned**
-A telepítéshez (és amúgy a szoftverfejlesztéshez általában) szükséged lesz git kliensre. És a ruby futtatókörnyezet lefordításához (amit majd autómatikusan a verziókezelő tesz meg) néhány fejlesztői könyvtárra. Ezeket a következő parancsok kiadásával tudod telepíteni.
+A telepítéshez (és amúgy a szoftverfejlesztéshez általában) szükséged lesz git kliensre. És a Ruby futtatókörnyezet lefordításához (amit majd autómatikusan a verziókezelő tesz meg) néhány fejlesztői könyvtárra. Ezeket a következő parancsok kiadásával tudod telepíteni.
 
 ```bash
 sudo apt update
@@ -79,7 +79,7 @@ sudo apt install -y libssl-dev zlib1g-dev sqlite3 libsqlite3-dev git-all
 
 #### Rbenv telepítése
 
-Linux rendszereken a normális telepítési mód helyett érdemes inkább egy verziókezelőt telepíteni, ami minden egyes projekthez a szükséges verziójú ruby-t fogja betölteni, mindezt autómágikusan a háttérben.
+Linux rendszereken a normális telepítési mód helyett érdemes inkább egy verziókezelőt telepíteni, ami minden egyes projekthez a szükséges verziójú Ruby-t fogja betölteni, mindezt autómágikusan a háttérben.
 
 A szoftver telepítése sok féle képpen megtörténhet, érdemes elolvasni az rbenv [github oldalát](https://github.com/rbenv/rbenv), de a készítők szolgáltatnak egy scriptet, ami megoldja számunkra a telepítés összes lépését. Ezt a következő parancsal futtathatjuk.
 
@@ -115,7 +115,7 @@ rbenv install 3.0.3 && rbenv global 3.0.3
 ```
 
 Ez letölti majd feltelepíti a kívánt verziót, majd beállítja globálisan, hogy ez legyen használva.
-Ha minden jól megy a `ruby -v` parancs kiadása után a kiválasztott ruby verziónak kell megjelennie:
+Ha minden jól megy a `ruby -v` parancs kiadása után a kiválasztott Ruby verziónak kell megjelennie:
 
 ```bash
 ruby 3.0.3p157 (2021-11-24 revision 3fb7d2cadc) [x86_64-linux]
@@ -123,22 +123,22 @@ ruby 3.0.3p157 (2021-11-24 revision 3fb7d2cadc) [x86_64-linux]
 
 ### macOS
 
-Amenyiben macOS-re szeretnéd telepíteni a railst, ajánlom ezt a [weblapot](https://gorails.com/setup/osx/) olvasgatásra.
+Amennyiben macOS-re szeretnéd telepíteni a railst, ajánlom ezt a [weblapot](https://gorails.com/setup/osx/) olvasgatásra.
 
 ## Rails telepítése
 
-Ezután a rails keretrendszer telepítése pofon egyszerű, csak ki kell adni parancssorban a megfelelő parancsokat:
+Ezután a Rails keretrendszer telepítése pofon egyszerű, csak ki kell adni parancssorban a megfelelő parancsokat:
 
 ```powershell
 gem install bundler
 gem install rails
 ```
 
-Ez jónáhány csomagot, úgynevezet _gem_-et fog feltelepíteni, és ez eltarthat némi időbe.
+Ez jónéhány csomagot, úgynevezet _gem_-et fog feltelepíteni, és ez eltarthat némi időbe.
 
 ## Hello World applikáció
 
-Most eljött az ideje, hogy kipróbáljuk, hogy minden működik-e. Parancssorba/terminálba navigálj egy olyan mappába, ahol a projekteket tárolni szeretnéd, majd add ki a következő parancsot:
+Most eljött az ideje, hogy kipróbáljuk, hogy minden működik-e. Parancssorban / terminálban navigálj egy olyan mappába, ahol a projekteket tárolni szeretnéd, majd add ki a következő parancsot:
 
 ```bash
 rails new hello_world
@@ -146,7 +146,7 @@ rails new hello_world
 
 Legelső alkalommal ez is eltarthat sokáig, mert szintén fog egy két gem-et installálni.
 
-Mitán lefutott a parancs, navigálj be az elkészített mappába
+Miután lefutott a parancs, navigálj be az elkészített mappába
 
 ```bash
 cd hello_world
@@ -186,4 +186,4 @@ Use Ctrl-C to stop
 
 ## Végszó
 
-Miután fel van telepítve a keretrendszer, már mehet is a fejlesztés. A következő cikkemben bemutatok néhány fejlesztést segítő programot, és két IDE-t, amivel még kénylemesebbé teheted a Ruby on Rails élményt.
+Miután fel van telepítve a keretrendszer, már mehet is a fejlesztés. A következő cikkemben bemutatok néhány fejlesztést segítő programot, és két [IDE](https://www.redhat.com/en/topics/middleware/what-is-ide)-t, amivel még kényelmesebbé teheted a Ruby on Rails élményt.
