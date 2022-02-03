@@ -77,6 +77,15 @@ sudo apt update
 sudo apt install -y libssl-dev zlib1g-dev sqlite3 libsqlite3-dev git-all
 ```
 
+Ezen felűl szükséged lesz még NodeJs és Yarn-ra. A következő parancsokkal lehet feltelepíteni:
+
+```bash
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update
+sudo apt install -y yarn
+```
+
 #### Rbenv telepítése
 
 Linux rendszereken a normális telepítési mód helyett érdemes inkább egy verziókezelőt telepíteni, ami minden egyes projekthez a szükséges verziójú Ruby-t fogja betölteni, mindezt autómágikusan a háttérben.
