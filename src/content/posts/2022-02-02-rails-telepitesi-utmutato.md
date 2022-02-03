@@ -3,7 +3,7 @@ layout: post
 author: beni99
 date: 2022-02-02 21:31:32
 title: Ruby on Rails telepítési útmutató
-lead: Telepítési útmutató a Kir-Dev tavaszi tanfolyamához.
+lead: Telepítési útmutató a Kir-Dev tavaszi tanfolyamához
 tags:
   - tech
   - rails
@@ -55,29 +55,29 @@ A telepítés után előjön az MSYS2 és MINGW telepítője, amit szintén hagy
 Nem kell megijedni, ha warningok és látszólagos hibák jönnek elő, ha a végén van egy zöld success felirat.
 ![install done](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBjUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--80fec14e803267d5be072f2c62dba92f587fdc04/Screenshot%202022-02-02%20195759.png)
 
-Ha minden jól megy a `ruby -v` parancs kiadása után valami ilyesminek kell megjelenni:
+Ha minden jól megy, a `ruby -v` parancs kiadása után valami ilyesminek kell megjelenni:
 
 ![ruby version](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBjZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2a6cb235744dd725d670a6129180682c624310ad/Screenshot%202022-02-02%20200617.png)
 
 #### Megjegyzés a WSL-ről
 
-Az interneten sok útmutatót találhat az ember, ahol a [WSL](https://docs.microsoft.com/en-us/windows/wsl/) (_Windows Subsystem for Linux_) segítségével telepítik fel a keretrendszert. Bár működőképes, de sok olyan mellékhatása van, amit ezen cikk keretében nem tudok mind felsorolni. Ezért aki komolyabban szeretne foglalkozni a Ruby fejlesztéssel, annak ajánlanék inkább egy [Linux virtuális gépet](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview), vagy második operációs rendszerként ([Dual BOOT](https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/)) egy linux disztribúciót felrakni.
+Az interneten sok útmutatót találhat az ember, ahol a [WSL](https://docs.microsoft.com/en-us/windows/wsl/) (_Windows Subsystem for Linux_) segítségével telepítik fel a keretrendszert. Bár működőképes, de sok olyan mellékhatása van, amit ezen cikk keretében nem tudok mind felsorolni. Ezért aki komolyabban szeretne foglalkozni a Ruby fejlesztéssel, annak ajánlanék inkább egy [Linux virtuális gépet](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview), vagy második operációs rendszerként ([Dual BOOT](https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/)) egy Linux disztribúciót felrakni.
 
 ### Ubuntu
 
-Aki rendszeresen használ Linux alapú rendzsereket, annak biztos ismerős lesz a feltelepítés módja, de azok kedvéért, akik esetleg most ismerkednek a rendszerrel, megmutatom, hogy egy frissen telepített rendszerrre hogyan érdemes felvarázsolni a Railst.
+Aki rendszeresen használ Linux alapú rendszereket, annak biztos ismerős lesz a feltelepítés módja, de azok kedvéért, akik esetleg most ismerkednek vele, megmutatom, hogy egy frissen telepített rendszerre hogyan érdemes felvarázsolni a Railst.
 
 #### Szükséges szoftverek
 
-**Figyelem! A Linuxon való telepítéshez sudo jogosultsággal kell rednelkezned**
-A telepítéshez (és amúgy a szoftverfejlesztéshez általában) szükséged lesz git kliensre. És a Ruby futtatókörnyezet lefordításához (amit majd autómatikusan a verziókezelő tesz meg) néhány fejlesztői könyvtárra. Ezeket a következő parancsok kiadásával tudod telepíteni.
+**Figyelem! A Linuxon való telepítéshez sudo jogosultsággal kell rendelkezned.**
+A telepítéshez (és amúgy a szoftverfejlesztéshez általában) szükséged lesz git kliensre. És a Ruby futtatókörnyezet lefordításához (amit majd automatikusan a verziókezelő tesz meg) néhány fejlesztői könyvtárra. Ezeket a következő parancsok kiadásával tudod telepíteni.
 
 ```bash
 sudo apt update
 sudo apt install -y libssl-dev zlib1g-dev sqlite3 libsqlite3-dev git-all
 ```
 
-Ezen felűl szükséged lesz még NodeJs és Yarn-ra. A következő parancsokkal lehet feltelepíteni:
+Ezen felül szükséged lesz még NodeJS-re és Yarn-ra. A következő parancsokkal lehet feltelepíteni őket:
 
 ```bash
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
@@ -88,7 +88,7 @@ sudo apt install -y yarn
 
 #### Rbenv telepítése
 
-Linux rendszereken a normális telepítési mód helyett érdemes inkább egy verziókezelőt telepíteni, ami minden egyes projekthez a szükséges verziójú Ruby-t fogja betölteni, mindezt autómágikusan a háttérben.
+Linux rendszereken a normális telepítési mód helyett érdemes inkább egy verziókezelőt telepíteni, ami minden egyes projekthez a szükséges verziójú Ruby-t fogja betölteni, mindezt ✨ _automágikusan_ ✨ a háttérben.
 
 A szoftver telepítése sok féle képpen megtörténhet, érdemes elolvasni az rbenv [github oldalát](https://github.com/rbenv/rbenv), de a készítők szolgáltatnak egy scriptet, ami megoldja számunkra a telepítés összes lépését. Ezt a következő parancsal futtathatjuk.
 
@@ -96,16 +96,16 @@ A szoftver telepítése sok féle képpen megtörténhet, érdemes elolvasni az 
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
 ```
 
-_Megjegyzés: Nem egészséges ismeretlen internetről letöltött scripteket csak úgy futtatni, így mindíg érdemes átnézni ponotsan mit csinál, mielőtt elindítod._
+_Megjegyzés: Nem egészséges ismeretlen internetről letöltött scripteket csak úgy futtatni, így mindig érdemes átnézni pontosan mit csinál, mielőtt elindítod._
 
-Azért, hogy mindenkor működjön a program még manuálisan be kell állítani pár dolgot. Ahogy azt a telepítő végén írja is, hozzá kell adnunk a PATH változóhoz az rbenv helyét. Futtassuk a következő parancsokat:
+Azért, hogy minden esetben működjön a program még manuálisan be kell állítani pár dolgot. Ahogy azt a telepítő végén írja is, hozzá kell adnunk a PATH változóhoz az rbenv helyét. Futtassuk a következő parancsokat:
 
 ```bash
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init - bash)"' >> ~/.bashrc
 ```
 
-Zárjuk be, majd nyissuk meg újra a terminált, hogy a módosításaink érvényt nyerjenek. Ellenőrizhetjük, hogy minden rendben van, a következő script futtatásával:
+Zárjuk be, majd nyissuk meg újra a terminált, hogy a módosításaink érvényességet nyerjenek. Hogy minden rendben van, azt ellenőrizhetjük a következő script futtatásával:
 
 ```bash
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
@@ -115,16 +115,16 @@ Valahogy így kell kinéznie:
 
 ![succesfull install](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBkQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f49ccd11ac9ef79d6330804d49c1d7122652af87/Screenshot%202022-02-03%20133723.png)
 
-#### Megfelelő Ruby verzió tlepítése
+#### Megfelelő Ruby verzió telepítése
 
-Most már, hogy van egy verzió kezelőnk, már csak meg kell adni, hogy mi legyen a verzió amivel dolgozni akarunk. Adjuk ki a következő parancsot:
+Most már, hogy van egy verziókezelőnk, már csak meg kell adni, hogy mi legyen a verzió amivel dolgozni akarunk. Adjuk ki a következő parancsot:
 
 ```bash
 rbenv install 3.0.3 && rbenv global 3.0.3
 ```
 
-Ez letölti majd feltelepíti a kívánt verziót, majd beállítja globálisan, hogy ez legyen használva.
-Ha minden jól megy a `ruby -v` parancs kiadása után a kiválasztott Ruby verziónak kell megjelennie:
+Ez letölti, majd feltelepíti a kívánt verziót, majd beállítja globálisan, hogy ez legyen használva.
+Ha minden jól megy, a `ruby -v` parancs kiadása után a kiválasztott Ruby verziónak kell megjelennie:
 
 ```bash
 ruby 3.0.3p157 (2021-11-24 revision 3fb7d2cadc) [x86_64-linux]
@@ -132,13 +132,13 @@ ruby 3.0.3p157 (2021-11-24 revision 3fb7d2cadc) [x86_64-linux]
 
 ### macOS
 
-Amennyiben macOS-re szeretnéd telepíteni a railst, ajánlom ezt a [weblapot](https://gorails.com/setup/osx/) olvasgatásra.
+Amennyiben macOS-re szeretnéd telepíteni a Railst, ajánlom ezt a [weblapot](https://gorails.com/setup/osx/) olvasgatásra.
 
 ## Rails telepítése
 
 Ezután a Rails keretrendszer telepítése pofon egyszerű, csak ki kell adni parancssorban a megfelelő parancsokat:
 
-```powershell
+```bash
 gem install bundler
 gem install rails
 ```
