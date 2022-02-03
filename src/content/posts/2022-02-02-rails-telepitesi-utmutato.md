@@ -31,7 +31,7 @@ Első lépésként a Ruby-t kell felraknunk, ami Windows és Linux rendszereken 
 
 ### Windows
 
-Bár van néhány dolog, ami windows rendszereken nem igen, vagy csak nehézkesen működik, amikor rubyval dolgozunk, a tanfolyam alkalmán csak olyan részeket fogunk érinteni, amiknek mindenképpen működniük kell.
+Bár van néhány dolog, ami windows rendszereken nem igen, vagy csak nehézkesen működik, amikor rubyval dolgozunk, a tanfolyam alkalmakon csak olyan részeket fogunk érinteni, amiknek mindenképpen működniük kell.
 
 #### Szükséges szoftverek
 
@@ -65,7 +65,7 @@ Az interneten sok útmutatót találhat az ember, ahol a WSL (_Windows Subsystem
 
 ### Ubuntu
 
-Aki rendszeresen használ linux alapú rendzsereket, annak biztos ismerős lesz a feltelepítés módja, de azok kedvéért, akik esetleg most ismerkednek a rendszerrel, megmutatom, hogy egy friss telepítésre hogyan érdemes felvarázsolni a railst.
+Aki rendszeresen használ linux alapú rendzsereket, annak biztos ismerős lesz a feltelepítés módja, de azok kedvéért, akik esetleg most ismerkednek a rendszerrel, megmutatom, hogy egy frissen telepített rendszerrre hogyan érdemes felvarázsolni a railst.
 
 #### Szükséges szoftverek
 
@@ -87,7 +87,7 @@ A szoftver telepítése sok féle képpen megtörténhet, érdemes elolvasni az 
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
 ```
 
-_Megjegyzés: Nem egészséges ismeretlen internetről letöltött scripteket csak úgy futtatni, így mindíg érdemes átnézni ponotsan mit csinál, mielőtt futtatod._
+_Megjegyzés: Nem egészséges ismeretlen internetről letöltött scripteket csak úgy futtatni, így mindíg érdemes átnézni ponotsan mit csinál, mielőtt elindítod._
 
 Azért, hogy mindenkor működjön a program még manuálisan be kell állítani pár dolgot. Ahogy azt a telepítő végén írja is, hozzá kell adnunk a PATH változóhoz az rbenv helyét. Futtassuk a következő parancsokat:
 
@@ -104,6 +104,8 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | 
 
 Valahogy így kell kinéznie:
 
+![succesfull install](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBkQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f49ccd11ac9ef79d6330804d49c1d7122652af87/Screenshot%202022-02-03%20133723.png)
+
 #### Megfelelő Ruby verzió tlepítése
 
 Most már, hogy van egy verzió kezelőnk, már csak meg kell adni, hogy mi legyen a verzió amivel dolgozni akarunk. Adjuk ki a következő parancsot:
@@ -113,7 +115,7 @@ rbenv install 3.0.3 && rbenv global 3.0.3
 ```
 
 Ez letölti majd feltelepíti a kívánt verziót, majd beállítja globálisan, hogy ez legyen használva.
-Ha minden jól megy a `ruby -v` parancs kiadása után valami ilyesminek kell megjelenni:
+Ha minden jól megy a `ruby -v` parancs kiadása után a kiválasztott ruby verziónak kell megjelennie:
 
 ```bash
 ruby 3.0.3p157 (2021-11-24 revision 3fb7d2cadc) [x86_64-linux]
@@ -136,7 +138,7 @@ Ez jónáhány csomagot, úgynevezet _gem_-et fog feltelepíteni, és ez eltarth
 
 ## Hello World applikáció
 
-Most eljött az ideje, hogy kipróbáljuk, hogy minden működik-e. Parancssorba navigálj egy olyan mappába, ahol a projekteket tárolni szeretnéd, majd add ki a következő parancsot:
+Most eljött az ideje, hogy kipróbáljuk, hogy minden működik-e. Parancssorba/terminálba navigálj egy olyan mappába, ahol a projekteket tárolni szeretnéd, majd add ki a következő parancsot:
 
 ```bash
 rails new hello_world
