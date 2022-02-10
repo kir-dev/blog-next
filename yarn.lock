@@ -6712,10 +6712,10 @@ gatsby-remark-smartypants@5.6.0:
     retext-smartypants "^4.0.0"
     unist-util-visit "^2.0.3"
 
-gatsby-remark-table-of-contents@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-table-of-contents/-/gatsby-remark-table-of-contents-1.0.0.tgz#c59221f6dfc3c17e4041d5a36feaf0fb8d7cc0f7"
-  integrity sha512-Ku8PXV8V1TOLDIhxd/ajq0JD/9/a17KSABpkZGBiV922pxyBWoso+6h+y6dzURfvbajw4YeCAQdpsa5s5M4Aqg==
+gatsby-remark-table-of-contents@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-table-of-contents/-/gatsby-remark-table-of-contents-2.0.0.tgz#9df384c5915a6b038deedcf831a1997fbb830974"
+  integrity sha512-Hl/zfvwX0FWMjaurzOTLpHNQ4rOd4AXnNrRsqJLwZPecZBc42UDX/JFL4hYS/NfrPd/svtwipkBXGo51CaKFXw==
   dependencies:
     js-yaml "^3.14.1"
     mdast-util-toc "^5.1.0"
