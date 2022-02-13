@@ -11,7 +11,7 @@ sessions:
     lengthInHours: 2
     place: SCH 103
 lecturer: Piller Trisztán
-active: false
+active: true
 description: >
   NodeJS tanfolyam az alapoktól, amely során megismerkedhettek a TypeScript nyelvvel, a NestJS keretrendszerrel.
   A tanfolyam során felépítünk egy ticket management site-ot, amelyet folytatólagosan a React tanfolyamon fogjátok

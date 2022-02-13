@@ -8,7 +8,7 @@ sessions:
     lengthInHours: 2
     place: SCH 103
 lecturer: Sepsi László
-active: false
+active: true
 description: >
   A tanfolyamon résztvevők elsajátíthatják az webfejlesztés hálózati alapjait, megismerkedhetnek a web működésével,
   a HTML, JavaScript és a CSS nyelvek világával. Ajánlott még a többi technológiai tanfolyam előtt meghallgatni.

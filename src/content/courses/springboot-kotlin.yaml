@@ -8,7 +8,7 @@ sessions:
     lengthInHours: 2
     place: Google Meet
 lecturer: Kovács Bertalan
-active: false
+active: true
 description: >
   Spring Boot és Kotlin tanfolyam, amely segítségével megismerkedhettek egy izgalmas nyelv és egy könnyen kezelhető
   keretrendszer alapjaival. A tanfolyam után adott a lehetőség az SCH-Pincér és CMSch projektekbe való becsatlakozásra.

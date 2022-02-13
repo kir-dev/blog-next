@@ -11,7 +11,7 @@ sessions:
     lengthInHours: 2
     place: SCH 103
 lecturer: Bucsy Benjámin
-active: false
+active: true
 description: >
   Szeretnél innovatív weboldalakat készíteni villámgyorsan? Tanfolyamunk keretében megismerhetsz egy olyan backend
   frameworköt, amit többek között a GitHub, Twitch és Kickstarter is használ! A képzés elvégzése után becsatlakozhatsz

@@ -8,6 +8,6 @@ sessions:
     lengthInHours: 2
     place: SCH 103
 lecturer: Berente Bálint
-active: false
+active: true
 description: >
   TBA
