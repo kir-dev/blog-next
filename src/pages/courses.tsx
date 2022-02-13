@@ -73,9 +73,9 @@ const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
             <Heading as="h2">{CURRENT_COURSE_SEMESTER}</Heading>
             <Box mt={6}>
               <Grid templateColumns={`repeat(${useBreakpointValue({ base: 1, sm: 2 })}, 1fr)`} gap={6}>
-                {data.allCoursesYaml.nodes.map((course) => (
-                  <CourseCard key={course.title} course={course} />
-                ))}
+                {data.allCoursesYaml.nodes
+                  .sort((a, b) => a.order - b.order)
+                  .map((course) => course.active && <CourseCard key={course.title} course={course} />)}
               </Grid>
             </Box>
           </Box>
@@ -174,6 +174,7 @@ export const query = graphql`
     allCoursesYaml {
       nodes {
         title
+        order
         sessions {
           startDateTime
           lengthInHours

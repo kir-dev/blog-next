@@ -6,6 +6,7 @@ export interface ISession {
 
 export interface CourseProps {
   title: string
+  order: number
   sessions: Array<ISession>
   lecturer: string
   active: boolean

@@ -1,15 +1,19 @@
 title: NodeJS + TypeScript 🤖
+order: 300
 sessions:
-  - startDateTime: 2021-02-25 18:00:00
-    lengthInHours: 2.5
-    place: Google Meet
-  - startDateTime: 2021-03-04 18:00:00
-    lengthInHours: 3
-    place: Google Meet
+  - startDateTime: 2021-03-09T18:00:00.000+01:00
+    lengthInHours: 2
+    place: SCH 103
+  - startDateTime: 2021-03-16T18:00:00.000+01:00
+    lengthInHours: 2
+    place: SCH 103
+  - startDateTime: 2021-03-23T18:00:00.000+01:00
+    lengthInHours: 2
+    place: SCH 103
 lecturer: Piller Trisztán
 active: true
 description: >
-  NodeJS tanfolyam az alapoktól, amely során megismerkedhettek a TypeScript nyelvvel, az Express keretrendszerrel.
-  Haladó alkalmunkon belenézünk nehezebb témákba, például az autorizációba, megnézzük, hogy tudunk már folyamatban
-  lévő projektnél bedolgozni. Tanfolyamunk végeztével lehetőséged lesz a Vikoverflow vagy a TanulóSCH projekt
-  kódbázisát bővíteni.
+  NodeJS tanfolyam az alapoktól, amely során megismerkedhettek a TypeScript nyelvvel, a NestJS keretrendszerrel.
+  A tanfolyam során felépítünk egy ticket management site-ot, amelyet folytatólagosan a React tanfolyamon fogjátok
+  gyönyörű UI-jal feldobni. Tanfolyamunk végeztével - és körünkhöz való csatlakozással - lehetőséged lesz részt venni
+  az új Node-os projektek tervezésében, illetve a már jól működő TanulóSCH projekt kódbázisát bővítésében.

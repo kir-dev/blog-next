@@ -1,0 +1,13 @@
+title: React + TypeScript ⚛️
+order: 400
+sessions:
+  - startDateTime: 2021-03-30T18:00:00.000+01:00
+    lengthInHours: 2
+    place: SCH 103
+  - startDateTime: 2021-04-06T18:00:00.000+01:00
+    lengthInHours: 2
+    place: SCH 103
+lecturer: Berente Bálint
+active: true
+description: >
+  TBA

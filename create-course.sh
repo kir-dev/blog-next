@@ -20,14 +20,16 @@ filepath=$DIR/$filename
 # creating coursetemplate
 touch $filepath
 echo 'title: '$title >> $filepath
+# Order is a 3 digit number
+echo 'order: 900' >> $filepath
 echo 'sessions:' >> $filepath
-echo '- startDateTime: 2021-02-25 18:00:00' >> $filepath
-echo '  lengthInHours: 2.5' >> $filepath
-echo '  place: SCH 103' >> $filepath
-echo '- startDateTime: 2021-03-04 18:00:00' >> $filepath
-echo '  lengthInHours: 3' >> $filepath
-echo '  place: SCH 103' >> $filepath
+echo '  - startDateTime: 2021-02-25T18:00:00.000+01:00' >> $filepath
+echo '    lengthInHours: 2.5' >> $filepath
+echo '    place: SCH 103' >> $filepath
+echo '  - startDateTime: 2021-03-04T18:00:00.000+01:00' >> $filepath
+echo '    lengthInHours: 2' >> $filepath
+echo '    place: SCH 103' >> $filepath
 echo 'lecturer: '$lecturer >> $filepath
 echo 'active: true' >> $filepath
 echo 'description: >' >> $filepath
-echo '  Description here' >> $filepath
+echo '  Multiline description here' >> $filepath
