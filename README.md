@@ -6,7 +6,7 @@ A [kir-dev.sch.bme.hu](https://kir-dev.sch.bme.hu) következő generációs blog
 
 ## Telepítés
 
-Legyen telepítve [node.js](https://nodejs.org/en/) és [yarn](https://yarnpkg.com/lang/en/docs/install) a gépeden. A gatsby-t szükséges globálisan feltelepíteni, ez a `yarn global add gatsby-cli` paranccsal tehető meg.
+Legyen telepítve [node.js](https://nodejs.org/en/) és [yarn v3](https://yarnpkg.com/getting-started/install) a gépeden. A gatsby-t szükséges globálisan feltelepíteni, ez a `npm i -g gatsby-cli` paranccsal tehető meg.
 
 Ha az előkövetlemények megvannak, akkor
 
