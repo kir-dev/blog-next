@@ -10,4 +10,7 @@ sessions:
 lecturer: Berente Bálint
 active: true
 description: >
-  TBA
+  HTML, CSS és TypeScript tudásunk felhasználásával megismerkedünk a népszerű ReactJS keretrendszerrel,
+  amellyel gyorsan, átláthatóan és stabilan leszünk képesek webalkalmazások fejleszteni. Elkészítjük a NodeJS
+  tanfolyamról ismert ticket management rendszer felületét, miközben megismerkedünk számos hasznos könyvtárral,
+  praktikával és tudással.
