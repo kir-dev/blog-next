@@ -12,13 +12,13 @@ const getSessionString = (session: ISession): string => {
   const targetDateTime = new Date(startDateTime)
   targetDateTime.setHours(targetDateTime.getHours() + session.lengthInHours)
 
-  return `${startDateTime.toLocaleTimeString('hu-HU', {
+  return `${startDateTime.toLocaleTimeString('hu', {
     weekday: 'short',
     month: 'short',
     day: 'numeric',
     hour: '2-digit',
     minute: '2-digit'
-  })} - ${targetDateTime.toLocaleTimeString('hu-HU', {
+  })} - ${targetDateTime.toLocaleTimeString('hu', {
     hour: '2-digit',
     minute: '2-digit'
   })}`

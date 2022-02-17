@@ -1,14 +1,12 @@
 title: Spring Boot + Kotlin 🍃
 order: 500
 sessions:
-  - startDateTime: 2021-02-23T18:00:00.000+01:00
+  - startDateTime: 2022-03-31T18:00:00.000+01:00
     lengthInHours: 2
-    place: Google Meet
-  - startDateTime: 2022-03-03T18:00:00.000+01:00
-    lengthInHours: 2
-    place: Google Meet
+    place: TBD
 lecturer: Kovács Bertalan
 active: true
 description: >
-  Spring Boot és Kotlin tanfolyam, amely segítségével megismerkedhettek egy izgalmas nyelv és egy könnyen kezelhető
-  keretrendszer alapjaival. A tanfolyam után adott a lehetőség az SCH-Pincér és CMSch projektekbe való becsatlakozásra.
+  Spring Boot és Kotlin workshop, amelyen betekintést nyerhettek egy izgalmas nyelv, illetve egy elterjedt és modern
+  keretrendszer alapjaiba, amellyel akár enterprise minőségű appokat képes leszel fejleszteni. A tanfolyam után adott
+  a lehetőség az SCH-Pincér és CMSch projektekbe való becsatlakozásra.

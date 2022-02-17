@@ -1,12 +1,12 @@
 title: Webes alapozó 🚀
 order: 100
 sessions:
-  - startDateTime: 2021-02-24T18:00:00.000+01:00
+  - startDateTime: 2022-02-24T18:00:00.000+01:00
     lengthInHours: 2
-    place: SCH 103
-  - startDateTime: 2021-03-03T18:00:00.000+01:00
+    place: TBD
+  - startDateTime: 2022-03-03T18:00:00.000+01:00
     lengthInHours: 2
-    place: SCH 103
+    place: TBD
 lecturer: Sepsi László
 active: true
 description: >

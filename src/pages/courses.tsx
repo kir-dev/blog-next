@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Grid, Heading, Image, Link as ChakraLink, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Alert, AlertIcon, Box, Button, Flex, Grid, Heading, Image, Link as ChakraLink, Text, useBreakpointValue } from '@chakra-ui/react'
 import { chakra, useColorModeValue } from '@chakra-ui/system'
 import { graphql, Link } from 'gatsby'
 import * as React from 'react'
@@ -7,7 +7,7 @@ import CourseCard from '~components/course-components/CourseCard'
 import Header from '~components/Header'
 import SEO from '~components/SEO'
 import { CourseProps } from '~types/course.props'
-import { CURRENT_COURSE_FORM_URL, CURRENT_COURSE_SEMESTER } from '~utils/configurations'
+import { CURRENT_COURSE_EXTRA_INFO, CURRENT_COURSE_FORM_URL, CURRENT_COURSE_SEMESTER } from '~utils/configurations'
 import IndexLayout from '../layouts'
 
 interface CoursesProps {
@@ -36,7 +36,7 @@ const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
                   Tanfolyamaink
                 </Heading>
                 <Text fontFamily="mono" mt={4} fontSize={{ base: 'md', sm: 'lg', md: 'xl' }}>
-                  A tavaszi félévek folyamán webes alapozót, és több alkalmas tanfolyamokat tartunk, ahol megismerkedhettek a HTML és a CSS
+                  A tavaszi félévek folyamán webes alapozót és több alkalmas tanfolyamokat tartunk, ahol megismerkedhettek a HTML és a CSS
                   alapjaival, egy-egy keretrendszer használatával, illetve a webfejlesztés során előkerülő fogalmakkal, eszközökkel.
                 </Text>
               </Box>
@@ -71,6 +71,10 @@ const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
         <Container>
           <Box>
             <Heading as="h2">{CURRENT_COURSE_SEMESTER}</Heading>
+            <Alert status="info" my={4}>
+              <AlertIcon />
+              {CURRENT_COURSE_EXTRA_INFO}
+            </Alert>
             <Box mt={6}>
               <Grid templateColumns={`repeat(${useBreakpointValue({ base: 1, sm: 2 })}, 1fr)`} gap={6}>
                 {data.allCoursesYaml.nodes
@@ -138,12 +142,12 @@ const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
             </Text>
             <Text mt={2}>
               Hogy a hagyományteremtés valóban sikeres legyen, és kialakulhasson egy stabil mentorrendszer, még sok dolgunk van annak
-              további kidolgozásában. Erre áldozzuk időnk jó részét 2021 őszi félévében. Így részletes tájékoztatást csak később tudunk
+              további kidolgozásában. Erre áldoztuk időnk jó részét az elmúlt félévekben. Így részletes tájékoztatást csak később tudunk
               adni, addig is figyeljétek{' '}
               <chakra.span color="orange.400" _hover={{ textDecor: 'underline', color: 'tomato' }} as={Link} to="/blog">
                 blogunkat
               </chakra.span>
-              , várhatóak hírek a következő tavaszi félév mentorálásával kapcsolatosan.
+              , ahol várhatóak hírek a következő tavaszi félév mentorálásával kapcsolatosan.
             </Text>
           </Box>
 
