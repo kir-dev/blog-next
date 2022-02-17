@@ -71,10 +71,12 @@ const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
         <Container>
           <Box>
             <Heading as="h2">{CURRENT_COURSE_SEMESTER}</Heading>
-            <Alert status="info" my={4}>
-              <AlertIcon />
-              {CURRENT_COURSE_EXTRA_INFO}
-            </Alert>
+            {CURRENT_COURSE_EXTRA_INFO && (
+              <Alert status="info" my={4}>
+                <AlertIcon />
+                {CURRENT_COURSE_EXTRA_INFO}
+              </Alert>
+            )}
             <Box mt={6}>
               <Grid templateColumns={`repeat(${useBreakpointValue({ base: 1, sm: 2 })}, 1fr)`} gap={6}>
                 {data.allCoursesYaml.nodes
