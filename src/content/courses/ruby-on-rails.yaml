@@ -1,14 +1,17 @@
 title: Ruby on Rails 🚆
 order: 200
 sessions:
-  - startDateTime: 2022-03-08T18:00:00.000+01:00
-    lengthInHours: 2
+  - startDate: 2022-03-08
+    startTime: '18:00'
+    endTime: '20:00'
     place: TBD
-  - startDateTime: 2022-03-17T18:00:00.000+01:00
-    lengthInHours: 2
+  - startDate: 2022-03-17
+    startTime: '18:00'
+    endTime: '20:00'
     place: TBD
-  - startDateTime: 2022-03-22T18:00:00.000+01:00
-    lengthInHours: 2
+  - startDate: 2022-03-22
+    startTime: '18:00'
+    endTime: '20:00'
     place: TBD
 lecturer: Bucsy Benjámin
 active: true

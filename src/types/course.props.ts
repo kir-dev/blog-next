@@ -1,6 +1,7 @@
 export interface ISession {
-  startDateTime: string
-  lengthInHours: number
+  startDate: string
+  startTime: string
+  endTime: string
   place: string
 }
 

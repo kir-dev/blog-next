@@ -8,20 +8,13 @@ interface CourseCardProps {
 }
 
 const getSessionString = (session: ISession): string => {
-  const startDateTime = new Date(session.startDateTime)
-  const targetDateTime = new Date(startDateTime)
-  targetDateTime.setHours(targetDateTime.getHours() + session.lengthInHours)
+  const startDate = new Date(session.startDate)
 
-  return `${startDateTime.toLocaleTimeString('hu', {
+  return `${startDate.toLocaleDateString('hu', {
     weekday: 'short',
     month: 'short',
-    day: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit'
-  })} - ${targetDateTime.toLocaleTimeString('hu', {
-    hour: '2-digit',
-    minute: '2-digit'
-  })}`
+    day: 'numeric'
+  })} ${session.startTime} - ${session.endTime}`
 }
 
 const CourseCard: React.FC<CourseCardProps> = ({ course }) => (
@@ -31,8 +24,9 @@ const CourseCard: React.FC<CourseCardProps> = ({ course }) => (
         {course.title}
       </Heading>
       <Box mt={6}>
-        {course.sessions.map((session) => (
-          <Flex key={session.startDateTime} mt={2} justifyContent="space-between" alignItems="center" flexWrap="wrap">
+        {course.sessions.map((session, index) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <Flex key={course.lecturer + index} mt={2} justifyContent="space-between" alignItems="center" flexWrap="wrap">
             <HStack pr={4}>
               <FaClock />
               <Text>{getSessionString(session)}</Text>

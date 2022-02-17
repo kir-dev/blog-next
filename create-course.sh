@@ -23,11 +23,13 @@ echo 'title: '$title >> $filepath
 # Order is a 3 digit number
 echo 'order: 900' >> $filepath
 echo 'sessions:' >> $filepath
-echo '  - startDateTime: 2021-02-25T18:00:00.000+01:00' >> $filepath
-echo '    lengthInHours: 2.5' >> $filepath
+echo '  - startDate: 2021-02-25' >> $filepath
+echo '    startTime: "18:00"' >> $filepath
+echo '    endTime: "20:00"' >> $filepath
 echo '    place: SCH 103' >> $filepath
-echo '  - startDateTime: 2021-03-04T18:00:00.000+01:00' >> $filepath
-echo '    lengthInHours: 2' >> $filepath
+echo '  - startDate: 2021-03-04' >> $filepath
+echo '    startTime: "18:00"' >> $filepath
+echo '    endTime: "20:00"' >> $filepath
 echo '    place: SCH 103' >> $filepath
 echo 'lecturer: '$lecturer >> $filepath
 echo 'active: true' >> $filepath

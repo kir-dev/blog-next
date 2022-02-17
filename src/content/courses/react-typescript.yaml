@@ -1,11 +1,13 @@
 title: React + TypeScript ⚛️
 order: 400
 sessions:
-  - startDateTime: 2022-03-30T18:00:00.000+01:00
-    lengthInHours: 2
+  - startDate: 2022-03-30
+    startTime: '18:00'
+    endTime: '20:00'
     place: TBD
-  - startDateTime: 2022-04-06T18:00:00.000+01:00
-    lengthInHours: 2
+  - startDate: 2022-04-06
+    startTime: '18:00'
+    endTime: '20:00'
     place: TBD
 lecturer: Berente Bálint
 active: true

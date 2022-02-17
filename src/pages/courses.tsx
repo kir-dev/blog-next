@@ -182,8 +182,9 @@ export const query = graphql`
         title
         order
         sessions {
-          startDateTime
-          lengthInHours
+          startDate
+          startTime
+          endTime
           place
         }
         lecturer
