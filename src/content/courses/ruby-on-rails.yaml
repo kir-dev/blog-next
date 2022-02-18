@@ -1,17 +1,20 @@
 title: Ruby on Rails 🚆
 order: 200
 sessions:
-  - startDateTime: 2021-03-08T18:00:00.000+01:00
-    lengthInHours: 2
-    place: SCH 103
-  - startDateTime: 2021-03-17T18:00:00.000+01:00
-    lengthInHours: 2
-    place: SCH 103
-  - startDateTime: 2021-03-22T18:00:00.000+01:00
-    lengthInHours: 2
-    place: SCH 103
+  - startDate: 2022-03-08
+    startTime: '18:00'
+    endTime: '20:00'
+    place: TBD
+  - startDate: 2022-03-17
+    startTime: '18:00'
+    endTime: '20:00'
+    place: TBD
+  - startDate: 2022-03-22
+    startTime: '18:00'
+    endTime: '20:00'
+    place: TBD
 lecturer: Bucsy Benjámin
-active: false
+active: true
 description: >
   Szeretnél innovatív weboldalakat készíteni villámgyorsan? Tanfolyamunk keretében megismerhetsz egy olyan backend
   frameworköt, amit többek között a GitHub, Twitch és Kickstarter is használ! A képzés elvégzése után becsatlakozhatsz

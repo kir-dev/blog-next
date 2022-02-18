@@ -1,14 +1,16 @@
 title: Webes alapozó 🚀
 order: 100
 sessions:
-  - startDateTime: 2021-02-24T18:00:00.000+01:00
-    lengthInHours: 2
-    place: SCH 103
-  - startDateTime: 2021-03-03T18:00:00.000+01:00
-    lengthInHours: 2
-    place: SCH 103
+  - startDate: 2022-02-24
+    startTime: '18:00'
+    endTime: '20:00'
+    place: TBD
+  - startDate: 2022-03-03
+    startTime: '18:00'
+    endTime: '20:00'
+    place: TBD
 lecturer: Sepsi László
-active: false
+active: true
 description: >
-  A tanfolyamon résztvevők elsajátíthatják az webfejlesztés hálózati alapjait, megismerkedhetnek a web működésével,
+  A tanfolyamon résztvevők elsajátíthatják a webfejlesztés hálózati alapjait, megismerkedhetnek a web működésével,
   a HTML, JavaScript és a CSS nyelvek világával. Ajánlott még a többi technológiai tanfolyam előtt meghallgatni.

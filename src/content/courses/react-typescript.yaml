@@ -1,13 +1,18 @@
 title: React + TypeScript ⚛️
 order: 400
 sessions:
-  - startDateTime: 2021-03-30T18:00:00.000+01:00
-    lengthInHours: 2
-    place: SCH 103
-  - startDateTime: 2021-04-06T18:00:00.000+01:00
-    lengthInHours: 2
-    place: SCH 103
+  - startDate: 2022-03-30
+    startTime: '18:00'
+    endTime: '20:00'
+    place: TBD
+  - startDate: 2022-04-06
+    startTime: '18:00'
+    endTime: '20:00'
+    place: TBD
 lecturer: Berente Bálint
-active: false
+active: true
 description: >
-  TBA
+  HTML, CSS és TypeScript tudásunk felhasználásával megismerkedünk a népszerű ReactJS keretrendszerrel,
+  amellyel gyorsan, átláthatóan és stabilan leszünk képesek webalkalmazások fejleszteni. Elkészítjük a NodeJS
+  tanfolyamról ismert ticket management rendszer felületét, miközben megismerkedünk számos hasznos könyvtárral,
+  praktikával és tudással.
