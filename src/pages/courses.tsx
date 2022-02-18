@@ -7,7 +7,12 @@ import CourseCard from '~components/course-components/CourseCard'
 import Header from '~components/Header'
 import SEO from '~components/SEO'
 import { CourseProps } from '~types/course.props'
-import { CURRENT_COURSE_EXTRA_INFO, CURRENT_COURSE_FORM_URL, CURRENT_COURSE_SEMESTER } from '~utils/configurations'
+import {
+  CURRENT_COURSE_EXTRA_INFO,
+  CURRENT_COURSE_FORM_CLOSING_INFO,
+  CURRENT_COURSE_FORM_URL,
+  CURRENT_COURSE_SEMESTER
+} from '~utils/configurations'
 import IndexLayout from '../layouts'
 
 interface CoursesProps {
@@ -106,9 +111,16 @@ const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
               azok az alapvető adatstruktúrák, és hogy hogyan kell elágazásokat írni, már jó vagy. Az egyes alkalmakról minden tudnivalót
               (előadás témája, mit kell hozni, hova kell menni) előzetesen e-mail-ben fogsz megkapni az előadás előtt.
             </Text>
+            {CURRENT_COURSE_FORM_CLOSING_INFO && (
+              <Alert status="info" my={4}>
+                <AlertIcon />
+                {CURRENT_COURSE_FORM_CLOSING_INFO}
+              </Alert>
+            )}
             <Flex mt={10} direction={{ base: 'column', md: 'row' }}>
               <Heading as="h3" size="md">
-                Sajnos, a férőhelyek száma korlátozott, így a tanfolyam résztvevőinek listáját jelentkezési sorrend alapján alakítjuk ki.
+                Sajnos, a férőhelyek száma korlátozott, így a tanfolyam résztvevőinek listáját jelentkezési sorrend alapján alakítjuk ki. A
+                résztvevők emailben kapnak a jelentkezés lezárása utáni napon értesítést.
               </Heading>
               <Flex flex={1} justifyContent="flex-end" pl={{ base: 0, md: 8 }} mt={{ base: 4, md: 0 }}>
                 {CURRENT_COURSE_FORM_URL ? (
