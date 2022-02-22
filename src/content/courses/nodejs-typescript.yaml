@@ -4,15 +4,15 @@ sessions:
   - startDate: 2022-03-09
     startTime: '18:00'
     endTime: '20:00'
-    place: TBD
+    place: E404
   - startDate: 2022-03-16
     startTime: '18:00'
     endTime: '20:00'
-    place: TBD
+    place: E401
   - startDate: 2022-03-23
     startTime: '18:00'
     endTime: '20:00'
-    place: TBD
+    place: QBF11
 lecturer: Piller Trisztán
 active: true
 description: >
