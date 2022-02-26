@@ -18,6 +18,7 @@ import {
 import { useColorModeValue } from '@chakra-ui/system'
 import { graphql, Link } from 'gatsby'
 import * as React from 'react'
+import { useState } from 'react'
 import { FaFacebook, FaGithub, FaYoutube } from 'react-icons/fa'
 import BlogFullCard from '~components/blog-components/BlogFullCard'
 import Container from '~components/Container'
@@ -66,21 +67,12 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
   const socialSize = useBreakpointValue({ base: '2rem', lg: '3rem' })
   const [post] = data.post.nodes
   const { pek } = data
+  const [alertClosed, setAlertClosed] = useState(false)
 
   return (
     <>
       <SEO />
       <IndexLayout>
-        {FRONTPAGE_ALERT_DESCRIPTION && (
-          <Alert status="info">
-            <AlertIcon />
-            <Box flex="1">
-              {FRONTPAGE_ALERT_TITLE && <AlertTitle>{FRONTPAGE_ALERT_TITLE}</AlertTitle>}
-              <AlertDescription display="block">{FRONTPAGE_ALERT_DESCRIPTION}</AlertDescription>
-            </Box>
-            <CloseButton position="absolute" right="8px" top="8px" />
-          </Alert>
-        )}
         <Box>
           <Box
             bgImage="url(/index-bg.jpeg)"
@@ -102,6 +94,16 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
             }}
           >
             <Container>
+              {FRONTPAGE_ALERT_DESCRIPTION && !alertClosed && (
+                <Alert status="info" variant="left-accent" borderRadius="md" my={3}>
+                  <AlertIcon />
+                  <Box flex="1">
+                    {FRONTPAGE_ALERT_TITLE && <AlertTitle>{FRONTPAGE_ALERT_TITLE}</AlertTitle>}
+                    <AlertDescription display="block" dangerouslySetInnerHTML={{ __html: FRONTPAGE_ALERT_DESCRIPTION }} />
+                  </Box>
+                  <CloseButton position="absolute" right="8px" top="8px" onClick={() => setAlertClosed(true)} />
+                </Alert>
+              )}
               <Box filter="none" py={10} zIndex={1} px={{ base: 0, lg: 8 }}>
                 <Flex direction={{ base: 'column', lg: 'row' }}>
                   <Terminal />
