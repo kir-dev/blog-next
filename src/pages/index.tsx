@@ -1,4 +1,20 @@
-import { Box, Button, Flex, Grid, Heading, HStack, Link as ChakraLink, Spacer, Text, useBreakpointValue } from '@chakra-ui/react'
+import {
+  Alert,
+  AlertDescription,
+  AlertIcon,
+  AlertTitle,
+  Box,
+  Button,
+  CloseButton,
+  Flex,
+  Grid,
+  Heading,
+  HStack,
+  Link as ChakraLink,
+  Spacer,
+  Text,
+  useBreakpointValue
+} from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
 import { graphql, Link } from 'gatsby'
 import * as React from 'react'
@@ -12,7 +28,14 @@ import Terminal from '~components/terminal/Terminal'
 import KirdevSimplified from '~components/themed-svgs/KirdevSimplified'
 import { PostProps } from '~types/post.props'
 import { ProjectProps } from '~types/project.props'
-import { FACEBOOK_PAGE_URL, GITHUB_ORG_URL, PEK_URL, YOUTUBE_CHANNEL_URL } from '~utils/configurations'
+import {
+  FACEBOOK_PAGE_URL,
+  FRONTPAGE_ALERT_DESCRIPTION,
+  FRONTPAGE_ALERT_TITLE,
+  GITHUB_ORG_URL,
+  PEK_URL,
+  YOUTUBE_CHANNEL_URL
+} from '~utils/configurations'
 import IndexLayout from '../layouts'
 
 interface IndexPageProps {
@@ -48,6 +71,16 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
     <>
       <SEO />
       <IndexLayout>
+        {FRONTPAGE_ALERT_DESCRIPTION && (
+          <Alert status="info">
+            <AlertIcon />
+            <Box flex="1">
+              {FRONTPAGE_ALERT_TITLE && <AlertTitle>{FRONTPAGE_ALERT_TITLE}</AlertTitle>}
+              <AlertDescription display="block">{FRONTPAGE_ALERT_DESCRIPTION}</AlertDescription>
+            </Box>
+            <CloseButton position="absolute" right="8px" top="8px" />
+          </Alert>
+        )}
         <Box>
           <Box
             bgImage="url(/index-bg.jpeg)"
