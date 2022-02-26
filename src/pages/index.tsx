@@ -1,7 +1,24 @@
-import { Box, Button, Flex, Grid, Heading, HStack, Link as ChakraLink, Spacer, Text, useBreakpointValue } from '@chakra-ui/react'
+import {
+  Alert,
+  AlertDescription,
+  AlertIcon,
+  AlertTitle,
+  Box,
+  Button,
+  CloseButton,
+  Flex,
+  Grid,
+  Heading,
+  HStack,
+  Link as ChakraLink,
+  Spacer,
+  Text,
+  useBreakpointValue
+} from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
 import { graphql, Link } from 'gatsby'
 import * as React from 'react'
+import { useState } from 'react'
 import { FaFacebook, FaGithub, FaYoutube } from 'react-icons/fa'
 import BlogFullCard from '~components/blog-components/BlogFullCard'
 import Container from '~components/Container'
@@ -12,7 +29,14 @@ import Terminal from '~components/terminal/Terminal'
 import KirdevSimplified from '~components/themed-svgs/KirdevSimplified'
 import { PostProps } from '~types/post.props'
 import { ProjectProps } from '~types/project.props'
-import { FACEBOOK_PAGE_URL, GITHUB_ORG_URL, PEK_URL, YOUTUBE_CHANNEL_URL } from '~utils/configurations'
+import {
+  FACEBOOK_PAGE_URL,
+  FRONTPAGE_ALERT_DESCRIPTION,
+  FRONTPAGE_ALERT_TITLE,
+  GITHUB_ORG_URL,
+  PEK_URL,
+  YOUTUBE_CHANNEL_URL
+} from '~utils/configurations'
 import IndexLayout from '../layouts'
 
 interface IndexPageProps {
@@ -43,6 +67,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
   const socialSize = useBreakpointValue({ base: '2rem', lg: '3rem' })
   const [post] = data.post.nodes
   const { pek } = data
+  const [alertClosed, setAlertClosed] = useState(false)
 
   return (
     <>
@@ -69,6 +94,16 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
             }}
           >
             <Container>
+              {FRONTPAGE_ALERT_DESCRIPTION && !alertClosed && (
+                <Alert status="info" variant="left-accent" borderRadius="md" my={3}>
+                  <AlertIcon />
+                  <Box flex="1">
+                    {FRONTPAGE_ALERT_TITLE && <AlertTitle>{FRONTPAGE_ALERT_TITLE}</AlertTitle>}
+                    <AlertDescription display="block" dangerouslySetInnerHTML={{ __html: FRONTPAGE_ALERT_DESCRIPTION }} />
+                  </Box>
+                  <CloseButton position="absolute" right="8px" top="8px" onClick={() => setAlertClosed(true)} />
+                </Alert>
+              )}
               <Box filter="none" py={10} zIndex={1} px={{ base: 0, lg: 8 }}>
                 <Flex direction={{ base: 'column', lg: 'row' }}>
                   <Terminal />

@@ -48,7 +48,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
 
   const allMarkdown: EdgesData = await graphql(`
     {
-      allMarkdownRemark(filter: { fields: { layout: { ne: "course" } } }, limit: 1000) {
+      allMarkdownRemark(filter: { fields: { layout: { ne: "other" } } }, limit: 1000) {
         edges {
           node {
             fields {
