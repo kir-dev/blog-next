@@ -4,15 +4,15 @@ sessions:
   - startDate: 2022-03-08
     startTime: '18:00'
     endTime: '20:00'
-    place: E401
+    place: E401 (24/30 fő)
   - startDate: 2022-03-17
     startTime: '18:00'
     endTime: '20:00'
-    place: E401
+    place: E401 (24/30 fő)
   - startDate: 2022-03-22
     startTime: '18:00'
     endTime: '20:00'
-    place: E401
+    place: E401 (24/30 fő)
 lecturer: Bucsy Benjámin
 active: true
 description: >

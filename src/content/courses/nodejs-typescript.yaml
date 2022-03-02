@@ -4,15 +4,15 @@ sessions:
   - startDate: 2022-03-09
     startTime: '18:00'
     endTime: '20:00'
-    place: E404
+    place: E404 (28/48 fő)
   - startDate: 2022-03-16
     startTime: '18:00'
     endTime: '20:00'
-    place: E401
+    place: E401 (28/30 fő)
   - startDate: 2022-03-23
     startTime: '18:00'
     endTime: '20:00'
-    place: QBF11
+    place: QBF11 (28/54 fő)
 lecturer: Piller Trisztán
 active: true
 description: >

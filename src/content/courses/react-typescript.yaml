@@ -4,11 +4,11 @@ sessions:
   - startDate: 2022-03-30
     startTime: '18:00'
     endTime: '20:00'
-    place: QBF11
+    place: QBF11 (29/54 fő)
   - startDate: 2022-04-06
     startTime: '18:00'
     endTime: '20:00'
-    place: QBF11
+    place: QBF11 (29/54 fő)
 lecturer: Berente Bálint
 active: true
 description: >
