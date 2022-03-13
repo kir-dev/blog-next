@@ -2,6 +2,7 @@ import { Box, Flex, Grid, Heading, HStack, Image, Link, Text, useBreakpointValue
 import { chakra } from '@chakra-ui/system'
 import { Link as GatsbyLink } from 'gatsby'
 import * as React from 'react'
+import { IconType } from 'react-icons'
 import { FaFacebook, FaGithub, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
 import AboutParagraph from '~components/about-components/AboutParagraph'
 import StickyNote from '~components/about-components/StickyNote'
@@ -27,10 +28,15 @@ const ABOUT_MAP: Map<string, string> = new Map([
   ['slack_dc', 'Slack és Discord'],
   ['contact', 'Kapcsolat']
 ])
+const SOCIALS: Array<{ url: string; Icon: IconType; text: string }> = [
+  { url: GITHUB_ORG_URL, Icon: FaGithub, text: 'GitHub szervezetünk' },
+  { url: YOUTUBE_CHANNEL_URL, Icon: FaYoutube, text: 'YouTube csatornánk' },
+  { url: FACEBOOK_PAGE_URL, Icon: FaFacebook, text: 'Facebook oldalunk' },
+  { url: INSTAGRAM_PAGE_URL, Icon: FaInstagram, text: 'Instagram oldalunk' },
+  { url: `https://twitter.com/${TWITTER_USERNAME}`, Icon: FaTwitter, text: 'Twitter oldalunk' }
+]
 
 const AboutPage: React.FC = () => {
-  const linkColor = 'orange.400'
-  const linkHover = { color: 'tomato', textDecor: 'underline' }
   const stickyBoxWidth = { base: '75%', sm: '10rem', lg: '14rem' }
   const socialSize = useBreakpointValue({ base: '1rem', lg: '1.5rem' })
   const firstHeadingSize = useBreakpointValue({ base: '4xl', sm: '5xl' })
@@ -74,7 +80,7 @@ const AboutPage: React.FC = () => {
                   <Text mt={6}>
                     A Kollégiumi Információs Rendszer Fejlesztői és Üzemeltetői – röviden Kir-Dev – a BME VIK hallgatóiból álló webfejlesztő
                     csapat. Körünk 2001-ben alakult, 2009 óta a{' '}
-                    <Link href="https://simonyi.bme.hu/" color={linkColor} _hover={linkHover}>
+                    <Link href="https://simonyi.bme.hu/" isExternal>
                       Simonyi Károly Szakkollégium
                     </Link>{' '}
                     része. Alakulásunk óta foglalkozunk különféle webes technológiák alkalmazásával és oktatásával, valamint fejlesztünk és
@@ -82,22 +88,18 @@ const AboutPage: React.FC = () => {
                   </Text>
                   <Text py={2}>
                     Fő feladatunk a{' '}
-                    <GatsbyLink to="/project/pek-next">
-                      <chakra.span color={linkColor} _hover={linkHover}>
-                        Profil és Körök
-                      </chakra.span>
-                    </GatsbyLink>{' '}
+                    <Link as={GatsbyLink} to="/project/pek-next">
+                      Profil és Körök
+                    </Link>{' '}
                     – röviden PéK – folyamatos fejlesztése és karbantartása. Jelenleg ezen az alkalmazáson keresztül folyik a kar közösségi
                     pontozása. Ez a rendszer már több generációt is megélt az aktív körtagoknak köszönhetően: legelőször Kollégiumi
                     Információs Rendszernek hívtuk (KIR), ez a generáció PHP-ban íródott még. Aztán a kiterjedésével újraírtuk JavaEE-s
                     alapokon, OpenAM mellett, és Villanykari Információs Rendszer (VIR) lett a neve, később pedig megkapta modern nevét, a
                     PéK-et. 2015-ben végül pedig a PéK Ruby on Rails alapokra lett migrálva. További történeteket blogunk archívumában
                     olvashatsz{' '}
-                    <GatsbyLink to="/post/2014-01-29-pek-jelen-es-jovo-iv/">
-                      <chakra.span color={linkColor} _hover={linkHover}>
-                        PÉK jelene és jövője
-                      </chakra.span>
-                    </GatsbyLink>{' '}
+                    <Link as={GatsbyLink} to="/post/2014-01-29-pek-jelen-es-jovo-iv/">
+                      PÉK jelene és jövője
+                    </Link>{' '}
                     címek alatt.
                   </Text>
                   <Text />
@@ -121,15 +123,19 @@ const AboutPage: React.FC = () => {
                   <AboutParagraph title="Text editor" titleSize={secondHeadingSize}>
                     <Text mt={6}>
                       Szívesen kódolunk többek között a webes fejlesztések leggyakrabban használt text editorjával, a{' '}
-                      <Link href="https://code.visualstudio.com/" color={linkColor} _hover={linkHover}>
+                      <Link href="https://code.visualstudio.com/" isExternal>
                         Visual Studio Code
                       </Link>
                       -dal, illetve a JetBrains IDE-kkel,{' '}
-                      <Link href="https://www.jetbrains.com/idea/" color={linkColor} _hover={linkHover}>
+                      <Link href="https://www.jetbrains.com/idea/" isExternal>
                         IntelliJ IDEA
                       </Link>
-                      -val és{' '}
-                      <Link href="https://www.jetbrains.com/ruby/" color={linkColor} _hover={linkHover}>
+                      -val,{' '}
+                      <Link href="https://www.jetbrains.com/webstorm/" isExternal>
+                        Webstorm
+                      </Link>
+                      mal és{' '}
+                      <Link href="https://www.jetbrains.com/ruby/" isExternal>
                         RubyMine
                       </Link>
                       -nal.
@@ -140,9 +146,14 @@ const AboutPage: React.FC = () => {
                   <StickyNote>
                     <Text>
                       <chakra.span fontWeight="bold">Tudtad-e?</chakra.span> Kari hallgatóként{' '}
-                      <Link href="https://admin.sch.bme.hu/profile/">SCH-s accountoddal</Link> szert tehetsz Ultimate verziójú JetBrains
-                      IDE-kre. Ismerkedj meg az{' '}
-                      <Link href="https://www.jetbrains.com/community/education/#students">IntelliJ IDEA Ultimate-tel</Link>!
+                      <Link href="https://admin.sch.bme.hu/profile/" isExternal>
+                        SCH-s accountoddal
+                      </Link>{' '}
+                      szert tehetsz Ultimate verziójú JetBrains IDE-kre. Ismerkedj meg az{' '}
+                      <Link href="https://www.jetbrains.com/community/education/#students" isExternal>
+                        IntelliJ IDEA Ultimate-tel
+                      </Link>
+                      !
                     </Text>
                   </StickyNote>
                 </Box>
@@ -163,8 +174,8 @@ const AboutPage: React.FC = () => {
                     title="NodeJS"
                   >
                     <Text textAlign={{ base: 'left', md: 'center' }}>
-                      A piac talán legelterjedtebb technológiája, aszinkron eseményvezérelt webes JavaScriptes runtime. Express
-                      keretrendszerrel és TypeScript nyelvvel használjuk együtt. Kényelmesen használható, színes tech stackeket lehet köré
+                      A piac talán legelterjedtebb technológiája, aszinkron eseményvezérelt webes JavaScriptes runtime. NestJS
+                      keretrendszerrel és TypeScript nyelvvel használjuk együtt. Kényelmesen használható, színes tech stacket lehet köré
                       varázsolni.
                     </Text>
                   </InfoBox>
@@ -184,19 +195,19 @@ const AboutPage: React.FC = () => {
                     <Text mt={10}>
                       A fentiek a legfőbb webes technológiáink. Ezeken kívül vannak további extra techjeink, amelyek a projektjeinket
                       kiegészítik, ilyenek például: a{' '}
-                      <Link href="https://hibernate.org/" color={linkColor} _hover={linkHover}>
+                      <Link href="https://hibernate.org/" isExternal>
                         Hibernate
                       </Link>
                       , a{' '}
-                      <Link href="https://www.gatsbyjs.com/" color={linkColor} _hover={linkHover}>
+                      <Link href="https://www.gatsbyjs.com/" isExternal>
                         Gatsby
                       </Link>
                       , a{' '}
-                      <Link href="https://hu.reactjs.org/" color={linkColor} _hover={linkHover}>
+                      <Link href="https://hu.reactjs.org/" isExternal>
                         React
                       </Link>
                       , illetve a{' '}
-                      <Link href="https://tailwindcss.com/" color={linkColor} _hover={linkHover}>
+                      <Link href="https://tailwindcss.com/" isExternal>
                         TailwindCSS
                       </Link>
                       .
@@ -205,11 +216,9 @@ const AboutPage: React.FC = () => {
                   <Box alignSelf={{ base: 'flex-end', sm: 'inherit' }} ml={4} mt={4} maxW={stickyBoxWidth}>
                     <StickyNote>
                       <Text>
-                        <GatsbyLink to="/projects">
-                          <chakra.span fontWeight="bold" _hover={{ textDecor: 'underline' }}>
-                            Projektjeink:
-                          </chakra.span>
-                        </GatsbyLink>{' '}
+                        <Link as={GatsbyLink} to="/projects" fontWeight="bold">
+                          Projektjeink:
+                        </Link>{' '}
                         Ezen az oldalon bemutatásra kerülnek projektjeink. Megtudhatod többet között azt is, milyen technológiákkal
                         készülnek.
                       </Text>
@@ -225,14 +234,14 @@ const AboutPage: React.FC = () => {
                   <Text>
                     Alkalmazásaink mind nyílt forráskódúak, ez a fejlesztőeszközeink kiválasztásánál is fő szempont. Verziókezelésre a gitet
                     használjuk, kódbázisunk pedig a GitHubon kap helyet, ott található{' '}
-                    <Link href="https://github.com/kir-dev" color={linkColor} _hover={linkHover}>
+                    <Link href="https://github.com/kir-dev" isExternal>
                       GitHub szervezetünk
                     </Link>
                     .
                   </Text>
                   <Text pt={2}>
                     A platform segítségével ismerkedünk a{' '}
-                    <Link href="https://en.wikipedia.org/wiki/CI/CD" color={linkColor} _hover={linkHover}>
+                    <Link href="https://en.wikipedia.org/wiki/CI/CD" isExternal>
                       Continuous Integration/Continuous Deployment (CI/CD)
                     </Link>{' '}
                     működésével például a GitHub Actions-ön keresztül, illetve projektjeink haladását a Project Boardokon keresztül
@@ -243,8 +252,14 @@ const AboutPage: React.FC = () => {
                   <StickyNote>
                     <Text>
                       <chakra.span fontWeight="bold">Tipp:</chakra.span> Nézz utána, milyen lehetőségekre tehetsz szert a{' '}
-                      <Link href="https://education.github.com/pack">GitHub Student Developer Pack-jével</Link>! Használd egyetemi vagy{' '}
-                      <Link href="https://admin.sch.bme.hu/profile/">SCH-s e-mail címed</Link> a csomag feloldására.
+                      <Link href="https://education.github.com/pack" isExternal>
+                        GitHub Student Developer Pack-jével
+                      </Link>
+                      ! Használd egyetemi vagy{' '}
+                      <Link href="https://admin.sch.bme.hu/profile/" isExternal>
+                        SCH-s e-mail címed
+                      </Link>{' '}
+                      a csomag feloldására.
                     </Text>
                   </StickyNote>
                 </Box>
@@ -254,33 +269,33 @@ const AboutPage: React.FC = () => {
             <AboutParagraph title={ABOUT_MAP.get('ops')} id="ops" titleSize={firstHeadingSize}>
               <Text mt={6}>
                 Egy projekt gondozása során fontos visszatérő epizód az üzemeltetés megoldása. Projektjeink{' '}
-                <Link href="https://www.docker.com/get-started" color={linkColor} _hover={linkHover}>
+                <Link href="https://www.docker.com/get-started" isExternal>
                   Docker
                 </Link>{' '}
                 konténerek segítségével kerülnek elindításra szerverünkön.
               </Text>
               <Text py={2}>
                 Van projektünk, amely a szerverünkön kívül, egy{' '}
-                <Link href="https://kubernetes.io/" color={linkColor} _hover={linkHover}>
+                <Link href="https://kubernetes.io/" isExternal>
                   Kubernetes
                 </Link>{' '}
                 klaszterben kerül kiszállításra a{' '}
-                <Link href="https://kszk.bme.hu/" color={linkColor} _hover={linkHover}>
+                <Link href="https://kszk.bme.hu/" isExternal>
                   KSZK-nak
                 </Link>{' '}
                 köszönhetően, akik gondozzák a klasztert.
               </Text>
               <Text>
                 Deploymentjeink során használatba vesszük még különféle felhő szolgáltatók platformjait: ezek a{' '}
-                <Link href="https://vercel.com/" color={linkColor} _hover={linkHover}>
+                <Link href="https://vercel.com/" isExternal>
                   Vercel
                 </Link>
                 , a{' '}
-                <Link href="https://www.netlify.com/" color={linkColor} _hover={linkHover}>
+                <Link href="https://www.netlify.com/" isExternal>
                   Netlify
                 </Link>{' '}
                 és az{' '}
-                <Link href="https://aws.amazon.com/" color={linkColor} _hover={linkHover}>
+                <Link href="https://aws.amazon.com/" isExternal>
                   AWS
                 </Link>
                 .
@@ -316,11 +331,9 @@ const AboutPage: React.FC = () => {
                   Ha még nincs mély ismereted a területen, akkor se félj, tavasszal lehetőséged van részt venni tanfolyamainkon, majd
                   mentorprogramunkban, amely során a mentor végig segíti fejlődésed a csapatban, és útközben be is csatlakozhatsz
                   projektjeink fejlesztésébe.{' '}
-                  <GatsbyLink to="/courses">
-                    <chakra.span color={linkColor} _hover={linkHover}>
-                      Tudj meg többet tanfolyamainkról és a jelentkezésről itt!
-                    </chakra.span>
-                  </GatsbyLink>
+                  <Link as={GatsbyLink} to="/courses">
+                    Tudj meg többet tanfolyamainkról és a jelentkezésről itt!
+                  </Link>
                 </Text>
               </AboutParagraph>
               <AboutParagraph title="Kommunikáció" id="contact" titleSize={secondHeadingSize}>
@@ -332,26 +345,19 @@ const AboutPage: React.FC = () => {
                     <chakra.span fontWeight="bold">1319-es szobájába {MEETING_START_TIME}-kor</chakra.span>!
                   </Text>
                   <Flex mt={{ base: 4, sm: 0 }} flex={1} whiteSpace="nowrap" width="full" direction="column" alignItems="flex-end">
-                    <HStack pb={2} as={Link} _hover={{ color: 'orange.400' }} href={GITHUB_ORG_URL}>
-                      <Text>GitHub szervezetünk</Text>
-                      <FaGithub size={socialSize} />
-                    </HStack>
-                    <HStack py={2} as={Link} _hover={{ color: 'orange.400' }} href={YOUTUBE_CHANNEL_URL}>
-                      <Text>YouTube csatornánk</Text>
-                      <FaYoutube size={socialSize} />
-                    </HStack>
-                    <HStack py={2} as={Link} _hover={{ color: 'orange.400' }} href={FACEBOOK_PAGE_URL}>
-                      <Text>Facebook oldalunk</Text>
-                      <FaFacebook size={socialSize} />
-                    </HStack>
-                    <HStack py={2} as={Link} _hover={{ color: 'orange.400' }} href={INSTAGRAM_PAGE_URL}>
-                      <Text>Instagram oldalunk</Text>
-                      <FaInstagram size={socialSize} />
-                    </HStack>
-                    <HStack py={2} as={Link} _hover={{ color: 'orange.400' }} href={`https://twitter.com/${TWITTER_USERNAME}`}>
-                      <Text>Twitter oldalunk</Text>
-                      <FaTwitter size={socialSize} />
-                    </HStack>
+                    {SOCIALS.map(({ url, Icon, text }) => (
+                      <HStack
+                        pb={2}
+                        as="a"
+                        target="_blank"
+                        _hover={{ color: 'orange.400' }}
+                        transition="color 200ms ease-in-out"
+                        href={url}
+                      >
+                        <Text>{text}</Text>
+                        <Icon size={socialSize} />
+                      </HStack>
+                    ))}
                   </Flex>
                 </Flex>
               </AboutParagraph>
