@@ -56,6 +56,13 @@ const TECH_STACK: Array<{ svg: string; alt: string; title: string; text: string 
     title: 'Spring Boot',
     text: 'A Spring platformjának előkonfigurált változata, amely roppant könnyűvé teszi a fejlesztést. Kotlin nyelvvel és Thymeleaf \
     sablonmotorral használjuk együtt. Számításigényes feladatokra alkalmazzák, többszálasan működik, és egyszerű futtatni.'
+  },
+  {
+    svg: 'react-logo',
+    alt: 'React Logo',
+    title: 'React',
+    text: 'A frontend oldali fejlesztés megkönnyítésére széles körben használt könyvtár, a React nálunk is gyakran használatba \
+    kerül. Könnyű beletanulni, és leegyszerűsítheti a CSS írást is, ha UI könyvtárakat is használunk vele.'
   }
 ]
 
@@ -217,6 +224,10 @@ const AboutPage: React.FC = () => {
                       , a{' '}
                       <Link href="https://hu.reactjs.org/" isExternal>
                         React
+                      </Link>
+                      ,{' '}
+                      <Link href="https://chakra-ui.com/" isExternal>
+                        Chakra UI
                       </Link>
                       , illetve a{' '}
                       <Link href="https://tailwindcss.com/" isExternal>
