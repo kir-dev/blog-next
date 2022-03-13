@@ -35,13 +35,34 @@ const SOCIALS: Array<{ url: string; Icon: IconType; text: string }> = [
   { url: INSTAGRAM_PAGE_URL, Icon: FaInstagram, text: 'Instagram oldalunk' },
   { url: `https://twitter.com/${TWITTER_USERNAME}`, Icon: FaTwitter, text: 'Twitter oldalunk' }
 ]
+const TECH_STACK: Array<{ svg: string; alt: string; title: string; text: string }> = [
+  {
+    svg: 'rails-logo',
+    alt: 'Rails Logo',
+    title: 'Ruby on Rails',
+    text: 'Ruby nyelvet használó összetett webes MVC framework. Villámgyorsan lehet benne fejleszteni, izgalmas a nyelv és magas szintű a \
+    Rails támogatottsága, óriási a választék a közösség által fejlesztett modulokban.'
+  },
+  {
+    svg: 'node-logo',
+    alt: 'Node Logo',
+    title: 'Node.js',
+    text: 'A piac talán legelterjedtebb technológiája, aszinkron eseményvezérelt webes JavaScriptes runtime. NestJS keretrendszerrel és \
+    TypeScript nyelvvel használjuk együtt. Kényelmesen használható, színes tech stacket lehet köré varázsolni.'
+  },
+  {
+    svg: 'spring-logo',
+    alt: 'Spring Logo',
+    title: 'Spring Boot',
+    text: 'A Spring platformjának előkonfigurált változata, amely roppant könnyűvé teszi a fejlesztést. Kotlin nyelvvel és Thymeleaf \
+    sablonmotorral használjuk együtt. Számításigényes feladatokra alkalmazzák, többszálasan működik, és egyszerű futtatni.'
+  }
+]
 
 const AboutPage: React.FC = () => {
   const stickyBoxWidth = { base: '75%', sm: '10rem', lg: '14rem' }
-  const socialSize = useBreakpointValue({ base: '1rem', lg: '1.5rem' })
   const firstHeadingSize = useBreakpointValue({ base: '4xl', sm: '5xl' })
   const secondHeadingSize = useBreakpointValue({ base: '2xl', sm: '3xl' })
-  const logoStyles = { width: useBreakpointValue({ base: '100%', md: '60%' }), height: useBreakpointValue({ base: '100%', md: '60%' }) }
   const rightSideBgs = 'url(/background/top-right4.svg) right top no-repeat,url(/background/bottom-right.svg) right bottom no-repeat'
   const leftSideBgs = 'url(/background/bottom-left.svg) left top no-repeat,url(/background/top-left.svg) left bottom no-repeat'
 
@@ -159,36 +180,27 @@ const AboutPage: React.FC = () => {
                 </Box>
               </Flex>
               <AboutParagraph title="Tech Stack" titleSize={secondHeadingSize}>
-                <Grid my={4} templateColumns={`repeat(${useBreakpointValue({ base: 1, md: 3 })}, 1fr)`} gap={{ base: 4, md: 10 }}>
-                  <InfoBox
-                    img={<Image width={logoStyles.width} height={logoStyles.height} src="/svg/rails-logo.svg" alt="Rails Logo" />}
-                    title="Ruby on Rails"
-                  >
-                    <Text textAlign={{ base: 'left', md: 'center' }}>
-                      Ruby nyelvet használó összetett webes MVC framework. Villámgyorsan lehet benne fejleszteni, izgalmas a nyelv és magas
-                      szintű a Rails támogatottsága, óriási a választék a közösség által fejlesztett modulokban.
-                    </Text>
-                  </InfoBox>
-                  <InfoBox
-                    img={<Image width={logoStyles.width} height={logoStyles.height} src="/svg/node-logo.svg" alt="Node Logo" />}
-                    title="NodeJS"
-                  >
-                    <Text textAlign={{ base: 'left', md: 'center' }}>
-                      A piac talán legelterjedtebb technológiája, aszinkron eseményvezérelt webes JavaScriptes runtime. NestJS
-                      keretrendszerrel és TypeScript nyelvvel használjuk együtt. Kényelmesen használható, színes tech stacket lehet köré
-                      varázsolni.
-                    </Text>
-                  </InfoBox>
-                  <InfoBox
-                    img={<Image width={logoStyles.width} height={logoStyles.height} src="/svg/spring-logo.svg" alt="Spring Logo" />}
-                    title="Spring Boot"
-                  >
-                    <Text textAlign={{ base: 'left', md: 'center' }}>
-                      A Spring platformjának előkonfigurált változata, amely roppant könnyűvé teszi a fejlesztést. Kotlin nyelvvel és
-                      Thymeleaf sablonmotorral használjuk együtt. Számításigényes feladatokra alkalmazzák, többszálasan működik, és egyszerű
-                      futtatni.
-                    </Text>
-                  </InfoBox>
+                <Grid
+                  my={4}
+                  templateColumns={`repeat(${useBreakpointValue({ base: 1, md: TECH_STACK.length })}, 1fr)`}
+                  gap={{ base: 4, md: 10 }}
+                >
+                  {TECH_STACK.map(({ svg, alt, title, text }) => (
+                    <InfoBox
+                      key={alt}
+                      img={
+                        <Image
+                          width={useBreakpointValue({ base: '100%', md: '60%' })}
+                          height={useBreakpointValue({ base: '100%', md: '60%' })}
+                          src={`/svg/${svg}.svg`}
+                          alt={alt}
+                        />
+                      }
+                      title={title}
+                    >
+                      <Text textAlign={{ base: 'left', md: 'center' }}>{text}</Text>
+                    </InfoBox>
+                  ))}
                 </Grid>
                 <Flex direction={{ base: 'column', sm: 'row' }}>
                   <Box flex={1}>
@@ -347,6 +359,7 @@ const AboutPage: React.FC = () => {
                   <Flex mt={{ base: 4, sm: 0 }} flex={1} whiteSpace="nowrap" width="full" direction="column" alignItems="flex-end">
                     {SOCIALS.map(({ url, Icon, text }) => (
                       <HStack
+                        key={url}
                         pb={2}
                         as="a"
                         target="_blank"
@@ -355,7 +368,7 @@ const AboutPage: React.FC = () => {
                         href={url}
                       >
                         <Text>{text}</Text>
-                        <Icon size={socialSize} />
+                        <Icon size={useBreakpointValue({ base: '1rem', lg: '1.5rem' })} />
                       </HStack>
                     ))}
                   </Flex>
