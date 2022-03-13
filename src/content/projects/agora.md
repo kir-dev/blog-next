@@ -6,10 +6,9 @@ github: https://github.com/kir-dev/agora
 website: https://agora.sch.bme.hu/
 status:
   label: Tervezés alatt
-  color: green
+  color: orange
 techs:
-  - Node
-  - Typescript
+  - NestJS
   - React
 featuredImage:
 ---

@@ -10,6 +10,7 @@ status:
 techs:
   - Ruby
   - Rails
+  - UI kit
 featuredImage: ../images/projects/pek-next.png
 ---
 

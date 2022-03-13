@@ -5,8 +5,8 @@ lead: Az ftsrg kutatócsoport statikusan generált portfolió weboldala
 github: https://github.com/kir-dev/ftsrg-next
 website: https://ftsrg.mit.bme.hu/
 status:
-  label: Üzemel
-  color: green
+  label: Átadva
+  color: gray
 techs:
   - Gatsby
   - I18Next

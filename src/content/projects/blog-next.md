@@ -9,7 +9,6 @@ status:
   color: green
 techs:
   - Gatsby
-  - Typescript
   - React
 featuredImage: ../images/projects/blog-next.png
 ---
