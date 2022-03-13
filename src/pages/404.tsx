@@ -19,7 +19,7 @@ const NotFoundPage: React.FC = () => (
         <Container>
           <Flex justifyContent="space-between">
             You've hit the void.{' '}
-            <Button as={Link} colorScheme="orange" to="/">
+            <Button as={Link} to="/">
               Go back
             </Button>
           </Flex>
