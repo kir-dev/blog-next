@@ -10,5 +10,9 @@ status:
 techs:
   - Kotlin
   - Spring Boot
-featuredImage:
+featuredImage: ../images/projects/sch-pincer.png
 ---
+
+# A kezdetek
+
+A SCH-Pincér projekt egyéni házi feladatként indult, és kinőtte magát egy szinte enterprise minőségű megbízható webalkalmazássá, amelyen a Házon belüli ételrendelések folynak.

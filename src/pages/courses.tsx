@@ -41,8 +41,8 @@ const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
                   Tanfolyamaink
                 </Heading>
                 <Text fontFamily="mono" mt={4} fontSize={{ base: 'md', sm: 'lg', md: 'xl' }}>
-                  A tavaszi félévek folyamán webes alapozót és több alkalmas tanfolyamokat tartunk, ahol megismerkedhettek a HTML és a CSS
-                  alapjaival, egy-egy keretrendszer használatával, illetve a webfejlesztés során előkerülő fogalmakkal, eszközökkel.
+                  A tavaszi félévek folyamán több alkalmas tanfolyamsorozatot tartunk. Megismerkedhettek a HTML-JS-CSS világával, egy-egy
+                  webes keretrendszerrel, illetve a webfejlesztés szakkifejezéseivel, eszközeivel.
                 </Text>
               </Box>
               <Flex justifyContent={CURRENT_COURSE_FORM_URL ? 'space-between' : 'flex-end'} mt={4}>
@@ -59,7 +59,7 @@ const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
                     Jelentkezz!
                   </Button>
                 )}
-                <Box w={{ base: '7rem', sm: '9rem', md: '14rem', lg: '12rem' }} ml={4}>
+                <Box w={{ base: '12rem', sm: '30rem', md: '24rem', lg: '26rem' }} ml={4}>
                   <Image src="/svg/techs-logo.svg" alt="Techs Logo" />
                 </Box>
               </Flex>
