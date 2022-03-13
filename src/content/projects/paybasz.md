@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Paybasz
-lead: Szakkollégiumi belsős fizetési rendszer
+lead: NFC alapú fizetőrendszer
 github: https://github.com/kir-dev/paybasz
 status:
   label: Kész
