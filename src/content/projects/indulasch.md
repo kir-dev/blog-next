@@ -21,10 +21,20 @@ Hamar jött a felismerés, miszerint ezt alkalmazni is lehetne élőben, tetsző
 Kiváló helyszínt a Schönherz Kollégium földszinti folyosója jelenti, így elindult egy olyan projekt a körben,
 mely nem csak a webalkalmazás elkészítését jelenti, hanem annak fizikai elhelyezését is. Ez lett az induláSch projekt.
 
+![result.jpg](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBa29CIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--23020bf4222d0b0bdb025538307f5acd901e1d3e/20220224_221214.jpg)
+
 # A fő célkitűzés
 
 Jelenleg úton van egy saját TV a kollégiumi földszintre, melyen a kollégisták a földszinten közlekedve tájékozódhatnak a jelenlegi tömegközlekedési indulásokról és egyéb információkról.
 Mindenki találkozott már azzal a pillanattal, amikor az adott járat az orra előtt ment el. Ez a projekt az ilyen pillanatokat hivatott megszüntetni: egy pillantás a kijelzőre, és máris megtudjuk, futni kell-e vagy sem.
+
+![bb_indul.jpg](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBa2dCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6292c18285d9549f499c1d8cd15848c5ffec8c74/IMG_20220125_180337.jpg)
+
+## Update 2022
+
+A projekt sikeresen átment 2021-ben a Küldöttgyűlésen, azóta már a TV is megvan, illetve a program is működik a kiállított TV-n. Nagy örömmel fogadta körünk a projekt végcélhoz érését.
+
+![tv_config.jpg](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBa2tCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--06a42087635b3b332ab620c00dc216eb52fe04c3/IMG_20220224_214032.jpg)
 
 # 1.0
 

@@ -31,7 +31,7 @@ Jól is haladt a projekt, azonban idővel többen leváltak a projektről, így 
 
 # Hol tartunk?
 
-Most egy kicsit újragondoltuk a projektet, jó volt az alapötlet, kicsit tovább generalizáltuk a piactér lehetőségét. Mivel a legtöbb újoncunk 2021 őszén - amikor is újraindítjuk a projektet - a **Node + TypeScript** terepén gyakorlott, így a Node-os világban tervezzük újraindítani az egészet.
+Most egy kicsit újragondoltuk a projektet, jó volt az alapötlet, kicsit tovább generalizáltuk a piactér lehetőségét. Mivel a legtöbb újoncunk 2021 őszén - amikor is újraindítjuk a projektet - a **Node + TypeScript** terepén gyakorlott, így a Node-os világban tervezzük újraindítani az egészet, **Nest** frameworkkel.
 
 Újdonságként a **React**et is beépítjük a projektbe mint frontend Javascript framework. Így már egy egész szép stack-et tudhatunk magunkénak egy **PostgreSQL** adatbázissal és **Chakra UI** komponens-könyvtárral.
 
