@@ -59,6 +59,27 @@ Ha minden jól megy, a `ruby -v` parancs kiadása után valami ilyesminek kell m
 
 ![ruby version](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBjZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2a6cb235744dd725d670a6129180682c624310ad/Screenshot%202022-02-02%20200617.png)
 
+#### Tipikus hiba: invalid byte sequence in UTF-8
+
+Ha a Windows-on használt felhasználó nevünkben space vagy ékezetes betűk szerepelnek, akkor van esély, hogy a Rails alkalmazás létrehozásakor, elindításakor az alábbi hibaüzenetet kapjuk:
+
+```bash
+C:/Ruby30-x64/lib/ruby/3.0.0/pathname.rb:50:in `match?': invalid byte sequence in UTF-8 (ArgumentError)
+```
+
+Ezt többféle képpen megoldhatjuk. A legegyszerűbb, ha létrehozunk egy új felhasználót, amit a Rails fejlesztéshez fogunk használni.
+Ezt a **Gépház/Fiókok/Családtagok és más felhasználók/Más új felhasználó felvétele** menüpont alatt tudjuk megtenni. Adjuk egy olyan nevet, amiben csak az **angol ábécé kisbetűi** találhatóak meg.
+Ezután még elérhetővé kell tennünk az új a felhasználónak is a a Ruby elérési útvonalát. Ehhez nyissuk meg a **Gépház/Rendszer/Névjegy/Speciális rendszerbeállítások/ Környezeti változók** ablakot.
+Itt válasszuk ki az eredeti felhasználónk alatt a **PATH változót és kattintsunk a Szerkesztés** gombra. Itt másoljuk ki a Ruby binárishoz tartozó útvonalat.
+Valami ilyesmi lesz:
+
+```bash
+C:\Ruby30-x64\bin
+```
+
+Ezután nyissuk meg **Rendszerváltozók alatt szerkesztésre a Path** változót. Itt az új gomb megnyomásával másoljuk be a Ruby elérési útvonalát. Ha végeztünk mentsük el a módosításokat.
+Lépjünk át az új felhasználó fiókba és már elkezdhetjük használni a Ruby környezetet.
+
 #### Megjegyzés a WSL-ről
 
 Az interneten sok útmutatót találhat az ember, ahol a [WSL](https://docs.microsoft.com/en-us/windows/wsl/) (_Windows Subsystem for Linux_) segítségével telepítik fel a keretrendszert. Bár működőképes, de sok olyan mellékhatása van, amit ezen cikk keretében nem tudok mind felsorolni. Ezért aki komolyabban szeretne foglalkozni a Ruby fejlesztéssel, annak ajánlanék inkább egy [Linux virtuális gépet](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview), vagy második operációs rendszerként ([Dual BOOT](https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/)) egy Linux disztribúciót felrakni.
