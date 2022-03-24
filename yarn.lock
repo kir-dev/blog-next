@@ -2565,17 +2565,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/open-sans@npm:4.5.6":
-  version: 4.5.6
-  resolution: "@fontsource/open-sans@npm:4.5.6"
-  checksum: 49729e2de99e952445535384063339a8ea2498aaa636bae8e1366e74f32b0474ee22edccbf6ca70f98a5ec10b5f269b96ed555541b600223ae9567f632a92579
+"@fontsource/open-sans@npm:4.5.8":
+  version: 4.5.8
+  resolution: "@fontsource/open-sans@npm:4.5.8"
+  checksum: 62b00d6b9b51a831c274c04c4e8249883b4cc48cfa040fd54a72a9f9dbb7d367b116495df7a1aa356873589a0afc14dbd523d57cb1061af26768fc4c28274822
   languageName: node
   linkType: hard
 
-"@fontsource/poppins@npm:4.5.3":
-  version: 4.5.3
-  resolution: "@fontsource/poppins@npm:4.5.3"
-  checksum: c674de4cd123a5fa52e2e73d6f5190a320a48d8608c2d4053bee92b252033a3d7f805523d2759b351870901217c4a3b0d1087a837b2be22741ba90fcbb102a1b
+"@fontsource/poppins@npm:4.5.5":
+  version: 4.5.5
+  resolution: "@fontsource/poppins@npm:4.5.5"
+  checksum: 221f2cd88180245a5e76cb591bbc2a58d84c3a67283e44defc6e419f0a2b9ab6f9b334515c08e6e221f05dce0cf0681179c239c4820b39e09210280faf8b8a36
   languageName: node
   linkType: hard
 
@@ -12200,8 +12200,8 @@ __metadata:
     "@chakra-ui/system": 1.11.2
     "@emotion/react": 11.8.2
     "@emotion/styled": 11.8.1
-    "@fontsource/open-sans": 4.5.6
-    "@fontsource/poppins": 4.5.3
+    "@fontsource/open-sans": 4.5.8
+    "@fontsource/poppins": 4.5.5
     "@reach/router": 1.3.4
     "@types/classnames": 2.3.1
     "@types/node": 16.11.26
