@@ -49,14 +49,14 @@ Ez azért hasznos, mert az induláSch API-t egy natív mobilalkalmazás is haszn
 A második verzió alapjai sok lehetőséget adnak: elkészült egy widget felület, mely csempékben jelenít meg további információkat a pozícióhoz, mint például időjárás és közeli Bubi állomás elérhető biciklijei.
 Tovább lett fejlesztve a mobilverzió is, progresszív webalkalmazásként szinte natív élményt kapunk az alkalmazást használva.
 
-![2.0 app](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBTdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--133cebeeb425a7e39b267eddc354d9759b88b455/iPhone.png)
+![2.0 app](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBTdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--133cebeeb425a7e39b267eddc354d9759b88b455/iPhone.png)
 
 # Kiosk mód
 
 Kijelzőre és mobilra más és más funkciók kellenek. Célszerű volt valamilyen módon megkülönböztetni a kettőt. A kiosk mód jobban van optimalizálva olyan kijelzőhöz, melyhez ritkán vagy egyáltalán nem nyúlunk.
 Ezen mód különlegessége az SchPincér widget, mely esetleges nyitások elérhető rendeléseit jelzi ki a kollégisták számára.
 
-![Kiosk mód](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBUQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--cf52887cf07293ce99f1da21ff656b80bb44025b/TV.png)
+![Kiosk mód](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBUQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--cf52887cf07293ce99f1da21ff656b80bb44025b/TV.png)
 
 # iOS és watchOS
 
@@ -66,4 +66,4 @@ Tapasztalatunk szerint a progresszív webalkalmazás elég jól közelíti egy n
 Az alkalmazás az ugyancsak fiatalnak számító SwiftUI-ban íródott.
 Jelenleg még fejlesztés alatt áll az app, egy nap lehet elérhető lesz az AppStore-okban.
 
-![watchOS app](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBUZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a227e5a001c2ce1cfb5b594f8fa4c4a0be338107/aw_mockup.jpg)
+![watchOS app](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBUZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a227e5a001c2ce1cfb5b594f8fa4c4a0be338107/aw_mockup.jpg)

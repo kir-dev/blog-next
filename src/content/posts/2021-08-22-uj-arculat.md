@@ -49,7 +49,7 @@ A tavaszi félév elején elkezdtük egyeztetni, hogy tudnánk feldobni a Kir-De
 
 A design elkészítésére az [schdesign](schdesign.hu)-t kerestük meg, és a félév végére össze is jött a végső design. Mostanában indult el a rendelés, hamarosan a nyomtatás is el tud kezdődni. Lentebb az általuk kialakított látványtervet láthatjátok.
 
-![poloterv](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ddf987fccff2f62b8f00b24e1c52d7b743489f98/kirdev_mockup.png)
+![poloterv](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ddf987fccff2f62b8f00b24e1c52d7b743489f98/kirdev_mockup.png)
 
 ## Sikeres bemutatkozó
 
@@ -57,10 +57,10 @@ Augusztusban a VIK Gólyatáborában nagy sikerrel mutatkoztunk be a gólyáknak
 
 Örülünk neki, hogy ilyen nagyszerű motivációval készülnek a gólyák nekifutni az egyetemi életnek. Reméljük, a következő tanfolyamidőszakban sokukkal találkozunk majd!
 
-![standolas](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--278668d7c14e082c2921e599742295eb0292f74f/20210814_145833_vince.jpg)
+![standolas](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--278668d7c14e082c2921e599742295eb0292f74f/20210814_145833_vince.jpg)
 
 Sok projekt indult, zárult és futott tovább ebben a félévben is sikeresen, lelkes újoncok is bekapcsolódtak a kör életébe. A Simonyi Nyári Táborban készült képünkkel búcsúzom Tőletek ebben a posztban:
 
-![snyt](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--219692dc85b16c4d08e17aef4d357312b8c14aa8/20210718_095824_talli.jpg)
+![snyt](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--219692dc85b16c4d08e17aef4d357312b8c14aa8/20210718_095824_talli.jpg)
 
 Köszönet a fotókért a [SPOT](https://spot.sch.bme.hu/) csapatának.

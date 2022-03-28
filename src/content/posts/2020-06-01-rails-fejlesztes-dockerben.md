@@ -144,7 +144,7 @@ docker-compose up
 
 A [localhost:3000](http://localhost:3000/) megtekinthetjük a Rails szerver kezdőoldalát.
 
-![Imgur](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--27eaddfb7a3d78c6cfdb73d085bbbe92772fc38e/5DGpHV2.png)
+![Imgur](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--27eaddfb7a3d78c6cfdb73d085bbbe92772fc38e/5DGpHV2.png)
 
 ## RubyMine konfigurálása
 
@@ -181,19 +181,19 @@ rails g scaffold ruby_mine name:string points:integer
 
 Ha mindent jól csináltunk, akkor az alábbi sorok jelennek meg a konzolon:
 
-![Imgur](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--872fc944eb0973f81d94c712172e587eccf45ab9/wDxKCEh.png)
+![Imgur](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--872fc944eb0973f81d94c712172e587eccf45ab9/wDxKCEh.png)
 
 Láthajuk, hogy létrejöttek oldalak, tesztek, valamint egy kontroller is. Főként ezeket fogjuk használni az IDE tesztelés során. A **zöld háromszög** gomb lenyomásával elindítható a webszerver, ami a [localhost:3000](http://localhost:3000/)-es címen elérhető.
 
-![Imgur](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--18354d5dc8bdcfc7b68608ff5f79279b5fa88230/IJgL6cZ.png)
+![Imgur](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--18354d5dc8bdcfc7b68608ff5f79279b5fa88230/IJgL6cZ.png)
 
 Ezután próbáljuk ki a többi fontosabb eszköz működését az IDE-ben. A debug, miután beállítottuk, hogy docker exec-kel legyen használva, egyből használható.
 
-![Imgur](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c4432e0d12b637d090fc87eb7400b42d5e6574e9/Dgln72k.png)
+![Imgur](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c4432e0d12b637d090fc87eb7400b42d5e6574e9/Dgln72k.png)
 
 Teszteket is könnyedén futthatunk az IDE GUI-ján keresztül. Ehhez navigáljunk egy teszteket tartalmazó fájl-hoz, mondjuk **test/controllers/ruby_mines_controller_test.rb**-hez, itt a **jobb egérgomb** lenyomásával megjelennek a kontextusfüggő lehetőségek. Ezek közül válasszuk a **Run Minitest:**-lehetőséget. A tesztek futásának eredményét is megjeleníti a fejlesztőkörnyezet. Emellett lehetőség van a tesztek közül csak egyet futtani, valamint debug módban is elindíthatjuk a teszteket.
 
-![Imgur](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--30e75bb65e909367e78a48617bf2c77c476eae7d/IrfSvfK.png)
+![Imgur](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--30e75bb65e909367e78a48617bf2c77c476eae7d/IrfSvfK.png)
 
 A code-completion és az intelligens navigáció is működik, bár ezekhez nem szükséges a nyelvi környezet, az IDE önállóan nyújtja ezeket a szolgáltatásokat. Szinte minden lehetőség elérhető a konténerből, amit a natívan használt verzió támogat. Egy kivételt találtam: a natív ruby-t használó IDE-ben van lehetőség egyes tesztek futtatása után kilistázni a tesztfedettséget. Valamint az érintett sorokat is színezi a környezet annak függvényében, hogy érintette-e őket az adott futás. Ez a lehetőség még konténeres használat során nem elérhető, de a fejlesztők már tudnak a [problémáról][1].(A PyCharm alkalmazásban már megoldották, hogy elérhető legyen remote használatával ez a funkcionalitás.)
 
@@ -217,19 +217,19 @@ rails g scaffold vs_code name:string points:integer
 
 A fenti parancs kimenetén a létrehozott fájlok nevére kattintva gyorsan megnyithatjuk az adott fájlt.
 
-![Imgur](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--da81d0c31ca2cfdeb9a9d36e295513b17a105729/HGVdaEL.png)
+![Imgur](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--da81d0c31ca2cfdeb9a9d36e295513b17a105729/HGVdaEL.png)
 
 Ha sikeresen felvettük a szükséges konfigurációkat a launch.json fájlba, akkor a **Run** tabon kiválaszthatjuk a **Rails server** konfigurációt és a zöld háromszöggel elindíthatjuk a szervert.
 
-![Imgur](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--53b6d15702f300d9185afb976cb69ae8ce2dfd24/Ewk3Aua.png)
+![Imgur](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--53b6d15702f300d9185afb976cb69ae8ce2dfd24/Ewk3Aua.png)
 
 A debuggoláshoz **Run** tabon, válasszuk ki a **Listen for rdebug-ide** konfigurációt, majd indítsuk el. Felvehetünk breakpontokat, megnézhetjük a stack trace-t, valamint megfigyelhetjük a változók értékeit.
 
-![Imgur](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dcd0215d42b2bef992e015847ba6ea4c81933790/NcIQcFv.png)
+![Imgur](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dcd0215d42b2bef992e015847ba6ea4c81933790/NcIQcFv.png)
 
 A teszteket a **Run** tabon a **Rails test** konfiguráció elindításával tudjuk futtatni. A VSCode tesztfuttatás terén kevesebb lehetőséget biztosít, mint a RubyMine. Külön konfiguráció nélkül csak egyszerre tudjuk futtatni a teszteket, egy kiválasztott tesztet önállóan nem indíthatunk el. Valamint a tesztek debug-olásaház is új konfigurációt kell hozzáadni a launch.json fájlhoz.
 
-![Imgur](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6437fa5153989fa763ee4893cba7ee6eddf34f01/c2vV8WC.png)
+![Imgur](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6437fa5153989fa763ee4893cba7ee6eddf34f01/c2vV8WC.png)
 
 ## Összefoglalás
 

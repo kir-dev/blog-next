@@ -24,7 +24,7 @@ projekt. Ezt tükrözi a körünk neve is (Kir-Dev == Kollégiumi Információs
 Rendszer fejlesztők, de ez így hosszú is és legalább egy nagyságrenddel kevésbé
 hangzatos is).
 
-![VIR nyitóoldal az induláskor](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBPdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--58e32e21c0436e16d143d778b2a1c207b29b052f/vir_landing.jpg)
+![VIR nyitóoldal az induláskor](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBPdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--58e32e21c0436e16d143d778b2a1c207b29b052f/vir_landing.jpg)
 
 A VIR valójában egy meta-projekt, ami [több kisebb alkalmazást](https://vir.sch.bme.hu/index.html)
 fogott össze. Lassan, de biztosan elhalványult az eredeti elképzelés és a kar

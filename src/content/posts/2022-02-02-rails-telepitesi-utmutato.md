@@ -47,17 +47,17 @@ Ezeknek a telepítésénél maradhatunk az alapértelmezett beállításoknál.
 A telepítőt a [rubyinstaller.org](https://rubyinstaller.org/downloads/) oldalról tudjuk letölteni. A (_2022 tavaszi_) tanfolyamhoz a **Ruby+Devkit3.0.3-(x64)** verziót töltsük le, majd futtassuk.
 
 A telepítő varázslóban mindent hagyhatunk az alapértelmezett értéken.
-![installler](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBidz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2be162588d0e615761c1e5b77a2d2b676dcd05ae/Screenshot%202022-02-02%20195239.png)
+![installler](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBidz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2be162588d0e615761c1e5b77a2d2b676dcd05ae/Screenshot%202022-02-02%20195239.png)
 
 A telepítés után előjön az MSYS2 és MINGW telepítője, amit szintén hagyhatunk alapértelmezett beállításokkal -> _nyomjunk entert_.
-![MSYS2 & MINGW](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBjQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4c5b0d303b5c72fa47c4031c01441630137e3f81/Screenshot%202022-02-02%20195550.png)
+![MSYS2 & MINGW](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBjQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4c5b0d303b5c72fa47c4031c01441630137e3f81/Screenshot%202022-02-02%20195550.png)
 
 Nem kell megijedni, ha warningok és látszólagos hibák jönnek elő, ha a végén van egy zöld success felirat.
-![install done](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBjUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--80fec14e803267d5be072f2c62dba92f587fdc04/Screenshot%202022-02-02%20195759.png)
+![install done](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBjUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--80fec14e803267d5be072f2c62dba92f587fdc04/Screenshot%202022-02-02%20195759.png)
 
 Ha minden jól megy, a `ruby -v` parancs kiadása után valami ilyesminek kell megjelenni:
 
-![ruby version](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBjZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2a6cb235744dd725d670a6129180682c624310ad/Screenshot%202022-02-02%20200617.png)
+![ruby version](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBjZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2a6cb235744dd725d670a6129180682c624310ad/Screenshot%202022-02-02%20200617.png)
 
 #### Tipikus hiba: invalid byte sequence in UTF-8
 
@@ -134,7 +134,7 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | 
 
 Valahogy így kell kinéznie:
 
-![succesfull install](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBkQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f49ccd11ac9ef79d6330804d49c1d7122652af87/Screenshot%202022-02-03%20133723.png)
+![succesfull install](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBkQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f49ccd11ac9ef79d6330804d49c1d7122652af87/Screenshot%202022-02-03%20133723.png)
 
 #### Megfelelő Ruby verzió telepítése
 
@@ -212,7 +212,7 @@ Use Ctrl-C to stop
 
 és a [http://127.0.0.1:3000](http://127.0.0.1:3000) címre ellátogatva a következőt kell látni:
 
-![welcome screen](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBjdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b03cce34ab2bf5bb5f01a6258a2c77bce8436955/Screenshot%202022-02-02%20205507.png)
+![welcome screen](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBjdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b03cce34ab2bf5bb5f01a6258a2c77bce8436955/Screenshot%202022-02-02%20205507.png)
 
 ## Végszó
 

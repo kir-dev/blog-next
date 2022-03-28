@@ -19,7 +19,7 @@ Szerencsére a sors keze nem volt teljesen kegyetlen velünk, és szert tettünk
 
 Az új szerver neve, megtartva a Kir-Dev hagyományos nomenklatúráját, szintén a Family Guy sorozat szereplői közül került ki. Ezúttal Lois-ra esett a választás, és szerencsénkre hardware-es felszereltségében nem kelt csalódást: 2U-s belsejében 24 processzmag mellett 64GB RAM teljesít szolgálatot. Ahogy az alábbi képen is látszik, számítási teljesítményből nem lesz hiány.
 
-![Lois htop](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBOZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--88c907db1188597e2435cdd81dae97c9264b1df0/lois_htop.png)
+![Lois htop](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBOZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--88c907db1188597e2435cdd81dae97c9264b1df0/lois_htop.png)
 
 ## A jövő
 

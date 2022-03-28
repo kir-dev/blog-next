@@ -12,4 +12,4 @@ további részleteket is találsz.
 
 Találkozunk jövőhét kedden!
 
-![tanfolyam plakát](https://warp.kir-dev.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBPUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f53ba1ac0da36be25fe0be9347c80ac5eaaba35a/tanf_plakat_2014.jpg)
+![tanfolyam plakát](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBPUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f53ba1ac0da36be25fe0be9347c80ac5eaaba35a/tanf_plakat_2014.jpg)
