@@ -1,7 +1,7 @@
 import { CheckIcon, MoonIcon, WarningIcon } from '@chakra-ui/icons'
 import { Box, Flex, Heading, HStack, Image, Link as ChakraLink, Tag, Text } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
-import { Link } from 'gatsby'
+import { Link as GatsbyLink } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React from 'react'
 import { FaGithub } from 'react-icons/fa'
@@ -43,7 +43,7 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
 
   return (
     <Flex direction="column" bg={useColorModeValue('white', 'gray.800')} borderWidth="1px" rounded="lg" shadow="lg" position="relative">
-      <Box as={Link} maxH="12rem" overflowY="hidden" to={project.fields.slug} cursor="pointer">
+      <Box as={GatsbyLink} maxH="12rem" overflowY="hidden" to={project.fields.slug} cursor="pointer">
         {featuredImage ? (
           <GatsbyImage image={featuredImage} alt="Project preview" objectFit="cover" imgStyle={{ borderRadius: '0.3rem 0.3rem 0 0' }} />
         ) : (
@@ -54,7 +54,7 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
       <Flex flex={1} h="fit-content" py={4} px={4} direction="column">
         <Box flex={1}>
           <Flex justifyContent="space-between" direction={{ base: 'column-reverse', md: 'row' }}>
-            <Heading as={Link} fontSize="2xl" fontWeight="400" lineHeight="tight" to={project.fields.slug}>
+            <Heading as={GatsbyLink} fontSize="2xl" fontWeight="400" lineHeight="tight" to={project.fields.slug}>
               {project.frontmatter.title}
             </Heading>
             <HStack justifyContent="flex-end" fontSize="xs" color="gray.600">
@@ -68,9 +68,9 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
           <Flex wrap="wrap" justifyContent="space-between" direction={{ base: 'column', md: 'row' }}>
             <HStack alignItems="center">
               <FaGithub />
-              <Text as={ChakraLink} whiteSpace="nowrap" fontSize="md" href={project.frontmatter.github}>
+              <ChakraLink whiteSpace="nowrap" fontSize="md" isExternal href={project.frontmatter.github}>
                 {`kir-dev/${githubUrlEnd}`}
-              </Text>
+              </ChakraLink>
             </HStack>
             <HStack flex={1} justifyContent="flex-end">
               {project.frontmatter.techs.map((tech) => (

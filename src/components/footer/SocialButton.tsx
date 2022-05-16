@@ -17,8 +17,6 @@ const SocialButton: React.FC<SocialButtonProps> = ({ children, label, href, size
       w={size}
       h={size}
       cursor="pointer"
-      as={Link}
-      href={href}
       display="inline-flex"
       alignItems="center"
       justifyContent="center"
@@ -28,7 +26,9 @@ const SocialButton: React.FC<SocialButtonProps> = ({ children, label, href, size
       }}
       title={label}
     >
-      {children}
+      <Link isExternal href={href}>
+        {children}
+      </Link>
     </Button>
   )
 }
