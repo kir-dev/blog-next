@@ -10,26 +10,26 @@ interface SocialButtonProps {
 
 const SocialButton: React.FC<SocialButtonProps> = ({ children, label, href, size }) => {
   return (
-    <Button
-      bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-      rounded="full"
-      p={0}
-      w={size}
-      h={size}
-      cursor="pointer"
-      as={Link}
-      href={href}
-      display="inline-flex"
-      alignItems="center"
-      justifyContent="center"
-      transition="background 0.3s ease"
-      _hover={{
-        bg: 'orange.500'
-      }}
-      title={label}
-    >
-      {children}
-    </Button>
+    <Link isExternal href={href} rounded="full">
+      <Button
+        bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+        rounded="full"
+        p={0}
+        w={size}
+        h={size}
+        cursor="pointer"
+        display="inline-flex"
+        alignItems="center"
+        justifyContent="center"
+        transition="background 0.3s ease"
+        _hover={{
+          bg: 'orange.500'
+        }}
+        title={label}
+      >
+        {children}
+      </Button>
+    </Link>
   )
 }
 

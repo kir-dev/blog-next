@@ -47,16 +47,10 @@ const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
               </Box>
               <Flex justifyContent={CURRENT_COURSE_FORM_URL ? 'space-between' : 'flex-end'} mt={4}>
                 {CURRENT_COURSE_FORM_URL && (
-                  <Button
-                    display={{ base: 'inherit', md: 'none' }}
-                    color="white"
-                    bg="orange.500"
-                    _hover={{ bg: 'orange.600' }}
-                    as={ChakraLink}
-                    px={4}
-                    href={CURRENT_COURSE_FORM_URL}
-                  >
-                    Jelentkezz!
+                  <Button display={{ base: 'inherit', md: 'none' }} color="white" bg="orange.500" _hover={{ bg: 'orange.600' }} px={4}>
+                    <ChakraLink isExternal href={CURRENT_COURSE_FORM_URL}>
+                      Jelentkezz!
+                    </ChakraLink>
                   </Button>
                 )}
                 <Box w={{ base: '12rem', sm: '30rem', md: '24rem', lg: '26rem' }} ml={4}>
@@ -66,8 +60,10 @@ const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
             </Flex>
             {CURRENT_COURSE_FORM_URL && (
               <Box display={{ base: 'none', md: 'inherit' }} mt={4}>
-                <Button color="white" bg="orange.500" _hover={{ bg: 'orange.600' }} as={ChakraLink} px={8} href={CURRENT_COURSE_FORM_URL}>
-                  Jelentkezz!
+                <Button color="white" bg="orange.500" _hover={{ bg: 'orange.600' }} px={8}>
+                  <ChakraLink isExternal href={CURRENT_COURSE_FORM_URL}>
+                    Jelentkezz!
+                  </ChakraLink>
                 </Button>
               </Box>
             )}
@@ -124,8 +120,10 @@ const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
               </Heading>
               <Flex flex={1} justifyContent="flex-end" pl={{ base: 0, md: 8 }} mt={{ base: 4, md: 0 }}>
                 {CURRENT_COURSE_FORM_URL ? (
-                  <Button color="white" bg="orange.500" _hover={{ bg: 'orange.600' }} as={ChakraLink} px={8} href={CURRENT_COURSE_FORM_URL}>
-                    Jelentkezz!
+                  <Button color="white" bg="orange.500" _hover={{ bg: 'orange.600' }} px={8}>
+                    <ChakraLink isExternal href={CURRENT_COURSE_FORM_URL}>
+                      Jelentkezz!
+                    </ChakraLink>
                   </Button>
                 ) : (
                   <Button colorScheme={useColorModeValue('blackAlpha', 'blue')} variant="outline">

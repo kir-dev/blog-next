@@ -45,9 +45,9 @@ const PekPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
             <Flex wrap="wrap" justifyContent="space-between" direction={{ base: 'column', md: 'row' }}>
               <HStack alignItems="center">
                 <FaGithub />
-                <Text as={ChakraLink} whiteSpace="nowrap" fontSize="md" to={project.frontmatter.github}>
+                <ChakraLink whiteSpace="nowrap" fontSize="md" isExternal href={project.frontmatter.github}>
                   kir-dev/pek-next
-                </Text>
+                </ChakraLink>
               </HStack>
               <HStack flex={1} justifyContent="flex-end">
                 {project.frontmatter.techs.map((tech) => (

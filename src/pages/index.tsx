@@ -120,29 +120,20 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
                       </Box>
                       <HStack direction="row" alignItems={{ base: 'baseline', md: 'end' }} my={6} mx={{ base: 4, lg: 0 }} spacing={6}>
                         {useBreakpointValue({ lg: <Spacer /> })}
-                        <Box
-                          as={ChakraLink}
-                          color={useColorModeValue('black', 'grey.200')}
-                          _hover={{ color: 'orange.500' }}
-                          href={GITHUB_ORG_URL}
-                        >
-                          <FaGithub size={socialSize} />
+                        <Box color={useColorModeValue('black', 'grey.200')} _hover={{ color: 'orange.500' }}>
+                          <ChakraLink isExternal href={GITHUB_ORG_URL}>
+                            <FaGithub size={socialSize} />
+                          </ChakraLink>
                         </Box>
-                        <Box
-                          as={ChakraLink}
-                          color={useColorModeValue('black', 'grey.200')}
-                          _hover={{ color: 'orange.500' }}
-                          href={YOUTUBE_CHANNEL_URL}
-                        >
-                          <FaYoutube size={socialSize} />
+                        <Box color={useColorModeValue('black', 'grey.200')} _hover={{ color: 'orange.500' }}>
+                          <ChakraLink isExternal href={YOUTUBE_CHANNEL_URL}>
+                            <FaYoutube size={socialSize} />
+                          </ChakraLink>
                         </Box>
-                        <Box
-                          as={ChakraLink}
-                          color={useColorModeValue('black', 'grey.200')}
-                          _hover={{ color: 'orange.500' }}
-                          href={FACEBOOK_PAGE_URL}
-                        >
-                          <FaFacebook size={socialSize} />
+                        <Box color={useColorModeValue('black', 'grey.200')} _hover={{ color: 'orange.500' }}>
+                          <ChakraLink isExternal href={FACEBOOK_PAGE_URL}>
+                            <FaFacebook size={socialSize} />
+                          </ChakraLink>
                         </Box>
                       </HStack>
                     </Flex>

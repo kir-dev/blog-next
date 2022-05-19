@@ -11,7 +11,7 @@ interface BlogAuthorProps {
 
 const BlogAuthor: React.FC<BlogAuthorProps> = ({ date, name, hasLongDate }) => (
   <HStack spacing={2} display="flex" alignItems="center">
-    <Link to={`${PEK_URL}/profiles/${name}`}>
+    <Link isExternal href={`${PEK_URL}/profiles/${name}`}>
       <Image
         borderRadius="full"
         boxSize={hasLongDate ? '2.5rem' : '2rem'}
@@ -22,9 +22,9 @@ const BlogAuthor: React.FC<BlogAuthorProps> = ({ date, name, hasLongDate }) => (
 
     {hasLongDate ? (
       <HStack flex={1}>
-        <Text as={Link} fontWeight="medium" fontSize="md" href={`${PEK_URL}/profiles/${name}`}>
+        <Link fontWeight="medium" fontSize="md" isExternal href={`${PEK_URL}/profiles/${name}`}>
           {name}
-        </Text>
+        </Link>
         <Text>—</Text>
         <Text fontWeight="light" fontSize="md" textColor={useColorModeValue('gray.600', 'gray.400')}>
           {date.toLocaleTimeString('hu-HU', {
@@ -39,9 +39,9 @@ const BlogAuthor: React.FC<BlogAuthorProps> = ({ date, name, hasLongDate }) => (
       </HStack>
     ) : (
       <Box flex={1}>
-        <Text as={Link} fontWeight="medium" fontSize="sm" to={`${PEK_URL}/profiles/${name}`}>
+        <Link fontWeight="medium" fontSize="md" isExternal href={`${PEK_URL}/profiles/${name}`}>
           {name}
-        </Text>
+        </Link>
         <Text whiteSpace="nowrap" fontWeight="light" fontSize="xs" textColor={useColorModeValue('gray.600', 'gray.400')}>
           {date.toLocaleDateString('hu-HU', {
             year: 'numeric',

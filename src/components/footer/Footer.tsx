@@ -32,7 +32,7 @@ const Footer: React.FC = () => (
           <Flex flex={1} justifyContent={{ base: 'center', sm: 'flex-start' }}>
             <HStack>
               <KirdevOriginal style={{ height: '3rem' }} />
-              <Link href="https://vercel.com?utm_source=kir-dev&utm_campaign=oss">
+              <Link isExternal href="https://vercel.com?utm_source=kir-dev&utm_campaign=oss">
                 <Image height="1.75rem" src="/svg/powered-by-vercel.svg" alt="Vercel Logo" />
               </Link>
             </HStack>

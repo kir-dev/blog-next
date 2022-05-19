@@ -44,9 +44,9 @@ const MemberFullCard: React.FC<{ member: MemberProps }> = ({ member }) => {
           </Heading>
           <Flex alignItems="center" mt={4}>
             <FaUserCircle />
-            <Text pl={3} fontSize="sm" as={Link} href={`${PEK_URL}/profiles/${member.pekUsername}`}>
+            <Link pl={3} fontSize="sm" isExternal href={`${PEK_URL}/profiles/${member.pekUsername}`}>
               profiles/{member.pekUsername}
-            </Text>
+            </Link>
           </Flex>
           <Flex alignItems="center">
             <FaBriefcase />
