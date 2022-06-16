@@ -13005,7 +13005,7 @@ __metadata:
     gatsby-transformer-sharp: 4.10.0
     gatsby-transformer-yaml: 4.10.0
     modern-normalize: 1.1.0
-    prettier: 2.6.1
+    prettier: 2.7.1
     react: 17.0.2
     react-dom: 17.0.2
     react-helmet: 6.1.0
@@ -15978,12 +15978,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.6.1":
-  version: 2.6.1
-  resolution: "prettier@npm:2.6.1"
+"prettier@npm:2.7.1":
+  version: 2.7.1
+  resolution: "prettier@npm:2.7.1"
   bin:
     prettier: bin-prettier.js
-  checksum: 78be1f8a3ddfad7c3d8a854b6c8941a3bb1ddfca4225c38d778e0fe1029a55368f71b3bbefff82c689015fbb4d391ec44add957f01308ad2725e01a7c1f37cb6
+  checksum: 55a4409182260866ab31284d929b3cb961e5fdb91fe0d2e099dac92eaecec890f36e524b4c19e6ceae839c99c6d7195817579cdffc8e2c80da0cb794463a748b
   languageName: node
   linkType: hard
 
