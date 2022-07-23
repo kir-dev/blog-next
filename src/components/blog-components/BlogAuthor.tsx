@@ -1,15 +1,14 @@
 import { Box, HStack, Image, Link, Text } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
-import React from 'react'
 import { PEK_URL } from '~utils/configurations'
 
-interface BlogAuthorProps {
+type Props = {
   date: Date
   name: string
   hasLongDate?: boolean
 }
 
-const BlogAuthor: React.FC<BlogAuthorProps> = ({ date, name, hasLongDate }) => (
+export const BlogAuthor = ({ date, name, hasLongDate }: Props) => (
   <HStack spacing={2} display="flex" alignItems="center">
     <Link isExternal href={`${PEK_URL}/profiles/${name}`}>
       <Image
@@ -53,5 +52,3 @@ const BlogAuthor: React.FC<BlogAuthorProps> = ({ date, name, hasLongDate }) => (
     )}
   </HStack>
 )
-
-export default BlogAuthor

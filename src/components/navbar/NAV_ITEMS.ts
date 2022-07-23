@@ -1,8 +1,4 @@
-export interface NavItem {
-  label: string
-  children?: Array<NavItem>
-  href: string
-}
+import { NavItem } from '~types/navItem'
 
 export const NAV_ITEMS: Array<NavItem> = [
   {

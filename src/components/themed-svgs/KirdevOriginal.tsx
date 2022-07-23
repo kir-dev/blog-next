@@ -1,12 +1,11 @@
 /* eslint-disable max-len */
 import { useColorModeValue } from '@chakra-ui/system'
-import * as React from 'react'
 
-type LogoProps = {
+type Props = {
   style: object
 }
 
-const KirdevOriginal: React.FC<LogoProps> = ({ style }) => {
+export const KirdevOriginal = ({ style }: Props) => {
   const styleMainColor = { fill: '#f15a29' }
 
   return (

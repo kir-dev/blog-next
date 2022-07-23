@@ -1,12 +1,11 @@
 /* eslint-disable max-len */
 import { useColorModeValue } from '@chakra-ui/system'
-import * as React from 'react'
 
-type LogoProps = {
+type Props = {
   style: object
 }
 
-const KirdevNamed: React.FC<LogoProps> = ({ style }) => (
+export const KirdevNamed = ({ style }: Props) => (
   <svg style={style} fill={useColorModeValue('black', '#EBECEC')} viewBox="0 0 145 30" xmlns="http://www.w3.org/2000/svg">
     <g>
       <path d="M60.3807 11.1986H55.7419L50.9485 16.7582V4.00025H47V25.7199H50.9485V19.9184L56.1272 25.7199H61.1353L54.2975 18.3661L60.3807 11.1986Z" />

@@ -2,12 +2,11 @@ import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons'
 import { Box, Collapse, Flex, IconButton, useDisclosure } from '@chakra-ui/react'
 import { useColorMode, useColorModeValue } from '@chakra-ui/system'
 import { Link } from 'gatsby'
-import * as React from 'react'
 import KirdevNamed from '~components/themed-svgs/KirdevNamed'
-import DesktopNav from './DesktopNav'
-import MobileNav from './MobileNav'
+import { DesktopNav } from './desktop/DesktopNav'
+import { MobileNav } from './mobile/MobileNav'
 
-const WithSubnavigation: React.FC = () => {
+export const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure()
   const { colorMode, toggleColorMode } = useColorMode()
 
@@ -67,5 +66,3 @@ const WithSubnavigation: React.FC = () => {
     </Box>
   )
 }
-
-export default WithSubnavigation

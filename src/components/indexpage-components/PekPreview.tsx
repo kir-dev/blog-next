@@ -1,13 +1,12 @@
-/* eslint-disable react/destructuring-assignment */
 import { Box, Flex, Heading, HStack, Image, Link as ChakraLink, Tag, Text } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
 import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import React from 'react'
 import { FaGithub } from 'react-icons/fa'
-import { getIcon, ProjectPreviewProps } from '~components/project-components/ProjectPreview'
+import { ProjectPreviewProps } from '~types/component-props/projectPreview.props'
+import { getIcon } from '~utils/commonFunctions'
 
-const PekPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
+export const PekPreview = ({ project }: ProjectPreviewProps) => {
   const featuredImage = getImage(project.frontmatter.featuredImage)
   const statusIcon = getIcon(project.frontmatter.status)
 

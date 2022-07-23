@@ -1,42 +1,12 @@
-import { CheckIcon, MoonIcon, WarningIcon } from '@chakra-ui/icons'
 import { Box, Flex, Heading, HStack, Image, Link as ChakraLink, Tag, Text } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
 import { Link as GatsbyLink } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import React from 'react'
 import { FaGithub } from 'react-icons/fa'
-import { ProjectProps } from '~types/project.props'
-import { CircleIcon } from './CircleIcon'
+import { ProjectPreviewProps } from '~types/component-props/projectPreview.props'
+import { getIcon } from '~utils/commonFunctions'
 
-export interface ProjectPreviewProps {
-  project: {
-    fields: {
-      slug: string
-    }
-    frontmatter: ProjectProps
-  }
-}
-
-export function getIcon(status: { label: string; color: string }): JSX.Element {
-  let { color } = status
-  color = color.trim()
-  color = color === 'grey' ? 'gray' : color
-  const tone: string = color === 'gray' ? useColorModeValue('.600', '.400') : '.500'
-  switch (status.label) {
-    case 'Archivált':
-      return <MoonIcon color={color + tone} />
-    case 'Kész':
-    case 'Üzemel':
-      return <CheckIcon color={color + tone} />
-    case 'Áll':
-    case 'Megszakadt':
-      return <WarningIcon color={color + tone} />
-    default:
-      return <CircleIcon color={color + tone} />
-  }
-}
-
-const ProjectPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
+export const ProjectPreview = ({ project }: ProjectPreviewProps) => {
   const featuredImage = getImage(project.frontmatter.featuredImage)
   const statusIcon = getIcon(project.frontmatter.status)
   const githubUrlEnd = project.frontmatter.github.substring(project.frontmatter.github.lastIndexOf('/') + 1)
@@ -83,5 +53,3 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
     </Flex>
   )
 }
-
-export default ProjectPreview

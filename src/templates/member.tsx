@@ -1,13 +1,13 @@
 import { Box, useBreakpointValue } from '@chakra-ui/react'
 import { graphql } from 'gatsby'
-import * as React from 'react'
-import Container from '~components/Container'
-import MemberFullCard from '~components/members-components/MemberFullCard'
-import SEO from '~components/SEO'
-import { MemberProps } from '~types/member.props'
-import IndexLayout from '../layouts'
 
-interface MemberTemplateProps {
+import { Container } from '~components/Container'
+import { MemberFullCard } from '~components/members-components/MemberFullCard'
+import { SEO } from '~components/SEO'
+import { MemberProps } from '~types/member.props'
+import { IndexLayout } from '../layouts'
+
+type Props = {
   data: {
     markdownRemark: {
       html: string
@@ -17,7 +17,7 @@ interface MemberTemplateProps {
   }
 }
 
-const MemberTemplate: React.FC<MemberTemplateProps> = ({ data }) => {
+const MemberTemplate = ({ data }: Props) => {
   const member = data.markdownRemark.frontmatter
 
   return (

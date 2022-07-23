@@ -1,11 +1,11 @@
 import { Alert, AlertIcon, Box, Button, Flex, Grid, Heading, Image, Link as ChakraLink, Text, useBreakpointValue } from '@chakra-ui/react'
 import { chakra, useColorModeValue } from '@chakra-ui/system'
 import { graphql, Link } from 'gatsby'
-import * as React from 'react'
-import Container from '~components/Container'
-import CourseCard from '~components/course-components/CourseCard'
-import Header from '~components/Header'
-import SEO from '~components/SEO'
+
+import { Container } from '~components/Container'
+import { CourseCard } from '~components/course-components/CourseCard'
+import { Header } from '~components/Header'
+import { SEO } from '~components/SEO'
 import { CourseProps } from '~types/course.props'
 import {
   CURRENT_COURSE_EXTRA_INFO,
@@ -13,9 +13,9 @@ import {
   CURRENT_COURSE_FORM_URL,
   CURRENT_COURSE_SEMESTER
 } from '~utils/configurations'
-import IndexLayout from '../layouts'
+import { IndexLayout } from '../layouts'
 
-interface CoursesProps {
+type Props = {
   data: {
     allCoursesYaml: {
       nodes: CourseProps[]
@@ -23,7 +23,7 @@ interface CoursesProps {
   }
 }
 
-const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
+const CoursesPage = ({ data }: Props) => (
   <>
     <SEO title="Tanfolyamaink" />
     <IndexLayout

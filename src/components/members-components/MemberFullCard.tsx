@@ -1,12 +1,14 @@
 import { Badge, Box, Flex, Heading, Link, Text } from '@chakra-ui/react'
 import { chakra, useColorModeValue } from '@chakra-ui/system'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { FaBriefcase, FaCalendar, FaHeart, FaUserCircle } from 'react-icons/fa'
 import { MemberProps } from '~types/member.props'
 import { PEK_URL } from '~utils/configurations'
 
-const MemberFullCard: React.FC<{ member: MemberProps }> = ({ member }) => {
+type Props = { member: MemberProps }
+
+export const MemberFullCard = ({ member }: Props) => {
   const featuredImage = getImage(member.featuredImage)
   const funnyImage = getImage(member.funnyImage)
 
@@ -87,5 +89,3 @@ const MemberFullCard: React.FC<{ member: MemberProps }> = ({ member }) => {
     </Flex>
   )
 }
-
-export default MemberFullCard

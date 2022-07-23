@@ -2,18 +2,18 @@ import { Box, Button, Flex, Heading, HStack, Tag, Text, useBreakpointValue } fro
 import { useColorModeValue } from '@chakra-ui/system'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
-import * as React from 'react'
+
 import { FaClock } from 'react-icons/fa'
-import BlogAuthor from '~components/blog-components/BlogAuthor'
-import ScrollButton from '~components/blog-components/ScrollButton'
-import Container from '~components/Container'
-import Header from '~components/Header'
-import SEO from '~components/SEO'
+import { BlogAuthor } from '~components/blog-components/BlogAuthor'
+import { ScrollButton } from '~components/blog-components/ScrollButton'
+import { Container } from '~components/Container'
+import { Header } from '~components/Header'
+import { SEO } from '~components/SEO'
 import { PostProps } from '~types/post.props'
 import { readTimeInMinutes } from '~utils/commonFunctions'
-import IndexLayout from '../layouts'
+import { IndexLayout } from '../layouts'
 
-interface PostTemplateProps {
+type Props = {
   data: {
     markdownRemark: {
       html: string
@@ -26,7 +26,7 @@ interface PostTemplateProps {
   }
 }
 
-const PostTemplate: React.FC<PostTemplateProps> = ({ data }) => {
+const PostTemplate = ({ data }: Props) => {
   const post = data.markdownRemark
   const featuredImage = getImage(post.frontmatter.featuredImage)
   const ogImageSrc = post.frontmatter.ogImage ? getSrc(post.frontmatter.ogImage) : getSrc(post.frontmatter.featuredImage)

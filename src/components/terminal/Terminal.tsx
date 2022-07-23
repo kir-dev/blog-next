@@ -1,44 +1,14 @@
 import { Box, Flex, Link } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { RICKROLL_URL } from '~utils/configurations'
+import { Line } from './helpers/Line'
 import { Frame, Keyframes } from './react-keyframes'
 
 const sleepDuration = 500
 const getTypingDuration = () => 80 + 80 * (Math.random() - 0.5)
 
-interface LineProps {
-  text?: string
-  name?: string
-  noPrompt?: boolean
-  noCaret?: boolean
-}
-
-const Line: React.FC<LineProps> = ({ text, name, noPrompt = false, noCaret = false }) => {
-  const usernameColor = useColorModeValue('cyan.900', 'cyan.300')
-
-  return (
-    <>
-      {!noPrompt && (
-        <Box color={usernameColor} as="span">
-          kirdev@sch:
-          <Box color="cyan.600" as="span">
-            ~${' '}
-          </Box>
-        </Box>
-      )}
-      <Box color="cyan.600" as="span">
-        {name ?? ''}
-      </Box>
-      {text}
-      {!noCaret && (
-        <Box as="span" display="inline-block" w="8px" marginBottom="-3px" borderBottom="3px" borderStyle="solid" borderColor="tomato" />
-      )}
-    </>
-  )
-}
-
-const Terminal: React.FC = () => {
+export const Terminal = () => {
   const [lineCount, setLineCount] = useState(0)
 
   const showLine = (text: string, name?: string) => {
@@ -193,5 +163,3 @@ const Terminal: React.FC = () => {
     </Box>
   )
 }
-
-export default Terminal

@@ -17,15 +17,15 @@ import {
 } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
 import { graphql, Link } from 'gatsby'
-import * as React from 'react'
+
 import { useState } from 'react'
 import { FaFacebook, FaGithub, FaYoutube } from 'react-icons/fa'
-import BlogFullCard from '~components/blog-components/BlogFullCard'
-import Container from '~components/Container'
-import InfoBox from '~components/indexpage-components/InfoBox'
-import PekPreview from '~components/indexpage-components/PekPreview'
-import SEO from '~components/SEO'
-import Terminal from '~components/terminal/Terminal'
+import { BlogFullCard } from '~components/blog-components/BlogFullCard'
+import { Container } from '~components/Container'
+import { InfoBox } from '~components/indexpage-components/InfoBox'
+import { PekPreview } from '~components/indexpage-components/PekPreview'
+import { SEO } from '~components/SEO'
+import { Terminal } from '~components/terminal/Terminal'
 import KirdevSimplified from '~components/themed-svgs/KirdevSimplified'
 import { PostProps } from '~types/post.props'
 import { ProjectProps } from '~types/project.props'
@@ -37,9 +37,9 @@ import {
   PEK_URL,
   YOUTUBE_CHANNEL_URL
 } from '~utils/configurations'
-import IndexLayout from '../layouts'
+import { IndexLayout } from '../layouts'
 
-interface IndexPageProps {
+type Props = {
   data: {
     post: {
       nodes: [
@@ -63,7 +63,7 @@ interface IndexPageProps {
   }
 }
 
-const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
+const IndexPage = ({ data }: Props) => {
   const socialSize = useBreakpointValue({ base: '2rem', lg: '3rem' })
   const [post] = data.post.nodes
   const { pek } = data

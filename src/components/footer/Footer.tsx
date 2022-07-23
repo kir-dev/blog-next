@@ -1,10 +1,9 @@
 import { Box, Container, Flex, HStack, Image, Link, Text } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
-import React from 'react'
 import { FaAt, FaFacebook, FaGithub, FaYoutube } from 'react-icons/fa'
 import KirdevOriginal from '~components/themed-svgs/KirdevOriginal'
 import { FACEBOOK_PAGE_URL, GITHUB_ORG_URL, PUBLIC_EMAIL, YOUTUBE_CHANNEL_URL } from '~utils/configurations'
-import SocialButton from './SocialButton'
+import { SocialButton } from './SocialButton'
 
 const socialButtons = [
   {
@@ -24,7 +23,7 @@ const socialButtons = [
   }
 ]
 
-const Footer: React.FC = () => (
+export const Footer = () => (
   <Box zIndex={1}>
     <Box borderTopWidth={1} borderStyle="solid" borderColor={useColorModeValue('gray.200', 'gray.700')}>
       <Container maxW="6xl" py={4}>
@@ -59,5 +58,3 @@ const Footer: React.FC = () => (
     </Box>
   </Box>
 )
-
-export default Footer

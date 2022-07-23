@@ -1,12 +1,14 @@
-/* eslint-disable react/no-children-prop */
 import { ChevronDownIcon } from '@chakra-ui/icons'
 import { Collapse, Flex, Icon, Stack, Text, useDisclosure } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
 import { Link } from 'gatsby'
-import React from 'react'
-import { NavItem, NAV_ITEMS } from './NavItem'
+import { NavItem } from '~types/navItem'
 
-const MobileNavItem: React.FC<NavItem> = ({ label, children, href }) => {
+type Props = {
+  navItem: NavItem
+}
+
+export const MobileNavItem = ({ navItem: { label, children, href } }: Props) => {
   const { isOpen, onToggle } = useDisclosure()
 
   return (
@@ -38,15 +40,3 @@ const MobileNavItem: React.FC<NavItem> = ({ label, children, href }) => {
     </Stack>
   )
 }
-
-const MobileNav: React.FC = () => {
-  return (
-    <Stack bg={useColorModeValue('white', 'gray.800')} p={4} display={{ md: 'none' }}>
-      {NAV_ITEMS.map((navItem) => (
-        <MobileNavItem key={navItem.label} label={navItem.label} children={navItem.children} href={navItem.href} />
-      ))}
-    </Stack>
-  )
-}
-
-export default MobileNav

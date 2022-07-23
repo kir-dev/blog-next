@@ -1,9 +1,7 @@
 import { useLocation } from '@reach/router'
 import { graphql, useStaticQuery } from 'gatsby'
-import React from 'react'
 import { Helmet, HelmetProps } from 'react-helmet'
 
-/* eslint-disable react/require-default-props */
 type SEOProps = {
   lang?: string
   title?: string
@@ -16,7 +14,6 @@ type SEOProps = {
   meta?: { name: string; content: string }[]
   links?: { rel: string; href: string }[]
 } & HelmetProps
-/* eslint-enable react/require-default-props */
 
 type SiteMetadataProps = {
   site: {
@@ -42,7 +39,7 @@ type SiteMetadataProps = {
   }
 }
 
-const SEO: React.FC<SEOProps> = ({
+export const SEO = ({
   title,
   description,
   image,
@@ -53,7 +50,7 @@ const SEO: React.FC<SEOProps> = ({
   keywords = [],
   meta = [],
   links = []
-}) => {
+}: SEOProps) => {
   const data: SiteMetadataProps = useStaticQuery(graphql`
     query SiteMetadata {
       site {
@@ -209,5 +206,3 @@ const SEO: React.FC<SEOProps> = ({
     />
   )
 }
-
-export default SEO

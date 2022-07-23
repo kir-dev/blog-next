@@ -1,10 +1,10 @@
 import { Box, Grid, HStack, Text, useBreakpointValue } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
-import React from 'react'
+import { useState } from 'react'
 import { FaMicrophone, FaPhone, FaVideo } from 'react-icons/fa'
 
-const MeetingControls: React.FC = () => {
-  const [showControls, setShowControls] = React.useState(true)
+export const MeetingControls = () => {
+  const [showControls, setShowControls] = useState(true)
   const close = () => setShowControls(false)
 
   return (
@@ -62,5 +62,3 @@ const MeetingControls: React.FC = () => {
     </Grid>
   )
 }
-
-export default MeetingControls

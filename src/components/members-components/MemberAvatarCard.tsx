@@ -2,11 +2,11 @@ import { Badge, Box, Flex, Text } from '@chakra-ui/react'
 import { chakra } from '@chakra-ui/system'
 import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { FaMicrophoneSlash } from 'react-icons/fa'
 import { MemberProps } from '~types/member.props'
 
-interface MemberAvatarCardProps {
+type Props = {
   member: {
     fields: {
       slug: string
@@ -15,7 +15,7 @@ interface MemberAvatarCardProps {
   }
 }
 
-const MemberAvatarCard: React.FC<MemberAvatarCardProps> = ({ member }) => {
+export const MemberAvatarCard = ({ member }: Props) => {
   const featuredImage = getImage(member.frontmatter.featuredImage)
   const funnyImage = getImage(member.frontmatter.funnyImage)
 
@@ -77,5 +77,3 @@ const MemberAvatarCard: React.FC<MemberAvatarCardProps> = ({ member }) => {
     </Box>
   )
 }
-
-export default MemberAvatarCard

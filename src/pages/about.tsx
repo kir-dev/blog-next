@@ -1,14 +1,14 @@
 import { Box, Flex, Grid, Heading, HStack, Image, Link, Text, useBreakpointValue } from '@chakra-ui/react'
 import { chakra } from '@chakra-ui/system'
 import { Link as GatsbyLink } from 'gatsby'
-import * as React from 'react'
+
 import { IconType } from 'react-icons'
 import { FaFacebook, FaGithub, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
-import AboutParagraph from '~components/about-components/AboutParagraph'
-import StickyNote from '~components/about-components/StickyNote'
-import Container from '~components/Container'
-import InfoBox from '~components/indexpage-components/InfoBox'
-import SEO from '~components/SEO'
+import { AboutParagraph } from '~components/about-components/AboutParagraph'
+import { StickyNote } from '~components/about-components/StickyNote'
+import { Container } from '~components/Container'
+import { InfoBox } from '~components/indexpage-components/InfoBox'
+import { SEO } from '~components/SEO'
 import {
   FACEBOOK_PAGE_URL,
   GITHUB_ORG_URL,
@@ -18,7 +18,7 @@ import {
   TWITTER_USERNAME,
   YOUTUBE_CHANNEL_URL
 } from '~utils/configurations'
-import IndexLayout from '../layouts'
+import { IndexLayout } from '../layouts'
 
 const ABOUT_MAP: Map<string, string> = new Map([
   ['inception', 'Körünk alakulása'],
@@ -66,7 +66,7 @@ const TECH_STACK: Array<{ svg: string; alt: string; title: string; text: string 
   }
 ]
 
-const AboutPage: React.FC = () => {
+const AboutPage = () => {
   const stickyBoxWidth = { base: '75%', sm: '10rem', lg: '14rem' }
   const firstHeadingSize = useBreakpointValue({ base: '4xl', sm: '5xl' })
   const secondHeadingSize = useBreakpointValue({ base: '2xl', sm: '3xl' })
