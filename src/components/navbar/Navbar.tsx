@@ -16,14 +16,14 @@ export const Navbar = () => {
         color={useColorModeValue('gray.800', 'white')}
         minH={{ base: '3rem', md: '4.5rem' }}
         maxW={['100%', '100%', '56rem', '72rem']}
-        py={{ base: 2 }}
-        px={{ base: 4 }}
-        align="center"
+        px={4}
+        mx="auto"
+        alignItems="center"
       >
         <Flex flex={{ base: 1, md: '1' }} ml={{ base: -2, md: 0 }} display={{ base: 'flex', md: 'none' }}>
           <IconButton
             onClick={onToggle}
-            icon={isOpen ? <Icon as={FaTimes} w={3} h={3} /> : <Icon as={FaBars} w={5} h={5} />}
+            icon={isOpen ? <Icon as={FaTimes} w={5} h={5} /> : <Icon as={FaBars} w={5} h={5} />}
             variant="ghost"
             aria-label="Navigáció megnyitása"
           />
@@ -52,7 +52,7 @@ export const Navbar = () => {
         <Flex flex={{ base: 1, md: 0 }} mr={{ base: -2, md: 0 }} justify="flex-end">
           <IconButton
             aria-label="Sötét-világos mód váltás"
-            icon={colorMode === 'dark' ? <Icon as={FaSun} w={5} h={5} /> : <Icon as={FaMoon} w={5} h={5} />}
+            icon={colorMode === 'dark' ? <Icon as={FaSun} w={4} h={4} /> : <Icon as={FaMoon} w={4} h={4} />}
             onClick={toggleColorMode}
             variant="ghost"
           />

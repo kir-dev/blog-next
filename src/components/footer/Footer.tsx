@@ -1,27 +1,10 @@
-import { Box, Container, Flex, HStack, Image, Link, Text } from '@chakra-ui/react'
+import { Box, Container, Flex, HStack, Icon, Image, Link, Text } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
-import { FaAt, FaFacebook, FaGithub, FaYoutube } from 'react-icons/fa'
+import { FaAt } from 'react-icons/fa'
 import { KirdevOriginal } from '~components/themed-svgs/KirdevOriginal'
-import { FACEBOOK_PAGE_URL, GITHUB_ORG_URL, PUBLIC_EMAIL, YOUTUBE_CHANNEL_URL } from '~utils/configurations'
+import { getSocials } from '~utils/commonFunctions'
+import { environment } from '~utils/configurations'
 import { SocialButton } from './SocialButton'
-
-const socialButtons = [
-  {
-    href: GITHUB_ORG_URL,
-    label: 'GitHub',
-    icon: <FaGithub size="2rem" />
-  },
-  {
-    href: YOUTUBE_CHANNEL_URL,
-    label: 'YouTube',
-    icon: <FaYoutube size="2rem" />
-  },
-  {
-    href: FACEBOOK_PAGE_URL,
-    label: 'Facebook',
-    icon: <FaFacebook size="2rem" />
-  }
-]
 
 export const Footer = () => (
   <Box zIndex={1}>
@@ -40,15 +23,15 @@ export const Footer = () => (
           <Box py={{ base: 4, sm: 0 }} flex={1} textAlign="center">
             <FaAt style={{ display: 'inline' }} size="0.75rem" />
             &nbsp;
-            <span>{PUBLIC_EMAIL}</span>
+            <span>{environment.socials.publicEmail}</span>
             <Text>&copy; {new Date().getFullYear()} Kir-Dev</Text>
           </Box>
 
           <Flex flex={1} textAlign="right" justifyContent={{ base: 'center', sm: 'flex-end' }}>
             <HStack spacing={3}>
-              {socialButtons.map((btn) => (
-                <SocialButton key={btn.label} label={btn.label} href={btn.href} size="3rem">
-                  {btn.icon}
+              {getSocials(['github', 'facebook', 'youtube']).map((social) => (
+                <SocialButton key={social.shortText} label={social.shortText} href={social.url} size="3rem">
+                  <Icon as={social.Icon} h="2rem" w="2rem" />
                 </SocialButton>
               ))}
             </HStack>

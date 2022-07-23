@@ -19,7 +19,7 @@ export default {
       `Szakkollégiumának tagja.`,
     author: 'kir-dev',
     image: '/default-og.png',
-    keywords: ['gatsbyjs', 'typescript', 'javascript', 'ruby', 'rails', 'nodejs', 'typescript', 'community', 'simonyi'],
+    keywords: ['web-development', 'software', 'devops', 'rails', 'nodejs', 'spring-boot', 'community', 'simonyi', 'kir-dev'],
     robots: 'index, follow',
     social: {
       twitter: `https://twitter.com/${TWITTER_USERNAME}`,

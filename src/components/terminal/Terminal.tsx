@@ -1,7 +1,7 @@
 import { Box, Flex, Link } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
 import { useState } from 'react'
-import { RICKROLL_URL } from '~utils/configurations'
+import { environment } from '~utils/configurations'
 import { Line } from './helpers/Line'
 import { Frame, Keyframes } from './react-keyframes'
 
@@ -119,7 +119,7 @@ export const Terminal = () => {
         >
           <Box marginLeft="1" marginTop="auto" w={['3rem', '4rem', '4rem', '6rem']}>
             <Link
-              href={RICKROLL_URL}
+              href={environment.rickrollUrl}
               target="_blank"
               w={['0.5rem', '0.75rem', '0.75rem', '1rem']}
               h={['0.5rem', '0.75rem', '0.75rem', '1rem']}

@@ -24,7 +24,7 @@ export const MobileNavItem = ({ navItem: { label, children, href } }: Props) => 
         }}
       >
         <Text color={useColorModeValue('gray.800', 'gray.200')}>{label}</Text>
-        {children && <Icon as={FaChevronDown} transition="all .25s ease-in-out" transform={isOpen ? 'rotate(180deg)' : ''} w={6} h={6} />}
+        {children && <Icon as={FaChevronDown} transition="all .25s ease-in-out" transform={isOpen ? 'rotate(180deg)' : ''} w={3} h={3} />}
       </Flex>
 
       <Collapse in={isOpen} animateOpacity style={{ marginTop: '0' }}>

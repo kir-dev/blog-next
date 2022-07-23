@@ -1,6 +1,6 @@
 import { Box, HStack, Image, Link, Text } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
-import { PEK_URL } from '~utils/configurations'
+import { environment } from '~utils/configurations'
 
 type Props = {
   date: Date
@@ -10,18 +10,18 @@ type Props = {
 
 export const BlogAuthor = ({ date, name, hasLongDate }: Props) => (
   <HStack spacing={2} display="flex" alignItems="center">
-    <Link isExternal href={`${PEK_URL}/profiles/${name}`}>
+    <Link isExternal href={`${environment.pekUrl}/profiles/${name}`}>
       <Image
         borderRadius="full"
         boxSize={hasLongDate ? '2.5rem' : '2rem'}
-        src={`${PEK_URL}/photos/${name}`}
+        src={`${environment.pekUrl}/photos/${name}`}
         fallbackSrc="../../favicon.png"
       />
     </Link>
 
     {hasLongDate ? (
       <HStack flex={1}>
-        <Link fontWeight="medium" fontSize="md" isExternal href={`${PEK_URL}/profiles/${name}`}>
+        <Link fontWeight="medium" fontSize="md" isExternal href={`${environment.pekUrl}/profiles/${name}`}>
           {name}
         </Link>
         <Text>—</Text>
@@ -38,7 +38,7 @@ export const BlogAuthor = ({ date, name, hasLongDate }: Props) => (
       </HStack>
     ) : (
       <Box flex={1}>
-        <Link fontWeight="medium" fontSize="md" isExternal href={`${PEK_URL}/profiles/${name}`}>
+        <Link fontWeight="medium" fontSize="md" isExternal href={`${environment.pekUrl}/profiles/${name}`}>
           {name}
         </Link>
         <Text whiteSpace="nowrap" fontWeight="light" fontSize="xs" textColor={useColorModeValue('gray.600', 'gray.400')}>

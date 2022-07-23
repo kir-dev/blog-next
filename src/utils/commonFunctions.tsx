@@ -1,8 +1,20 @@
 import { Flex, Icon, useBreakpointValue } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
-import { FaCheckCircle, FaCircle, FaExclamationCircle, FaMoon } from 'react-icons/fa'
+import {
+  FaCheckCircle,
+  FaCircle,
+  FaExclamationCircle,
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaMoon,
+  FaTwitter,
+  FaYoutube
+} from 'react-icons/fa'
+import { IconType } from 'react-icons/lib'
 import { MemberAvatarCard } from '~components/members-components/MemberAvatarCard'
 import { AllMarkdownRemark } from '~types/page-props/members.props'
+import { environment } from './configurations'
 
 export const readTimeInMinutes = (wordCount: number) => {
   const wpm = 200
@@ -39,3 +51,30 @@ export const getMemberCollage = ({ nodes }: AllMarkdownRemark): JSX.Element[] =>
       <MemberAvatarCard member={member} />
     </Flex>
   ))
+
+type SocialId = 'github' | 'youtube' | 'facebook' | 'insta' | 'twitter'
+type SocialItem = {
+  id: SocialId
+  url: string
+  Icon: IconType
+  shortText: string
+  longText: string
+}
+const SOCIALS: SocialItem[] = [
+  { id: 'github', url: environment.githubOrgUrl, Icon: FaGithub, shortText: 'GitHub', longText: 'GitHub szervezetünk' },
+  { id: 'youtube', url: environment.youtubeUrl, Icon: FaYoutube, shortText: 'YouTube', longText: 'YouTube csatornánk' },
+  { id: 'facebook', url: environment.facebookUrl, Icon: FaFacebook, shortText: 'Facebook', longText: 'Facebook oldalunk' },
+  { id: 'insta', url: environment.instagramUrl, Icon: FaInstagram, shortText: 'Instagram', longText: 'Instagram oldalunk' },
+  {
+    id: 'twitter',
+    url: `https://twitter.com/${environment.twitterUsername}`,
+    Icon: FaTwitter,
+    shortText: 'Twitter',
+    longText: 'Twitter oldalunk'
+  }
+]
+
+export const getSocials = (socialIds: SocialId[] = []) => {
+  if (socialIds.length === 0) return SOCIALS
+  else return SOCIALS.filter((social) => socialIds.includes(social.id))
+}
