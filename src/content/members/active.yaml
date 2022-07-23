@@ -1,0 +1,128 @@
+- pekUsername: aberci
+  realName: Kovács Bertalan
+  position: tag
+  joinDate: 2020-04
+  featuredImage: ../images/avatars/aberci/normal.jpg
+  funnyImage: ../images/avatars/aberci/funny.jpg
+
+- pekUsername: amcir
+  realName: Oravecz Márton Péter
+  position: tag
+  joinDate: 2021-04
+
+- pekUsername: beni99
+  realName: Bucsy Benjámin
+  position: körvezető
+  joinDate: 2020-04
+  featuredImage: ../images/avatars/beni99/normal.jpg
+  funnyImage: ../images/avatars/beni99/funny.jpg
+
+- pekUsername: berenteb
+  realName: Berente Bálint
+  position: tag
+  joinDate: 2021-04
+  featuredImage: ../images/avatars/berenteb/normal.jpg
+  funnyImage: ../images/avatars/berenteb/funny.jpg
+
+- pekUsername: czemanb
+  realName: Czémán Bálint
+  position: tag
+  joinDate: 2019-03
+
+- pekUsername: feketesamu
+  realName: Fekete Sámuel
+  position: tag
+  joinDate: 2021-04
+  featuredImage: ../images/avatars/feketesamu/normal.jpg
+  funnyImage: ../images/avatars/feketesamu/funny.jpg
+
+- pekUsername: gallyasm
+  realName: Gallyas Márton
+  position: tag
+  joinDate: 2020-10
+  featuredImage: ../images/avatars/gallyasm/normal.jpg
+  funnyImage: ../images/avatars/gallyasm/funny.jpg
+
+- pekUsername: Gerviba
+  realName: Szabó Gergely
+  position: tag
+  joinDate: 2019-10
+  featuredImage: ../images/avatars/Gerviba/normal.jpg
+  funnyImage: ../images/avatars/Gerviba/funny.jpg
+
+- pekUsername: nm0829
+  realName: Nagy Máté
+  position: tag
+  joinDate: 2019-03
+
+- pekUsername: Oldal
+  realName: Kostyál Bálint
+  position: tag
+  joinDate: 2021-04
+  featuredImage: ../images/avatars/Oldal/normal.jpg
+  funnyImage: ../images/avatars/Oldal/funny.jpg
+
+- pekUsername: radikris
+  realName: Rádi Kristóf
+  position: tag
+  joinDate: 2020-10
+  featuredImage: ../images/avatars/radikris/normal.jpg
+  funnyImage: ../images/avatars/radikris/funny.jpg
+
+- pekUsername: sepsilaci
+  realName: Sepsi László
+  position: volt körvezető
+  joinDate: 2019-03
+  featuredImage: ../images/avatars/sepsilaci/normal.jpg
+  funnyImage: ../images/avatars/sepsilaci/funny.jpg
+
+- pekUsername: szaraz_daniel
+  realName: Száraz Dániel
+  position: tag
+  joinDate: 2021-04
+  featuredImage: ../images/avatars/szaraz_daniel/normal.jpg
+  funnyImage: ../images/avatars/szaraz_daniel/funny.jpg
+
+- pekUsername: tomitheninja
+  realName: Südi Tamás
+  position: tag
+  joinDate: 2021-04
+  featuredImage: ../images/avatars/tomitheninja/normal.jpg
+  funnyImage: ../images/avatars/tomitheninja/funny.jpg
+
+- pekUsername: triszt4n
+  realName: Piller Trisztán
+  position: tag
+  joinDate: 2020-04
+  featuredImage: ../images/avatars/triszt4n/normal.jpg
+  funnyImage: ../images/avatars/triszt4n/funny.jpg
+
+- pekUsername: vbence
+  realName: Vass Bence
+  position: újonc
+  joinDate: 2020-10
+
+- pekUsername: rolandandai
+  realName: Andai Roland
+  position: újonc
+  joinDate: 2022-04
+
+- pekUsername: kisbogdan
+  realName: Kis-Bogdán Kolos
+  position: újonc
+  joinDate: 2022-04
+
+- pekUsername: raiszoliver
+  realName: Raisz Olivér
+  position: újonc
+  joinDate: 2022-04
+
+- pekUsername: Smuk%20Ferenc
+  realName: Smuk Ferenc
+  position: újonc
+  joinDate: 2022-04
+
+- pekUsername: tete
+  realName: Tényi Tamás
+  position: újonc
+  joinDate: 2022-04

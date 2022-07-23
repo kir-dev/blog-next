@@ -45,57 +45,39 @@ const MembersPage = ({ data }: MembersProps) => (
 export default MembersPage
 
 export const query = graphql`
-  query AboutPageQueries {
-    actives: allMarkdownRemark(
-      filter: { fields: { layout: { eq: "member" } }, frontmatter: { active: { eq: true } } }
-      sort: { fields: [frontmatter___realName], order: ASC }
-    ) {
+  query Members {
+    actives: allActiveYaml {
       nodes {
-        fields {
-          slug
-        }
-        frontmatter {
-          pekUsername
-          realName
-          position
-          joinDate
-          interests
-          featuredImage {
-            childImageSharp {
-              gatsbyImageData(placeholder: BLURRED, formats: [WEBP])
-            }
+        pekUsername
+        realName
+        position
+        joinDate
+        featuredImage {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED, formats: [WEBP])
           }
-          funnyImage {
-            childImageSharp {
-              gatsbyImageData(placeholder: BLURRED, formats: [WEBP])
-            }
+        }
+        funnyImage {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED, formats: [WEBP])
           }
         }
       }
     }
-    inactives: allMarkdownRemark(
-      filter: { fields: { layout: { eq: "member" } }, frontmatter: { active: { eq: false } } }
-      sort: { fields: [frontmatter___realName], order: ASC }
-    ) {
+    inactives: allInactiveYaml {
       nodes {
-        fields {
-          slug
-        }
-        frontmatter {
-          pekUsername
-          realName
-          position
-          joinDate
-          interests
-          featuredImage {
-            childImageSharp {
-              gatsbyImageData(placeholder: BLURRED, formats: [WEBP])
-            }
+        pekUsername
+        realName
+        position
+        joinDate
+        featuredImage {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED, formats: [WEBP])
           }
-          funnyImage {
-            childImageSharp {
-              gatsbyImageData(placeholder: BLURRED, formats: [WEBP])
-            }
+        }
+        funnyImage {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED, formats: [WEBP])
           }
         }
       }

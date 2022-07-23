@@ -1,0 +1,21 @@
+- pekUsername: kiraly96
+  realName: Király Bálint Martin
+  position: volt körvezető
+  joinDate: 2016-06
+
+- pekUsername: yeti
+  realName: Fehér János
+  position: volt körvezető
+  joinDate: 2018-03
+  featuredImage: ../images/avatars/yeti/normal.jpg
+  funnyImage: ../images/avatars/yeti/funny.jpg
+
+- pekUsername: falusi
+  realName: Falusi Dávid Levente
+  position: volt körvezető
+  joinDate: 2014-12
+
+- pekUsername: tomka
+  realName: Gulyás Gergely
+  position: volt körvezető
+  joinDate: 2012-07

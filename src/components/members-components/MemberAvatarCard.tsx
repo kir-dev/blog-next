@@ -5,19 +5,15 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { useState } from 'react'
 import { FaMicrophoneSlash } from 'react-icons/fa'
 import { MemberProps } from '~types/member.props'
+import { environment } from '~utils/configurations'
 
 type Props = {
-  member: {
-    fields: {
-      slug: string
-    }
-    frontmatter: MemberProps
-  }
+  member: MemberProps
 }
 
 export const MemberAvatarCard = ({ member }: Props) => {
-  const featuredImage = getImage(member.frontmatter.featuredImage)
-  const funnyImage = getImage(member.frontmatter.funnyImage)
+  const featuredImage = getImage(member.featuredImage)
+  const funnyImage = getImage(member.funnyImage)
 
   const [overlayShown, setOverlayShown] = useState(false)
   const onOverlayEnter = () => setOverlayShown(true)
@@ -26,7 +22,7 @@ export const MemberAvatarCard = ({ member }: Props) => {
   return (
     <Box
       as={Link}
-      to={member.fields.slug}
+      to={`${environment.pekUrl}/profiles/${member.pekUsername}`}
       pos="relative"
       h="12rem"
       w="full"
@@ -39,7 +35,7 @@ export const MemberAvatarCard = ({ member }: Props) => {
       ) : (
         <Flex h="12rem" alignItems="center" textAlign="center">
           <Text color="gray.100" flex={1} fontSize="2xl">
-            {member.frontmatter.realName}
+            {member.realName}
           </Text>
         </Flex>
       )}
@@ -47,7 +43,7 @@ export const MemberAvatarCard = ({ member }: Props) => {
         <chakra.span color="red.400">
           <FaMicrophoneSlash style={{ display: 'inline' }} />
         </chakra.span>
-        {featuredImage && <chakra.span color="gray.100">&nbsp;{member.frontmatter.realName}</chakra.span>}
+        {featuredImage && <chakra.span color="gray.100">&nbsp;{member.realName}</chakra.span>}
       </Box>
       <Box
         pos="absolute"
@@ -66,11 +62,11 @@ export const MemberAvatarCard = ({ member }: Props) => {
           <GatsbyImage image={funnyImage} alt="avatar" style={{ width: '100%', height: '12rem' }} objectFit="contain" />
         ) : (
           <Flex fontSize="sm" direction="column" h="full" justifyContent="center" alignItems="center" color="white">
-            <Text fontSize="lg">{member.frontmatter.realName}</Text>
+            <Text fontSize="lg">{member.realName}</Text>
             <Badge lineHeight="base" px={1} color="white" bg="orange.600" fontWeight="600">
-              {member.frontmatter.position}
+              {member.position}
             </Badge>
-            <Text mt={4}>{member.frontmatter.joinDate} óta a csapatban</Text>
+            <Text mt={4}>{member.joinDate} óta a csapatban</Text>
           </Flex>
         )}
       </Box>

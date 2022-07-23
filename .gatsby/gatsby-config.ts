@@ -1,6 +1,6 @@
 import dotenv from 'dotenv'
 import path from 'path'
-import { FACEBOOK_PAGE_URL, GITHUB_ORG_URL, INSTAGRAM_PAGE_URL, TWITTER_USERNAME } from '../src/utils/configurations'
+import { environment } from '~utils/configurations'
 
 dotenv.config({
   path: `.env.${process.env.NODE_ENV}`
@@ -22,11 +22,11 @@ export default {
     keywords: ['web-development', 'software', 'devops', 'rails', 'nodejs', 'spring-boot', 'community', 'simonyi', 'kir-dev'],
     robots: 'index, follow',
     social: {
-      twitter: `https://twitter.com/${TWITTER_USERNAME}`,
-      twitterUsername: TWITTER_USERNAME,
-      github: GITHUB_ORG_URL,
-      facebook: FACEBOOK_PAGE_URL,
-      instagram: INSTAGRAM_PAGE_URL
+      twitter: `https://twitter.com/${environment.socials.twitterUsername}`,
+      twitterUsername: environment.socials.twitterUsername,
+      github: environment.socials.githubOrgUrl,
+      facebook: environment.socials.facebookUrl,
+      instagram: environment.socials.instagramUrl
     }
   },
   plugins: [

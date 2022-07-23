@@ -13,7 +13,7 @@ import {
 } from 'react-icons/fa'
 import { IconType } from 'react-icons/lib'
 import { MemberAvatarCard } from '~components/members-components/MemberAvatarCard'
-import { AllMarkdownRemark } from '~types/page-props/members.props'
+import { MemberProps } from '~types/member.props'
 import { environment } from './configurations'
 
 export const readTimeInMinutes = (wordCount: number) => {
@@ -40,13 +40,13 @@ export const getIcon = (status: { label: string; color: string }): JSX.Element =
   }
 }
 
-export const getMemberCollage = ({ nodes }: AllMarkdownRemark): JSX.Element[] =>
+export const getMemberCollage = ({ nodes }: { nodes: MemberProps[] }): JSX.Element[] =>
   nodes.map((member) => (
     <Flex
       py={{ base: 2, sm: 1 }}
       px={{ base: 0, sm: 1 }}
       flex={`0 0 ${useBreakpointValue({ base: '100%', sm: '50%', md: '33%', lg: '25%' })}`}
-      key={member.fields.slug}
+      key={member.pekUsername}
     >
       <MemberAvatarCard member={member} />
     </Flex>
@@ -61,13 +61,13 @@ type SocialItem = {
   longText: string
 }
 const SOCIALS: SocialItem[] = [
-  { id: 'github', url: environment.githubOrgUrl, Icon: FaGithub, shortText: 'GitHub', longText: 'GitHub szervezetünk' },
-  { id: 'youtube', url: environment.youtubeUrl, Icon: FaYoutube, shortText: 'YouTube', longText: 'YouTube csatornánk' },
-  { id: 'facebook', url: environment.facebookUrl, Icon: FaFacebook, shortText: 'Facebook', longText: 'Facebook oldalunk' },
-  { id: 'insta', url: environment.instagramUrl, Icon: FaInstagram, shortText: 'Instagram', longText: 'Instagram oldalunk' },
+  { id: 'github', url: environment.socials.githubOrgUrl, Icon: FaGithub, shortText: 'GitHub', longText: 'GitHub szervezetünk' },
+  { id: 'youtube', url: environment.socials.youtubeUrl, Icon: FaYoutube, shortText: 'YouTube', longText: 'YouTube csatornánk' },
+  { id: 'facebook', url: environment.socials.facebookUrl, Icon: FaFacebook, shortText: 'Facebook', longText: 'Facebook oldalunk' },
+  { id: 'insta', url: environment.socials.instagramUrl, Icon: FaInstagram, shortText: 'Instagram', longText: 'Instagram oldalunk' },
   {
     id: 'twitter',
-    url: `https://twitter.com/${environment.twitterUsername}`,
+    url: `https://twitter.com/${environment.socials.twitterUsername}`,
     Icon: FaTwitter,
     shortText: 'Twitter',
     longText: 'Twitter oldalunk'
