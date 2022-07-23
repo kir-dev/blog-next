@@ -1,7 +1,7 @@
 import { Box, Container, Flex, HStack, Image, Link, Text } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
 import { FaAt, FaFacebook, FaGithub, FaYoutube } from 'react-icons/fa'
-import KirdevOriginal from '~components/themed-svgs/KirdevOriginal'
+import { KirdevOriginal } from '~components/themed-svgs/KirdevOriginal'
 import { FACEBOOK_PAGE_URL, GITHUB_ORG_URL, PUBLIC_EMAIL, YOUTUBE_CHANNEL_URL } from '~utils/configurations'
 import { SocialButton } from './SocialButton'
 

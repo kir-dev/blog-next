@@ -26,7 +26,7 @@ import { InfoBox } from '~components/indexpage-components/InfoBox'
 import { PekPreview } from '~components/indexpage-components/PekPreview'
 import { SEO } from '~components/SEO'
 import { Terminal } from '~components/terminal/Terminal'
-import KirdevSimplified from '~components/themed-svgs/KirdevSimplified'
+import { KirdevSimplified } from '~components/themed-svgs/KirdevSimplified'
 import { PostProps } from '~types/post.props'
 import { ProjectProps } from '~types/project.props'
 import {

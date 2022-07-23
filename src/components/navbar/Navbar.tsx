@@ -1,8 +1,7 @@
-import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons'
-import { Box, Collapse, Flex, IconButton, useDisclosure } from '@chakra-ui/react'
-import { useColorMode, useColorModeValue } from '@chakra-ui/system'
+import { Box, Collapse, Flex, Icon, IconButton, useColorMode, useColorModeValue, useDisclosure } from '@chakra-ui/react'
 import { Link } from 'gatsby'
-import KirdevNamed from '~components/themed-svgs/KirdevNamed'
+import { FaBars, FaMoon, FaSun, FaTimes } from 'react-icons/fa'
+import { KirdevNamed } from '~components/themed-svgs/KirdevNamed'
 import { DesktopNav } from './desktop/DesktopNav'
 import { MobileNav } from './mobile/MobileNav'
 
@@ -11,7 +10,7 @@ export const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode()
 
   return (
-    <Box align="center" fontFamily="heading">
+    <Box fontFamily="heading">
       <Flex
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.800', 'white')}
@@ -24,7 +23,7 @@ export const Navbar = () => {
         <Flex flex={{ base: 1, md: '1' }} ml={{ base: -2, md: 0 }} display={{ base: 'flex', md: 'none' }}>
           <IconButton
             onClick={onToggle}
-            icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />}
+            icon={isOpen ? <Icon as={FaTimes} w={3} h={3} /> : <Icon as={FaBars} w={5} h={5} />}
             variant="ghost"
             aria-label="Navigáció megnyitása"
           />
@@ -53,7 +52,7 @@ export const Navbar = () => {
         <Flex flex={{ base: 1, md: 0 }} mr={{ base: -2, md: 0 }} justify="flex-end">
           <IconButton
             aria-label="Sötét-világos mód váltás"
-            icon={colorMode === 'dark' ? <SunIcon w={5} h={5} /> : <MoonIcon w={5} h={5} />}
+            icon={colorMode === 'dark' ? <Icon as={FaSun} w={5} h={5} /> : <Icon as={FaMoon} w={5} h={5} />}
             onClick={toggleColorMode}
             variant="ghost"
           />

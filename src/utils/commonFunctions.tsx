@@ -1,8 +1,7 @@
-import { CheckIcon, MoonIcon, WarningIcon } from '@chakra-ui/icons'
-import { Flex, useBreakpointValue } from '@chakra-ui/react'
+import { Flex, Icon, useBreakpointValue } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
+import { FaCheckCircle, FaCircle, FaExclamationCircle, FaMoon } from 'react-icons/fa'
 import { MemberAvatarCard } from '~components/members-components/MemberAvatarCard'
-import { CircleIcon } from '~components/project-components/CircleIcon'
 import { AllMarkdownRemark } from '~types/page-props/members.props'
 
 export const readTimeInMinutes = (wordCount: number) => {
@@ -17,15 +16,15 @@ export const getIcon = (status: { label: string; color: string }): JSX.Element =
   const tone: string = color === 'gray' ? useColorModeValue('.600', '.400') : '.500'
   switch (status.label) {
     case 'Archivált':
-      return <MoonIcon color={color + tone} />
+      return <Icon as={FaMoon} color={color + tone} />
     case 'Kész':
     case 'Üzemel':
-      return <CheckIcon color={color + tone} />
+      return <Icon as={FaCheckCircle} color={color + tone} />
     case 'Áll':
     case 'Megszakadt':
-      return <WarningIcon color={color + tone} />
+      return <Icon as={FaExclamationCircle} color={color + tone} />
     default:
-      return <CircleIcon color={color + tone} />
+      return <Icon as={FaCircle} color={color + tone} />
   }
 }
 

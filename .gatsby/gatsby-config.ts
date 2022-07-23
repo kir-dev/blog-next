@@ -102,8 +102,6 @@ export default {
               elements: [`h1`, `h2`, `h3`, `h4`]
             }
           },
-          `gatsby-remark-responsive-iframe`,
-          `gatsby-remark-smartypants`,
           `gatsby-remark-external-links`,
           {
             resolve: `gatsby-remark-images`,
@@ -156,22 +154,15 @@ export default {
         siteUrl: 'https://kir-dev.sch.bme.hu'
       }
     },
-    `gatsby-plugin-emotion`,
-    `gatsby-plugin-typescript`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-tsconfig-paths`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `gatsby-plugin-typescript`,
       options: {
-        name: `Kir-Dev blogja`,
-        short_name: `Kir-Dev`,
-        start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#f15a29`,
-        display: `standalone`,
-        icon: `static/favicon.png`
+        isTSX: true,
+        jsxPragma: `React`,
+        allExtensions: true
       }
     },
-    `gatsby-plugin-offline`
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-tsconfig-paths`
   ]
 }

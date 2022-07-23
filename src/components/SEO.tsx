@@ -1,4 +1,3 @@
-import { useLocation } from '@reach/router'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Helmet, HelmetProps } from 'react-helmet'
 
@@ -77,8 +76,6 @@ export const SEO = ({
     }
   `)
 
-  const { pathname } = useLocation()
-
   const {
     siteUrl,
     lang: defaultLang,
@@ -103,7 +100,7 @@ export const SEO = ({
     description: description || defaultDescription,
     author: author || defaultAuthor,
     image: imageUrl,
-    url: pathname === '/' ? `${siteUrl}` : `${siteUrl}${pathname}`,
+    url: window.location.pathname === '/' ? `${siteUrl}` : `${siteUrl}${window.location.pathname}`,
     keywords: keywords.length ? keywords : defaultKeywords,
     robots: robots || defaultRobots,
     social,

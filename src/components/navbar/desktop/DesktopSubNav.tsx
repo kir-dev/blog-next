@@ -1,7 +1,7 @@
-import { ChevronRightIcon } from '@chakra-ui/icons'
 import { Box, Flex, Icon, Stack, Text } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
 import { Link } from 'gatsby'
+import { FaChevronRight } from 'react-icons/fa'
 import { NavItem } from '~types/navItem'
 
 type Props = {
@@ -26,7 +26,7 @@ export const DesktopSubNav = ({ navItem: { label, href } }: Props) => {
           align="center"
           flex={1}
         >
-          <Icon color="orange.500" w={5} h={5} as={ChevronRightIcon} />
+          <Icon color="orange.500" w={5} h={5} as={FaChevronRight} />
         </Flex>
       </Stack>
     </Box>

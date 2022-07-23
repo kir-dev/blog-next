@@ -93,5 +93,3 @@ export const KirdevOriginal = ({ style }: Props) => {
     </svg>
   )
 }
-
-export default KirdevOriginal

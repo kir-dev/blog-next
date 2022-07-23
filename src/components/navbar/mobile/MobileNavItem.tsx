@@ -1,7 +1,7 @@
-import { ChevronDownIcon } from '@chakra-ui/icons'
 import { Collapse, Flex, Icon, Stack, Text, useDisclosure } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
 import { Link } from 'gatsby'
+import { FaChevronDown } from 'react-icons/fa'
 import { NavItem } from '~types/navItem'
 
 type Props = {
@@ -24,7 +24,7 @@ export const MobileNavItem = ({ navItem: { label, children, href } }: Props) => 
         }}
       >
         <Text color={useColorModeValue('gray.800', 'gray.200')}>{label}</Text>
-        {children && <Icon as={ChevronDownIcon} transition="all .25s ease-in-out" transform={isOpen ? 'rotate(180deg)' : ''} w={6} h={6} />}
+        {children && <Icon as={FaChevronDown} transition="all .25s ease-in-out" transform={isOpen ? 'rotate(180deg)' : ''} w={6} h={6} />}
       </Flex>
 
       <Collapse in={isOpen} animateOpacity style={{ marginTop: '0' }}>

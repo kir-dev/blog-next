@@ -28,5 +28,3 @@ export const KirdevNamed = ({ style }: Props) => (
     </g>
   </svg>
 )
-
-export default KirdevNamed

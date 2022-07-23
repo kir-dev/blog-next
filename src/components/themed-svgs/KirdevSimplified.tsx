@@ -32,5 +32,3 @@ export const KirdevSimplified = ({ style }: Props) => {
     </svg>
   )
 }
-
-export default KirdevSimplified

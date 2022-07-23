@@ -1,6 +1,6 @@
 {
-  "plugins": [],
-  "presets": ["babel-preset-gatsby"],
+  "presets": ["babel-preset-gatsby", ["@babel/preset-react", { "runtime": "automatic", "importSource": "@emotion/react" }]],
+  "plugins": ["@emotion"],
   "env": {
     "development": {
       "compact": false
