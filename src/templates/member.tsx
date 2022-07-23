@@ -35,7 +35,6 @@ const MemberTemplate = ({ data }: Props) => {
         <Box>
           <Container>
             <MemberFullCard member={member} />
-            {/* eslint-disable-next-line react/no-danger */}
             <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
           </Container>
         </Box>

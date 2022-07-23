@@ -99,7 +99,6 @@ const ProjectTemplate = ({ data }: Props) => {
           </Box>
           <Container>
             <Box py={8}>
-              {/* eslint-disable-next-line react/no-danger */}
               <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
             </Box>
             <Box

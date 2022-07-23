@@ -44,7 +44,6 @@ export const MeetingControls = () => {
         <Box
           onClick={useBreakpointValue({
             base: close,
-            // eslint-disable-next-line @typescript-eslint/no-empty-function
             sm: () => {}
           })}
           rounded="full"

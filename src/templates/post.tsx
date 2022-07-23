@@ -91,7 +91,6 @@ const PostTemplate = ({ data }: Props) => {
             </Container>
           </Header>
           <Container>
-            {/* eslint-disable-next-line react/no-danger */}
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
             <Box
               textAlign="right"
