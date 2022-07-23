@@ -23,7 +23,7 @@ const MembersPage = ({ data }: MembersProps) => (
             Csapatunk
           </Heading>
           <Flex flexWrap="wrap" justifyContent="center">
-            {getMemberCollage(data.actives)}
+            {getMemberCollage(data.actives.nodes)}
           </Flex>
           <MeetingControls />
           {data.inactives.nodes.length > 0 && (
@@ -32,7 +32,7 @@ const MembersPage = ({ data }: MembersProps) => (
                 Korábbi tagjaink
               </Heading>
               <Flex flexWrap="wrap" justifyContent="center">
-                {getMemberCollage(data.inactives)}
+                {getMemberCollage(data.inactives.nodes)}
               </Flex>
             </>
           )}

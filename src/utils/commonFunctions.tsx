@@ -40,17 +40,19 @@ export const getIcon = (status: { label: string; color: string }): JSX.Element =
   }
 }
 
-export const getMemberCollage = ({ nodes }: { nodes: MemberProps[] }): JSX.Element[] =>
-  nodes.map((member) => (
-    <Flex
-      py={{ base: 2, sm: 1 }}
-      px={{ base: 0, sm: 1 }}
-      flex={`0 0 ${useBreakpointValue({ base: '100%', sm: '50%', md: '33%', lg: '25%' })}`}
-      key={member.pekUsername}
-    >
-      <MemberAvatarCard member={member} />
-    </Flex>
-  ))
+export const getMemberCollage = (nodes: MemberProps[]): JSX.Element[] =>
+  nodes
+    .sort((a, b) => a.realName.localeCompare(b.realName))
+    .map((member) => (
+      <Flex
+        py={{ base: 2, sm: 1 }}
+        px={{ base: 0, sm: 1 }}
+        flex={`0 0 ${useBreakpointValue({ base: '100%', sm: '50%', md: '33%', lg: '25%' })}`}
+        key={member.pekUsername}
+      >
+        <MemberAvatarCard member={member} />
+      </Flex>
+    ))
 
 type SocialId = 'github' | 'youtube' | 'facebook' | 'insta' | 'twitter'
 type SocialItem = {
@@ -77,4 +79,9 @@ const SOCIALS: SocialItem[] = [
 export const getSocials = (socialIds: SocialId[] = []) => {
   if (socialIds.length === 0) return SOCIALS
   else return SOCIALS.filter((social) => socialIds.includes(social.id))
+}
+
+export const initials = (name: string) => {
+  const [firstName, lastName] = name.split(' ')
+  return firstName && lastName ? `${firstName.charAt(0)}${lastName.charAt(0)}` : firstName.charAt(0)
 }

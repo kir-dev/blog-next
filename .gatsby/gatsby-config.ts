@@ -1,6 +1,6 @@
 import dotenv from 'dotenv'
 import path from 'path'
-import { environment } from '~utils/configurations'
+import { environment } from '../src/utils/configurations'
 
 dotenv.config({
   path: `.env.${process.env.NODE_ENV}`
