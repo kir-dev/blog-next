@@ -80,8 +80,3 @@ export const getSocials = (socialIds: SocialId[] = []) => {
   if (socialIds.length === 0) return SOCIALS
   else return SOCIALS.filter((social) => socialIds.includes(social.id))
 }
-
-export const initials = (name: string) => {
-  const [firstName, lastName] = name.split(' ')
-  return firstName && lastName ? `${firstName.charAt(0)}${lastName.charAt(0)}` : firstName.charAt(0)
-}
