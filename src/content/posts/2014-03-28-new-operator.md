@@ -3,7 +3,7 @@ layout: post
 author: tmichel
 date: 2014-03-28 10:25:00
 title: 'JavaScript new operátor'
-comment: true
+
 category: javascript
 ---
 

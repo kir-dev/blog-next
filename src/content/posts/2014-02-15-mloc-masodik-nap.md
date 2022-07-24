@@ -3,7 +3,6 @@ layout: post
 author: kresshy
 date: 2014-02-15 22:33:00
 title: 'mloc.js konferencia II. nap'
-comment: true
 ---
 
 A fantasztikus első nap után örömmel keltem fel reggel fél hétkor, hogy berohanjak a Prezibe a konferencia második napjára. Sajnos az első nap után lévő partit ki kellett hagynom, de a srácok, akik ott maradtak biztos tudnának mesélni róla. Kicsit fáradt volt a csapat, mert segítőként voltunk jelen és hosszú volt az előző nap. Miután felkészültünk az emberek fogadására kezdődhetett a második nap.

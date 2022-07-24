@@ -8,4 +8,5 @@ export interface PostProps {
   tags?: Array<string>
   featuredImage: ImageDataLike
   ogImage?: ImageDataLike
+  comment?: boolean
 }

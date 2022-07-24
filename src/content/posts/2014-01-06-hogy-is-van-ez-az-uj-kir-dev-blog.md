@@ -3,7 +3,6 @@ title: 'Hogy is van ez az új Kir-Dev blog?'
 author: tmichel
 layout: post
 date: 2014-01-06 22:45:00
-comment: true
 ---
 
 Már az [első bejegyzésben](/post/2013-12-23-megujulunk) is említettem, hogy az új blogunkat a [Jekyll](http://jekyllrb.com/) blog "motor" hatja.

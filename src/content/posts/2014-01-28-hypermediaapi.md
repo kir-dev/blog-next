@@ -3,7 +3,6 @@ layout: post
 title: 'Hypermedia API'
 author: snapdragon
 date: 2014-01-28 13:20:00
-comment: true
 ---
 
 Az informatikai rendszerek architektúrájában egy evolúciós lépés a szolgáltatás-orientált programozás ([SOA](http://en.wikipedia.org/wiki/Service-oriented_architecture)), melyet gyakran webszolgáltatások formájában implementálnak. A SOA architektúra azonban önmagában nem a webre született, így kialakult az erőforrás-orientált architektúra ([ROA](http://en.wikipedia.org/wiki/Resource-oriented_architecture)), mely inkább programozási paradigmának, vagy megvalósítási stílusnak nevezhető. A ROA lényege, hogy a szoftvert erőforrások formájában tervezzük meg és az alkalmazást alkotó szolgáltatások [REST](http://en.wikipedia.org/wiki/Representational_state_transfer) interfészen keresztül kommunikálnak.

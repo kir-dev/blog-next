@@ -5045,15 +5045,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/classnames@npm:2.3.1":
-  version: 2.3.1
-  resolution: "@types/classnames@npm:2.3.1"
-  dependencies:
-    classnames: "*"
-  checksum: 09a17ea08fcb83380921efdfdac94cfa162f87025cae0bf6f4ba508c2fa5f436459ce7612905a3f968fdddb68c03b8e6ff08e762ed2d0c110c5c4fceb244dc55
-  languageName: node
-  linkType: hard
-
 "@types/common-tags@npm:^1.8.1":
   version: 1.8.1
   resolution: "@types/common-tags@npm:1.8.1"
@@ -7217,13 +7208,6 @@ __metadata:
   version: 2.0.0
   resolution: "ci-info@npm:2.0.0"
   checksum: 3b374666a85ea3ca43fa49aa3a048d21c9b475c96eb13c133505d2324e7ae5efd6a454f41efe46a152269e9b6a00c9edbe63ec7fa1921957165aae16625acd67
-  languageName: node
-  linkType: hard
-
-"classnames@npm:*":
-  version: 2.3.1
-  resolution: "classnames@npm:2.3.1"
-  checksum: 14db8889d56c267a591f08b0834989fe542d47fac659af5a539e110cc4266694e8de86e4e3bbd271157dbd831361310a8293e0167141e80b0f03a0f175c80960
   languageName: node
   linkType: hard
 
@@ -12849,7 +12833,6 @@ __metadata:
     "@emotion/react": 11.9.3
     "@emotion/styled": 11.9.3
     "@fontsource/poppins": 4.5.8
-    "@types/classnames": 2.3.1
     "@types/node": 18.0.6
     "@types/react": 18.0.15
     "@types/react-dom": 18.0.6
@@ -12888,6 +12871,7 @@ __metadata:
     react-helmet: 6.1.0
     react-icons: 4.4.0
     typescript: 4.7.4
+    utterances-react-component: ^1.0.0
   languageName: unknown
   linkType: soft
 
@@ -18881,6 +18865,16 @@ __metadata:
   version: 1.0.1
   resolution: "utils-merge@npm:1.0.1"
   checksum: c81095493225ecfc28add49c106ca4f09cdf56bc66731aa8dabc2edbbccb1e1bfe2de6a115e5c6a380d3ea166d1636410b62ef216bb07b3feb1cfde1d95d5080
+  languageName: node
+  linkType: hard
+
+"utterances-react-component@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "utterances-react-component@npm:1.0.0"
+  peerDependencies:
+    react: ^16 || ^17 || ^18
+    react-dom: ^16 || ^17 || ^18
+  checksum: a2a120e996c74f6717aacd0112a5bb9f75a3bb3a05151c22ba06ecc1c963d4f2fa17dde9b21a88c9d23f2f3d1e8c0205046d9581cfee34572c6fa6d6b2c52761
   languageName: node
   linkType: hard
 

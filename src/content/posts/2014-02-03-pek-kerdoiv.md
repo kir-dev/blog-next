@@ -3,7 +3,7 @@ layout: post
 author: tmichel
 date: 2014-02-03 14:50:00
 category: pek
-comment: true
+
 title: 'PÉK kérdőív'
 ---
 

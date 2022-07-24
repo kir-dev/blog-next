@@ -3,7 +3,6 @@ layout: post
 author: snapdragon
 date: 2014-04-06 20:18:40
 title: A kliens oldali teljesítmény számít
-comment: true
 ---
 
 Sokan hallhattatok már a backend oldali skálázásról, a különböző cluster és sharding megoldásról (a témában érdemes követni a [HighScalability](http://highscalability.com/) oldalt), de valójában erre az esetek nagy részében nincs szükség egy új alkalmazás bevezetésekor a piacra. Ekkor sokkal nagyobb hangsúlyt érdemes fektetni a felhasználói elégedettségre, amit inkább az alkalmazásunk kliens oldali teljesítménye határoz meg. A határok persze nem ilyen élesek, olvass tovább!

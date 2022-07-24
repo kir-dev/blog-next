@@ -3,7 +3,6 @@ layout: post
 author: balo
 date: 2014-02-16 22:15:00
 title: 'Jelszavak kezelése szkriptekben'
-comment: true
 ---
 
 [Sokszor készítünk](http://xkcd.com/1205/) szkripteket azért, hogy a gyakran végzendő feladatokat automatizáljuk, ezekben néha különféle jelszavak bekérésére is szükség van. Lehetne, hogy egy konstansban elmentjük az érzékeny információt a szkriptben, de ez ugye amellett, hogy nem szép a verziókezelést is nehezíti. Ha a hívott alkalmazás támogatja a jelszófájlokat, akkor érdemes azt használni és a fájlt megfelelően titkosítani.

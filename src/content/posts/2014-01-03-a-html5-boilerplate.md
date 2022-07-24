@@ -3,7 +3,6 @@ layout: post
 title: 'A HTML5 Boilerplate'
 author: kresshy
 date: 2014-01-03 22:00:00
-comment: true
 ---
 
 A HTML5 Boilerplate egy front-end template, amit arra találtak ki, hogy gyors, robusztus és

@@ -3,7 +3,7 @@ layout: post
 author: kresshy
 date: 2014-02-14 21:45:00
 title: 'mloc.js konferencia I. nap'
-comment: true
+
 excerpt: <p>Ha követitek a magyarországi konferenciákat, akkor láthattátok, hogy február 13-14-én a Prezi a "House of Ideas"-ban rendezi az <a href="http://mloc-js.com/2014/">mloc.js</a> JavaScript konferenciát. Ebben a cikkben az első nap eseményeiről szeretnénk megosztani az élményeinket.</p>
 ---
 

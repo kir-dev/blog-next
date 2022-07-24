@@ -3,7 +3,6 @@ layout: post
 title: 'Egy kicsit a biztonságról'
 author: kresshy
 date: 2014-01-22 20:30:00
-comment: true
 ---
 
 Egy weboldal nagyon hasznos annak a közösségnek, akik mindennap használják az általa nyújtott szolgáltatásokat. Egy felhasználói közösséget nagyon nehéz és időigényes felépíteni, viszont a szolgáltatás gyakori kiesésével könnyedén, percek alatt porig lehet rombolni az eddigi munkánknak az eredményét. A felhasználók nem szeretik, ha nem tudják elérni a megszokott funkciókat és a barátaikat, mert valamilyen hiba lépett fel, vagy az oldal ismeretlen okból nem üzemel megfelelően. A kódban található rengeteg hiba mellett (amelyek kiesésekhez vezethetnek) létezik egy sokkal nagyobb probléma is. Egy támadó az oldal mögött található erőforrásokhoz próbálhat hozzáférni, hogy személyes adatokhoz, vagy magához a szerverhez szerezzen részleges, esetleg teljes hozzáférést. Ebben a cikkben egy-két webes sérülékenységekre koncentrálunk és szeretnénk egy kis bevezetést adni a létező támadási formákba illetve az ezekkel szembeni védekezésbe.

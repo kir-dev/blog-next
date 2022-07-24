@@ -77,7 +77,7 @@ Az `src/content/members/active.yaml` fájlt kell kiegészíteni egy új tömbele
 
 ## Tanfolyamok
 
-Érdemes lehet átírni a már meglévő kurzus entitásokat a `content/courses` könyvtárban. Azonban ha mégis új tanfolyamot kell hozzáadnod, használd a `create-course.sh` shell scriptet (`./create-course.sh '<title>' '<lecturer>'`).
+Érdemes lehet átírni a már meglévő kurzus entitásokat a `content/courses` könyvtárban.
 
 Szerkeszteni tudod a hozzárendelt tulajdonságokat a létrejött markdown fájlban:
 
@@ -87,10 +87,6 @@ Szerkeszteni tudod a hozzárendelt tulajdonságokat a létrejött markdown fájl
   - Fun fact: TanulóSCH-n új feature a tanulószobától független események rendezése, így akár belinkelhetsz egy TanulóSCH eseményt is.
 - `active`: jelenleg aktív-e a tanfolyam, ha false, nem jelenik meg a tanfolyam oldalon sem
 - A leírást pedig írd meg a markdown fájl további részében.
-
-## Developer Notes
-
-- Jelenleg a képek a `gatsby-image-plugin` segítségével töltődnek be a repóból, ha azok használatban vannak egy-egy poszt vagy projekt vagy member featuredImage vagy egyéb fieldjében. FONTOS: `gatsby-node.ts` fájlban a `type Frontmatter` GraphQL sémát módosítsd, ha új olyan fieldet definiáltál egy markdown frontmatterban, ami valami képre/fájlra fog mutatni. Jelenleg a `featuredImage` és `ogImage` fieldek lesznek előre `File` típussal ellátva a MarkdownRemark Frontmatter interfészében, amikor a Gatsby ezeket a GraphQL sémákat generálja.
 
 ## License
 

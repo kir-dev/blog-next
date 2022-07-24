@@ -44,7 +44,7 @@ export const MeetingControls = ({ numberOfActives }: Props) => {
       </Text>
       <HStack justifySelf="center" fontSize={useBreakpointValue({ base: 'md', sm: 'xl' })}>
         {ACTION_ICONS_CENTER.map((icon) => (
-          <HStack>
+          <HStack key={icon.toString()}>
             <IconButton
               size="sm"
               fontSize={{ base: 'lg', md: 'xl' }}
@@ -81,7 +81,7 @@ export const MeetingControls = ({ numberOfActives }: Props) => {
       >
         {ACTION_ICONS_RIGHT.map((icon) =>
           icon === MdOutlinePeople ? (
-            <Box position="relative">
+            <Box position="relative" key={icon.toString()}>
               <IconButton
                 size="sm"
                 fontSize={{ base: 'xl', md: '2xl' }}
@@ -94,7 +94,7 @@ export const MeetingControls = ({ numberOfActives }: Props) => {
               </Badge>
             </Box>
           ) : (
-            <HStack cursor="pointer">
+            <HStack cursor="pointer" key={icon.toString()}>
               <IconButton
                 size="sm"
                 fontSize={{ base: 'xl', md: '2xl' }}

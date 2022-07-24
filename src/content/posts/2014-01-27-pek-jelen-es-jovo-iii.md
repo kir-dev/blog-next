@@ -4,7 +4,6 @@ title: 'PÉK jelene és jövője, III. rész'
 author: tmichel
 date: 2014-01-27 20:50:00
 category: pek
-comment: true
 ---
 
 Most, hogy már tisztában vagyunk a [PÉK és a VIR különbségével](/post/2014-01-23-pek-jelen-es-jovo-i), valamint a [PÉK múltjával](/post/2014-01-25-pek-jelen-es-jovo-ii), ideje rátérni a jelenére is. Nézzük meg, hogyan épül fel az alkalmazás és ez milyen problémákhoz vezet!

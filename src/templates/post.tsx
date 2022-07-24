@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
 
 import { FaClock } from 'react-icons/fa'
+import { Utterances } from 'utterances-react-component'
 import { BlogAuthor } from '~components/blog-components/BlogAuthor'
 import { ScrollButton } from '~components/blog-components/ScrollButton'
 import { Container } from '~components/Container'
@@ -104,6 +105,22 @@ const PostTemplate = ({ data }: Props) => {
             >
               <Button colorScheme="orange">Vissza a tetejére</Button>
             </Box>
+            <div id="top-scroll"></div>
+            {post.frontmatter.comment && (
+              <>
+                <Utterances repo="kir-dev/blog-next" theme="github-light" issueTerm="pathname" label="Utterances" />
+                <Box textAlign="right" mt={2}>
+                  <Button
+                    colorScheme="orange"
+                    onClick={() => {
+                      document.getElementById('top-scroll')?.scrollIntoView()
+                    }}
+                  >
+                    Vissza a kommentek tetejére
+                  </Button>
+                </Box>
+              </>
+            )}
           </Container>
         </Box>
         <ScrollButton />
@@ -125,6 +142,7 @@ export const query = graphql`
         date
         author
         tags
+        comment
         featuredImage {
           childImageSharp {
             gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])

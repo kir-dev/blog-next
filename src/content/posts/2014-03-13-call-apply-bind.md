@@ -3,7 +3,6 @@ layout: post
 author: tmichel
 date: 2014-03-13 21:30:00
 title: 'Function.prototype.call, apply és bind'
-comment: true
 ---
 
 A [web alapozó tanfolyamunk](http://kir-dev.github.io/tanfolyam/) JavaScript alapozó előadásán belefutottunk két olyan témába, amelyek bőven túlmutatnak egy bevezető keretein. Sőt, egy átlag weboldal fejlesztésénél sem igazán futunk bele ezekbe a dolgokba.

@@ -3,7 +3,7 @@ layout: post
 author: tmichel
 date: 2014-01-29 22:45:00
 category: pek
-comment: true
+
 title: 'PÉK jelene és jövője, IV. rész'
 excerpt: '<p>A negyedik résszel elérkeztünk a sorozat végére. Ebben a részben áttekintjük, hogy mire jutottunk az utóbbi 1-2 hónapban. Rengeteget beszéltünk arról, hogy merre vigyük a PÉK-et, mert több ötlet is felmerült. Megrágtunk jó néhány variációt, de végül győzött a józan ész.</p>'
 ---

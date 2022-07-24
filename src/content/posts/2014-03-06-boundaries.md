@@ -3,7 +3,6 @@ layout: post
 author: tmichel
 date: 2014-03-06 17:20:00
 title: 'Boundaries'
-comment: true
 ---
 
 Ma egy érdekes előadással jelentkezünk. [Gary Bernhardt](https://twitter.com/garybernhardt)

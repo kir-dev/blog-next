@@ -3,7 +3,6 @@ layout: post
 author: tmichel
 date: 2014-06-05 00:56:00
 title: auth.sch tesztrepülés
-comment: true
 ---
 
 Már többször volt szó arról (legutóbb az [auth.sch koncepciójának

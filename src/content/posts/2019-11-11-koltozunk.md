@@ -6,7 +6,6 @@ title: Költözünk
 tags:
   - hírek
   - ops
-comment: true
 ---
 
 ## A múlt
