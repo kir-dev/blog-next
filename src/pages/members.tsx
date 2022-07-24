@@ -18,25 +18,27 @@ const MembersPage = ({ data }: MembersProps) => (
       })}url(/background/top-right2.svg) right top no-repeat`}
     >
       <Box>
-        <Container>
-          <Heading as="h1" size="2xl" mt={8} mb={12}>
-            Csapatunk
-          </Heading>
-          <Flex flexWrap="wrap" justifyContent="center">
-            {getMemberCollage(data.actives.nodes)}
+        <Flex flexDirection="column" pt={10} px={2} bgColor="gray.900">
+          <Flex flexWrap="wrap" justifyContent="center" maxWidth="82rem" mx="auto">
+            {getMemberCollage(data.actives.nodes, { base: '12rem', lg: '16rem' }, { base: '10rem', lg: '12rem' })}
           </Flex>
           <MeetingControls numberOfActives={data.actives.nodes.length} />
-          {data.inactives.nodes.length > 0 && (
-            <>
-              <Heading as="h2" size="lg" mt={32} mb={8}>
-                Korábbi tagjaink
-              </Heading>
-              <Flex flexWrap="wrap" justifyContent="center">
-                {getMemberCollage(data.inactives.nodes)}
-              </Flex>
-            </>
-          )}
-        </Container>
+        </Flex>
+        {data.inactives.nodes.length > 0 && (
+          <Container>
+            <Heading as="h2" size="lg" mt={32} mb={8}>
+              Korábbi tagjaink
+            </Heading>
+            <Flex flexWrap="wrap" justifyContent="center">
+              {getMemberCollage(
+                data.inactives.nodes,
+                { base: '12rem', lg: '16rem' },
+                { base: '10rem', lg: '12rem' },
+                { base: '100%', sm: '50%', md: '33%' }
+              )}
+            </Flex>
+          </Container>
+        )}
       </Box>
     </IndexLayout>
   </>

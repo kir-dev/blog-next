@@ -6,9 +6,11 @@ import { environment } from '~utils/configurations'
 
 type Props = {
   member: MemberProps
+  height: any
+  avatarBoxSize: any
 }
 
-export const MemberAvatarCard = ({ member }: Props) => {
+export const MemberAvatarCard = ({ member, height = '12rem', avatarBoxSize = '10rem' }: Props) => {
   const [overlayShown, setOverlayShown] = useState(false)
   const onOverlayEnter = () => setOverlayShown(true)
   const onOverlayLeave = () => setOverlayShown(false)
@@ -19,15 +21,20 @@ export const MemberAvatarCard = ({ member }: Props) => {
       href={`${environment.pekUrl}/profiles/${member.pekUsername}`}
       target="_blank"
       pos="relative"
-      h="12rem"
+      h={height}
       w="full"
       bgColor="gray.700"
       borderRadius="lg"
       onMouseOver={onOverlayEnter}
       onMouseLeave={onOverlayLeave}
     >
-      <Flex h="12rem" alignItems="center" justifyContent="center">
-        <Avatar name={member.realName} src={member.normalImageUrl} size="2xl" />
+      <Flex h={height} alignItems="center" justifyContent="center">
+        <Avatar
+          name={member.realName}
+          src={member.normalImageUrl}
+          size={member.normalImageUrl ? undefined : { base: 'xl', lg: '2xl' }}
+          boxSize={member.normalImageUrl ? avatarBoxSize : undefined}
+        />
       </Flex>
       <HStack pos="absolute" bottom={0} left={0} zIndex={10} m={2} px={2} fontSize="md" spacing={2}>
         <Box color="gray.100" textShadow="1px 1px 1px #000000, 2px 2px 4px #000000" fontFamily="heading">
@@ -52,8 +59,13 @@ export const MemberAvatarCard = ({ member }: Props) => {
         opacity={overlayShown ? 1 : 0}
         transition="200ms ease"
       >
-        <Flex h="12rem" alignItems="center" justifyContent="center">
-          <Avatar name={member.realName} src={member.funnyImageUrl} size="2xl" />
+        <Flex h={height} alignItems="center" justifyContent="center">
+          <Avatar
+            name={member.realName}
+            src={member.funnyImageUrl || member.normalImageUrl}
+            size={member.funnyImageUrl || member.normalImageUrl ? undefined : { base: 'xl', lg: '2xl' }}
+            boxSize={member.normalImageUrl || member.normalImageUrl ? avatarBoxSize : undefined}
+          />
         </Flex>
       </Box>
     </Box>

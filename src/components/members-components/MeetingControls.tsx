@@ -1,12 +1,13 @@
 import { Badge, Box, Grid, HStack, Icon, IconButton, Text, useBreakpointValue } from '@chakra-ui/react'
-import { useColorModeValue } from '@chakra-ui/system'
 import { useState } from 'react'
-import { BiCommentDetail } from 'react-icons/bi'
-import { FaMicrophone, FaPhone, FaVideo } from 'react-icons/fa'
+import { BiCommentDetail, BiMicrophoneOff, BiVideoOff } from 'react-icons/bi'
+import { FaPhone } from 'react-icons/fa'
 import { HiOutlineDotsVertical } from 'react-icons/hi'
-import { MdOutlineInfo, MdOutlinePeople } from 'react-icons/md'
+import { MdOutlineClosedCaption, MdOutlineFrontHand, MdOutlineInfo, MdOutlinePeople, MdPresentToAll } from 'react-icons/md'
 
-const ACTION_ICONS_CENTER = [FaMicrophone, FaVideo, HiOutlineDotsVertical]
+const ACTION_ICONS_CENTER1 = [BiMicrophoneOff, BiVideoOff]
+const ACTION_ICONS_CENTER2 = [MdOutlineClosedCaption, MdOutlineFrontHand, MdPresentToAll]
+const ACTION_ICONS_CENTER3 = [HiOutlineDotsVertical]
 const ACTION_ICONS_RIGHT = [MdOutlineInfo, MdOutlinePeople, BiCommentDetail]
 
 type Props = {
@@ -16,34 +17,33 @@ type Props = {
 export const MeetingControls = ({ numberOfActives }: Props) => {
   const [showControls, setShowControls] = useState(true)
   const close = () => setShowControls(false)
+  const showOnScreenSize = useBreakpointValue({ base: false, md: true })
 
   return (
     <Grid
       display={showControls ? 'grid' : 'none'}
       zIndex="modal"
       py={4}
-      my={useBreakpointValue({ base: 0, sm: 10 })}
+      px={{ base: 1, md: 10 }}
+      my={{ base: 0, sm: 10 }}
       w="full"
       templateColumns={`repeat(${useBreakpointValue({ base: 1, sm: 2, md: 3 })}, 1fr)`}
       gap={2}
       alignItems="center"
-      position={useBreakpointValue({ base: 'fixed', sm: 'relative' })}
+      position={{ base: 'fixed', sm: 'relative' }}
       bottom={0}
       left={0}
-      bgColor={useBreakpointValue({ base: useColorModeValue('white', 'gray.900'), sm: undefined })}
-      rounded={useBreakpointValue({ base: 'none', sm: 'lg' })}
+      bgColor={{ base: 'gray.900', sm: undefined }}
+      rounded={{ base: 'none', sm: 'lg' }}
       color="gray.900"
     >
-      <Text
-        px={4}
-        fontSize={useBreakpointValue({ base: 'lg', sm: '2xl' })}
-        color={useColorModeValue('gray.900', 'gray.100')}
-        fontFamily="heading"
-      >
-        Kir-Dev gyűlés
-      </Text>
-      <HStack justifySelf="center" fontSize={useBreakpointValue({ base: 'md', sm: 'xl' })}>
-        {ACTION_ICONS_CENTER.map((icon) => (
+      <HStack>
+        <Text px={4} fontSize={{ base: 'lg', sm: '2xl' }} textAlign={{ base: 'center', sm: 'start' }} color="gray.100" fontFamily="heading">
+          Kir-Dev gyűlés
+        </Text>
+      </HStack>
+      <HStack justifySelf="center" fontSize={{ base: 'md', sm: 'xl' }}>
+        {ACTION_ICONS_CENTER1.map((icon) => (
           <HStack key={icon.toString()}>
             <IconButton
               size="sm"
@@ -52,7 +52,40 @@ export const MeetingControls = ({ numberOfActives }: Props) => {
               h={12}
               icon={<Icon as={icon} m={4} />}
               aria-label="Non-functional button"
-              bgColor={useColorModeValue('gray.300', 'gray.700')}
+              color="gray.100"
+              bgColor="red.500"
+              _hover={{ bgColor: 'red.600' }}
+            />
+          </HStack>
+        ))}
+        {showOnScreenSize &&
+          ACTION_ICONS_CENTER2.map((icon) => (
+            <HStack key={icon.toString()}>
+              <IconButton
+                size="sm"
+                fontSize={{ base: 'lg', md: 'xl' }}
+                rounded="full"
+                h={12}
+                icon={<Icon as={icon} m={4} />}
+                aria-label="Non-functional button"
+                bgColor="gray.700"
+                color="gray.100"
+                _hover={{ bgColor: 'gray.800' }}
+              />
+            </HStack>
+          ))}
+        {ACTION_ICONS_CENTER3.map((icon) => (
+          <HStack key={icon.toString()}>
+            <IconButton
+              size="sm"
+              fontSize={{ base: 'lg', md: 'xl' }}
+              rounded="full"
+              h={12}
+              icon={<Icon as={icon} m={4} />}
+              aria-label="Non-functional button"
+              bgColor="gray.700"
+              color="gray.100"
+              _hover={{ bgColor: 'gray.800' }}
             />
           </HStack>
         ))}
@@ -71,43 +104,33 @@ export const MeetingControls = ({ numberOfActives }: Props) => {
             aria-label="Non-functional button"
             color="gray.100"
             bgColor="red.500"
+            _hover={{ bgColor: 'red.600' }}
           />
         </HStack>
       </HStack>
-      <HStack
-        justifySelf="end"
-        fontSize={useBreakpointValue({ base: 'md', sm: 'xl' })}
-        display={useBreakpointValue({ base: 'none', md: 'flex' })}
-      >
-        {ACTION_ICONS_RIGHT.map((icon) =>
-          icon === MdOutlinePeople ? (
+      {showOnScreenSize && (
+        <HStack justifySelf="end" fontSize={{ base: 'md', sm: 'xl' }}>
+          {ACTION_ICONS_RIGHT.map((icon) => (
             <Box position="relative" key={icon.toString()}>
               <IconButton
                 size="sm"
                 fontSize={{ base: 'xl', md: '2xl' }}
                 variant="ghost"
-                icon={<MdOutlinePeople />}
+                h={12}
+                icon={<Icon as={icon} m={3} />}
                 aria-label="Non-functional button"
+                color="gray.100"
+                _hover={{ bgColor: 'gray.800' }}
               />
-              <Badge position="absolute" rounded="full" right={-2} top={-1} bgColor="gray.600" color="gray.100">
-                {numberOfActives}
-              </Badge>
+              {icon === MdOutlinePeople && (
+                <Badge position="absolute" rounded="full" right={-1} top={-0.5} bgColor="gray.600" color="gray.100">
+                  {numberOfActives}
+                </Badge>
+              )}
             </Box>
-          ) : (
-            <HStack cursor="pointer" key={icon.toString()}>
-              <IconButton
-                size="sm"
-                fontSize={{ base: 'xl', md: '2xl' }}
-                variant="ghost"
-                aria-label="Non-functional button"
-                icon={<Icon as={icon} />}
-                my={3}
-                mx={3.5}
-              />
-            </HStack>
-          )
-        )}
-      </HStack>
+          ))}
+        </HStack>
+      )}
     </Grid>
   )
 }
