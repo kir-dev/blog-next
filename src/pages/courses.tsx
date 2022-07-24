@@ -1,21 +1,16 @@
 import { Alert, AlertIcon, Box, Button, Flex, Grid, Heading, Image, Link as ChakraLink, Text, useBreakpointValue } from '@chakra-ui/react'
 import { chakra, useColorModeValue } from '@chakra-ui/system'
 import { graphql, Link } from 'gatsby'
-import * as React from 'react'
-import Container from '~components/Container'
-import CourseCard from '~components/course-components/CourseCard'
-import Header from '~components/Header'
-import SEO from '~components/SEO'
-import { CourseProps } from '~types/course.props'
-import {
-  CURRENT_COURSE_EXTRA_INFO,
-  CURRENT_COURSE_FORM_CLOSING_INFO,
-  CURRENT_COURSE_FORM_URL,
-  CURRENT_COURSE_SEMESTER
-} from '~utils/configurations'
-import IndexLayout from '../layouts'
 
-interface CoursesProps {
+import { Container } from '~components/Container'
+import { CourseCard } from '~components/course-components/CourseCard'
+import { Header } from '~components/Header'
+import { SEO } from '~components/SEO'
+import { CourseProps } from '~types/course.props'
+import { environment } from '~utils/configurations'
+import { IndexLayout } from '../layouts'
+
+type Props = {
   data: {
     allCoursesYaml: {
       nodes: CourseProps[]
@@ -23,7 +18,7 @@ interface CoursesProps {
   }
 }
 
-const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
+const CoursesPage = ({ data }: Props) => (
   <>
     <SEO title="Tanfolyamaink" />
     <IndexLayout
@@ -45,10 +40,10 @@ const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
                   webes keretrendszerrel, illetve a webfejlesztés szakkifejezéseivel, eszközeivel.
                 </Text>
               </Box>
-              <Flex justifyContent={CURRENT_COURSE_FORM_URL ? 'space-between' : 'flex-end'} mt={4}>
-                {CURRENT_COURSE_FORM_URL && (
+              <Flex justifyContent={environment.course.form.url ? 'space-between' : 'flex-end'} mt={4}>
+                {environment.course.form.url && (
                   <Button display={{ base: 'inherit', md: 'none' }} color="white" bg="orange.500" _hover={{ bg: 'orange.600' }} px={4}>
-                    <ChakraLink isExternal href={CURRENT_COURSE_FORM_URL}>
+                    <ChakraLink isExternal href={environment.course.form.url}>
                       Jelentkezz!
                     </ChakraLink>
                   </Button>
@@ -58,10 +53,10 @@ const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
                 </Box>
               </Flex>
             </Flex>
-            {CURRENT_COURSE_FORM_URL && (
+            {environment.course.form.url && (
               <Box display={{ base: 'none', md: 'inherit' }} mt={4}>
                 <Button color="white" bg="orange.500" _hover={{ bg: 'orange.600' }} px={8}>
-                  <ChakraLink isExternal href={CURRENT_COURSE_FORM_URL}>
+                  <ChakraLink isExternal href={environment.course.form.url}>
                     Jelentkezz!
                   </ChakraLink>
                 </Button>
@@ -71,11 +66,11 @@ const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
         </Header>
         <Container>
           <Box>
-            <Heading as="h2">{CURRENT_COURSE_SEMESTER}</Heading>
-            {CURRENT_COURSE_EXTRA_INFO && (
+            <Heading as="h2">{environment.course.semester}</Heading>
+            {environment.course.extraInfo && (
               <Alert status="info" my={4}>
                 <AlertIcon />
-                {CURRENT_COURSE_EXTRA_INFO}
+                {environment.course.extraInfo}
               </Alert>
             )}
             <Box mt={6}>
@@ -107,10 +102,10 @@ const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
               azok az alapvető adatstruktúrák, és hogy hogyan kell elágazásokat írni, már jó vagy. Az egyes alkalmakról minden tudnivalót
               (előadás témája, mit kell hozni, hova kell menni) előzetesen e-mail-ben fogsz megkapni az előadás előtt.
             </Text>
-            {CURRENT_COURSE_FORM_CLOSING_INFO && (
+            {environment.course.form.closingInfo && (
               <Alert status="info" my={4}>
                 <AlertIcon />
-                {CURRENT_COURSE_FORM_CLOSING_INFO}
+                {environment.course.form.closingInfo}
               </Alert>
             )}
             <Flex mt={10} direction={{ base: 'column', md: 'row' }}>
@@ -119,9 +114,9 @@ const CoursesPage: React.FC<CoursesProps> = ({ data }) => (
                 résztvevők emailben kapnak a jelentkezés lezárása utáni napon értesítést.
               </Heading>
               <Flex flex={1} justifyContent="flex-end" pl={{ base: 0, md: 8 }} mt={{ base: 4, md: 0 }}>
-                {CURRENT_COURSE_FORM_URL ? (
+                {environment.course.form.url ? (
                   <Button color="white" bg="orange.500" _hover={{ bg: 'orange.600' }} px={8}>
-                    <ChakraLink isExternal href={CURRENT_COURSE_FORM_URL}>
+                    <ChakraLink isExternal href={environment.course.form.url}>
                       Jelentkezz!
                     </ChakraLink>
                   </Button>

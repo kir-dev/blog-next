@@ -1,30 +1,14 @@
 import { Box, Grid, Heading, Text, useBreakpointValue } from '@chakra-ui/react'
 import { graphql, Link } from 'gatsby'
-import * as React from 'react'
-import BlogPreviewCard from '~components/blog-components/BlogPreviewCard'
-import Container from '~components/Container'
-import Header from '~components/Header'
-import SEO from '~components/SEO'
-import { PostProps } from '~types/post.props'
-import IndexLayout from '../layouts'
 
-export interface BlogPostsProps {
-  data: {
-    allMarkdownRemark: {
-      nodes: {
-        fields: {
-          slug: string
-        }
-        wordCount: {
-          words: number
-        }
-        frontmatter: PostProps
-      }[]
-    }
-  }
-}
+import { BlogPreviewCard } from '~components/blog-components/BlogPreviewCard'
+import { Container } from '~components/Container'
+import { Header } from '~components/Header'
+import { SEO } from '~components/SEO'
+import { BlogPostsProps } from '~types/page-props/blogPosts.props'
+import { IndexLayout } from '../layouts'
 
-const Blog: React.FC<BlogPostsProps> = ({ data }) => (
+const Blog = ({ data }: BlogPostsProps) => (
   <>
     <SEO title="Blog" />
     <IndexLayout

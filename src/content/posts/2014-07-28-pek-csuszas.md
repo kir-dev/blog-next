@@ -3,7 +3,6 @@ layout: post
 author: tmichel
 date: 2014-07-28 14:30:00
 title: PÉK fejlesztés várhatóan csúszik némileg
-comment: true
 ---
 
 A [legutolsó bejegyzésünkben][1] arról számoltunk be, hogy szépen halad a munka.

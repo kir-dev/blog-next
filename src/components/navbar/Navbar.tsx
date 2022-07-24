@@ -1,31 +1,30 @@
-import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons'
-import { Box, Collapse, Flex, IconButton, useDisclosure } from '@chakra-ui/react'
-import { useColorMode, useColorModeValue } from '@chakra-ui/system'
+import { Box, Collapse, Flex, Icon, IconButton, useColorMode, useColorModeValue, useDisclosure } from '@chakra-ui/react'
 import { Link } from 'gatsby'
-import * as React from 'react'
-import KirdevNamed from '~components/themed-svgs/KirdevNamed'
-import DesktopNav from './DesktopNav'
-import MobileNav from './MobileNav'
+import { FaBars, FaMoon, FaTimes } from 'react-icons/fa'
+import { HiOutlineSun } from 'react-icons/hi'
+import { KirdevNamed } from '~components/themed-svgs/KirdevNamed'
+import { DesktopNav } from './desktop/DesktopNav'
+import { MobileNav } from './mobile/MobileNav'
 
-const WithSubnavigation: React.FC = () => {
+export const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure()
   const { colorMode, toggleColorMode } = useColorMode()
 
   return (
-    <Box align="center" fontFamily="heading">
+    <Box fontFamily="heading">
       <Flex
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.800', 'white')}
         minH={{ base: '3rem', md: '4.5rem' }}
         maxW={['100%', '100%', '56rem', '72rem']}
-        py={{ base: 2 }}
-        px={{ base: 4 }}
-        align="center"
+        px={4}
+        mx="auto"
+        alignItems="center"
       >
         <Flex flex={{ base: 1, md: '1' }} ml={{ base: -2, md: 0 }} display={{ base: 'flex', md: 'none' }}>
           <IconButton
             onClick={onToggle}
-            icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />}
+            icon={isOpen ? <Icon as={FaTimes} w={5} h={5} /> : <Icon as={FaBars} w={5} h={5} />}
             variant="ghost"
             aria-label="Navigáció megnyitása"
           />
@@ -54,7 +53,7 @@ const WithSubnavigation: React.FC = () => {
         <Flex flex={{ base: 1, md: 0 }} mr={{ base: -2, md: 0 }} justify="flex-end">
           <IconButton
             aria-label="Sötét-világos mód váltás"
-            icon={colorMode === 'dark' ? <SunIcon w={5} h={5} /> : <MoonIcon w={5} h={5} />}
+            icon={colorMode === 'dark' ? <Icon as={HiOutlineSun} w={6} h={6} /> : <Icon as={FaMoon} w={5} h={5} />}
             onClick={toggleColorMode}
             variant="ghost"
           />
@@ -67,5 +66,3 @@ const WithSubnavigation: React.FC = () => {
     </Box>
   )
 }
-
-export default WithSubnavigation

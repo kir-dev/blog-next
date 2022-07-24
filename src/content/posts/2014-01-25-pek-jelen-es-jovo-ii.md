@@ -4,7 +4,6 @@ title: 'PÉK jelene és jövője, II. rész'
 author: tmichel
 date: 2014-01-25 12:20:00
 category: pek
-comment: true
 ---
 
 Az [előző részben](/post/2014-01-23-pek-jelen-es-jovo-i) a VIR és a

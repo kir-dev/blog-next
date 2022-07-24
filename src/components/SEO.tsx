@@ -1,9 +1,7 @@
-import { useLocation } from '@reach/router'
 import { graphql, useStaticQuery } from 'gatsby'
-import React from 'react'
+import { useEffect } from 'react'
 import { Helmet, HelmetProps } from 'react-helmet'
 
-/* eslint-disable react/require-default-props */
 type SEOProps = {
   lang?: string
   title?: string
@@ -16,7 +14,6 @@ type SEOProps = {
   meta?: { name: string; content: string }[]
   links?: { rel: string; href: string }[]
 } & HelmetProps
-/* eslint-enable react/require-default-props */
 
 type SiteMetadataProps = {
   site: {
@@ -42,7 +39,7 @@ type SiteMetadataProps = {
   }
 }
 
-const SEO: React.FC<SEOProps> = ({
+export const SEO = ({
   title,
   description,
   image,
@@ -53,7 +50,7 @@ const SEO: React.FC<SEOProps> = ({
   keywords = [],
   meta = [],
   links = []
-}) => {
+}: SEOProps) => {
   const data: SiteMetadataProps = useStaticQuery(graphql`
     query SiteMetadata {
       site {
@@ -80,8 +77,6 @@ const SEO: React.FC<SEOProps> = ({
     }
   `)
 
-  const { pathname } = useLocation()
-
   const {
     siteUrl,
     lang: defaultLang,
@@ -106,12 +101,16 @@ const SEO: React.FC<SEOProps> = ({
     description: description || defaultDescription,
     author: author || defaultAuthor,
     image: imageUrl,
-    url: pathname === '/' ? `${siteUrl}` : `${siteUrl}${pathname}`,
+    url: siteUrl,
     keywords: keywords.length ? keywords : defaultKeywords,
     robots: robots || defaultRobots,
     social,
     type
   }
+
+  useEffect(() => {
+    seo.url = window.location.pathname === '/' ? siteUrl : `${siteUrl}${window.location.pathname}`
+  })
 
   return (
     <Helmet
@@ -209,5 +208,3 @@ const SEO: React.FC<SEOProps> = ({
     />
   )
 }
-
-export default SEO

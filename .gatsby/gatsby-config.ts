@@ -1,6 +1,6 @@
 import dotenv from 'dotenv'
 import path from 'path'
-import { FACEBOOK_PAGE_URL, GITHUB_ORG_URL, INSTAGRAM_PAGE_URL, TWITTER_USERNAME } from '../src/utils/configurations'
+import { environment } from '../src/utils/configurations'
 
 dotenv.config({
   path: `.env.${process.env.NODE_ENV}`
@@ -19,14 +19,14 @@ export default {
       `Szakkollégiumának tagja.`,
     author: 'kir-dev',
     image: '/default-og.png',
-    keywords: ['gatsbyjs', 'typescript', 'javascript', 'ruby', 'rails', 'nodejs', 'typescript', 'community', 'simonyi'],
+    keywords: ['web-development', 'software', 'devops', 'rails', 'nodejs', 'spring-boot', 'community', 'simonyi', 'kir-dev'],
     robots: 'index, follow',
     social: {
-      twitter: `https://twitter.com/${TWITTER_USERNAME}`,
-      twitterUsername: TWITTER_USERNAME,
-      github: GITHUB_ORG_URL,
-      facebook: FACEBOOK_PAGE_URL,
-      instagram: INSTAGRAM_PAGE_URL
+      twitter: `https://twitter.com/${environment.socials.twitterUsername}`,
+      twitterUsername: environment.socials.twitterUsername,
+      github: environment.socials.githubOrgUrl,
+      facebook: environment.socials.facebookUrl,
+      instagram: environment.socials.instagramUrl
     }
   },
   plugins: [
@@ -102,8 +102,6 @@ export default {
               elements: [`h1`, `h2`, `h3`, `h4`]
             }
           },
-          `gatsby-remark-responsive-iframe`,
-          `gatsby-remark-smartypants`,
           `gatsby-remark-external-links`,
           {
             resolve: `gatsby-remark-images`,
@@ -156,22 +154,15 @@ export default {
         siteUrl: 'https://kir-dev.sch.bme.hu'
       }
     },
-    `gatsby-plugin-emotion`,
-    `gatsby-plugin-typescript`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-tsconfig-paths`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `gatsby-plugin-typescript`,
       options: {
-        name: `Kir-Dev blogja`,
-        short_name: `Kir-Dev`,
-        start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#f15a29`,
-        display: `standalone`,
-        icon: `static/favicon.png`
+        isTSX: true,
+        jsxPragma: `React`,
+        allExtensions: true
       }
     },
-    `gatsby-plugin-offline`
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-tsconfig-paths`
   ]
 }

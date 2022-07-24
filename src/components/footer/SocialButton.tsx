@@ -1,14 +1,14 @@
 import { Button, Link } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
-import React from 'react'
+import { HasChildren } from '~utils/HasChildren'
 
-interface SocialButtonProps {
+type Props = {
   label: string
   href: string
   size: string | number
-}
+} & HasChildren
 
-const SocialButton: React.FC<SocialButtonProps> = ({ children, label, href, size }) => {
+export const SocialButton = ({ children, label, href, size }: Props) => {
   return (
     <Link isExternal href={href} rounded="full">
       <Button
@@ -32,5 +32,3 @@ const SocialButton: React.FC<SocialButtonProps> = ({ children, label, href, size
     </Link>
   )
 }
-
-export default SocialButton

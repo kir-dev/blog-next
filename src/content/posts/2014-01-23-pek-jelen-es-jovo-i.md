@@ -4,7 +4,6 @@ title: 'PÉK jelene és jövője, I. rész'
 author: tmichel
 date: 2014-01-23 22:35:00
 category: pek
-comment: true
 ---
 
 Ezzel a bejegyzéssel indul útjára egy több részes sorozat, amiben megpróbálom

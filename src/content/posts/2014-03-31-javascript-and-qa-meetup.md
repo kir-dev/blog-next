@@ -3,7 +3,6 @@ layout: post
 author: kresshy
 date: 2014-03-31 22:22:00
 title: 'JavaScript & QA Meetup a Prezinél'
-comment: true
 ---
 
 Március 27-én volt meetup a House of Ideasban, amely főleg a JavaScript-ről és a tesztelésről szólt. Három előadóhoz volt szerencsénk a magyar startupok világából. Az első Kökény Tamás volt a Brickflow-tól, a második Tóth Barna volt a LogMeIn-től és az este utolsó előadója volt Pengő József (Dzsó) a házigazda Prezitől.

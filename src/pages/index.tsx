@@ -10,6 +10,7 @@ import {
   Grid,
   Heading,
   HStack,
+  Icon,
   Link as ChakraLink,
   Spacer,
   Text,
@@ -17,29 +18,22 @@ import {
 } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
 import { graphql, Link } from 'gatsby'
-import * as React from 'react'
+
 import { useState } from 'react'
-import { FaFacebook, FaGithub, FaYoutube } from 'react-icons/fa'
-import BlogFullCard from '~components/blog-components/BlogFullCard'
-import Container from '~components/Container'
-import InfoBox from '~components/indexpage-components/InfoBox'
-import PekPreview from '~components/indexpage-components/PekPreview'
-import SEO from '~components/SEO'
-import Terminal from '~components/terminal/Terminal'
-import KirdevSimplified from '~components/themed-svgs/KirdevSimplified'
+import { BlogFullCard } from '~components/blog-components/BlogFullCard'
+import { Container } from '~components/Container'
+import { InfoBox } from '~components/indexpage-components/InfoBox'
+import { PekPreview } from '~components/indexpage-components/PekPreview'
+import { SEO } from '~components/SEO'
+import { Terminal } from '~components/terminal/Terminal'
+import { KirdevSimplified } from '~components/themed-svgs/KirdevSimplified'
 import { PostProps } from '~types/post.props'
 import { ProjectProps } from '~types/project.props'
-import {
-  FACEBOOK_PAGE_URL,
-  FRONTPAGE_ALERT_DESCRIPTION,
-  FRONTPAGE_ALERT_TITLE,
-  GITHUB_ORG_URL,
-  PEK_URL,
-  YOUTUBE_CHANNEL_URL
-} from '~utils/configurations'
-import IndexLayout from '../layouts'
+import { getSocials } from '~utils/commonFunctions'
+import { environment } from '~utils/configurations'
+import { IndexLayout } from '../layouts'
 
-interface IndexPageProps {
+type Props = {
   data: {
     post: {
       nodes: [
@@ -63,7 +57,7 @@ interface IndexPageProps {
   }
 }
 
-const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
+const IndexPage = ({ data }: Props) => {
   const socialSize = useBreakpointValue({ base: '2rem', lg: '3rem' })
   const [post] = data.post.nodes
   const { pek } = data
@@ -94,12 +88,12 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
             }}
           >
             <Container>
-              {FRONTPAGE_ALERT_DESCRIPTION && !alertClosed && (
+              {environment.frontAlert.desc && !alertClosed && (
                 <Alert status="info" variant="left-accent" borderRadius="md" my={3}>
                   <AlertIcon />
                   <Box flex="1">
-                    {FRONTPAGE_ALERT_TITLE && <AlertTitle>{FRONTPAGE_ALERT_TITLE}</AlertTitle>}
-                    <AlertDescription display="block" dangerouslySetInnerHTML={{ __html: FRONTPAGE_ALERT_DESCRIPTION }} />
+                    {environment.frontAlert.title && <AlertTitle>{environment.frontAlert.title}</AlertTitle>}
+                    <AlertDescription display="block" dangerouslySetInnerHTML={{ __html: environment.frontAlert.desc }} />
                   </Box>
                   <CloseButton position="absolute" right="8px" top="8px" onClick={() => setAlertClosed(true)} />
                 </Alert>
@@ -120,21 +114,13 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
                       </Box>
                       <HStack direction="row" alignItems={{ base: 'baseline', md: 'end' }} my={6} mx={{ base: 4, lg: 0 }} spacing={6}>
                         {useBreakpointValue({ lg: <Spacer /> })}
-                        <Box color={useColorModeValue('black', 'grey.200')} _hover={{ color: 'orange.500' }}>
-                          <ChakraLink isExternal href={GITHUB_ORG_URL}>
-                            <FaGithub size={socialSize} />
-                          </ChakraLink>
-                        </Box>
-                        <Box color={useColorModeValue('black', 'grey.200')} _hover={{ color: 'orange.500' }}>
-                          <ChakraLink isExternal href={YOUTUBE_CHANNEL_URL}>
-                            <FaYoutube size={socialSize} />
-                          </ChakraLink>
-                        </Box>
-                        <Box color={useColorModeValue('black', 'grey.200')} _hover={{ color: 'orange.500' }}>
-                          <ChakraLink isExternal href={FACEBOOK_PAGE_URL}>
-                            <FaFacebook size={socialSize} />
-                          </ChakraLink>
-                        </Box>
+                        {getSocials(['github', 'youtube', 'facebook']).map((social) => (
+                          <Box color={useColorModeValue('black', 'grey.200')} _hover={{ color: 'orange.500' }}>
+                            <ChakraLink isExternal href={social.url}>
+                              <Icon as={social.Icon} w={socialSize} h={socialSize} />
+                            </ChakraLink>
+                          </Box>
+                        ))}
                       </HStack>
                     </Flex>
                   </Flex>
@@ -177,7 +163,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
               <Heading pb={4}>Fő projektünk: PéK</Heading>
               <Text fontFamily="mono" mb={4} textAlign="justify">
                 Fő feladatunk a{' '}
-                <Text as={ChakraLink} textColor="orange.500" href={PEK_URL}>
+                <Text as={ChakraLink} textColor="orange.500" href={environment.pekUrl}>
                   Profil és Körök
                 </Text>{' '}
                 folyamatos fejlesztése és karbantartása. Ez a rendszer már több generációt is megélt az aktív körtagoknak köszönhetően.

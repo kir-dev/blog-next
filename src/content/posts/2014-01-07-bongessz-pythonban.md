@@ -3,7 +3,6 @@ title: 'Böngéssz Pythonban!'
 author: kresshy
 layout: post
 date: 2014-01-07 23:54:00
-comment: true
 ---
 
 Ideje elvinni kicsit más irányba is a blog tartalmát, mivel az utóbbi időben jóformán csak front-end téma került elő. Mindig is foglalkoztatott az, hogy programozottan tudjam böngészni az világhálót. Ne gondoljunk rögtön a teljes internetet bejáró robotra, ezt a feladatot hagyjuk meg a Google-nek. Mi csak egy oldalra koncentrálunk erről szeretnénk lekérni, kiolvasni a tartalmát, megnézni a linkeket, letölteni róla egy-két fájlt, esetleg formokat kitölteni és elküldeni. A segítségünkre lesz a Python mint script nyelv és két modulja; a [_mechanize_](http://wwwsearch.sourceforge.net/mechanize/), és a [_BeautifulSoup_](http://www.crummy.com/software/BeautifulSoup/). Előbbivel egy böngészőt tudunk szimulálni, utóbbival pedig a HTML oldal elemeit tudjuk feldolgozni.

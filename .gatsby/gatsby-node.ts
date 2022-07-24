@@ -27,7 +27,6 @@ export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, getNode, action
 }
 
 interface EdgesData {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   errors?: any
   data?: {
     allMarkdownRemark: {
@@ -62,7 +61,6 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
   `)
 
   if (allMarkdown.errors) {
-    // eslint-disable-next-line no-console
     console.error(allMarkdown.errors)
     throw new Error(allMarkdown.errors)
   }

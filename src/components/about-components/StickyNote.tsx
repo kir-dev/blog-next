@@ -1,8 +1,10 @@
 import { Box, theme } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
-import React from 'react'
+import { HasChildren } from '~utils/HasChildren'
 
-const StickyNote: React.FC = ({ children }) => (
+type Props = {} & HasChildren
+
+export const StickyNote = ({ children }: Props) => (
   <Box
     bgGradient="linear(to-br, yellow.100, orange.200)"
     shadow="base"
@@ -30,5 +32,3 @@ const StickyNote: React.FC = ({ children }) => (
     {children}
   </Box>
 )
-
-export default StickyNote

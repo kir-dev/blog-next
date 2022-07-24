@@ -1,24 +1,15 @@
 import { Box, Flex, Grid, Heading, HStack, Image, Link, Text, useBreakpointValue } from '@chakra-ui/react'
 import { chakra } from '@chakra-ui/system'
 import { Link as GatsbyLink } from 'gatsby'
-import * as React from 'react'
-import { IconType } from 'react-icons'
-import { FaFacebook, FaGithub, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
-import AboutParagraph from '~components/about-components/AboutParagraph'
-import StickyNote from '~components/about-components/StickyNote'
-import Container from '~components/Container'
-import InfoBox from '~components/indexpage-components/InfoBox'
-import SEO from '~components/SEO'
-import {
-  FACEBOOK_PAGE_URL,
-  GITHUB_ORG_URL,
-  INSTAGRAM_PAGE_URL,
-  MEETING_START_TIME,
-  PUBLIC_EMAIL,
-  TWITTER_USERNAME,
-  YOUTUBE_CHANNEL_URL
-} from '~utils/configurations'
-import IndexLayout from '../layouts'
+
+import { AboutParagraph } from '~components/about-components/AboutParagraph'
+import { StickyNote } from '~components/about-components/StickyNote'
+import { Container } from '~components/Container'
+import { InfoBox } from '~components/indexpage-components/InfoBox'
+import { SEO } from '~components/SEO'
+import { getSocials } from '~utils/commonFunctions'
+import { environment } from '~utils/configurations'
+import { IndexLayout } from '../layouts'
 
 const ABOUT_MAP: Map<string, string> = new Map([
   ['inception', 'Körünk alakulása'],
@@ -28,13 +19,7 @@ const ABOUT_MAP: Map<string, string> = new Map([
   ['slack_dc', 'Slack és Discord'],
   ['contact', 'Kapcsolat']
 ])
-const SOCIALS: Array<{ url: string; Icon: IconType; text: string }> = [
-  { url: GITHUB_ORG_URL, Icon: FaGithub, text: 'GitHub szervezetünk' },
-  { url: YOUTUBE_CHANNEL_URL, Icon: FaYoutube, text: 'YouTube csatornánk' },
-  { url: FACEBOOK_PAGE_URL, Icon: FaFacebook, text: 'Facebook oldalunk' },
-  { url: INSTAGRAM_PAGE_URL, Icon: FaInstagram, text: 'Instagram oldalunk' },
-  { url: `https://twitter.com/${TWITTER_USERNAME}`, Icon: FaTwitter, text: 'Twitter oldalunk' }
-]
+
 const TECH_STACK: Array<{ svg: string; alt: string; title: string; text: string }> = [
   {
     svg: 'rails-logo',
@@ -66,7 +51,7 @@ const TECH_STACK: Array<{ svg: string; alt: string; title: string; text: string 
   }
 ]
 
-const AboutPage: React.FC = () => {
+const AboutPage = () => {
   const stickyBoxWidth = { base: '75%', sm: '10rem', lg: '14rem' }
   const firstHeadingSize = useBreakpointValue({ base: '4xl', sm: '5xl' })
   const secondHeadingSize = useBreakpointValue({ base: '2xl', sm: '3xl' })
@@ -364,11 +349,11 @@ const AboutPage: React.FC = () => {
                   <Text pr={{ base: 0, sm: 10 }}>
                     Ha maradt még kérdésed, hibajegyet szeretnél feladni valamilyen projektünkkel kapcsolatban, vagy van valami izgalmas
                     feladatod számunkra: vedd fel a kapcsolatot velünk email címünkön:{' '}
-                    <chakra.span fontWeight="bold">{PUBLIC_EMAIL}</chakra.span>, illetve gyere el gyűléseinkre a Schönherz Kollégium{' '}
-                    <chakra.span fontWeight="bold">1319-es szobájába {MEETING_START_TIME}-kor</chakra.span>!
+                    <chakra.span fontWeight="bold">{environment.socials.publicEmail}</chakra.span>, illetve gyere el gyűléseinkre a
+                    Schönherz Kollégium <chakra.span fontWeight="bold">1319-es szobájába {environment.meetingStartTime}-kor</chakra.span>!
                   </Text>
                   <Flex mt={{ base: 4, sm: 0 }} flex={1} whiteSpace="nowrap" width="full" direction="column" alignItems="flex-end">
-                    {SOCIALS.map(({ url, Icon, text }) => (
+                    {getSocials().map(({ url, Icon, longText }) => (
                       <HStack
                         key={url}
                         pb={2}
@@ -378,7 +363,7 @@ const AboutPage: React.FC = () => {
                         transition="color 200ms ease-in-out"
                         href={url}
                       >
-                        <Text>{text}</Text>
+                        <Text>{longText}</Text>
                         <Icon size={useBreakpointValue({ base: '1rem', lg: '1.5rem' })} />
                       </HStack>
                     ))}

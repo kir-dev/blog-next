@@ -1,13 +1,13 @@
 import { Box, Heading, Link } from '@chakra-ui/react'
-import React from 'react'
+import { HasChildren } from '~utils/HasChildren'
 
-interface ParagraphProps {
+type Props = {
   id?: string
   title?: string
   titleSize?: string
-}
+} & HasChildren
 
-const AboutParagraph: React.FC<ParagraphProps> = ({ id, title, titleSize, children }) => {
+export const AboutParagraph = ({ id, title, titleSize, children }: Props) => {
   return (
     <Box mt={10} mb={2}>
       <Link id={id} href="." />
@@ -18,5 +18,3 @@ const AboutParagraph: React.FC<ParagraphProps> = ({ id, title, titleSize, childr
     </Box>
   )
 }
-
-export default AboutParagraph

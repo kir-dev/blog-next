@@ -3,7 +3,6 @@ layout: post
 title: 'Android app patch (forráskód nélkül ;)...)'
 author: kresshy
 date: 2014-02-24 23:12:00
-comment: true
 ---
 
 Bizony! Jól látjátok, az eddig már bejáratott webfeljesztős témáktól most ugrunk egy szép nagyot. A következő pár percben részese lehettek egy androidos alkalmazás patchelésének. A dolog érdekessége pedig ott kezdődik, hogy a forráskód nem áll a rendelkezésünkre. Az úgy túl könnyű feladat lenne. Megkeresni a hibás kódrészletet, kijavítani a hibát és újrafordítani az alkalmazást, majd feltölteni a telefonra. A cél persze ugyanaz, és nagyjából a folyamat is, egyedül a módszerek különböznek. Ebben a cikkben megismerkedhettek a Reverse engineeringgel, a különböző toolokkal és magával a folyamattal. A sikerélményről pedig majd a végén, mert ez vagy sikerül vagy nem.

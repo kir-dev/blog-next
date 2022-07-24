@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react'
-import * as React from 'react'
+import { HasChildren } from '~utils/HasChildren'
 
-const Header: React.FC = ({ children }) => <Box py={12}>{children}</Box>
+type Props = {} & HasChildren
 
-export default Header
+export const Header = ({ children }: Props) => <Box py={12}>{children}</Box>

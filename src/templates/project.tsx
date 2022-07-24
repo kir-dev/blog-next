@@ -2,16 +2,16 @@ import { Box, Button, Flex, Heading, HStack, Image, Link, Tag, Text, useBreakpoi
 import { useColorModeValue } from '@chakra-ui/system'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
-import * as React from 'react'
-import { FaGithub, FaHome } from 'react-icons/fa'
-import ScrollButton from '~components/blog-components/ScrollButton'
-import Container from '~components/Container'
-import { getIcon } from '~components/project-components/ProjectPreview'
-import SEO from '~components/SEO'
-import { ProjectProps } from '~types/project.props'
-import IndexLayout from '../layouts'
 
-interface ProjectTemplateProps {
+import { FaGithub, FaHome } from 'react-icons/fa'
+import { ScrollButton } from '~components/blog-components/ScrollButton'
+import { Container } from '~components/Container'
+import { SEO } from '~components/SEO'
+import { ProjectProps } from '~types/project.props'
+import { getIcon } from '~utils/commonFunctions'
+import { IndexLayout } from '../layouts'
+
+type Props = {
   data: {
     markdownRemark: {
       html: string
@@ -21,7 +21,7 @@ interface ProjectTemplateProps {
   }
 }
 
-const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ data }) => {
+const ProjectTemplate = ({ data }: Props) => {
   const project = data.markdownRemark.frontmatter
   const featuredImage = getImage(project.featuredImage)
   const featuredImageSrc = getSrc(project.featuredImage)
@@ -99,7 +99,6 @@ const ProjectTemplate: React.FC<ProjectTemplateProps> = ({ data }) => {
           </Box>
           <Container>
             <Box py={8}>
-              {/* eslint-disable-next-line react/no-danger */}
               <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
             </Box>
             <Box

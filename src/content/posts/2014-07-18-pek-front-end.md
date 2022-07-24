@@ -3,7 +3,6 @@ layout: post
 author: kresshy
 date: 2014-07-18 11:08:00
 title: WIP PéK Front-end
-comment: true
 ---
 
 Nagyon sokat írtunk már a PéK-ről, de eddig nem nagyon osztottunk meg információkat róla, hogy miként fog kinézni az alkalmazás. Az elmúlt napokban viszonylag jól haladtunk a fejlesztéssel, így kaphattok egy kis betekintést a front-end jelenlegi állapotáról. Szó lesz a használt technológiákról, illetve a folytatásról is.

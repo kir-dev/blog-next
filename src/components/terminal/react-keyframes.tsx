@@ -1,8 +1,6 @@
-/* eslint-disable react/no-access-state-in-setstate */
-/* eslint-disable react/destructuring-assignment */
 // basically react-keyframes v1.0.0-canary.3
 // with an added onEnd prop for the Keyframes component
-import React from 'react'
+import { cloneElement, Component, createElement } from 'react'
 
 type Props = {
   children: any
@@ -21,11 +19,11 @@ interface FrameInput {
   [prop: string]: any
 }
 
-export const Frame: React.FC<FrameInput> = ({ component, ...rest }) => {
-  return React.createElement(component, rest)
+export const Frame = ({ component, ...rest }: FrameInput) => {
+  return createElement(component, rest)
 }
 
-export class Keyframes extends React.Component<Props, State> {
+export class Keyframes extends Component<Props, State> {
   timer: any
 
   constructor(props: Props) {
@@ -89,6 +87,6 @@ export class Keyframes extends React.Component<Props, State> {
 
     const { component = 'span', children, onEnd, ...rest } = this.props
 
-    return React.cloneElement(frame, { component, ...rest, ...frame.props })
+    return cloneElement(frame, { component, ...rest, ...frame.props })
   }
 }

@@ -1,0 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
+div[class='utterances'] {
+  max-width: 100% !important;
+}

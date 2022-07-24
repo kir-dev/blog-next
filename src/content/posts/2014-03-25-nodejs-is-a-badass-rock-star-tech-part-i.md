@@ -3,7 +3,6 @@ layout: post
 author: kresshy
 date: 2014-03-25 11:20:00
 title: 'Node.js is a badass rock star tech! - I.rész'
-comment: true
 ---
 
 Elérkezett az ideje annak, hogy írjak egy kicsit a [Node.js](http://nodejs.org/)-ről. A szándékainkról már tudtok. Szeretnénk újra írni a PÉK-et és ehhez a Node.js-t használnánk a front-end elkészítéséhez. Ahhoz, hogy tisztán lássunk jó pár dolgot meg kell érteni, és jelen cikk ezeket célozza meg, majd egy következő cikkben pedig bevezetést fogok adni, a Node.js alapjairól. De még mielőtt elkezdenénk belemenni a részletekbe, nézzétek meg ezt a videót, amely a már jól bevált webszervereket állítja szembe az új, még kiforróban lévő Node.js-szel.

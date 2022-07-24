@@ -8,7 +8,7 @@ tags:
   - hírek
   - PR
   - projektek
-comment: true
+
 featuredImage: ../images/posts/uj-arculat.jpg
 ogImage: ../images/posts/uj-arculat-og.png
 ---

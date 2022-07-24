@@ -3,7 +3,6 @@ layout: post
 author: tmichel
 date: 2014-03-20 22:00:00
 title: 'Munkakeresés külföldön'
-comment: true
 ---
 
 [Lessons from a Silicon Valley job search](http://robertheaton.com/2014/03/07/lessons-from-a-silicon-valley-job-search/)

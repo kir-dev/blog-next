@@ -8,7 +8,7 @@ tags:
   - szakmai-het
   - hírek
   - PR
-comment: true
+
 featuredImage: ../images/posts/szakmai-het-cover.jpg
 ---
 

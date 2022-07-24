@@ -1,15 +1,25 @@
-export const PEK_URL = process.env.GATSBY_PEK_URL || ''
-export const GITHUB_ORG_URL = process.env.GATSBY_GITHUB_ORG_URL || ''
-export const TWITTER_USERNAME = process.env.GATSBY_TWITTER_USERNAME || ''
-export const INSTAGRAM_PAGE_URL = process.env.GATSBY_INSTAGRAM_PAGE_URL || ''
-export const YOUTUBE_CHANNEL_URL = process.env.GATSBY_YOUTUBE_CHANNEL_URL || ''
-export const FACEBOOK_PAGE_URL = process.env.GATSBY_FACEBOOK_PAGE_URL || ''
-export const RICKROLL_URL = process.env.GATSBY_RICKROLL_URL || ''
-export const PUBLIC_EMAIL = process.env.GATSBY_PUBLIC_EMAIL || ''
-export const CURRENT_COURSE_FORM_URL = process.env.GATSBY_CURRENT_COURSE_FORM_URL || ''
-export const CURRENT_COURSE_EXTRA_INFO = process.env.GATSBY_CURRENT_COURSE_EXTRA_INFO || ''
-export const CURRENT_COURSE_FORM_CLOSING_INFO = process.env.GATSBY_CURRENT_COURSE_FORM_CLOSING_INFO || ''
-export const CURRENT_COURSE_SEMESTER = process.env.GATSBY_CURRENT_COURSE_SEMESTER || ''
-export const MEETING_START_TIME = process.env.GATSBY_MEETING_START_TIME || ''
-export const FRONTPAGE_ALERT_TITLE = process.env.GATSBY_FRONTPAGE_ALERT_TITLE || ''
-export const FRONTPAGE_ALERT_DESCRIPTION = process.env.GATSBY_FRONTPAGE_ALERT_DESCRIPTION || ''
+export const environment = {
+  pekUrl: 'https://pek.sch.bme.hu',
+  socials: {
+    githubOrgUrl: 'https://github.com/kir-dev',
+    twitterUsername: 'kirdev',
+    instagramUrl: 'https://instagram.com/kir.dev',
+    youtubeUrl: 'https://youtube.com/channel/UCkpMTj9qST_7RDt2YL4RUEw',
+    facebookUrl: 'https://facebook.com/kirdevteam',
+    publicEmail: 'kir-dev [kukac] sch.bme.hu'
+  },
+  rickrollUrl: 'https://bit.ly/3uOVmYt',
+  course: {
+    form: {
+      url: process.env.GATSBY_CURRENT_COURSE_FORM_URL || '',
+      closingInfo: process.env.GATSBY_CURRENT_COURSE_FORM_CLOSING_INFO || ''
+    },
+    semester: process.env.GATSBY_CURRENT_COURSE_SEMESTER || '',
+    extraInfo: process.env.GATSBY_CURRENT_COURSE_EXTRA_INFO || ''
+  },
+  meetingStartTime: process.env.GATSBY_MEETING_START_TIME || '',
+  frontAlert: {
+    title: process.env.GATSBY_FRONTPAGE_ALERT_TITLE || '',
+    desc: process.env.GATSBY_FRONTPAGE_ALERT_DESCRIPTION || ''
+  }
+}
