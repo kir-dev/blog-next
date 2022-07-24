@@ -1,6 +1,7 @@
 import { Box, Collapse, Flex, Icon, IconButton, useColorMode, useColorModeValue, useDisclosure } from '@chakra-ui/react'
 import { Link } from 'gatsby'
-import { FaBars, FaMoon, FaSun, FaTimes } from 'react-icons/fa'
+import { FaBars, FaMoon, FaTimes } from 'react-icons/fa'
+import { HiOutlineSun } from 'react-icons/hi'
 import { KirdevNamed } from '~components/themed-svgs/KirdevNamed'
 import { DesktopNav } from './desktop/DesktopNav'
 import { MobileNav } from './mobile/MobileNav'
@@ -52,7 +53,7 @@ export const Navbar = () => {
         <Flex flex={{ base: 1, md: 0 }} mr={{ base: -2, md: 0 }} justify="flex-end">
           <IconButton
             aria-label="Sötét-világos mód váltás"
-            icon={colorMode === 'dark' ? <Icon as={FaSun} w={4} h={4} /> : <Icon as={FaMoon} w={4} h={4} />}
+            icon={colorMode === 'dark' ? <Icon as={HiOutlineSun} w={6} h={6} /> : <Icon as={FaMoon} w={5} h={5} />}
             onClick={toggleColorMode}
             variant="ghost"
           />

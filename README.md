@@ -71,28 +71,9 @@ Szerkesztéskor a projekt markdown fájljában:
 
 ## Hozzáadnál új tagot a csapathoz?
 
-1. Használd a `create-member.sh` shell scriptet (A `''` aposztrófok fontosak lehetnek többszavas paramétereknél):
+Az `src/content/members/active.yaml` fájlt kell kiegészíteni egy új tömbelemmel.
 
-```bash
-./create-member.sh '<pekUsername>' '<realName>'
-```
-
-Példa: `./create-member.sh 'mypekusername' 'Gipsz Jakab'`
-
-Szerkeszteni tudod a hozzárendelt tulajdonságokat a létrejött markdown fájlban:
-
-- `pekUsername`: PéK-en is használt felhasználóneved
-- `realName`: valódi neved
-- `position`: jelenlegi beosztottsága a körnél (újonc, tag, PR felelős stb.)
-- `joinDate`: amióta a tag aktív a körnél
-- `interests`: általános kulcsszavak arra, mi érdekli a tagot a webfejlesztéssel kapcsolatosan, vesszővel kell elválasztani a kifejezéseket tömbben, pl.: `interests: ['TypeScript', 'Node']`
-- `featuredImage`: ha nem a PéK-en is használt képét szeretné használni, akkor a megadható a repóból egy kép url-je
-- `active`: megadható, hogy a tag jelenleg aktív tagja-e a csapatnak
-- Minden további infót, amit szeretnél megosztani a világgal, írd meg a markdown fájl további részében.
-
-**FONTOS:** ha képet is teszel a repóba magadról, akkor tedd be a képet pekusername-eddel elnevezve a `content/images/avatars/` könyvtárba.
-
-**FONTOS:** ha kép(ek)et tennél a saját leírásodba, azt a [warp drive](https://warp.sch.bme.hu/)-on keresztül tedd. Jelentkezz be, készíts egy albumot, tedd be a képeket, és jobb egér a képnézegetőben, majd Copy Image address.
+**FONTOS:** A képet, amit magadhoz rendelnél, Warp-on a https://warp.sch.bme.hu/albums/12 albumba töltsd fel és onnan linkeld (a vicces mehet https://warp.sch.bme.hu/albums/13 albumba).
 
 ## Tanfolyamok
 

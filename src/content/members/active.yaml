@@ -2,8 +2,8 @@
   realName: Kovács Bertalan
   position: tag
   joinDate: 2020-04
-  featuredImage: ../images/avatars/aberci/normal.jpg
-  funnyImage: ../images/avatars/aberci/funny.jpg
+  normalImageUrl: https://warp.sch.bme.hu/images/normal-jpg-06ef0374-565b-43c3-8301-6fbecc873300
+  funnyImageUrl: https://warp.sch.bme.hu/images/ertqertqfunny-jpg
 
 - pekUsername: amcir
   realName: Oravecz Márton Péter
@@ -14,15 +14,15 @@
   realName: Bucsy Benjámin
   position: körvezető
   joinDate: 2020-04
-  featuredImage: ../images/avatars/beni99/normal.jpg
-  funnyImage: ../images/avatars/beni99/funny.jpg
+  normalImageUrl: https://warp.sch.bme.hu/images/normal-jpg
+  funnyImageUrl: https://warp.sch.bme.hu/images/ertqertqfunny1-jpg
 
 - pekUsername: berenteb
   realName: Berente Bálint István
   position: tag
   joinDate: 2021-04
-  featuredImage: ../images/avatars/berenteb/normal.jpg
-  funnyImage: ../images/avatars/berenteb/funny.jpg
+  normalImageUrl: https://warp.sch.bme.hu/images/a-jpg
+  funnyImageUrl: https://warp.sch.bme.hu/images/ertqertqfunny2-jpg
 
 - pekUsername: czemanb
   realName: Czémán Bálint
@@ -33,22 +33,22 @@
   realName: Fekete Sámuel
   position: tag
   joinDate: 2021-04
-  featuredImage: ../images/avatars/feketesamu/normal.jpg
-  funnyImage: ../images/avatars/feketesamu/funny.jpg
+  normalImageUrl: https://warp.sch.bme.hu/images/b-jpg
+  funnyImageUrl: https://warp.sch.bme.hu/images/ertqertqfunny3-jpg
 
 - pekUsername: gallyasm
   realName: Gallyas Márton
   position: tag
   joinDate: 2020-10
-  featuredImage: ../images/avatars/gallyasm/normal.jpg
-  funnyImage: ../images/avatars/gallyasm/funny.jpg
+  normalImageUrl: https://warp.sch.bme.hu/images/c-jpg
+  funnyImageUrl: https://warp.sch.bme.hu/images/ertqertqfunny4-jpg
 
 - pekUsername: Gerviba
   realName: Szabó Gergely
   position: tag
   joinDate: 2019-10
-  featuredImage: ../images/avatars/Gerviba/normal.jpg
-  funnyImage: ../images/avatars/Gerviba/funny.jpg
+  normalImageUrl: https://warp.sch.bme.hu/images/d-jpg
+  funnyImageUrl: https://warp.sch.bme.hu/images/ertqertqfunny5-jpg
 
 - pekUsername: nm0829
   realName: Nagy Máté
@@ -59,43 +59,43 @@
   realName: Kostyál Bálint
   position: tag
   joinDate: 2021-04
-  featuredImage: ../images/avatars/Oldal/normal.jpg
-  funnyImage: ../images/avatars/Oldal/funny.jpg
+  normalImageUrl: https://warp.sch.bme.hu/images/e-jpg
+  funnyImageUrl: https://warp.sch.bme.hu/images/ertqertqfunny6-jpg
 
 - pekUsername: radikris
   realName: Rádi Kristóf
   position: tag
   joinDate: 2020-10
-  featuredImage: ../images/avatars/radikris/normal.jpg
-  funnyImage: ../images/avatars/radikris/funny.jpg
+  normalImageUrl: https://warp.sch.bme.hu/images/f-jpg
+  funnyImageUrl: https://warp.sch.bme.hu/images/ertqertqfunny7-jpg
 
 - pekUsername: sepsilaci
   realName: Sepsi László
   position: volt körvezető
   joinDate: 2019-03
-  featuredImage: ../images/avatars/sepsilaci/normal.jpg
-  funnyImage: ../images/avatars/sepsilaci/funny.jpg
+  normalImageUrl: https://warp.sch.bme.hu/images/g-jpg
+  funnyImageUrl: https://warp.sch.bme.hu/images/ertqertqfunny8-jpg
 
 - pekUsername: szaraz_daniel
   realName: Száraz Dániel
   position: tag
   joinDate: 2021-04
-  featuredImage: ../images/avatars/szaraz_daniel/normal.jpg
-  funnyImage: ../images/avatars/szaraz_daniel/funny.jpg
+  normalImageUrl: https://warp.sch.bme.hu/images/h-jpg
+  funnyImageUrl: https://warp.sch.bme.hu/images/ertqertqfunny9-jpg
 
 - pekUsername: tomitheninja
   realName: Südi Tamás
   position: tag
   joinDate: 2021-04
-  featuredImage: ../images/avatars/tomitheninja/normal.jpg
-  funnyImage: ../images/avatars/tomitheninja/funny.jpg
+  normalImageUrl: https://warp.sch.bme.hu/images/i-jpg
+  funnyImageUrl: https://warp.sch.bme.hu/images/ertqertqfunny10-jpg
 
 - pekUsername: triszt4n
   realName: Piller Trisztán
   position: tag
   joinDate: 2020-04
-  featuredImage: ../images/avatars/triszt4n/normal.jpg
-  funnyImage: ../images/avatars/triszt4n/funny.jpg
+  normalImageUrl: https://warp.sch.bme.hu/images/j-jpg
+  funnyImageUrl: https://warp.sch.bme.hu/images/ertqertqfunny11-jpg
 
 - pekUsername: vbence
   realName: Vass Bence

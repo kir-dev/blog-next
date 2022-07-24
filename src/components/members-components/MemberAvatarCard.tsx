@@ -1,6 +1,4 @@
 import { Avatar, Badge, Box, Flex, HStack, Icon } from '@chakra-ui/react'
-import { Link } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { useState } from 'react'
 import { BiMicrophoneOff } from 'react-icons/bi'
 import { MemberProps } from '~types/member.props'
@@ -11,17 +9,14 @@ type Props = {
 }
 
 export const MemberAvatarCard = ({ member }: Props) => {
-  const featuredImage = getImage(member.featuredImage)
-  const funnyImage = getImage(member.funnyImage)
-
   const [overlayShown, setOverlayShown] = useState(false)
   const onOverlayEnter = () => setOverlayShown(true)
   const onOverlayLeave = () => setOverlayShown(false)
 
   return (
     <Box
-      as={Link}
-      to={`${environment.pekUrl}/profiles/${member.pekUsername}`}
+      as="a"
+      href={`${environment.pekUrl}/profiles/${member.pekUsername}`}
       target="_blank"
       pos="relative"
       h="12rem"
@@ -31,22 +26,20 @@ export const MemberAvatarCard = ({ member }: Props) => {
       onMouseOver={onOverlayEnter}
       onMouseLeave={onOverlayLeave}
     >
-      {featuredImage ? (
-        <GatsbyImage image={featuredImage} alt="avatar" style={{ width: '100%', height: '12rem' }} objectFit="contain" />
-      ) : (
-        <Flex h="12rem" alignItems="center" justifyContent="center">
-          <Avatar name={member.realName} src="" px={2} size="xl" colorScheme="blue" />
-        </Flex>
-      )}
-      <HStack pos="absolute" bottom={0} left={0} zIndex={2} m={1} bgColor="gray.800" color="gray.100" borderRadius="lg" px={2} spacing={1}>
-        <Box fontSize="md">{member.realName}</Box>
-        <Badge lineHeight="base" px={1} bg="gray.600" color="white" fontSize="xs" fontWeight="600">
-          {member.position}
-        </Badge>
+      <Flex h="12rem" alignItems="center" justifyContent="center">
+        <Avatar name={member.realName} src={member.normalImageUrl} size="2xl" />
+      </Flex>
+      <HStack pos="absolute" bottom={0} left={0} zIndex={10} m={2} px={2} fontSize="md" spacing={2}>
+        <Box color="gray.100" textShadow="1px 1px 1px #000000, 2px 2px 4px #000000" fontFamily="heading">
+          {member.realName}
+        </Box>
       </HStack>
-      <Box pos="absolute" top={0} right={0} zIndex={2} m={2} px={1} fontSize="md" bgColor="gray.800" color="gray.100" borderRadius="full">
-        <Icon as={BiMicrophoneOff} w={4} h={4} mt={1} />
+      <Box pos="absolute" top={0} right={0} zIndex={10} m={2} fontSize="md" bgColor="gray.800" borderRadius="full">
+        <Icon as={BiMicrophoneOff} color="gray.100" w={4} h={4} mx={3} mt={3} mb={2} />
       </Box>
+      <Badge pos="absolute" top={0} left={0} zIndex={10} m={3} px={1} color="gray.100" bg="gray.800">
+        {member.position}
+      </Badge>
       <Box
         pos="absolute"
         top={0}
@@ -55,12 +48,13 @@ export const MemberAvatarCard = ({ member }: Props) => {
         right={0}
         h="full"
         w="full"
-        borderRadius="lg"
         zIndex={1}
         opacity={overlayShown ? 1 : 0}
         transition="200ms ease"
       >
-        {funnyImage && <GatsbyImage image={funnyImage} alt="avatar" style={{ width: '100%', height: '12rem' }} objectFit="contain" />}
+        <Flex h="12rem" alignItems="center" justifyContent="center">
+          <Avatar name={member.realName} src={member.funnyImageUrl} size="2xl" />
+        </Flex>
       </Box>
     </Box>
   )

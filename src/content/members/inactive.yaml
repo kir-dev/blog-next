@@ -7,8 +7,8 @@
   realName: Fehér János
   position: volt körvezető
   joinDate: 2018-03
-  featuredImage: ../images/avatars/yeti/normal.jpg
-  funnyImage: ../images/avatars/yeti/funny.jpg
+  normalImageUrl: https://warp.sch.bme.hu/images/k-jpg
+  funnyImageUrl: https://warp.sch.bme.hu/images/ertqertqfunny12-jpg
 
 - pekUsername: falusi
   realName: Falusi Dávid Levente

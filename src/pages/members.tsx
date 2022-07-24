@@ -25,10 +25,10 @@ const MembersPage = ({ data }: MembersProps) => (
           <Flex flexWrap="wrap" justifyContent="center">
             {getMemberCollage(data.actives.nodes)}
           </Flex>
-          <MeetingControls />
+          <MeetingControls numberOfActives={data.actives.nodes.length} />
           {data.inactives.nodes.length > 0 && (
             <>
-              <Heading as="h2" size="lg" mt={24} mb={8}>
+              <Heading as="h2" size="lg" mt={32} mb={8}>
                 Korábbi tagjaink
               </Heading>
               <Flex flexWrap="wrap" justifyContent="center">
@@ -52,16 +52,8 @@ export const query = graphql`
         realName
         position
         joinDate
-        featuredImage {
-          childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, formats: [WEBP])
-          }
-        }
-        funnyImage {
-          childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, formats: [WEBP])
-          }
-        }
+        normalImageUrl
+        funnyImageUrl
       }
     }
     inactives: allInactiveYaml {
@@ -70,16 +62,8 @@ export const query = graphql`
         realName
         position
         joinDate
-        featuredImage {
-          childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, formats: [WEBP])
-          }
-        }
-        funnyImage {
-          childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, formats: [WEBP])
-          }
-        }
+        normalImageUrl
+        funnyImageUrl
       }
     }
   }
