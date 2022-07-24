@@ -10431,7 +10431,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-offline@npm:^5.19.0":
+"gatsby-plugin-offline@npm:5.19.0":
   version: 5.19.0
   resolution: "gatsby-plugin-offline@npm:5.19.0"
   dependencies:
@@ -12985,7 +12985,7 @@ __metadata:
     gatsby: 4.19.2
     gatsby-plugin-canonical-urls: 4.19.0
     gatsby-plugin-image: 2.19.0
-    gatsby-plugin-offline: ^5.19.0
+    gatsby-plugin-offline: 5.19.0
     gatsby-plugin-react-helmet: 5.19.0
     gatsby-plugin-sharp: 4.19.0
     gatsby-plugin-ts-config: 2.1.3
@@ -13007,7 +13007,7 @@ __metadata:
     react-helmet: 6.1.0
     react-icons: 4.4.0
     typescript: 4.7.4
-    utterances-react-component: ^1.0.0
+    utterances-react-component: 1.0.0
   languageName: unknown
   linkType: soft
 
@@ -19051,7 +19051,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"utterances-react-component@npm:^1.0.0":
+"utterances-react-component@npm:1.0.0":
   version: 1.0.0
   resolution: "utterances-react-component@npm:1.0.0"
   peerDependencies:
