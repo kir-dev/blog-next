@@ -163,6 +163,7 @@ export default {
       }
     },
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-tsconfig-paths`
+    `gatsby-plugin-tsconfig-paths`,
+    `gatsby-plugin-offline`
   ]
 }

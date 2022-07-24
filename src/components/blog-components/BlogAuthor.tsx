@@ -1,4 +1,4 @@
-import { Box, HStack, Image, Link, Text } from '@chakra-ui/react'
+import { Avatar, Box, HStack, Link, Text } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
 import { environment } from '~utils/configurations'
 
@@ -10,14 +10,9 @@ type Props = {
 
 export const BlogAuthor = ({ date, name, hasLongDate }: Props) => (
   <HStack spacing={2} display="flex" alignItems="center">
-    <Link isExternal href={`${environment.pekUrl}/profiles/${name}`}>
-      <Image
-        borderRadius="full"
-        boxSize={hasLongDate ? '2.5rem' : '2rem'}
-        src={`${environment.pekUrl}/photos/${name}`}
-        fallbackSrc="../../favicon.png"
-      />
-    </Link>
+    <a href={`${environment.pekUrl}/profiles/${name}`}>
+      <Avatar name={name} src={`${environment.pekUrl}/photos/${name}`} size={hasLongDate ? 'md' : 'sm'} />
+    </a>
 
     {hasLongDate ? (
       <HStack flex={1}>
