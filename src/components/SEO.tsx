@@ -100,7 +100,7 @@ export const SEO = ({
     description: description || defaultDescription,
     author: author || defaultAuthor,
     image: imageUrl,
-    url: window.location.pathname === '/' ? `${siteUrl}` : `${siteUrl}${window.location.pathname}`,
+    url: window?.location.pathname === '/' ? `${siteUrl}` : `${siteUrl}${window?.location.pathname}`,
     keywords: keywords.length ? keywords : defaultKeywords,
     robots: robots || defaultRobots,
     social,
