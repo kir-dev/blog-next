@@ -1,14 +1,33 @@
 import { Badge, Box, Grid, HStack, Icon, IconButton, Text, useBreakpointValue } from '@chakra-ui/react'
+import { navigate } from 'gatsby'
 import { useState } from 'react'
+import { IconType } from 'react-icons'
 import { BiCommentDetail, BiMicrophoneOff, BiVideoOff } from 'react-icons/bi'
 import { FaPhone } from 'react-icons/fa'
 import { HiOutlineDotsVertical } from 'react-icons/hi'
 import { MdOutlineClosedCaption, MdOutlineFrontHand, MdOutlineInfo, MdOutlinePeople, MdPresentToAll } from 'react-icons/md'
 
-const ACTION_ICONS_CENTER1 = [BiMicrophoneOff, BiVideoOff]
-const ACTION_ICONS_CENTER2 = [MdOutlineClosedCaption, MdOutlineFrontHand, MdPresentToAll]
-const ACTION_ICONS_CENTER3 = [HiOutlineDotsVertical]
-const ACTION_ICONS_RIGHT = [MdOutlineInfo, MdOutlinePeople, BiCommentDetail]
+interface ActionIcon {
+  align: 'center' | 'right'
+  icon: IconType
+  bgColor?: string
+  hoverBgColor?: string
+  showAlways?: boolean
+  showBadge?: boolean
+  href?: string
+}
+
+const ACTION_ICONS: ActionIcon[] = [
+  { align: 'center', icon: BiMicrophoneOff, bgColor: 'red.500', hoverBgColor: 'red.600', showAlways: true },
+  { align: 'center', icon: BiVideoOff, bgColor: 'red.500', hoverBgColor: 'red.600', showAlways: true },
+  { align: 'center', icon: MdOutlineClosedCaption, bgColor: 'gray.700', hoverBgColor: 'gray.800' },
+  { align: 'center', icon: MdOutlineFrontHand, bgColor: 'gray.700', hoverBgColor: 'gray.800' },
+  { align: 'center', icon: MdPresentToAll, bgColor: 'gray.700', hoverBgColor: 'gray.800' },
+  { align: 'center', icon: HiOutlineDotsVertical, bgColor: 'gray.700', hoverBgColor: 'gray.800', showAlways: true },
+  { align: 'right', icon: MdOutlineInfo },
+  { align: 'right', icon: MdOutlinePeople, showBadge: true },
+  { align: 'right', icon: BiCommentDetail }
+]
 
 type Props = {
   numberOfActives: number
@@ -16,7 +35,6 @@ type Props = {
 
 export const MeetingControls = ({ numberOfActives }: Props) => {
   const [showControls, setShowControls] = useState(true)
-  const close = () => setShowControls(false)
   const showOnScreenSize = useBreakpointValue({ base: false, md: true })
 
   return (
@@ -42,87 +60,58 @@ export const MeetingControls = ({ numberOfActives }: Props) => {
           Kir-Dev gyűlés
         </Text>
       </HStack>
-      <HStack justifySelf="center" fontSize={{ base: 'md', sm: 'xl' }}>
-        {ACTION_ICONS_CENTER1.map((icon) => (
-          <HStack key={icon.toString()}>
-            <IconButton
-              size="sm"
-              fontSize={{ base: 'lg', md: 'xl' }}
-              rounded="full"
-              h={12}
-              icon={<Icon as={icon} m={4} />}
-              aria-label="Non-functional button"
-              color="gray.100"
-              bgColor="red.500"
-              _hover={{ bgColor: 'red.600' }}
-            />
-          </HStack>
-        ))}
-        {showOnScreenSize &&
-          ACTION_ICONS_CENTER2.map((icon) => (
-            <HStack key={icon.toString()}>
-              <IconButton
-                size="sm"
-                fontSize={{ base: 'lg', md: 'xl' }}
-                rounded="full"
-                h={12}
-                icon={<Icon as={icon} m={4} />}
-                aria-label="Non-functional button"
-                bgColor="gray.700"
-                color="gray.100"
-                _hover={{ bgColor: 'gray.800' }}
-              />
-            </HStack>
-          ))}
-        {ACTION_ICONS_CENTER3.map((icon) => (
-          <HStack key={icon.toString()}>
-            <IconButton
-              size="sm"
-              fontSize={{ base: 'lg', md: 'xl' }}
-              rounded="full"
-              h={12}
-              icon={<Icon as={icon} m={4} />}
-              aria-label="Non-functional button"
-              bgColor="gray.700"
-              color="gray.100"
-              _hover={{ bgColor: 'gray.800' }}
-            />
-          </HStack>
-        ))}
-        <HStack
-          onClick={useBreakpointValue({
-            base: close,
-            sm: () => {}
-          })}
-        >
+      <HStack justifySelf="center">
+        {ACTION_ICONS.filter((a) => a.align === 'center' && (a.showAlways || showOnScreenSize)).map((a) => (
           <IconButton
+            key={a.icon.toString()}
             size="sm"
             fontSize={{ base: 'lg', md: 'xl' }}
             rounded="full"
             h={12}
-            icon={<Icon as={FaPhone} my={3} mx={6} transform="rotate(-135deg)" />}
+            icon={<Icon as={a.icon} m={3.5} />}
             aria-label="Non-functional button"
             color="gray.100"
-            bgColor="red.500"
-            _hover={{ bgColor: 'red.600' }}
+            bgColor={a.bgColor}
+            _hover={{ bgColor: a.hoverBgColor }}
+            onClick={() => {
+              if (a.href) navigate(a.href)
+            }}
           />
-        </HStack>
+        ))}
+        <IconButton
+          size="sm"
+          fontSize={{ base: 'lg', md: 'xl' }}
+          rounded="full"
+          h={12}
+          icon={<Icon as={FaPhone} my={3} mx={6} transform="rotate(-135deg)" />}
+          aria-label="Non-functional button"
+          color="gray.100"
+          bgColor="red.500"
+          _hover={{ bgColor: 'red.600' }}
+          onClick={useBreakpointValue({
+            base: () => setShowControls(false),
+            sm: () => {}
+          })}
+        />
       </HStack>
       {showOnScreenSize && (
-        <HStack justifySelf="end" fontSize={{ base: 'md', sm: 'xl' }}>
-          {ACTION_ICONS_RIGHT.map((icon) => (
-            <Box position="relative" key={icon.toString()}>
+        <HStack justifySelf="end">
+          {ACTION_ICONS.filter((a) => a.align === 'right').map((a) => (
+            <Box position="relative" key={a.icon.toString()}>
               <IconButton
                 size="sm"
                 fontSize={{ base: 'xl', md: '2xl' }}
                 variant="ghost"
                 h={12}
-                icon={<Icon as={icon} m={3} />}
+                icon={<Icon as={a.icon} m={3} />}
                 aria-label="Non-functional button"
                 color="gray.100"
                 _hover={{ bgColor: 'gray.800' }}
+                onClick={() => {
+                  if (a.href) navigate(a.href)
+                }}
               />
-              {icon === MdOutlinePeople && (
+              {a.showBadge && (
                 <Badge position="absolute" rounded="full" right={-1} top={-0.5} bgColor="gray.600" color="gray.100">
                   {numberOfActives}
                 </Badge>

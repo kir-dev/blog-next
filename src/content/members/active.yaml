@@ -2,8 +2,8 @@
   realName: Kovács Bertalan
   position: tag
   joinDate: 2020-04
-  normalImageUrl: https://warp.sch.bme.hu/images/normal-jpg-06ef0374-565b-43c3-8301-6fbecc873300
-  funnyImageUrl: https://warp.sch.bme.hu/images/ertqertqfunny-jpg
+  normalImageUrl: https://warp.sch.bme.hu/images/aberci-jpg
+  funnyImageUrl: https://warp.sch.bme.hu/images/aberci-funny-jpg
 
 - pekUsername: amcir
   realName: Oravecz Márton Péter
@@ -14,15 +14,15 @@
   realName: Bucsy Benjámin
   position: körvezető
   joinDate: 2020-04
-  normalImageUrl: https://warp.sch.bme.hu/images/normal-jpg
-  funnyImageUrl: https://warp.sch.bme.hu/images/ertqertqfunny1-jpg
+  normalImageUrl: https://warp.sch.bme.hu/images/beni99-jpg
+  funnyImageUrl: https://warp.sch.bme.hu/images/beni99-funny-jpg
 
 - pekUsername: berenteb
   realName: Berente Bálint István
   position: tag
   joinDate: 2021-04
-  normalImageUrl: https://warp.sch.bme.hu/images/a-jpg
-  funnyImageUrl: https://warp.sch.bme.hu/images/ertqertqfunny2-jpg
+  normalImageUrl: https://warp.sch.bme.hu/images/berenteb-jpg
+  funnyImageUrl: https://warp.sch.bme.hu/images/berenteb-funny-jpg
 
 - pekUsername: czemanb
   realName: Czémán Bálint
@@ -33,22 +33,22 @@
   realName: Fekete Sámuel
   position: tag
   joinDate: 2021-04
-  normalImageUrl: https://warp.sch.bme.hu/images/b-jpg
-  funnyImageUrl: https://warp.sch.bme.hu/images/ertqertqfunny3-jpg
+  normalImageUrl: https://warp.sch.bme.hu/images/feketesamu-jpg
+  funnyImageUrl: https://warp.sch.bme.hu/images/feketesamu-funny-jpg
 
 - pekUsername: gallyasm
   realName: Gallyas Márton
   position: tag
   joinDate: 2020-10
-  normalImageUrl: https://warp.sch.bme.hu/images/c-jpg
-  funnyImageUrl: https://warp.sch.bme.hu/images/ertqertqfunny4-jpg
+  normalImageUrl: https://warp.sch.bme.hu/images/gallyasm-jpg
+  funnyImageUrl: https://warp.sch.bme.hu/images/gallyasm-funny-jpg
 
 - pekUsername: Gerviba
   realName: Szabó Gergely
   position: tag
   joinDate: 2019-10
-  normalImageUrl: https://warp.sch.bme.hu/images/d-jpg
-  funnyImageUrl: https://warp.sch.bme.hu/images/ertqertqfunny5-jpg
+  normalImageUrl: https://warp.sch.bme.hu/images/Gerviba-jpg
+  funnyImageUrl: https://warp.sch.bme.hu/images/Gerviba-funny-jpg
 
 - pekUsername: nm0829
   realName: Nagy Máté
@@ -59,43 +59,43 @@
   realName: Kostyál Bálint
   position: tag
   joinDate: 2021-04
-  normalImageUrl: https://warp.sch.bme.hu/images/e-jpg
-  funnyImageUrl: https://warp.sch.bme.hu/images/ertqertqfunny6-jpg
+  normalImageUrl: https://warp.sch.bme.hu/images/Oldal-jpg
+  funnyImageUrl: https://warp.sch.bme.hu/images/Oldal-funny-jpg
 
 - pekUsername: radikris
   realName: Rádi Kristóf
   position: tag
   joinDate: 2020-10
-  normalImageUrl: https://warp.sch.bme.hu/images/f-jpg
-  funnyImageUrl: https://warp.sch.bme.hu/images/ertqertqfunny7-jpg
+  normalImageUrl: https://warp.sch.bme.hu/images/radikris-jpg
+  funnyImageUrl: https://warp.sch.bme.hu/images/radikris-funny-jpg
 
 - pekUsername: sepsilaci
   realName: Sepsi László
   position: volt körvezető
   joinDate: 2019-03
-  normalImageUrl: https://warp.sch.bme.hu/images/g-jpg
-  funnyImageUrl: https://warp.sch.bme.hu/images/ertqertqfunny8-jpg
+  normalImageUrl: https://warp.sch.bme.hu/images/sepsilaci-jpg
+  funnyImageUrl: https://warp.sch.bme.hu/images/sepsilaci-funny-jpg
 
 - pekUsername: szaraz_daniel
   realName: Száraz Dániel
   position: tag
   joinDate: 2021-04
-  normalImageUrl: https://warp.sch.bme.hu/images/h-jpg
-  funnyImageUrl: https://warp.sch.bme.hu/images/ertqertqfunny9-jpg
+  normalImageUrl: https://warp.sch.bme.hu/images/szaraz_daniel-jpg
+  funnyImageUrl: https://warp.sch.bme.hu/images/szaraz_daniel-funny-jpg
 
 - pekUsername: tomitheninja
   realName: Südi Tamás
   position: tag
   joinDate: 2021-04
-  normalImageUrl: https://warp.sch.bme.hu/images/i-jpg
-  funnyImageUrl: https://warp.sch.bme.hu/images/ertqertqfunny10-jpg
+  normalImageUrl: https://warp.sch.bme.hu/images/tomitheninja-jpg
+  funnyImageUrl: https://warp.sch.bme.hu/images/tomitheninja-funny-jpg
 
 - pekUsername: triszt4n
   realName: Piller Trisztán
   position: tag
   joinDate: 2020-04
-  normalImageUrl: https://warp.sch.bme.hu/images/j-jpg
-  funnyImageUrl: https://warp.sch.bme.hu/images/ertqertqfunny11-jpg
+  normalImageUrl: https://warp.sch.bme.hu/images/triszt4n-jpg
+  funnyImageUrl: https://warp.sch.bme.hu/images/triszt4n-funny-jpg
 
 - pekUsername: vbence
   realName: Vass Bence
