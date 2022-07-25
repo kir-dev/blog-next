@@ -40,17 +40,22 @@ export const getIcon = (status: { label: string; color: string }): JSX.Element =
   }
 }
 
-export const getMemberCollage = (nodes: MemberProps[]): JSX.Element[] =>
+export const getMemberCollage = (
+  nodes: MemberProps[],
+  height: any = '12rem',
+  avatarBoxSize: any = '10rem',
+  widthsPerBreakpoint: object = { base: '100%', sm: '50%', md: '33%', lg: '25%' }
+): JSX.Element[] =>
   nodes
     .sort((a, b) => a.realName.localeCompare(b.realName))
     .map((member) => (
       <Flex
         py={{ base: 2, sm: 1 }}
         px={{ base: 0, sm: 1 }}
-        flex={`0 0 ${useBreakpointValue({ base: '100%', sm: '50%', md: '33%', lg: '25%' })}`}
+        flex={`0 0 ${useBreakpointValue(widthsPerBreakpoint)}`}
         key={member.pekUsername}
       >
-        <MemberAvatarCard member={member} />
+        <MemberAvatarCard member={member} avatarBoxSize={avatarBoxSize} height={height} />
       </Flex>
     ))
 
