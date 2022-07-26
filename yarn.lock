@@ -1549,6 +1549,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@chakra-ui/anatomy@npm:2.0.2":
+  version: 2.0.2
+  resolution: "@chakra-ui/anatomy@npm:2.0.2"
+  checksum: 6c777dd0337b65f2adc51b16fed67d4b402c410e1d91d1b7eca94e734836d006cb972e163af3209b8d3494766a84c3a07bfce286d7dead2db67752937a78498a
+  languageName: node
+  linkType: hard
+
 "@chakra-ui/avatar@npm:2.0.5":
   version: 2.0.5
   resolution: "@chakra-ui/avatar@npm:2.0.5"
@@ -2009,7 +2016,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chakra-ui/react-utils@npm:2.0.1, @chakra-ui/react-utils@npm:^2.0.1":
+"@chakra-ui/react-utils@npm:2.0.1":
   version: 2.0.1
   resolution: "@chakra-ui/react-utils@npm:2.0.1"
   dependencies:
@@ -2017,6 +2024,17 @@ __metadata:
   peerDependencies:
     react: ">=18"
   checksum: 63c1be6a332fe72be931c39d4b57eedde48a5cc315fd6c8048fc02fdd7bf8c2657848fcd1a75647c3bbc32d30427c44bd1942f3e4c6e0deb5f182a8077c83abd
+  languageName: node
+  linkType: hard
+
+"@chakra-ui/react-utils@npm:^2.0.1":
+  version: 2.0.2
+  resolution: "@chakra-ui/react-utils@npm:2.0.2"
+  dependencies:
+    "@chakra-ui/utils": 2.0.5
+  peerDependencies:
+    react: ">=18"
+  checksum: 9c2c089719591aac677cfec1c0b9a2eff30163efb06c3c5d0f1b52275c20853670f8bc36d3ce2e18c527371bb00a82407f4bad21ab9f50a7c60419cf97912c01
   languageName: node
   linkType: hard
 
@@ -2125,7 +2143,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chakra-ui/spinner@npm:2.0.4, @chakra-ui/spinner@npm:^2.0.4":
+"@chakra-ui/spinner@npm:2.0.4":
   version: 2.0.4
   resolution: "@chakra-ui/spinner@npm:2.0.4"
   dependencies:
@@ -2135,6 +2153,19 @@ __metadata:
     "@chakra-ui/system": ">=2.0.0-next.0"
     react: ">=18"
   checksum: cf91756989abd75c7c31e5673ba233b71bcdd8bb21fa996b967e163e781d698f1f22ba141aef402ba7af05af2a40f531edd11abd642f08caddf3fb290c504274
+  languageName: node
+  linkType: hard
+
+"@chakra-ui/spinner@npm:^2.0.4":
+  version: 2.0.5
+  resolution: "@chakra-ui/spinner@npm:2.0.5"
+  dependencies:
+    "@chakra-ui/utils": 2.0.5
+    "@chakra-ui/visually-hidden": 2.0.5
+  peerDependencies:
+    "@chakra-ui/system": ">=2.0.0"
+    react: ">=18"
+  checksum: 5a9b2960487e9a8da16237be8818718a6287f5e9bfc4a38d1119fc20f034a0ced8e9034202078434bb1c138fcd5ac1ec80d2cbbfd20773d923496a02e2dbca2d
   languageName: node
   linkType: hard
 
@@ -2247,7 +2278,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chakra-ui/theme-tools@npm:2.0.5, @chakra-ui/theme-tools@npm:^2.0.2":
+"@chakra-ui/theme-tools@npm:2.0.5":
   version: 2.0.5
   resolution: "@chakra-ui/theme-tools@npm:2.0.5"
   dependencies:
@@ -2256,6 +2287,19 @@ __metadata:
   peerDependencies:
     "@chakra-ui/system": ">=2.0.0-next.0"
   checksum: f2d8cc7ce06fdb6282bdebbe3e26ba84e806f02b12889136cfcc1f418ff87e5d69bd8b746bdaa6cefd2ba92436f17d49d6ba371ba457765a5318dc4aa344dcef
+  languageName: node
+  linkType: hard
+
+"@chakra-ui/theme-tools@npm:^2.0.2":
+  version: 2.0.6
+  resolution: "@chakra-ui/theme-tools@npm:2.0.6"
+  dependencies:
+    "@chakra-ui/anatomy": 2.0.2
+    "@chakra-ui/utils": 2.0.5
+    "@ctrl/tinycolor": ^3.4.0
+  peerDependencies:
+    "@chakra-ui/styled-system": ">=2.0.0"
+  checksum: 805bceab2c336264f7047b957f4540ea0ccec117168e262c4d42dc41925e0983372a7902d77c82dbb1743b3d62ac78b5f9b7336156dcc51e48182c7336b994a8
   languageName: node
   linkType: hard
 
@@ -2324,7 +2368,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chakra-ui/utils@npm:2.0.4, @chakra-ui/utils@npm:^2.0.2":
+"@chakra-ui/utils@npm:2.0.4":
   version: 2.0.4
   resolution: "@chakra-ui/utils@npm:2.0.4"
   dependencies:
@@ -2333,6 +2377,18 @@ __metadata:
     framesync: 5.3.0
     lodash.mergewith: 4.6.2
   checksum: 5e16c78695bef0a026fe0b7cc4158488609a0405bd7e7ab7151d692c38b6b6d238ef5c2639d7fe881e416385701777eac4b48851b25eeda14a87df9084151842
+  languageName: node
+  linkType: hard
+
+"@chakra-ui/utils@npm:2.0.5, @chakra-ui/utils@npm:^2.0.2":
+  version: 2.0.5
+  resolution: "@chakra-ui/utils@npm:2.0.5"
+  dependencies:
+    "@types/lodash.mergewith": 4.6.6
+    css-box-model: 1.2.1
+    framesync: 5.3.0
+    lodash.mergewith: 4.6.2
+  checksum: 302b896e9a0904958f4c20a9beb08bfd2c92e63285801c96c53741161a472ea8c8189117ad6795fa2f0f5de284836102c6b7ec6a8993dc448f803009af0c4398
   languageName: node
   linkType: hard
 
@@ -2345,6 +2401,18 @@ __metadata:
     "@chakra-ui/system": ">=2.0.0-next.0"
     react: ">=18"
   checksum: 7b5374504001e3b116e967836232e3f095d55b50b24163f6c890fa19e289a9897767822ede2062869e4bb1cc4007a56914243b45179daac6eeb618e0a3810fc9
+  languageName: node
+  linkType: hard
+
+"@chakra-ui/visually-hidden@npm:2.0.5":
+  version: 2.0.5
+  resolution: "@chakra-ui/visually-hidden@npm:2.0.5"
+  dependencies:
+    "@chakra-ui/utils": 2.0.5
+  peerDependencies:
+    "@chakra-ui/system": ">=2.0.0"
+    react: ">=18"
+  checksum: d5fb981c1fec1db27056bd068062d5a70a7a4d45ad8c67b7e61aaedff6a9f89f801e79594db8ed1b4de527445cacf650c77039b20bd6e6e523d422a8d3605498
   languageName: node
   linkType: hard
 
@@ -2599,8 +2667,8 @@ __metadata:
   linkType: hard
 
 "@gatsbyjs/reach-router@npm:^1.3.6":
-  version: 1.3.8
-  resolution: "@gatsbyjs/reach-router@npm:1.3.8"
+  version: 1.3.9
+  resolution: "@gatsbyjs/reach-router@npm:1.3.9"
   dependencies:
     invariant: ^2.2.3
     prop-types: ^15.6.1
@@ -2608,7 +2676,7 @@ __metadata:
   peerDependencies:
     react: 15.x || 16.x || 17.x || 18.x
     react-dom: 15.x || 16.x || 17.x || 18.x
-  checksum: 17b326267fa349b1eefbfea3fc30ee458078ee8eec22fd5c11bf59d59bec798a2d443a52218e116c32d519e2672f74c52be29cb8809a6a178f13e51ffe5b8cc6
+  checksum: 4e6155026bac53bc7444f32a67846a9080546f986a788786b674ec3274d0ff739a6e06dde9fd75d919ce109fb44ce09932303e20397905daa7691113db6da9ad
   languageName: node
   linkType: hard
 
@@ -4717,9 +4785,9 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*, @types/node@npm:>=10.0.0":
-  version: 18.6.0
-  resolution: "@types/node@npm:18.6.0"
-  checksum: 53a910b28d0eef4baf7059e3fea2f69d06ee72e39dd11e72e317cdf7f4e859683ff2d6fb1ef5e6287bbfa56b3f2bf056227a8b12bcc4ff0f724b6a13b030091b
+  version: 18.6.1
+  resolution: "@types/node@npm:18.6.1"
+  checksum: 06331f68bc73d93b73977ae19ca87818e004bc7b8e70b0d4f73b0ea5e341a4a1ba6f0e79db8fb75a841af2b8d74552d6b9a8f846b267954689f57effedcf5d77
   languageName: node
   linkType: hard
 
@@ -5333,7 +5401,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"acorn@npm:^8.4.1, acorn@npm:^8.5.0, acorn@npm:^8.7.1":
+"acorn@npm:^8.5.0, acorn@npm:^8.7.1":
   version: 8.8.0
   resolution: "acorn@npm:8.8.0"
   bin:
@@ -6473,9 +6541,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001335, caniuse-lite@npm:^1.0.30001366":
-  version: 1.0.30001369
-  resolution: "caniuse-lite@npm:1.0.30001369"
-  checksum: f3f0eadc0685b399c0cad1116991d4c73d9fa10517ab72c3fb1c5e78fd5a019002f94a6d03b57a530009c69106400bdfa7dc0bddb01569428df67b9c5e411542
+  version: 1.0.30001370
+  resolution: "caniuse-lite@npm:1.0.30001370"
+  checksum: 28e1fd4d623a52945220b189b703556178ec8a185d317e4ae2557a24f68f88bd8168db67700970164690dbf7d29df69efbd318b54457b335a4361314bb530792
   languageName: node
   linkType: hard
 
@@ -7072,19 +7140,19 @@ __metadata:
   linkType: hard
 
 "core-js-compat@npm:^3.21.0, core-js-compat@npm:^3.22.1":
-  version: 3.23.5
-  resolution: "core-js-compat@npm:3.23.5"
+  version: 3.24.0
+  resolution: "core-js-compat@npm:3.24.0"
   dependencies:
     browserslist: ^4.21.2
     semver: 7.0.0
-  checksum: c2398a39239a782ba1b9531a80b25f8d9fb8d98de8bf980f32140e9be3d2852afb797517afdf3a15f9319bcd25d594b3d3d2a500dce7c338532532565c9e83cb
+  checksum: dbfa9154de02310cdfd121a04e9030f947b31c9c46abe8f6b50a1fe1677d200315e015d4644bdabacd89432cb0564c19e2a5c81aca5c4db4f7efbba994a410c9
   languageName: node
   linkType: hard
 
 "core-js-pure@npm:^3.20.2":
-  version: 3.23.5
-  resolution: "core-js-pure@npm:3.23.5"
-  checksum: a46edce5bdde29eda993c1f31086a08ba85e22fb1b3f77c9422e25ccc9e92fb9a1f3e7de5d13c9b807bdfeb0700b00bd5224375429cf44fd7ed5f46cc7d3e4ac
+  version: 3.24.0
+  resolution: "core-js-pure@npm:3.24.0"
+  checksum: 9ed3ec22e3c428ef346ab4a8f25fffe7938734513fbe738d4b46cc59735a2b98319ffd2f65e3e29fe5f1df5963faeb22e518d2576bf93efa02f49ef0f4d1a0ce
   languageName: node
   linkType: hard
 
@@ -7096,9 +7164,9 @@ __metadata:
   linkType: hard
 
 "core-js@npm:^3.22.3":
-  version: 3.23.5
-  resolution: "core-js@npm:3.23.5"
-  checksum: 0277d46b151126c5d90411e8e6b0d338abe2aaa695a132c360203a3772c620f849622c4fab8bfd7a46eec6933d5fe90f32f7167779d419bda699ff7808605757
+  version: 3.24.0
+  resolution: "core-js@npm:3.24.0"
+  checksum: f1d1feef82bac7ecddd9e40e75b7126e7b5299a0d17aa046238bd8c78567d485b32c9c80b212704d9483ccc8b3f13b3ee35a5ec69fdca874377f654664068669
   languageName: node
   linkType: hard
 
@@ -8138,7 +8206,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"enhanced-resolve@npm:^5.10.0, enhanced-resolve@npm:^5.7.0, enhanced-resolve@npm:^5.8.0, enhanced-resolve@npm:^5.8.3, enhanced-resolve@npm:^5.9.3":
+"enhanced-resolve@npm:^5.10.0, enhanced-resolve@npm:^5.7.0, enhanced-resolve@npm:^5.8.0, enhanced-resolve@npm:^5.8.3":
   version: 5.10.0
   resolution: "enhanced-resolve@npm:5.10.0"
   dependencies:
@@ -13399,11 +13467,11 @@ __metadata:
   linkType: hard
 
 "minipass@npm:^3.0.0, minipass@npm:^3.1.1, minipass@npm:^3.1.6":
-  version: 3.3.4
-  resolution: "minipass@npm:3.3.4"
+  version: 3.3.5
+  resolution: "minipass@npm:3.3.5"
   dependencies:
     yallist: ^4.0.0
-  checksum: 5d95a7738c54852ba78d484141e850c792e062666a2d0c681a5ac1021275beb7e1acb077e59f9523ff1defb80901aea4e30fac10ded9a20a25d819a42916ef1b
+  checksum: f89f02bcaa0e0e4bb4c44ec796008e69fbca62db0aba6ead1bc57d25bdaefdf42102130f4f9ecb7d9c6b6cd35ff7b0c7b97d001d3435da8e629fb68af3aea57e
   languageName: node
   linkType: hard
 
@@ -14338,7 +14406,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"parse-path@npm:^4.0.4":
+"parse-path@npm:^4.0.0":
   version: 4.0.4
   resolution: "parse-path@npm:4.0.4"
   dependencies:
@@ -14358,14 +14426,14 @@ __metadata:
   linkType: hard
 
 "parse-url@npm:^6.0.0":
-  version: 6.0.2
-  resolution: "parse-url@npm:6.0.2"
+  version: 6.0.3
+  resolution: "parse-url@npm:6.0.3"
   dependencies:
     is-ssh: ^1.3.0
     normalize-url: ^6.1.0
-    parse-path: ^4.0.4
+    parse-path: ^4.0.0
     protocols: ^1.4.0
-  checksum: cbd11ad5e5100821aaee8ef2d05df339209e8bc87b2bdccc213bf27b85c0b50c5aee6ab96ad7401f18e0982ba913107c940bab30a8982db08337a056e667d917
+  checksum: c8ddaf7612cf504a328ff6dcda8c01dcf2810645cc400643434545ccd96bd9d6ac37625fb179478c23e6e545e71539bb3bedcde9fe7b94f21868adf53a78c28b
   languageName: node
   linkType: hard
 
@@ -18324,7 +18392,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"watchpack@npm:^2.3.1":
+"watchpack@npm:^2.4.0":
   version: 2.4.0
   resolution: "watchpack@npm:2.4.0"
   dependencies:
@@ -18415,19 +18483,19 @@ __metadata:
   linkType: hard
 
 "webpack@npm:^5.61.0":
-  version: 5.73.0
-  resolution: "webpack@npm:5.73.0"
+  version: 5.74.0
+  resolution: "webpack@npm:5.74.0"
   dependencies:
     "@types/eslint-scope": ^3.7.3
     "@types/estree": ^0.0.51
     "@webassemblyjs/ast": 1.11.1
     "@webassemblyjs/wasm-edit": 1.11.1
     "@webassemblyjs/wasm-parser": 1.11.1
-    acorn: ^8.4.1
+    acorn: ^8.7.1
     acorn-import-assertions: ^1.7.6
     browserslist: ^4.14.5
     chrome-trace-event: ^1.0.2
-    enhanced-resolve: ^5.9.3
+    enhanced-resolve: ^5.10.0
     es-module-lexer: ^0.9.0
     eslint-scope: 5.1.1
     events: ^3.2.0
@@ -18440,14 +18508,14 @@ __metadata:
     schema-utils: ^3.1.0
     tapable: ^2.1.1
     terser-webpack-plugin: ^5.1.3
-    watchpack: ^2.3.1
+    watchpack: ^2.4.0
     webpack-sources: ^3.2.3
   peerDependenciesMeta:
     webpack-cli:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: aa434a241bad6176b68e1bf0feb1972da4dcbf27cb3d94ae24f6eb31acc37dceb9c4aae55e068edca75817bfe91f13cd20b023ac55d9b1b2f8b66a4037c9468f
+  checksum: 320c41369a75051b19e18c63f408b3dcc481852e992f83d311771c5ec0f05f2946385e8ebef62030cf3587f0a3d2f12779ffdb191569a966847289ba7313f946
   languageName: node
   linkType: hard
 
