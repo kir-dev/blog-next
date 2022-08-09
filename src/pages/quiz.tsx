@@ -15,6 +15,7 @@ import {
   VStack
 } from '@chakra-ui/react'
 import { Link } from 'gatsby'
+import JSConfetti from 'js-confetti'
 import { useState } from 'react'
 import { Container } from '~components/Container'
 import { CodeHighlighter } from '~components/quiz-components/CodeHighlighter'
@@ -29,8 +30,10 @@ type Answer = {
   right?: boolean
 }
 
+const jsConfetti = new JSConfetti()
+
 const QuizPage = () => {
-  const [answers, setAnswers] = useState<Answer[]>(QUIZ_QUESTIONS.map((q) => ({ id: q.id, value: undefined, right: false })))
+  const [answers, setAnswers] = useState<Answer[]>(QUIZ_QUESTIONS.map((q) => ({ id: q.id, value: undefined, right: undefined })))
   const [showResult, setShowResult] = useState<boolean>(false)
 
   const handleChange = (answerIndex: number, newValue: AnswerType) => {
@@ -46,11 +49,13 @@ const QuizPage = () => {
     }))
     setAnswers(newAnswers)
     setShowResult(true)
+    if (newAnswers.reduce((a, b) => (a += b.right ? 1 : 0), 0) === QUIZ_QUESTIONS.length) {
+      jsConfetti.addConfetti()
+    }
   }
 
   const clear = () => {
-    setAnswers(QUIZ_QUESTIONS.map((q) => ({ id: q.id, value: undefined, right: false })))
-    setShowResult(false)
+    window.location.reload()
   }
 
   return (
@@ -64,12 +69,14 @@ const QuizPage = () => {
       >
         <Container>
           {QUIZ_QUESTIONS.map((question, index) => (
-            <FormControl key={question.id} isRequired my={5}>
-              <FormLabel>{question.prompt}</FormLabel>
+            <FormControl key={question.id} isRequired my={10} borderRadius="base" borderWidth="thin" p={5} pb={10}>
+              <FormLabel fontSize="2xl">
+                {index + 1}. {question.prompt}
+              </FormLabel>
               <CodeHighlighter code={question.code} lang={question.lang} />
-              <HStack my={4} fontSize="xl">
+              <HStack my={4} fontSize="xl" mt={4}>
                 <Box>A megadott válasz:</Box>
-                {answers[index].right && (
+                {answers[index].right === true && (
                   <Badge colorScheme="green" fontSize="xl">
                     HELYES
                   </Badge>
@@ -96,7 +103,7 @@ const QuizPage = () => {
               Válaszok törlése
             </Button>
             <Box display={showResult ? 'inherit' : 'none'}>
-              <Text>
+              <Text fontSize="xl" fontWeight={700}>
                 Sikeresen megválaszolva: {answers.reduce((a, b) => (a += b.right ? 1 : 0), 0)}/{QUIZ_QUESTIONS.length}
               </Text>
             </Box>
@@ -104,7 +111,7 @@ const QuizPage = () => {
               Kiértékelés!
             </Button>
           </Flex>
-          <Box mt={10}>
+          <Box my={20}>
             <Heading>Érdekel, ezek közül mi mivel foglalkozunk?</Heading>
             <Text mt={2}>
               Nézz rá kódbázisainkra a{' '}
