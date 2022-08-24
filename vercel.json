@@ -1,0 +1,24 @@
+{
+  "redirects": [
+    {
+      "source": "/drive",
+      "destination": "https://drive.google.com/drive/u/0/folders/0ABXzzjTNCTZ3Uk9PVA",
+      "permanent": true
+    },
+    {
+      "source": "/trello",
+      "destination": "https://docs.google.com/spreadsheets/d/17Abglto7jJj68kl1MF5FegMuFCHZ7jSI4MrDVy0HkKQ",
+      "permanent": true
+    },
+    {
+      "source": "/lois",
+      "destination": "https://horizont.sch.bme.hu/ui",
+      "permanent": true
+    },
+    {
+      "source": "/vercel",
+      "destination": "https://vercel.com/kir-dev",
+      "permanent": true
+    }
+  ]
+}
