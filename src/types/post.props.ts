@@ -6,7 +6,7 @@ export interface PostProps {
   author: string
   date: string
   tags?: Array<string>
-  featuredImage: ImageDataLike
+  featuredImage?: ImageDataLike
   ogImage?: ImageDataLike
   comment?: boolean
 }

@@ -11,7 +11,6 @@ techs:
   - NestJS
   - React
   - Typescript
-featuredImage:
 ---
 
 ## Projekt
