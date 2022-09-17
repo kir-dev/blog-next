@@ -10,7 +10,6 @@ status:
 techs:
   - NestJS
   - React
-featuredImage:
 ---
 
 # Mi a projekt célja?

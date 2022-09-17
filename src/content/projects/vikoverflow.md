@@ -11,5 +11,4 @@ techs:
   - NextJS
   - Node
   - AWS Lambda
-featuredImage:
 ---
