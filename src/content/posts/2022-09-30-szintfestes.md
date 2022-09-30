@@ -22,13 +22,13 @@ Ezek az alkotások generációkon át díszítik a Schönherz belsejét, amíg �
 
 ![szintfestes-group-pic](../images/posts/kirdev_szintfestes.png)
 
-Idén a szintfestés alól a Schönherz 13. emelete, a Simonyi szakkolléium szintje se maradhatott ki. Még egészen sok üres hely volt a falakon, így már igazán itt volt az ideje, hogy színesebbé tegyük a folyosókat.
+Idén a szintfestés alól a Schönherz 13. emelete, a Simonyi Károly Szakkollégium szintje se maradhatott ki. Még egészen sok üres hely volt a falakon, így már igazán itt volt az ideje, hogy színesebbé tegyük a folyosókat.
 
-A Kir-Dev csapata is részt vett ebben. Még a szintfestés napja előtt megterveztünk és felrajzoltuk a kör logójának körvonalát, majd a várva várt napont egy kellemes délutánt töltöttek tagjaink a festegetéssel. Ugyan nem a festés az erősségünk, mégis sikerült egy csodálatos logót alkotnunk, ráadásul jövőre is vannak már elképzeléseink, hogy a logó köré miket szeretnénk festeni.
-Eddig még soha nem volt Kir-Dev logó festeve a szakkoli szintjén, úgyhogy már nagyon itt volt az ideje.
+A Kir-Dev csapata is részt vett ebben. Még a szintfestés napja előtt megterveztünk és felrajzoltuk a kör logójának körvonalát, majd a várva várt napot egy kellemes délutánt töltöttek tagjaink a festegetéssel. Ugyan nem a festés az erősségünk, mégis sikerült egy csodálatos logót alkotnunk, ráadásul jövőre is vannak már elképzeléseink, hogy a logó köré miket szeretnénk festeni.
+Eddig még soha nem volt Kir-Dev logó festve a szakkoli szintjén, úgyhogy már nagyon itt volt az ideje.
 
 ![kirdev-logo-phases](https://warp.sch.bme.hu/images/kirdev-logo-phases)
 
-Viszont a tagjaink tevékenysége a logónk befejeztével se maradt abba, úgyanis egy másik logó is nagyon hiányzott már a szintről, mégpedig a szokkollégium logója. A Simonyi sok köréből érkeztek lekes emberek, és közös erővel megalkottuk a gyönyörű Simonyi logót is. Ha valaki a 13. szintre érkezik, most már egyből tudni fogja, hogy jó helyen jár.
+Viszont a tagjaink tevékenysége a logónk befejeztével se maradt abba, ugyanis egy másik logó is nagyon hiányzott már a szintről, mégpedig a szakkollégium logója. A Simonyi sok köréből érkeztek lelkes emberek, és közös erővel megalkottuk a gyönyörű Simonyi logót is. Ha valaki a 13. szintre érkezik, most már egyből tudni fogja, hogy jó helyen jár.
 
 ![festett-simonyi-logo](https://warp.sch.bme.hu/images/festett-simonyi-logo)
