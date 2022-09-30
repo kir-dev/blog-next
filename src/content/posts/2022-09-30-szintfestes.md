@@ -24,7 +24,7 @@ Ezek az alkotások generációkon át díszítik a Schönherz belsejét, amíg �
 
 Idén a szintfestés alól a Schönherz 13. emelete, a Simonyi Károly Szakkollégium szintje se maradhatott ki. Még egészen sok üres hely volt a falakon, így már igazán itt volt az ideje, hogy színesebbé tegyük a folyosókat.
 
-A Kir-Dev csapata is részt vett ebben. Még a szintfestés napja előtt megterveztünk és felrajzoltuk a kör logójának körvonalát, majd a várva várt napot egy kellemes délutánt töltöttek tagjaink a festegetéssel. Ugyan nem a festés az erősségünk, mégis sikerült egy csodálatos logót alkotnunk, ráadásul jövőre is vannak már elképzeléseink, hogy a logó köré miket szeretnénk festeni.
+A Kir-Dev csapata is részt vett ebben. Még a szintfestés napja előtt megterveztünk és felrajzoltuk a kör logójának körvonalát, majd a várva várt napon egy kellemes délutánt töltöttek tagjaink a festegetéssel. Ugyan nem a festés az erősségünk, mégis sikerült egy csodálatos logót alkotnunk, ráadásul jövőre is vannak már elképzeléseink, hogy a logó köré miket szeretnénk festeni.
 Eddig még soha nem volt Kir-Dev logó festve a szakkoli szintjén, úgyhogy már nagyon itt volt az ideje.
 
 ![kirdev-logo-phases](https://warp.sch.bme.hu/images/kirdev-logo-phases)
