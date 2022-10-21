@@ -19,3 +19,34 @@
   realName: Gulyás Gergely
   position: volt körvezető
   joinDate: 2012-07
+
+- pekUsername: gallyasm
+  realName: Gallyas Márton
+  position: tag
+  joinDate: 2020-10
+  normalImageUrl: https://warp.sch.bme.hu/images/gallyasm1
+  funnyImageUrl: https://warp.sch.bme.hu/images/gallyasm_funny1
+
+- pekUsername: Oldal
+  realName: Kostyál Bálint
+  position: tag
+  joinDate: 2021-04
+  normalImageUrl: https://warp.sch.bme.hu/images/oldal1
+  funnyImageUrl: https://warp.sch.bme.hu/images/oldal_funny1
+
+- pekUsername: radikris
+  realName: Rádi Kristóf
+  position: tag
+  joinDate: 2020-10
+  normalImageUrl: https://warp.sch.bme.hu/images/radikris1
+  funnyImageUrl: https://warp.sch.bme.hu/images/radikris_funny1
+
+- pekUsername: vbence
+  realName: Vass Bence
+  position: újonc
+  joinDate: 2020-10
+
+- pekUsername: raiszoliver
+  realName: Raisz Olivér
+  position: újonc
+  joinDate: 2022-04

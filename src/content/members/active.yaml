@@ -12,14 +12,14 @@
 
 - pekUsername: beni99
   realName: Bucsy Benjámin
-  position: körvezető
+  position: volt körvezető
   joinDate: 2020-04
   normalImageUrl: https://warp.sch.bme.hu/images/beni991
   funnyImageUrl: https://warp.sch.bme.hu/images/beni99_funny1
 
 - pekUsername: berenteb
   realName: Berente Bálint István
-  position: tag
+  position: körvezető
   joinDate: 2021-04
   normalImageUrl: https://warp.sch.bme.hu/images/berenteb1
   funnyImageUrl: https://warp.sch.bme.hu/images/berenteb_funny1
@@ -31,17 +31,10 @@
 
 - pekUsername: feketesamu
   realName: Fekete Sámuel
-  position: tag
+  position: gazdaságis
   joinDate: 2021-04
   normalImageUrl: https://warp.sch.bme.hu/images/feketesamu1
   funnyImageUrl: https://warp.sch.bme.hu/images/feketesamu_funny1
-
-- pekUsername: gallyasm
-  realName: Gallyas Márton
-  position: tag
-  joinDate: 2020-10
-  normalImageUrl: https://warp.sch.bme.hu/images/gallyasm1
-  funnyImageUrl: https://warp.sch.bme.hu/images/gallyasm_funny1
 
 - pekUsername: Gerviba
   realName: Szabó Gergely
@@ -54,20 +47,6 @@
   realName: Nagy Máté
   position: tag
   joinDate: 2019-03
-
-- pekUsername: Oldal
-  realName: Kostyál Bálint
-  position: tag
-  joinDate: 2021-04
-  normalImageUrl: https://warp.sch.bme.hu/images/oldal1
-  funnyImageUrl: https://warp.sch.bme.hu/images/oldal_funny1
-
-- pekUsername: radikris
-  realName: Rádi Kristóf
-  position: tag
-  joinDate: 2020-10
-  normalImageUrl: https://warp.sch.bme.hu/images/radikris1
-  funnyImageUrl: https://warp.sch.bme.hu/images/radikris_funny1
 
 - pekUsername: sepsilaci
   realName: Sepsi László
@@ -97,11 +76,6 @@
   normalImageUrl: https://warp.sch.bme.hu/images/triszt4n1
   funnyImageUrl: https://warp.sch.bme.hu/images/triszt4n_funny1
 
-- pekUsername: vbence
-  realName: Vass Bence
-  position: újonc
-  joinDate: 2020-10
-
 - pekUsername: rolandandai
   realName: Andai Roland
   position: újonc
@@ -109,20 +83,15 @@
 
 - pekUsername: kisbogdan
   realName: Kis-Bogdán Kolos
-  position: újonc
-  joinDate: 2022-04
-
-- pekUsername: raiszoliver
-  realName: Raisz Olivér
-  position: újonc
+  position: tag
   joinDate: 2022-04
 
 - pekUsername: Smuk%20Ferenc
   realName: Smuk Ferenc
-  position: újonc
+  position: tag
   joinDate: 2022-04
 
 - pekUsername: tete
   realName: Tényi Tamás
-  position: újonc
+  position: tag
   joinDate: 2022-04
