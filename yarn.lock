@@ -2798,10 +2798,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/poppins@npm:4.5.9":
-  version: 4.5.9
-  resolution: "@fontsource/poppins@npm:4.5.9"
-  checksum: d6af07f9eab588b64674205adeccfec0ca78e86bf7c617144bc08bfb50986a4e1f69463c7e54ee0dbd7cd51767ab5c0b0be2ed53514bc749c31e46aa99fa45e7
+"@fontsource/poppins@npm:4.5.10":
+  version: 4.5.10
+  resolution: "@fontsource/poppins@npm:4.5.10"
+  checksum: 873ea31740a9819cbc39bf5895159101e87674e3c9da03629b6331e7752b657f3704cd1c6ae81ac9af2f5aa4a9d85847eae8015c926bb48e1f7a5bbacfeca8ee
   languageName: node
   linkType: hard
 
@@ -11496,7 +11496,7 @@ __metadata:
     "@chakra-ui/system": 2.2.9
     "@emotion/react": 11.10.4
     "@emotion/styled": 11.10.4
-    "@fontsource/poppins": 4.5.9
+    "@fontsource/poppins": 4.5.10
     "@types/node": 18.7.18
     "@types/react": 18.0.20
     "@types/react-dom": 18.0.6

@@ -31,7 +31,7 @@
     "@chakra-ui/system": "2.2.9",
     "@emotion/react": "11.10.4",
     "@emotion/styled": "11.10.4",
-    "@fontsource/poppins": "4.5.9",
+    "@fontsource/poppins": "4.5.10",
     "dotenv": "16.0.2",
     "framer-motion": "7.3.5",
     "gatsby": "4.23.0",
