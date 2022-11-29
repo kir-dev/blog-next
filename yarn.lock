@@ -11534,7 +11534,7 @@ __metadata:
     react: 18.2.0
     react-dom: 18.2.0
     react-helmet: 6.1.0
-    react-icons: 4.4.0
+    react-icons: 4.7.1
     typescript: 4.8.3
     utterances-react-component: 1.0.0
   languageName: unknown
@@ -14597,12 +14597,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-icons@npm:4.4.0":
-  version: 4.4.0
-  resolution: "react-icons@npm:4.4.0"
+"react-icons@npm:4.7.1":
+  version: 4.7.1
+  resolution: "react-icons@npm:4.7.1"
   peerDependencies:
     react: "*"
-  checksum: dd93a1dcc8ac8a3cf46a2b33e80b586fa967331fa5fcb90d061abf276155a8363a331643e203d67cb9bab4261d00a757da854bcce1fce2c6e4258bf3e33f711b
+  checksum: ed3cbdc5fc0c4d7d2debf78fdc8c4c80aeacf85a506a9a3c11b1d5922de393ac0a6542012b7fb81761e9280c54d0f26827d50a92b54ec8f0c8e52364d89970b5
   languageName: node
   linkType: hard
 
