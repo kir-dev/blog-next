@@ -4,16 +4,16 @@ sessions:
   - startDate: 2022-03-09
     startTime: '18:00'
     endTime: '20:00'
-    place: E404
+    place: TBD
   - startDate: 2022-03-16
     startTime: '18:00'
     endTime: '20:00'
-    place: E401
+    place: TBD
   - startDate: 2022-03-23
     startTime: '18:00'
     endTime: '20:00'
-    place: QBF11
-lecturer: Piller Trisztán
+    place: TBD
+lecturer: Fekete Sámuel
 active: true
 description: >
   NodeJS tanfolyam az alapoktól, amely során megismerkedhettek a TypeScript nyelvvel, a NestJS keretrendszerrel.

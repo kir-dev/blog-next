@@ -21,13 +21,8 @@
   realName: Berente Bálint István
   position: körvezető
   joinDate: 2021-04
-  normalImageUrl: https://warp.sch.bme.hu/images/berenteb1
-  funnyImageUrl: https://warp.sch.bme.hu/images/berenteb_funny1
-
-- pekUsername: czemanb
-  realName: Czémán Bálint
-  position: tag
-  joinDate: 2019-03
+  normalImageUrl: https://warp.sch.bme.hu/images/berenteb
+  funnyImageUrl: https://warp.sch.bme.hu/images/berenteb_funny
 
 - pekUsername: feketesamu
   realName: Fekete Sámuel
@@ -40,20 +35,22 @@
   realName: Szabó Gergely
   position: tag
   joinDate: 2019-10
-  normalImageUrl: https://warp.sch.bme.hu/images/gerviba1
-  funnyImageUrl: https://warp.sch.bme.hu/images/gerviba_funny1
+  normalImageUrl: https://warp.sch.bme.hu/images/gerviba
+  funnyImageUrl: https://warp.sch.bme.hu/images/gerviba_funny
 
 - pekUsername: nm0829
   realName: Nagy Máté
   position: tag
   joinDate: 2019-03
+  normalImageUrl: https://warp.sch.bme.hu/images/nmate
+  funnyImageUrl: https://warp.sch.bme.hu/images/nmate_funny
 
 - pekUsername: sepsilaci
   realName: Sepsi László
   position: volt körvezető
   joinDate: 2019-03
-  normalImageUrl: https://warp.sch.bme.hu/images/sepsilaci1
-  funnyImageUrl: https://warp.sch.bme.hu/images/sepsilaci_funny1
+  normalImageUrl: https://warp.sch.bme.hu/images/sepsilaci
+  funnyImageUrl: https://warp.sch.bme.hu/images/sepsilaci_funny
 
 - pekUsername: szaraz_daniel
   realName: Száraz Dániel
@@ -66,8 +63,8 @@
   realName: Südi Tamás
   position: tag
   joinDate: 2021-04
-  normalImageUrl: https://warp.sch.bme.hu/images/tomitheninja1
-  funnyImageUrl: https://warp.sch.bme.hu/images/tomitheninja_funny1
+  normalImageUrl: https://warp.sch.bme.hu/images/tomitheninja
+  funnyImageUrl: https://warp.sch.bme.hu/images/tomitheninja_funny
 
 - pekUsername: triszt4n
   realName: Piller Trisztán
@@ -80,16 +77,22 @@
   realName: Andai Roland
   position: újonc
   joinDate: 2022-04
+  normalImageUrl: https://warp.sch.bme.hu/images/rolandandai
+  funnyImageUrl: https://warp.sch.bme.hu/images/rolandandai_funny
 
 - pekUsername: kisbogdan
   realName: Kis-Bogdán Kolos
   position: tag
   joinDate: 2022-04
+  normalImageUrl: https://warp.sch.bme.hu/images/kisbogdan
+  funnyImageUrl: https://warp.sch.bme.hu/images/kisbogdan_funny
 
 - pekUsername: Smuk%20Ferenc
   realName: Smuk Ferenc
   position: tag
   joinDate: 2022-04
+  normalImageUrl: https://warp.sch.bme.hu/images/smukferenc
+  funnyImageUrl: https://warp.sch.bme.hu/images/smukferenc_funny
 
 - pekUsername: tete
   realName: Tényi Tamás

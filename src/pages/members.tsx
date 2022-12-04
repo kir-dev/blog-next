@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 
 import { Container } from '~components/Container'
 import { MeetingControls } from '~components/members-components/MeetingControls'
+import { YouAvatarCard } from '~components/members-components/YouAvatarCard'
 import { SEO } from '~components/SEO'
 import { MembersProps } from '~types/page-props/members.props'
 import { getMemberCollage } from '~utils/commonFunctions'
@@ -21,6 +22,13 @@ const MembersPage = ({ data }: MembersProps) => (
         <Flex flexDirection="column" pt={10} px={2} bgColor="gray.900">
           <Flex flexWrap="wrap" justifyContent="center" maxWidth="82rem" mx="auto">
             {getMemberCollage(data.actives.nodes, { base: '12rem', lg: '16rem' }, { base: '10rem', lg: '12rem' })}
+            <Flex
+              py={{ base: 2, sm: 1 }}
+              px={{ base: 0, sm: 1 }}
+              flex={`0 0 ${useBreakpointValue({ base: '100%', sm: '50%', md: '33%', lg: '25%' })}`}
+            >
+              <YouAvatarCard height={{ base: '12rem', lg: '16rem' }} avatarBoxSize={{ base: '10rem', lg: '12rem' }} />
+            </Flex>
           </Flex>
           <MeetingControls numberOfActives={data.actives.nodes.length} />
         </Flex>

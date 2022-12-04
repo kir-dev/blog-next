@@ -4,11 +4,11 @@ sessions:
   - startDate: 2022-02-24
     startTime: '18:00'
     endTime: '20:00'
-    place: QBF11
+    place: TBD
   - startDate: 2022-03-03
     startTime: '18:00'
     endTime: '20:00'
-    place: E401
+    place: TBD
 lecturer: Sepsi László
 active: true
 description: >
