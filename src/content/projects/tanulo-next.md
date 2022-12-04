@@ -5,7 +5,7 @@ lead: Közös tanuláshoz partnerkeresést segítő alkalmazás
 github: https://github.com/kir-dev/tanulo-next
 website: https://tanulo.sch.bme.hu
 status:
-  label: Aktív
+  label: Üzemel
   color: green
 techs:
   - Typescript

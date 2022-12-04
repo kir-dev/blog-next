@@ -5,10 +5,10 @@ lead: QnA alapú platform tudásátadásra a kar hallgatói számára
 github: https://github.com/kir-dev/vikoverflow
 website: https://vikoverflow.sch.bme.hu
 status:
-  label: Inaktív
-  color: orange
+  label: Megszakadt
+  color: red
 techs:
-  - NextJS
-  - Node
-  - AWS Lambda
+  - Next.js
+  - AWS
+  - Terraform
 ---

@@ -5,8 +5,8 @@ lead: A Schönherz Airsoft Team kör honlapja
 github: https://github.com/kir-dev/airsoft
 website: https://airsoft.sch.bme.hu
 status:
-  label: Üzemel
-  color: green
+  label: Kész
+  color: gray
 techs:
   - Rails
   - Bootstrap

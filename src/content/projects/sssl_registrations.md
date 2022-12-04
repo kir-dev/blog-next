@@ -6,7 +6,7 @@ github: https://github.com/kir-dev/sssl_registrations
 website: https://kepzes.sch.bme.hu/
 status:
   label: Kész
-  color: green
+  color: gray
 techs:
   - Rails
   - React

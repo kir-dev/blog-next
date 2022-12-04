@@ -5,7 +5,7 @@ lead: A Schörpong kör honlapja
 github: https://github.com/kir-dev/schorpong
 website: https://schorpong.sch.bme.hu
 status:
-  label: Archivált
+  label: Kész
   color: gray
 techs:
   - Rails

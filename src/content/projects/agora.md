@@ -5,8 +5,8 @@ lead: Piactér a kollégium lakóinak mindennapi problémáira
 github: https://github.com/kir-dev/agora
 website: https://agora.sch.bme.hu/
 status:
-  label: Tervezés alatt
-  color: orange
+  label: Megszakadt
+  color: red
 techs:
   - NestJS
   - React
