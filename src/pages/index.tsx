@@ -115,8 +115,13 @@ const IndexPage = ({ data }: Props) => {
                       <HStack direction="row" alignItems={{ base: 'baseline', md: 'end' }} my={6} mx={{ base: 4, lg: 0 }} spacing={6}>
                         {useBreakpointValue({ lg: <Spacer /> })}
                         {getSocials(['github', 'youtube', 'facebook']).map((social) => (
-                          <Box color={useColorModeValue('black', 'grey.200')} _hover={{ color: 'orange.500' }}>
-                            <ChakraLink isExternal href={social.url}>
+                          <Box>
+                            <ChakraLink
+                              isExternal
+                              href={social.url}
+                              color={useColorModeValue('black', 'grey.200')}
+                              _hover={{ color: 'orange.500' }}
+                            >
                               <Icon as={social.Icon} w={socialSize} h={socialSize} />
                             </ChakraLink>
                           </Box>
@@ -172,9 +177,9 @@ const IndexPage = ({ data }: Props) => {
               </Text>
               <PekPreview project={pek} />
               <Box textAlign="right" mt={8}>
-                <Text as={Link} textColor="orange.500" fontSize="lg" to="/projects">
+                <ChakraLink as={Link} fontSize="lg" to="/projects">
                   További projektjeink...
-                </Text>
+                </ChakraLink>
               </Box>
             </Box>
 
@@ -182,9 +187,9 @@ const IndexPage = ({ data }: Props) => {
               <Heading pb={4}>Legutóbbi bejegyzés blogunkból</Heading>
               <BlogFullCard post={post} />
               <Box textAlign="right" mt={8}>
-                <Text as={Link} textColor="orange.500" fontSize="lg" to="/blog">
+                <ChakraLink as={Link} fontSize="lg" to="/blog">
                   További posztjaink...
-                </Text>
+                </ChakraLink>
               </Box>
             </Box>
           </Container>

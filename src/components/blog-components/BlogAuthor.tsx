@@ -1,4 +1,4 @@
-import { Avatar, Box, HStack, Link, Text } from '@chakra-ui/react'
+import { Avatar, Box, HStack, Text } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
 import { environment } from '~utils/configurations'
 
@@ -16,9 +16,14 @@ export const BlogAuthor = ({ date, name, hasLongDate }: Props) => (
 
     {hasLongDate ? (
       <HStack flex={1}>
-        <Link fontWeight="medium" fontSize="md" isExternal href={`${environment.pekUrl}/profiles/${name}`}>
+        <Text
+          fontWeight="medium"
+          fontSize="md"
+          onClick={() => window.open(`${environment.pekUrl}/profiles/${name}`, '_blank')}
+          cursor="pointer"
+        >
           {name}
-        </Link>
+        </Text>
         <Text>—</Text>
         <Text fontWeight="light" fontSize="md" textColor={useColorModeValue('gray.600', 'gray.400')}>
           {date.toLocaleTimeString('hu-HU', {
@@ -33,9 +38,14 @@ export const BlogAuthor = ({ date, name, hasLongDate }: Props) => (
       </HStack>
     ) : (
       <Box flex={1}>
-        <Link fontWeight="medium" fontSize="md" isExternal href={`${environment.pekUrl}/profiles/${name}`}>
+        <Text
+          fontWeight="medium"
+          fontSize="md"
+          onClick={() => window.open(`${environment.pekUrl}/profiles/${name}`, '_blank')}
+          cursor="pointer"
+        >
           {name}
-        </Link>
+        </Text>
         <Text whiteSpace="nowrap" fontWeight="light" fontSize="xs" textColor={useColorModeValue('gray.600', 'gray.400')}>
           {date.toLocaleDateString('hu-HU', {
             year: 'numeric',
