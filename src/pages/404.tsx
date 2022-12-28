@@ -1,10 +1,11 @@
 import { Box, Button, Container, Flex, Heading } from '@chakra-ui/react'
+import { Header } from 'components/Header'
+import { SEO } from 'components/SEO'
 import { Link } from 'gatsby'
 import { IndexLayout } from 'layouts'
-import { Header } from '~components/Header'
-import { SEO } from '~components/SEO'
+import React from 'react'
 
-const NotFoundPage = () => (
+const NotFoundPage: React.FC = () => (
   <SEO title="404" robots="nofollow, noindex">
     <IndexLayout background="url(/background/top-right.svg) right top no-repeat, url(/background/bottom-left.svg) left top no-repeat">
       <Box>

@@ -1,13 +1,12 @@
-import { Alert, AlertIcon, Box, Button, Flex, Heading, Image, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Alert, AlertIcon, Box, Button, Container, Flex, Heading, Image, Text, useBreakpointValue } from '@chakra-ui/react'
 import { chakra, useColorModeValue } from '@chakra-ui/system'
+import CourseCard from 'components/course-components/CourseCard'
+import { Header } from 'components/Header'
+import { SEO } from 'components/SEO'
 import { graphql, Link } from 'gatsby'
-
-import { Container } from '~components/Container'
-import { CourseCard } from '~components/course-components/CourseCard'
-import { Header } from '~components/Header'
-import { SEO } from '~components/SEO'
-import { CourseProps } from '~types/course.props'
-import { environment } from '~utils/configurations'
+import React from 'react'
+import { CourseProps } from 'types/course.props'
+import { environment } from 'utils/configurations'
 import { IndexLayout } from '../layouts'
 
 type Props = {
@@ -18,7 +17,7 @@ type Props = {
   }
 }
 
-const CoursesPage = ({ data }: Props) => {
+const CoursesPage: React.FC<Props> = ({ data }) => {
   const widthsPerBreakpoint = { base: '100%', md: '49%' }
 
   return (

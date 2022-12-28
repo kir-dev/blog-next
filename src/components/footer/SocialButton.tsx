@@ -1,13 +1,12 @@
 import { IconButton } from '@chakra-ui/react'
-import { HasChildren } from '~utils/HasChildren'
 
 type Props = {
   label: string
   href: string
   size: string | number
-} & HasChildren
+}
 
-export const SocialButton = ({ children, label, href, size }: Props) => {
+export const SocialButton: React.FC<React.PropsWithChildren<Props>> = ({ children, label, href, size }) => {
   return (
     <IconButton
       rounded="full"

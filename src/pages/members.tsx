@@ -1,15 +1,14 @@
-import { Box, Flex, Heading, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Container, Flex, Heading, useBreakpointValue } from '@chakra-ui/react'
+import { MeetingControls } from 'components/members-components/MeetingControls'
+import { YouAvatarCard } from 'components/members-components/YouAvatarCard'
+import { SEO } from 'components/SEO'
 import { graphql } from 'gatsby'
-
-import { Container } from '~components/Container'
-import { MeetingControls } from '~components/members-components/MeetingControls'
-import { YouAvatarCard } from '~components/members-components/YouAvatarCard'
-import { SEO } from '~components/SEO'
-import { MembersProps } from '~types/page-props/members.props'
-import { getMemberCollage } from '~utils/commonFunctions'
+import React from 'react'
+import { MembersProps } from 'types/page-props/members.props'
+import { getMemberCollage } from 'utils/commonFunctions'
 import { IndexLayout } from '../layouts'
 
-const MembersPage = ({ data }: MembersProps) => (
+const MembersPage: React.FC<MembersProps> = ({ data }) => (
   <SEO title="Csapatunk">
     <IndexLayout
       background={`${useBreakpointValue({

@@ -1,11 +1,12 @@
 /* eslint-disable max-len */
 import { useColorModeValue } from '@chakra-ui/system'
+import React from 'react'
 
 type Props = {
   style: object
 }
 
-export const KirdevOriginal = ({ style }: Props) => {
+export const KirdevOriginal: React.FC<Props> = ({ style }) => {
   const styleMainColor = { fill: '#f15a29' }
 
   return (

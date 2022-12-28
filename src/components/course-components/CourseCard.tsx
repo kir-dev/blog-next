@@ -1,6 +1,7 @@
 import { Box, Divider, Flex, Heading, HStack, Text } from '@chakra-ui/react'
+import React from 'react'
 import { FaChalkboardTeacher, FaClock, FaMapMarkerAlt } from 'react-icons/fa'
-import { CourseProps, ISession } from '~types/course.props'
+import { CourseProps, ISession } from 'types/course.props'
 
 type Props = {
   course: CourseProps
@@ -16,7 +17,7 @@ const getSessionString = (session: ISession): string => {
   })} ${session.startTime} - ${session.endTime}`
 }
 
-export const CourseCard = ({ course }: Props) => (
+export const CourseCard: React.FC<Props> = ({ course }) => (
   <Box borderWidth="1px" rounded="lg" shadow="lg">
     <Box pt={4} pb={4} px={4}>
       <Heading fontWeight="400" fontSize="2xl">

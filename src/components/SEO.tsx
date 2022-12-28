@@ -1,7 +1,7 @@
 import React from 'react'
 import { format } from 'util'
-import { environment } from '~utils/configurations'
-import { useSiteMetadata } from '~utils/useSiteMetadata'
+import { environment } from 'utils/configurations'
+import { useSiteMetadata } from 'utils/useSiteMetadata'
 
 type Props = {
   title?: string

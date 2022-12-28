@@ -1,14 +1,14 @@
 import { Box, Flex, Link } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
-import { useState } from 'react'
-import { environment } from '~utils/configurations'
+import React, { useState } from 'react'
+import { environment } from 'utils/configurations'
 import { Line } from './helpers/Line'
 import { Frame, Keyframes } from './react-keyframes'
 
 const sleepDuration = 500
 const getTypingDuration = () => 80 + 80 * (Math.random() - 0.5)
 
-export const Terminal = () => {
+export const Terminal: React.FC = () => {
   const [lineCount, setLineCount] = useState(0)
 
   const showLine = (text: string, name?: string) => {

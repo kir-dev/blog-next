@@ -8,7 +8,7 @@ export interface ISession {
 export interface CourseProps {
   title: string
   order: number
-  sessions: Array<ISession>
+  sessions: ISession[]
   lecturer: string
   active: boolean
   description: string

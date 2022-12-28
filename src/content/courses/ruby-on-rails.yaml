@@ -1,18 +1,18 @@
 title: Ruby on Rails 🚆
 order: 200
 sessions:
-  - startDate: 2022-03-08
-    startTime: '18:00'
-    endTime: '20:00'
-    place: TBD
-  - startDate: 2022-03-17
-    startTime: '18:00'
-    endTime: '20:00'
-    place: TBD
-  - startDate: 2022-03-22
-    startTime: '18:00'
-    endTime: '20:00'
-    place: TBD
+  # - startDate: 2022-03-08
+  #   startTime: '18:00'
+  #   endTime: '20:00'
+  #   place: TBD
+  # - startDate: 2022-03-17
+  #   startTime: '18:00'
+  #   endTime: '20:00'
+  #   place: TBD
+  # - startDate: 2022-03-22
+  #   startTime: '18:00'
+  #   endTime: '20:00'
+  #   place: TBD
 lecturer: Bucsy Benjámin
 active: true
 description: >

@@ -1,5 +1,6 @@
 import { Badge, Box, Flex, HStack, Icon, Image } from '@chakra-ui/react'
 import { navigate } from 'gatsby'
+import React from 'react'
 import { BiMicrophoneOff } from 'react-icons/bi'
 
 type Props = {
@@ -7,7 +8,7 @@ type Props = {
   avatarBoxSize: any
 }
 
-export const YouAvatarCard = ({ height = '12rem', avatarBoxSize = '10rem' }: Props) => (
+export const YouAvatarCard: React.FC<Props> = ({ height = '12rem', avatarBoxSize = '10rem' }) => (
   <Box pos="relative" h={height} w="full" bgColor="gray.700" borderRadius="lg">
     <Flex h={height} alignItems="center" justifyContent="center">
       <Image

@@ -1,6 +1,6 @@
 import { Avatar, Box, HStack, Text } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
-import { environment } from '~utils/configurations'
+import { environment } from 'utils/configurations'
 
 type Props = {
   date: Date
@@ -8,7 +8,7 @@ type Props = {
   hasLongDate?: boolean
 }
 
-export const BlogAuthor = ({ date, name, hasLongDate }: Props) => (
+export const BlogAuthor: React.FC<Props> = ({ date, name, hasLongDate }) => (
   <HStack spacing={2} display="flex" alignItems="center">
     <a href={`${environment.pekUrl}/profiles/${name}`}>
       <Avatar name={name} src={`${environment.pekUrl}/photos/${name}`} size={hasLongDate ? 'md' : 'sm'} />

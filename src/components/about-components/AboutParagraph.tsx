@@ -1,13 +1,13 @@
 import { Box, Heading, Link } from '@chakra-ui/react'
-import { HasChildren } from '~utils/HasChildren'
+import React from 'react'
 
 type Props = {
   id?: string
   title?: string
   titleSize?: string
-} & HasChildren
+}
 
-export const AboutParagraph = ({ id, title, titleSize, children }: Props) => {
+export const AboutParagraph: React.FC<React.PropsWithChildren<Props>> = ({ id, title, titleSize, children }) => {
   return (
     <Box mt={10} mb={2}>
       <Link id={id} href="." />

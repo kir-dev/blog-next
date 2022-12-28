@@ -2,13 +2,14 @@ import { Box, Flex, Heading, HStack, Image, Tag, Text, useBreakpointValue } from
 import { useColorModeValue } from '@chakra-ui/system'
 import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import React from 'react'
 import { FaClock } from 'react-icons/fa'
-import { BlogPreviewProps } from '~types/component-props/blogPreview.props'
-import { readTimeInMinutes } from '~utils/commonFunctions'
+import { BlogPreviewProps } from 'types/component-props/blogPreview.props'
+import { readTimeInMinutes } from 'utils/commonFunctions'
 import { BlogAuthor } from './BlogAuthor'
 
-export const BlogFullCard = ({ post }: BlogPreviewProps) => {
-  const featuredImage = getImage(post.frontmatter.featuredImage)
+export const BlogFullCard: React.FC<BlogPreviewProps> = ({ post }) => {
+  const featuredImage = getImage(post.frontmatter.featuredImage || null)
 
   return (
     <Flex mt={2} direction={{ base: 'column', sm: 'row' }} justifyContent="space-between">

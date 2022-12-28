@@ -1,13 +1,13 @@
 import { Box, Flex, Heading, Image, useBreakpointValue } from '@chakra-ui/react'
-import { HasChildren } from '~utils/HasChildren'
+import React from 'react'
 
 type Props = {
   imgSrc?: string
   img?: JSX.Element
   title: string
-} & HasChildren
+}
 
-export const InfoBox = ({ imgSrc, img, title, children }: Props) => (
+export const InfoBox: React.FC<React.PropsWithChildren<Props>> = ({ imgSrc, img, title, children }) => (
   <Box py={2}>
     {imgSrc ? (
       <Image float={{ base: 'right', md: 'none' }} pl={{ base: 3, md: 0 }} maxWidth={{ base: '40%', md: '100%' }} src={imgSrc} />

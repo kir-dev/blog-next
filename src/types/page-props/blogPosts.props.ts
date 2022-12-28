@@ -1,4 +1,4 @@
-import { PostProps } from '~types/post.props'
+import { PostProps } from 'types/post.props'
 
 export interface BlogPostsProps {
   data: {

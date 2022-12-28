@@ -1,17 +1,17 @@
-import { Box, Button, Flex, Heading, HStack, Tag, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Button, Container, Flex, Heading, HStack, Tag, Text, useBreakpointValue } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
+import { BlogAuthor } from 'components/blog-components/BlogAuthor'
+import { ScrollButton } from 'components/blog-components/ScrollButton'
+import { Header } from 'components/Header'
+import { SEO } from 'components/SEO'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
+import React from 'react'
 
 import { FaClock } from 'react-icons/fa'
+import { PostProps } from 'types/post.props'
+import { readTimeInMinutes } from 'utils/commonFunctions'
 import { Utterances } from 'utterances-react-component'
-import { BlogAuthor } from '~components/blog-components/BlogAuthor'
-import { ScrollButton } from '~components/blog-components/ScrollButton'
-import { Container } from '~components/Container'
-import { Header } from '~components/Header'
-import { SEO } from '~components/SEO'
-import { PostProps } from '~types/post.props'
-import { readTimeInMinutes } from '~utils/commonFunctions'
 import { IndexLayout } from '../layouts'
 
 type Props = {
@@ -27,7 +27,7 @@ type Props = {
   }
 }
 
-const PostTemplate = ({ data }: Props) => {
+const PostTemplate: React.FC<Props> = ({ data }) => {
   const post = data.markdownRemark
   const featuredImage = getImage(post.frontmatter.featuredImage || null)
   const ogImageSrc = post.frontmatter.ogImage

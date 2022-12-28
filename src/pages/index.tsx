@@ -6,6 +6,7 @@ import {
   Box,
   Button,
   CloseButton,
+  Container,
   Flex,
   Grid,
   Heading,
@@ -17,20 +18,18 @@ import {
   useBreakpointValue
 } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
+import { BlogFullCard } from 'components/blog-components/BlogFullCard'
+import { InfoBox } from 'components/indexpage-components/InfoBox'
+import PekPreview from 'components/indexpage-components/PekPreview'
+import { SEO } from 'components/SEO'
+import { Terminal } from 'components/terminal/Terminal'
+import { KirdevSimplified } from 'components/themed-svgs/KirdevSimplified'
 import { graphql, Link } from 'gatsby'
-
-import { useState } from 'react'
-import { BlogFullCard } from '~components/blog-components/BlogFullCard'
-import { Container } from '~components/Container'
-import { InfoBox } from '~components/indexpage-components/InfoBox'
-import { PekPreview } from '~components/indexpage-components/PekPreview'
-import { SEO } from '~components/SEO'
-import { Terminal } from '~components/terminal/Terminal'
-import { KirdevSimplified } from '~components/themed-svgs/KirdevSimplified'
-import { PostProps } from '~types/post.props'
-import { ProjectProps } from '~types/project.props'
-import { getSocials } from '~utils/commonFunctions'
-import { environment } from '~utils/configurations'
+import React, { useState } from 'react'
+import { PostProps } from 'types/post.props'
+import { ProjectProps } from 'types/project.props'
+import { getSocials } from 'utils/commonFunctions'
+import { environment } from 'utils/configurations'
 import { IndexLayout } from '../layouts'
 
 type Props = {
@@ -57,7 +56,7 @@ type Props = {
   }
 }
 
-const IndexPage = ({ data }: Props) => {
+const IndexPage: React.FC<Props> = ({ data }) => {
   const socialSize = useBreakpointValue({ base: '2rem', lg: '3rem' })
   const [post] = data.post.nodes
   const { pek } = data

@@ -1,10 +1,9 @@
-import { Box, chakra, Heading, useBreakpointValue } from '@chakra-ui/react'
+import { Box, chakra, Container, Heading, useBreakpointValue } from '@chakra-ui/react'
+import { Header } from 'components/Header'
+import { SEO } from 'components/SEO'
 import { graphql, Link } from 'gatsby'
-
-import { Container } from '~components/Container'
-import { Header } from '~components/Header'
-import { SEO } from '~components/SEO'
-import { BlogPostsProps } from '~types/page-props/blogPosts.props'
+import React from 'react'
+import { BlogPostsProps } from 'types/page-props/blogPosts.props'
 import { IndexLayout } from '../layouts'
 
 export const query = graphql`
@@ -24,7 +23,7 @@ export const query = graphql`
   }
 `
 
-const Archive = ({ data }: BlogPostsProps) => (
+const Archive: React.FC<BlogPostsProps> = ({ data }) => (
   <SEO title="Archívum">
     <IndexLayout
       background={`${useBreakpointValue({

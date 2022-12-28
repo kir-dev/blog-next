@@ -1,8 +1,8 @@
 import { Avatar, Badge, Box, Flex, HStack, Icon, Image } from '@chakra-ui/react'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { BiMicrophoneOff } from 'react-icons/bi'
-import { MemberProps } from '~types/member.props'
-import { environment } from '~utils/configurations'
+import { MemberProps } from 'types/member.props'
+import { environment } from 'utils/configurations'
 
 type Props = {
   member: MemberProps
@@ -10,7 +10,7 @@ type Props = {
   avatarBoxSize: any
 }
 
-export const MemberAvatarCard = ({ member, height = '12rem', avatarBoxSize = '10rem' }: Props) => {
+export const MemberAvatarCard: React.FC<Props> = ({ member, height = '12rem', avatarBoxSize = '10rem' }) => {
   const [overlayShown, setOverlayShown] = useState(false)
   const onOverlayEnter = () => setOverlayShown(true)
   const onOverlayLeave = () => setOverlayShown(false)

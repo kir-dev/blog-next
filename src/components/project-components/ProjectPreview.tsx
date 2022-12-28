@@ -2,12 +2,13 @@ import { Box, Flex, Heading, HStack, Image, Link as ChakraLink, Tag, Text } from
 import { useColorModeValue } from '@chakra-ui/system'
 import { Link as GatsbyLink } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import React from 'react'
 import { FaGithub } from 'react-icons/fa'
-import { ProjectPreviewProps } from '~types/component-props/projectPreview.props'
-import { getIcon } from '~utils/commonFunctions'
+import { ProjectPreviewProps } from 'types/component-props/projectPreview.props'
+import { getIcon } from 'utils/commonFunctions'
 
-export const ProjectPreview = ({ project }: ProjectPreviewProps) => {
-  const featuredImage = getImage(project.frontmatter.featuredImage)
+export const ProjectPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
+  const featuredImage = getImage(project.frontmatter.featuredImage || null)
   const statusIcon = getIcon(project.frontmatter.status)
   const githubUrlEnd = project.frontmatter.github.substring(project.frontmatter.github.lastIndexOf('/') + 1)
 

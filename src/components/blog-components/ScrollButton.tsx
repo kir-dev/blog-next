@@ -1,5 +1,5 @@
 import { Button } from '@chakra-ui/react'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaChevronUp } from 'react-icons/fa'
 
 const scrollToTop = (): void => {
@@ -9,7 +9,7 @@ const scrollToTop = (): void => {
   })
 }
 
-export const ScrollButton = () => {
+export const ScrollButton: React.FC = () => {
   const [visible, setVisible] = useState(false)
   const [fromTop, setFromTop] = useState(0)
   const [fromBottom, setFromBottom] = useState(0)

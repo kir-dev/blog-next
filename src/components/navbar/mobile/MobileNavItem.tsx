@@ -1,14 +1,15 @@
 import { Collapse, Flex, Icon, Stack, Text, useDisclosure } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
 import { Link } from 'gatsby'
+import React from 'react'
 import { FaChevronDown } from 'react-icons/fa'
-import { NavItem } from '~types/navItem'
+import { NavItem } from 'types/navItem'
 
 type Props = {
   navItem: NavItem
 }
 
-export const MobileNavItem = ({ navItem: { label, children, href } }: Props) => {
+export const MobileNavItem: React.FC<Props> = ({ navItem: { label, children, href } }) => {
   const { isOpen, onToggle } = useDisclosure()
 
   return (

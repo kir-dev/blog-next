@@ -1,10 +1,11 @@
 import { Box, Popover, PopoverContent, PopoverTrigger, Stack, Text } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
 import { Link } from 'gatsby'
+import React from 'react'
 import { NAV_ITEMS } from '../NAV_ITEMS'
 import { DesktopSubNav } from './DesktopSubNav'
 
-export const DesktopNav = () => {
+export const DesktopNav: React.FC = () => {
   return (
     <Stack direction="row" spacing={4}>
       {NAV_ITEMS.map((navItem) => (

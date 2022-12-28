@@ -1,14 +1,13 @@
-import { Box, Grid, Heading, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Container, Grid, Heading, Text, useBreakpointValue } from '@chakra-ui/react'
+import { BlogPreviewCard } from 'components/blog-components/BlogPreviewCard'
+import { Header } from 'components/Header'
+import { SEO } from 'components/SEO'
 import { graphql, Link } from 'gatsby'
+import { IndexLayout } from 'layouts'
+import React from 'react'
+import { BlogPostsProps } from 'types/page-props/blogPosts.props'
 
-import { BlogPreviewCard } from '~components/blog-components/BlogPreviewCard'
-import { Container } from '~components/Container'
-import { Header } from '~components/Header'
-import { SEO } from '~components/SEO'
-import { BlogPostsProps } from '~types/page-props/blogPosts.props'
-import { IndexLayout } from '../layouts'
-
-const Blog = ({ data }: BlogPostsProps) => (
+const Blog: React.FC<BlogPostsProps> = ({ data }) => (
   <SEO title="Blog">
     <IndexLayout
       background={`${useBreakpointValue({

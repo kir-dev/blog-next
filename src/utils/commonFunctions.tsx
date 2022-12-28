@@ -1,5 +1,6 @@
 import { Flex, Icon, useBreakpointValue } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
+import { MemberAvatarCard } from 'components/members-components/MemberAvatarCard'
 import {
   FaCheckCircle,
   FaCircle,
@@ -12,8 +13,7 @@ import {
   FaYoutube
 } from 'react-icons/fa'
 import { IconType } from 'react-icons/lib'
-import { MemberAvatarCard } from '~components/members-components/MemberAvatarCard'
-import { MemberProps } from '~types/member.props'
+import { MemberProps } from 'types/member.props'
 import { environment } from './configurations'
 
 export const readTimeInMinutes = (wordCount: number) => {

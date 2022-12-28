@@ -1,6 +1,6 @@
-import { NavItem } from '~types/navItem'
+import { NavItem } from 'types/navItem'
 
-export const NAV_ITEMS: Array<NavItem> = [
+export const NAV_ITEMS: NavItem[] = [
   {
     label: 'Blog',
     href: '/blog',

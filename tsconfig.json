@@ -13,13 +13,7 @@
     "noUnusedParameters": true,
     "removeComments": false,
     "preserveConstEnums": true,
-    "baseUrl": "src",
-    "paths": {
-      "~assets/*": ["assets/*"],
-      "~types/*": ["types/*"],
-      "~components/*": ["components/*"],
-      "~utils/*": ["utils/*"]
-    }
+    "baseUrl": "src"
   },
   "include": ["./src/**/*", "./gatsby-node.ts", "./gatsby-config.ts", "./plugins/**/*"]
 }

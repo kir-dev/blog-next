@@ -34,7 +34,6 @@ Az est középpontjában természetesen a felvételizők álltak. Idén 3 felvé
 
 A mostani F&F kifejezetten izgalmas volt a körünk számára, hiszen mi kaptuk a lehetőséget, hogy főzzünk a résztvevők számára. Az egyik specialitásunkat készítettük el, lecsót virslipolippal. Az étel áttörő sikert aratott.
 
-
 ![f&f-2021-table](https://warp.sch.bme.hu/images/c77f0dac-e028-48d9-803c-209634d5205e_1_105_c)
 
 ## Együtt a csapat!

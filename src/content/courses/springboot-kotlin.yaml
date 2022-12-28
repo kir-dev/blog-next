@@ -1,13 +1,14 @@
 title: Spring Boot + Kotlin 🍃
 order: 500
 sessions:
-  - startDate: 2022-03-31
-    startTime: '18:00'
-    endTime: '20:00'
-    place: TBD
-lecturer: Kovács Bertalan
+  # - startDate: 2022-03-31
+  #   startTime: '18:00'
+  #   endTime: '20:00'
+  #   place: TBD
+lecturer: Szabó Gergely (Schámi)
 active: true
 description: >
-  Spring Boot és Kotlin workshop, amelyen betekintést nyerhettek egy izgalmas nyelv, illetve egy elterjedt és modern
+  Spring Boot és Kotlin előadások, amelyen betekintést nyerhettek egy izgalmas nyelv, illetve egy elterjedt és modern
   keretrendszer alapjaiba, amellyel akár enterprise minőségű appokat is képes leszel fejleszteni. A tanfolyam után adott
-  a lehetőség az SCH-Pincér és CMSch projektekbe való becsatlakozásra.
+  a lehetőség az SCH-Pincérbe és a CMSch franchise projektekbe való becsatlakozásra. CMSch rendszerünket a közélet rengeteg
+  eseményén megfuttatuk már: Gólyatábor, Gólyahét, Qpa, GólyaKörTe, Gólyabál, Simonyi Hackathon.

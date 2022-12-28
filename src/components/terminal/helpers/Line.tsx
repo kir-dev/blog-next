@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
+import React from 'react'
 
 type Props = {
   text?: string
@@ -8,7 +9,7 @@ type Props = {
   noCaret?: boolean
 }
 
-export const Line = ({ text, name, noPrompt = false, noCaret = false }: Props) => {
+export const Line: React.FC<Props> = ({ text, name, noPrompt = false, noCaret = false }) => {
   const usernameColor = useColorModeValue('cyan.900', 'cyan.300')
 
   return (

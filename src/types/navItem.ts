@@ -1,5 +1,5 @@
 export interface NavItem {
   label: string
-  children?: Array<NavItem>
+  children?: NavItem[]
   href: string
 }

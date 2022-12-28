@@ -1,14 +1,13 @@
-import { Box, Grid, Heading, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Container, Grid, Heading, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Header } from 'components/Header'
+import { ProjectPreview } from 'components/project-components/ProjectPreview'
+import { SEO } from 'components/SEO'
 import { graphql } from 'gatsby'
-
-import { Container } from '~components/Container'
-import { Header } from '~components/Header'
-import { ProjectPreview } from '~components/project-components/ProjectPreview'
-import { SEO } from '~components/SEO'
-import { ProjectsProps } from '~types/page-props/projects.props'
+import React from 'react'
+import { ProjectsProps } from 'types/page-props/projects.props'
 import { IndexLayout } from '../layouts'
 
-const Projects = ({ data }: ProjectsProps) => (
+const Projects: React.FC<ProjectsProps> = ({ data }) => (
   <SEO title="Projektjeink">
     <IndexLayout
       background={`${useBreakpointValue({

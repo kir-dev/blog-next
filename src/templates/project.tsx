@@ -1,14 +1,14 @@
-import { Box, Button, Flex, Heading, HStack, Image, Link, Tag, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Button, Container, Flex, Heading, HStack, Image, Link, Tag, Text, useBreakpointValue } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
+import { ScrollButton } from 'components/blog-components/ScrollButton'
+import { SEO } from 'components/SEO'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
+import React from 'react'
 
 import { FaGithub, FaHome } from 'react-icons/fa'
-import { ScrollButton } from '~components/blog-components/ScrollButton'
-import { Container } from '~components/Container'
-import { SEO } from '~components/SEO'
-import { ProjectProps } from '~types/project.props'
-import { getIcon } from '~utils/commonFunctions'
+import { ProjectProps } from 'types/project.props'
+import { getIcon } from 'utils/commonFunctions'
 import { IndexLayout } from '../layouts'
 
 type Props = {
@@ -21,7 +21,7 @@ type Props = {
   }
 }
 
-const ProjectTemplate = ({ data }: Props) => {
+const ProjectTemplate: React.FC<Props> = ({ data }) => {
   const project = data.markdownRemark.frontmatter
   const featuredImage = getImage(project.featuredImage || null)
   const featuredImageSrc = project.featuredImage ? getSrc(project.featuredImage) : undefined

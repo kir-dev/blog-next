@@ -1,12 +1,13 @@
 import { Box, Collapse, Flex, Icon, IconButton, useColorMode, useColorModeValue, useDisclosure } from '@chakra-ui/react'
+import { KirdevNamed } from 'components/themed-svgs/KirdevNamed'
 import { Link } from 'gatsby'
+import React from 'react'
 import { FaBars, FaMoon, FaTimes } from 'react-icons/fa'
 import { HiOutlineSun } from 'react-icons/hi'
-import { KirdevNamed } from '~components/themed-svgs/KirdevNamed'
 import { DesktopNav } from './desktop/DesktopNav'
 import { MobileNav } from './mobile/MobileNav'
 
-export const Navbar = () => {
+export const Navbar: React.FC = () => {
   const { isOpen, onToggle } = useDisclosure()
   const { colorMode, toggleColorMode } = useColorMode()
 

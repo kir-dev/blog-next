@@ -1,4 +1,4 @@
-import { MemberProps } from '~types/member.props'
+import { MemberProps } from 'types/member.props'
 
 export interface MembersProps {
   data: {

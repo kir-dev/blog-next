@@ -1,15 +1,14 @@
-import { Box, Flex, Grid, Heading, HStack, Image, Link, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Container, Flex, Grid, Heading, HStack, Image, Link, Text, useBreakpointValue } from '@chakra-ui/react'
 import { chakra } from '@chakra-ui/system'
+import { AboutParagraph } from 'components/about-components/AboutParagraph'
+import { StickyNote } from 'components/about-components/StickyNote'
+import { InfoBox } from 'components/indexpage-components/InfoBox'
+import { SEO } from 'components/SEO'
 import { Link as GatsbyLink } from 'gatsby'
-
-import { AboutParagraph } from '~components/about-components/AboutParagraph'
-import { StickyNote } from '~components/about-components/StickyNote'
-import { Container } from '~components/Container'
-import { InfoBox } from '~components/indexpage-components/InfoBox'
-import { SEO } from '~components/SEO'
-import { getSocials } from '~utils/commonFunctions'
-import { environment } from '~utils/configurations'
-import { IndexLayout } from '../layouts'
+import { IndexLayout } from 'layouts'
+import React from 'react'
+import { getSocials } from 'utils/commonFunctions'
+import { environment } from 'utils/configurations'
 
 const ABOUT_MAP: Map<string, string> = new Map([
   ['inception', 'Körünk alakulása'],
@@ -51,7 +50,7 @@ const TECH_STACK: Array<{ svg: string; alt: string; title: string; text: string 
   }
 ]
 
-const AboutPage = () => {
+const AboutPage: React.FC = () => {
   const stickyBoxWidth = { base: '75%', sm: '10rem', lg: '14rem' }
   const firstHeadingSize = useBreakpointValue({ base: '4xl', sm: '5xl' })
   const secondHeadingSize = useBreakpointValue({ base: '2xl', sm: '3xl' })

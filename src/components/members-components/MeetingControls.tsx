@@ -1,6 +1,6 @@
 import { Badge, Box, Grid, HStack, Icon, IconButton, Text, useBreakpointValue } from '@chakra-ui/react'
 import { navigate } from 'gatsby'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { IconType } from 'react-icons'
 import { BiCommentDetail, BiMicrophoneOff, BiVideoOff } from 'react-icons/bi'
 import { FaPhone } from 'react-icons/fa'
@@ -33,7 +33,7 @@ type Props = {
   numberOfActives: number
 }
 
-export const MeetingControls = ({ numberOfActives }: Props) => {
+export const MeetingControls: React.FC<Props> = ({ numberOfActives }) => {
   const [showControls, setShowControls] = useState(true)
   const showOnScreenSize = useBreakpointValue({ base: false, md: true })
 

@@ -1,14 +1,15 @@
 import { Box, Flex, Icon, Stack, Text } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
 import { Link } from 'gatsby'
+import React from 'react'
 import { FaChevronRight } from 'react-icons/fa'
-import { NavItem } from '~types/navItem'
+import { NavItem } from 'types/navItem'
 
 type Props = {
   navItem: NavItem
 }
 
-export const DesktopSubNav = ({ navItem: { label, href } }: Props) => {
+export const DesktopSubNav: React.FC<Props> = ({ navItem: { label, href } }) => {
   return (
     <Box as={Link} to={href} role="group" display="block" p={2} rounded="md" _hover={{ bg: useColorModeValue('orange.50', 'gray.900') }}>
       <Stack direction="row" align="center">
