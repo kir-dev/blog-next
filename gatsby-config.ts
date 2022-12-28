@@ -155,7 +155,12 @@ export default {
         ]
       }
     },
-    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/about`, `/post/*`, `/project/*`]
+      }
+    },
     `gatsby-plugin-root-import`
   ]
 }
