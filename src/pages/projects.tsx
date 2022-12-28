@@ -71,7 +71,7 @@ export const query = graphql`
     }
     oldProjects: allMarkdownRemark(
       filter: { fields: { layout: { eq: "project" } }, frontmatter: { status: { color: { nin: "green" } } } }
-      sort: { fields: frontmatter___title, order: ASC }
+      sort: { frontmatter: { title: ASC } }
     ) {
       nodes {
         fields {
