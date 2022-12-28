@@ -1,7 +1,8 @@
-import { Box, Button, Container, Flex, Heading, HStack, Tag, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Button, Flex, Heading, HStack, Tag, Text, useBreakpointValue } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
 import { BlogAuthor } from 'components/blog-components/BlogAuthor'
 import { ScrollButton } from 'components/blog-components/ScrollButton'
+import { BlogContainer } from 'components/BlogContainer'
 import { Header } from 'components/Header'
 import { SEO } from 'components/SEO'
 import { graphql } from 'gatsby'
@@ -45,7 +46,7 @@ const PostTemplate: React.FC<Props> = ({ data }) => {
       >
         <Box>
           <Header>
-            <Container>
+            <BlogContainer>
               <Flex mt={2} direction={{ base: 'column', sm: 'row' }} justifyContent="space-between">
                 <Flex flex={1} position="relative" mr={{ base: 0, sm: 2 }} pb={{ base: 2, sm: 0 }}>
                   <Box w="80%" zIndex={2}>
@@ -92,9 +93,9 @@ const PostTemplate: React.FC<Props> = ({ data }) => {
                   </HStack>
                 )}
               </Flex>
-            </Container>
+            </BlogContainer>
           </Header>
-          <Container>
+          <BlogContainer>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
             <Box
               textAlign="right"
@@ -124,7 +125,7 @@ const PostTemplate: React.FC<Props> = ({ data }) => {
                 </Box>
               </>
             )}
-          </Container>
+          </BlogContainer>
         </Box>
         <ScrollButton />
       </IndexLayout>

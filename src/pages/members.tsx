@@ -1,4 +1,5 @@
-import { Box, Container, Flex, Heading, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Flex, Heading, useBreakpointValue } from '@chakra-ui/react'
+import { BlogContainer } from 'components/BlogContainer'
 import { MeetingControls } from 'components/members-components/MeetingControls'
 import { YouAvatarCard } from 'components/members-components/YouAvatarCard'
 import { SEO } from 'components/SEO'
@@ -31,7 +32,7 @@ const MembersPage: React.FC<MembersProps> = ({ data }) => (
           <MeetingControls numberOfActives={data.actives.nodes.length} />
         </Flex>
         {data.inactives.nodes.length > 0 && (
-          <Container>
+          <BlogContainer>
             <Heading as="h2" size="lg" mt={32} mb={8}>
               Korábbi tagjaink
             </Heading>
@@ -43,7 +44,7 @@ const MembersPage: React.FC<MembersProps> = ({ data }) => (
                 { base: '100%', sm: '50%', md: '33%' }
               )}
             </Flex>
-          </Container>
+          </BlogContainer>
         )}
       </Box>
     </IndexLayout>

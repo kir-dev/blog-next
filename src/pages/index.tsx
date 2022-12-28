@@ -6,7 +6,6 @@ import {
   Box,
   Button,
   CloseButton,
-  Container,
   Flex,
   Grid,
   Heading,
@@ -19,6 +18,7 @@ import {
 } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
 import { BlogFullCard } from 'components/blog-components/BlogFullCard'
+import { BlogContainer } from 'components/BlogContainer'
 import { InfoBox } from 'components/indexpage-components/InfoBox'
 import PekPreview from 'components/indexpage-components/PekPreview'
 import { SEO } from 'components/SEO'
@@ -85,7 +85,7 @@ const IndexPage: React.FC<Props> = ({ data }) => {
               opacity: useColorModeValue(0.4, 0.8)
             }}
           >
-            <Container>
+            <BlogContainer>
               {environment.frontAlert.desc && !alertClosed && (
                 <Alert status="info" variant="left-accent" borderRadius="md" my={3}>
                   <AlertIcon />
@@ -136,9 +136,9 @@ const IndexPage: React.FC<Props> = ({ data }) => {
                   }}
                 />
               </Box>
-            </Container>
+            </BlogContainer>
           </Box>
-          <Container>
+          <BlogContainer>
             <Box pt={16} zIndex={1}>
               <Heading pb={4}>Amivel foglalkozunk</Heading>
               <Grid templateColumns={`repeat(${useBreakpointValue({ base: 1, md: 3 })}, 1fr)`} gap={{ base: 4, md: 10 }}>
@@ -190,7 +190,7 @@ const IndexPage: React.FC<Props> = ({ data }) => {
                 </ChakraLink>
               </Box>
             </Box>
-          </Container>
+          </BlogContainer>
         </Box>
       </IndexLayout>
     </SEO>
@@ -201,7 +201,7 @@ export default IndexPage
 
 export const query = graphql`
   query IndexPageQueries {
-    post: allMarkdownRemark(filter: { fields: { layout: { eq: "post" } } }, sort: { fields: [frontmatter___date], order: DESC }, limit: 1) {
+    post: allMarkdownRemark(filter: { fields: { layout: { eq: "post" } } }, sort: { frontmatter: { date: DESC } }, limit: 1) {
       nodes {
         fields {
           slug

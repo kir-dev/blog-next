@@ -1,7 +1,8 @@
-import { Box, Container, Flex, Grid, Heading, HStack, Image, Link, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Flex, Grid, Heading, HStack, Image, Link, Text, useBreakpointValue } from '@chakra-ui/react'
 import { chakra } from '@chakra-ui/system'
 import { AboutParagraph } from 'components/about-components/AboutParagraph'
 import { StickyNote } from 'components/about-components/StickyNote'
+import { BlogContainer } from 'components/BlogContainer'
 import { InfoBox } from 'components/indexpage-components/InfoBox'
 import { SEO } from 'components/SEO'
 import { Link as GatsbyLink } from 'gatsby'
@@ -66,7 +67,7 @@ const AboutPage: React.FC = () => {
         })}`}
       >
         <Box>
-          <Container>
+          <BlogContainer>
             <Box textAlign="center" my={6}>
               <Heading mb={6} fontSize={{ base: '4xl', sm: '5xl', md: '6xl' }} fontWeight="bold" lineHeight="none" letterSpacing="tight">
                 A kollégium{' '}
@@ -377,7 +378,7 @@ const AboutPage: React.FC = () => {
               </chakra.span>{' '}
               csapata
             </Box>
-          </Container>
+          </BlogContainer>
         </Box>
       </IndexLayout>
     </SEO>

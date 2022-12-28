@@ -1,15 +1,10 @@
 title: React ⚛️
 order: 400
 sessions:
-  []
-  # - startDate: 2022-03-30
-  #   startTime: '18:00'
-  #   endTime: '20:00'
-  #   place: TBD
-  # - startDate: 2022-04-06
-  #   startTime: '18:00'
-  #   endTime: '20:00'
-  #   place: TBD
+  - startDate: 2023 márciusa
+    startTime: TBD
+    endTime: TBD
+    place: TBD
 lecturer: Berente Bálint
 active: true
 description: >

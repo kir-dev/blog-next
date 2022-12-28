@@ -1,5 +1,6 @@
-import { Alert, AlertIcon, Box, Button, Container, Flex, Heading, Image, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Alert, AlertIcon, Box, Button, Flex, Heading, Image, Text, useBreakpointValue } from '@chakra-ui/react'
 import { chakra, useColorModeValue } from '@chakra-ui/system'
+import { BlogContainer } from 'components/BlogContainer'
 import CourseCard from 'components/course-components/CourseCard'
 import { Header } from 'components/Header'
 import { SEO } from 'components/SEO'
@@ -30,7 +31,7 @@ const CoursesPage: React.FC<Props> = ({ data }) => {
       >
         <Box>
           <Header>
-            <Container>
+            <BlogContainer>
               <Flex direction={{ base: 'column', md: 'row' }}>
                 <Box>
                   <Heading as="h1" size="2xl">
@@ -72,9 +73,9 @@ const CoursesPage: React.FC<Props> = ({ data }) => {
                   </Button>
                 </Box>
               )}
-            </Container>
+            </BlogContainer>
           </Header>
-          <Container>
+          <BlogContainer>
             <Box>
               <Heading as="h2">{environment.course.semester}</Heading>
               {environment.course.extraInfo && (
@@ -193,7 +194,7 @@ const CoursesPage: React.FC<Props> = ({ data }) => {
                 többet.
               </Text>
             </Box>
-          </Container>
+          </BlogContainer>
         </Box>
       </IndexLayout>
     </SEO>

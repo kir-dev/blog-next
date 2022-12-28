@@ -1,4 +1,5 @@
-import { Box, Button, Container, Flex, Heading } from '@chakra-ui/react'
+import { Box, Button, Flex, Heading } from '@chakra-ui/react'
+import { BlogContainer } from 'components/BlogContainer'
 import { Header } from 'components/Header'
 import { SEO } from 'components/SEO'
 import { Link } from 'gatsby'
@@ -10,18 +11,18 @@ const NotFoundPage: React.FC = () => (
     <IndexLayout background="url(/background/top-right.svg) right top no-repeat, url(/background/bottom-left.svg) left top no-repeat">
       <Box>
         <Header>
-          <Container>
+          <BlogContainer>
             <Heading as="h1">Page not found (404)</Heading>
-          </Container>
+          </BlogContainer>
         </Header>
-        <Container>
+        <BlogContainer>
           <Flex justifyContent="space-between">
             You've hit the void.{' '}
             <Button as={Link} colorScheme="orange" to="/">
               Go back
             </Button>
           </Flex>
-        </Container>
+        </BlogContainer>
       </Box>
     </IndexLayout>
   </SEO>

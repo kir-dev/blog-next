@@ -1,6 +1,7 @@
-import { Box, Button, Container, Flex, Heading, HStack, Image, Link, Tag, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Button, Flex, Heading, HStack, Image, Link, Tag, Text, useBreakpointValue } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
 import { ScrollButton } from 'components/blog-components/ScrollButton'
+import { BlogContainer } from 'components/BlogContainer'
 import { SEO } from 'components/SEO'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
@@ -37,7 +38,7 @@ const ProjectTemplate: React.FC<Props> = ({ data }) => {
       >
         <Box>
           <Box pt={featuredImage ? 2 : 16}>
-            <Container>
+            <BlogContainer>
               {featuredImage ? (
                 <GatsbyImage image={featuredImage} alt="Project" />
               ) : (
@@ -94,9 +95,9 @@ const ProjectTemplate: React.FC<Props> = ({ data }) => {
                   </Box>
                 </Flex>
               </Box>
-            </Container>
+            </BlogContainer>
           </Box>
-          <Container>
+          <BlogContainer>
             <Box py={8}>
               <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
             </Box>
@@ -112,7 +113,7 @@ const ProjectTemplate: React.FC<Props> = ({ data }) => {
             >
               <Button colorScheme="orange">Vissza a tetejére</Button>
             </Box>
-          </Container>
+          </BlogContainer>
         </Box>
         <ScrollButton />
       </IndexLayout>

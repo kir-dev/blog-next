@@ -1,5 +1,6 @@
-import { Box, Container, Grid, Heading, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Grid, Heading, Text, useBreakpointValue } from '@chakra-ui/react'
 import { BlogPreviewCard } from 'components/blog-components/BlogPreviewCard'
+import { BlogContainer } from 'components/BlogContainer'
 import { Header } from 'components/Header'
 import { SEO } from 'components/SEO'
 import { graphql, Link } from 'gatsby'
@@ -17,11 +18,11 @@ const Blog: React.FC<BlogPostsProps> = ({ data }) => (
     >
       <Box>
         <Header>
-          <Container>
+          <BlogContainer>
             <Heading as="h1">Legújabb posztjaink</Heading>
-          </Container>
+          </BlogContainer>
         </Header>
-        <Container>
+        <BlogContainer>
           <Grid templateColumns={`repeat(${useBreakpointValue({ base: 1, md: 2 })}, 1fr)`} gap={{ base: 24, sm: 10 }}>
             {data.allMarkdownRemark.nodes.map((post) => (
               <BlogPreviewCard key={post.fields.slug} post={post} />
@@ -32,7 +33,7 @@ const Blog: React.FC<BlogPostsProps> = ({ data }) => (
               Még több...
             </Text>
           </Box>
-        </Container>
+        </BlogContainer>
       </Box>
     </IndexLayout>
   </SEO>
@@ -42,7 +43,7 @@ export default Blog
 
 export const query = graphql`
   query BlogPosts {
-    allMarkdownRemark(filter: { fields: { layout: { eq: "post" } } }, sort: { fields: [frontmatter___date], order: DESC }, limit: 6) {
+    allMarkdownRemark(filter: { fields: { layout: { eq: "post" } } }, sort: { frontmatter: { date: DESC } }, limit: 6) {
       nodes {
         fields {
           slug

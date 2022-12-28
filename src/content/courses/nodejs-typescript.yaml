@@ -1,19 +1,10 @@
 title: Node.js + TypeScript 🤖
 order: 300
 sessions:
-  []
-  # - startDate: 2022-03-09
-  #   startTime: '18:00'
-  #   endTime: '20:00'
-  #   place: TBD
-  # - startDate: 2022-03-16
-  #   startTime: '18:00'
-  #   endTime: '20:00'
-  #   place: TBD
-  # - startDate: 2022-03-23
-  #   startTime: '18:00'
-  #   endTime: '20:00'
-  #   place: TBD
+  - startDate: 2023 márciusa
+    startTime: TBD
+    endTime: TBD
+    place: TBD
 lecturer: Fekete Sámuel
 active: true
 description: >

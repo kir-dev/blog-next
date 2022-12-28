@@ -1,15 +1,10 @@
 title: Webes alapozó 🚀
 order: 100
 sessions:
-  []
-  # - startDate: 2022-02-24
-  #   startTime: '18:00'
-  #   endTime: '20:00'
-  #   place: TBD
-  # - startDate: 2022-03-03
-  #   startTime: '18:00'
-  #   endTime: '20:00'
-  #   place: TBD
+  - startDate: 2023 márciusa
+    startTime: TBD
+    endTime: TBD
+    place: TBD
 lecturer: Sepsi László
 active: true
 description: >

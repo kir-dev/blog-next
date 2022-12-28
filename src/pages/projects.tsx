@@ -1,4 +1,5 @@
-import { Box, Container, Grid, Heading, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Grid, Heading, Text, useBreakpointValue } from '@chakra-ui/react'
+import { BlogContainer } from 'components/BlogContainer'
 import { Header } from 'components/Header'
 import { ProjectPreview } from 'components/project-components/ProjectPreview'
 import { SEO } from 'components/SEO'
@@ -17,14 +18,14 @@ const Projects: React.FC<ProjectsProps> = ({ data }) => (
     >
       <Box>
         <Header>
-          <Container>
+          <BlogContainer>
             <Heading as="h1">Projektjeink</Heading>
             <Text fontFamily="mono" pt={4} fontSize="xl">
               A kör által készített minden alkalmazás nyílt forráskódú, ez a fejlesztőeszközeink kiválasztásánál is fő szempont.
             </Text>
-          </Container>
+          </BlogContainer>
         </Header>
-        <Container>
+        <BlogContainer>
           <Grid templateColumns={`repeat(${useBreakpointValue({ base: 1, sm: 2 })}, 1fr)`} gap={8}>
             {data.activeProjects.nodes.map((project) => (
               <ProjectPreview key={project.fields.slug} project={project} />
@@ -33,7 +34,7 @@ const Projects: React.FC<ProjectsProps> = ({ data }) => (
               <ProjectPreview key={project.fields.slug} project={project} />
             ))}
           </Grid>
-        </Container>
+        </BlogContainer>
       </Box>
     </IndexLayout>
   </SEO>
@@ -45,7 +46,7 @@ export const query = graphql`
   query Projects {
     activeProjects: allMarkdownRemark(
       filter: { fields: { layout: { eq: "project" } }, frontmatter: { status: { color: { in: "green" } } } }
-      sort: { fields: frontmatter___title, order: ASC }
+      sort: { frontmatter: { title: ASC } }
     ) {
       nodes {
         fields {
