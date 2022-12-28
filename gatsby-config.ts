@@ -1,7 +1,6 @@
-import dotenv from 'dotenv'
 import path from 'path'
 
-dotenv.config({
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`
 })
 
@@ -156,6 +155,7 @@ export default {
         ]
       }
     },
-    `gatsby-plugin-offline`
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-root-import`
   ]
 }

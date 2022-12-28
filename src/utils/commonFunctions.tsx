@@ -1,6 +1,7 @@
 import { Flex, Icon, useBreakpointValue } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
 import { MemberAvatarCard } from 'components/members-components/MemberAvatarCard'
+import React from 'react'
 import {
   FaCheckCircle,
   FaCircle,

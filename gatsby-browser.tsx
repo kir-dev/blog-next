@@ -1,5 +1,5 @@
 import '@fontsource/poppins/300.css'
 import '@fontsource/poppins/400.css'
 import '@fontsource/poppins/600.css'
-import '~assets/stylesheets/global.css'
-import '~assets/stylesheets/markdown.css'
+import 'assets/stylesheets/global.css'
+import 'assets/stylesheets/markdown.css'
