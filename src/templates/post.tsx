@@ -29,12 +29,15 @@ type Props = {
 
 const PostTemplate = ({ data }: Props) => {
   const post = data.markdownRemark
-  const featuredImage = getImage(post.frontmatter.featuredImage)
-  const ogImageSrc = post.frontmatter.ogImage ? getSrc(post.frontmatter.ogImage) : getSrc(post.frontmatter.featuredImage)
+  const featuredImage = getImage(post.frontmatter.featuredImage || null)
+  const ogImageSrc = post.frontmatter.ogImage
+    ? getSrc(post.frontmatter.ogImage)
+    : post.frontmatter.featuredImage
+    ? getSrc(post.frontmatter.featuredImage)
+    : undefined
 
   return (
-    <>
-      <SEO title={post.frontmatter.title} description={post.frontmatter.lead} type="article" image={ogImageSrc} />
+    <SEO title={post.frontmatter.title} description={post.frontmatter.lead} type="article" image={ogImageSrc}>
       <IndexLayout
         background={useBreakpointValue({
           xl: 'url(/background/pattern-right.svg) right top repeat-y,url(/background/pattern-left.svg) left top repeat-y'
@@ -125,7 +128,7 @@ const PostTemplate = ({ data }: Props) => {
         </Box>
         <ScrollButton />
       </IndexLayout>
-    </>
+    </SEO>
   )
 }
 

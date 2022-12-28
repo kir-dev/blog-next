@@ -22,8 +22,7 @@ const CoursesPage = ({ data }: Props) => {
   const widthsPerBreakpoint = { base: '100%', md: '49%' }
 
   return (
-    <>
-      <SEO title="Tanfolyamaink" />
+    <SEO title="Tanfolyamaink">
       <IndexLayout
         background={`${useBreakpointValue({
           base: '',
@@ -198,7 +197,7 @@ const CoursesPage = ({ data }: Props) => {
           </Container>
         </Box>
       </IndexLayout>
-    </>
+    </SEO>
   )
 }
 

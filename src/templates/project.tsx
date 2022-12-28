@@ -23,14 +23,13 @@ type Props = {
 
 const ProjectTemplate = ({ data }: Props) => {
   const project = data.markdownRemark.frontmatter
-  const featuredImage = getImage(project.featuredImage)
-  const featuredImageSrc = getSrc(project.featuredImage)
+  const featuredImage = getImage(project.featuredImage || null)
+  const featuredImageSrc = project.featuredImage ? getSrc(project.featuredImage) : undefined
   const statusIcon = getIcon(project.status)
   const hostname = project.website ? new URL(project.website).hostname : null
 
   return (
-    <>
-      <SEO title={project.title} description={project.lead} image={featuredImageSrc} />
+    <SEO title={project.title} description={project.lead} image={featuredImageSrc}>
       <IndexLayout
         background={useBreakpointValue({
           xl: 'url(/background/pattern-right.svg) right top repeat-y,url(/background/pattern-left.svg) left top repeat-y'
@@ -117,7 +116,7 @@ const ProjectTemplate = ({ data }: Props) => {
         </Box>
         <ScrollButton />
       </IndexLayout>
-    </>
+    </SEO>
   )
 }
 

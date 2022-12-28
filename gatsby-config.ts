@@ -56,35 +56,35 @@ export default {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: 'images',
-        path: `${path.join(__dirname, '../src/content/images')}`
+        path: `${path.join(__dirname, 'src/content/images')}`
       }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: 'post',
-        path: `${path.join(__dirname, '../src/content/posts')}`
+        path: `${path.join(__dirname, 'src/content/posts')}`
       }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: 'project',
-        path: `${path.join(__dirname, '../src/content/projects')}`
+        path: `${path.join(__dirname, 'src/content/projects')}`
       }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: 'member',
-        path: `${path.join(__dirname, '../src/content/members')}`
+        path: `${path.join(__dirname, 'src/content/members')}`
       }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: 'course',
-        path: `${path.join(__dirname, '../src/content/courses')}`
+        path: `${path.join(__dirname, 'src/content/courses')}`
       }
     },
     {
@@ -156,22 +156,6 @@ export default {
         ]
       }
     },
-    {
-      resolve: `gatsby-plugin-canonical-urls`,
-      options: {
-        siteUrl: 'https://kir-dev.sch.bme.hu'
-      }
-    },
-    {
-      resolve: `gatsby-plugin-typescript`,
-      options: {
-        isTSX: true,
-        jsxPragma: `React`,
-        allExtensions: true
-      }
-    },
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-tsconfig-paths`,
     `gatsby-plugin-offline`
   ]
 }

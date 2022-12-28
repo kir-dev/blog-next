@@ -9,8 +9,7 @@ import { ProjectsProps } from '~types/page-props/projects.props'
 import { IndexLayout } from '../layouts'
 
 const Projects = ({ data }: ProjectsProps) => (
-  <>
-    <SEO title="Projektjeink" />
+  <SEO title="Projektjeink">
     <IndexLayout
       background={`${useBreakpointValue({
         base: '',
@@ -38,7 +37,7 @@ const Projects = ({ data }: ProjectsProps) => (
         </Container>
       </Box>
     </IndexLayout>
-  </>
+  </SEO>
 )
 
 export default Projects

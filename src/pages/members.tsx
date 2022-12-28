@@ -10,8 +10,7 @@ import { getMemberCollage } from '~utils/commonFunctions'
 import { IndexLayout } from '../layouts'
 
 const MembersPage = ({ data }: MembersProps) => (
-  <>
-    <SEO title="Csapatunk" />
+  <SEO title="Csapatunk">
     <IndexLayout
       background={`${useBreakpointValue({
         base: '',
@@ -49,7 +48,7 @@ const MembersPage = ({ data }: MembersProps) => (
         )}
       </Box>
     </IndexLayout>
-  </>
+  </SEO>
 )
 
 export default MembersPage

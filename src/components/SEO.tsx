@@ -1,210 +1,67 @@
-import { graphql, useStaticQuery } from 'gatsby'
-import { useEffect } from 'react'
-import { Helmet, HelmetProps } from 'react-helmet'
+import React from 'react'
+import { format } from 'util'
+import { environment } from '~utils/configurations'
+import { useSiteMetadata } from '~utils/useSiteMetadata'
 
-type SEOProps = {
-  lang?: string
+type Props = {
   title?: string
   description?: string
-  author?: string
-  image?: string
-  type?: string
+  pathname?: string
   robots?: string
-  keywords?: string[]
-  meta?: { name: string; content: string }[]
-  links?: { rel: string; href: string }[]
-} & HelmetProps
-
-type SiteMetadataProps = {
-  site: {
-    siteMetadata: {
-      siteUrl: string
-      translations?: string[]
-      lang?: string
-      title: string
-      titleTemplate: string
-      description: string
-      author: string
-      image: string
-      keywords?: string[]
-      robots?: string
-      social?: {
-        twitter?: string
-        twitterUsername?: string
-        github?: string
-        facebook?: string
-        instagram?: string
-      }
-    }
-  }
+  lang?: string
+  type?: string
+  image?: string
 }
 
-export const SEO = ({
-  title,
-  description,
-  image,
-  author,
-  lang,
-  type = 'website',
-  robots,
-  keywords = [],
-  meta = [],
-  links = []
-}: SEOProps) => {
-  const data: SiteMetadataProps = useStaticQuery(graphql`
-    query SiteMetadata {
-      site {
-        siteMetadata {
-          siteUrl
-          translations
-          lang
-          title
-          titleTemplate
-          description
-          author
-          image
-          keywords
-          robots
-          social {
-            twitter
-            twitterUsername
-            github
-            facebook
-            instagram
-          }
-        }
-      }
-    }
-  `)
-
+export const SEO: React.FC<React.PropsWithChildren<Props>> = ({ title, description, pathname, robots, lang, type, image, children }) => {
   const {
-    siteUrl,
-    lang: defaultLang,
     title: defaultTitle,
     titleTemplate,
-    author: defaultAuthor,
     description: defaultDescription,
     image: defaultImage,
+    siteUrl,
     robots: defaultRobots,
-    keywords: defaultKeywords,
-    social
-  } = data.site.siteMetadata
-
-  const imageUrl = (() => {
-    const url = (image || defaultImage).replace(/^\/+/, '')
-    return url.includes('://') ? url : `${siteUrl}/${url}`
-  })()
+    keywords,
+    author,
+    lang: defaultLang
+  } = useSiteMetadata()
 
   const seo = {
-    lang: lang || defaultLang,
-    title: title || defaultTitle,
+    title: title ? format(titleTemplate, title) : defaultTitle,
     description: description || defaultDescription,
-    author: author || defaultAuthor,
-    image: imageUrl,
-    url: siteUrl,
-    keywords: keywords.length ? keywords : defaultKeywords,
+    image: image ? `${siteUrl}${image}` : `${siteUrl}${defaultImage}`,
+    url: `${siteUrl}${pathname || ''}`,
     robots: robots || defaultRobots,
-    social,
-    type
+    keywords: keywords.join(',') || 'gatsby,theme,react',
+    author: author || 'kir-dev',
+    lang: lang || defaultLang,
+    type: type || 'website'
   }
 
-  useEffect(() => {
-    seo.url = window.location.pathname === '/' ? siteUrl : `${siteUrl}${window.location.pathname}`
-  })
-
   return (
-    <Helmet
-      htmlAttributes={{
-        lang: seo.lang
-      }}
-      title={seo.title}
-      titleTemplate={seo.title === defaultTitle ? seo.title : titleTemplate}
-      link={[
-        {
-          rel: 'canonical',
-          href: seo.url
-        },
-        {
-          rel: 'icon',
-          type: 'image/png',
-          href: '/favicon.png'
-        }
-      ].concat(links)}
-      meta={[
-        {
-          name: 'description',
-          content: seo.description
-        },
-        {
-          name: 'author',
-          content: seo.author
-        },
-        {
-          property: 'og:locale',
-          content: seo.lang
-        },
-        {
-          property: 'og:site_name',
-          content: seo.title
-        },
-        {
-          property: 'og:url',
-          content: seo.url
-        },
-        {
-          property: 'og:title',
-          content: seo.title
-        },
-        {
-          property: 'og:description',
-          content: seo.description
-        },
-        {
-          property: 'og:image',
-          content: seo.image
-        },
-        {
-          property: 'og:type',
-          content: seo.type
-        },
-        {
-          name: 'twitter:card',
-          content: 'summary_large_image'
-        },
-        {
-          name: 'twitter:site',
-          content: seo.social?.twitter
-        },
-        {
-          name: 'twitter:creator',
-          content: seo.social?.twitterUsername
-        },
-        {
-          name: 'twitter:title',
-          content: seo.title
-        },
-        {
-          name: 'twitter:description',
-          content: seo.description
-        },
-        {
-          name: 'twitter:image',
-          content: seo.image
-        },
-        {
-          name: 'robots',
-          content: seo.robots
-        }
-      ]
-        .concat(
-          seo.keywords?.length
-            ? {
-                name: 'keywords',
-                content: seo.keywords.join(', ')
-              }
-            : []
-        )
-        .concat(meta)}
-    />
+    <>
+      <title>{seo.title}</title>
+      <meta name="description" content={seo.description} />
+      <meta name="image" content={seo.image} />
+      <meta name="author" content={seo.author} />
+      <meta name="og:locale" content={seo.lang} />
+      <meta name="og:site_name" content={seo.title} />
+      <meta name="og:url" content={seo.url} />
+      <meta name="og:title" content={seo.title} />
+      <meta name="og:image" content={seo.image} />
+      <meta name="og:type" content={seo.type} />
+      <meta name="og:description" content={seo.description} />
+      <meta name="twitter:title" content={seo.title} />
+      <meta name="twitter:image" content={seo.image} />
+      <meta name="twitter:creator" content={environment.socials.twitterUsername} />
+      <meta name="twitter:site" content={`https://twitter.com/${environment.socials.twitterUsername}`} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="og:description" content={seo.description} />
+      <meta name="robots" content={seo.robots} />
+      <meta name="keywords" content={seo.keywords} />
+      <link rel="canonical" href={seo.url} />
+      <link rel="icon" type="image/png" href="/favicon.png" />
+      {children}
+    </>
   )
 }

@@ -59,8 +59,7 @@ const AboutPage = () => {
   const leftSideBgs = 'url(/background/bottom-left.svg) left top no-repeat,url(/background/top-left.svg) left bottom no-repeat'
 
   return (
-    <>
-      <SEO title="Rólunk" />
+    <SEO title="Rólunk">
       <IndexLayout
         background={`${useBreakpointValue({
           base: rightSideBgs,
@@ -382,7 +381,7 @@ const AboutPage = () => {
           </Container>
         </Box>
       </IndexLayout>
-    </>
+    </SEO>
   )
 }
 

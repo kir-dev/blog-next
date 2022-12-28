@@ -9,8 +9,7 @@ import { BlogPostsProps } from '~types/page-props/blogPosts.props'
 import { IndexLayout } from '../layouts'
 
 const Blog = ({ data }: BlogPostsProps) => (
-  <>
-    <SEO title="Blog" />
+  <SEO title="Blog">
     <IndexLayout
       background={`${useBreakpointValue({
         base: '',
@@ -37,7 +36,7 @@ const Blog = ({ data }: BlogPostsProps) => (
         </Container>
       </Box>
     </IndexLayout>
-  </>
+  </SEO>
 )
 
 export default Blog

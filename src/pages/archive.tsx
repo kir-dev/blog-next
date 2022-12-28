@@ -25,8 +25,7 @@ export const query = graphql`
 `
 
 const Archive = ({ data }: BlogPostsProps) => (
-  <>
-    <SEO title="Archívum" />
+  <SEO title="Archívum">
     <IndexLayout
       background={`${useBreakpointValue({
         base: '',
@@ -53,7 +52,7 @@ const Archive = ({ data }: BlogPostsProps) => (
         </Container>
       </Box>
     </IndexLayout>
-  </>
+  </SEO>
 )
 
 export default Archive

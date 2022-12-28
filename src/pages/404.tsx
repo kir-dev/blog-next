@@ -5,8 +5,7 @@ import { Header } from '~components/Header'
 import { SEO } from '~components/SEO'
 
 const NotFoundPage = () => (
-  <>
-    <SEO title="404" robots="nofollow, noindex" />
+  <SEO title="404" robots="nofollow, noindex">
     <IndexLayout background="url(/background/top-right.svg) right top no-repeat, url(/background/bottom-left.svg) left top no-repeat">
       <Box>
         <Header>
@@ -24,7 +23,7 @@ const NotFoundPage = () => (
         </Container>
       </Box>
     </IndexLayout>
-  </>
+  </SEO>
 )
 
 export default NotFoundPage

@@ -64,8 +64,7 @@ const IndexPage = ({ data }: Props) => {
   const [alertClosed, setAlertClosed] = useState(false)
 
   return (
-    <>
-      <SEO />
+    <SEO>
       <IndexLayout>
         <Box>
           <Box
@@ -195,7 +194,7 @@ const IndexPage = ({ data }: Props) => {
           </Container>
         </Box>
       </IndexLayout>
-    </>
+    </SEO>
   )
 }
 
