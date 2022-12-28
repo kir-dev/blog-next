@@ -1,10 +1,18 @@
 import dotenv from 'dotenv'
 import path from 'path'
-import { environment } from '../src/utils/configurations'
 
 dotenv.config({
   path: `.env.${process.env.NODE_ENV}`
 })
+
+const socials = {
+  githubOrgUrl: 'https://github.com/kir-dev',
+  twitterUsername: 'kirdev',
+  instagramUrl: 'https://instagram.com/kir.dev',
+  youtubeUrl: 'https://youtube.com/channel/UCkpMTj9qST_7RDt2YL4RUEw',
+  facebookUrl: 'https://facebook.com/kirdevteam',
+  publicEmail: 'kir-dev [kukac] sch.bme.hu'
+}
 
 export default {
   siteMetadata: {
@@ -22,11 +30,11 @@ export default {
     keywords: ['web-development', 'software', 'devops', 'rails', 'nodejs', 'spring-boot', 'community', 'simonyi', 'kir-dev'],
     robots: 'index, follow',
     social: {
-      twitter: `https://twitter.com/${environment.socials.twitterUsername}`,
-      twitterUsername: environment.socials.twitterUsername,
-      github: environment.socials.githubOrgUrl,
-      facebook: environment.socials.facebookUrl,
-      instagram: environment.socials.instagramUrl
+      twitter: `https://twitter.com/${socials.twitterUsername}`,
+      twitterUsername: socials.twitterUsername,
+      github: socials.githubOrgUrl,
+      facebook: socials.facebookUrl,
+      instagram: socials.instagramUrl
     }
   },
   plugins: [
