@@ -2,7 +2,7 @@
 layout: post
 author: sepsilaci
 date: 2022-12-30 12:34:34
-title: Félévzáró + B.U.É.K. - 2022
+title: Félévzáró + B.Ú.É.K. - 2022
 lead:
 tags:
   - hírek
@@ -18,7 +18,7 @@ ogImage: ../images/posts/felevzaro-2022.jpg
 
 ## Boldog Új Évet Kívánunk!
 
-Egy igazán eseményteli félévet és évet tudhatunk magunk mögött. Számos felejthetetlen élménnyel gazdagodtunk az év során valamint, rengeteg mérföldkövet is sikerült átlépnünk. Reméljük, hogy számodra is ilyen jól telt a 2022-es év és 2023 is legalább ennyire remek lesz!
+Egy igazán eseményteli félévet és évet tudhatunk magunk mögött. Számos felejthetetlen élménnyel gazdagodtunk az év során, valamint rengeteg mérföldkövet is sikerült átlépnünk. Reméljük, hogy számodra is ilyen jól telt a 2022-es év és 2023 is legalább ennyire remek lesz!
 
 Az év utolsó eseményének, a Simonyi Félévzáró, Ami Amúgy Szakestélynek az élménybeszámolójával zárjuk az évet és kívánunk **boldog új évet Mindenkinek!**
 
@@ -36,7 +36,7 @@ Emellett [Trisz (Piller Trisztán)](https://pek.sch.bme.hu/profiles/triszt4n) a 
 
 Ezután meghallgatásra kerültek az alkohol impotenciában szenvedők és a késők, akik kreatívabbnál kreatívabb indokokkal próbálták megmagyarázni a hiányosságaikat. Ezután a kontrák műsora következett, ami hatalmas sikert aratott.
 
-Az est teli volt meglepetésekkel. A műsor egy pontján a kontrák kihívták a Kir-Dev jelenlegi és összes jelenlévő ex körvezetőjét, hogy egy sörpárbajban bizonyítsák a rátermettségüket. A résztvevők időrendi sorrendben, legfiatalabbtól a legtapasztaltatbbig: [Berente Bálint](https://pek.sch.bme.hu/profiles/berenteb), [Bucsy Benjámin](https://pek.sch.bme.hu/profiles/beni99), [Sepsi László](https://pek.sch.bme.hu/profiles/sepsilaci), [Fehér János](https://pek.sch.bme.hu/profiles/yeti), [Király Bálint](https://pek.sch.bme.hu/profiles/kiraly96).   Kircsi rutinos győzelmet aratott.
+Az est teli volt meglepetésekkel. A műsor egy pontján a kontrák kihívták a Kir-Dev jelenlegi és összes jelenlévő ex-körvezetőjét, hogy egy sörpárbajban bizonyítsák a rátermettségüket. A résztvevők időrendi sorrendben, legfiatalabbtól a legtapasztaltabbig: [Berente Bálint](https://pek.sch.bme.hu/profiles/berenteb), [Bucsy Benjámin](https://pek.sch.bme.hu/profiles/beni99), [Sepsi László](https://pek.sch.bme.hu/profiles/sepsilaci), [Fehér János](https://pek.sch.bme.hu/profiles/yeti), [Király Bálint](https://pek.sch.bme.hu/profiles/kiraly96).   Kircsi rutinos győzelmet aratott.
 
 ![parbaj](https://warp.sch.bme.hu/images/beerduel)
 
@@ -44,7 +44,7 @@ A programot a Krampampuli meggyújtása, majd elfogyasztása zárta.
 
 ![krampampuli](https://warp.sch.bme.hu/images/20221217_003356_simi-2)
 
-## Félév csapata
+## Félév Csapata
 
 Minden félév végén a Szakkollégium Vezetősége megszavazza egy csapatnak a lehengerlően elismerő Félév Csapata címet, akikről úgy vélik, hogy az időszakban valamilyen tekintetben kiemelkedtek. **Ebben a félévben a megtisztelő Félév Csapata címet a Kir-Dev kapta,** ennek nagyon örültünk és köszönjük a bizalmat!
 
