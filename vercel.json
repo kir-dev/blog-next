@@ -19,6 +19,11 @@
       "source": "/vercel",
       "destination": "https://vercel.com/kir-dev",
       "permanent": true
+    },
+    {
+      "source": "/ly/:short",
+      "destination": "https://api.shorz.kir-dev.hu/ly/:short",
+      "permanent": true
     }
   ]
 }
