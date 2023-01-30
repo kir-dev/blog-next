@@ -31,7 +31,7 @@
     "@emotion/react": "11.10.5",
     "@emotion/styled": "11.10.5",
     "@fontsource/poppins": "4.5.10",
-    "framer-motion": "8.0.2",
+    "framer-motion": "8.5.5",
     "gatsby": "5.3.3",
     "gatsby-plugin-image": "3.3.2",
     "gatsby-plugin-offline": "6.3.1",
