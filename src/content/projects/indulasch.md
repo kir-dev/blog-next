@@ -1,9 +1,9 @@
 ---
 layout: project
 title: InduláSch
-lead: Utastájékoztató kijelző és alkalmazás közeli BKK indulásokhoz.
-github: https://github.com/kir-dev/indulasch-frontend
-website: https://indula.sch.bme.hu/
+lead: Információs kijelző a kollégium lakóinak.
+github: https://github.com/kir-dev/indulasch-v3
+website: http://admin.indulasch.kir-dev.hu
 status:
   label: Aktív
   color: green
@@ -21,7 +21,7 @@ Hamar jött a felismerés, miszerint ezt alkalmazni is lehetne élőben, tetsző
 Kiváló helyszínt a Schönherz Kollégium földszinti folyosója jelenti, így elindult egy olyan projekt a körben,
 mely nem csak a webalkalmazás elkészítését jelenti, hanem annak fizikai elhelyezését is. Ez lett az induláSch projekt.
 
-![result.jpg](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBa29CIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--23020bf4222d0b0bdb025538307f5acd901e1d3e/20220224_221214.jpg)
+![result.jpg](https://warp.sch.bme.hu/images/indulasch-v3)
 
 # A fő célkitűzés
 
@@ -49,21 +49,38 @@ Ez azért hasznos, mert az induláSch API-t egy natív mobilalkalmazás is haszn
 A második verzió alapjai sok lehetőséget adnak: elkészült egy widget felület, mely csempékben jelenít meg további információkat a pozícióhoz, mint például időjárás és közeli Bubi állomás elérhető biciklijei.
 Tovább lett fejlesztve a mobilverzió is, progresszív webalkalmazásként szinte natív élményt kapunk az alkalmazást használva.
 
-![2.0 app](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBTdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--133cebeeb425a7e39b267eddc354d9759b88b455/iPhone.png)
+# 3.0
 
-# Kiosk mód
+Egy évvel később, 2023. januárjában már az első évfordulót ünnepelte a projekt. Egy év alatt rengeteg tapasztalatot és ötletet gyűjtöttünk össze annak érdekében, hogy a projekt tovább fejlődjön.
+A kioszkban sok lehetőség rejlett, amit év közben csak rengeteg foltozással és bele-bele javítgatással tudtunk volna elérni. 2022. végén nekiálltunk újraírni a projektet robosztusabb alapokkal.
+A projekt mostmár adatbázissal (MongoDB) működik egy NestJS alapú backend-del, illetve a kioszk kliens szépítgetésén kívül készült hozzá egy admin felület is. A bejelentkezés AuthSch-n keresztül történik,
+és bárki, aki belép, létrehozhat saját klienst.
 
-Kijelzőre és mobilra más és más funkciók kellenek. Célszerű volt valamilyen módon megkülönböztetni a kettőt. A kiosk mód jobban van optimalizálva olyan kijelzőhöz, melyhez ritkán vagy egyáltalán nem nyúlunk.
-Ezen mód különlegessége az SchPincér widget, mely esetleges nyitások elérhető rendeléseit jelzi ki a kollégisták számára.
+Újdonságok között szerepelnek új csempék is. Az időjárás, SchPincér és Bubi mellett már képeket és QR-kódokat is elhelyezhetünk a kioszkon, sőt,
+ezek elrendezése egy 3x3-as rácsban változtatható. Az üzenetek funkció időzítéssel bővült, illetve a távoli karbantartás problémája is megoldódott.
 
-![Kiosk mód](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBUQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--cf52887cf07293ce99f1da21ff656b80bb44025b/TV.png)
+# Az admin felület
+
+Az admin felületen kioszkokat hozhatunk létre, melyek csempe-elrendezéseit vizuálisan szerkeszthetjük, illetve a csempéket beállíthatjuk.
+Üzemezhetünk üzeneteket, változtathatjuk a megjelenést téma és színek szerint, valamint a kioszk alapbeállításait is megadhatjuk. Meghívhatunk másokat is (pl. marketingeseket)
+a kezeléshez, akiknek csak a szükséges dolgokhoz lesz jogosultságuk. A kioszk állapotát is nyomon követhetjük a Dashboard-on, illetve távolról újra is indíthatjuk (ez esetben a böngészőablak frissül egyet).
+
+![Admin](https://warp.sch.bme.hu/images/admin-png)
+
+# A kioszk
+
+Minden, az admin felületen létrehozott kioszkhoz tartozik egy kliens, mellyel nagy kijelzőkhöz optimalizáltan tudjuk megynitni a felületet.
+A kioszk időközönként lekéri a legfrisebb konfigurációt és az üzeneteket úgy, mint a rajta megjelenő adatokat.
+Mivel a "szoftverfrissítés" nehézkes egy falra felfúrt TV esetén, így az admin felületről való újraindítás után a legfrissebb szoftvert fogja futtatni a TV.
+
+![Kiosk mód](https://warp.sch.bme.hu/images/kiosk)
 
 # iOS és watchOS
 
-Ugyanazon év nyarán elindult egy koncepció fejlesztése, melyben megpróbáltuk az induláSch API-t felhasználni egy natív iOS és watchOS alkalmazás elkészítésére.
+A projekt indulásának nyarán elindult egy koncepció fejlesztése, melyben megpróbáltuk az induláSch API-t felhasználni egy natív iOS és watchOS alkalmazás elkészítésére.
 Ennek részeként elkészült egy Apple Watch alkalmazás is kíváncsiságként, ami elég hasznosnak bizonyul a tesztelés során.
 Tapasztalatunk szerint a progresszív webalkalmazás elég jól közelíti egy natív app által nyúltott élményt.
-Az alkalmazás az ugyancsak fiatalnak számító SwiftUI-ban íródott.
+Az alkalmazás az ugyancsak fiatalnak számító SwiftUI-ban íródott. Készült 2022-ben egy Android implementáció is.
 Jelenleg még fejlesztés alatt áll az app, egy nap lehet elérhető lesz az AppStore-okban.
 
 ![watchOS app](https://warp.sch.bme.hu/img/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBUZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a227e5a001c2ce1cfb5b594f8fa4c4a0be338107/aw_mockup.jpg)
