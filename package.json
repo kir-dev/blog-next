@@ -31,7 +31,7 @@
     "@emotion/react": "11.10.5",
     "@emotion/styled": "11.10.5",
     "@fontsource/poppins": "4.5.10",
-    "framer-motion": "8.5.5",
+    "framer-motion": "9.0.2",
     "gatsby": "5.6.0",
     "gatsby-plugin-image": "3.6.0",
     "gatsby-plugin-offline": "6.6.0",
@@ -54,20 +54,20 @@
     "utterances-react-component": "1.0.0"
   },
   "devDependencies": {
-    "@types/node": "18.11.18",
-    "@types/react": "18.0.27",
+    "@types/node": "18.13.0",
+    "@types/react": "18.0.28",
     "@types/react-dom": "18.0.10",
     "@types/react-helmet": "6.1.6",
-    "@typescript-eslint/eslint-plugin": "5.49.0",
-    "@typescript-eslint/parser": "5.49.0",
+    "@typescript-eslint/eslint-plugin": "5.51.0",
+    "@typescript-eslint/parser": "5.51.0",
     "babel-preset-gatsby": "3.6.0",
-    "eslint": "8.33.0",
+    "eslint": "8.34.0",
     "eslint-config-prettier": "8.6.0",
     "eslint-import-resolver-typescript": "3.5.3",
     "eslint-plugin-import": "2.27.5",
     "eslint-plugin-prettier": "4.2.1",
     "gatsby-plugin-root-import": "2.0.9",
-    "prettier": "2.8.3",
-    "typescript": "4.9.4"
+    "prettier": "2.8.4",
+    "typescript": "4.9.5"
   }
 }
