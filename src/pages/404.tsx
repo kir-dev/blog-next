@@ -7,25 +7,25 @@ import { IndexLayout } from 'layouts'
 import React from 'react'
 
 const NotFoundPage: React.FC = () => (
-  <SEO title="404" robots="nofollow, noindex">
-    <IndexLayout background="url(/background/top-right.svg) right top no-repeat, url(/background/bottom-left.svg) left top no-repeat">
-      <Box>
-        <Header>
-          <BlogContainer>
-            <Heading as="h1">Page not found (404)</Heading>
-          </BlogContainer>
-        </Header>
+  <IndexLayout background="url(/background/top-right.svg) right top no-repeat, url(/background/bottom-left.svg) left top no-repeat">
+    <Box>
+      <Header>
         <BlogContainer>
-          <Flex justifyContent="space-between">
-            You've hit the void.{' '}
-            <Button as={Link} colorScheme="orange" to="/">
-              Go back
-            </Button>
-          </Flex>
+          <Heading as="h1">Page not found (404)</Heading>
         </BlogContainer>
-      </Box>
-    </IndexLayout>
-  </SEO>
+      </Header>
+      <BlogContainer>
+        <Flex justifyContent="space-between">
+          You've hit the void.{' '}
+          <Button as={Link} colorScheme="orange" to="/">
+            Go back
+          </Button>
+        </Flex>
+      </BlogContainer>
+    </Box>
+  </IndexLayout>
 )
 
 export default NotFoundPage
+
+export const Head = () => <SEO title="404" robots="nofollow, noindex" />

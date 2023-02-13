@@ -3,7 +3,7 @@ import { useColorModeValue } from '@chakra-ui/system'
 import { ScrollButton } from 'components/blog-components/ScrollButton'
 import { BlogContainer } from 'components/BlogContainer'
 import { SEO } from 'components/SEO'
-import { graphql } from 'gatsby'
+import { graphql, HeadFC } from 'gatsby'
 import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
 import React from 'react'
 
@@ -25,103 +25,107 @@ type Props = {
 const ProjectTemplate: React.FC<Props> = ({ data }) => {
   const project = data.markdownRemark.frontmatter
   const featuredImage = getImage(project.featuredImage || null)
-  const featuredImageSrc = project.featuredImage ? getSrc(project.featuredImage) : undefined
   const statusIcon = getIcon(project.status)
   const hostname = project.website ? new URL(project.website).hostname : null
 
   return (
-    <SEO title={project.title} description={project.lead} image={featuredImageSrc}>
-      <IndexLayout
-        background={useBreakpointValue({
-          xl: 'url(/background/pattern-right.svg) right top repeat-y,url(/background/pattern-left.svg) left top repeat-y'
-        })}
-      >
-        <Box>
-          <Box pt={featuredImage ? 2 : 16}>
-            <BlogContainer>
-              {featuredImage ? (
-                <GatsbyImage image={featuredImage} alt="Project" />
-              ) : (
-                <Image
-                  maxHeight="10rem"
-                  fill={useColorModeValue('black', 'white')}
-                  position="absolute"
-                  marginTop="-2rem"
-                  marginLeft="-1.5rem"
-                  zIndex={0}
-                  src="/svg/circuit-board.svg"
-                  alt="Circuit board"
-                />
-              )}
-              <Box
-                shadow="xl"
-                bgGradient={`linear(to-b, ${useColorModeValue('white', 'gray.800')}, 70%, ${useColorModeValue('gray.200', 'blue.900')})`}
-                zIndex={1}
-                py={featuredImage ? 4 : 12}
-                px={6}
-              >
-                <Flex justifyContent="space-between" wrap="wrap">
-                  <Heading>{project.title}</Heading>
-                  <HStack pl={6} flex={1} justifyContent="flex-end" fontSize="md">
-                    <Text>{project.status.label}</Text>
-                    <Box>{statusIcon}</Box>
+    <IndexLayout
+      background={useBreakpointValue({
+        xl: 'url(/background/pattern-right.svg) right top repeat-y,url(/background/pattern-left.svg) left top repeat-y'
+      })}
+    >
+      <Box>
+        <Box pt={featuredImage ? 2 : 16}>
+          <BlogContainer>
+            {featuredImage ? (
+              <GatsbyImage image={featuredImage} alt="Project" />
+            ) : (
+              <Image
+                maxHeight="10rem"
+                fill={useColorModeValue('black', 'white')}
+                position="absolute"
+                marginTop="-2rem"
+                marginLeft="-1.5rem"
+                zIndex={0}
+                src="/svg/circuit-board.svg"
+                alt="Circuit board"
+              />
+            )}
+            <Box
+              shadow="xl"
+              bgGradient={`linear(to-b, ${useColorModeValue('white', 'gray.800')}, 70%, ${useColorModeValue('gray.200', 'blue.900')})`}
+              zIndex={1}
+              py={featuredImage ? 4 : 12}
+              px={6}
+            >
+              <Flex justifyContent="space-between" wrap="wrap">
+                <Heading>{project.title}</Heading>
+                <HStack pl={6} flex={1} justifyContent="flex-end" fontSize="md">
+                  <Text>{project.status.label}</Text>
+                  <Box>{statusIcon}</Box>
+                </HStack>
+              </Flex>
+              <Flex justifyContent="space-between" alignItems="flex-end" placeContent="flex-end" wrap="wrap" mt={4}>
+                <Box pr={6} mb={4} flex={1}>
+                  <HStack>
+                    <FaGithub />
+                    <Link fontSize="md" isExternal href={project.github}>
+                      {`kir-dev/${project.github.substring(project.github.lastIndexOf('/') + 1)}`}
+                    </Link>
                   </HStack>
-                </Flex>
-                <Flex justifyContent="space-between" alignItems="flex-end" placeContent="flex-end" wrap="wrap" mt={4}>
-                  <Box pr={6} mb={4} flex={1}>
+                  {project.website && (
                     <HStack>
-                      <FaGithub />
-                      <Link fontSize="md" isExternal href={project.github}>
-                        {`kir-dev/${project.github.substring(project.github.lastIndexOf('/') + 1)}`}
+                      <FaHome />
+                      <Link fontSize="md" isExternal href={project.website}>
+                        {hostname}
                       </Link>
                     </HStack>
-                    {project.website && (
-                      <HStack>
-                        <FaHome />
-                        <Link fontSize="md" isExternal href={project.website}>
-                          {hostname}
-                        </Link>
-                      </HStack>
-                    )}
-                  </Box>
-                  <Box>
-                    <HStack wrap="wrap" justifyContent="flex-end">
-                      {project.techs.map((tech) => (
-                        <Tag colorScheme="blue" key={tech}>
-                          {tech.trim()}
-                        </Tag>
-                      ))}
-                    </HStack>
-                  </Box>
-                </Flex>
-              </Box>
-            </BlogContainer>
-          </Box>
-          <BlogContainer>
-            <Box py={8}>
-              <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-            </Box>
-            <Box
-              textAlign="right"
-              mt={10}
-              onClick={() => {
-                window.scrollTo({
-                  top: 0,
-                  behavior: 'smooth'
-                })
-              }}
-            >
-              <Button colorScheme="orange">Vissza a tetejére</Button>
+                  )}
+                </Box>
+                <Box>
+                  <HStack wrap="wrap" justifyContent="flex-end">
+                    {project.techs.map((tech) => (
+                      <Tag colorScheme="blue" key={tech}>
+                        {tech.trim()}
+                      </Tag>
+                    ))}
+                  </HStack>
+                </Box>
+              </Flex>
             </Box>
           </BlogContainer>
         </Box>
-        <ScrollButton />
-      </IndexLayout>
-    </SEO>
+        <BlogContainer>
+          <Box py={8}>
+            <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+          </Box>
+          <Box
+            textAlign="right"
+            mt={10}
+            onClick={() => {
+              window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+              })
+            }}
+          >
+            <Button colorScheme="orange">Vissza a tetejére</Button>
+          </Box>
+        </BlogContainer>
+      </Box>
+      <ScrollButton />
+    </IndexLayout>
   )
 }
 
 export default ProjectTemplate
+
+export const Head: HeadFC<Props['data']> = ({ data }) => {
+  const project = data.markdownRemark.frontmatter
+  const featuredImageSrc = project.featuredImage ? getSrc(project.featuredImage) : undefined
+
+  return <SEO title={project.title} description={project.lead} image={featuredImageSrc} />
+}
 
 export const query = graphql`
   query ProjectTemplateQuery($slug: String!) {
