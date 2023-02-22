@@ -12,7 +12,7 @@ sessions:
 lecturer: Berente Bálint
 active: true
 description: >
-  HTML, CSS és TypeScript tudásunk felhasználásával megismerkedünk az egyik legnépszerűbb ReactJS keretrendszerrel,
+  HTML, CSS és TypeScript tudásunk felhasználásával megismerkedünk az egyik legnépszerűbb frontend keretrendszerrel, a ReactJS-szel,
   amellyel gyorsan, átláthatóan és stabilan leszünk képesek webes alkalmazásokat fejleszteni.
-  Ezen könyvtár alapjainak bemutatása és gyakorlati alkalmazása mellett megismerkedünk számos hasznos könyvtárral,
+  A ReactJS alapjainak bemutatása és gyakorlati alkalmazása mellett megismerkedünk számos hasznos könyvtárral,
   praktikával és tudással is.
