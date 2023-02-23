@@ -6,7 +6,7 @@ sessions:
     endTime: TBD
     place: TBD
 lecturer: Bucsy Benjámin
-active: true
+active: false
 description: >
   Szeretnél innovatív weboldalakat készíteni villámgyorsan? Tanfolyamunk keretében megismerhetsz egy olyan backend
   frameworköt, amit többek között a GitHub, Twitch és Kickstarter is használ! A képzés elvégzése után becsatlakozhatsz

@@ -1,12 +1,13 @@
-title: Webes alapozó 🚀
+title: Szofverfejlesztés és webes alapok 🚀
 order: 100
 sessions:
-  - startDate: 2023 márciusa
-    startTime: TBD
-    endTime: TBD
-    place: TBD
-lecturer: Sepsi László
+  - startDate: 2023.03.09.
+    startTime: 18:00
+    endTime: 20:00
+    place: SCH-103
+lecturer: Berente Bálint, Sepsi László
 active: true
 description: >
-  A tanfolyamon résztvevők elsajátíthatják a webfejlesztés hálózati alapjait, megismerkedhetnek a web működésével,
+  A tanfolyamon ismerkedhettek a modern szoftverfejlesztési módszerekekkel és technikákkal,
+  valamint a elsajátíthatjátok webfejlesztés alapjait, és megismerkedhettek a web működésével,
   a HTML, JavaScript és a CSS nyelvek világával. Ajánlott még a többi technológiai tanfolyam előtt meghallgatni.
