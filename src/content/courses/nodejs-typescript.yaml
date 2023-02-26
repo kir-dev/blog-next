@@ -2,16 +2,16 @@ title: Node.js + TypeScript 🤖
 order: 300
 sessions:
   - startDate: 2023-03-16
-    startTime: 18:00
-    endTime: 20:00
+    startTime: '18:00'
+    endTime: '20:00'
     place: SCH-102
   - startDate: 2023-03-23
-    startTime: 18:00
-    endTime: 20:00
+    startTime: '18:00'
+    endTime: '20:00'
     place: SCH-103
   - startDate: 2023-03-30
-    startTime: 18:00
-    endTime: 20:00
+    startTime: '18:00'
+    endTime: '20:00'
     place: SCH-103
 lecturer: Fekete Sámuel
 active: true
