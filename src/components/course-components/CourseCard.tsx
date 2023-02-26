@@ -8,8 +8,7 @@ type Props = {
 }
 
 const getSessionString = (session: ISession): string => {
-  const startDate = new Date(session.startDate)
-
+  const startDate = new Date(parseInt(session.startDate))
   return `${startDate.toLocaleDateString('hu', {
     weekday: 'short',
     month: 'short',
