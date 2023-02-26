@@ -58,6 +58,7 @@ A [NodeJS](https://nodejs.org/en/)-t választottuk backend technológiának. A N
 ### NestJS
 
 A NodeJS magában viszont még nem elég egy komplex webalkalmazás elkészítéséhez. Ehhez a [NestJS](https://nestjs.com/) nevű keretrendszert használtuk, amivel könnyedén lehet nagyszabású webalkalmazásokat fejleszteni. Korábban nem volt Nest-es projektünk, de a tanfolyamon már ezt tanítottuk, és az itt elkészített projekt számunkra is egy Proof of Concept projekt volt, azaz már korábban kicsiben kipróbáltuk, és megfelelt az igényeinknek.
+Nagyon hasznos volt még a Nest-nek a könnyen konfigurálható OpenAPI leírója. Ez egy automatikusan generált felület, ahol fel vannak sorolva a REST API végpontjai, és pontosan le van írva, melyik meghívásához milyen paraméterek kellenek, illetve milyen formában adja vissza az adatokat. Ez óriási segítség frontend fejlesztés közben. Az éles verzió OpenAPI leíróját [itt megnézhetitek](https://api.konzisite.kir-dev.hu/api).
 
 ### Prisma
 
@@ -104,7 +105,7 @@ Az oldal még nincs kész, vannak funkciók, amik tervben vannak, sőt némelyik
 
 ## Tapasztalatok
 
-"Projektvezetőként nagyon élveztem ezen a projekten dolgozni, hiszen nekem is ez volt az első fullstack projektem, ahol a legelső fázistól kezdve részt vettem a munkában. A tech-stack választást nagyon jól eltaláltuk, bár ez nem az én érdemem, hanem a kör tapasztaltabb tagjaié. Büszke vagyok a projektre amit összeraktunk a körrel, és remélem sokáig tudják használni a hallgatók." - _Samu_
+"Projektvezetőként nagyon élveztem ezen a projekten dolgozni, hiszen nekem is ez volt az első fullstack projektem, ahol a legelső fázistól kezdve részt vettem a munkában. A tech-stack választást nagyon jól eltaláltuk, bár ez nem az én érdemem, hanem a kör tapasztaltabb tagjaié. Büszke vagyok a projektre amit összeraktunk a körrel, remélem sokáig tudják használni a hallgatók." - _Samu_
 
 "Tavaly tavasszal csatlakoztam a körhöz és ez volt az első ilyen projektem, nem csak körön belül, hanem összességében. Habár gyakorlatilag minden új volt - és még most is vannak meglepetések -, de rengetek segítséget kaptam a kör tagjaitól, hogy ne veszítsem el a fejem. A projekten dolgozni olyan érzés volt, mintha profi közegben lennék, mind szervezésileg, mind szakmailag." - _Smuky_
 
