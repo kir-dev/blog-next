@@ -28,7 +28,7 @@ ogImage: ../images/posts/konzisite_landingpage.png
 
 ## Mi is a Konzisite?
 
-A BME VIK hallgatói találkozhattak már a régi Konzisite-tal, melyet Hallgatói Képviselet készített valamikor a 2010-es évek elején. Az oldal fő feladata, hogy egy felületet adjon a kar hallgatóinak, ahol konzultációkat kérhetnek, illetve ha konzultációt tartanak, meghirdethessék azt az egész karnak. Ezen kívül a résztvevők értékelhetik is a konzikat, amelyet más statisztikákkal együtt a HK felhasznál ösztöndíjak kiosztásánál. Sajnos ez az oldal már sok szempontból elavulttá vált, fejlesztése, javítása pedig nagyon nehézkes volt. Ezért kért meg minket a HK, hogy fejlesszünk egy új verziót. Az eddig létező funkciók mellett volt pár új ötletük is. Valamint természetesen az is cél volt, hogy a jövőben is könnyen bővíthető legyen az oldal. Mi a Kir-Dev-nél fontosnak tartjuk, hogy az új tagjaiknak átadjuk azt a tudást, amit mi a körben szereztünk, így tudás nem veszik el, a projektjeink pedig éveken keresztül üzemelhetnek, hiszen mindig lesz, aki tud javítani vagy új funkciót fejleszteni.
+A BME VIK hallgatói találkozhattak már a régi Konzisite-tal, melyet Hallgatói Képviselet készített valamikor a 2010-es évek elején. Az oldal fő feladata, hogy egy felületet adjon a kar hallgatóinak, ahol konzultációkat kérhetnek, illetve ha konzultációt tartanak, meghirdethessék azt az egész karnak. Ezen kívül a résztvevők értékelhetik is a konzikat, amely alapján a HK ösztöndíjban tudja részesíteni a konzi tartóit. Sajnos ez az oldal már sok szempontból elavulttá vált, fejlesztése, javítása pedig nagyon nehézkes volt. Ezért kért meg minket a HK, hogy fejlesszünk egy új verziót. Az eddig létező funkciók mellett volt pár új ötletük is. Valamint természetesen az is cél volt, hogy a jövőben is könnyen bővíthető legyen az oldal. Mi a Kir-Dev-nél fontosnak tartjuk, hogy az új tagjaiknak átadjuk azt a tudást, amit mi a körben szereztünk, így tudás nem veszik el, a projektjeink pedig éveken keresztül üzemelhetnek, hiszen mindig lesz, aki tud javítani vagy új funkciót fejleszteni.
 
 ![oreg_konzisite](https://warp.sch.bme.hu/images/kepernyokep-2022-12-04-031952)
 
@@ -104,9 +104,9 @@ Az oldal még nincs kész, vannak funkciók, amik tervben vannak, sőt némelyik
 
 ## Tapasztalatok
 
-Projektvezetőként nagyon élveztem ezen a projekten dolgozni, hiszen nekem is ez volt az első fullstack projektem, ahol a legelső fázistól kezdve részt vettem a munkában. A tech-stack választást nagyon jól eltaláltuk, bár ez nem az én érdemem, hanem a kör tapasztaltabb tagjaié. Büszke vagyok a projektre amit összeraktunk a körrel, és remélem sokáig tudják használni a hallgatók.
+"Projektvezetőként nagyon élveztem ezen a projekten dolgozni, hiszen nekem is ez volt az első fullstack projektem, ahol a legelső fázistól kezdve részt vettem a munkában. A tech-stack választást nagyon jól eltaláltuk, bár ez nem az én érdemem, hanem a kör tapasztaltabb tagjaié. Büszke vagyok a projektre amit összeraktunk a körrel, és remélem sokáig tudják használni a hallgatók." - _Samu_
 
-TODO pár mondat egy új tagtól is? :D
+"Tavaly tavasszal csatlakoztam a körhöz és ez volt az első ilyen projektem, nem csak körön belül, hanem összességében. Habár gyakorlatilag minden új volt - és még most is vannak meglepetések -, de rengetek segítséget kaptam a kör tagjaitól, hogy ne veszítsem el a fejem. A projekten dolgozni olyan érzés volt, mintha profi közegben lennék, mind szervezésileg, mind szakmailag." - _Smuky_
 
 ## Kitekintés
 
