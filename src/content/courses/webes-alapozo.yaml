@@ -1,9 +1,9 @@
 title: Szofverfejlesztés és webes alapok 🚀
 order: 100
 sessions:
-  - startDate: 2023.03.09.
-    startTime: 18:00
-    endTime: 20:00
+  - startDate: 2023-03-09
+    startTime: '18:00'
+    endTime: '20:00'
     place: SCH-103
 lecturer: Berente Bálint, Sepsi László
 active: true

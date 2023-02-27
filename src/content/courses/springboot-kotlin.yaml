@@ -1,21 +1,21 @@
 title: Spring Boot + Kotlin 🍃
 order: 500
 sessions:
-  - startDate: 2023.03.14.
-    startTime: 18:00
-    endTime: 20:00
+  - startDate: 2023-03-14
+    startTime: '18:00'
+    endTime: '20:00'
     place: SCH-103 és online
-  - startDate: 2023.03.22.
-    startTime: 18:00
-    endTime: 20:00
+  - startDate: 2023-03-22
+    startTime: '18:00'
+    endTime: '20:00'
     place: 1320 és online
-  - startDate: 2023.03.28.
-    startTime: 18:00
-    endTime: 20:00
+  - startDate: 2023-03-28
+    startTime: '18:00'
+    endTime: '20:00'
     place: 1320 és online
-  - startDate: 2023.04.04.
-    startTime: 18:00
-    endTime: 20:00
+  - startDate: 2023-04-04
+    startTime: '18:00'
+    endTime: '20:00'
     place: 1320 és online
 lecturer: Szabó Gergely (Schámi)
 active: true

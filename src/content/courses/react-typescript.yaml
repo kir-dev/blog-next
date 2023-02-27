@@ -1,13 +1,13 @@
 title: React ⚛️
 order: 400
 sessions:
-  - startDate: 2023.04.03.
-    startTime: 18:00
-    endTime: 20:00
+  - startDate: 2023-04-03
+    startTime: '18:00'
+    endTime: '20:00'
     place: SCH-103
-  - startDate: 2023.04.13.
-    startTime: 18:00
-    endTime: 20:00
+  - startDate: 2023-04-13
+    startTime: '18:00'
+    endTime: '20:00'
     place: SCH-102
 lecturer: Berente Bálint
 active: true
