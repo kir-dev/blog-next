@@ -8,15 +8,15 @@ sessions:
   - startDate: 2023-03-22
     startTime: '18:00'
     endTime: '20:00'
-    place: 1320 és online
+    place: online
   - startDate: 2023-03-28
     startTime: '18:00'
     endTime: '20:00'
-    place: 1320 és online
+    place: online (haladó)
   - startDate: 2023-04-04
     startTime: '18:00'
     endTime: '20:00'
-    place: 1320 és online
+    place: online (haladó)
 lecturer: Szabó Gergely (Schámi)
 active: true
 description: >
