@@ -36,7 +36,7 @@ A BME VIK hallgatói találkozhattak már a régi Konzisite-tal, melyet Hallgat�
 
 ## Külsős projektek a Kir-Dev-nél
 
-Mint sok más projektünk a Kir-Dev-nél, a Konzisite is egy külsős projekt, azaz nem mi találtuk ki, hanem egy másik kör vagy szervezet (ez esetben a HK) keresett meg minket. Ilyenkor tipikusan egy minél pontosabb specifikációt kérünk a megrendelőtől, ami alapján mi meg tudjuk kezdeni a tervezést. Emellett kinevezünk egy projektfelelőst, aki a szívén viseli a projektet a jövőben. Az ő felelőssége lesz a kapcsolattartás a megrendelővel, a feladatok felosztása a körön belül, valamint a projekt haladásának felügyelete. Ennél a projektnél én kaptam ezt a feladatot, ami nekem is új volt, hiszen akkor még csak fél éve voltam tagja a körnek.
+Mint sok más projektünk a Kir-Dev-nél, a Konzisite is egy külsős projekt, azaz nem mi találtuk ki, hanem egy másik kör vagy szervezet (ez esetben a HK) keresett meg minket. Ilyenkor tipikusan egy minél pontosabb specifikációt kérünk a megrendelőtől, ami alapján mi meg tudjuk kezdeni a tervezést. Emellett kinevezünk egy projektfelelőst, aki a szívén viseli a projektet a jövőben. Az ő felelőssége lesz a kapcsolattartás a megrendelővel, a feladatok felosztása a körön belül, valamint a projekt haladásának felügyelete. Ennél a projektnél ezt a feladatot [Fekete Sámuel](https://pek.sch.bme.hu/profiles/feketesamu) kapta meg, ami számára is új volt, hiszen akkor még csak fél éve volt tagja a körnek.
 
 ## Tervezés
 
