@@ -3,7 +3,7 @@ layout: project
 title: Konzisite
 lead: Konzultációk rendezésére használt weboldal a HK megbízásából
 github: https://github.com/kir-dev/konzisite-frontend
-website: https://konzisite.vercel.app/
+website: https://konzi.vik.hk/
 status:
   label: Aktív
   color: green
@@ -32,10 +32,18 @@ Korábban a VIK HK régi oldalán futott a konzik rendezése és menedzsmentje, 
 
 <div class="caption">Konzisite korábbi nyitólapja</div>
 
-## Új célok
+## Választott technológiák
 
-A frontend React alapú lesz, ahogy most már nagyon sok új website-unk, [itt elérhető a repó hozzá](https://github.com/kir-dev/konzisite-frontend). Vercelen hosztoljuk. A backend pedig NestJS alapú lesz, repója [itt található](https://github.com/kir-dev/konzisite-api). Prisma került az adatelérési rétegbe, amely nagyszerű ORM-et és sématípusokat generál számunkra, könnyű benne a migrációk kezelése is. Természetesen mindkét oldalon TypeScript nyelven programozunk.
+A projekt alapja egy NodeJS REST API, mely egy PostgreSQL adatbázisban tárolja az adatokat. A webes kommunikációt a NestJS, az adatbázissal való kapcsolatot pedig a Prisma keretrendszer egyszerűsíti. A backend kódbázisa [itt böngészhető](https://github.com/kir-dev/konzisite-api). A felhasználói felület pedig React-tal készült, az egységes megjelenés a Chakra UI-nak köszönhető. A frontend kódbázisát [itt tudod megnézni](https://github.com/kir-dev/konzisite-frontend).
 
-![dbscheme](https://raw.githubusercontent.com/kir-dev/konzisite-api/master/docs/er.png)
+## Új funkciók
 
-<div class="caption">Adatbázisséma</div>
+Amellett, hogy az eddigi funkciókat könnyebb használni és az oldal megjelenése szebb, elkészült pár új funkció is. Van lehetősége bárkinek csoportokat létrehoznia, nem kell ehhez a HK-nak emailt írni. Egy konzinak több előadója is lehet, mindegyiküket külön lehet értékelni. Egy felhasználóra érkezett értékelések megjelennek a profilján. Van egy külön felhasználó böngésző oldal, ahol publikus a konzitartók átlagos értékelése és egyéb statisztikák is. A konzi tartóknak van lehetősége jegyzet feltöltésére egy konzihoz, amit a résztvevők az alkalom után tölthetnek le, ha értékelték az előadókat.
+
+## Bővebben
+
+A fejlesztés folyamatáról és a választott technológiákról bővebben is írtunk az első éles verzió megjelenésekor íródott [blogposztunkban](https://kir-dev.hu/post/2023-03-05-az-uj-konzisite-fejlesztese/).
+
+![Az új konzisite nyitólapja](https://warp.sch.bme.hu/images/konzisite_16_10)
+
+<div class="caption">Az új konzisite nyitólapja</div>
