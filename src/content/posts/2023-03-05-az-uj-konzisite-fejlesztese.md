@@ -58,7 +58,7 @@ A [NodeJS](https://nodejs.org/en/)-t választottuk backend technológiának. A N
 ### NestJS
 
 A NodeJS magában viszont még nem elég egy komplex webalkalmazás elkészítéséhez. Ehhez a [NestJS](https://nestjs.com/) nevű keretrendszert használtuk, amivel könnyedén lehet nagyszabású webalkalmazásokat fejleszteni. Korábban nem volt Nest-es projektünk, de a tanfolyamon már ezt tanítottuk, és az itt elkészített projekt számunkra is egy Proof of Concept projekt volt, azaz már korábban kicsiben kipróbáltuk, és megfelelt az igényeinknek.
-Nagyon hasznos volt még a Nest-nek a könnyen konfigurálható OpenAPI leírója. Ez egy automatikusan generált felület, ahol fel vannak sorolva a REST API végpontjai, és pontosan le van írva, melyik meghívásához milyen paraméterek kellenek, illetve milyen formában adja vissza az adatokat. Ez óriási segítség frontend fejlesztés közben. Az éles verzió OpenAPI leíróját [itt megnézhetitek](https://api.konzisite.kir-dev.hu/api).
+Nagyon hasznos volt még a Nest-nek a könnyen konfigurálható OpenAPI leírója. Ez egy automatikusan generált felület, ahol fel vannak sorolva a REST API végpontjai, és pontosan le van írva, melyik meghívásához milyen paraméterek kellenek, illetve milyen formában adja vissza az adatokat. Ez óriási segítség frontend fejlesztés közben. A tesztverzió OpenAPI leíróját [itt megnézhetitek](https://api.konzisite-staging.kir-dev.hu/api).
 
 ### Prisma
 
