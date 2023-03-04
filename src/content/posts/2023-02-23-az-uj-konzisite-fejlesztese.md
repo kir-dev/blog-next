@@ -1,15 +1,15 @@
 ---
 layout: post
 author: feketesamu
-date: 2023-02-23 14:21:16
+date: 2023-03-05 14:21:16
 title: Az új Konzisite fejlesztése
 lead:
 tags:
   - hírek
   - projekt
 comment: true
-featuredImage: ../images/posts/konzisite_landingpage.png
-ogImage: ../images/posts/konzisite_landingpage.png
+featuredImage: ../images/projects/konzisite.png
+ogImage: ../images/projects/konzisite.png
 ---
 
 <style>
@@ -95,7 +95,7 @@ A frontenden a [React](https://reactjs.org/) nevű könyvtárat használtuk, mel
 
 ## Végeredmény
 
-![konzisite landing page](../images/posts/konzisite_landingpage.png)
+![konzisite landing page](https://warp.sch.bme.hu/images/konzisite_16_10)
 
 <div class="caption">Az új Konzisite nyitólapja</div>
 
@@ -111,4 +111,4 @@ Az oldal még nincs kész, vannak funkciók, amik tervben vannak, sőt némelyik
 
 ## Kitekintés
 
-Ha ez a poszt felkeltette az érdeklődésedet és szeretnél becsatlakozni egy hasonló projektbe, akkor mindenképpen vedd fel velünk a kapcsolatot! Március 1-jén kint leszünk a Gólyakörtén, gyertek és beszélgessünk egy jót! A tavaszi félév elején indulnak a tanfolyamaink, ahol a nulláról megtanítjuk a legfontosabb dolgokat az itt említett technológiákról. Ezekről többet a [Tanfolyamok](https://kir-dev.hu/courses/) oldalon tudhatsz meg. Ha ezekről lemaradtál volna, a [Kapcsolat](https://kir-dev.hu/about/) oldalon megtalálod a kontaktjainkat!
+Ha ez a poszt felkeltette az érdeklődésedet és szeretnél becsatlakozni egy hasonló projektbe, akkor mindenképpen vedd fel velünk a kapcsolatot! A tavaszi félév elején indulnak a tanfolyamaink, ahol a nulláról megtanítjuk a legfontosabb dolgokat az itt említett technológiákról. Ezekről többet a [Tanfolyamok](https://kir-dev.hu/courses/) oldalon tudhatsz meg. Ha ezekről lemaradtál volna, a [Kapcsolat](https://kir-dev.hu/about/) oldalon megtalálod a kontaktjainkat!
