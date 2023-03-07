@@ -1,4 +1,4 @@
-import { Box, Container, Flex, HStack, Icon, Image, Link, Text } from '@chakra-ui/react'
+import { Box, Container, Flex, HStack, Icon, Image, Link, Text, VStack } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/system'
 import { KirdevOriginal } from 'components/themed-svgs/KirdevOriginal'
 import React from 'react'
@@ -14,10 +14,15 @@ export const Footer: React.FC = () => (
         <Flex flexDirection={{ base: 'column-reverse', sm: 'row' }}>
           <Flex flex={1} justifyContent={{ base: 'center', sm: 'flex-start' }}>
             <HStack>
-              <KirdevOriginal style={{ height: '3rem' }} />
-              <Link isExternal href="https://vercel.com?utm_source=kir-dev&utm_campaign=oss">
-                <Image height="1.75rem" src="/svg/powered-by-vercel.svg" alt="Vercel Logo" />
-              </Link>
+              <KirdevOriginal style={{ height: '4rem' }} />
+              <VStack>
+                <Link isExternal href="https://vercel.com?utm_source=kir-dev&utm_campaign=oss">
+                  <Image height="1.75rem" src="/svg/powered-by-vercel.svg" alt="Vercel Logo" />
+                </Link>
+                <Link isExternal href="https://rackhost.hu">
+                  <Image height="1.75rem" src="/rackhost.png" alt="Rackhost Logo" objectFit="contain" />
+                </Link>
+              </VStack>
             </HStack>
           </Flex>
 
