@@ -1,14 +1,26 @@
 title: Spring Boot + Kotlin 🍃
 order: 500
 sessions:
-  - startDate: 2023 márciusa
-    startTime: TBD
-    endTime: TBD
-    place: TBD
+  - startDate: 2023-03-14
+    startTime: '18:00'
+    endTime: '20:00'
+    place: SCH-103 és online
+  - startDate: 2023-03-22
+    startTime: '18:00'
+    endTime: '20:00'
+    place: online
+  - startDate: 2023-03-28
+    startTime: '18:00'
+    endTime: '20:00'
+    place: online (haladó)
+  - startDate: 2023-04-04
+    startTime: '18:00'
+    endTime: '20:00'
+    place: online (haladó)
 lecturer: Szabó Gergely (Schámi)
 active: true
 description: >
-  Spring Boot és Kotlin előadások, amelyen betekintést nyerhettek egy izgalmas nyelv, illetve egy elterjedt és modern
-  keretrendszer alapjaiba, amellyel akár enterprise minőségű appokat is képes leszel fejleszteni. A tanfolyam után adott
-  a lehetőség az SCH-Pincérbe és a CMSch franchise projektekbe való becsatlakozásra. CMSch rendszerünket a közélet rengeteg
-  eseményén megfuttatuk már: Gólyatábor, Gólyahét, Qpa, GólyaKörTe, Gólyabál, Simonyi Hackathon.
+  Spring Boot és Kotlin előadások, amelyen betekintést nyerhettek egy izgalmas nyelv,
+  illetve egy elterjedt és modern keretrendszer alapjaiba, amellyel akár enterprise minőségű appokat is képesek lesztek fejleszteni.
+  A tanfolyam után adott a lehetőség az SCH-Pincérbe és a CMSch franchise projektekbe való becsatlakozásra.
+  CMSch rendszerünket a közélet rengeteg eseményén megfuttatuk már, mint példul: Gólyatábor, Gólyahét, Qpa, GólyaKörTe, Gólyabál, Simonyi Hackathon.

@@ -1,14 +1,18 @@
 title: React ⚛️
 order: 400
 sessions:
-  - startDate: 2023 márciusa
-    startTime: TBD
-    endTime: TBD
-    place: TBD
+  - startDate: 2023-04-03
+    startTime: '18:00'
+    endTime: '20:00'
+    place: SCH-103
+  - startDate: 2023-04-13
+    startTime: '18:00'
+    endTime: '20:00'
+    place: SCH-102
 lecturer: Berente Bálint
 active: true
 description: >
-  HTML, CSS és TypeScript tudásunk felhasználásával megismerkedünk a népszerű ReactJS keretrendszerrel,
-  amellyel gyorsan, átláthatóan és stabilan leszünk képesek webalkalmazások fejleszteni. Elkészítjük a NodeJS
-  tanfolyamról ismert ticket management rendszer felületét, miközben megismerkedünk számos hasznos könyvtárral,
-  praktikával és tudással.
+  HTML, CSS és TypeScript tudásunk felhasználásával megismerkedünk az egyik legnépszerűbb frontend keretrendszerrel, a ReactJS-szel,
+  amellyel gyorsan, átláthatóan és stabilan leszünk képesek webes alkalmazásokat fejleszteni.
+  A ReactJS alapjainak bemutatása és gyakorlati alkalmazása mellett megismerkedünk számos hasznos könyvtárral,
+  praktikával és tudással is.
