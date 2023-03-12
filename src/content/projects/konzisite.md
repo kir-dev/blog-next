@@ -3,7 +3,7 @@ layout: project
 title: Konzisite
 lead: Konzultációk rendezésére használt weboldal a HK megbízásából
 github: https://github.com/kir-dev/konzisite-frontend
-website: https://konzi.vik.hk/
+website: https://konzi.kir-dev.hu/
 status:
   label: Aktív
   color: green
