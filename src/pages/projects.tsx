@@ -9,38 +9,38 @@ import { ProjectsProps } from 'types/page-props/projects.props'
 import { IndexLayout } from '../layouts'
 
 const Projects: React.FC<ProjectsProps> = ({ data }) => (
-  <SEO title="Projektjeink">
-    <IndexLayout
-      background={`${useBreakpointValue({
-        base: '',
-        sm: 'url(/background/bottom-left2.svg) left top no-repeat,url(/background/bottom-left.svg) left bottom no-repeat,'
-      })}url(/background/top-right3.svg) right top no-repeat`}
-    >
-      <Box>
-        <Header>
-          <BlogContainer>
-            <Heading as="h1">Projektjeink</Heading>
-            <Text fontFamily="mono" pt={4} fontSize="xl">
-              A kör által készített minden alkalmazás nyílt forráskódú, ez a fejlesztőeszközeink kiválasztásánál is fő szempont.
-            </Text>
-          </BlogContainer>
-        </Header>
+  <IndexLayout
+    background={`${useBreakpointValue({
+      base: '',
+      sm: 'url(/background/bottom-left2.svg) left top no-repeat,url(/background/bottom-left.svg) left bottom no-repeat,'
+    })}url(/background/top-right3.svg) right top no-repeat`}
+  >
+    <Box>
+      <Header>
         <BlogContainer>
-          <Grid templateColumns={`repeat(${useBreakpointValue({ base: 1, sm: 2 })}, 1fr)`} gap={8}>
-            {data.activeProjects.nodes.map((project) => (
-              <ProjectPreview key={project.fields.slug} project={project} />
-            ))}
-            {data.oldProjects.nodes.map((project) => (
-              <ProjectPreview key={project.fields.slug} project={project} />
-            ))}
-          </Grid>
+          <Heading as="h1">Projektjeink</Heading>
+          <Text fontFamily="mono" pt={4} fontSize="xl">
+            A kör által készített minden alkalmazás nyílt forráskódú, ez a fejlesztőeszközeink kiválasztásánál is fő szempont.
+          </Text>
         </BlogContainer>
-      </Box>
-    </IndexLayout>
-  </SEO>
+      </Header>
+      <BlogContainer>
+        <Grid templateColumns={`repeat(${useBreakpointValue({ base: 1, sm: 2 })}, 1fr)`} gap={8}>
+          {data.activeProjects.nodes.map((project) => (
+            <ProjectPreview key={project.fields.slug} project={project} />
+          ))}
+          {data.oldProjects.nodes.map((project) => (
+            <ProjectPreview key={project.fields.slug} project={project} />
+          ))}
+        </Grid>
+      </BlogContainer>
+    </Box>
+  </IndexLayout>
 )
 
 export default Projects
+
+export const Head = () => <SEO title="Projektjeink" />
 
 export const query = graphql`
   query Projects {

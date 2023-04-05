@@ -15,7 +15,7 @@ const socials = {
 
 export default {
   siteMetadata: {
-    siteUrl: 'https://kir-dev.sch.bme.hu/',
+    siteUrl: 'https://kir-dev.hu/',
     translations: ['hu'],
     lang: 'hu',
     title: 'Kir-Dev',
