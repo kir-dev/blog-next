@@ -9,20 +9,30 @@ import { SocialButton } from './SocialButton'
 
 export const Footer: React.FC = () => (
   <Box zIndex={1}>
-    <Box borderTopWidth={1} borderStyle="solid" borderColor={useColorModeValue('gray.200', 'gray.700')}>
+    <Box borderTopWidth={1} pt={4} borderStyle="solid" borderColor={useColorModeValue('gray.200', 'gray.700')}>
+      <VStack>
+        <Text>Támogatóink</Text>
+        <Flex gap={3} flexDirection={{ base: 'column', sm: 'row' }} alignItems="center">
+          <Link isExternal href="https://vercel.com?utm_source=kir-dev&utm_campaign=oss">
+            <Image height="1.75rem" src="/svg/powered-by-vercel.svg" alt="Vercel Logo" />
+          </Link>
+          <Link isExternal href="https://rackhost.hu">
+            <Image height="1.75rem" src="/rackhost.png" alt="Rackhost Logo" objectFit="contain" />
+          </Link>
+          <Link isExternal href="https://betteruptime.com/">
+            <Image
+              height="3.5rem"
+              alt="Better Uptime Website Monitoring"
+              src="https://betteruptime.com/assets/static_assets/badges/light.png"
+            />
+          </Link>
+        </Flex>
+      </VStack>
       <Container maxW="6xl" py={4}>
         <Flex flexDirection={{ base: 'column-reverse', sm: 'row' }}>
           <Flex flex={1} justifyContent={{ base: 'center', sm: 'flex-start' }}>
             <HStack>
               <KirdevOriginal style={{ height: '4rem' }} />
-              <VStack>
-                <Link isExternal href="https://vercel.com?utm_source=kir-dev&utm_campaign=oss">
-                  <Image height="1.75rem" src="/svg/powered-by-vercel.svg" alt="Vercel Logo" />
-                </Link>
-                <Link isExternal href="https://rackhost.hu">
-                  <Image height="1.75rem" src="/rackhost.png" alt="Rackhost Logo" objectFit="contain" />
-                </Link>
-              </VStack>
             </HStack>
           </Flex>
 
