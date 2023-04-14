@@ -11,7 +11,9 @@ export const Footer: React.FC = () => (
   <Box zIndex={1}>
     <Box borderTopWidth={1} pt={4} borderStyle="solid" borderColor={useColorModeValue('gray.200', 'gray.700')}>
       <VStack>
-        <Text>Támogatóink</Text>
+        <Text fontWeight="bold" px={0.5} bgClip="text" bgGradient="linear(to-r, tomato, orange.300)">
+          Támogatóink
+        </Text>
         <Flex gap={3} flexDirection={{ base: 'column', sm: 'row' }} alignItems="center">
           <Link isExternal href="https://vercel.com?utm_source=kir-dev&utm_campaign=oss">
             <Image height="1.75rem" src="/svg/powered-by-vercel.svg" alt="Vercel Logo" />

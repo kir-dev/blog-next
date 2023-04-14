@@ -6,9 +6,9 @@ export const environment = {
     instagramUrl: 'https://instagram.com/kir.dev',
     youtubeUrl: 'https://youtube.com/channel/UCkpMTj9qST_7RDt2YL4RUEw',
     facebookUrl: 'https://facebook.com/kirdevteam',
-    publicEmail: 'kir-dev [kukac] sch.bme.hu'
+    publicEmail: 'hello [kukac] kir-dev.hu'
   },
-  rickrollUrl: 'https://bit.ly/3uOVmYt',
+  rickrollUrl: 'https://www.youtube.com/watch?v=w9Bmz0rpJWI&t=29s',
   course: {
     form: {
       url: process.env.GATSBY_CURRENT_COURSE_FORM_URL || '',
