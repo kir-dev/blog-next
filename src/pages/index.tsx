@@ -189,6 +189,19 @@ const IndexPage: React.FC<Props> = ({ data }) => {
               </ChakraLink>
             </Box>
           </Box>
+          <Box py={16} zIndex={1}>
+            <Heading pb={4}>Üzemeltetés</Heading>
+            <Text fontFamily="mono">Rendszereinket a KSZK Kubernetes és VMware szolgáltatásainak segítségévél hosztoljuk.</Text>
+            <Text fontFamily="mono">
+              A szolgáltatásainkat Better Uptime megoldásaival monitorozzuk, amelynek hála azonnal értesülünk az esetleges leállásokról.
+            </Text>
+            <Text fontFamily="mono">A rendelkezésre állást a linkre kattintva ellenőrizheted.</Text>
+            <Box textAlign="right" mt={8}>
+              <ChakraLink as={Link} fontSize="lg" to="https://status.kir-dev.hu">
+                Kir-Dev Státusz
+              </ChakraLink>
+            </Box>
+          </Box>
         </BlogContainer>
       </Box>
     </IndexLayout>
