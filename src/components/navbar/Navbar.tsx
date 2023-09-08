@@ -1,4 +1,5 @@
-import { Box, Collapse, Flex, Icon, IconButton, useColorMode, useColorModeValue, useDisclosure } from '@chakra-ui/react'
+import { Box, Collapse, Flex, Icon, IconButton, useDisclosure } from '@chakra-ui/react'
+import { useColorMode } from '@chakra-ui/system'
 import { KirdevNamed } from 'components/themed-svgs/KirdevNamed'
 import { Link } from 'gatsby'
 import React from 'react'
@@ -13,15 +14,7 @@ export const Navbar: React.FC = () => {
 
   return (
     <Box fontFamily="heading">
-      <Flex
-        bg={useColorModeValue('white', 'gray.800')}
-        color={useColorModeValue('gray.800', 'white')}
-        minH={{ base: '3rem', md: '4.5rem' }}
-        maxW={['100%', '100%', '56rem', '72rem']}
-        px={4}
-        mx="auto"
-        alignItems="center"
-      >
+      <Flex minH={{ base: '3rem', md: '4.5rem' }} maxW={['100%', '100%', '56rem', '72rem']} px={4} mx="auto" alignItems="center">
         <Flex flex={{ base: 1, md: '1' }} ml={{ base: -2, md: 0 }} display={{ base: 'flex', md: 'none' }}>
           <IconButton
             onClick={onToggle}
