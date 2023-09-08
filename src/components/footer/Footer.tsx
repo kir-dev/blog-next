@@ -18,7 +18,7 @@ export const Footer: React.FC = () => (
           <Link isExternal href="https://vercel.com?utm_source=kir-dev&utm_campaign=oss">
             <Image height="1.75rem" src="/svg/powered-by-vercel.svg" alt="Vercel Logo" />
           </Link>
-          <Link isExternal href="https://rackhost.hu" background="white" p={2}>
+          <Link isExternal href="https://rackhost.hu" background="white" p="2" borderRadius="2">
             <Image height="1.75rem" src="/rackhost.png" alt="Rackhost Logo" objectFit="contain" />
           </Link>
           <Link isExternal href="https://betteruptime.com/">
