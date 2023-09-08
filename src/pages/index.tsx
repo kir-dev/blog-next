@@ -66,6 +66,7 @@ const IndexPage: React.FC<Props> = ({ data }) => {
     <IndexLayout>
       <Box>
         <Box
+          position="relative"
           bgImage="url(/index-bg.jpeg)"
           bgPos="center"
           bgRepeat="no-repeat"
@@ -78,7 +79,7 @@ const IndexPage: React.FC<Props> = ({ data }) => {
             display: 'block',
             position: 'absolute',
             width: '100%',
-            height: '80%',
+            height: '100%',
             content: '" "',
             bgGradient: useColorModeValue('linear(to-b, orange.50, white)', 'linear(to-t, gray.800, black)'),
             opacity: useColorModeValue(0.4, 0.8)
