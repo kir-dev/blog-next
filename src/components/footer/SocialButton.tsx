@@ -1,4 +1,5 @@
 import { IconButton } from '@chakra-ui/react'
+import { useColorModeValue } from '@chakra-ui/system'
 
 type Props = {
   label: string
@@ -9,6 +10,7 @@ type Props = {
 export const SocialButton: React.FC<React.PropsWithChildren<Props>> = ({ children, label, href, size }) => {
   return (
     <IconButton
+      _dark={{ bg: useColorModeValue('var(--chakra-colors-gray-100)', 'var(--chakra-colors-gray-700)') }}
       rounded="full"
       w={size}
       h={size}

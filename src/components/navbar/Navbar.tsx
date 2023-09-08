@@ -1,5 +1,5 @@
 import { Box, Collapse, Flex, Icon, IconButton, useDisclosure } from '@chakra-ui/react'
-import { useColorMode } from '@chakra-ui/system'
+import { useColorMode, useColorModeValue } from '@chakra-ui/system'
 import { KirdevNamed } from 'components/themed-svgs/KirdevNamed'
 import { Link } from 'gatsby'
 import React from 'react'
@@ -50,6 +50,7 @@ export const Navbar: React.FC = () => {
             icon={colorMode === 'dark' ? <Icon as={HiOutlineSun} w={6} h={6} /> : <Icon as={FaMoon} w={5} h={5} />}
             onClick={toggleColorMode}
             variant="ghost"
+            _hover={{ bg: useColorModeValue('var(--chakra-colors-gray-100)', 'var(--chakra-colors-gray-700)') }}
           />
         </Flex>
       </Flex>

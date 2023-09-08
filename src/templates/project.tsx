@@ -53,7 +53,8 @@ const ProjectTemplate: React.FC<Props> = ({ data }) => {
             )}
             <Box
               shadow="xl"
-              bgGradient={`linear(to-b, ${useColorModeValue('white', 'gray.800')}, 70%, ${useColorModeValue('gray.200', 'blue.900')})`}
+              bgGradient={`linear(to-b, white, 70%, gray.200)`}
+              _dark={{ bgGradient: `linear(to-b, gray.800, 70%, blue.900)` }}
               zIndex={1}
               py={featuredImage ? 4 : 12}
               px={6}
