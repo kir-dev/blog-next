@@ -62,6 +62,9 @@ const IndexPage: React.FC<Props> = ({ data }) => {
   const { pek } = data
   const [alertClosed, setAlertClosed] = useState(false)
 
+  const alertText = 'szia uram xdddddddd'
+  const alertDesc = `<p>${alertText}</p>`
+
   return (
     <IndexLayout>
       <Box>
@@ -86,12 +89,12 @@ const IndexPage: React.FC<Props> = ({ data }) => {
           }}
         >
           <BlogContainer>
-            {environment.frontAlert.desc && !alertClosed && (
-              <Alert status="info" variant="left-accent" borderRadius="md" my={3}>
+            {alertDesc && !alertClosed && (
+              <Alert status="info" variant="solid" borderRadius="md" my={3}>
                 <AlertIcon />
                 <Box flex="1">
-                  {environment.frontAlert.title && <AlertTitle>{environment.frontAlert.title}</AlertTitle>}
-                  <AlertDescription display="block" dangerouslySetInnerHTML={{ __html: environment.frontAlert.desc }} />
+                  {alertText && <AlertTitle>{alertText}</AlertTitle>}
+                  <AlertDescription display="block" dangerouslySetInnerHTML={{ __html: alertDesc }} />
                 </Box>
                 <CloseButton position="absolute" right="8px" top="8px" onClick={() => setAlertClosed(true)} />
               </Alert>
