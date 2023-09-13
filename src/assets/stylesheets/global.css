@@ -23,3 +23,43 @@ div[class='utterances'] {
 *::-webkit-scrollbar-thumb:hover {
   background: var(--chakra-colors-orange-400);
 }
+
+#kir-dev-svg path {
+  stroke: black;
+  fill: black;
+  stroke-width: 1;
+}
+
+.chakra-ui-dark #kir-dev-svg path {
+  stroke: #EBECEC;
+  fill: #EBECEC;
+}
+
+#kir-dev-svg path.colored {
+  stroke: #F15A29;
+  fill: #F15A29;
+}
+
+@media not (prefers-reduced-motion) {
+  svg .animate-svg-path {
+    stroke-dasharray: var(--svg-path-length);
+    stroke-dashoffset: var(--svg-path-length);
+    animation: animate-svg 2s ease forwards;
+  }
+
+  @keyframes animate-svg {
+    from {
+      fill-opacity: 0;
+      stroke-opacity: 0.5;
+    }
+    25% {
+      stroke-opacity: 1;
+      fill-opacity: 0;
+
+    }
+    to {
+      stroke-dashoffset: 0;
+      fill-opacity: 1;
+    }
+  }
+}
