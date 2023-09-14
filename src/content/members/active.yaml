@@ -1,15 +1,3 @@
-- pekUsername: aberci
-  realName: Kovács Bertalan
-  position: tag
-  joinDate: 2020-04
-  normalImageUrl: https://warp.sch.bme.hu/images/aberci1
-  funnyImageUrl: https://warp.sch.bme.hu/images/aberci_funny1
-
-- pekUsername: amcir
-  realName: Oravecz Márton Péter
-  position: tag
-  joinDate: 2021-04
-
 - pekUsername: beni99
   realName: Bucsy Benjámin
   position: volt körvezető
@@ -19,14 +7,14 @@
 
 - pekUsername: berenteb
   realName: Berente Bálint István
-  position: körvezető
+  position: volt körvezető
   joinDate: 2021-04
   normalImageUrl: https://warp.sch.bme.hu/images/berenteb
   funnyImageUrl: https://warp.sch.bme.hu/images/berenteb_funny
 
 - pekUsername: feketesamu
   realName: Fekete Sámuel
-  position: gazdaságis
+  position: körvezető
   joinDate: 2021-04
   normalImageUrl: https://warp.sch.bme.hu/images/feketesamu1
   funnyImageUrl: https://warp.sch.bme.hu/images/feketesamu_funny1
@@ -94,7 +82,42 @@
   normalImageUrl: https://warp.sch.bme.hu/images/smukferenc
   funnyImageUrl: https://warp.sch.bme.hu/images/smukferenc_funny
 
-- pekUsername: tete
-  realName: Tényi Tamás
-  position: tag
-  joinDate: 2022-04
+- pekUsername: bujdi
+  realName: Bujdosó Gergő
+  position: gazdaságis
+  joinDate: 2023-04
+
+- pekUsername: csalex
+  realName: Csiszár Alex
+  position: újonc
+  joinDate: 2023-04
+
+- pekUsername: Dkrisztan
+  realName: Dancs Krisztián
+  position: újonc
+  joinDate: 2023-04
+
+- pekUsername: farkashazilevente
+  realName: Farkasházi Levente
+  position: újonc
+  joinDate: 2023-04
+
+- pekUsername: kiralybalint
+  realName: Király Bálint
+  position: újonc
+  joinDate: 2023-04
+
+- pekUsername: mozsarmate
+  realName: Mozsár Máté
+  position: újonc
+  joinDate: 2023-04
+
+- pekUsername: nmarci
+  realName: Németh Marcell
+  position: HR felelős
+  joinDate: 2023-04
+
+- pekUsername: mullerbarnabas
+  realName: Müller Barnabás
+  position: újonc
+  joinDate: 2023-04
