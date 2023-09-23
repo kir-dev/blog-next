@@ -21,8 +21,7 @@ export const Navbar: React.FC = () => {
             icon={isOpen ? <Icon as={FaTimes} w={5} h={5} /> : <Icon as={FaBars} w={5} h={5} />}
             variant="ghost"
             _hover={{
-              bg: 'var(--chakra-colors-chakra-body-bg)',
-              color: 'orange.500'
+              bg: 'var(--chakra-colors-chakra-body-bg)'
             }}
             aria-label="Navigáció megnyitása"
           />
