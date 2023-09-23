@@ -1,5 +1,5 @@
 import { Box, Collapse, Flex, Icon, IconButton, useDisclosure } from '@chakra-ui/react'
-import { useColorMode, useColorModeValue } from '@chakra-ui/system'
+import { useColorMode } from '@chakra-ui/system'
 import { KirdevNamed } from 'components/themed-svgs/KirdevNamed'
 import { Link } from 'gatsby'
 import React from 'react'
@@ -20,6 +20,10 @@ export const Navbar: React.FC = () => {
             onClick={onToggle}
             icon={isOpen ? <Icon as={FaTimes} w={5} h={5} /> : <Icon as={FaBars} w={5} h={5} />}
             variant="ghost"
+            _hover={{
+              bg: 'var(--chakra-colors-chakra-body-bg)',
+              color: 'orange.500'
+            }}
             aria-label="Navigáció megnyitása"
           />
         </Flex>
@@ -50,7 +54,10 @@ export const Navbar: React.FC = () => {
             icon={colorMode === 'dark' ? <Icon as={HiOutlineSun} w={6} h={6} /> : <Icon as={FaMoon} w={5} h={5} />}
             onClick={toggleColorMode}
             variant="ghost"
-            _hover={{ bg: useColorModeValue('var(--chakra-colors-gray-100)', 'var(--chakra-colors-gray-700)') }}
+            _hover={{
+              bg: 'var(--chakra-colors-chakra-body-bg)',
+              color: 'orange.500'
+            }}
           />
         </Flex>
       </Flex>
