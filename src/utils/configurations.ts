@@ -8,7 +8,7 @@ export const environment = {
     facebookUrl: 'https://facebook.com/kirdevteam',
     publicEmail: 'hello [kukac] kir-dev.hu'
   },
-  rickrollUrl: 'https://www.youtube.com/watch?v=w9Bmz0rpJWI&t=29s',
+  rickrollUrl: process.env.GATSBY_RICKROLL_URL,
   course: {
     form: {
       url: process.env.GATSBY_CURRENT_COURSE_FORM_URL || '',
