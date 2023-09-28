@@ -76,3 +76,7 @@ Ismét fel kellett újítani a jegyvásárlás rendszerét a Gólyabálos verzi�
 ### GólyaKörTe 2023
 
 TBA?
+
+### Qpa 2023
+
+![](https://warp.sch.bme.hu/images/dsfmkjdshfidsfjdos_qpablog)
